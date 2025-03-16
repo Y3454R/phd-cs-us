@@ -6,6 +6,7 @@
 \usepackage[most]{tcolorbox}
 % \setsecnumdepth{subsection}
 % \setcounter{tocdepth}{3}
+\usepackage{censor}
 \usepackage{enumitem}
 \usepackage{epigraph}
 \newcommand{\myepigraphsimpsons}[1]{
@@ -1851,34 +1852,62 @@ Tenured faculty, e.g., associate and full profs., are likely older, more well-kn
 
 \section{Research Achievements}\label{sec:research-achievements}
 
-When exploring potential advisors, students will often see various \emph{research achievements} highlighted on their websites, CV's, and even departmental news or awards pages. Unlike typical research metrics such as the number of publications in top-tier venues (e.g., CSRankings) or citation counts (which can be quite inaccurate, e.g., in fields like AI/ML where unpublished papers on preprint servers like arXiv can have high citation counts), these achievements are often more qualitative and can provide a deeper understanding of a researcher's influence and contributions to their field.
+When exploring potential advisors, students often see various \emph{research achievements} highlighted on their websites, CV's, and even departmental news or awards pages (e.g., at \href{https://cs.gmu.edu/about/faculty-awards/}{Mason} and \href{https://www.cs.washington.edu/people/honors-awards/}{UWash}). Unlike common metrics such as publications in top-tier venues or citations (which can be quite inaccurate, e.g., in fields like AI/ML where unpublished papers on preprint servers like arXiv can have high citation counts), these achievements are truly exceptional and can provide a deeper understanding of a researcher's influence and contributions to their field.
 
-
-\paragraph{Prestigious Career Awards \& Recognition} Highly productive researchers often receive competitive career awards that recognize their long-term potential. In addition to the presitious recognition, these awards often come with funding and other benefits that can support their research and students.
+\paragraph{Recognition for Junior Faculty} Early-career faculty often receive prestigious awards that recognize their potential and early contributions to the field. In addition to the recognition, these awards often come with funding and other benefits that can support their research and students.
 
 \begin{itemize}
-    \item \textbf{NSF CAREER Award} A very popular and highly prestigious early-career award given to junior faculty demonstrating research and educational excellence. It comes with a 5-year research grant (typically $> \$500K$), which is substantial for early-career researchers. 
-    For many top schools, the CAREER award is a must for tenure-track faculty. It is such a big deal that some faculty delay major life events (e.g., marriage, having kids) to focus on it, and some may consider moving to a better school after getting this award.  
+    \item \textbf{NSF CAREER Award} A very popular and prestigious early-career award given to junior faculty demonstrating research and educational excellence. It comes with a 5-year research grant (typically $> \$500K$), which is substantial for early-career researchers. 
+    For most schools, the CAREER award implies tenure. 
+    It is such a big deal that some faculty would delay major life events (e.g., marriage, having kids) to focus on it, and some may consider moving to a better school after getting this award.
+    \begin{itemize}
+      \item \textbf{NSF CRII (CISE Research Initiation Initiative)} A ``mini'' version of CAREER for junior faculty in CISE (Computer and Information Science and Engineering) directorate. It comes with a 2-year grant of \$175K.
+      \item \textbf{PECASE} (Presidential Early Career Award for Scientists and Engineers) a small number of CAREER awardees are selected for this award, which is the highest honor given by the US government to early-career scientists and engineers. 
+    \end{itemize}  
 
+    \item \textbf{YIP (Young Investigator Program)} Given by defense agencies such as the DoD, DARPA, ONR and have the similar goals as CAREER but US citizen or permanent residents. They are not as popular as CAREER, focus on very restricted topics (e.g., only in DoD's interest areas), and have a shorter duration (2--3 years instead of 5). YIP recipients can also be considered for the aforementioend PECASE award.
+
+    \item \textbf{Sloan Fellowship}  Comes with a \$75K research grant over 2 years for junior faculty with exceptional potential in their field. Unlike the CAREER or YIP, these are nominated by their institutions and are not open to self-application.
     
-    \item \textbf{YIP (Young Investigator Program)} Given by defense agencies such as the DoD, DARPA, ONR and have the similar goals as CAREER but for junior faculty who are US citizen or permanent residents. They are not as popular as CAREER and have very restricted topics (e.g., only in DoD's interest areas) and have a shorter duration (2--3 years instead of 5).
-
-    \item \textbf{Sloan Fellowship}  It comes with a \$75K research grant over 2 years for junior faculty with exceptional potential in their field. Unlike the CAREER or YIP, these are nominated by their institutions and are not open to self-application (e.g., it's not a grant you can apply for). 
-
-    \item \textbf{ACM/IEEE Fellows} Reserved for researchers with long-term contributions and leadership in computing fields. These are highly prestigious and competitive, recognizing only a small fraction of the computing community each year. Note that these are typically given to very senior researchers (e.g., full professors).
-
-    \item \textbf{Turing Award} The \emph{highest honor} in CS for lifetime achievements and contributions to the computing community. If you see someone having one, you already know they are a giant in the field.
-    
+    \item \textbf{ACM Dissertation Award} Given to the best PhD dissertation in different areas of CS.  These are typically given \emph{after} the student has graduated and thus often seen from very junior faculty (e.g., 1st year). These are typically nominated by the student's adviser and do not come with funding (though they might have a small amount of cash prize).
 \end{itemize}
 
 
-\paragraph{Research Awards \& Long-Term Recognition}
-Awards for research impact—especially those that recognize work over time—are strong indicators of high-quality contributions. Typically they are under the umbrella of ``most influential'' or ``test of time'' awards.
+\paragraph{Long-Term Recognition and Impact} These are typically given to senior researchers who have made significant contributions to their field over a long period. The first being recognition in the form of ``test-of-time'' or ``most influential'' paper awards, and the second being more general recognition one lifetime achievements in the form of ACM/IEEE Fellows and the Turing Award.
+
 \begin{itemize}
-    \item \textbf{Test of Time Awards} – Given to papers that have remained influential over a decade or more.
-    \item \textbf{Most Influential Paper Awards} – Typically awarded at major conferences for research that has shaped the field.
-    \item \textbf{Impact Awards} – Recognizing papers that have had sustained influence over a decade.
+    \item \textbf{Test of Time, Most Influential, and Impact Awards} Typically given to papers that were published 10+ years ago at a top venue and are still widely cited and used in research (e.g., work that creates a new subfield or had a lasting impact on the field). Unlike Distinguish or Best Paper awards, which are typically given at the conference where the paper was presented, these are given years later to recognize the long-term impact of the work.
+
+    \begin{commentbox}[Vu:]
+      While typically given to senior researchers, some junior faculty have also received these awards for their exceptional work. Below is a quote from a recommendation letter for a junior faculty (some texts are endacted for anonymity):\\
+
+      \emph{It is highly noteworthy that \censor{Vu} has earned two 10-year test-of-time awards for \censor{his} papers \censor{, including a prestigious ICSE Most Influential Paper Award}. Senior computer scientists count themselves fortunate to
+      earn even one such award at some point in their careers, but it is highly unusual and commendable that \censor{Vu}
+      has earned two of these awards already, less than ten years after completing \censor{his} PhD ...}
+    \end{commentbox}
+
+    \item \textbf{ACM/IEEE Fellows} Reserved for researchers with long-term contributions and leadership in computing fields. These are typically given to very senior researchers (e.g., full professors). Note that there are also ACM and IEEE Senior Members, which are a step below Fellows and can be applied for by anyone with a certain number of years in the field (e.g., 10+ years for IEEE Senior).
+
+    \item \textbf{McArthur Fellowship} Given to individuals who have shown exceptional creativity in their work and the promise for more in the future. It is not specific to CS or STEM but is a very prestigious award that is often given to researchers in academia.
+    
+    \item \textbf{Turing Award} The \emph{highest honor} in CS for lifetime achievements and contributions to the computing community. If you see someone having one, you already know they are a giant in the field. 
 \end{itemize}
+
+
+\paragraph{Industrial Awards} CS faculty also aim to win awards from industry, which can be a sign of their impact on real-world applications and industry relevance. Some well-known ones include:
+
+\begin{itemize}
+    \item \textbf{Google Faculty Research Award} Given to faculty who have shown excellence in research and have a strong impact on the field. It comes with a research grant and the opportunity to collaborate with Google researchers.
+    
+    \item \textbf{Microsoft Research Faculty Fellowship} Given to faculty who have shown exceptional research potential and have a strong impact on the field. It comes with a research grant and the opportunity to collaborate with Microsoft researchers.
+    
+    \item \textbf{Facebook Fellowship} Given to PhD students and faculty who have shown exceptional research potential and have a strong impact on the field. It comes with a research grant and the opportunity to collaborate with Facebook researchers.
+\end{itemize}
+
+
+%\paragraph{Students' Achievements} 
+%faculty proudly show achievements of their students, e.g., best paper awards, internships at top companies, and faculty positions at top universities.  Dissertation awards, GRFP , Undergrad students research awards, etc
+
 
 % \paragraph{Development of Highly Influential Research Tools}
 % Beyond papers, research tools that are widely used in academia or industry signify real-world impact. Some key indicators include:
