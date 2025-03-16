@@ -27,6 +27,10 @@
 \usepackage{xcolor}
 %\usepackage{anyfontsize}
 %\usepackage{sectsty}
+\usepackage[acronym]{glossaries}
+\setacronymstyle{long-short-desc}
+\makeglossaries
+
 
 \usepackage[makeroom]{cancel}
 
@@ -153,6 +157,92 @@
 
 \usepackage[margin=1.5in]{geometry}
 
+
+%%% glossaries
+\newglossaryentry{April15}
+{
+        name=April 15,
+        description={The deadline for most US universities to accept or decline offers of admission. This date, set by the Council of Graduate Schools (\href{https://cgsnet.org/wp-content/uploads/2024/01/CGS_April15_Resolution_Jan312024.pdf}{CGS}), states that students are not required to accept offers before this date. Note that, some universities might not follow this deadline, so check with the university you are applying to}
+}
+
+\newglossaryentry{cohort}{
+    name=Cohort,
+    description={A group of students who start a program at the same time and take classes together. You should get to know your cohort as they will be your colleagues and friends during your PhD. See selecting and ranking schools in \autoref{sec:selecting-ranking-schools}}
+}
+
+
+\newglossaryentry{ivy}{
+    name = Ivy League,
+    description={A group of eight private universities in the US known for their academic excellence and social prestige. The Ivy League schools are Brown, Columbia, Cornell, Dartmouth, Harvard, the UPenn, Princeton, and Yale. These schools are typically known for their undergraduate programs more than their graduate programs. Moreover, most top CS programs such as CMU, UIUC, UCSD, UWash, MIT, Stanford, are not in the Ivy League.}
+}
+
+  
+\newglossaryentry{adcom-members}{
+    name = adcom members,
+    description={Faculty members who are part of the admission committee. These are the people who review applications and make admission decisions (\autoref{chap:evalapps})}
+    }
+  
+\newglossaryentry{adcom-chair}{
+    name = adcom chair, 
+    description={Adcom chair The faculty member who leads the admission committee. This person is often not involved in individual admission decisions but oversees the process (e.g., resolve disputes, ensure fairness) (\autoref{chap:evalapps})}
+}
+\newglossaryentry{adviser}{
+    name = Adviser/Superviser,
+    description = {A faculty member who guides and mentors a PhD student throughout their research. This person typically plays a crucial role in a student's academic journey. In the US, the term ``adviser'' is more commonly used than ``supervisor''}
+}    
+
+
+\newglossaryentry{r1}{
+    name=R1, 
+    description={Research 1 (\href{https://en.wikipedia.org/wiki/List_of_research_universities_in_the_United_States}{R1}) universities are universities with the highest level of research activity across various disciplines. Currently, 146 (out of 4000) US universities are classified as R1. 
+    R2 universities also have a high level of research activity but not as high as R1 universities.  R1 universities are typically larger, and have more funding and resources for research.  R2 universities are also good but might have fewer resources and funding}
+}
+
+\newglossaryentry{stipend}{
+    name = stipend,
+    description={A fixed regular sum paid to students as part of their funding package (i.e., salary). This is typically paid monthly or bi-weekly.  Stipend is typically paid to PhD students and not MS students}
+}
+
+\newglossaryentry{rolling-admission}{
+    name = rolling admission,
+    description = {Applications are reviewed as they are received (instead of all at once after the deadline), and decisions are made throughout the admission cycle.  Rolling admission is more common for MS programs and less common for PhD programs (e.g., at Mason, MS is rolling and PhD is not}
+}
+
+\newglossaryentry{toptier}{
+    name = top-tier conferences and journals,
+    description={These are the most prestigious venues for publishing research in CS.  For example, in Software Engineering, top-tier conferences include ICSE, FSE, and ASE and top-tier journals include TSE and TOSEM.  Publishing in these venues is highly competitive and prestigious, and can significantly improve your chances of getting admitted to a good PhD program}
+}
+
+
+
+\newacronym[description={Commonly mentioned by international students to refer to top-tier journals in CS.  Q1 is very well-known in CS in the US (also CS often focuses on confs. rather than journals), and many CS faculty in the US might not know what it means.  If you want to refer to \glslink{toptier}{top-tier} journals, you should mention the specific journals, e.g., TSE in Software Engineering}]{Q1}{Q1}{Scopus Q1 Journals}
+  
+\newacronym[description={A main type of PhD funding where you work on a research project for a professor (\autoref{sec:ra})}]{ra}{RA}{Research Assistantship} 
+\newacronym[description={A main type of PhD funding where you help a a professor with teaching, e.g., grading assignments (\autoref{sec:ta})}]{ta}{TA}{Teaching Assistantship} 
+
+%\newacronym{toef-ielts}{TOEFL/IELTS} Test of English as a Foreign Language. A standardized test to measure the English language ability of non-native speakers.
+
+\newacronym[description={A standardized test that is an admissions requirement for many graduate schools in the US. However, it is not required for most CS PhD programs (\autoref{sec:gre}). Thus unless it is explicitly required, don't worry about it}]{GRE}{GRE}{Graduate Record Examination}
+
+\newacronym[description={A program funded by the NSF to provide research opportunities for undergraduate students}]{REU}{REU}{Research Experience for Undergraduates}
+
+\newacronym[description={A document written by yourself to explains your research interests, background, and reasons for applying to a PhD program (\autoref{chap:sop})}]{SOP}{SOP}{Statement of Purpose}
+\newacronym[description=The group of faculty members who review applications and make admission decisions (\autoref{sec:adcom})]{adcom}{adcom}{Admission Committee}
+\newacronym[description=A doctoral degree that represents the highest level of academic achievement in a particular field of study. In CS it typically requires original research and a dissertation]{phd}{PhD}{Doctor of Philosophy}
+\newacronym[description={A PhD candidate who has finished all course work and exams and only needs to write and defend their dissertation}]{ABD}{ABD}{All But Dissertation}
+
+
+\newacronym[description={lead researcher on a grant or research project, e.g., a PI on an NSF grant.  Prospective students often use this term to refer to a professor they are interested in working with.  However, we do not use it this way in academia, e.g., ``who is your PI?'' might only make sense to fellow Reddit applicants, but might not be understood by others, ``who is your adviser?'' is what you want to use}]{PI}{PI}{Principal Investigator}
+
+\newacronym[description={Fields in or related to these areas are considered STEM fields. CS is a STEM field}]{STEM}{STEM}{Science Technology Engineering and Mathematics}
+
+\newacronym[description={Refers to groups that are underrepresented in higher education, e.g., Black, Hispanic, and Native American students in CS}]{URM}{URM}{Underrepresented Minority}
+
+\newacronym[description={A US government agency that supports research and education in science and engineering. NSF is a major source of funding for RAs in CS research. There are other agencies that support RAs but they might require US citizenship or permanent residency}]{NSF}{NSF}{National Science Foundation}
+
+\newacronym[description={A letter written by a professor or supervisor that assesses your qualifications and potential for graduate study (\autoref{chap:lor})}]{LOR}{LoR}{Letter of Recommendation}
+
+
 \begin{document}
 
 %\pagestyle{empty}
@@ -275,9 +365,9 @@ discourages students from applying but also creates the perception that getting 
 So I want to share some details about the admission process and advice for those who are interested in applying for a \textbf{PhD in Computer Science in the US}.
 Originally, this book was written for international students, but has been expanded to include information for \textbf{US domestic students} (\autoref{chap:domestic-students}).
 Moreover, while this primarily aims at students interested in CS, it might be relevant to students from various STEM (Science, Technologies, Engineering, and Mathematics) disciplines.
-Furthermore, although many examples are specifics for schools that I and other contributors of this book know about, the information should be generalizable to other good R1\footnote{An \href{https://en.wikipedia.org/wiki/List_of_research_universities_in_the_United_States}{R1 institution} in the US is a research-intensive university with a high level of research activity across various disciplines. Currently, 146 (out of 4000) US universities are classified as R1.} institutions in the US.
+Furthermore, although many examples are specifics for schools that I and other contributors of this book know about, the information should be generalizable to other good \Gls{r1} institutions in the US.
 
-This information can also help \textbf{US faculty and admission committee} gain a better understanding of international students and their cultural differences.  By recognizing and leveraging these differences, CS programs in the US can attract larger and more competitive application pools from international students.
+This information can also help \textbf{US faculty and admission committee} gain a better understanding of international students and their cultural differences (\autoref{chap:cultural}).  By recognizing and leveraging these differences, CS programs in the US can attract larger and more competitive application pools from international students.
 
 I wish you the best of luck.
 
@@ -307,6 +397,8 @@ This book is open source and available at
 
 \myepigraphsimpsons{``Don't make fun of graduate students. They just made a terrible life choice.''}
 
+
+
 International students, especially those from less well-known universities and smaller countries, often wonder if they should apply to a CS PhD program in the US. Common concerns include (i) the \textbf{difficulty of getting admitted} and (ii) the \textbf{cost of graduate study} in the US. %, and for some, (iii) the fear of \textbf{discrimination} e.g., based on gender identity or cultural background.
 
 
@@ -322,7 +414,7 @@ If you believe you have a chance in other countries, e.g., South Korea, Singapor
 universities in the US. 
 If you are admitted, you will almost certainly
 receive \emph{full funding} (\autoref{chap:funding}) to support your study. This includes tuition,
-health insurance, and stipend (i.e., in STEM field you get paid for your study!). 
+health insurance, and \gls{stipend} (i.e., in STEM field you get paid for your study!). 
 For many students, the stipends provided are not only sufficient to cover your own living expenses but also enough to support your families (e.g., spouse and children), allowing them to live comfortably.
 
 Moreover, you often receive additional benefits such as summer pay (\autoref{sec:summer-funding}), laptops (\autoref{sec:buying-equipment}), and traveling to conferences and workshops. 
@@ -332,17 +424,23 @@ Full funding for CS PhD students is the norm in the US, and I'd go as far as to 
 
 % In fact, many resources are available to encourage and support students from minority and diverse groups to pursue higher education and research, e.g., specific scholarships and fellowships. Faculty in CS are also familiar with and are encouraged to support such students in their group. There are also incentives, such as dedicated funding and awards, to motivate faculty to recruit and mentor minority students (\autoref{sec:urm}).
 
-\section{Who is this handbook for?}
+\section{About this book}
 \sectioninfo{This book aims to provide in depth information about the CS PhD admission process in the US. It is particularly useful for international students from smaller countries and less well-known universities as they often lack access to such information.}
 
+\subsection{Who is this book for?}
 While this book can be useful for all students, it would most benefit \textbf{international students} from \textbf{smaller countries and less well-known universities}.  It is also useful for \textbf{domestic students} from US universities with \textbf{no PhD programs or limited research opportunities}.
 
-Students from top schools with strong research programs and experience might already know most of the information given here. They likely have received guidance from their professors or grad students who have gone through the process. Students from smaller schools or countries, however, might not have access to such resources and know where to start. 
+Students from top schools with strong research programs and experience might already know some of the information in this book.  They likely have received guidance from their professors or grad students who have gone through the process. Students from smaller schools or countries, however, might not have access to such resources and know where to start. 
 My goal is thus to level the playing field by providing info that is not readily available to less privileged students. 
 I hope to encourage more students with such backgrounds to apply and succeed in CS PhD programs in the US.
 
-This book also aims to explain the \textbf{reasons behind the admission process}.
-There are numerous \href{https://github.com/dynaroars/phd-cs-us}{resources online} that tell you \emph{``what''} to do, but few explain the \emph{``why''}, e.g., why LoRs matter so much, why you should not draft your own LoR, why you should contact professors, etc. Understanding the reason and mindset of the admission committee and profs. can help you prepare better.
+\subsection{Why this book?}
+This book aims to be a comprehensive guide to the CS PhD admission process in the US. It is based on my and other contributors' experience in the CS depart. I also try to explain the \textbf{reasons behind the admission process}.
+While there are numerous \href{https://github.com/dynaroars/phd-cs-us}{resources online} that tell you \emph{``what''} to do, few explain the \emph{``why''}, e.g., why LoRs matter so much, why you should not draft your own LoR, why you should contact professors, etc. Understanding the reason and mindset of the admission committee and profs. can help you prepare better.
+
+This book is a personal project (\autoref{chap:ack}) that I continuously update and refine, especially during the admission season. I usually work on it when I procrastinate from research or other responsibilities—it’s my way of convincing myself that I am still productive!
+Writing is a relaxing process for me, and I enjoy experimenting with new things in \LaTeX{} along the way. It’s both a creative outlet and a technical challenge, making it a fun and ever-evolving project!
+
 
 %While this handbook may not fully meet the needs of students aiming for top-10 schools (\autoref{sec:selecting-ranking-schools} and \autoref{chap:rankings}), which typically have more stringent requirements (e.g., see the \href{https://da-data.blogspot.com/2015/03/reflecting-on-cs-graduate-admissions.html}{admission process} at CMU), it should be valuable for those targeting other reputable R1 institutions.
 
@@ -378,7 +476,7 @@ Within these 5--7 years, CS PhD students often take a ``leave of absence'' for 1
 
 You still can apply to PhD in CS \emph{as long as} you can demonstrate you are ready for it through your background, research experience, LoRs, statements, etc. You might be even able to leverage this to make your profile stand out as mentioned in \autoref{sec:improve-your-chance}.
 
-A main question adcom (\autoref{sec:adcom}) has for a non-CS or non-STEM student is if you have the sufficient technical background obtained through core CS courses.  So you need to show that you have such knowledge through your coursework, projects, or research.
+A main concern \acrshort{adcom} (\autoref{sec:adcom}) has for a non-CS or non-STEM student is if you have the sufficient technical background obtained through core CS courses.  So you need to show that you have such knowledge through your coursework, projects, or research.
 For example, if you have taken a course on Algorithms, even online ones like Coursera, you can talk about it in your SOP.  If you have done a project that requires knowledge of OS or have a professional certification (e.g., A+) through work, you can talk about it.  If you have done research that requires knowledge of Discrete Maths, you can talk about it.  You can also ask your LoR writers to talk about your technical background.
 In summary, in your application, convince us that you have the background to do CS PhD research.
 
@@ -446,7 +544,7 @@ Work Life Balance & Less & More \\
 
 \emph{MS requirement and PhD duration}:  CS PhD programs in the US do not require an MS degree (as mentioned in \autoref{sec:time} and \autoref{sec:msrequirement}).  In contrast, many other countries require having an MS degree before joining a PhD program.  This means that US PhD programs are longer (5--7 years, 2 of which are coursework) than other countries (3--4 years, no coursework).
 
-\emph{Project proposal}: in many countries, you have to choose a project and adviser \emph{during} the application process (e.g., you write a proposal to a potential adviser). But this allows you to start your research right from the beginning. 
+\emph{Project proposal}: in many countries, you have to choose a project and \glslink{adviser}{adviser} \emph{during} the application process (e.g., you write a proposal to a potential adviser). But this allows you to start your research right from the beginning. 
 
 In the US, you often start your PhD without an adviser or project and find them later. Usually you have two initial years to take classes, explore and find an adviser and research topic. 
 
@@ -491,7 +589,7 @@ In the US, PhD graduates often apply directly for faculty positions. Postdoc for
 
 \chapter{How is Your Application Evaluated?}\label{chap:evalapps}
 
-\chapterinfo{Applications are evaluated by the \emph{PhD Admission} (\textbf{adcom}) committee and each application is typically reviewed by three faculty members.}
+\chapterinfo{Applications are evaluated by the PhD Admission (\acrshort{adcom}) committee and each application is typically reviewed by three \glslink{adcom-members}{faculty members}.}
 
 After you submit your PhD application, it will first be checked for general requirements, e.g., did you submit your transcripts and standard scores? Usually, this screening process is done through a central university system, i.e., not by CS faculty.
 
@@ -501,7 +599,7 @@ After screening, your application is complete and forwarded to the CS department
   At Mason, for full consideration, students should make sure to submit \textbf{ALL} required documents by the application deadline, and should never assume that some required documents (such as official TOEFL scores or official diplomas/transcripts) will be waived by the admissions office. If something is listed and not marked as ``optional'', it is mandatory and they should plan for submitting all those.
 \end{commentbox}
 
-\section{Admission Committee (Adcom)}\label{sec:adcom}
+\section{\acrfull{adcom}}\label{sec:adcom}
 \sectioninfo{Adcom members are faculty who evaluate your application. They consider various factors, e.g., research experience, LoRs, SOP}
 
 Your applications are reviewed by a PhD admission committee or \emph{adcom} that consists of faculty members in CS\footnote{In some cases the committee can involve affiliated faculty from different disciplines.}. Adcom members have a wide range of expertise and background to ensure diverse perspectives in the evaluation process. The size and the review load of the adcom depend on the department size. At Mason, the PhD adcom typically has 15--20 faculty, and each committee member is assigned to review about 30 applications. Note that most large schools, including Mason, have separate adcoms for MS programs (\autoref{chap:ms}).
@@ -530,14 +628,14 @@ strengths, e.g., came from a well-known school, and weaknesses, e.g., weak and g
 \sectioninfo{Adcom members only review applications assigned to them (typically matching their expertise) and rarely get involved in other applications}
 
 
-While adcom members (in fact, any faculty) can view any application, we only review those that are assigned to us, which are already too many. Adcom chair will assign applications to reviewers based on their expertise (e.g., if a student says they want to do SE or interested in working with me), and reviewers will only review those applications. Occasionally we might look at other applications, e.g., if we know the student or have some special circumstances (e.g., if that student contacted me, I know that student, they are from Vietnam, etc). However, even if we look at them, we usually do not get involved in their evaluation.
+While \gls{adcom-members} (in fact, any faculty) can view any application, we only review those that are assigned to us, which are already too many. \Gls{adcom-chair} will assign applications to reviewers based on their expertise (e.g., if a student says they want to do SE or interested in working with me), and reviewers will only review those applications. Occasionally we might look at other applications, e.g., if we know the student or have some special circumstances (e.g., if that student contacted me, I know that student, they are from Vietnam, etc). However, even if we look at them, we usually do not get involved in their evaluation.
 
 Note that while the assigned reviewers are the main ones deciding your application, other faculty in the department can also have access to your application and provide inputs and opinions on your profile. Thus, it helps to contact faculty (\autoref{sec:contact}) and mention faculty you're interested in in your SOP (\autoref{chap:sop}).
 
 \section{How are decisions made?}\label{sec:how-decisions}
 \sectioninfo{Even if all adcom reviewers recommend acceptance, the application can still be rejected. Vice versa, if all reviewers think the application is weak, the student might still be admitted.}
 
-After reviewers have evaluated an application, adcom chair will review all evaluations, look at entered notes, and ask reviewers to discuss and resolve discrepancies to reach a consensus (e.g., a reviewer wants to accept but the other wants to reject).  Typically, the decision is made entirely by the reviewers; there is no involvement from the adcom chair, department chair, or others. In most cases adcom members, even those reviewing the same application, make decisions independently and do not talk to each other (just a common practice to avoid biasing). In some rare cases we might (\autoref{sec:adcom-discuss}).
+After reviewers have evaluated an application, \gls{adcom-chair} will review all evaluations, look at entered notes, and ask reviewers to discuss and resolve discrepancies to reach a consensus (e.g., a reviewer wants to accept but the other wants to reject).  Typically, the decision is made entirely by the reviewers; there is no involvement from the adcom chair, department chair, or others. In most cases \gls{adcom-members}, even those reviewing the same application, make decisions independently and do not talk to each other (just a common practice to avoid biasing). In some rare cases we might (\autoref{sec:adcom-discuss}).
 
 
 Even if \emph{all} reviewers recommend acceptance, the application is not automatically accepted, especially if no faculty is willing to advise the student. For example, if the student is interested in a research area that no faculty is working on, or an area where no faculty is taking new students (e.g., AI/ML where faculty likely already has many students) then the student will not be admitted.  This is increasingly common as the number of applicants grows much faster than the number of available faculty. Note that not every CS faculty can formally advise and graduate CS PhD students (\autoref{sec:faculty-types}).
@@ -558,7 +656,7 @@ If the student mentioned a faculty member in their SOP, we might ask that facult
 
 Note that other disciplines might have different practices, e.g., they might select a top list of applicants and then discuss them in a meeting to determine who to interview. In CS, both the reviews and interviews are often done independently (\autoref{sec:interviews}).
 
-\begin{commentbox}[From a prof. in Physics at an R1 university:]
+\begin{commentbox}[From a prof. in Physics at an \gls{r1} university:]
   We have a pretty well fleshed out grading rubric for applications that has categories like grades, research, writing ability, etc. I would say our rubric is weighted about 1/2 on academics (research, LORs, grades) and 1/2 on the idea of ``grit'' or ``resilience'' (engagement, leadership, working through obstacles).\\
 
   
@@ -633,7 +731,7 @@ So what to do? It is perfectly fine to have a letter from people who know you we
     \textbf{Vu}: This is an interesting and useful detail that US faculty might not be aware of. Students should mention this in their statements. In general, someone with a PhD has been through the research process and therefore can better evaluate your research ability.  But if you do not have such people, then someone who can properly evaluate your research ability is still OK (and again, explain that in your SOP).
   \end{commentbox}
 
-  \subsection{LoRs from Dept Chair, Dean, or Boss and Supervisor at Work}\label{sec:admin-letters}
+  \subsection{LoRs from Dept Chair, Dean, or Supervisor at Work}\label{sec:admin-letters}
 
   Many students try to get LoRs from high-ranking administrators in their universities such as department chair/head, dean, or director. The students never worked with these people (they might take a class or so with these profs), but mistakenly believe that these LoRs are valuable due to the writer's high position in the university.
   However, as emphasized, a generic LoR has little value because the writer does not know you well and can talk in depth about your research ability. 
@@ -827,9 +925,9 @@ You should also let them know the outcome of your application, regardless of whe
 % \end{commentbox}
 
 
-\subsection{How is a LoR written? Is it lots of work?}\label{sec:lor-writing}
+\subsection{How is a LoR written?}\label{sec:lor-writing}
 
-If a student asks me to write letter for them, I will agree as I believe it is part of my job. However, I will ask them to waive their right to see the letter (\autoref{sec:waive-right}), and will not write if they do not do so.
+If a student asks me to write letter for them, I will agree as I believe it is my responsibility. I will ask them to waive their right to see the letter (\autoref{sec:waive-right}), and will not write if they do not do so.
 
 I will also let the student know if I cannot write a strong letter for them (e.g., I don't know them that well), and suggest they find someone else.  If they insist, then I will write for them. While I try to say something positive, e.g., the student is hardworking and receive good grades, the letter will still be short and weak (\autoref{sec:generic-letters}). Usually it takes me about \emph{5--10} minutes to write such a ``weak'' letter.
 
@@ -887,7 +985,7 @@ not carry as much weight since their quality is often unknown to US faculty. How
 
 
 \begin{commentbox}[Vu:]
-    Many international students mention Scopus Q1, which consists of various journals from IEEE, Elsevier, and many other publishers.  I don't know/recognize many of the journals listed in Scopus Q1. This might be something to be mindful of, as \textbf{CS} faculty might not be too familiar with Scopus or journals listed there, so devote some part in your statement to discuss the significance of your papers.
+    Many international students mention Scopus \acrshort{Q1}, which consists of various journals from IEEE, Elsevier, and many other publishers.  I don't know/recognize many of the journals listed in Scopus Q1. This might be something to be mindful of, as \textbf{CS} faculty might not be too familiar with Scopus or journals listed there, so devote some part in your statement to discuss the significance of your papers.
   \end{commentbox}
   
   \begin{commentbox}[Thanh:]
@@ -957,14 +1055,16 @@ Finally, have your SOP reviewed by your LoR writers (\autoref{sec:help-your-LOR-
 \section{Kiss of Death in SOP} \label{sec:kiss-of-death-sop}
 
 \begin{itemize}
-\item \textbf{Too personal} Don't talk about your personal issues, e.g., family, health, relationship, etc. This can raise concerns about your ability to handle the PhD. Don't talk about religious or political beliefs (\autoref{chap:cultural}).
-\item \textbf{Criticizing} your current or previous institution or professors. Just like in a job interview, don't badmouth your current or previous employer. 
+\item \textbf{Too personal} Don't talk about your personal issues, e.g., family, health, relationship, etc. This can raise concerns about your ability to handle the PhD. Also, don't talk about religious or political beliefs (\autoref{chap:cultural}).
+\item \textbf{Criticizing} your current or previous institution or professors. Just like in a job interview, don't badmouth your current or previous employer because it raises concerns about your ability to work with others.
 \item \textbf{No concrete evidence to back up claims}: e.g., saying you are passionate about a research topic without showing any experience. This is where specific names (work submitted at conf. X), numbers (outperformed SOTA by Y \%), and examples (worked on project Z) can help. 
+These names, numbers, and stats are harder to fake and concretely show your experience and potential.
+
 \item \textbf{Use flowery and AI-like language}. Don't use AI to write your SOP. Not that hard to raise suspicion. Though you can ask AI to check your grammar and spelling.
 \item \textbf{Not customized to the program}: If your SOP can be sent to multiple programs with few changes, it is too generic. Do some research and mention why you want to spend the next 5--7 years there.
 \item \textbf{Mentioning wrong professors}: do not mention emeritus professors or those who have left.  Teaching and adjunct faculty are often not active in mentoring PhD students (\autoref{sec:faculty-types}). Do your homework and mention profs who are till active in research. 
-\item \textbf{Too Long and fancy format}: As mentioned, keep it under 2 pages. Don't use too much coloring or fancy fonts (like those in Words). Don't use left alignment (seems to be default in Words) as it is hard to read.
-CS academics like using \textbf{LaTeX} (common way to write our papers and other documents), so write your SOP using LaTeX (with Times or default font, 11pt, and 1-inch margin).
+\item \textbf{Too Long and Fancy Format}: As mentioned, keep it under 2 pages. Don't use too much coloring or fancy fonts (like those in Words). Don't use left alignment (seems to be default in Words) as it is hard to read.
+CS academics like using \LaTeX{} (common way to write our papers and other documents), so write your SOP using LaTeX (with Times or default font, 11pt, and 1-inch margin).
 \end{itemize}
 
 
@@ -1055,7 +1155,7 @@ Note that bad grades in non-relevant courses, e.g., e.g., about politics or hist
 Should you explain bad grades in relevant courses in your SOP?  If you have just a few,  they do not matter much, so don't spend much time explaining them (many adcom reviewers themselves have bad grades in relevant courses!). But if you have many bad grades for an entire semester or year due to some specific reasons, then you should explain them in your SOP.
 
 \chapter{Standard Tests (GRE and IELTS)}\label{chap:standard-tests}
-\chapterinfo{Standard tests are \textbf{not} important. GRE typically \emph{is not} required. For standard English tests (not required for domestic students), just do enough to pass the minimum requirements.}
+\chapterinfo{Standard tests are \textbf{not} important. \acrshort{GRE} typically \emph{is not} required. For standard English tests (not required for domestic students), just do enough to pass the minimum requirements.}
 
 
 \myepigraphsimpsons{``I've got to study harder. Everyone knows standardized tests are biased against the poor, the lazy, and the stupid.''}
@@ -1063,7 +1163,7 @@ Should you explain bad grades in relevant courses in your SOP?  If you have just
 
 \section{GREs Are Optional and Do Not Matter for PhD Admissions}\label{sec:gre}
 
-While a few schools still require taking the GRE (e.g., UCF), most good CS PhD programs in the US \textbf{no longer} require it. The reason is that GRE scores do not correlate well with research ability, which is the most important factor for PhD admission. It is also worth noting that many faculty members themselves did not take the GRE or have bad scores.
+While a few schools still require taking the \acrfull{GRE} exam (e.g., UCF), most good CS PhD programs in the US \textbf{no longer} require it. The reason is that GRE scores do not correlate well with research ability, which is the most important factor for PhD admission. It is also worth noting that many faculty members themselves did not take the GRE or have bad scores.
 
 Thus, if you have bad GRE scores or haven't taken the GRE, then don't waste time (re)taking it. Being optional really means optional, and not taking it will not hurt your application.
 However, if you took it and have really good scores then it might be worth it to include (and perhaps talk about) them in your application, but don't expect them to make much difference. But if your scores are bad, then you should not include them in your application, which can be a \red{red flag}.
@@ -1170,21 +1270,21 @@ However, no interviews mean that you will not likely get an RA (\autoref{sec:ra}
 
 
 \section{Notification Timeline: Why rejection letters are sent so late?}\label{sec:late-rejection}
-\sectioninfo{Grad programs often wait for accepted students to make their decisions, typically by April 15, before sending out rejection letters.}
+\sectioninfo{Grad programs often wait for accepted students to make their decisions, typically by \Gls{April15}, before sending out rejection letters.}
 
 %"Just reject me already!" is a common sentiment among applicants.  Indeed, school will first send out admission offers to the top candidates. They do not send out rejection letters because there is still a chance that some of the top candidates will decline the offer. If they do, then the school will go to the next set of candidates and send out offers to them.  This process continues until all spots are filled.  This is why you might not hear back until late in the admission cycle.
 
-Some schools send out admission letters in batches, some do rolling admission, and some do not send anything out e.g., you're on their waitlist. You should hear back from most schools by mid-March, though rejection can come out much later.
+Some schools send out admission letters in batches, some do \gls{rolling-admission}, and some do not send anything out e.g., you're on their waitlist. You should hear back from most schools by mid-March, though rejection can come out much later.
 
 Not much you can do other than to be patient and wait. Do not send emails asking about interviews or status (unless you have interviewed specifically with someone then you can ask that person for status updates and other questions (\autoref{sec:accept-postpone-decline}).
 
 
 
-\paragraph{Acceptance Letters} Universities prioritize sending out acceptance letters first. This allows the admitted students to make decisions and plan for their studies. Read carefully on the acceptance letter for terms and conditions, e.g., funding and other benefitsion (\autoref{sec:offer-letters}).
+\paragraph{Acceptance Letters} Universities prioritize sending out acceptance letters first. This allows the admitted students to make decisions and plan for their studies. Read carefully on the acceptance letter for terms and conditions, e.g., funding and other benefits (\autoref{sec:offer-letters}).
 
-Some universities have rolling admissions, meaning they send out acceptance letters as they review applications (e.g., some universities sent out letters as soon as early February). Others have a specific date when they send out the first round of acceptance letters.   
+Some universities have \gls{rolling-admission}. Others have a specific date when they send out the first round of acceptance letters.   
 
-\paragraph{Response Deadlines} Accepted students are usually given a deadline to make decisions on their offers, often around \textbf{April 15th} in the US (\autoref{chap:glossary}). After this date, CS programs can gauge how many slots remain unfilled.
+\paragraph{Response Deadlines} Accepted students are usually given a deadline to make decisions on their offers, often around \textbf{\Gls{April15}} in the US. After this date, CS programs can gauge how many slots remain unfilled.
 
 \paragraph{Waitlist} Most CS programs have a limited number of slots for PhD students, and thus put many good students on a waitlist.  If accepted students decline the offer, then offers are sent to students on the waitlist. So if you see people getting accepted, that does not mean you are out yet.
 
@@ -1225,7 +1325,7 @@ Attend \emph{Open House} to learn more about the place and \emph{interview} prof
 By around mid-March you should hear back from most PhD programs that want to admit you. 
 But you likely won't hear back from schools that do not want to admit you (\autoref{sec:late-rejection}), e.g., you're on their wait list.
 
-If you receive offers, congratulations!  Now you're at a different game because the schools that have admitted you will try to get you to accept them!  Look carefully at the offer letters (\autoref{sec:offer-letters}) for the terms and conditions of the offers.  Other important factors to consider include the reputation of schools and professors (\autoref{chap:schoolsandprofs}), and funding availability (\autoref{chap:funding}). You will likely have to make your decision (\autoref{sec:accept-postpone-decline}) by around \emph{April 15}, which is the deadline for most schools (\autoref{chap:glossary}).
+If you receive offers, congratulations!  Now you're at a different game because the schools that have admitted you will try to get you to accept them!  Look carefully at the offer letters (\autoref{sec:offer-letters}) for the terms and conditions of the offers.  Other important factors to consider include the reputation of schools and professors (\autoref{chap:schoolsandprofs}), and funding availability (\autoref{chap:funding}). You will have to make your decision (\autoref{sec:accept-postpone-decline}) by a certain deadline, e.g., \gls{April15}.
 
 \paragraph{Open House} Most schools have \emph{Open House} or \emph{Visit Day} events, which are a great resource to learn about the school, department, faculty, research, living, etc.
 
@@ -1284,7 +1384,7 @@ For a specific start date or TA assignment (e.g., TA'ing a particular course), y
 
 Your admission notification will likely come with an offer letter (in some cases it might come separately).
 This letter is essentially a contract between you and the school, and lists the terms of the offer, including stipend, tuition waiver, health insurance, and other benefits.  The letter might also have some conditions, e.g., maintaining a certain GPA, etc. 
-You will likely need to sign and return the letter to accept the offer, e.g., by April 15th (\autoref{chap:glossary}).
+You will likely need to sign and return the letter to accept the offer, e.g., by \gls{April15}--the deadline for many schools.
 
 
 \autoref{fig:gra-offer} shows an example of a GRA offer letter from Mason. It shows the 9-month stipend\footnote{Note RAs often get additional summer funding from their prof. (\autoref{sec:summer-funding}), but this is not shown in the offer letter.}, the funding source (i.e., the prof. who provided the RA), tuition waivers (9-credit, which is full time for grad student), and health insurance.
@@ -1405,7 +1505,6 @@ In his \href{https://matt.might.net/articles/how-to-apply-and-get-in-to-graduate
 
 There are other things you might not think are important but can make you stand out. For example, if you have a strong background in a non-CS field but can be integrated with CS, e.g., you have a degree or background in \emph{dance} or \emph{music} and want to integrate them with CS, do talk about it. Are you a female or a minority in CS? Do you participate in outreach activities that help increase diversity and inclusion in CS? Diversity is valued in CS programs in the US, and experiences in these areas can make you stand out and get noticed from reviewers.
 
-
 \part{Funding, Schools, and Profs.}\label{part:funding-schools-profs}
 
 \chapter{Funding}\label{chap:funding}
@@ -1446,7 +1545,7 @@ Several things about stipends.  First, the amount of stipend \emph{varies} and d
 
 
 \begin{commentbox}[Vu:]
-  TA and RA at Mason have similar benefits in tuition waiving and insurance.  The college and department will set the rate for a 9-month graduate assistant stipend.  TA, which is paid by the department, will likely be that amount but RA might be higher depending on  the prof and the stage of the student (1st year vs ABD\footnote{All but dissertation: close to graduate.}).\\
+  TA and RA at Mason have similar benefits in tuition waiving and insurance.  The college and department will set the rate for a 9-month graduate assistant stipend.  TA, which is paid by the department, will likely be that amount but RA might be higher depending on  the prof and the stage of the student (1st year vs \acrshort{ABD}\footnote{acrlong{ABD}: close to graduate.}).\\
 
   At Mason, CS TA/RA is paid the highest.  First, CS is under the College of Engineering and Computing (CEC), which already has a higher TA stipend than other colleges.  Second, CS is the largest department in the college, and has the higher TA stipend than what CEC suggests.  Finally, it is a tradition that CS faculty pay their RAs more than the department's TA rate.  So a winning combination for CS PhD students.
   
@@ -1630,7 +1729,7 @@ If you get admission to several places, you should consider attending Open House
   The reason is that US News does not provide a good metric for evaluating the quality of the PhD program.
   %
   If you want to do great research, CSRankings is the best way to find good and active professors (which did not exist when I was applying),
-  since it solely focuses on publications at top-tier CS conferences.
+  since it solely focuses on publications at \glslink{toptier}{top-tier} CS conferences.
   %
   Also,
   I think PhD is not only about research;
@@ -1698,7 +1797,7 @@ Ultimately, choose a prof. that fits you by communicating with them, taking thei
 
 \emph{Not} every faculty can serve as your official PhD adviser. Let's try to understand the different types of faculty and their roles. For example, you might hear about tenured,  tenure track, and teaching faculty.  You might also hear about assistant, associate, full, adjunct, emeritus, teaching, and research professors. Here is a primer on these terminologies.
 
-\paragraph{Faculty} There are typically two types of faculty at an R1 research university: tenure-line and teaching.  The main difference is their focus: research, teaching, or both. Tenure-line faculty are typically more research-focused and can mentor PhD students, while teaching faculty are more teaching-focused and typically do not advise PhD students. Thus when contacting a prof. for research opportunities (\autoref{sec:contact}), you should focus on tenure-line faculty (and not adjunct or emeritus :p).
+\paragraph{Faculty} There are typically two types of faculty at an \gls{r1} university: tenure-line and teaching.  The main difference is their focus: research, teaching, or both. Tenure-line faculty are typically more research-focused and can mentor PhD students, while teaching faculty are more teaching-focused and typically do not advise PhD students. Thus when contacting a prof. for research opportunities (\autoref{sec:contact}), you should focus on tenure-line faculty (and not adjunct or emeritus :p).
 
 \emph{Tenure-line faculty}, consisting of tenured and tenure-track profs., focuses on research, which includes publishing papers, obtaining grants, and mentoring PhD students.  They often have a low teaching load, e.g., 1 course per semester. \emph{Tenured} faculty are professors who have been promoted to permanent positions (informally, very hard to fire them).  \emph{Tenure-track} faculty are professors who are on the track to get tenure.  For most schools, tenure-line is the main type of faculty that can serve as a formal adviser of PhD students. \autoref{sec:tenure-vs-tenure-track} talks more about choosing between tenure and tenured-track professor as your adviser.
 
@@ -1750,31 +1849,36 @@ Tenured faculty, e.g., associate and full profs., are likely older, more well-kn
 % This is a good question and there doesn't seem to be any best answer or specific algorithm that you can use.  But I'll throw out something for you to think about. To me, there are many good schools in the US and so you have some leeway in choosing.  For example, I don't believe there's much difference among schools in top 5 (e.g., CMU, UIUC, UCSD, MIT, GTech are in the same equivalent class), top 10 (e.g., Michigan,  Stanford, UWash, UC-Berkeley, Cornell is another equivalent class), top 20, top 30, top 40, and so on (though I would say schools above 100 are pretty much in the same equivalent class).  It's hard to say a top X is much much better than a top X+20 (e.g.,  Purdue at 15 is stronger than Yale at 35, but not \emph{that much} stronger as you would think).  So keep that in mind, while ranking does matter (e.g., more active faculty, stronger students), the lower ranked universities are still pretty good, might have sub fields that are extremely strong (NCState is 40th, but in Software Engineering it is easily top 5), and many unique things.  This is in contrast with universities in Vietnam where there are large gaps among the top 5, 10, and so on.
 
 
-% \section{Research Achievements}\label{sec:research-achievements}
+\section{Research Achievements}\label{sec:research-achievements}
 
-% While a strong match in personalities and research interests is important, many students also consider the faculty's research achievements in choosing an adviser.  The general metrics include papers, citations, and current and graduated students.  However, these metrics might not sufficient and can be misleading (e.g., fields like ML generate high citations quickly, even for unpublished papers).  
+When exploring potential advisors, students will often see various \emph{research achievements} highlighted on their websites, CV's, and even departmental news or awards pages. Unlike typical research metrics such as the number of publications in top-tier venues (e.g., CSRankings) or citation counts (which can be quite inaccurate, e.g., in fields like AI/ML where unpublished papers on preprint servers like arXiv can have high citation counts), these achievements are often more qualitative and can provide a deeper understanding of a researcher's influence and contributions to their field.
 
-% Thus, you should look beyond these metrics and consider the quality of the work and their impact, and the reputation of the faculty and the ability to obtain funding. These are typically measured by prestigious awards and recognitions for long term impact, competitive research grants and awards, and leadership and service in the research community. 
 
-% \paragraph{Prestigious Career Awards \& Recognition}
-% Highly productive researchers often receive competitive career awards that recognize their long-term potential. Some of the most prestigious awards include:
-% \begin{itemize}
-%     \item \textbf{NSF CAREER Award (US)} – A significant early-career award given to faculty demonstrating research and educational excellence.
-%     \item \textbf{Sloan Fellowship} – Recognizes young faculty with exceptional potential.
-%     \item \textbf{DoD YIP (Young Investigator Program)} – Awarded to early-career researchers in defense-related fields.
-%     \item \textbf{ACM/IEEE Fellows} – Reserved for researchers with long-term contributions and leadership in computing fields.
-%     \item \textbf{Turing Award} – The highest honor in computer science (if your potential adviser has one, you already know they are a giant in the field).
-% \end{itemize}
-% These awards indicate long-term impact and recognition from the research community. If an adviser has received any of these, it suggests a strong reputation and high research productivity.
+\paragraph{Prestigious Career Awards \& Recognition} Highly productive researchers often receive competitive career awards that recognize their long-term potential. In addition to the presitious recognition, these awards often come with funding and other benefits that can support their research and students.
 
-% \paragraph{Research Awards \& Long-Term Recognition}
-% Awards for research impact—especially those that recognize work over time—are strong indicators of high-quality contributions. Examples include:
-% \begin{itemize}
-%     \item \textbf{Test of Time Awards} – Given to papers that have remained influential over a decade or more.
-%     \item \textbf{Most Influential Paper Awards} – Typically awarded at major conferences for research that has shaped the field.
-%     \item \textbf{10-Year Impact Awards} – Recognizing papers that have had sustained influence over a decade.
-% \end{itemize}
-% If a potential adviser has won one or more of these, it means their research is not just productive but also has lasting significance.
+\begin{itemize}
+    \item \textbf{NSF CAREER Award} A very popular and highly prestigious early-career award given to junior faculty demonstrating research and educational excellence. It comes with a 5-year research grant (typically $> \$500K$), which is substantial for early-career researchers. 
+    For many top schools, the CAREER award is a must for tenure-track faculty. It is such a big deal that some faculty delay major life events (e.g., marriage, having kids) to focus on it, and some may consider moving to a better school after getting this award.  
+
+    
+    \item \textbf{YIP (Young Investigator Program)} Given by defense agencies such as the DoD, DARPA, ONR and have the similar goals as CAREER but for junior faculty who are US citizen or permanent residents. They are not as popular as CAREER and have very restricted topics (e.g., only in DoD's interest areas) and have a shorter duration (2--3 years instead of 5).
+
+    \item \textbf{Sloan Fellowship}  It comes with a \$75K research grant over 2 years for junior faculty with exceptional potential in their field. Unlike the CAREER or YIP, these are nominated by their institutions and are not open to self-application (e.g., it's not a grant you can apply for). 
+
+    \item \textbf{ACM/IEEE Fellows} Reserved for researchers with long-term contributions and leadership in computing fields. These are highly prestigious and competitive, recognizing only a small fraction of the computing community each year. Note that these are typically given to very senior researchers (e.g., full professors).
+
+    \item \textbf{Turing Award} The \emph{highest honor} in CS for lifetime achievements and contributions to the computing community. If you see someone having one, you already know they are a giant in the field.
+    
+\end{itemize}
+
+
+\paragraph{Research Awards \& Long-Term Recognition}
+Awards for research impact—especially those that recognize work over time—are strong indicators of high-quality contributions. Typically they are under the umbrella of ``most influential'' or ``test of time'' awards.
+\begin{itemize}
+    \item \textbf{Test of Time Awards} – Given to papers that have remained influential over a decade or more.
+    \item \textbf{Most Influential Paper Awards} – Typically awarded at major conferences for research that has shaped the field.
+    \item \textbf{Impact Awards} – Recognizing papers that have had sustained influence over a decade.
+\end{itemize}
 
 % \paragraph{Development of Highly Influential Research Tools}
 % Beyond papers, research tools that are widely used in academia or industry signify real-world impact. Some key indicators include:
@@ -1793,31 +1897,31 @@ Tenured faculty, e.g., associate and full profs., are likely older, more well-kn
 %     \item A high volume of recent publications in top venues suggests an active and productive lab.
 % \end{itemize}
 
-\paragraph{External Research Grants \& Funding}
-The ability to secure funding is a sign of research productivity and lab stability. Some key points to consider:
-\begin{itemize}
-    \item \textbf{Total external funding secured} – NSF, DoD, DARPA, NIH, and industry grants indicate strong research backing.
-    \item \textbf{Large collaborative grants} – Leading multi-institution projects suggests strong connections and influence.
-    \item \textbf{Consistency of funding} – Advisers with multiple ongoing grants can better support students with travel, equipment, and stipends.
-\end{itemize}
-If an adviser has continuously secured funding over time, it suggests a stable research environment and long-term support for students.
+% \paragraph{External Research Grants \& Funding}
+% The ability to secure funding is a sign of research productivity and lab stability. Some key points to consider:
+% \begin{itemize}
+%     \item \textbf{Total external funding secured} – NSF, DoD, DARPA, NIH, and industry grants indicate strong research backing.
+%     \item \textbf{Large collaborative grants} – Leading multi-institution projects suggests strong connections and influence.
+%     \item \textbf{Consistency of funding} – Advisers with multiple ongoing grants can better support students with travel, equipment, and stipends.
+% \end{itemize}
+% If an adviser has continuously secured funding over time, it suggests a stable research environment and long-term support for students.
 
-\paragraph{Leadership \& Service in the Research Community}
-Serving in key leadership roles is another indicator of a researcher's standing in the field. Important roles include:
-\begin{itemize}
-    \item \textbf{General or Program Chair of major conferences} – Running top conferences like NeurIPS, ICSE, or PLDI requires respect from peers and shows leadership.
-    \item \textbf{Editorial roles in top journals} – Being an editor of a leading journal (e.g., ACM TOCS, IEEE TSE) suggests authority in the field.
-    \item \textbf{Departmental leadership roles} – While not always a direct research indicator, serving as Department Chair, Dean, or leading a research institute often signals strong influence.
-\end{itemize}
+% \paragraph{Leadership \& Service in the Research Community}
+% Serving in key leadership roles is another indicator of a researcher's standing in the field. Important roles include:
+% \begin{itemize}
+%     \item \textbf{General or Program Chair of major conferences} – Running top conferences like NeurIPS, ICSE, or PLDI requires respect from peers and shows leadership.
+%     \item \textbf{Editorial roles in top journals} – Being an editor of a leading journal (e.g., ACM TOCS, IEEE TSE) suggests authority in the field.
+%     \item \textbf{Departmental leadership roles} – While not always a direct research indicator, serving as Department Chair, Dean, or leading a research institute often signals strong influence.
+% \end{itemize}
 
-\paragraph{What This Means for You as a PhD Student}
-Evaluating these factors helps you understand:
-\begin{itemize}
-    \item \textbf{How well-known your potential adviser is in the field} – This impacts your career prospects after graduation.
-    \item \textbf{How active their lab is} – A productive lab means more opportunities for collaboration, funding, and conference travel.
-    \item \textbf{How stable the research funding is} – A well-funded lab ensures you have the resources you need to succeed.
-\end{itemize}
-While no single factor is definitive, a combination of these elements can give you a strong sense of whether an adviser and their lab are truly productive and well-respected in the field.
+% \paragraph{What This Means for You as a PhD Student}
+% Evaluating these factors helps you understand:
+% \begin{itemize}
+%     \item \textbf{How well-known your potential adviser is in the field} – This impacts your career prospects after graduation.
+%     \item \textbf{How active their lab is} – A productive lab means more opportunities for collaboration, funding, and conference travel.
+%     \item \textbf{How stable the research funding is} – A well-funded lab ensures you have the resources you need to succeed.
+% \end{itemize}
+% While no single factor is definitive, a combination of these elements can give you a strong sense of whether an adviser and their lab are truly productive and well-respected in the field.
 \section{Contacting a Prof. How to get a desired reply?}\label{sec:contact}
 
 \sectioninfo{Individually faculty member \emph{cannot directly admit} a student---so do not email and ask if you have a chance. However, faculty can \emph{advocate} for a student and therefore increase their admission chance---so contact and introduce yourself.}
@@ -1956,7 +2060,7 @@ However, this is \emph{not} why we ``ghost'' you and provide no response (\autor
 
 \section{``Chance me'' on getting admitted to T10 programs}\label{sec:chance-me}
 
-Many international students aim for very top schools such as Stanford and MIT, and Ivy Leagues. Every year Reddit and other forums have numerous students asking for evaluation of their chances of getting into these schools (the so called \emph{``chance me''} or \emph{``roast my CV/profile''} posts) and then later posts on being \emph{``ghosted and rejected everywhere''}.
+Many international students aim for very top schools such as Stanford and MIT, and \Gls{ivy}. Every year Reddit and other forums have numerous students asking for evaluation of their chances of getting into these schools (the so called \emph{``chance me''} or \emph{``roast my CV/profile''} posts) and then later posts on being \emph{``ghosted and rejected everywhere''}.
 
 \paragraph{You are unlikely to get in these schools}  While being ambitious is always good, it is important to be realistic, and the harsh reality is that it is very unlikely that you will get in MIT or Harvard unless you are very exceptional (in which case you would not be asking for chances on Reddit). 
 
@@ -2047,7 +2151,7 @@ Second, AI-checking technology is very unreliable and inconsistent (e.g., a chec
 
 If you're reaching out to a professor for the first time,  address them as Prof. or Dr. Lastname (if they do not have a PhD, then use Prof.). Many international students use Prof. or Dr. FirstName LastName, but this can come across as if you're simply copying and pasting names. So just stick with Prof. or Dr. Lastname.  Using Prof. is generally the safest option.
 
-Furthermore, do not use Mr., Mrs., Ms, or Miss. This happens rarely, but I have seen  new students (e.g., undergraduate freshmen in the US) sometimes use these, which are used in K-12 schools but not in higher education.
+Furthermore, do not use Mr., Mrs., Ms, or Miss. This rarely happens, but I have seen  new students (e.g., undergraduate freshmen in the US) sometimes use these, which are used in K-12 schools but not in higher education.
 
 Moreover, do not call the prof. by their first name at first.  As you become more familiar with your prof and depending on their preferences, you may transition to addressing them by their first name.
 For example, I prefer that my students and colleagues call me Vu. Some students call me \emph{Dr. Vu}, which I find a bit amusing but am totally fine with it.
@@ -2082,24 +2186,18 @@ This is \emph{not necessary} and makes it look like you're trying to show off yo
 
 \part{Appendices}\label{part:appendices}
 \appendix
-\chapter{Glossary}\label{chap:glossary}
+\chapter{Glossary and Acronyms}\label{chap:glossary}
 
+\printglossary
+
+\printglossary[type=\acronymtype]
+
+\glsaddallunused
+
+\newpage
 \begin{description}
 
-    \item[April 15] The deadline for most US universities to accept or decline offers of admission. This date, set by the Council of Graduate Schools (\href{https://cgsnet.org/wp-content/uploads/2024/01/CGS_April15_Resolution_Jan312024.pdf}{CGS}), states that students are not required to accept offers before this date. Note that, some universities might not follow this deadline, so check with the university you are applying to.
-    
-  \item[ABD] All But Dissertation. A PhD candidate who has finished all course work and exams and only needs to write and defend their dissertation.
 
-  \item[Adcom~\autoref{chap:evalapps}] Admission Committee. The group of faculty members who review applications and make admission decisions.
-  
-  \item [Adcom members~\autoref{chap:evalapps}] Faculty members who are part of the admission committee. These are the people who review applications and make admission decisions.
-  
-  \item[Adcom chair~\autoref{chap:evalapps}] The faculty member who leads the admission committee. This person is often not involved in individual admission decisions but oversees the process (e.g., resolve disputes, ensure fairness).
-  
-  \item[Adviser/Superviser]: A faculty member who guides and mentors a PhD student throughout their research. This person typically plays a crucial role in a student's academic journey. In the US, the term ``adviser'' is more commonly used than ``supervisor''.
-  
-  \item[Cohort] A group of students who start a program at the same time and take classes together. You should get to know your cohort as they will be your colleagues and friends during your PhD.
-  
   \item [Deferred Admission] An option allowing admitted students to postpone their start date, typically by one year.
   
   \item [Diversity Statement~\autoref{sec:diversity-statement}] A document sometimes required in applications where applicants describe their contributions to diversity and inclusion, or how their background adds to the diversity of the academic community. This document is often required for faculty positions, but some universities are requiring it for graduate admissions. 
@@ -2113,11 +2211,8 @@ This is \emph{not necessary} and makes it look like you're trying to show off yo
 
   \item [In-state vs. Out-of-state] In-state tuition is the tuition rate for students who are residents of the state where the university is located. Out-of-state tuition is the tuition rate for students who are not residents of that state. In-state tuition is typically much lower than out-of-state tuition. PhD students typically do not have to pay tuition as it is covered by their funding, but this might be important for MS students.
   
-  \item [Ivy League] A group of eight private universities in the US known for their academic excellence and social prestige. The Ivy League schools are Brown, Columbia, Cornell, Dartmouth, Harvard, the UPenn, Princeton, and Yale. These schools are typically known for their undergraduate programs more than their graduate programs. Moreover, most top CS programs such as CMU, UIUC, UCSD, UWash, MIT, Stanford, are not in the Ivy League. See selecting and ranking schools in \autoref{sec:selecting-ranking-schools}.
-
   \item [Lab] Research Lab. A group of researchers (profs. and students) working on a common research area, e.g., a Software Engineering Lab.  Typically a lab is led by a single professor, but sometimes it can be co-led by multiple professors. For example, my lab \href{https://dynaroars.cs.gmu.edu}{DynaROARS} focuses on my own research area (software verification), but I am also part of the more general SWE Lab at Mason with other faculty in Software Engineering.
 
-  \item[LoR] Letter of Recommendation. A letter written by a professor or supervisor that assesses your qualifications and potential for graduate study (\autoref{chap:lor}).
 
   \item[Major] A student's primary field of study, e.g., Computer Science, Electrical Engineering, Mathematics, etc. Often used in the context of undergraduate studies (e.g., ``what was your major in undergrad?'').
 
@@ -2125,35 +2220,14 @@ This is \emph{not necessary} and makes it look like you're trying to show off yo
 
   \item[Open House \autoref{chap:accepted}] An event where admitted students visit the university to meet faculty, students, and staff, and learn more about the program. This is a great opportunity to get a feel for the university and the department and decide if it is a good fit for you.
   
-  \item[Q1 Journal] Commonly mentioned by international students to refer to top-tier journals in CS.  This is not a standard in CS in the US (which often focuses on confs. rather than journals), and many CS faculty in the US might not know what this means.  If you want to refer to top-tier journals, you should mention the specific journals, e.g., TSE in Software Engineering.
-  
-  \item[SOP] Statement of Purpose is a document written by yourself to explains your research interests, background, and reasons for applying to a PhD program (\autoref{chap:sop}).
 
-  \item[RA and TA] Research Assistantship (RA, \autoref{sec:ra}) is a funding where you work on a research project for a professor. Teaching Assistantship (TA, \autoref{sec:ta}) is a funding where you help a a professor with teaching (e.g., grading assignments).
-
-  \item[TOEFL/IELTS] Test of English as a Foreign Language. A standardized test to measure the English language ability of non-native speakers.
-  \item[GRE] Graduate Record Examination. A standardized test that is an admissions requirement for many graduate schools in the US. However, it is not required for most CS PhD programs (\autoref{chap:standard-tests}).
-
-  \item [PI]  Principal Investigator is lead researcher on a grant or research project, e.g., a PI on an NSF grant.  Prospective students often use this term to refer to a professor they are interested in working with.  However, we do not use it this way in academia, e.g., ``who is your PI?'' might only make sense to fellow Reddit applicants, but might not be understood by others, ``who is your adviser?'' is what you want to use.
-
-  \item[STEM] Science, Technology, Engineering, and Mathematics. Fields in or related to these areas are considered STEM fields. CS is a STEM field.
-    
-  \item[URM] Underrepresented Minority. Refers to groups that are underrepresented in higher education, e.g., Black, Hispanic, and Native American students.
-  \item[NSF] National Science Foundation. A US government agency that supports research and education in science and engineering. NSF is a major source of funding for RAs in CS research. There are other agencies that support RAs but they might require US citizenship or permanent residency.
-    
-  \item [R1/R2 Universities] Research 1 (R1) universities are universities with the highest level of research activity. R2 universities have a high level of research activity but not as high as R1 universities.  R1 universities are typically larger, and have more funding and resources for research.  R2 universities are also good but might have fewer resources and funding.
-  
-    \item [Rolling Admission] Applications are reviewed as they are received (instead of all at once after the deadline), and decisions are made throughout the admission cycle.  Rolling admission is more common for MS programs and less common for PhD programs (e.g., at Mason, MS is rolling and PhD is not).
-
-  \item [Top-tier conferences and journals] These are the most prestigious venues for publishing research in CS.  For example, in Software Engineering, top-tier conferences include ICSE, FSE, and ASE and top-tier journals include TSE and TOSEM.  Publishing in these venues is highly competitive and prestigious, and can significantly improve your chances of getting admitted to a good PhD program.
-
-        \item [Stipend] A fixed regular sum paid to students as part of their funding package (i.e., salary). This is typically paid monthly or bi-weekly.  Stipend is typically paid to PhD students and not MS students.
-  \item[REU] Research Experience for Undergraduates. A program funded by the NSF to provide research opportunities for undergraduate students.
     \item[OPT] Optional Practical Training. A program that allows F-1 students to work in the US for up to 12 months after graduation.
   \item[CPT] Curricular Practical Training. A program that allows F-1 students to participate in internships or practical training that is an integral part of their academic curriculum.
   \item[F-1] Student Visa. A visa that allows international students to study full-time at an accredited institution in the US.
   \item[F-2] Dependent Visa. A visa that allows the spouse and children of an F-1 visa holder to live in the US.
 \end{description}
+
+%T10,T20,T50,TX
 
 \chapter{Visa for International Students}\label{chap:visa}
 
@@ -2213,7 +2287,7 @@ That makes you stand out and can help your case.
 
 \paragraph{Funding \autoref{chap:funding}} You have more opportunities for funding, e.g., through government scholarships for US citizens and permanent residents.  You can also apply to specific programs \emph{before} you start your PhD, e.g., NSF Graduate Research Fellowship Program (GRFP) and Hertz Foundation Fellowship.  These fellowships are very competitive (\autoref{chap:fellowships}) and can significantly improve your admission chances.
 
-\paragraph{Research Experience \autoref{chap:research-opportunities}} You might have many opportunities to do research as an undergraduate, e.g., through REUs and internships at your undergrad university.  Highlight such experience in your application.
+\paragraph{Research Experience \autoref{chap:research-opportunities}} You might have many opportunities to do research as an undergraduate, e.g., through \acrshort{REU} programs and internships at your undergrad university.  Highlight such experience in your application.
 
 \paragraph{Open House \autoref{chap:accepted}} It is easier for you to attend open house events in person.  This can help you make a better decision on which school to attend.
 
@@ -2269,7 +2343,7 @@ In most cases MS CS programs are much less competitive than PhD programs, i.e., 
 While admission requirements are similar to PhD programs (e.g., GPA, SOP, LORs), research is not a focus in MS programs. In most cases, the main requirements are that you have sufficient background in CS, e.g., through your undergrad degree. This does not mean MS programs are easy to get admitted, but the requirements are much lower compared to PhD programs.
 
 \subsection{Admission Committee}\label{sec:ms-adcom}
-MS admission also involves an adcom that reviews applications and makes admission decisions. However, MS admission is typically rolling, i.e., they review applications as they come in and make decisions throughout the admission cycle.  Moreover, unlike PhD that has multiple reviewers for each application, an MS application typically involves only one reviewer and does require much time to review compared to a PhD application (\autoref{sec:ievaluate}). 
+MS admission also involves an adcom that reviews applications and makes admission decisions. However, MS admission is typically \glslink{rolling-admission}{rolling}, i.e., applications are reviewed as they come in and decisions are made throughout the admission cycle.  Moreover, unlike PhD that has multiple reviewers for each application, an MS application typically involves only one reviewer and does require much time to review compared to a PhD application (\autoref{sec:ievaluate}). 
 
 \begin{commentbox}[Vu:]
     Mason has a very large the number of MS students in CS (1000+ MS vs 200 PhDs). In contrast, other similar size universities often have much smaller MS CS programs (or none). Location plays an important role as GMU is close to DC with many developer professionals who want to get an MS, which are often covered by their employers.  Our MS program is geared towards working professionals, e.g., all of our MS courses are offered in the evening and online.
@@ -2350,7 +2424,7 @@ If you did well or liked a class, you can check with the professor of that class
 You can also go to the department directory and then professors' websites and see if they are looking for undergraduate researchers.
 Even if they say they are looking for graduate students, you can still contact them and ask.
 
-Many universities have programs to encourage undergraduate research. For example, Mason has the OSCAR program, UNL has UCARE, and NSF has REUs (for US citizens and permanent residents).
+Many universities have programs to encourage undergraduate research. For example, Mason has the OSCAR program, UNL has UCARE, and \acrshort{NSF} has \acrshort{REU}'s (for US citizens and permanent residents).
 
 You can also take honor thesis or independent study courses with a professor.  This is a good way to get research experience and also get a LoR from the professor.  You can also ask your academic adviser or other faculty members for suggestions.  Finally, you can also ask your peers who are already doing research.  Use the method described in \autoref{sec:contact} to contact professors
 
@@ -2687,7 +2761,8 @@ I was also a member of the large VietPhD group on Facebook and often browse Inte
 
 I started writing this book in May 2023 and have been updating it since then (mostly around deadline time when I procrastinate, i.e., \emph{productive procrastination}!). The book was initially intended for international students but has been updated to include domestic students (\autoref{chap:domestic-students} and \autoref{chap:fellowships}).
 The book is open-source and available on \href{https://github.com/dynaroars/phd-cs-us}{GitHub} so that others can contribute to it.
-\paragraph{About Me} I am an associate professor in the CS dept at George Mason University (Mason). Before Mason, I was at the University of Nebraska-Lincoln (UNL). Both UNL and Mason are large R1 research universities in the US and have many international students in their CS graduate programs. My personal and lab website is at \href{https://dynaroars.github.io}{dynaroars.github.io}.
+\paragraph{About Me} I am an associate professor in the CS dept at George Mason University (Mason). 
+Before Mason, I was at the University of Nebraska-Lincoln (UNL). Both UNL and Mason are \gls{r1} research universities in the US and have many international students in their CS graduate programs. I work in Software Engineering and Formal Mehods.  My personal and lab website is at \href{https://dynaroars.github.io}{dynaroars.github.io}. 
 
 I have been involved the PhD admission process at Mason and UNL for many years. This allows me to have a good understanding of the process, the challenges students face, and what faculty are looking for. Currently I am the program director of the MS program in Software Engineering at Mason (thus also have experience with MS admission---which is quite different than PhD as discussed in \autoref{chap:ms}). I also have served in the panels of PhD fellowships including NSF GRFP and DoD NDSEG, which allows me to provide some insights on external fellowhip applications (\autoref{chap:fellowships}).
 
@@ -2710,3 +2785,4 @@ Also thanks to NSF for encouraging faculty to be creative in research and educat
 %\bibliography{demystify.bib}
 
 \end{document}
+
