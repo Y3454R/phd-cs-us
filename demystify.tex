@@ -143,6 +143,8 @@
 \newcommand{\xz}[1]{\mycomment{Xiaokuan}{[#1]}}{}
 \newcommand{\red}[1]{{\color{red}{#1}}}
 
+\newcommand{\mytitle}{Demystifying U.S. Computer Science PhD Admissions}
+
 
 \usepackage{hyperref}
 \hypersetup{
@@ -214,8 +216,11 @@
     description={These are the most prestigious venues for publishing research in CS.  For example, in Software Engineering, top-tier conferences include ICSE, FSE, and ASE and top-tier journals include TSE and TOSEM.  Publishing in these venues is highly competitive and prestigious, and can significantly improve your chances of getting admitted to a good PhD program}
 }
 
-% \item [Diversity Statement~\autoref{sec:diversity-statement}] A document sometimes required in applications where applicants describe their contributions to diversity and inclusion, or how their background adds to the diversity of the academic community. This document is often required for faculty positions, but some universities are requiring it for graduate admissions. 
-% Note that you do not need to be from an underrepresented group to write a diversity statement.
+% \newglossaryentry{diversity-statement}{
+%     name = diversity statement, 
+%     description = {A document sometimes required in applications where applicants describe their contributions to diversity and inclusion, or how their background adds to the diversity of the academic community.admissions~\autoref{sec:diversity-statement}}
+% } 
+
 
 \newglossaryentry{fields}{
     name = fields or areas of Research,
@@ -359,7 +364,7 @@
     black!75
     ]
     {
-    {\fontsize{25}{30} \selectfont \bf Computer\\[8pt] Science}
+    {\fontsize{30}{30} \selectfont \bf Computer\\[0.1in] Science}
     } 
     node[
     midway,
@@ -368,23 +373,31 @@
     align=left,
     ForestGreen]
     {
-    {\fontsize{48}{50} \selectfont PhD}
+        {\fontsize{25}{30} \selectfont \bf PhD\\[0.1in] U.S.}
+
     };
     
     % Title
     \node[align=center] at ($(current page.center)+(0,-7)$)
     {
-    {\fontsize{24}{24} \selectfont {{Demystifying the Computer Science}}} \\[0.15in]
-    {\fontsize{24}{24} \selectfont {{PhD Admission in the US}}} \\[1in]    
+    {\fontsize{24}{14} \selectfont {{\mytitle{}}}}\\[1.in]
+    %{\fontsize{24}{24} \selectfont {{PhD Admission in the US}}} \\[1in]    
     %{\fontsize{18}{18} \selectfont {{A Handbook for International Students}}} \\[1.in]
 
-    {\fontsize{16}{19.2} \selectfont \textcolor{ForestGreen}{\bf ThanhVu (Vu) Nguyen}}\\[0.1in]
+    {\fontsize{14}{19.2} \selectfont \textcolor{ForestGreen}{\bf ThanhVu (Vu) Nguyen}}\\[0.1in]
     George Mason University, Dept. of Computer Science\\[0.1in]
     \today{} (latest version available on  \href{https://github.com/dynaroars/phd-cs-us}{Github})
     };
     \end{tikzpicture}
 
-    
+\chapter*{}    
+\begin{tcolorbox}[enhanced,attach boxed title to top center={yshift=-3mm,yshifttext=-1mm},
+    colback=green!5!white,colframe=green!50!black,colbacktitle=green!50!black,
+    title=Copyright,fonttitle=\bfseries,
+    boxed title style={size=small,colframe=green!50!black} ]
+    \mytitle{} © 2025 by ThanhVu Nguyen is licensed under CC BY-SA 4.0. 
+  \end{tcolorbox}
+
 \chapter*{Preface}
 Having been involved in PhD admission committees for many years, I've observed that \textbf{international students}, especially those in smaller countries or less well-known universities, often lack a clear understanding of
 the Computer Science PhD admission process at US universities. This confusion not only
@@ -453,33 +466,20 @@ Full funding for CS PhD students is the norm in the US, and I'd go as far as to 
 
 % In fact, many resources are available to encourage and support students from minority and diverse groups to pursue higher education and research, e.g., specific scholarships and fellowships. Faculty in CS are also familiar with and are encouraged to support such students in their group. There are also incentives, such as dedicated funding and awards, to motivate faculty to recruit and mentor minority students (\autoref{sec:urm}).
 
-\section{About this book}
-\sectioninfo{This book aims to provide in depth information about the CS PhD admission process in the US. It is particularly useful for international students from smaller countries and less well-known universities as they often lack access to such information.}
-
-\subsection{Who is this book for?}
-While this book can be useful for all students, it would most benefit \textbf{international students} from \textbf{smaller countries and less well-known universities}.  It is also useful for \textbf{domestic students} from US universities with \textbf{no PhD programs or limited research opportunities}.
-
-Students from top schools with strong research programs and experience might already know some of the information in this book.  They likely have received guidance from their professors or grad students who have gone through the process. Students from smaller schools or countries, however, might not have access to such resources and know where to start. 
-My goal is thus to level the playing field by providing info that is not readily available to less privileged students. 
-I hope to encourage more students with such backgrounds to apply and succeed in CS PhD programs in the US.
-
-\subsection{Why this book?}
-This book aims to be a comprehensive guide to the CS PhD admission process in the US. It is based on my and other contributors' experience in the CS depart. I also try to explain the \textbf{reasons behind the admission process}.
-While there are numerous \href{https://github.com/dynaroars/phd-cs-us}{resources online} that tell you \emph{``what''} to do, few explain the \emph{``why''}, e.g., why LoRs matter so much, why you should not draft your own LoR, why you should contact professors, etc. Understanding the reason and mindset of the admission committee and profs. can help you prepare better.
-
-This book is a personal project (\autoref{chap:ack}) that I continuously update and refine, especially during the admission season. I usually work on it when I procrastinate from research or other responsibilities—it’s my way of convincing myself that I am still productive!
-Writing is a relaxing process for me, and I enjoy experimenting with new things in \LaTeX{} along the way. It’s both a creative outlet and a technical challenge, making it a fun and ever-evolving project!
+\section{What's a PhD in CS?}\label{sec:phd-in-cs}
 
 
-%While this handbook may not fully meet the needs of students aiming for top-10 schools (\autoref{sec:selecting-ranking-schools} and \autoref{chap:rankings}), which typically have more stringent requirements (e.g., see the \href{https://da-data.blogspot.com/2015/03/reflecting-on-cs-graduate-admissions.html}{admission process} at CMU), it should be valuable for those targeting other reputable R1 institutions.
+A PhD in CS is a \emph{research} degree. Unlike undergraduate or even Master's programs (\autoref{chap:ms}), which focus on breadth of knowledge through coursework, a PhD is all about depth. It is a multi-year journey (\autoref{sec:time}) toward becoming an expert in a very narrow and specialized area within CS—whether that's software verification, theorem proving, machine learning theory, cryptographic protocol, or something else. The goal is thus not to know about CS (which is too broad), but push the boundary of one specific area in CS (in fact, even that might be too large, and you might need to narrow it down even further) and contribute something new to the field that has never been done before.
+
+\begin{commentbox}[Vu]
+    This \href{https://matt.might.net/articles/phd-school-in-pictures/}{series of pictures} from \href{https://matt.might.net}{Matt Might} illustrates what a PhD means.
+\end{commentbox}
+
+A CS PhD prepares you for careers that require deep technical expertise and the ability to do independent research. Many graduates become professors or academic researchers, but just as many pursue roles in industry research labs, advanced engineering teams, or technical leadership positions. The degree also opens doors to national labs, government agencies, and startups, where the ability to solve open-ended, complex problems are needed. 
+
+The PhD is not just a degree, it is a testament that you have mastered the art of research—identifying limitations or gaps in knowledge, formulating hypotheses and ideas, establishing/proving theorems and designing/implementing algorithms, conducting experiments and analyzing results, etc. It demonstrates that you can push the boundaries of knowledge in a focused area—a skill is in demand across academia, industry, and beyond.
 
 
-
-%\begin{commentbox}[Vu:]
-%    One of the reasons I created this document is that my colleagues at Mason are interested in recruiting Vietnamese students and are surprised when seeing very few applications in Vietnam (see \autoref{chap:ack}). Each year our CS PhD program receives 500+ PhD applications, most of which are international but only 5--6 are from Vietnam.
-%  \end{commentbox}
-  
-  
 \section{How long to complete the CS PhD program?}\label{sec:time}
 \sectioninfo{About 5--7 years in the US.}
 
@@ -591,8 +591,36 @@ In the US, PhD graduates often apply directly for faculty positions. Postdoc for
 \emph{Work-life balance}: PhD students in the US are often said to be overworked compared to other countries, e.g., in Europe.  This is partly due to the longer PhD program and that US PhD students are often paid through TA, which requires them to do TA in addition to their own research. In contrast, PhD students in other countries are often paid through fellowships, which might not require doing TA.
 
 
-%% Vu: *what's a PhD?*  This [[https://matt.might.net/articles/phd-school-in-pictures/][series of pictures]] from [[https://matt.might.net][Matt Might]] illustrates what a PhD means.
-%% \end{commentbox}
+\section{About this book}
+\sectioninfo{This book aims to provide in depth information about the CS PhD admission process in the US. It is particularly useful for international students from smaller countries and less well-known universities as they often lack access to such information.}
+
+\subsection{Who is this book for?}
+While this book can be useful for all students, it would most benefit \textbf{international students} from \textbf{smaller countries and less well-known universities}.  It is also useful for \textbf{domestic students} from US universities with \textbf{no PhD programs or limited research opportunities}.
+
+Students from top schools with strong research programs and experience might already know some of the information in this book.  They likely have received guidance from their professors or grad students who have gone through the process. Students from smaller schools or countries, however, might not have access to such resources and know where to start. 
+My goal is thus to level the playing field by providing info that is not readily available to less privileged students. 
+I hope to encourage more students with such backgrounds to apply and succeed in CS PhD programs in the US.
+
+\subsection{Why this book?}
+This book aims to be a comprehensive guide to the CS PhD admission process in the US. It is based on my and other contributors' experience in the CS depart. I also try to explain the \textbf{reasons behind the admission process}.
+While there are numerous \href{https://github.com/dynaroars/phd-cs-us}{resources online} that tell you \emph{``what''} to do, few explain the \emph{``why''}, e.g., why LoRs matter so much, why you should not draft your own LoR, why you should contact professors, etc. Understanding the reason and mindset of the admission committee and profs. can help you prepare better.
+
+This book is a personal project (\autoref{chap:ack}) that I continuously update and refine, especially during the admission season. I usually work on it when I procrastinate from research or other responsibilities—it’s my way of convincing myself that I am still productive!
+Writing is a relaxing process for me, and I enjoy experimenting with new things in \LaTeX{} along the way (\autoref{chap:writing-latex}). It’s both a creative outlet and a technical challenge, making it a fun and ever-evolving project!
+
+
+%While this handbook may not fully meet the needs of students aiming for top-10 schools (\autoref{sec:selecting-ranking-schools} and \autoref{chap:rankings}), which typically have more stringent requirements (e.g., see the \href{https://da-data.blogspot.com/2015/03/reflecting-on-cs-graduate-admissions.html}{admission process} at CMU), it should be valuable for those targeting other reputable R1 institutions.
+
+
+
+%\begin{commentbox}[Vu:]
+%    One of the reasons I created this document is that my colleagues at Mason are interested in recruiting Vietnamese students and are surprised when seeing very few applications in Vietnam (see \autoref{chap:ack}). Each year our CS PhD program receives 500+ PhD applications, most of which are international but only 5--6 are from Vietnam.
+%  \end{commentbox}
+  
+
+
+
+
 
 
 % \section{Timeline}
@@ -625,15 +653,17 @@ After you submit your PhD application, it will first be checked for general requ
 After screening, your application is complete and forwarded to the CS department for further evaluation. If you don't pass screening,  the system will tell you what is missing and what you need to do. So pay attention to your email and check your application status regularly.
 
 \begin{commentbox}[Hakan:]
-  At Mason, for full consideration, students should make sure to submit \textbf{ALL} required documents by the application deadline, and should never assume that some required documents (such as official TOEFL scores or official diplomas/transcripts) will be waived by the admissions office. If something is listed and not marked as ``optional'', it is mandatory and they should plan for submitting all those.
+  At Mason, for full consideration, students should make sure to submit \emph{ALL} required documents by the application deadline, and should never assume that some required documents (such as official TOEFL scores or official diplomas/transcripts) will be waived by the admissions office. If something is listed and not marked as ``optional'', it is mandatory and they should plan for submitting all those.
 \end{commentbox}
 
 \section{\acrfull{adcom}}\label{sec:adcom}
 \sectioninfo{Adcom members are faculty who evaluate your application. They consider various factors, e.g., research experience, LoRs, SOP}
 
-Your applications are reviewed by a PhD admission committee or \emph{adcom} that consists of faculty members in CS\footnote{In some cases the committee can involve affiliated faculty from different disciplines.}. Adcom members have a wide range of expertise and background to ensure diverse perspectives in the evaluation process. The size and the review load of the adcom depend on the department size. At Mason, the PhD adcom typically has 15--20 faculty, and each committee member is assigned to review about 30 applications. Note that most large schools, including Mason, have separate adcoms for MS programs (\autoref{chap:ms}).
+Your applications are reviewed by a PhD admission committee or \emph{\acrshort{adcom}} that consists of faculty members in CS\footnote{In some cases the committee can involve affiliated faculty from different disciplines.}. Adcom members have a wide range of expertise and background to ensure diverse perspectives in the evaluation process. For example, there would be faculty who specialize in various areas such as AI, systems, theory, HCI, and so on. 
 
-The PhD adcom typically involves assistant professors in the department (see \autoref{sec:faculty-types} for various types of faculty). This provides junior faculty the opportunities to recruit students. The adcom \emph{chair} will likely be a senior faculty, but they will not review individual applications and instead assign them to committee members. The chair will look at various factors such as research interests or mentioning faculty names to assign the applications to appropriate faculty, e.g., I am often assigned to review applicants interested in software engineering.
+The size and the review load of the adcom depend on the department size. At Mason, the PhD adcom typically has 15--20 faculty, and each committee member is assigned to review about 30 applications. Note that most large schools, including Mason, have separate adcoms for MS programs (\autoref{chap:ms}).
+
+The PhD adcom typically involves assistant professors in the department (see \autoref{sec:faculty-types} for various types of faculty). This provides junior faculty the opportunities to recruit students. The \gls{adcom-chair} will likely be a senior faculty, but they will not review individual applications and instead assign them to committee members. The chair will look at various factors such as research interests or mentioning faculty names to assign the applications to appropriate faculty, e.g., I am often assigned to review applicants interested in software engineering.
 
 
 
@@ -683,7 +713,7 @@ However, when there are discrepancies in evaluations, the adcom chair will ask r
 If the student mentioned a faculty member in their SOP, we might ask that faculty if they are interested in the student. 
 
 
-Note that other disciplines might have different practices, e.g., they might select a top list of applicants and then discuss them in a meeting to determine who to interview. In CS, both the reviews and interviews are often done independently (\autoref{sec:interviews}).
+Note that other disciplines might have different practices. For example, adcome might select a top list of applicants and then discuss them in a meeting to determine who to interview. In CS, both the reviews and interviews are often done independently (\autoref{sec:interviews}).
 
 \begin{commentbox}[From a prof. in Physics at an \gls{r1} university:]
   We have a pretty well fleshed out grading rubric for applications that has categories like grades, research, writing ability, etc. I would say our rubric is weighted about 1/2 on academics (research, LORs, grades) and 1/2 on the idea of ``grit'' or ``resilience'' (engagement, leadership, working through obstacles).\\
@@ -1093,7 +1123,7 @@ These names, numbers, and stats are harder to fake and concretely show your expe
 \item \textbf{Not customized to the program}: If your SOP can be sent to multiple programs with few changes, it is too generic. Do some research and mention why you want to spend the next 5--7 years there.
 \item \textbf{Mentioning wrong professors}: do not mention emeritus professors or those who have left.  Teaching and adjunct faculty are often not active in mentoring PhD students (\autoref{sec:faculty-types}). Do your homework and mention profs who are till active in research. 
 \item \textbf{Too Long and Fancy Format}: As mentioned, keep it under 2 pages. Don't use too much coloring or fancy fonts (like those in Words). Don't use left alignment (seems to be default in Words) as it is hard to read.
-CS academics like using \LaTeX{} (common way to write our papers and other documents), so write your SOP using LaTeX (with Times or default font, 11pt, and 1-inch margin).
+CS academics like using \LaTeX{} (common way to write our papers and other documents), so write your SOP using \LaTeX{} (with Times or default font, 11pt, and 1-inch margin as described in~\autoref{chap:writing-latex}).
 \end{itemize}
 
 
@@ -1105,30 +1135,30 @@ CS academics like using \LaTeX{} (common way to write our papers and other docum
 \end{itemize}
 % \subsection{Outline of a LOR}\label{sec:lor-outline}
 
+% \section{Diversity Statement}\label{sec:diversity-statement}
+% no longer relevant as most univs do not require this anymore
 
-\section{Diversity Statement}\label{sec:diversity-statement}
+% Some universities require a \gls{diversity-statement} as part of the application. Students, especially international ones, often struggle with what to write, especially when they are not from a minority group or do not have much experience in DEI.
 
-Some universities require a diversity, equity, and inclusion (DEI) statement as part of the application. Students, especially international ones, often struggle with what to write, especially when they are not from a minority group or do not have much experience in DEI.
+% A DEI statement is about showing your \emph{awareness} of DEI, \emph{understanding} of the challenges others face, and \emph{potential things} you can do to contribute. 
 
-A DEI statement is about showing your \emph{awareness} of DEI, \emph{understanding} of the challenges others face, and \emph{potential things} you can do to contribute. 
+% \begin{itemize}
+% \item \textbf{You don't have to be from a minority group.} You just need to understand what DEI is, e.g., be aware of challenges faced by minority groups in studying CS, STEM fields, academia, workplace. Show that you understand the importance of DEI and how it can benefit the CS field and society. 
 
-\begin{itemize}
-\item \textbf{You don't have to be from a minority group.} You just need to understand what DEI is, e.g., be aware of challenges faced by minority groups in studying CS, STEM fields, academia, workplace. Show that you understand the importance of DEI and how it can benefit the CS field and society. 
+% \item \textbf{Show your awareness, customized to your own experiences}. If you come from a different culture or country, talk about DEI there. Many countries, especially developing countries, do not have/care about DEI or even have laws against it, so does minority group face in your country?  How do you think DEI can benefit? Remember, you would have a unique perspective on this topic that we might not know about, so use that to your advantage.
 
-\item \textbf{Show your awareness, customized to your own experiences}. If you come from a different culture or country, talk about DEI there. Many countries, especially developing countries, do not have/care about DEI or even have laws against it, so does minority group face in your country?  How do you think DEI can benefit? Remember, you would have a unique perspective on this topic that we might not know about, so use that to your advantage.
+% \item \textbf{Highlight your contributions}.  You do not need to be in any group or organization specific to DEI.  You can talk about your contributions to your community, e.g., mentoring students, organizing events, or even just helping people in needs. If you don't believe you have done anything much, then talk about what you plan to do. 
 
-\item \textbf{Highlight your contributions}.  You do not need to be in any group or organization specific to DEI.  You can talk about your contributions to your community, e.g., mentoring students, organizing events, or even just helping people in needs. If you don't believe you have done anything much, then talk about what you plan to do. 
+% \item \textbf{Customized it to your application} Can your PhD study or research contribute to DEI?  Can you help or mentor students from underrepresented groups from your country?  These are very doable and can be very convincing.  
 
-\item \textbf{Customized it to your application} Can your PhD study or research contribute to DEI?  Can you help or mentor students from underrepresented groups from your country?  These are very doable and can be very convincing.  
-
-\end{itemize}
+% \end{itemize}
 
 
-\begin{commentbox}[Vu:]
-One common pitfall is to write about how you are from a poor family, a small town, or a developing country.  These are not related to DEI and show that you do not understand the topic.   I have seen people consider themselves as minority because they are Asian or international students studying in the US (have you seen how many Asian or international students are in CS programs?).\\
+% \begin{commentbox}[Vu:]
+% One common pitfall is to write about how you are from a poor family, a small town, or a developing country.  These are not related to DEI and show that you do not understand the topic.   I have seen people consider themselves as minority because they are Asian or international students studying in the US (have you seen how many Asian or international students are in CS programs?).\\
 
-Moreover, do not make up stories or exaggerate your experiences.  Just show your awareness and understanding of the topic and what you did or how you plan to contribute to it (e.g., mentoring students, helping others). One of the best statements I have read starts the acknowledgement that the applicant is not a minority, but a white male in a STEM field (i.e., they are the majority), and that they do not have much experience in DEI, but show that they are aware of the challenges faced by minority groups and how they can contribute to it.
-\end{commentbox}
+% Moreover, do not make up stories or exaggerate your experiences.  Just show your awareness and understanding of the topic and what you did or how you plan to contribute to it (e.g., mentoring students, helping others). One of the best statements I have read starts the acknowledgement that the applicant is not a minority, but a white male in a STEM field (i.e., they are the majority), and that they do not have much experience in DEI, but show that they are aware of the challenges faced by minority groups and how they can contribute to it.
+% \end{commentbox}
 
 
 
@@ -2634,7 +2664,7 @@ These are some common pitfalls I see in NDSEG applications and some tips to avoi
 \section{Common Tips for Both Fellowships}
 
 \begin{itemize}
-  \item \textbf{Use LaTeX to write your research plan and essays}.  This is the standard in CS and engineering and will make your application look more professional.  Moreover, do not use the default Word settings, e.g., left justification, as it is not standard in CS and engineering and difficult to read.  
+  \item \textbf{Use \LaTeX{} to write your research plan and essays} (\autoref{chap:writing-latex}).  This is the standard in CS and engineering and will make your application look  professional.  Moreover, do not use the default Word settings, e.g., left justification, as it is not standard in CS and engineering and difficult to read.  
 
   \item \textbf{Ask your LoR writers and adviser to look at your writing/essays}. You are new to the field and research writing, and your ideas might not be accurate or have already been explored. It's better that they tell you now than for you to find out later from reviewers.
 \end{itemize}
@@ -2645,8 +2675,30 @@ These are some common pitfalls I see in NDSEG applications and some tips to avoi
 
 
 
+\chapter{Writing in \LaTeX{}}\label{chap:writing-latex}
+\chapterinfo{Why you should write your academic documents in \LaTeX{}.}
 
+If you’re applying for a PhD program, the NSF GRFP, or the DoD NDSEG, you should strongly consider writing your statements in \LaTeX{} instead of MS Word. In CS and most other scientific and engineering fields, \LaTeX{} is the de facto standard for writing documents—papers, proposals, dissertations, and letters. Most faculty reviewers are accustomed to seeing formatting that \LaTeX{} produces, and many find Word’s default left-aligned, uneven layout distracting and amateurish.
 
+This isn’t about snobbery—it’s about professional norms. Reviewers will not penalize you for using Word, but subtle irritations can affect how they read your work (after reading dozen of applications, these small things add up). Given that using \LaTeX{} is free and easy to use (e.g., see Overleaf), there’s no excuse not to use it. This is a small, easily fixable detail that indicates that you understand and respect the academic and technical culture you’re trying to enter. Paying attention to these details can only help your application!
+
+\begin{verbatim}
+    \documentclass{article}
+    \usepackage[margin=1in]{geometry}
+    \begin{document}
+    
+    \title{Research Statement}
+    \author{Your Name}
+    \date{}
+    \maketitle
+    
+    \section*{Personal Background and Future Goals}
+    
+    I have always been fascinated by the intersection of theory and systems...
+    My long-term goal is to become a faculty member and lead a research group...
+    
+    \end{document}
+    \end{verbatim}
 
 \chapter{Academic and Cultural Differences}\label{chap:cultural}
 
