@@ -6,6 +6,7 @@
 \usepackage[most]{tcolorbox}
 % \setsecnumdepth{subsection}
 % \setcounter{tocdepth}{3}
+\usepackage{fontawesome5}
 \usepackage{censor}
 \usepackage{enumitem}
 \usepackage{epigraph}
@@ -46,7 +47,7 @@
 \newenvironment{commentbox}[1][]{
   \small
   \begin{mybox}
-    {\small \textbf{#1}}
+    {\faComment~\small \textbf{#1}}
   }{
   \end{mybox}
 }
@@ -68,20 +69,26 @@
 }
 
 
-\newtcolorbox{myemphasisbox}{
-  enhanced,
-  boxrule=1pt, frame hidden,
-  colback=gray!20!white,
-  sharp corners
+\newtcolorbox{myexamplebox}{enhanced, frame hidden,
+boxrule=0.5pt, colback=gray!20!white}
+\newenvironment{examplebox}{
+  \small
+  \begin{myexamplebox}
+    {\faInfo[regular] \small}
+  }{
+  \end{myexamplebox}
 }
 
-\newenvironment{emphasisbox}[1][]{
+\newtcolorbox{myinfobox}{enhanced, frame hidden,
+boxrule=0.5pt, colback=green!20!white}
+\newenvironment{infobox}{
   \small
-  \begin{myemphasisbox}
-    {\small \textbf{#1}}
+  \begin{myinfobox}
+    {\faGraduationCap[regular] \small}
   }{
-  \end{myemphasisbox}
+  \end{myinfobox}
 }
+
 
 
 \renewcommand{\figurename}{Fig.}
@@ -520,7 +527,7 @@ Within these 5--7 years, CS PhD students often take a ``leave of absence'' for 1
 
 \begin{commentbox}[Vu:]
     I start my PhD with an MS, and it took me 7 years (Fall'07-- Fall'14). I spent half a year doing an internship at the Naval Research Lab. My PhD did take a bit longer than usual, but allows me to explore various research areas and topics.
-  \end{commentbox}
+\end{commentbox}
 
 \section{My undergrad was not in CS or related areas}\label{sec:non-stem}
 \sectioninfo{You can successfully apply to CS PhD even if you have non-CS background.}
@@ -941,9 +948,9 @@ After entering your writers' information in the application system, you should t
 Note that most places only have deadlines for the applicant, but are very flexible with the letter writers.  In many cases your LOR writers \emph{are not given any deadline}. \autoref{fig:lor-invitations} lists several LOR invitation emails I received from various universities in the past few years. 
 
 \begin{figure}
-\begin{emphasisbox}
+\begin{examplebox}
     \footnotesize
-    \paragraph{No deadline given} Examples with no deadline given:
+    \paragraph{No deadline given} Examples with no deadline:
 
     \textbf{Sample 1:}
     .. is applying for admission into the Computer Science (Ph.D.) program in the Graduate School at the University of Massachusetts Amherst and has listed you as a reference.
@@ -996,7 +1003,7 @@ Note that most places only have deadlines for the applicant, but are very flexib
     Click Here if your mail system provides html content or use the URL below to enter your letter of recommendation in PDF form only.
     
     Your letter of recommendation is due by \textbf{12 p.m. (Noon) EST on December 10, 20XX}. Thank you for taking the time to respond.
-\end{emphasisbox}
+\end{examplebox}
 \caption{Examples of LOR invitation emails}\label{fig:lor-invitations}
 \end{figure}
 
@@ -1889,7 +1896,7 @@ Ultimately, choose a prof. that fits you by communicating with them, taking thei
   \item \href{https://www.cs.columbia.edu/wp-content/uploads/2019/03/Get-Advisor.pdf}{The Definitive ``what do I ask/look for'' in a PhD Adviser Guide}
 \end{itemize}
 
-\section{Who can serve as a PhD adviser?}\label{sec:faculty-types}
+\section{Types of Faculty: Who can serve as a PhD adviser?}\label{sec:faculty-types}
 
 \emph{Not} every faculty can serve as your official PhD adviser. Understanding the different types of faculty roles will help you avoid common mistakes—like contacting the wrong person (\autoref{sec:contact}) for research opportunities or listing in your SOP (\autoref{chap:sop}) someone who can’t actually supervise PhD students.
 
@@ -1915,8 +1922,9 @@ These faculty members are expected to perform research, publish in top venues, g
 	\item Tenured faculty have already earned permanent status and usually have well-established labs.
 \end{itemize}    
 
-Thus, \textbf{if you’re reaching out to professors about potential advising, focus on tenure-line faculty}. These are the people most likely to have funding, institutional authority, and the capacity to take on new PhD students. See \autoref{sec:tenure-vs-tenure-track} for more on choosing between tenured and tenure-track faculty as advisers.
-
+\begin{infobox}
+\textbf{If you’re reaching out to professors about potential advising, focus on tenure-line faculty}. These are the faculty that most likely to have funding, institutional authority, and the capacity to take on new PhD students. See \autoref{sec:tenure-vs-tenure-track} for more on choosing between tenured and tenure-track faculty as advisers.
+\end{infobox}
 \paragraph{Teaching Faculty}
 Teaching faculty (also called instructional faculty, professors of practice, or lecturers) primarily focus on teaching. They often teach three to four courses per semester and are not typically expected to conduct research, publish papers, or apply for funding.
 
@@ -2021,9 +2029,11 @@ First, read the prof's website, and see if they say something about contacting t
 In general, the best way to catch the prof.'s attention is to \emph{customize your email} for them.  For example, read their papers, know what they work on, and see if you are interested in their research. Then email them and talk about how/why their work would match yours.
 In contrast, if you write a generic email that can be sent to multiple professors (e.g., if you just change some names and keywords in the email or copy and paste paper titles), you will not get a response.
 
-Below is a good example that I would likely reply.
+Below is a good example:
 
-\begin{commentbox}[Dear Prof. Nguyen,]\\
+\begin{examplebox}
+
+Dear Prof. Nguyen,\\
 
   I am writing to inquire about potential research opportunities as a GRA in your group at Mason. Currently I am an undergraduate student in Computer Science at UNIV and plan to graduate in May 2023.
     \\
@@ -2034,7 +2044,7 @@ Below is a good example that I would likely reply.
 
  \tcblower
   This is a good example because it is written just for me.  It shows that the student knows about my work on invariant generation and has a related background (paper C and project G).
-\end{commentbox}
+\end{examplebox}
 
 Finally, profs. are very busy so don't take it personally if you don't get anything from them (though I would be very surprised if such thoughtful emails get no replies!).
 See~\autoref{sec:kiss-of-death-emails} for common mistakes in emails and~\autoref{sec:interpreting-response} for interpreting replies.
@@ -2167,11 +2177,11 @@ However, this is \emph{not} why we ``ghost'' you and provide no response (\autor
     Note that these do not include Distinguished or Best Paper Awards, which are typically given at conferences and not as prestigious as they might not have long-term impact.
     
     \begin{figure}
-    \begin{tcolorbox}
+    \begin{examplebox}
         \emph{It is highly noteworthy that \censor{Vu} has earned two 10-year test-of-time awards for \censor{his} papers \censor{, including a prestigious ICSE Most Influential Paper Award}. Senior computer scientists count themselves fortunate to
         earn even one such award at some point in their careers, but it is highly unusual and commendable that \censor{Vu}
         has earned two of these awards already, less than ten years after completing \censor{his} PhD ...}
-    \end{tcolorbox}
+    \end{examplebox}
     \caption{LoR for a junior faculty (some texts are endacted for anonymity).}\label{fig:lor4junior}
     \end{figure}
     
@@ -2270,13 +2280,16 @@ People who do get in these schools often were explicitly encouraged by their men
 
 \paragraph{``Your'' top might not really top in CS} Harvard and the Ivies? yes good for many things but usually not coding marathon and typically MIA at top CS confs (ok, they are still good, but a school somewhere in Maryland, Wisconsin, or Urbana Champaign cornfield would likely beat them by far in CS). MIT and Stanford? yes, they are top, but many are equivalent, and there could be CS areas where they are not as strong as other schools.  Caltech and John Hopkins?  ... are you confused CS with Physics and Medicine?
 
-You're missing out some serious places: UCSD, UW, UMD, Michigan, Purdue, Stony brook. These all have super strong CS programs but rarely get mentioned. Utah, Rutgers, Buffalo, Penn State, UVA, Ohio, UC Riverside, George Mason ... any of them rings a bell? These might not ranked very high on QS or US News and are not household names to you, your friends, mom and dad, but they are excellent CS schools where graduating students from your dream schools often apply for faculty positions (e.g., see \href{https://github.com/dynaroars/dynaroars.github.io/wiki/About-GMU}{GMU stats}). You can go to these places and be superstar there.
+You're missing out some serious CS PhD programs: UCSD, UW, UMD, Michigan, Purdue, Stony brook. These all have super strong CS programs but rarely get mentioned. Utah, Rutgers, Buffalo, Penn State, UVA, Ohio, UC Riverside, George Mason ... any of them rings a bell? These might not ranked very high on QS or US News and are not household names to you, your friends, mom and dad, but they are excellent CS schools where graduating students from your dream schools often apply for faculty positions (e.g., see \href{https://github.com/dynaroars/dynaroars.github.io/wiki/About-GMU}{GMU stats}). You can go to these places and be superstar there.
 
 \paragraph{You don't need to be top}  Top schools will open doors to more opportunities. In countries like Vietnam, there are usually only a few top schools, and if you don't get into them, you are doomed  (or so you think). But that is not the case in the US. There are simply too many good schools, and it is not a binary choice between top X or nothing.  In fact, ``equity'' is emphasized in the US and ``smaller'' schools are often given more resources and attention to help students succeed.  
 
-\begin{emphasisbox}
-In short, don't aim for just the moon and the stars, also try the sky, clouds, or even just the trees.  You might find much happiness and success there, which then can catapult you places beyond the moon and the stars.  This is the American dream, which is strongly embodied in the its higher education system.
-\end{emphasisbox}
+\begin{infobox}
+Don't aim for just the moon and the stars, also try the sky, clouds, or even just the trees.  You might find much happiness and success there, which then can catapult you places beyond the moon and the stars.  This is the American dream, which is strongly embodied in the its higher education system.
+\end{infobox}
+
+Note that what said above might not apply to BS or even MS degrees, which do not involve research and thus are more about the school name and your grades. For PhD, it is all about the research.  
+
 
 \section{How long does it take to evaluate an application?}\label{sec:ievaluate}
 \sectioninfo{It takes me about 10--15 minutes to review an application.}
