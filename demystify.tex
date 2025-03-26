@@ -74,7 +74,7 @@ boxrule=0.5pt, colback=yellow!10!white}
 \newenvironment{examplebox}{
   \small
   \begin{myexamplebox}
-    {\faInfo[regular] \small}
+    {\faGraduationCap[regular] \small}
   }{
   \end{myexamplebox}
 }
@@ -84,7 +84,7 @@ boxrule=0.5pt, colback=green!20!white}
 \newenvironment{infobox}{
   \small
   \begin{myinfobox}
-    {\faGraduationCap[regular] \small}
+    {\faInfo[regular] \small}
   }{
   \end{myinfobox}
 }
@@ -233,15 +233,21 @@ boxrule=0.5pt, colback=green!20!white}
 
 \newglossaryentry{fields}{
     name = fields or areas of Research,
-    description={Specific areas of study or research. Fields within CS include Machine Learning, Computer Vision, Software Engineering, etc.}
+    description={Specific areas of study or research. Fields within CS include Machine Learning, Computer Vision, Software Engineering, etc}
 }
 
-% \item[International vs. Domestic students] International students are loosely defined as those who would need a visa to study in the US (\autoref{chap:visa}). Domestic students (\autoref{chap:domestic-students}) are those who do not need a visa, typically US citizens or permanent residents.   
+\newglossaryentry{international-domestic}{
+    name=International vs. Domestic students, 
+    description={International students are loosely defined as those who would need a visa to study in the US (\autoref{chap:visa}). Domestic students (\autoref{chap:domestic-students}) are those who do not need a visa, typically US citizens or permanent residents}
+    }   
 
 
-% \item [In-state vs. Out-of-state] In-state tuition is the tuition rate for students who are residents of the state where the university is located. Out-of-state tuition is the tuition rate for students who are not residents of that state. In-state tuition is typically much lower than out-of-state tuition. PhD students typically do not have to pay tuition as it is covered by their funding, but this might be important for MS students.
+\newglossaryentry{in-out-state}{
+    name=In-state vs. Out-of-state,
+    description={In-state tuition is the tuition rate for students who are residents of the state where the university is located. Out-of-state tuition is the tuition rate for students who are not residents of that state. In-state tuition is typically much lower than out-of-state tuition. PhD students typically do not have to pay tuition as it is covered by their funding, but this might be important for MS students}
+    }
 
-% \item [Lab] Research Lab. A group of researchers (profs. and students) working on a common research area, e.g., a Software Engineering Lab.  Typically a lab is led by a single professor, but sometimes it can be co-led by multiple professors. For example, my lab \href{https://dynaroars.cs.gmu.edu}{DynaROARS} focuses on my own research area (software verification), but I am also part of the more general SWE Lab at Mason with other faculty in Software Engineering.
+\newglossaryentry{lab}{name=Research Lab, description={A group of researchers (profs. and students) working on a common research area, e.g., a Software Engineering Lab.  Typically a lab is led by a single professor, but sometimes it can be co-led by multiple professors. For example, my lab \href{https://dynaroars.cs.gmu.edu}{DynaROARS} focuses on my own research area (software verification), but I am also part of the more general SWE Lab at Mason with other faculty in Software Engineering}}
 
 
 % \item[Major] A student's primary field of study, e.g., Computer Science, Electrical Engineering, Mathematics, etc. Often used in the context of undergraduate studies (e.g., ``what was your major in undergrad?'').
@@ -249,7 +255,6 @@ boxrule=0.5pt, colback=green!20!white}
 % \item[MS \autoref{sec:msrequirement}] Master of Science. A graduate degree that typically requires 2 years of study.
 
 % \item[Open House \autoref{chap:accepted}] An event where admitted students visit the university to meet faculty, students, and staff, and learn more about the program. This is a great opportunity to get a feel for the university and the department and decide if it is a good fit for you.
-
 
 %   \item[OPT] Optional Practical Training. A program that allows F-1 students to work in the US for up to 12 months after graduation.
 % \item[CPT] Curricular Practical Training. A program that allows F-1 students to participate in internships or practical training that is an integral part of their academic curriculum.
@@ -407,7 +412,7 @@ boxrule=0.5pt, colback=green!20!white}
 \chapter*{}    
 
 
-\begin{mybox}
+\begin{infobox}
     This book is last compiled on \emph{\today{}}. It is available at 
     
     \begin{center}
@@ -416,16 +421,15 @@ boxrule=0.5pt, colback=green!20!white}
     
     \noindent and its \LaTeX{} source is on \href{https://github.com/dynaroars/phd-cs-us}{GitHub}. If you have questions or comments, feel free to create new \href{https://github.com/dynaroars/phd-cs-us/issues}{GitHub issues} or \href{https://github.com/dynaroars/phd-cs-us/discussions}{discussions}.
     
-\end{mybox}
+\end{infobox}
     
 \vfill{} 
 
 
 
-\begin{tcolorbox}[colback=green!5!white,colframe=green!50!black]
-    \centering
+\begin{center}
     \mytitle{} © 2025 by \\ThanhVu Nguyen is licensed under CC BY-SA 4.0.    
-\end{tcolorbox}
+\end{center}
 
 
 
@@ -1850,7 +1854,6 @@ For example, a prof. in Stats or Math might be able to serve as a co-adviser, bu
 If in doubt, check with the CS department for their requirements.
 
 For this specific reason,  CSRankings includes only faculty who can advise CS PhD students. I also have compiled a \href{https://github.com/dynaroars/dynaroars.github.io/wiki/Viet-CS-Profs-US}{list} of Vietnamese faculty who can advise PhD students. \autoref{sec:faculty-types} talks more about who can serve as your PhD adviser.
-
 
 \chapter{Choosing an Adviser}\label{chap:choosing-adviser}
 \chapterinfo{The best adviser is the one that you can work well with. But you do not know that until you start working with them.}
