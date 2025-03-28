@@ -32,17 +32,13 @@
 %\usepackage{sectsty}
 \usepackage[acronym]{glossaries}
 \setacronymstyle{long-short-desc}
-\makeglossaries
-
-
+\makeglossaries{}
 \usepackage[makeroom]{cancel}
 
+% boxes
 \newtcolorbox{mybox}{
-  enhanced,
-  boxrule=0pt,frame hidden,
-  borderline west={2pt}{0pt}{green!75!black},
-  colback=green!10!white,
-  sharp corners
+  enhanced, frame hidden,
+  colback=gray!30!white
 }
 
 \newenvironment{commentbox}[1][]{
@@ -544,9 +540,10 @@ A PhD in CS is a \emph{research} degree. Unlike undergraduate or even Master's p
     This \href{https://matt.might.net/articles/phd-school-in-pictures/}{series of pictures} from \href{https://matt.might.net}{Matt Might} illustrates what a PhD means.
 \end{commentbox}
 
-A CS PhD prepares you for careers that require deep technical expertise and the ability to do independent research. Many graduates become professors or academic researchers, just as many pursue positions in industry research labs, advanced engineering teams, or technical leadership positions. The degree also opens doors to national labs, government agencies, and startups, where the ability to solve open-ended, complex problems are needed. 
+A CS PhD prepares you for careers that require deep technical expertise and the ability to do independent research. Many graduates become professors or academic researchers while others pursue positions in industry research labs, advanced engineering teams, or technical leadership positions. The degree also opens doors to national labs, government agencies, and startups, where the ability to solve open-ended, complex problems are needed. 
 
-The PhD is not just a degree, it is a testament that you have mastered the art of research.  This includes identifying limitations or gaps in knowledge, formulating hypotheses and ideas, establishing/proving theorems and designing/implementing algorithms, conducting experiments and analyzing results, etc. 
+The PhD is not just a degree, it is a journey that transforms you into a researcher. You will learn how to think critically, solve problems, and effectively communicate your ideas. In the end, you will have a deep understanding of your chosen field and become an expert in your area of research.
+
 
 
 \section{How long to complete the CS PhD program?}\label{sec:time}
@@ -566,7 +563,7 @@ Within these 5--7 years, CS PhD students often take a ``leave of absence'' for 1
 
 
 \begin{commentbox}[Vu:]
-    I start my PhD with an MS, and it took me 7 years (Fall'07-- Fall'14). I spent half a year doing an internship at the Naval Research Lab. My PhD did take a bit longer than usual, but allows me to explore various research areas and topics.
+    I start my PhD with an MS, and it took me 7 years (Fall'07--Fall'14). I spent half a year doing an internship at the \href{https://www.nrl.navy.mil}{Naval Research Lab}. My PhD did take a bit longer than usual, but allows me to explore new research areas and topics.
 \end{commentbox}
 
 \section{My undergrad was not in CS or related areas}\label{sec:non-stem}
@@ -581,10 +578,10 @@ In summary, in your application, convince us that you have the background to do 
 \paragraph*{Core CS topics} Common CS knowledge that you should know are:
 
 \begin{itemize}
-  \item Programming Foundation (e.g., programming concepts in some modern languages)
-  \item Discrete Math (e.g., logic, set theory, proof techniques)
-  \item Data Structures and Algorithms (e.g., linked lists, trees, sorting, searching)
-  \item Computer OS or Systems (e.g., memory management, file systems, processes)
+  \item Programming Foundation: programming concepts in some modern languages
+  \item Discrete Math: logic, set theory, proof techniques
+  \item Data Structures and Algorithms: linked lists, trees, sorting, searching
+  \item Computer OS or Systems: memory management, file systems, processes)
 \end{itemize}
 
 In short, you \emph{do not need} to formally take CS courses, you just need to show that you have this essential knowledge, e.g., through the mentioned ways. Many universities are well aware that incoming graduate students might not have all the technical background, so they often have a \emph{``bridge''} courses to help students catch up.  For example, Mason has four bridge courses corresponding to the four core areas above that incoming students can take to catch up on their CS knowledge.
@@ -647,7 +644,7 @@ Work Life Balance & Less & More \\
 In the US, you often start your PhD without an adviser or project and find them later. Usually you have two initial years to take classes, explore and find an adviser and research topic. 
 
 \emph{Course work}: In the US ou will spend the first couple of years taking classes and exploring potential adviser and research topics. 
-After that, you have to pass a series of exams during your PhD, e.g., qualifying exam, comprehensive exam, thesis proposal defense\footnote{ABD (all but dissertation) refers to a PhD candidate who has finished all course work and exams and only needs to write and defend their dissertation.}.
+After that, you have to pass a series of exams during your PhD---qualifying exam, comprehensive exam, thesis proposal defense\footnote{ABD (all but dissertation) refers to a PhD candidate who has finished all course work and exams and only needs to write and defend their dissertation.}.
 
 In other countries, you often start your research right away and work on the research project you proposed with the adviser you chose. Moreover, you might not have exams like those in the US or only have to do a few of them.
 
@@ -674,8 +671,8 @@ My goal is thus to level the playing field by providing info that is not readily
 This book aims to be a comprehensive guide to the CS PhD admission process in the US. It is based on my and other contributors' experience in the CS depart. I also try to explain \emph{the reasons behind the admission process}.
 While there are numerous \href{https://github.com/dynaroars/phd-cs-us}{resources online} that tell you \emph{``what''} to do, few explain the \emph{``why''}---why LoRs matter so much, why you should not draft your own LoR, why you should contact professors, etc. Understanding the reason and mindset of the admission committee and profs. can help you prepare better.
 
-This book is a also \emph{personal project} (\autoref{chap:ack}) that I continuously update and refine, especially during the admission season. I usually work on it when I procrastinate from research or other tasks-it's my way of telling myself that I am still productive!
-Writing is a relaxing process for me, and I enjoy experimenting with new things in \LaTeX{} along the way (\autoref{chap:writing-latex}). Thus, this book is an ever-evolving project!
+This book is a also \emph{personal project} (\autoref{chap:ack}) that I continuously update and refine, especially during the admission season. I usually work on it when I procrastinate from research or other tasks---it's my way of telling myself that I am still productive!
+Writing is a relaxing process for me, and I enjoy experimenting with new things in \LaTeX{} along the way (\autoref{chap:writing-latex}). This book is thus an ever-evolving project!
 
 \paragraph{Notation} \autoref{tab:chess-icons} summarizes the notation and icons, inspired by chess pieces, used throughout the book.
 
