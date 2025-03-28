@@ -59,7 +59,7 @@
 \newenvironment{commentbox}[1][]{
   \small
   \begin{marker}[\faChessPawn{}]
-    {\small \textbf{#1}}
+    {\textbf{#1}}
   }{
   \end{marker}
 }
@@ -67,7 +67,7 @@
 \newenvironment{surprisebox}[1][]{
   \small
   \begin{marker}[\faChessKnight{}]
-    {\small \textbf{#1}}
+    {\textbf{#1}}
   }{
   \end{marker}
 }
@@ -75,33 +75,33 @@
 \newenvironment{examplebox}[1][]{
   \small
   \begin{marker}[\faChessBishop{}]
-    {\small \textbf{#1}}
+    {\textbf{#1}}
   }{
   \end{marker}
 }
 
 \newenvironment{questionbox}[1][]{
   \small
-  \begin{mybox}
-    {\faChessRook{} \small \textbf{#1}}
+  \begin{marker}[\faChessRook{}]
+    {\textbf{#1}}
   }{
-  \end{mybox}
+  \end{marker}
 }
 
 \newenvironment{keybox}[1][]{
-  \small
-  \begin{mybox}
-    {\faChessQueen{} \small \textbf{#1}}
+\small
+  \begin{marker}[\faChessQueen{}]
+    {\textbf{#1}}
   }{
-  \end{mybox}
+  \end{marker}
 }
 
 \newenvironment{warningbox}[1][]{
   \small
-  \begin{mybox}
-    {\faChessKing{} \small \textbf{#1}}
+  \begin{marker}[\faChessKing{}]
+    {\textbf{#1}}
   }{
-  \end{mybox}
+  \end{marker}
 }
 
 \renewcommand{\figurename}{Fig.}
@@ -317,7 +317,8 @@
     \vfill
     {\Large\bfseries\me}\bigskip\par
     \institute\bigskip\par
-    {\today}
+    {\today}\bigskip\par
+    {\href{https://dynaroars.github.io/phd-cs-us/demystify.pdf}{https://dynaroars.github.io/phd-cs-us/demystify.pdf}}
 \end{titlepage}
 \pagestyle{empty}
 
@@ -435,24 +436,11 @@
 \chapter*{}    
 
 
-\begin{keybox}
-    This book is open source and available on \href{https://github.com/dynaroars/phd-cs-us}{GitHub}. You can also access the PDF directly at:
-
-    \begin{center}
-        \href{https://dynaroars.github.io/phd-cs-us/demystify.pdf}{dynaroars.github.io/phd-cs-us/demystify.pdf}.
-    \end{center}
-
-    \noindent If you have questions or comments, feel free to create new \href{https://github.com/dynaroars/phd-cs-us/issues}{GitHub issues} or \href{https://github.com/dynaroars/phd-cs-us/discussions}{discussions}.
-    
-\end{keybox}
-    
-\vfill{} 
 
 
-
-\begin{warningbox}
+\begin{center}
     \mytitle{} © 2025 by \\\me{} is licensed under CC BY-SA 4.0.    
-\end{warningbox}
+\end{center}
 
 
 
