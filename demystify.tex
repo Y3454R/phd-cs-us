@@ -38,7 +38,7 @@
 % boxes
 \newtcolorbox{mybox}{
   enhanced, frame hidden,
-  colback=gray!30!white
+  colback=gray!20!white
 }
 
 \newenvironment{commentbox}[1][]{
@@ -57,14 +57,14 @@
   \end{mybox}
 }
 
-\newtcolorbox{myexamplebox}{enhanced, frame hidden,
-boxrule=0.5pt, colback=yellow!10!white}
+% \newtcolorbox{myexamplebox}{enhanced, frame hidden,
+% boxrule=0.5pt, colback=yellow!10!white}
 \newenvironment{examplebox}{
   \small
-  \begin{myexamplebox}
+  \begin{mybox}
     {\faChessBishop[regular] \small}
   }{
-  \end{myexamplebox}
+  \end{mybox}
 }
 
 \newenvironment{questionbox}[1][]{
@@ -109,18 +109,6 @@ boxrule=0.5pt, colback=yellow!10!white}
   \end{mydomesticbox}
 }
 
-
-
-
-\newtcolorbox{myinfobox}{enhanced, frame hidden,
-boxrule=0.5pt, colback=green!20!white}
-\newenvironment{infobox}{
-  \small
-  \begin{myinfobox}
-    {\faInfo[regular] \small}
-  }{
-  \end{myinfobox}
-}
 
 
 
@@ -1970,36 +1958,31 @@ These faculty members are expected to perform research, publish in top venues, g
 	\item Tenured faculty have already earned permanent status and usually have well-established labs.
 \end{itemize}    
 
-\begin{infobox}
+\begin{keybox}
 \textbf{If you’re reaching out to professors about potential advising, focus on tenure-line faculty}. These are the faculty that most likely to have funding, institutional authority, and the capacity to take on new PhD students. See \autoref{sec:tenure-vs-tenure-track} for more on choosing between tenured and tenure-track faculty as advisers.
-\end{infobox}
+\end{keybox}
 \paragraph{Teaching Faculty}
 Teaching faculty (also called instructional faculty, professors of practice, or lecturers) primarily focus on teaching. They often teach three to four courses per semester and are not typically expected to conduct research, publish papers, or apply for funding.
 
 Thus they usually do not have the resources or institutional role to advise PhD students, especially as the main adviser. In some universities, they may co-advise a PhD student alongside a tenure-line faculty member, but this is rare and varies by institution.
 
-\textbf{Do not contact teaching faculty to ask about PhD advising or research positions}. They're usually not involved in PhD admissions, and such emails can be annoying to them.
+\textbf{Do not contact teaching faculty to ask about PhD or research positions in their lab}. They're usually not involved in PhD admissions, and such emails can be annoying to them.
 
 \begin{commentbox}[Vu:]
-    Why teaching faculty are not typically involved in PhD admissions or research, some are active in research and mentor undergrad students, eg., during the summer.  So if you're an undergrad (\autoref{chap:research-opportunities}) and want to try research, you can contact them (usually after taking their class and doing well). 
-\end{commentbox}
+    Although teaching faculty are not typically involved in PhD admissions or research, some actively mentor undergrad students in research---especially during the summer.  So if you're an undergrad (\autoref{chap:research-opportunities}) and want to try research, you can contact them (usually after taking their class and doing well).
+ \end{commentbox}
 
 
 \paragraph{Research Faculty and Scientists}
 
 Some universities have research faculty or research scientists (e.g., postdocs are sometimes called research faculty), who focus almost entirely on research and often have little or no teaching duties. These faculty members can apply for grants, publish regularly, and, in some rare cases, are allowed to serve as advisers for PhD students. In many cases, they are required to co-advise with a tenure-line faculty member.
 
-\paragraph{Adjunct and Emeritus Faculty}
-
-\begin{itemize}
-	\item Adjunct faculty are typically part-time instructors who may have full time job outside academia (e.g., in industry). They may teach one or two courses per year but are not involved in research or PhD advising.
-	\item Emeritus faculty are retired professors and are usually no longer active in research or advising.
-\end{itemize}
+\paragraph{Adjunct and Emeritus Faculty} These faculty members are typically not involved in research or PhD advising. Adjunct faculty are usually part-time instructors who may have full time job outside academia. Emeritus faculty are retired professors and are usually no longer active in research or advising.
 Because of their limited roles, adjunct and emeritus faculty do not serve as PhD advisers. So, do not contact them to ask about research openings.
 
-\begin{commentbox}[Vu:]
+\begin{warningbox}[Vu:]
 This Reddit \href{https://www.reddit.com/r/gradadmissions/comments/1iyt2k8/_/}{thread} shares an example of a student being rejected after listing emeritus professors in their SOP. This was a sign that the applicant did not do their homework and thus was not a good fit for the program.  This is a common mistake, especially for international students who are not familiar with the US system.
-\end{commentbox}
+\end{warningbox}
 
 
 
@@ -2333,9 +2316,9 @@ You're missing out some serious CS PhD programs: UCSD, UW, UMD, Michigan, Purdue
 
 \paragraph{You don't need to be top}  Top schools will open doors to more opportunities. In countries like Vietnam, there are usually only a few top schools, and if you don't get into them, you are doomed  (or so you think). But that is not the case in the US. There are simply too many good schools, and it is not a binary choice between top X or nothing.  In fact, ``equity'' is emphasized in the US and ``smaller'' schools are often given more resources and attention to help students succeed.  
 
-\begin{infobox}
+\begin{keybox}
 Don't aim for just the moon and the stars, also try the sky, clouds, or even just the trees.  You might find much happiness and success there, which then can catapult you places beyond the moon and the stars.  This is the American dream, which is strongly embodied in the its higher education system.
-\end{infobox}
+\end{keybox}
 
 Note that what said above might not apply to BS or even MS degrees, which often do not involve research and thus are more about the school name and your grades. For PhD, it is all about the research.  
 
@@ -2674,9 +2657,6 @@ You can also take honor thesis or independent study courses with a professor.  T
 
     While most undergrads are understandably not super productive in research, some are and I have published multiple papers with them.  
     I also have written strong LoRs for them and have helped them get into good PhD programs.
-
-    \tcblower
-    At Mason we pay undergrads about \$15/hr and about 10 hrs/week. This is flexible and can be increased as needed.
 \end{commentbox}
 
 \section{Open Source Contributions}
