@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{soul}
+\usepackage[margin=1.5in]{geometry}
 \usepackage[most]{tcolorbox}
 % \setsecnumdepth{subsection}
 % \setcounter{tocdepth}{3}
@@ -47,10 +48,54 @@
 \newenvironment{commentbox}[1][]{
   \small
   \begin{mybox}
-    {\faComment~\small \textbf{#1}}
+    {\faChessPawn{} \small \textbf{#1}}
   }{
   \end{mybox}
 }
+
+\newenvironment{surprisebox}[1][]{
+  \small
+  \begin{mybox}
+    {\faChessKnight{} \small \textbf{#1}}
+  }{
+  \end{mybox}
+}
+
+\newtcolorbox{myexamplebox}{enhanced, frame hidden,
+boxrule=0.5pt, colback=yellow!10!white}
+\newenvironment{examplebox}{
+  \small
+  \begin{myexamplebox}
+    {\faChessBishop[regular] \small}
+  }{
+  \end{myexamplebox}
+}
+
+\newenvironment{questionbox}[1][]{
+  \small
+  \begin{mybox}
+    {\faChessRook{} \small \textbf{#1}}
+  }{
+  \end{mybox}
+}
+
+\newenvironment{keybox}[1][]{
+  \small
+  \begin{mybox}
+    {\faChessQueen{} \small \textbf{#1}}
+  }{
+  \end{mybox}
+}
+
+\newenvironment{warningbox}[1][]{
+  \small
+  \begin{mybox}
+    {\faChessKing{} \small \textbf{#1}}
+  }{
+  \end{mybox}
+}
+
+
 
 \newtcolorbox{mydomesticbox}{
   enhanced,
@@ -69,15 +114,7 @@
 }
 
 
-\newtcolorbox{myexamplebox}{enhanced, frame hidden,
-boxrule=0.5pt, colback=yellow!10!white}
-\newenvironment{examplebox}{
-  \small
-  \begin{myexamplebox}
-    {\faGraduationCap[regular] \small}
-  }{
-  \end{myexamplebox}
-}
+
 
 \newtcolorbox{myinfobox}{enhanced, frame hidden,
 boxrule=0.5pt, colback=green!20!white}
@@ -153,7 +190,8 @@ boxrule=0.5pt, colback=green!20!white}
 \newcommand{\red}[1]{{\color{red}{#1}}}
 
 \newcommand{\mytitle}{Demystifying Computer Science PhD Admissions in the U.S.}
-
+\newcommand{\me}{ThanhVu Nguyen}
+\newcommand{\institute}{George Mason University}
 
 \usepackage{hyperref}
 \hypersetup{
@@ -167,7 +205,6 @@ boxrule=0.5pt, colback=green!20!white}
   pdfpagemode=UseOutlines,
 }
 
-\usepackage[margin=1.5in]{geometry}
 
 
 %%% glossaries
@@ -292,11 +329,19 @@ boxrule=0.5pt, colback=green!20!white}
 
 
 \begin{document}
-
+%\maketitle
+\frontmatter
+\begin{titlepage}
+    \centering      
+    {\Huge\bfseries\baselineskip1.2em\mytitle\par}
+    \vfill
+    \includegraphics[width=0.5\textwidth]{files/angelfish2.png}
+    \vfill
+    {\Large\bfseries\me}\bigskip\par
+    \institute\bigskip\par
+    {\today}
+\end{titlepage}
 \pagestyle{empty}
-\includepdf[pages=-]{files/cover.pdf}
-
-
 
 %
 
@@ -412,24 +457,24 @@ boxrule=0.5pt, colback=green!20!white}
 \chapter*{}    
 
 
-\begin{infobox}
-    This book is last compiled on \emph{\today{}}. It is available at 
-    
+\begin{keybox}
+    This book is open source and available on \href{https://github.com/dynaroars/phd-cs-us}{GitHub}. You can also access the PDF directly at:
+
     \begin{center}
-      \href{https://dynaroars.github.io/phd-cs-us/demystify.pdf}{dynaroars.github.io/phd-cs-us/demystify.pdf},
+        \href{https://dynaroars.github.io/phd-cs-us/demystify.pdf}{dynaroars.github.io/phd-cs-us/demystify.pdf}.
     \end{center}
+
+    \noindent If you have questions or comments, feel free to create new \href{https://github.com/dynaroars/phd-cs-us/issues}{GitHub issues} or \href{https://github.com/dynaroars/phd-cs-us/discussions}{discussions}.
     
-    \noindent and its \LaTeX{} source is on \href{https://github.com/dynaroars/phd-cs-us}{GitHub}. If you have questions or comments, feel free to create new \href{https://github.com/dynaroars/phd-cs-us/issues}{GitHub issues} or \href{https://github.com/dynaroars/phd-cs-us/discussions}{discussions}.
-    
-\end{infobox}
+\end{keybox}
     
 \vfill{} 
 
 
 
-\begin{center}
-    \mytitle{} © 2025 by \\ThanhVu Nguyen is licensed under CC BY-SA 4.0.    
-\end{center}
+\begin{warningbox}
+    \mytitle{} © 2025 by \\\me{} is licensed under CC BY-SA 4.0.    
+\end{warningbox}
 
 
 
@@ -627,15 +672,33 @@ My goal is thus to level the playing field by providing info that is not readily
 
 \paragraph{Why this book?}
 This book aims to be a comprehensive guide to the CS PhD admission process in the US. It is based on my and other contributors' experience in the CS depart. I also try to explain \emph{the reasons behind the admission process}.
-While there are numerous \href{https://github.com/dynaroars/phd-cs-us}{resources online} that tell you \emph{``what''} to do, few explain the \emph{``why''}, e.g., why LoRs matter so much, why you should not draft your own LoR, why you should contact professors, etc. Understanding the reason and mindset of the admission committee and profs. can help you prepare better.
+While there are numerous \href{https://github.com/dynaroars/phd-cs-us}{resources online} that tell you \emph{``what''} to do, few explain the \emph{``why''}---why LoRs matter so much, why you should not draft your own LoR, why you should contact professors, etc. Understanding the reason and mindset of the admission committee and profs. can help you prepare better.
 
 This book is a also \emph{personal project} (\autoref{chap:ack}) that I continuously update and refine, especially during the admission season. I usually work on it when I procrastinate from research or other tasks-it's my way of telling myself that I am still productive!
 Writing is a relaxing process for me, and I enjoy experimenting with new things in \LaTeX{} along the way (\autoref{chap:writing-latex}). Thus, this book is an ever-evolving project!
 
+\paragraph{Notation} \autoref{tab:chess-icons} summarizes the notation and icons, inspired by chess pieces, used throughout the book.
 
-%While this handbook may not fully meet the needs of students aiming for top-10 schools (\autoref{sec:selecting-ranking-schools} and \autoref{chap:rankings}), which typically have more stringent requirements (e.g., see the \href{https://da-data.blogspot.com/2015/03/reflecting-on-cs-graduate-admissions.html}{admission process} at CMU), it should be valuable for those targeting other reputable R1 institutions.
 
-
+\begin{table}
+    \caption{Chess-based icon system for annotation types}\label{tab:chess-icons}
+    \centering    
+    \small    
+    \begin{tabular}{cll}
+    \toprule
+    \textbf{Icon} & \textbf{Label} & \textbf{Description} \\
+    \midrule
+    \faChessPawn[regular] & Comment &  Pawns are plentiful; used for comments and side notes\\
+    \faChessKnight & Insight & Knights move in unexpected ways; used for surprising info.\\
+    \faChessBishop & Examples & Bishops are long-range pieces; used for examples and illustrations. \\
+    \faChessRook & QA & Rooks are straightforward; used for questions/answers\\
+    \faChessQueen & Key Ideas & Queens are powerful; used for summary or key ideas.\\
+    \faChessKing & Warnings & King is often under attack; used for warnings and cautions. \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+    
+    
 
 %\begin{commentbox}[Vu:]
 %    One of the reasons I created this document is that my colleagues at Mason are interested in recruiting Vietnamese students and are surprised when seeing very few applications in Vietnam (see \autoref{chap:ack}). Each year our CS PhD program receives 500+ PhD applications, most of which are international but only 5--6 are from Vietnam.
@@ -672,7 +735,7 @@ Writing is a relaxing process for me, and I enjoy experimenting with new things 
 
 \chapterinfo{Applications are evaluated by the PhD Admission (\acrshort{adcom}) committee and each application is typically reviewed by three \glslink{adcom-members}{faculty members}.}
 
-After you submit your PhD application, it will first be checked for general requirements, e.g., did you submit your transcripts and standard scores? Usually, this screening process is done through a central university system, i.e., not by CS faculty.
+After you submit your PhD application, it will be checked for general requirements---whether you submit your transcripts and standard scores? Usually, this screening process is done through a central university system, i.e., not by CS faculty.
 
 After screening, your application is complete and forwarded to the CS department for further evaluation. If you don't pass screening,  the system will tell you what is missing and what you need to do. So pay attention to your email and check your application status regularly.
 
@@ -691,7 +754,7 @@ The PhD adcom typically involves assistant professors in the department (see \au
 
 
 
-Each application is assigned to about three adcom members, who will evaluate your profile and reach a consensus.  They will consider various factors, e.g., research experience, GPA, LoRs, SOP, test scores, and interviews. More details about these factors are discussed in \autoref{part:appendices}.
+Each application is assigned to about three adcom members, who will evaluate your profile and reach a consensus.  They will consider various factors---research experience, GPA, LoRs, SOP, test scores, and interviews. More details about these factors are discussed in \autoref{part:appendices}.
 
 
 
@@ -739,7 +802,7 @@ If the student mentioned a faculty member in their SOP, we might ask that facult
 
 Note that other disciplines might have different practices. For example, adcome might select a top list of applicants and then discuss them in a meeting to determine who to interview. In CS, both the reviews and interviews are often done independently (\autoref{sec:interviews}).
 
-\begin{commentbox}[From a prof. in Physics at an \gls{r1} university:]
+\begin{surprisebox}[From a prof. in Physics at an \gls{r1} university:]
   We have a pretty well fleshed out grading rubric for applications that has categories like grades, research, writing ability, etc. I would say our rubric is weighted about 1/2 on academics (research, LORs, grades) and 1/2 on the idea of ``grit'' or ``resilience'' (engagement, leadership, working through obstacles).\\
 
   
@@ -747,7 +810,7 @@ Note that other disciplines might have different practices. For example, adcome 
   
 
   We also do roughly three rounds of selection: a first ``triage'' round to determine the top ~100 applications, a second round to determine about 25 people to interview, and then a third round to decide the actual offers. That also helps to speed things up a bit, since in the first round with all the applications you can move fairly quickly since you just need to sort into ``good'' and ``bad''. By the time we're getting into the details and reading everything more closely in rounds 2 and 3 most of the applications have been removed from consideration. So for this method I do maybe 5 minutes per app in round 1, but closer to 20 minutes per app in round 2, and usually round 3 is long discussions about specific people.   
-\end{commentbox}
+\end{surprisebox}
 
 
 \section{Waiving the application fee}\label{sec:fee-waive}
@@ -820,11 +883,11 @@ However, don't worry if you haven't worked directly with well-known researchers.
 \end{commentbox}
 
 
-\begin{commentbox}[Didier]
+\begin{questionbox}[Didier]
     \emph{Should letter writers have PhDs?}  In Rwanda, a lot of students interact more with teaching faculty who might not have PhD.
     \tcblower
     \textbf{Vu}: This is an interesting detail that US faculty might not be aware of. Students should mention this in their SOPs (\autoref{chap:sop}). In general, someone with a PhD has been through the research process and therefore can better evaluate your research ability.  But if you do not have such writer, then someone who can properly evaluate your research ability is OK (and still better than someone who has a PhD but does not know you well).
-  \end{commentbox}
+  \end{questionbox}
 
   \subsection{LoRs from Dept Chair, Dean, or Supervisor at Work}\label{sec:admin-letters}
 
@@ -861,14 +924,12 @@ So it might be a good idea to directly ask if the prof. is willing to write a \e
 
 
 
-\begin{commentbox}[Vu:]
-
-  Several international students mentioned that some professors are unwilling to write letters or write weak ones because they do not want (good) students to go abroad or only go to places where they want the students to go to. If you are in this situation, you should find someone else to write for you.
-  \tcblower
+\begin{warningbox}[Vu:]
+Several international students mentioned that some professors are unwilling to write letters or write weak ones because they do not want (good) students to go abroad or only go to places where they want the students to go to. If you are in this situation, you should find someone else to write for you.
+\tcblower
 
 Sometimes students would go to great lengths just to get letters from ``top'' professors in their school (e.g., department head or dean). But as mentioned, if these professors do not know you, their letters would likely be generic and carry little value (sometimes \red{red flags}). Moreover, a top professor at your university might not be well-known to US faculty (see more details in \autoref{sec:admin-letters} and \autoref{chap:your-school}). So save the trouble and get letters from \emph{any} professors/supervisors who know you well and can write a good letter about \emph{your} research ability (\autoref{sec:famous-lor}). It's better to have a good personalized letter about your own research ability from someone who is less well-known than a generic/weak letter from a well-known person.
-
-\end{commentbox}
+\end{warningbox}
 
 
 \subsection{Self-written Letters are Bad}\label{sec:self-letters}
@@ -1084,11 +1145,11 @@ not carry as much weight since their quality is often unknown. However, if you h
     Many international students mention Scopus \acrshort{Q1}, which consists of various journals from IEEE, Elsevier, and many other publishers.  I don't know/recognize many of the journals listed in Scopus Q1. This might be something to be mindful of, as \textbf{CS} faculty might not be too familiar with Scopus or journals listed there, so devote some part in your statement to discuss the significance of your papers.
   \end{commentbox}
   
-  \begin{commentbox}[Thanh:]
+  \begin{questionbox}[Thanh:]
       Due to academic culture, professors in Vietnam usually aim for (international) journals instead of conferences. Could you give some tips on how to know whether a journal is good (CSrankings, unfortunately, only consider conferences)?
       \tcblower
       \textbf{Vu}: One way is looking at what well-known researchers publish. For example, if you are interested in a field X, you can use CSRankings to look at active faculty in X, and then look at their websites to see what journals they publish at.
-  \end{commentbox}
+  \end{questionbox}
 
 \section{Work Experience} Work experience at \emph{well-known research laboratories}, such as Microsoft Research, can strengthen your
 application.  The emphasis here is \emph{research} places, not software development or non-research work. For example, working at a FAANG (Facebook, Amazon, Apple, Netflix, Google) company as a software engineer does not count as research experience, although it can be helpful for MS applications ()\autoref{chap:ms}). Similarly, a LoR from your supervisor for non-research experience might not count much (\autoref{sec:admin-letters}). So do not spend much time talking about development job in your SOP.
