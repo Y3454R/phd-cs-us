@@ -306,143 +306,23 @@
 
 
 \begin{document}
-%\maketitle
 \frontmatter
 \begin{titlepage}
     \centering      
     {\Huge\bfseries\baselineskip1.2em\mytitle\par}\bigskip\bigskip\par
-    {\large\bfseries\baselineskip1.2em\mysubtitle}
+    {\large\bfseries\baselineskip1.2em\mysubtitle}\bigskip\par
+    {\href{https://dynaroars.github.io/phd-cs-us/demystify.pdf}{https://dynaroars.github.io/phd-cs-us/demystify.pdf}}
     \vfill
-    \includegraphics[width=0.4\textwidth]{files/angelfish2.png}
+    \includegraphics[width=0.5\textwidth]{files/angelfish2.png}
     \vfill
     {\Large\bfseries\me}\bigskip\par
-    \institute\bigskip\par
-    {\today}\bigskip\par
-    {\href{https://dynaroars.github.io/phd-cs-us/demystify.pdf}{https://dynaroars.github.io/phd-cs-us/demystify.pdf}}
+    {\today}
 \end{titlepage}
+
 \pagestyle{empty}
-
-%
-
-% \begin{tikzpicture}[overlay,remember picture]
-
-%     % Background color
-%     \fill[
-%     black!2]
-%     (current page.south west) rectangle (current page.north east);
-    
-%     % Rectangles
-%     \shade[
-%     left color=Dandelion, 
-%     right color=Dandelion!40,
-%     transform canvas ={rotate around ={45:($(current page.north west)+(0,-6)$)}}] 
-%     ($(current page.north west)+(0,-6)$) rectangle ++(9,1.5);
-    
-%     \shade[
-%     left color=lightgray,
-%     right color=lightgray!50,
-%     rounded corners=0.75cm,
-%     transform canvas ={rotate around ={45:($(current page.north west)+(.5,-10)$)}}]
-%     ($(current page.north west)+(0.5,-10)$) rectangle ++(15,1.5);
-    
-%     \shade[
-%     left color=lightgray,
-%     rounded corners=0.3cm,
-%     transform canvas ={rotate around ={45:($(current page.north west)+(.5,-10)$)}}] ($(current page.north west)+(1.5,-9.55)$) rectangle ++(7,.6);
-    
-%     \shade[
-%     left color=orange!80,
-%     right color=orange!60,
-%     rounded corners=0.4cm,
-%     transform canvas ={rotate around ={45:($(current page.north)+(-1.5,-3)$)}}]
-%     ($(current page.north)+(-1.5,-3)$) rectangle ++(9,0.8);
-    
-%     \shade[
-%     left color=red!80,
-%     right color=red!80,
-%     rounded corners=0.9cm,
-%     transform canvas ={rotate around ={45:($(current page.north)+(-3,-8)$)}}] ($(current page.north)+(-3,-8)$) rectangle ++(15,1.8);
-    
-%     \shade[
-%     left color=orange,
-%     right color=Dandelion,
-%     rounded corners=0.9cm,
-%     transform canvas ={rotate around ={45:($(current page.north west)+(4,-15.5)$)}}]
-%     ($(current page.north west)+(4,-15.5)$) rectangle ++(30,1.8);
-    
-%     \shade[
-%     left color=RoyalBlue,
-%     right color=Emerald,
-%     rounded corners=0.75cm,
-%     transform canvas ={rotate around ={45:($(current page.north west)+(13,-10)$)}}]
-%     ($(current page.north west)+(13,-10)$) rectangle ++(15,1.5);
-    
-%     \shade[
-%     left color=ForestGreen,
-%     rounded corners=0.3cm,
-%     transform canvas ={rotate around ={45:($(current page.north west)+(18,-8)$)}}]
-%     ($(current page.north west)+(18,-8)$) rectangle ++(15,0.6);
-    
-%     \shade[
-%     left color=ForestGreen,
-%     rounded corners=0.4cm,
-%     transform canvas ={rotate around ={45:($(current page.north west)+(19,-5.65)$)}}]
-%     ($(current page.north west)+(19,-5.65)$) rectangle ++(15,0.8);
-    
-%     \shade[
-%     left color=OrangeRed,
-%     right color=red!80,
-%     rounded corners=0.6cm,
-%     transform canvas ={rotate around ={45:($(current page.north west)+(20,-9)$)}}] 
-%     ($(current page.north west)+(20,-9)$) rectangle ++(14,1.2);
-    
-%     % Year
-%     \draw[ultra thick,gray]
-%     ($(current page.center)+(5,3.5)$) -- ++(0,-3cm)
-%     node[
-%     midway,
-%     left=0.25cm,
-%     text width=5cm,
-%     align=right,
-%     black!75
-%     ]
-%     {
-%     {\fontsize{30}{30} \selectfont \bf Computer\\[0.1in] Science}
-%     } 
-%     node[
-%     midway,
-%     right=0.25cm,
-%     text width=6cm,
-%     align=left,
-%     ForestGreen]
-%     {
-%         {\fontsize{25}{30} \selectfont \bf PhD\\[0.1in] U.S.}
-
-%     };
-    
-%     % Title
-%     \node[align=center] at ($(current page.center)+(0,-7)$)
-%     {
-%     {\fontsize{24}{14} \selectfont {{\mytitle{}}}}\\[1.in]
-%     %{\fontsize{24}{24} \selectfont {{PhD Admission in the US}}} \\[1in]    
-%     %{\fontsize{18}{18} \selectfont {{A Handbook for International Students}}} \\[1.in]
-
-%     {\fontsize{14}{19.2} \selectfont \textcolor{ForestGreen}{\bf ThanhVu (Vu) Nguyen}}\\[0.1in]
-%     George Mason University, Dept. of Computer Science\\[0.1in]
-%     \today{} (latest version available on  \href{https://github.com/dynaroars/phd-cs-us}{Github})
-%     };
-%     \end{tikzpicture}
-
-\chapter*{}    
-
-
-
-
 \begin{center}
-    \mytitle{} © 2025 by \\\me{} is licensed under CC BY-SA 4.0.    
+    \small \mytitle{} © 2025 by \\\me{} is licensed under CC BY-SA 4.0.    
 \end{center}
-
-
 
 
 \chapter*{Preface}
@@ -955,7 +835,7 @@ You can also provide them with a draft of your SOP so that they can see what you
 Sometimes your writer will explicitly ask you for such information, but if not, you should provide it anyway (especially if you have not interacted with them much or have not done much research with them).
 
 \begin{commentbox}[Vu:]
-    If your grading system is not US standard, or you are from a good school unknown outside your country, you can ask your reference writers to explain that in their letters.  For example, ``Bach Khoa'' are the top universities in Vietnam for STEM studies but few people outside Vietnam know about them.  So if you are from there, you should ask your reference writers to mention that.
+    If your grading system is not US standard, or you are from a good school but is unknown outside your country, you can ask your reference writers to explain that in their letters.  For example, ``Bach Khoa'' are the top universities in Vietnam for STEM studies but few people outside Vietnam know about them.  So if you are from there, you should ask your reference writers to mention that.
 \end{commentbox}
   
   
