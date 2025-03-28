@@ -4,7 +4,9 @@
 \usepackage[T1]{fontenc}
 \usepackage{soul}
 \usepackage[margin=1.5in]{geometry}
-\usepackage[most]{tcolorbox}
+\usepackage{tcolorbox}
+\tcbuselibrary{documentation, skins}
+
 % \setsecnumdepth{subsection}
 % \setcounter{tocdepth}{3}
 \usepackage{fontawesome5}
@@ -41,30 +43,41 @@
   colback=gray!20!white
 }
 
+\newtcolorbox{marker}[1][]{enhanced,
+  before skip balanced=2mm,after skip balanced=3mm,
+  boxrule=0.4pt,left=5mm,right=2mm,top=1mm,bottom=1mm,
+  colback=yellow!10,
+  sharp corners,rounded corners=southeast,arc is angular,arc=3mm,
+  underlay={%
+    \path[fill=tcbcolback!80!black] ([yshift=3mm]interior.south east)--++(-0.4,-0.1)--++(0.1,-0.2);
+    \path[draw=tcbcolframe,shorten <=-0.05mm,shorten >=-0.05mm] ([yshift=3mm]interior.south east)--++(-0.4,-0.1)--++(0.1,-0.2);
+    \path[fill=tcbcolback!80!black,draw=none] (interior.south west) rectangle node{\large\bfseries {#1}} ([xshift=4mm]interior.north west);
+    },
+  drop fuzzy shadow}
+
+
 \newenvironment{commentbox}[1][]{
   \small
-  \begin{mybox}
-    {\faChessPawn{} \small \textbf{#1}}
+  \begin{marker}[\faChessPawn{}]
+    {\small \textbf{#1}}
   }{
-  \end{mybox}
+  \end{marker}
 }
 
 \newenvironment{surprisebox}[1][]{
   \small
-  \begin{mybox}
-    {\faChessKnight{} \small \textbf{#1}}
+  \begin{marker}[\faChessKnight{}]
+    {\small \textbf{#1}}
   }{
-  \end{mybox}
+  \end{marker}
 }
 
-% \newtcolorbox{myexamplebox}{enhanced, frame hidden,
-% boxrule=0.5pt, colback=yellow!10!white}
-\newenvironment{examplebox}{
+\newenvironment{examplebox}[1][]{
   \small
-  \begin{mybox}
-    {\faChessBishop[regular] \small}
+  \begin{marker}[\faChessBishop{}]
+    {\small \textbf{#1}}
   }{
-  \end{mybox}
+  \end{marker}
 }
 
 \newenvironment{questionbox}[1][]{
@@ -90,27 +103,6 @@
   }{
   \end{mybox}
 }
-
-
-
-\newtcolorbox{mydomesticbox}{
-  enhanced,
-  boxrule=0pt,frame hidden,
-  borderline west={2pt}{0pt}{red!75!black},
-  colback=blue!10!white,
-  sharp corners
-}
-
-\newenvironment{domesticbox}[1][]{
-  \small
-  \begin{mydomesticbox}
-    {\small \textbf{#1}}
-  }{
-  \end{mydomesticbox}
-}
-
-
-
 
 \renewcommand{\figurename}{Fig.}
 \renewcommand{\tablename}{Tab.}
@@ -1300,7 +1292,7 @@ Should you explain bad grades in relevant courses in your SOP?  If you have just
 
 \section{GREs Are Optional and Do Not Matter for PhD Admissions}\label{sec:gre}
 
-While a few schools still require taking the \acrfull{GRE} exam (e.g., UCF), most good CS PhD programs in the US \textbf{no longer} require it. The reason is that GRE scores do not correlate well with research ability, which is the most important factor for PhD admission. It is also worth noting that many faculty members themselves did not take the GRE or have bad scores.
+While a few schools still require taking the \acrfull{GRE} exam (e.g., UCF), most good CS PhD programs in the US \textbf{no longer} require it. The reason is that GRE scores do not correlate well with research ability, which is the most important factor for PhD admission. Note that many faculty members themselves did not take the GRE or have bad scores.
 
 Thus, if you have bad GRE scores or haven't taken the GRE, then don't waste time (re)taking it. Being optional really means optional, and not taking it will not hurt your application.
 However, if you took it and have really good scores then it might be worth it to include (and perhaps talk about) them in your application, but don't expect them to make much difference. But if your scores are bad, then you should not include them in your application, which can be a \red{red flag}.
@@ -2233,7 +2225,7 @@ However, this is \emph{not} why we ``ghost'' you and provide no response (\autor
     \end{itemize}
     
     \begin{commentbox}[Vu:]
-        In addition to showing faculty's publication count, CSRankings also highlights if an individual is an ACM Fellow or Turing Award winner.  It is also worth noting that most Turing Award winners have very low publication counts as they are very senior and might not be active in research anymore. 
+        In addition to showing faculty's publication count, CSRankings also highlights if an individual is an ACM Fellow or Turing Award winner.  Note that most Turing Award winners have very low publication counts as they are very senior and might not be active in research anymore. 
     \end{commentbox}
     \subsubsection{Industrial and Other Awards}
 
@@ -2314,7 +2306,7 @@ People who do get in these schools often were explicitly encouraged by their men
 
 You're missing out some serious CS PhD programs: UCSD, UW, UMD, Michigan, Purdue, Stony brook. These all have super strong CS programs but rarely get mentioned. Utah, Rutgers, Buffalo, Penn State, UVA, Ohio, UC Riverside, George Mason ... any of them rings a bell? These might not ranked very high on QS or US News and are not household names to you, your friends, mom and dad, but they are excellent CS schools where graduating students from your dream schools often apply for faculty positions (e.g., see \href{https://github.com/dynaroars/dynaroars.github.io/wiki/About-GMU}{GMU stats}). You can go to these places and be superstar there.
 
-\paragraph{You don't need to be top}  Top schools will open doors to more opportunities. In countries like Vietnam, there are usually only a few top schools, and if you don't get into them, you are doomed  (or so you think). But that is not the case in the US. There are simply too many good schools, and it is not a binary choice between top X or nothing.  In fact, ``equity'' is emphasized in the US and ``smaller'' schools are often given more resources and attention to help students succeed.  
+\paragraph{You don't need to be top}  Top schools will open doors to more opportunities. In countries like Vietnam, there are few top schools, and if you don't get into them, you are doomed  (or so you think). But that is not the case in the US. There are simply too many good schools, and it is not a binary choice between top X or nothing.  In fact, ``equity'' is emphasized in the US and ``smaller'' schools are often given more resources and attention to help students succeed.  
 
 \begin{keybox}
 Don't aim for just the moon and the stars, also try the sky, clouds, or even just the trees.  You might find much happiness and success there, which then can catapult you places beyond the moon and the stars.  This is the American dream, which is strongly embodied in the its higher education system.
