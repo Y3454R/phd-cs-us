@@ -38,10 +38,6 @@
 \usepackage[makeroom]{cancel}
 
 % boxes
-\newtcolorbox{mybox}{
-  enhanced, frame hidden,
-  colback=gray!20!white
-}
 
 \newtcolorbox{marker}[1][]{enhanced,
   before skip balanced=2mm,after skip balanced=3mm,
@@ -264,11 +260,11 @@
 \newglossaryentry{lab}{name=Research Lab, description={A group of researchers (profs. and students) working on a common research area, e.g., a Software Engineering Lab.  Typically a lab is led by a single professor, but sometimes it can be co-led by multiple professors. For example, my lab \href{https://dynaroars.cs.gmu.edu}{DynaROARS} focuses on my own research area (software verification), but I am also part of the more general SWE Lab at Mason with other faculty in Software Engineering}}
 
 
-% \item[Major] A student's primary field of study, e.g., Computer Science, Electrical Engineering, Mathematics, etc. Often used in the context of undergraduate studies (e.g., ``what was your major in undergrad?'').
+\newglossaryentry{major}{name=Major, description={A student's primary field of study, e.g., Computer Science, Electrical Engineering, Mathematics, etc. Often used in the context of undergraduate studies (e.g., ``what was your major in undergrad?'')}}
 
 % \item[MS \autoref{sec:msrequirement}] Master of Science. A graduate degree that typically requires 2 years of study.
 
-% \item[Open House \autoref{chap:accepted}] An event where admitted students visit the university to meet faculty, students, and staff, and learn more about the program. This is a great opportunity to get a feel for the university and the department and decide if it is a good fit for you.
+\newglossaryentry{open-house}{name=Open House, description={An event where admitted students visit the university to meet faculty, students, and staff, and learn more about the program. This is a great opportunity to get a feel for the university and the department and decide if it is a good fit for you. Open house can be in-person or virtual \autoref{chap:accepted}}}
 
 %   \item[OPT] Optional Practical Training. A program that allows F-1 students to work in the US for up to 12 months after graduation.
 % \item[CPT] Curricular Practical Training. A program that allows F-1 students to participate in internships or practical training that is an integral part of their academic curriculum.
@@ -333,7 +329,7 @@ discourages students from applying but also creates the perception that getting 
 % though \emph{very} top schools could be very selective, e.g., see the \href{https://da-data.blogspot.com/2015/03/reflecting-on-cs-graduate-admissions.html}{admission process} at CMU
 So I want to share some details about the admission process and advice for those who are interested in applying for a \textbf{PhD in Computer Science in the US}.
 Originally, this book was written for international students, but has been expanded to include information for \textbf{US domestic students} (\autoref{chap:domestic-students}).
-Moreover, while this primarily aims at students interested in CS, it might be relevant to students from various STEM (Science, Technologies, Engineering, and Mathematics) disciplines.
+Moreover, while this primarily aims at students interested in CS, it might be relevant to students from various \acrshort{STEM} (Science, Technologies, Engineering, and Mathematics) disciplines.
 Furthermore, although many examples are specifics for schools that I and other contributors of this book know about, the information should be generalizable to other good \Gls{r1} institutions in the US.
 
 This information can also help \textbf{US faculty and admission committee} gain a better understanding of international students and their cultural differences (\autoref{chap:cultural}).  By recognizing and leveraging these differences, CS programs in the US can attract larger and more competitive application pools from international students.
@@ -1803,21 +1799,21 @@ You’ll encounter terms like tenured, tenure-track, teaching, research, adjunct
 
 \subsection{Faculty Types}
 
-At most research-intensive (\gls{r1}) universities, faculty generally fall into two broad categories:
+At most research-intensive (\gls{r1}) universities, faculty generally fall into two categories:
 \begin{itemize}
     \item Tenure-line faculty (tenured or tenure-track)
     \item Non-tenure-line faculty (e.g., teaching, adjunct, or research faculty)
 \end{itemize}
 
-The key distinction is in their responsibilities, i.e., whether they are expected to conduct research, secure funding, and supervise PhD students.
+The key distinction is in their responsibilities---whether they are expected to do research, get funding, and supervise PhD students.
 
 
 \paragraph{Tenure-Line Faculty} 
-These faculty members are expected to perform research, publish in top venues, get funding (\autoref{sec:ra}), and mentor students, especially PhD students. They typically teach fewer courses—often just one per semester—and are the \emph{main group eligible to serve as primary PhD advisers}. Tenure-line faculty consist of two subcategories:
+These faculty members are expected to perform research, publish in top venues, get funding (\autoref{sec:ra}), and mentor PhD students. They typically teach fewer courses-often just one per semester—and are the \emph{main group eligible to serve as primary PhD advisers}. Tenure-line faculty consist of two subcategories:
 
 \begin{itemize}
 	\item Tenure-track faculty are on the path to tenure and are often actively recruiting students. 
-	\item Tenured faculty have already earned permanent status and usually have well-established labs.
+	\item Tenured faculty have already earned permanent status and might be less active in building their research group.
 \end{itemize}    
 
 \begin{keybox}
@@ -2700,25 +2696,17 @@ These are some common pitfalls I see in NDSEG applications and some tips to avoi
 
 If you’re applying for a PhD program, the NSF GRFP, or the DoD NDSEG, you should strongly consider writing your statements in \LaTeX{} instead of MS Word. In CS and most other scientific and engineering fields, \LaTeX{} is the de facto standard for writing documents—papers, proposals, dissertations, and letters. Most faculty reviewers are accustomed to seeing formatting that \LaTeX{} produces, and many find Word’s default left-aligned, uneven layout distracting and amateurish.
 
-This isn’t about snobbery—it’s about professional norms. Reviewers will not penalize you for using Word, but subtle irritations can affect how they read your work (after reading dozen of applications, these small things add up). Given that using \LaTeX{} is free and easy to use (e.g., see Overleaf), there’s no excuse not to use it. This is a small, easily fixable detail that indicates that you understand and respect the academic and technical culture you’re trying to enter. Paying attention to these details can only help your application!
+While reviewers will not penalize you for using Word, subtle irritations (there might also be bias against Word) can affect how they read your writing---after reading dozen of applications, these small things add up. Given that \LaTeX{} is free and easy to use (e.g., see \href{https://www.overleaf.com}{Overleaf}), there’s no excuse not to use it. This is a small, easily fixable detail that indicates that you understand and respect the academic and technical culture you’re trying to enter. Paying attention to these details can only help your application!
 
-\begin{verbatim}
+\autoref{listing:latex} is a very basic example of a \LaTeX{} document with 11pt font and 1-inch margins. You can start with this and modify it. 
+
+\begin{lstlisting}[language=TeX,basicstyle=\small,label=listing:latex,caption={A simple \LaTeX{} document.}]
     \documentclass{article}
     \usepackage[margin=1in]{geometry}
     \begin{document}
-    
-    \title{Research Statement}
-    \author{Your Name}
-    \date{}
-    \maketitle
-    
-    \section*{Personal Background and Future Goals}
-    
-    I have always been fascinated by the intersection of theory and systems...
-    My long-term goal is to become a faculty member and lead a research group...
-    
+    ...     
     \end{document}
-    \end{verbatim}
+\end{lstlisting}
 
 \chapter{Academic and Cultural Differences}\label{chap:cultural}
 
@@ -2754,13 +2742,13 @@ With your professor(s), you can call them by their first name (\autoref{sec:addr
 Many people maintain lifelong relationships with their professors and colleagues, staying in touch through cards, emails, and visits, even after they no longer work together.
 
 \begin{commentbox}[Vu:]
-    I maintain a close relationship with my former professors and mentors. When there is a new event in my life (or theirs), I often email them or call them, e.g., when I get married, have a new baby, new job, etc. When I was having issues at UNL and considering leaving, I talked to my PhD advisers Deepak and Steph. I think this does not bother them a bit; they are genuinely interested in knowing and helping solve these ``dramas'' in my life.
+    I maintain a close relationship with my former professors and mentors. When there is a new event in my life (or theirs), I often email them or call them, e.g., when I get married, have a new baby, new job, etc. I think this does not bother them a bit; they are genuinely interested in knowing and helping solve these ``dramas'' in my life.
     \\
     
     I also visit my former professors when I am in their area. I meet Thang Bui (my MS adviser) at least once a year when I come back to Harrisburg to visit my parents. When Steph was in DC for a meeting, I invited her to to give a research talk at Mason. I have also collaborated with them after I graduated e.g., I recently got an NSF grant with Deepak.
     \\
     
-    In short, while I am a bit closer to my former advisers and mentors than most people (e.g., I still keep in touch with my middle school teacher in Hawaii), it is always a good idea to maintain a good relationship with people who have helped or worked well with you. A simple, short email or text once in a while (e.g., a \emph{``Hi X, I heard you just got promoted ... Congrats!''}) would suffice. They will appreciate it, and you never know when you might need their help.
+    In short, while I am a bit closer to my former advisers and mentors than most people (e.g., I still keep in touch with my middle school teacher), it is always a good idea to maintain a good relationship with people who have helped or worked well with you. A simple, short email or text once in a while (e.g., a \emph{``Hi X, I heard you just got promoted ... Congrats!''}) would suffice. They will appreciate it, and you never know when you might need their help.
     
         
   \end{commentbox}
@@ -2860,14 +2848,14 @@ Sometimes foreigners are surprised by how Americans do not talk about their pers
 \chapter{History and Acknowledgement}\label{chap:ack}
 \paragraph{History} This book was conceived during a lunch with a faculty at Mason.  We talked about why Mason was not able to attract good Vietnamese and other international students, despite having a much stronger CS program than many schools that these students want to go to (part of the reason is described in \autoref{sec:selecting-ranking-schools}). We wish there were a way for international students to know about PhD programs in the US.
 
-I was also a member of the large VietPhD group on Facebook and often browse Internet forums (e.g., \texttt{Reddit/gradadmission} and \texttt{GradCafe}). There I saw many questions from students about PhD programs.  However, most participants are students, many of whom in non-CS fields or not in the US, and their answers are typically not accurate and often lead to more confusion. So I thought it would be useful to have a handbook that is specific to CS PhD programs in the US from an insider perspective.
+I am also a member of the large VietPhD group on Facebook and often browse Internet forums (e.g., \texttt{Reddit/gradadmission} and \texttt{GradCafe}). There I saw many questions from students about PhD programs.  However, most participants are students, many of whom in non-CS fields or not in the US, and their answers are typically not accurate and often lead to more confusion. So I thought it would be useful to have a handbook that is specific to CS PhD programs in the US from an insider perspective.
 
 I started writing this book in May 2023 and have been updating it since then (mostly around deadline time when I procrastinate, i.e., \emph{productive procrastination}!). The book was initially intended for international students but has been updated to include domestic students (\autoref{chap:domestic-students} and \autoref{chap:fellowships}).
 The book is open-source and available on \href{https://github.com/dynaroars/phd-cs-us}{GitHub} so that others can contribute to it.
 \paragraph{About Me} I am an associate professor in the CS dept at George Mason University (Mason). 
 Before Mason, I was at the University of Nebraska-Lincoln (UNL). Both UNL and Mason are \gls{r1} research universities in the US and have many international students in their CS graduate programs. I work in Software Engineering and Formal Mehods.  My personal and lab website is at \href{https://dynaroars.github.io}{dynaroars.github.io}. 
 
-I have been involved the PhD admission process at Mason and UNL for many years. This allows me to have a good understanding of the process, the challenges students face, and what faculty are looking for. Currently I am the program director of the MS program in Software Engineering at Mason (thus also have experience with MS admission---which is quite different than PhD as discussed in \autoref{chap:ms}). I also have served in the panels of PhD fellowships including NSF GRFP and DoD NDSEG, which allows me to provide some insights on external fellowhip applications (\autoref{chap:fellowships}).
+I have been involved the PhD admission process at Mason and UNL for many years. This allows me to have a good understanding of the process, the challenges students face, and what faculty are looking for. Currently I am the program director of the MS program in Software Engineering at Mason (thus also have experience with MS admission, which is quite different than PhD as discussed in~\autoref{chap:ms}). I also have served in the panels of PhD fellowships including NSF GRFP and DoD NDSEG, which allows me to provide some insights on external fellowhip applications (\autoref{chap:fellowships}).
 
 
 Though I was not an international student, many of my students and collaborators are/were. I also mentor students from Vietnam and have close colleagues and friends who were once international students. I hope to capture the diverse challenges and experiences they've faced in this book so that it can be a valuable resource for prospective international students.
@@ -2882,6 +2870,7 @@ Xiaokuan Zhang (Mason), Hung Le (UMass), and Deepak Kapur (UNM) provided valuabl
 
 Also thanks to NSF for encouraging faculty to be creative in research and education, which allows me to work on this book. 
 
+Finally, thanks to my wife and kids for always supporting me and putting up with my long hours of work and writing.
 
 
 %\bibliographystyle{abbrv}
