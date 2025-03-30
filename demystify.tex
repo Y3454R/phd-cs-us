@@ -161,7 +161,7 @@
 
 \newcommand{\mytitle}{Demystifying PhD Admissions in Computer Science}
 \newcommand{\mysubtitle}{A Handbook for Navigating CS PhD Admissions in the U.S.}
-\newcommand{\mybookaddress}{\href{https://dynaroars.github.io/phd-cs-us/demystify.pdf}{https://dynaroars.github.io/phd-cs-us/demystify.pdf}}
+\newcommand{\mybookaddress}{\href{https://dynaroars.github.io/phd-cs-us/demystify.pdf}{dynaroars.github.io/phd-cs-us/demystify.pdf}}
 
 \newcommand{\me}{ThanhVu Nguyen}
 \newcommand{\institute}{George Mason University}
@@ -312,16 +312,16 @@
     \vfill
     {\Large\bfseries\me{}}\medskip\par
     {\institute{}}\medskip\par    
-    {\small\today{}}\medskip\par
-    {\footnotesize\mybookaddress{}}
+    {\small\today{} (\mybookaddress{})}
 \end{titlepage}
 
 \newpage
 \pagestyle{empty}
 
-\begin{center}
+\begin{tcolorbox}[enhanced]
+    \centering
   \small \mytitle{} © 2025 by \\\me{} is licensed under CC BY-SA 4.0.    
-\end{center}
+\end{tcolorbox}
 
 
 \chapter*{Preface}
