@@ -38,7 +38,6 @@
 \usepackage[makeroom]{cancel}
 
 % boxes
-
 \newtcolorbox{marker}[1][]{enhanced,
   before skip balanced=2mm,after skip balanced=3mm,
   boxrule=0.4pt,left=5mm,right=2mm,top=1mm,bottom=1mm,
@@ -50,7 +49,6 @@
     \path[fill=tcbcolback!80!black,draw=none] (interior.south west) rectangle node{\large\bfseries {#1}} ([xshift=4mm]interior.north west);
     },
   drop fuzzy shadow}
-
 
 \newenvironment{commentbox}[1][]{
   \small
@@ -162,7 +160,9 @@
 \newcommand{\red}[1]{{\color{red}{#1}}}
 
 \newcommand{\mytitle}{Demystifying PhD Admissions in Computer Science}
-\newcommand{\mysubtitle}{A Book for Navigating CS PhD Admissions in U.S. Universities}
+\newcommand{\mysubtitle}{A Handbook for Navigating CS PhD Admissions in the U.S.}
+\newcommand{\mybookaddress}{\href{https://dynaroars.github.io/phd-cs-us/demystify.pdf}{https://dynaroars.github.io/phd-cs-us/demystify.pdf}}
+
 \newcommand{\me}{ThanhVu Nguyen}
 \newcommand{\institute}{George Mason University}
 
@@ -242,7 +242,7 @@
 
 
 \newglossaryentry{fields}{
-    name = fields or areas of Research,
+    name = fields or areas of research,
     description={Specific areas of study or research. Fields within CS include Machine Learning, Computer Vision, Software Engineering, etc}
 }
 
@@ -305,19 +305,21 @@
 \frontmatter
 \begin{titlepage}
     \centering      
-    {\Huge\bfseries\baselineskip1.2em\mytitle\par}\bigskip\bigskip\par
-    {\large\bfseries\baselineskip1.2em\mysubtitle}\bigskip\par
-    {\href{https://dynaroars.github.io/phd-cs-us/demystify.pdf}{https://dynaroars.github.io/phd-cs-us/demystify.pdf}}
+    {\Huge\bfseries\baselineskip1.3em\mytitle\par}\bigskip\bigskip
+    {\large\bfseries\mysubtitle{}}\bigskip\par
     \vfill
-    \includegraphics[width=0.5\textwidth]{files/angelfish2.png}
+    \includegraphics[width=0.4\textwidth]{files/angelfish2.png}
     \vfill
     {\Large\bfseries\me}\bigskip\par
-    {\today}
+    {\small\today{}}\medskip\par
+    {\footnotesize \mybookaddress{}}
 \end{titlepage}
 
+\newpage
 \pagestyle{empty}
+
 \begin{center}
-    \small \mytitle{} © 2025 by \\\me{} is licensed under CC BY-SA 4.0.    
+  \small \mytitle{} © 2025 by \\\me{} is licensed under CC BY-SA 4.0.    
 \end{center}
 
 
@@ -380,13 +382,13 @@ Full funding for CS PhD students is the norm in the US, and I'd go as far as to 
 \section{What's a PhD in CS?}\label{sec:phd-in-cs}
 
 
-A PhD in CS is a \emph{research} degree. Unlike undergraduate or even Master's programs (\autoref{chap:ms}), which focus on breadth of knowledge through coursework, a PhD is all about depth and pushing the boundary of one specific area within a CS field (e.g., software verification within the field of programming languages or formal methods) and contributing something new to the field that has never been done before.
+A PhD in CS is a \emph{research} degree. Unlike undergraduate or even Master's programs (\autoref{chap:ms}), which focus on breadth of knowledge through coursework, a PhD is all about depth and pushing the boundary of a specific area within a CS \glslink{fields}{field} (e.g., software verification within the field of programming languages or formal methods). You will become an expert in your area of research and contribute something new to the field that has never been done before.
 
 \begin{commentbox}[Vu]
     This \href{https://matt.might.net/articles/phd-school-in-pictures/}{series of pictures} from \href{https://matt.might.net}{Matt Might} illustrates what a PhD means.
 \end{commentbox}
 
-A CS PhD prepares you for careers that require deep technical expertise and the ability to do independent research. Many graduates become professors or academic researchers while others pursue positions in industry research labs, advanced engineering teams, or technical leadership positions. The degree also opens doors to national labs, government agencies, and startups, where the ability to solve open-ended, complex problems are needed. 
+A CS PhD prepares you for careers that require deep technical expertise and the ability to do independent research. Many graduates become professors or academic researchers while others pursue positions in industry research labs, advanced engineering teams, or technical leadership positions. The degree also opens doors to national labs, government agencies, and startups, where the ability to solve unknown and complex problems is necessary.
 
 The PhD is not just a degree, it is a journey that transforms you into a researcher. You will learn how to think critically, solve problems, and effectively communicate your ideas. In the end, you will have a deep understanding of your chosen field and become an expert in your area of research.
 
@@ -395,7 +397,7 @@ The PhD is not just a degree, it is a journey that transforms you into a researc
 \section{How long to complete the CS PhD program?}\label{sec:time}
 \sectioninfo{About 5--7 years in the US.}
 
-Typically, it takes 5--7 years for CS PhD in the US.  This can be longer compared to other countries (\autoref{sec:non-us-differences}), which might require MS (\autoref{sec:phd-vs-ms}) first. 
+Typically, it takes 5--7 years for CS PhD in the US.  This is usually longer compared to other countries (\autoref{sec:non-us-differences}), which might require MS (\autoref{sec:phd-vs-ms}) first. 
 
 
 \begin{figure}
@@ -482,26 +484,28 @@ Work Life Balance & Less & More \\
 
 
 \autoref{tab:us-vs-other} summarizes the main differences between CS PhD in the US and other countries. Note that these differences can vary by institution and country.  Some countries might have a PhD program that is similar to the US.  The following are some common differences:
+\begin{itemize}
 
-\emph{MS requirement and PhD duration}:  CS PhD programs in the US do not require an MS degree (as mentioned in \autoref{sec:time} and \autoref{sec:msrequirement}).  In contrast, many other countries require having an MS degree before joining a PhD program.  This means that US PhD programs are longer (5--7 years, 2 of which are coursework) than other countries (3--4 years, no coursework).
+\item \textbf{MS requirement and PhD duration}  CS PhD programs in the US do not require an MS degree (as mentioned in \autoref{sec:time} and \autoref{sec:msrequirement}).  In contrast, many other countries require having an MS degree before joining a PhD program.  This means that US PhD programs are longer (5--7 years, 2 of which are coursework) than other countries (3--4 years, no coursework).
 
-\emph{Project proposal}: in many countries, you have to choose a project and \glslink{adviser}{adviser} \emph{during} the application process (e.g., you write a proposal to a potential adviser). But this allows you to start your research right from the beginning. 
+\item \textbf{Project proposal} in many countries, you have to choose a project and \glslink{adviser}{adviser} \emph{during} the application process (e.g., you write a proposal to a potential adviser). But this allows you to start your research right from the beginning. 
 
 In the US, you often start your PhD without an adviser or project and find them later. Usually you have two initial years to take classes, explore and find an adviser and research topic. 
 
-\emph{Course work}: In the US ou will spend the first couple of years taking classes and exploring potential adviser and research topics. 
+\item \textbf{Course work} In the US ou will spend the first couple of years taking classes and exploring potential adviser and research topics. 
 After that, you have to pass a series of exams during your PhD---qualifying exam, comprehensive exam, thesis proposal defense\footnote{ABD (all but dissertation) refers to a PhD candidate who has finished all course work and exams and only needs to write and defend their dissertation.}.
 
 In other countries, you often start your research right away and work on the research project you proposed with the adviser you chose. Moreover, you might not have exams like those in the US or only have to do a few of them.
 
-\emph{Funding}:  In many countries, funding comes from the university or the gov't. This funding often has a fixed duration, e.g., 3 or 4 years.  In the US (\autoref{chap:funding}), funding (e.g., RA) comes directly from your adviser (no fixed duration).  There are also fewer TA opportunities in European universities compared to the US.
+\item \textbf{Funding}  In many countries, funding comes from the university or the gov't. This funding often has a fixed duration, e.g., 3 or 4 years.  In the US (\autoref{chap:funding}), funding (e.g., RA) comes directly from your adviser (no fixed duration).  There are also fewer TA opportunities in European universities compared to the US.
 
-\emph{Academic position after PhD}: In other countries, PhD graduates interested in academia typically apply for additional research appointments, i.e., postdocs, and then consider faculty positions. 
+\item \textbf{Academic position after PhD} In other countries, PhD graduates interested in academia typically apply for additional research appointments, i.e., postdocs, and then consider faculty positions. 
 
 In the US, PhD graduates often apply directly for faculty positions. Postdoc for US graduates is no longer a popular option as it was before.
 
-\emph{Work-life balance}: PhD students in the US are often said to be overworked compared to other countries, e.g., in Europe.  This is partly due to the longer PhD program and that US PhD students are often paid through TA, which requires them to do TA in addition to their own research. In contrast, PhD students in other countries are often paid through fellowships, which might not require doing TA.
+\item \textbf{Work-life balance} PhD students in the US are often said to be overworked compared to other countries, e.g., in Europe.  This is partly due to the longer PhD program and that US PhD students are often paid through TA, which requires them to do TA in addition to their own research. In contrast, PhD students in other countries are often paid through fellowships, which might not require doing TA.
 
+\end{itemize}
 
 \section{About this book}
 \sectioninfo{This book aims to provide in depth information about the CS PhD admission process in the US. It is particularly useful for international students from smaller countries and less well-known universities as they often lack access to such information.}
@@ -597,7 +601,7 @@ The PhD adcom typically involves assistant professors in the department (see \au
 
 
 
-Each application is assigned to about three adcom members, who will evaluate your profile and reach a consensus.  They will consider various factors---research experience, GPA, LoRs, SOP, test scores, and interviews. More details about these factors are discussed in \autoref{part:appendices}.
+Each application is assigned to about three adcom members, who will evaluate your profile and reach a consensus.  They will consider various factors including LoRs, SOP, research experience, GPA, test scores, and interviews. More details about these factors are discussed in \autoref{part:appendices}.
 
 
 
@@ -643,7 +647,7 @@ However, when there are discrepancies in evaluations, the adcom chair will ask r
 If the student mentioned a faculty member in their SOP, we might ask that faculty if they are interested in the student. 
 
 
-Note that other disciplines might have different practices. For example, adcome might select a top list of applicants and then discuss them in a meeting to determine who to interview. In CS, both the reviews and interviews are often done independently (\autoref{sec:interviews}).
+Note that other disciplines might have different practices. For example, adcom might select a top list of applicants and then discuss them in a meeting to determine who to interview. In CS, both the reviews and interviews are often done independently (\autoref{sec:interviews}).
 
 \begin{surprisebox}[From a prof. in Physics at an \gls{r1} university:]
   We have a pretty well fleshed out grading rubric for applications that has categories like grades, research, writing ability, etc. I would say our rubric is weighted about 1/2 on academics (research, LORs, grades) and 1/2 on the idea of ``grit'' or ``resilience'' (engagement, leadership, working through obstacles).\\
@@ -716,9 +720,9 @@ Having a strong letter from a recognized researcher can \emph{significantly boos
 
 However, don't worry if you haven't worked directly with well-known researchers. A strong, personalized recommendation from someone who knows you well, even if less famous, is far more valuable than a generic letter from a prominent figure who barely knows you. So again, the emphasis is on \emph{personalized} and \emph{research-focused} letters--the fame is a bonus, not a requirement. 
 
-\begin{commentbox}[Vu:]
+\begin{surprisebox}[Vu:]
   It is fine to get letters from a postdoc or even a senior PhD student who has worked closely with you and can write a strong letter. An enthusiast letter from a postdoc who has mentored you in research for the past six months is much better than a generic letter (\autoref{sec:generic-letters}) from a well-known person.
-\end{commentbox}
+\end{surprisebox}
 
 
 \begin{questionbox}[Didier]
@@ -737,10 +741,10 @@ However, don't worry if you haven't worked directly with well-known researchers.
 
 
 
-  \begin{commentbox}[Vu:]
+  \begin{surprisebox}[Vu:]
     In my experience in reviewing applications, letters from admin people are often generic and do not provide much value. 
     In many case, the letter reads like it was written by a student (\autoref{sec:self-letters}), and thus is a red flag.  So if you are in this situation, you should find someone else to write for you as mentioned in this section.
-  \end{commentbox}
+  \end{surprisebox}
   
   Many students get letters from supervisors from companies where they did internships or are working.  It is OK as long as it is a research-based personalized letter. Again, the emphasis here is \emph{research}, i.e., the letters should describe your research experiences and potential. Letters focusing on non-research projects at a company won't carry much weight.
 
@@ -1758,7 +1762,7 @@ Fortunately, while some non-US programs require finding an adviser and research 
 
 Assuming you're not familiar with any particular one, then first search for profs. that share similar research interests.  For example, in CSRankings, if you want to work with PL, you can search for those published in PL conferences.  If you want to work with SE \emph{and} AI, you can search for faculty who work in both SE and AI.  
 
-After that, you can research about that prof. by going to their website, looking at their research achievements and awards (\autoref{sec:research-achievements}), checking their research lab and group, seeing if they have recent publications, and reading their papers.  Sometimes they would explicitly say they are looking for students. If you find a prof. that you like, you can reach out to them (\autoref{sec:contact}).
+After that, you can research about that prof. by going to their website, looking at their research achievements and awards (\autoref{chap:research-achievements}), checking their research lab and group, seeing if they have recent publications, and reading their papers.  Sometimes they would explicitly say they are looking for students. If you find a prof. that you like, you can reach out to them (\autoref{sec:contact}).
 
 
 \begin{commentbox}[Xiaokuan:]
@@ -2028,133 +2032,6 @@ However, this is \emph{not} why we ``ghost'' you and provide no response (\autor
     However, I only reply to those that I think are a good fit and ask them to chat with me.
     \end{commentbox}
     
-
-    \section{Research Achievements and Awards}\label{sec:research-achievements}
-
-    When exploring potential advisors, students often come across various \emph{research achievements} showcased on faculty websites, CVs, or departmental news and awards pages (e.g., at \href{https://cs.gmu.edu/about/faculty-awards/}{Mason} and \href{https://www.cs.washington.edu/people/honors-awards/}{UWash}). 
-    
-    Unlike common metrics like publications in top-tier venues or citation counts, these highlighted achievements are genuinely exceptional and offer more meaningful glimpse into a researcher’s impact and standing in the field. After all, you rarely see departments celebrating someone’s paper acceptance or h-index, but they will spotlight the awards and honors such as these below.
-    
-    \subsubsection{Early-Career Funding Awards} These refer to prestigious grants and fellowships for early-career faculty, e.g., assistant professors who have not yet received tenure (\autoref{sec:faculty-types}.). In addition to coming with major funding, these awards are highly valued and can significantly boost the tenure case and career of the recipient. 
-    
-    \begin{itemize}
-        \item \textbf{NSF CAREER Award} A very popular and prestigious early-career award for junior faculty demonstrating research \emph{and} educational excellence. It comes with a 5-year research grant, which is substantial for early-career researchers. 
-        
-        In many cases, the CAREER implies tenure and thus is such a big deal that some faculty would delay major life events (e.g., marriage and children) to focus on it. In some cases, faculty may consider moving to a better school after getting this award.
-        \begin{itemize}
-          \item \textbf{NSF CRII (CISE Research Initiation Initiative)} A ``mini'' version of CAREER for junior faculty in CISE (Computer and Information Science and Engineering) directorate. It comes with a 2-year grant and many faculty use this as a stepping stone to apply for the CAREER.
-          
-          \item \textbf{PECASE} (Presidential Early Career Award for Scientists and Engineers) A small number of CAREER awardees are selected for this recognition.  While is it not a funding award, it is a prestigious recognition of early-career researchers (it comes with a medal and a handshake from the U.S. President!)
-        \end{itemize}  
-    
-        \item \textbf{YIP (Young Investigator Program)} Given by defense agencies such as the DoD, DARPA, ONR and have the similar goals as CAREER but strictly for US citizen or permanent residents. They are not as popular as CAREER, focus on very restricted topics (e.g., only in DoD's interest areas), and have a shorter duration (e.g., 3 years instead of 5). YIP recipients can also be considered for the mentioned PECASE recognition.
-    
-        \item \textbf{Sloan Fellowship}  Comes with a \$75K research grant over 2 years for junior faculty with exceptional potential in their field. Unlike the CAREER or YIP, these are nominated by their institutions and are not open to self-application.
-        
-    \end{itemize} 
-    
-    Other awards that junior faculty can get include the \emph{ACM Dissertation Awards} and early career awards from the industry. 
-    The ACM SIGs (Special Interest Groups) such as SIGPLAN (programming languages) and SIGARCH (architecture) have  dissertation awards for best PhD dissertation in different areas of CS. These are typically given \emph{after} the student has graduated and thus are given very junior faculty who recently graduated.   
-    Some industry labs, e.g., Google and \cancel{Microsoft} (used to), have fellowship programs for early-career faculty. These are very competitive and come with funding for one or two years. 
-    
-    
-    %  These industrial awards are very flexible (unrestricted) and thus prof. often save them for emergencies (e.g., when they cannot get NSF funding).
-    
-    
-    \subsection{Research Awards} These refer to awards given to more senior researchers for their outstanding contributions to their field.
-    These are typically for specific papers that have made significant impact in their area of research (i.e., test-of-time or most influential awards), or for their lifetime achievements in the field (e.g., ACM or IEEE Fellows). 
-    Note that these do not include Distinguished or Best Paper Awards, which are typically given at conferences and not as prestigious as they might not have long-term impact.
-    
-    \begin{figure}
-    \begin{examplebox}
-        \emph{``It is highly noteworthy that \censor{Vu} has earned two 10-year test-of-time awards for \censor{his} papers \censor{, including a prestigious ICSE Most Influential Paper Award}. Senior computer scientists count themselves fortunate to
-        earn even one such award at some point in their careers, but it is highly unusual and commendable that \censor{Vu}
-        has earned two of these awards already, less than ten years after completing \censor{his} PhD ...''}
-    \end{examplebox}
-    \caption{LoR for a junior faculty (some texts endacted for anonymity).}\label{fig:lor4junior}
-    \end{figure}
-    
-    \begin{itemize}
-        \item \textbf{Test of Time, Most Influential, and Impact Awards} Typically given to papers that were published 10+ years ago at a top venue and made a lasting contribution to their area of research, i.e., have stood the \emph{test of time}. Unlike Distinguish or Best Paper awards, which are typically given at the conference where the paper was presented, these are given years later to recognize the long-term impact of the work.
-    
-        \begin{commentbox}[Vu:]
-          While typically given to senior researchers, some junior faculty have received these awards for their work as shown in~\autoref{fig:lor4junior}. 
-    
-        \end{commentbox}
-    
-        \item \textbf{\href{https://awards.acm.org/fellows}{ACM} and IEEE Fellows} Reserved for researchers with long-term contributions and leadership in computing fields. These are typically given to very senior researchers (e.g., full professors). Note that there are also ACM and IEEE Senior Members, which are a step below Fellows and can be self-applied.
-    
-        \item \textbf{\href{https://www.macfound.org/programs/awards/fellows/}{McArthur Fellowship}} Also known as the \emph{``Genius Grant''} and given to individuals who have shown exceptional creativity in their work and the promise for more in the future. 
-        
-        \item \textbf{\href{https://awards.acm.org/turing}{Turing Award}} The \emph{highest honor} in CS for lifetime achievements and contributions to the computing community. It comes with a \$1M prize and is often called the \emph{``Nobel Prize of Computing.''} 
-        If you see someone having one, you already know they are a giant in the field.
-    \end{itemize}
-    
-    \begin{commentbox}[Vu:]
-        In addition to showing faculty's publication count, CSRankings also highlights if an individual is an ACM Fellow or Turing Award winner.  Note that most Turing Award winners have very low publication counts as they are very senior and might not be active in research anymore. 
-    \end{commentbox}
-    \subsubsection{Industrial and Other Awards}
-
-    
-    CS faculty also aim to win awards from industry, which can be a sign of their impact on real-world applications and industry relevance. Some well-known ones include:
-    
-    \begin{itemize}
-        \item \textbf{Google Scholar Award} Once a year for a wide-range of research areas and is specifically for junior faculty. It is given as a gift (unrestricted funding).
-        \item \textbf{Amazon Research Award (ARA)} Typically open twice a year for a wide-range of research areas. It also comes as a gift of up to \$80K but is highly competitive as it is open to all researchers (not just junior faculty).
-    %    \item Sony \textbf{Faculty Innovation Award} Open to all researchers  in fields related to Sony's business (e.g., AI, robotics, computer vision, gaming).
-    \end{itemize}
-    
-    There are other ones that are given to a selected list of universities that the company has a partnership with 
-     (e.g., from Intel and Qualcomm) and thus the competition is not as high.
-    
-    %\paragraph{Students' Achievements} 
-    %faculty proudly show achievements of their students, e.g., best paper awards, internships at top companies, and faculty positions at top universities.  Dissertation awards, GRFP , Undergrad students research awards, etc
-    
-    
-    % \paragraph{Development of Highly Influential Research Tools}
-    % Beyond papers, research tools that are widely used in academia or industry signify real-world impact. Some key indicators include:
-    % \begin{itemize}
-    %     \item \textbf{Tools used in major companies or open-source projects} – If a tool from their lab is integrated into industry workflows (e.g., compilers, verification tools, ML frameworks), it’s a sign of practical impact.
-    %     \item \textbf{Winning research competitions} – Many fields have benchmark competitions (e.g., SAT solvers, automated theorem provers, AI competitions). Winning or being a top contender in these suggests that the lab is leading cutting-edge research.
-    %     \item \textbf{Tools included in major software stacks} – If a tool is widely cited or included in standard toolchains (e.g., LLVM, Z3, TensorFlow), it indicates strong adoption.
-    % \end{itemize}
-    % Some departments list major research awards and influential software projects on their website. If an adviser’s name appears frequently in such lists, it’s a strong endorsement of their impact.
-    
-    % \paragraph{Research Publications in Top Venues}
-    % While individual papers can be impressive, a more reliable measure of a researcher's productivity is the \textbf{sum of their publications in top-tier conferences and journals}.
-    % \begin{itemize}
-    %     \item Look for publications in the highest-impact conferences of the field (e.g., NeurIPS, ICML, CVPR for AI/ML; PLDI, OOPSLA, POPL for programming languages; FSE, ICSE for software engineering).
-    %     \item Be cautious about citation counts—fields like AI/ML generate high citations quickly, even for unpublished papers. Instead, focus on where and how often they publish.
-    %     \item A high volume of recent publications in top venues suggests an active and productive lab.
-    % \end{itemize}
-    
-    % \paragraph{External Research Grants \& Funding}
-    % The ability to secure funding is a sign of research productivity and lab stability. Some key points to consider:
-    % \begin{itemize}
-    %     \item \textbf{Total external funding secured} – NSF, DoD, DARPA, NIH, and industry grants indicate strong research backing.
-    %     \item \textbf{Large collaborative grants} – Leading multi-institution projects suggests strong connections and influence.
-    %     \item \textbf{Consistency of funding} – Advisers with multiple ongoing grants can better support students with travel, equipment, and stipends.
-    % \end{itemize}
-    % If an adviser has continuously secured funding over time, it suggests a stable research environment and long-term support for students.
-    
-    % \paragraph{Leadership \& Service in the Research Community}
-    % Serving in key leadership roles is another indicator of a researcher's standing in the field. Important roles include:
-    % \begin{itemize}
-    %     \item \textbf{General or Program Chair of major conferences} – Running top conferences like NeurIPS, ICSE, or PLDI requires respect from peers and shows leadership.
-    %     \item \textbf{Editorial roles in top journals} – Being an editor of a leading journal (e.g., ACM TOCS, IEEE TSE) suggests authority in the field.
-    %     \item \textbf{Departmental leadership roles} – While not always a direct research indicator, serving as Department Chair, Dean, or leading a research institute often signals strong influence.
-    % \end{itemize}
-    
-    % \paragraph{What This Means for You as a PhD Student}
-    % Evaluating these factors helps you understand:
-    % \begin{itemize}
-    %     \item \textbf{How well-known your potential adviser is in the field} – This impacts your career prospects after graduation.
-    %     \item \textbf{How active their lab is} – A productive lab means more opportunities for collaboration, funding, and conference travel.
-    %     \item \textbf{How stable the research funding is} – A well-funded lab ensures you have the resources you need to succeed.
-    % \end{itemize}
-    % While no single factor is definitive, a combination of these elements can give you a strong sense of whether an adviser and their lab are truly productive and well-respected in the field.
-    
-
 \part{Miscs and FAQs}\label{part:faqs}
 \chapter{Miscs and FAQs}\label{chap:faqs}
 
@@ -2687,6 +2564,137 @@ These are some common pitfalls I see in NDSEG applications and some tips to avoi
 
 
 
+
+
+
+\chapter{Research Achievements and Awards}\label{chap:research-achievements}
+
+When exploring potential advisors, students often come across various \emph{research achievements} showcased on faculty websites, CVs, or departmental news and awards pages (e.g., at \href{https://cs.gmu.edu/about/faculty-awards/}{Mason} and \href{https://www.cs.washington.edu/people/honors-awards/}{UWash}). 
+
+Unlike common metrics like publications in top-tier venues or citation counts, these highlighted achievements are genuinely exceptional and give more meaningful insights into a researcher's impact and standing in the field. You rarely see departments celebrating someone’s paper acceptance or h-index, but they will spotlight the awards and honors such as these below.
+
+\section{Early-Career Funding Awards} These refer to prestigious grants and fellowships for early-career faculty such as assistant professors who have not yet received tenure (\autoref{sec:faculty-types}). In addition to coming with major funding, these awards are highly valued and can significantly boost the tenure case and career of the recipient. 
+
+\begin{itemize}
+  \item \textbf{NSF CAREER Award} A very popular and prestigious award for junior faculty with research \emph{and} educational excellence. It comes with a 5-year research grant, which is substantial for early-career researchers. 
+  
+  In many cases, the CAREER implies tenure and thus is such a big deal that some faculty would delay major life events (e.g., marriage and children) to focus on it. In some cases, faculty may consider moving to a better school after getting this award.
+  \begin{itemize}
+    \item \textbf{NSF CRII (CISE Research Initiation Initiative)} A ``mini'' version of CAREER for junior faculty in CISE (Computer and Information Science and Engineering) directorate. It comes with a 2-year grant and many faculty use this as a stepping stone to apply for the CAREER.
+    
+    \item \textbf{PECASE} (Presidential Early Career Award for Scientists and Engineers) A small number of CAREER awardees are selected for this recognition.  While is it not a funding award, it is a prestigious recognition of early-career researchers (it comes with a medal and a handshake from the U.S. President!)
+  \end{itemize}  
+  
+  \item \textbf{YIP (Young Investigator Program)} Given by defense agencies such as the DoD, DARPA, ONR and have the similar goals as CAREER but strictly for US citizen or permanent residents. They are not as popular as CAREER, focus on very restricted topics (e.g., only in DoD's interest areas), and have a shorter duration (e.g., 3 years instead of 5). YIP recipients can also be considered for the mentioned PECASE recognition.
+  
+  \item \textbf{Sloan Fellowship}  Comes with a \$75K research grant over 2 years for junior faculty with exceptional potential in their field. Unlike the CAREER or YIP, these are nominated by their institutions and are not open to self-application.
+  
+\end{itemize} 
+
+Other awards that junior faculty can get include the \emph{ACM Dissertation Awards} and early career awards from the industry. 
+The ACM SIGs (Special Interest Groups) such as SIGPLAN (programming languages) and SIGARCH (architecture) have  dissertation awards for best PhD dissertation in different areas of CS. These are typically given \emph{after} the student has graduated and thus are given very junior faculty who recently graduated.   
+Some industry labs, e.g., Google and \cancel{Microsoft} (used to), have fellowship programs for early-career faculty. These are very competitive and come with funding for one or two years. 
+
+
+%  These industrial awards are very flexible (unrestricted) and thus prof. often save them for emergencies (e.g., when they cannot get NSF funding).
+
+
+\subsection{Research Awards} These refer to awards given to more senior researchers for their outstanding contributions to their field.
+Typically, these are either for (i) specific work, published 10+ years ago, that have made significant impact in their area of research (i.e., test-of-time or most influential paper awards), or (ii) lifetime achievements in the field (e.g., ACM or IEEE Fellows). 
+
+\begin{figure}
+  \begin{examplebox}
+    \emph{``It is highly noteworthy that \censor{Vu} has earned two 10-year test-of-time awards for \censor{his} papers \censor{, including a prestigious ICSE Most Influential Paper Award}. Senior computer scientists count themselves fortunate to
+    earn even one such award at some point in their careers, but it is highly unusual and commendable that \censor{Vu}
+    has earned two of these awards already, less than ten years after completing \censor{his} PhD ...''}
+  \end{examplebox}
+  \caption{LoR for a junior faculty (some texts endacted for anonymity).}\label{fig:lor4junior}
+\end{figure}
+
+\begin{itemize}
+  \item \textbf{Test of Time, Most Influential, and Impact Awards} Typically given to papers that were published 10+ years ago at a top venue and made a lasting contribution to their area of research, i.e., have stood the \emph{test of time}. Unlike Distinguish or Best Paper awards, which are typically given at the conference where the paper was presented, these are given years later to recognize the long-term impact of the work.
+  
+  Note that while typically given to senior researchers, some junior faculty have received these awards for their work as shown in~\autoref{fig:lor4junior}. 
+  
+  \item \textbf{\href{https://awards.acm.org/fellows}{ACM} and IEEE Fellows} Reserved for researchers with long-term contributions and leadership in computing fields. These are typically given to very senior researchers (e.g., full professors). Note that there are also ACM and IEEE Senior Members, which are a step below Fellows and can be self-applied.
+  
+  \item \textbf{\href{https://www.macfound.org/programs/awards/fellows/}{McArthur Fellowship}} Also known as the \emph{``Genius Grant''} and given to individuals who have shown exceptional creativity in their work and the promise for more in the future. 
+  
+  \item \textbf{\href{https://awards.acm.org/turing}{Turing Award}} The \emph{highest honor} in CS for lifetime achievements and contributions to the computing community. It comes with a \$1M prize and is often called the \emph{``Nobel Prize of Computing.''}.
+\end{itemize}
+
+\begin{commentbox}[Vu:]
+  CSRankings also highlights if an individual is an ACM Fellow or Turing Award winner.  Note that most Turing Award winners have very low publication counts as they are very senior and might not be active in research anymore. 
+\end{commentbox}
+\section{Industrial and Other Awards}
+
+
+CS faculty also aim to win awards from industry, which can be a sign of their impact on real-world applications and industry relevance. Some well-known ones include:
+
+\begin{itemize}
+  \item \textbf{Google Scholar Award} Once a year for a wide-range of research areas and is specifically for junior faculty. It is given as a gift (unrestricted funding).
+  \item \textbf{Amazon Research Award (ARA)} Typically open twice a year for a wide-range of research areas. It also comes as a gift of up to \$80K but is highly competitive as it is open to all researchers (not just junior faculty).
+  %    \item Sony \textbf{Faculty Innovation Award} Open to all researchers  in fields related to Sony's business (e.g., AI, robotics, computer vision, gaming).
+\end{itemize}
+
+There are also many others companies and organization but in specific areas relevant to their business, e.g., Sony, Samsung, Comcast, Ethereum Foundation. There are also awards given to a specific list of universities selected by a company or organization (e.g., faculty awards from Intel and Qualcomm, and Packard Fellowships). In general, while these awards are not open to all researchers and face less competition (e.g., compared to the ARA from Amazon which attracts a huge number of applicants from all over the world), they are still very competitive and a sign of the faculty's impact.
+
+
+%\paragraph{Students' Achievements} 
+%faculty proudly show achievements of their students, e.g., best paper awards, internships at top companies, and faculty positions at top universities.  Dissertation awards, GRFP , Undergrad students research awards, etc
+
+
+% \paragraph{Development of Highly Influential Research Tools}
+% Beyond papers, research tools that are widely used in academia or industry signify real-world impact. Some key indicators include:
+% \begin{itemize}
+%     \item \textbf{Tools used in major companies or open-source projects} – If a tool from their lab is integrated into industry workflows (e.g., compilers, verification tools, ML frameworks), it’s a sign of practical impact.
+%     \item \textbf{Winning research competitions} – Many fields have benchmark competitions (e.g., SAT solvers, automated theorem provers, AI competitions). Winning or being a top contender in these suggests that the lab is leading cutting-edge research.
+%     \item \textbf{Tools included in major software stacks} – If a tool is widely cited or included in standard toolchains (e.g., LLVM, Z3, TensorFlow), it indicates strong adoption.
+% \end{itemize}
+% Some departments list major research awards and influential software projects on their website. If an adviser’s name appears frequently in such lists, it’s a strong endorsement of their impact.
+
+% \paragraph{Research Publications in Top Venues}
+% While individual papers can be impressive, a more reliable measure of a researcher's productivity is the \textbf{sum of their publications in top-tier conferences and journals}.
+% \begin{itemize}
+%     \item Look for publications in the highest-impact conferences of the field (e.g., NeurIPS, ICML, CVPR for AI/ML; PLDI, OOPSLA, POPL for programming languages; FSE, ICSE for software engineering).
+%     \item Be cautious about citation counts—fields like AI/ML generate high citations quickly, even for unpublished papers. Instead, focus on where and how often they publish.
+%     \item A high volume of recent publications in top venues suggests an active and productive lab.
+% \end{itemize}
+
+% \paragraph{External Research Grants \& Funding}
+% The ability to secure funding is a sign of research productivity and lab stability. Some key points to consider:
+% \begin{itemize}
+%     \item \textbf{Total external funding secured} – NSF, DoD, DARPA, NIH, and industry grants indicate strong research backing.
+%     \item \textbf{Large collaborative grants} – Leading multi-institution projects suggests strong connections and influence.
+%     \item \textbf{Consistency of funding} – Advisers with multiple ongoing grants can better support students with travel, equipment, and stipends.
+% \end{itemize}
+% If an adviser has continuously secured funding over time, it suggests a stable research environment and long-term support for students.
+
+% \section{Leadership \& Service in the Research Community}
+% You will often see faculty members list their services in their research community, e.g., serving on program committees or editor boards, organizing and chairing sessions and workshops. These are not awards but are important indicators of a faculty member's standing in the field. Below lists some of the common service roles that faculty members often list on their CVs. Note the assumption that these are top conferences and journals in the field.
+
+
+% \begin{itemize}
+%   \item \textbf{Program Committee (PC) for Conferences} This typically means server as reviewers for a conference.  This is a common service role and is expected of researchers, as shows they are active in the community. While serving on PC is not a big deal (more like a minimum requirement for faculty), \emph{not being} on PC regularly is a red flag, especially for junior faculty.
+  
+%   \item \textbf{Editorial Board of Journals} This is also similar to PC for conference but for journals where you serve as a reviewer for journal papers. However, given that CS is a conference-driven field, this is not as popular as PC for conferences---it is common that a faculty member serves on PC for conferences but not on editorial boards of journals. 
+
+%   \item \textbf{General or Program Chair of major conferences} Program Chair is the chair of the program committee, i.e., the person who leads the committee and is responsible for selecting PC members and papers.  This is a very prestigious role and is often given to very well-known faculty.    General chair is the chair of the whole conference, i.e., the person who is responsible for organizing the whole conference. This is often given to well-known researcher or someone local to the conference location. Being a PC or general chair of a top conference is sometimes required for full professorship (\autoref{sec:faculty-types}). Many universities give course releases or summer salary to faculty who are chairs of major conferences.
+  
+% %  \item \textbf{Departmental leadership roles} While not always a direct research indicator, serving as Department Chair, Dean, or leading a research institute often signals strong influence.
+% \end{itemize}
+
+
+%\paragraph{Departmental Services} All faculty are expected to serve on departmental committees, e.g., adcmission committee (adcom!), faculty search committee, and promotion and tenure committee. These are requirement (and many faculty try to avoid them).  However, a few ldeadership roles do indicate strong influence in the department, e.g., serving as Department Chair, Chair or Director of a large program (e.g., PhD, MS, undergraduate program). 
+
+% \paragraph{What This Means for You as a PhD Student}
+% Evaluating these factors helps you understand:
+% \begin{itemize}
+%     \item \textbf{How well-known your potential adviser is in the field} – This impacts your career prospects after graduation.
+%     \item \textbf{How active their lab is} – A productive lab means more opportunities for collaboration, funding, and conference travel.
+%     \item \textbf{How stable the research funding is} – A well-funded lab ensures you have the resources you need to succeed.
+% \end{itemize}
+% While no single factor is definitive, a combination of these elements can give you a strong sense of whether an adviser and their lab are truly productive and well-respected in the field.
 
 
 
