@@ -2706,14 +2706,15 @@ There are also many others companies and organization but in specific areas rele
 \chapter{Writing in \LaTeX{}}\label{chap:writing-latex}
 \chapterinfo{Why you should write your academic documents in \LaTeX{}.}
 
-If you’re applying for a PhD program, the NSF GRFP, or the DoD NDSEG, you should strongly consider writing your statements in \LaTeX{} instead of MS Word. In CS and most other scientific and engineering fields, \LaTeX{} is the de facto standard for writing documents—papers, proposals, dissertations, and letters. Most faculty reviewers are accustomed to seeing formatting that \LaTeX{} produces, and many find Word’s default left-aligned, uneven layout distracting and amateurish.
+When you’re applying for PhD programs or fellowships (\autoref{sec:nsf-grfp}) such as the NSF GRFP or DOD NDSEG, you will need to write a personal statement, research statement, and CV.
+Instead of MS Word, you should strongly consider writing your statements (and even CV) in \LaTeX{} (and compiled to pdf's, which are then uploaded to the application system).  In CS and most other scientific and engineering fields, \LaTeX{} is the de facto standard for writing documents—papers, proposals, dissertations, and letters. Most faculty reviewers are accustomed to seeing formatting that \LaTeX{} produces, and many find Word's default left-aligned, uneven layout distracting.
 
-While reviewers will not penalize you for using Word, subtle irritations (there might also be bias against Word) can affect how they read your writing---after reading dozen of applications, these small things add up. Given that \LaTeX{} is free and easy to use (e.g., see \href{https://www.overleaf.com}{Overleaf}), there’s no excuse not to use it. This is a small, easily fixable detail that indicates that you understand and respect the academic and technical culture you’re trying to enter. Paying attention to these details can only help your application!
+While reviewers will not penalize you for using Word, subtle irritations can affect how they read your writing---after reading dozen of applications, these small things add up. Given that \LaTeX{} is free and easy to use (e.g., see \href{https://www.overleaf.com}{Overleaf}), it is worth the effort to learn. This is a small, easily fixable detail that indicates that you understand and respect the academic and technical culture you're trying to enter. Paying attention to these details can only help your application!
 
 \autoref{listing:latex} is a very basic example of a \LaTeX{} document with 11pt font and 1-inch margins. You can start with this and modify it. 
 
-\begin{lstlisting}[language=TeX,basicstyle=\small,label=listing:latex,caption={A simple \LaTeX{} document.}]
-    \documentclass{article}
+\begin{lstlisting}[language=TeX,basicstyle=\footnotesize,label=listing:latex,caption={A simple \LaTeX{} document.},keywordstyle=\color{blue},keywords={documentclass, usepackage, begin, end},commentstyle=\color{gray},numbers=left,numberstyle=\tiny\color{gray},stepnumber=1,numbersep=5pt]
+    \documentclass[11pt]{article}
     \usepackage[margin=1in]{geometry}
     \begin{document}
     ...     
@@ -2819,10 +2820,40 @@ Sometimes foreigners are surprised by how Americans do not talk about their pers
 
 \myepigraphsimpsons{``The whole damn system is wrong!''}
 
+
+Many students use US News or QS rankings to rank CS programs. However, these rankings are not very useful for CS PhD applicants because their metrics are usually not transparent, not specific to CS, and can be misleading. 
+For example, the Computing Research Association (CRA) has a \href{https://cra.org/ccc/2023/08/15/cra-2023-computing-research-rankings/}{Computing Research Rankings}---a highly respected organization in CS---issued a sharp critique of the U.S. News \& World Report's global rankings for CS depts, calling the methodology ``deeply flawed and misleading''. Among many issues, the CRA highlighted that the rankings rely heavily on journal publications indexed by the Web of Science, ignoring conference publications—despite conferences being the primary venue for publishing top-tier computer science research.   
+
+In short, while these rankings are often used by highschool or undergrad students (people who do not know about CS PhD programs) to select schools, they are often not used by PhD students (e.g., to find faculty jobs) or CS department (e.g., to tout their programs)---the people who actually know about CS PhD programs.
+
+\begin{commentbox}[CRA:]
+    Anyone with knowledge of CS research will see these rankings for what they are — nonsense — and ignore them. But others may be seriously misled. 
+\end{commentbox}
+
+\section{CSRankings.org}
+Instead of traditional school rankings, many PhD students and faculty use \href{https://www.csrankings.org}{CSRankings.org}, which is a ranking system based on faculty publications at top CS conferences.  The metrics are transparent and rankings are updated automatically (after the conference proceedings are indexed in DBLP).  Because the approach is entirely data-driven, it is not influenced by any subjective opinions or biases, and very difficult to manipulate. The number of Github pull requests by CS faculty (in fact, even non-CS faculty) to be included in the rankings is a good indicator of the impact of the rankings.  
+
+\paragraph{Geometric Mean} CSRankings uses the \emph{geometric mean} to summarize the performance of a department across disciplines. It is defined as:
+
+\[
+\text{averageCount} = \sqrt[N]{\prod_{i=1}^N (\text{adjustedCounts}_i + 1)}
+\]
+where $N$ is the number of fields (e.g., OS, Theory, ML, PL), and $\text{adjustedCounts}_i$ is the number of papers published by faculty in a field $i$. More details and justficiation for this metric can be found in the \href{https://csrankings.org/faq.html}{CSRankings FAQ}.
+
+One thing to note is that geometric prefers departments with a balanced number of publications across all areas. This means that a program with 10 papers in each of the 10 areas will be ranked higher than a department with 100 papers in one area and 0 in the others. 
+However, if you're just looking for a department with a strong program in a specific area (e.g., OS, Theory,  ML, PL), you can filter the rankings by that area. 
+
+
+\paragraph{Selecting Faculty} Another useful feature of CSRankings is that you can filter faculty by their research areas (e.g., to \cancel{stalk}{do research on} them!). You can also see how an individual faculty member's publication counts compare to others in their area. This is useful for finding faculty who are active in your area of interest and gauge their productivity.
+
+\section{Top CS Programs in the US}
+\autoref{tab:ranking} lists the top 50 CS programs from CSRankings. 
+
+
 \begin{table}
   \centering
   \small
-  \caption{The top 50 CS programs in the US from \href{https://www.csrankings.org}{CSRankings.org}, a ranking system  based on faculty publications at top CS conferences. (\href{https://csrankings.org}{CSRankings}, Jan. 2025). \red{$^*$} indicates that the university has \href{https://github.com/dynaroars/dynaroars.github.io/wiki/Viet-CS-Profs-US}{Vietnamese prof.} that can advise CS PhD students.}\label{tab:ranking}
+  \caption{The top 50 CS programs in the US (\href{https://www.csrankings.org}{CSRankings.org}, Jan. 2025)). \red{$^*$} indicates that the university has \href{https://github.com/dynaroars/dynaroars.github.io/wiki/Viet-CS-Profs-US}{Vietnamese prof.} that can advise CS PhD students.}\label{tab:ranking}
   \begin{tabular}{rl|rl}
     \toprule
     1 & Carnegie Mellon & 26 & Northwestern University\\
