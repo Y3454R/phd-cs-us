@@ -319,29 +319,42 @@
 \newpage
 \pagestyle{empty}
 
+
+
+The goal of this book is to help students---especially those from less privileged backgrounds and do not have insider guidance--to demystify the CS PhD admissions process in the US. That’s why the book will \emph{always be free} and available online at \mybookaddress{}.
+
+If you find it helpful, you can:
+(i) send me a \emph{“Thank you”} note and let me know how it helped you (those messages make my day!),
+(ii) give it a star on its \href{\mybookgithub}{GitHub repo} (because who doesn’t love approval from strangers?),
+(iii) share it with friends (be that hero who helps others get into a PhD program!), or
+(iv) buy the Kindle or paperback version on Amazon.
+That last option is so I can brag that I have a book published and available on Amazon---something that few CS profs. can say. 
+
+
+
+\vfill
+
+
 \begin{tcolorbox}[enhanced]
     \small
     This \href{\mybookgithub}{work} © 2025 by \me{} is licensed under CC BY-NC-ND 4.0. To view a copy of this license, visit \url{https://creativecommons.org/licenses/by-nc-nd/4.0/}
 \end{tcolorbox}
 
 
-
-
-
 \chapter*{Preface}
-Having been involved in PhD admission committees for many years, I've observed that \textbf{international students}, especially those in smaller countries or less well-known universities, often lack a clear understanding of
-the Computer Science PhD admission process at US universities. This confusion not only
-discourages students from applying but also creates the perception that getting admitted to a CS PhD program in the US is difficult compared to other countries.
+Having been involved in PhD admission committees for many years, I've observed that students, especially those in smaller countries, less well-known universities, and 1st generation PhD students, often lack a clear understanding of the Computer Science PhD admission process at US universities. This confusion not only discourages students from applying but also creates the perception that getting admitted to a CS PhD program in the US is difficult compared to other countries.
 
 % though \emph{very} top schools could be very selective, e.g., see the \href{https://da-data.blogspot.com/2015/03/reflecting-on-cs-graduate-admissions.html}{admission process} at CMU
 So I want to share some details about the admission process and advice for those who are interested in applying for a \textbf{PhD in Computer Science in the US}.
 Originally, this book was written for international students, but has been expanded to include information for \textbf{US domestic students} (\autoref{chap:domestic-students}).
-Moreover, while this primarily aims at students interested in CS, it might be relevant to students from various \acrshort{STEM} (Science, Technologies, Engineering, and Mathematics) disciplines.
+Moreover, while this book primarily aims at students interested in CS, it might be relevant to students from various \acrshort{STEM} (Science, Technologies, Engineering, and Mathematics) disciplines.
 Furthermore, although many examples are specifics for schools that I and other contributors of this book know about, the information should be generalizable to other good \Gls{r1} institutions in the US.
 
 This information can also help \textbf{US faculty and admission committee} gain a better understanding of international students and their cultural differences (\autoref{chap:cultural}).  By recognizing and leveraging these differences, CS programs in the US can attract larger and more competitive application pools from international students.
 
 I wish you the best of luck.
+
+
 
 \newpage
 \renewcommand{\contentsname}{Contents and Summary}
@@ -2833,18 +2846,17 @@ In short, while these rankings are often used by highschool or undergrad student
 \section{CSRankings.org}
 Instead of traditional school rankings, many PhD students and faculty use \href{https://www.csrankings.org}{CSRankings.org}, which is a ranking system based on faculty publications at top CS conferences.  The metrics are transparent and rankings are updated automatically (after the conference proceedings are indexed in DBLP).  Because the approach is entirely data-driven, it is not influenced by any subjective opinions or biases, and very difficult to manipulate. The number of Github pull requests by CS faculty (in fact, even non-CS faculty) to be included in the rankings is a good indicator of the impact of the rankings.  
 
-\paragraph{Geometric Mean} CSRankings uses the \emph{geometric mean} to summarize the performance of a department across disciplines. It is defined as:
+\paragraph{Geometric Mean} CSRankings uses the \emph{geometric mean} to summarize the performance of a department across multiple disciplines. The score for each department is calculated as follows:
 
 \[
 \text{averageCount} = \sqrt[N]{\prod_{i=1}^N (\text{adjustedCounts}_i + 1)}
 \]
-where $N$ is the number of fields (e.g., OS, Theory, ML, PL), and $\text{adjustedCounts}_i$ is the number of papers published by faculty in a field $i$. More details and justficiation for this metric can be found in the \href{https://csrankings.org/faq.html}{CSRankings FAQ}.
-
-One thing to note is that geometric prefers departments with a balanced number of publications across all areas. This means that a program with 10 papers in each of the 10 areas will be ranked higher than a department with 100 papers in one area and 0 in the others. 
-However, if you're just looking for a department with a strong program in a specific area (e.g., OS, Theory,  ML, PL), you can filter the rankings by that area. 
+where $N$ is the number of fields (e.g., OS, Theory, ML, PL) selected (by default all fields are selected), and \texttt{adjustedCounts$_i$} is the number of papers published by faculty of that department in a field $i$. For example, for simplicity assume each paper is worth 1 count, then a department that has 10 papers in each of the 10 areas has an \texttt{averageCount} of $\sqrt[10]{11^{10}}=11$. If a department has 100 papers in one area $X$ and 0 in the others, then the \texttt{averageCount} across all areas is $\sqrt[10]{101 \cdot 1^9} = 1.59$. However, the user of CSRankings can select the number of areas to be included in the ranking. For example, if the student is only interested in area $X$, then the \texttt{averageCount} will be $\sqrt[1]{101} = 101$.
+More details and justficiation for this metric can be found in the \href{https://csrankings.org/faq.html}{CSRankings FAQ}.
 
 
-\paragraph{Selecting Faculty} Another useful feature of CSRankings is that you can filter faculty by their research areas (e.g., to \cancel{stalk}{do research on} them!). You can also see how an individual faculty member's publication counts compare to others in their area. This is useful for finding faculty who are active in your area of interest and gauge their productivity.
+
+\paragraph{Selecting Faculty} Another useful feature of CSRankings is that you can filter faculty by research areas to find who are active in your area of interest. For example, if you are interested in ML, you can select ML and see departments and their faculty who are active in ML. You can also see the number of papers published by each faculty in that area,  and their publication counts in recent years (e.g., 2020, 2021, 2022). This is useful for finding faculty who are active in your area of interest and gauge their productivity.
 
 \section{Top CS Programs in the US}
 \autoref{tab:ranking} lists the top 50 CS programs from CSRankings. 
