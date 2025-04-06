@@ -2,7 +2,7 @@
 
 
 ##  1. <a name='PhDDemystify:AGuidelineforProspectivePhDStudentsinCS'></a>PhD Demystify: A book for Prospective PhD Students in CS
-This **handbook** helps demystify the PhD admission process in Computer Science in US universities. It explains how PhD admission works from an insider perspective.  It aims to encourage international (and domestic) students from smaller countries and universities to apply to CS PhD programs in the US.
+This handbook helps students understand the PhD admission process in Computer Science in US universities. It explains how PhD admission works from an insider perspective.  It aims to encourage international and domestic students from smaller countries and universities to apply to CS PhD programs in the US.
 
 - PDF: [https://dynaroars.github.io/phd-cs-us/demystify.pdf](https://dynaroars.github.io/phd-cs-us/demystify.pdf)
 - For discussion and questions, open a new Github issue [https://github.com/dynaroars/phd-cs-us/issues](https://github.com/dynaroars/phd-cs-us/issues)
