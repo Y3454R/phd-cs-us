@@ -1,5 +1,5 @@
 \documentclass[oneside,11pt,dvipsnames]{book}
-
+\usepackage{pagecolor}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{soul}
@@ -29,7 +29,7 @@
 
 \usepackage{tikz}
 \usetikzlibrary{calc}
-\usepackage{xcolor}
+\usepackage[dvipsnames]{xcolor}
 %\usepackage{anyfontsize}
 %\usepackage{sectsty}
 \usepackage[acronym]{glossaries}
@@ -302,23 +302,24 @@
 
 
 \begin{document}
+
 \frontmatter
+%\newpagecolor{SpringGreen}
 \begin{titlepage}
-    \centering      
+    \centering
     {\Huge\bfseries\baselineskip1.3em\mytitle\par}\bigskip\bigskip
     {\large\bfseries\mysubtitle{}}\bigskip\par
     \vfill
-    \includegraphics[width=0.4\textwidth]{files/angelfish2.png}
+    \includegraphics[width=0.5\textwidth]{files/angelfish5.png}
     \vfill
-    {\Large\bfseries\me{}}\medskip\par
+    {\Large\bfseries\me{}, PhD}\medskip\par
     {\institute{}}%\medskip\par    
     %{\small\today{}}\medskip\par
     %\mybookaddress{} (\href{\mybookgithub}{Github})
 \end{titlepage}
-
+%\restorepagecolor
 \newpage
 \pagestyle{empty}
-
 
 
 The goal of this book is to help students---especially those from less privileged backgrounds and do not have insider guidance---to demystify the CS PhD admissions process in the US. That's why the book will \emph{always be free} and available online at \mybookaddress{}.
@@ -327,7 +328,7 @@ If you find the book helpful, you can:
 (i) \href{mailto:tvn@gmail.com}{send me} a \emph{“Thank you”} note and let me know how it helped you (those messages make my day!),
 (ii) give it a star on its \href{\mybookgithub}{GitHub repo},
 (iii) share it with friends, or
-(iv) buy the book on \href{https://www.amazon.com/dp/B0F41HP6Y2}{Amazon}. That last option is so I can brag that I have a book published and available on Amazon---something that few CS profs. can claim. The price is \$7.77---Unix 777 permission and the open nature of the book.
+(iv) buy the book on \href{https://www.amazon.com/dp/B0F41HP6Y2}{Amazon}. That last option is so I can brag that I have a book published and available on Amazon (priced at \$7.77---Unix 777 permission and the open nature of the book).
 
 
 
@@ -989,21 +990,24 @@ Having published papers, especially at top venues, is a sign that you have been 
 
 Publications are \emph{never required} for application, however given the competitiveness of CS admission, they can significantly strengthen your application and \emph{are becoming the norm}. Applicants admitted to top schools, especially in popular \gls{fields} such as ML and NLP, often have multiple first-authored papers at top places. Fig.~\ref{fig:wu} shows examples of applicants to Stanford CS PhD.
 
+\paragraph{I am not the first author} Being the first author is good because it indicates you own the work. However, it's \emph{perfectly OK to be second or third or even last}.  Adcom members know it is difficult to publish a good paper, and so being a co-author is still a good sign about your research experience. In any case, especially in the case when you're not the first author, you should explain the work and your contribution.  Better yet, have your LoR writers (\autoref{sec:help-your-LOR-writers}) talk about your work and contribution in their letters.
 
 
-\paragraph{What if I don't have any publications} It is understandable that many students do not have the opportunity to publish papers. Thus, other writings, even those under submissions or even rejected, would still help. 
+\subsection{What if I don't have any publications} It is understandable that many students do not have the opportunity to publish papers. Thus, other writings, even those under submissions or even rejected, would still help. 
 Be sure to upload your these with your application (\autoref{sec:writing-sample}) and mention them in your SOP (\autoref{chap:sop}). Adcom members can quickly skim over the paper to determine its quality (\autoref{sec:ievaluate}).
 
 Note that local conferences and non-English journals or conferences do
 not carry as much weight since their quality is often unknown. However, if you have published in such places, you should still upload them, mention them in your statement, and explain why they are good.
 
+\begin{commentbox}[Craig:]
+    Mason and many other universities allow you to upload your published papers and other writing samples (\autoref{sec:writing-sample}). In many cases, even if the papers were not published at top places, we can still determine their quality by simply skimming over the paper.
+  \end{commentbox}
+  
+
 % In CS, conferences are important and top conferences are prestigious. You can find top CS conferences at places such as \href{https://csrankings.org}{CSRankings}, which ranks CS programs based on how their faculty publish at top \emph{conferences} (see more in \autoref{chap:rankings}).
 
-\paragraph{I am not the first author} Being the first author is good because it indicates you own the work. However, it's \emph{perfectly OK to be second or third or even last}.  Adcom members know it is difficult to publish a good paper, and so being a co-author is still a good sign about your research experience. In any case, especially in the case when you're not the first author, you should explain the work and your contribution.  Better yet, have your LoR writers (\autoref{sec:help-your-LOR-writers}) talk about your work and contribution in their letters.
 
-\begin{commentbox}[Craig:]
-  Mason and many other universities allow you to upload your published papers and other writing samples (\autoref{sec:writing-sample}). In many cases, even if the papers were not published at top places, we can still determine their quality by simply skimming over the paper.
-\end{commentbox}
+
 
 
 
@@ -1908,12 +1912,12 @@ Professors with these titles are often tenure-line faculty, and therefore can ad
 \end{center}
 
 Now that you know a bit about tenured and tenure-track faculty (\autoref{sec:faculty-types}).  Which one should you choose as your adviser? 
-Either can be a good adviser, but they have different strengths and weaknesses.
+Either can be a good adviser, but they have different strengths and weaknesses. The below gives some ideas, however the best indicator of their research productivity and impact is their publication and recognition record (\autoref{chap:research-achievements}).
 
 
-Tenure-track faculty, e.g., assistant professors, are likely young and active in research (they have to, to get tenure). Thus, they will devote more time to work with you and push you to do research and publish. However, you might not be too independent when you graduate because they have been too hands-on with you.  Also, they may not have as much experience in managing students and may not have as much funding (yet).
+Tenure-track faculty---like assistant professors--are typically young and active in research (they have to, to get tenure). Thus, they will devote more time to work with you and push you to do research and publish. However, you might not be too independent when you graduate because they have been too hands-on with you.  Also, they may not have as much experience in managing students and may not have as much funding (yet).
 
-Tenured faculty, e.g., associate and full profs., are likely older, more well-known, and have more experience in managing students.  However, they might not push you as hard and expect you to figure things out yourself, i.e., you need to be independent.  Some tenured faculty are also no longer active in research and are more involved with administrative responsibilities or with their startup companies (this means they will likely not take new students).
+Tenured faculty---associate and full profs---are likely older, more well-known, and have more experience in managing students.  However, they might not push you as hard and expect you to figure things out yourself, i.e., you need to be independent.  Some tenured faculty are also no longer active in research and are more involved with administrative responsibilities or with their startup companies (this means they will likely not take new students).
 
 % \subsection{Strong Faculty vs High-ranked School}
 % \begin{commentbox}[Thanh:]
