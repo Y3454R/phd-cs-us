@@ -305,7 +305,12 @@
 
 \frontmatter
 %\newpagecolor{SpringGreen}
+
 \begin{titlepage}
+    \begin{tikzpicture}[remember picture, overlay]
+        \draw[OliveGreen, line width = 3pt] ($(current page.north west) + (1in,-1in)$) rectangle ($(current page.south east) + (-1in,1in)$);
+      \end{tikzpicture}
+
     \centering
     {\Huge\bfseries\baselineskip1.3em\mytitle\par}\bigskip\bigskip
     {\large\bfseries\mysubtitle{}}\bigskip\par
@@ -321,7 +326,6 @@
 \newpage
 \pagestyle{empty}
 
-
 The goal of this book is to help students---especially those from less privileged backgrounds and do not have insider guidance---to demystify the CS PhD admissions process in the US. That's why the book will \emph{always be free} and available online at \mybookaddress{}.
 
 If you find the book helpful, you can:
@@ -331,9 +335,11 @@ If you find the book helpful, you can:
 (iv) buy the book on \href{https://www.amazon.com/dp/B0F41HP6Y2}{Amazon}. That last option is so I can brag that I have a book published and available on Amazon (priced at \$7.77---Unix 777 permission and the open nature of the book).
 
 
+The angelfish on the cover, wearing a PhD cap, symbolizes the spirit of this book and its message. In an aquarium, the angelfish fish is considered the centerpiece of the tank and stands out from the rest---an important requirement for a successful CS PhD applicant in a crowded and competitive pool of prospective students.
+
+
 
 \vfill
-
 
 \begin{tcolorbox}[enhanced]
     \small
@@ -341,7 +347,14 @@ If you find the book helpful, you can:
 \end{tcolorbox}
 
 
-\chapter*{Preface}
+
+
+\renewcommand{\contentsname}{Contents and Summary}
+\tableofcontents
+
+
+\chapter{Preface}
+
 Having been involved in PhD admission committees for many years, I've observed that students, especially those in smaller countries, less well-known universities, and 1st generation PhD students, often lack a clear understanding of the Computer Science PhD admission process at US universities. This confusion not only discourages students from applying but also creates the perception that getting admitted to a CS PhD program in the US is difficult compared to other countries.
 
 % though \emph{very} top schools could be very selective, e.g., see the \href{https://da-data.blogspot.com/2015/03/reflecting-on-cs-graduate-admissions.html}{admission process} at CMU
@@ -354,12 +367,8 @@ This information can also help \textbf{US faculty and admission committee} gain 
 
 I wish you the best of luck.
 
-\newpage
-\renewcommand{\contentsname}{Contents and Summary}
-\tableofcontents
 
 \mainmatter
-
 \part{Introduction}\label{part:intro}
 
 \chapter{Should You Apply?}\label{chap:should}
