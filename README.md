@@ -5,7 +5,7 @@
 This handbook helps students understand the PhD admission process in Computer Science in US universities. It explains how PhD admission works from an insider perspective.  It aims to encourage international and domestic students from smaller countries and universities to apply to CS PhD programs in the US.
 
 - PDF: [https://dynaroars.github.io/phd-cs-us/demystify.pdf](https://dynaroars.github.io/phd-cs-us/demystify.pdf)
-- Amazon: [Kindle](https://www.amazon.com/Demystifying-PhD-Admissions-Computer-Science-ebook/dp/B0F41HP6Y2?crid=1M7WL1QE9O782&dib=eyJ2IjoiMSJ9.vOhLrIgP5Z5r3xHwOVYNGWJfa72dDv4JjKKO7iZ8Vag.CX2deCdCwpW6CKYMleMAzKVe2BAhYdu-1l2wF8BgivE&dib_tag=se&keywords=demystifying+phd+admission&qid=1744389146&sprefix=demytisfying+phd+admission%2Caps%2C78&sr=8-1)
+- Amazon: [Kindle](https://www.amazon.com/dp/B0F41HP6Y2)
 - For discussion and questions, open a new Github issue [https://github.com/dynaroars/phd-cs-us/issues](https://github.com/dynaroars/phd-cs-us/issues)
 
 
