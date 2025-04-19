@@ -1,0 +1,54 @@
+name: Build demystify.pdf
+
+on:
+  push:
+    paths:
+      - 'demystify.tex'
+      - '**/*.tex'
+      - '**/*.bib'
+      - '**/*.sty'
+      - '**/*.cls'
+      - '**/*.png'
+      - '**/*.jpg'
+
+permissions:
+  contents: write  # Needed for committing PDF back to repo
+
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 📥 Checkout repository
+      uses: actions/checkout@v3
+
+    - name: 🧰 Install LaTeX packages
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y \
+          texlive-latex-base \
+          texlive-latex-recommended \
+          texlive-latex-extra \
+          texlive-fonts-recommended \
+          texlive-fonts-extra \
+          texlive-pictures \
+          texlive-bibtex-extra \
+          texlive-fontawesome \
+          latexmk \
+          biber \
+          makeglossaries
+
+    - name: 🛠️ Compile demystify.tex
+      run: |
+        latexmk -pdf -interaction=nonstopmode demystify.tex
+
+    - name: 🚀 Commit PDF to main branch
+      run: |
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
+        git add demystify.pdf
+        git commit -m "Auto-compile demystify.pdf on push" || echo "No changes to commit"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
