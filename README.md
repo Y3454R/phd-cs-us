@@ -4,11 +4,11 @@
 ##  1. <a name='PhDDemystify:AGuidelineforProspectivePhDStudentsinCS'></a>PhD Demystify: A book for Prospective PhD Students in CS
 
 
-<div style="text-align: center;">
+<p align="center">
   <a href="https://www.amazon.com/dp/your-book-id" title="CS PhD Demystifying">
-    <img src="https://m.media-amazon.com/images/I/61z7MF4vbiL._SL1500_.jpg" alt="CS PhD Demystify book" width="200"/>
+    <img src="https://m.media-amazon.com/images/I/61z7MF4vbiL._SL1500_.jpg" alt="CS PhD Demystify book" width="300"/>
   </a>
-</div>
+</p>
 
 This handbook helps students understand the PhD admission process in Computer Science in US universities. It explains how PhD admission works from an insider perspective.  It aims to encourage international and domestic students from smaller countries and universities to apply to CS PhD programs in the US.
 
