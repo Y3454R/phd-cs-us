@@ -5,7 +5,7 @@
 
 
 <p align="center">
-  <a href="https://www.amazon.com/dp/your-book-id" title="CS PhD Demystifying">
+  <a href="(https://www.amazon.com/dp/B0F41HP6Y2" title="CS PhD Demystifying">
     <img src="https://m.media-amazon.com/images/I/61z7MF4vbiL._SL1500_.jpg" alt="CS PhD Demystify book" width="300"/>
   </a>
 </p>
