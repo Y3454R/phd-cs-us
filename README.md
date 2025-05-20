@@ -115,6 +115,8 @@ This handbook helps students understand the PhD admission process in Computer Sc
 
 1. [NSF Fellowship by Alex Lang](https://www.alexhunterlang.com/nsf-fellowship)
 
+1. [NDSEG Fellowship Experience (Youtube)](https://www.youtube.com/watch?v=wM7ifVtxRqk)
+
 1. [Tips by Tara Safavi](https://tsafavi.github.io/nsf-grfp.html)
 
 1. Public examples: [[Extensive NSF collection by Alex Lang]](https://docs.google.com/spreadsheets/d/1xoezGhbtcpg3BvNdag2F5dTQM-Xl2EELUgAfG1eUg0s/edit#gid=0), [[Victoria Dean (NSF personal)]](https://vdean.github.io/resources/NSF_Personal_Statement_Victoria_Dean.pdf), [[Victoria Dean (NSF research)]](https://vdean.github.io/resources/NSF_Research_Statement_Victoria_Dean.pdf), [[Tara Safavi (NSF)]](https://tsafavi.github.io/assets/pdf/nsf-personal.pdf), [[Paul Liang (Facebook)]](http://www.cs.cmu.edu/~pliang/research_statement_paul_liang_2020.pdf), [[Devendra Chaplot (Facebook)]](https://devendrachaplot.github.io/misc/DevendraChaplot_Statement2019.pdf), [[Sai Rallabandi (Facebook)]](http://www.cs.cmu.edu/~srallaba/pdfs/fellowships_mothersheet.pdf)
