@@ -162,7 +162,7 @@
 \newcommand{\mytitle}{Demystifying PhD Admissions in Computer Science}
 \newcommand{\mysubtitle}{A Handbook for Navigating CS PhD Admissions in the U.S.}
 \newcommand{\mybookaddress}{\href{https://roars.dev/phd-cs-us/demystify.pdf}{https://roars.dev/phd-cs-us/demystify.pdf}}
-\newcommand{\mybookgithub}{https://github.com/dynaroars/phd-cs-us}
+\newcommand{\mybookgithub}{https://code.roars.dev/phd-cs-us}
 \newcommand{\me}{ThanhVu Nguyen}
 \newcommand{\institute}{George Mason University}
 
@@ -592,7 +592,7 @@ My goal is thus to level the playing field by providing info that is not readily
 
 \paragraph{Why this book?}
 This book aims to be a comprehensive guide to the CS PhD admission process in the US. It is based on my and other contributors' experience in the CS depart. I also try to explain \emph{the reasons behind the admission process}.
-While there are numerous \href{https://github.com/dynaroars/phd-cs-us}{resources online} that tell you \emph{``what''} to do, few explain the \emph{``why''}---why LoRs matter so much, why you should not draft your own LoR, why you should contact professors, etc. Understanding the reason and mindset of the admission committee and profs. can help you prepare better.
+While there are numerous \href{https://code.roars.dev/phd-cs-us}{resources online} that tell you \emph{``what''} to do, few explain the \emph{``why''}---why LoRs matter so much, why you should not draft your own LoR, why you should contact professors, etc. Understanding the reason and mindset of the admission committee and profs. can help you prepare better.
 
 This book is a also \emph{personal project} (\autoref{chap:ack}) that I continuously update and refine, especially during the admission season. I also work on it when I procrastinate from research or other tasks---it's my way of telling myself that I am still productive!
 Writing is a relaxing process for me, and I enjoy experimenting with new things in \LaTeX{} (\autoref{chap:writing-latex}). Because of these reasons, this book is thus an ever-evolving project!
@@ -2519,7 +2519,10 @@ This is less common but several places offer virtual internships and research pr
 Having an external and major fellowship can significantly relieve the financial burden of your PhD and improve your chances of getting into a good PhD program (\autoref{sec:fellowships}). 
 Among the most wel-known and prestigious fellowships for CS PhD students who are US citizens or permanent residents (\autoref{chap:domestic-students}) are the National Science Foundation Graduate Research Fellowship Program (NSF GRFP) and the Department of Defense National Defense Science and Engineering Graduate Fellowship (DoD NDSEG). These fellowships provide multiple years of full financial support, including tuition, stipend, and health insurance.
 
-The \href{https://www.nsfgrfp.org/}{GRFP} and \href{https://www.ndsegfellowships.org/}{NDSEG} websites have detailed information on the application process and eligibility requirements. This section focuses on how your application is evaluated and tips on improving it. Note that while these are specific GRFP and NDSEG, the given advice should be applicable to other major fellowships--including those for international students.
+The \href{https://www.nsfgrfp.org/}{GRFP} and \href{https://www.ndsegfellowships.org/}{NDSEG} websites have detailed information on the application process and eligibility requirements. The \href{https://www.nsf.gov/funding/information/faq-frequently-asked-questions-faqs-graduate-research-fellowship}{NSF GRFP FAQ} has many useful tips and resources. 
+You can also find articles written by previous winners offering tips on writing a strong application (see the \href{https://code.roars.dev/phd-cs-us}{link} section on this book's website). However, keep in mind that while these writers were successful in securing the fellowship, they often have no insight into how their applications were actually evaluated or what the reviewers want to see.
+
+This chapter focuses on how your application is evaluated, what reviewers look for, and tips on improving your application. Note that while these are specific GRFP and NDSEG, the given advice should be applicable to other major fellowships---including those for international students.
 
 
 \section{NSF GRFP}\label{sec:nsf-grfp}
@@ -2529,9 +2532,10 @@ The NSF GRFP is a prestigious fellowship for US citizens, nationals, and permane
 \subsection{How Applications are Evaluated}
 
 \begin{itemize}
-\item Each applicant is assigned to \emph{about 3 reviewers} who have expertise in the applicant's research topics. This means reviewers are quite knowledgeable in your field and your work, your LoR writers and their work, and thus can evaluate your application quite in depth. This is different from PhD applications where adcom reviewers (\autoref{sec:adcom}) might not be in your field.
+\item Each applicant is assigned to \emph{about 3 reviewers} who have expertise in the applicant's research field (e.g., if your topic is in PL, your reviewers will likely be in PL). This means reviewers are quite knowledgeable in your field and your work, your LoR writers and their work, and thus can evaluate your application quite in depth. This is different from PhD applications where adcom reviewers (\autoref{sec:adcom}) might not be in your field.
 
-Note that if sometimes an original reviwer is no longer available then someone who is not in the field might review your application.  Thus you want to make your statements accessible to a general CS audience.
+\item Reviewers might not be research-focused faculty members (e.g., tenure-line), they can be teaching faculty (\autoref{sec:faculty-types}). In fact, I believe many reviewers are teaching faculty. So this means they may not be familiar to the latest related work or trend in your field. So make your research plan easy to understand and well-motivated (see \autoref{sec:grfp-pitfalls}).
+
 
 \item Reviewers typically try to compare applicants \emph{within their cohort level}.  This means that we do not compare an undergrad, who is still applying to grad school, to a 2nd year PhD student who already has an adviser and published multiple papers. This ensures that each applicant is evaluated fairly based on their level.
 
@@ -2560,7 +2564,7 @@ These are common pitfalls that many applicants make in their GRFP applications a
 \begin{itemize}
 
 \item \textbf{Too Technical or Narrow.} Remember that you're writing to a general audience in CS, not experts in your field.  While NSF tries to match reviewers with your field, CS is simply too broad and you might get a reviewer in your field but not in your specific area or familiar with the research topics you're working on (see meanings of fields, areas, and topics in~\autoref{sec:fields-and-areas}).  For example, a person working in PL might not be familiar of all its areas, e.g., program synthesis, verification, or type inference.  
-So avoid technical jargon and explain things in simple terms. If the reviewer cannot understand your research plan, they will likely give you a low score.
+So avoid technical jargon, explain things in simple terms, and motivate your work well. If the reviewer cannot understand your research plan, they will likely give you a low score.
 
 
 \item \textbf{Preliminary Work.} Your research plan should have some preliminary work to convince reviewers that you have thought about the problem and have some initial results.  It does not have to a lot, e.g., you don't need published results or an implementation, a small experiment done by hand on some small examples would suffice.  Moreover, it should be concrete and convincing, e.g., \emph{``When being applied to the program in Fig 1. of the paper published PLDI'19 that approach X failed, my idea worked and was able to ...''}.  This will set you apart from others who just have a plan but no results.
@@ -2573,6 +2577,7 @@ So avoid technical jargon and explain things in simple terms. If the reviewer ca
 \item \textbf{Overexaggeration Lors.} Many GRFP applicants have ref. letters from professors that are very good at writing LoRs. However, they often use flowery language and overrate their students. Reviewers can sense this overexaggeration and might not trust the LoRs. This is similar to overclaiming research conributions when writing papers---so ask your LoR writers to tone down their enthusiam and be specific with concrete examples to demonstrate why you're \emph{``the best''}. 
 
 
+
 \end{itemize}
 
 
@@ -2581,7 +2586,7 @@ So avoid technical jargon and explain things in simple terms. If the reviewer ca
 The NDSEG is another prestigious fellowship supporting \emph{U.S. citizens} pursuing advanced degrees in STEM fields \emph{critical to national defense} (such as CS). NDSEG has several differences from NSF GRFP, e.g., it  focuses more on application to DoD and redacts more information about you and your application materials. 
 \subsection{Evaluation}
 
-\paragraph{Redacted info.} Unlike the NSF GRFP, reviewers only see \emph{redacted versions} of your submitted materials (applicants are asked to provide full and redacted versions of your research plan, CV, and other materials). Thus, we do not know what schools your went to, where you did your internships, your publications or research experience. We also \emph{do not} see your LoRs---we do not know who wrote them or what they wrote. 
+\paragraph{Redacted info.} Unlike the NSF GRFP, reviewers only see \emph{redacted versions} of your submitted materials (applicants are asked to provide full and redacted versions of your research plan, CV, and other materials). Thus, we do not know what schools your went to, where you did your internships, your publications or research experience. We also \emph{do not} see your LoRs, i.e., we do not know who wrote them or what they wrote! 
 
 Reviewers mainly get to know you and evaluate your application by reading your research plan and personal essays. This is for \emph{fairness and avoiding bias} based on the school you went to, places you published at, your LoR writers, etc.  Nonethless, I felt I am missing too much information. However, it could be that external reviewers like myself help with the first cut based on the redacted materials, and then there are internal reviewers who makes the final decision based on the full materials. 
 
@@ -2589,7 +2594,7 @@ Reviewers mainly get to know you and evaluate your application by reading your r
 
 \begin{commentbox}[Vu:]
 I find a bit difficult to evaluate NDSEG applications because I do not have the full picture.  For example, a student mentioned that they have published in the topic they proposed but redacted all information about the publication, so I have no idea where they published, what the paper is about, etc.  
-It is also difficult to evaluate the academic background of the student, e.g., some student just started grad school and so their transcript is essentially blank. It is also annoying to see CVs with so many blanked out information. They might as well should just submit a blank CV.
+It is also difficult to evaluate the academic background of the student, e.g., some student just started grad school and so their transcript is essentially blank. It is also annoying to see CVs with so many blanked out information (they might as well should just submit a blank CV).
 \\
 
 In the beginning I find it surprising that I don't get to see the LoRs, but I understand the reasoning behind it and gradually think it is a good idea. As mentioned above, LoR writers for NSF GRFP (\autoref{sec:grfp-pitfalls}), especially those from top schools, often overrate their students and thus can bias the evaluation. So I don't find I am missing much by not seeing the LoRs.
@@ -2630,6 +2635,14 @@ These are some common pitfalls I see in NDSEG applications and tips to avoid the
 
   \item \textbf{Ask your LoR writers and adviser to look at your writing/essays} (this is very important so I keep repeating it).  You are new to the field and research writing, and your ideas might not be accurate or have already been explored. It's better that they tell you now than for you to find out later from reviewers.
 \end{itemize}
+
+
+\section{My experience as a reviewer}
+I find the GRFP more familiar compared to NDSEG, which redacts most applicant information as mentioned above. I also spent more time reviewing GRFP applications---mainly because NDSEG doesn't provide much info to work with.
+
+In general, I find GRFP applicants have stronger \emph{research plans}. GRFP applicants often already have good research experience, with many  have top tier publications. They also tend to come from well-known institutions with ``fancy'' LoRs. In contrast, NDSEG applicants come from a broader range of schools and backgrounds. Interestingly, I often find the \emph{personal statements} in NDSEG applications more appealling, largely due to their personal stories and varied experiences.
+
+A quick note on compensation: GRFP reviewers---like other NSF panelists---receive a modest honorarium (\$200 total; I probably spent several full days reviewing over 10 applications). NDSEG reviewers aren't officially paid, though I did receive some compensation (e.g., \$50 Amercian Express gift card). So, not much---but I genuinely enjoy the process and believe it's important to give back to the community (and I would do it for free if I had to).
 
 
 \chapter{Faculty Research Activities and Achievements}\label{chap:research-achievements}
@@ -2843,7 +2856,7 @@ While these awards are not open to all researchers and face less competition (e.
 
 
 When you're applying for PhD programs or fellowships (\autoref{sec:nsf-grfp}) such as the NSF GRFP or DOD NDSEG, you will need to write a personal statement, research statement, and CV.
-Instead of MS Word, you should strongly consider writing your statements (and even CV) in \LaTeX{} (and compiled to pdf's, which are then uploaded to the application system).  In CS and many other STEM fields, \LaTeX{} is the de facto standard for writing documents—papers, proposals, dissertations, and letters. \href{https://github.com/dynaroars/phd-cs-us}{This book}, for example, is written in \LaTeX{}.
+Instead of MS Word, you should strongly consider writing your statements (and even CV) in \LaTeX{} (and compiled to pdf's, which are then uploaded to the application system).  In CS and many other STEM fields, \LaTeX{} is the de facto standard for writing documents—papers, proposals, dissertations, and letters. \href{https://code.roars.dev/phd-cs-us}{This book}, for example, is written in \LaTeX{}.
 
 
 Most CS faculty are used to seeing formatting that \LaTeX{} produces, and many find Word's default left-aligned, uneven layout distracting.
@@ -3030,7 +3043,7 @@ More details and justficiation for this metric can be found in the \href{https:/
 I am also a member of the large VietPhD group on Facebook and often browse Internet forums (e.g., \href{https://www.reddit.com/r/gradadmissions/}{Reddit/gradadmission} and \href{https://forum.thegradcafe.com/}{GradCafe}). There I saw many questions from students about PhD programs.  However, most participants are students, many of whom in non-CS fields or not in the US, and their answers are typically not accurate and often lead to more confusion. So I thought it would be useful to have a handbook that is specific to CS PhD programs in the US from an insider perspective.
 
 I started writing this book in May 2023 and have been updating it since then (mostly around deadline time when I procrastinate, i.e., \emph{productive procrastination}!). The book was initially intended for international students but has been updated to include domestic students (\autoref{chap:domestic-students} and \autoref{chap:fellowships}).
-The book is open-source and available on \href{https://github.com/dynaroars/phd-cs-us}{GitHub} so that others can contribute to it.
+The book is open-source and available on \href{https://code.roars.dev/phd-cs-us}{GitHub} so that others can contribute to it.
 \paragraph{About Me} I am an associate professor in the CS dept at George Mason University (GMU). 
 Before GMU, I was at the University of Nebraska-Lincoln (UNL). Both UNL and GMU are \gls{r1} research universities in the US and have many international students in their CS graduate programs. I work in Software Engineering and Formal Mehods.  My research lab website is at \href{https://roars.dev}{roars.dev}. 
 
