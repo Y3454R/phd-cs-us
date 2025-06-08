@@ -102,14 +102,20 @@
 
 \renewcommand{\figurename}{Fig.}
 \renewcommand{\tablename}{Tab.}
-\def\Section{\S}
+%\def\Section{\S}
+\newcommand{\Section}{\textsection}
+
 \renewcommand{\figureautorefname}{Fig.}
 \renewcommand{\tableautorefname}{Tab.}
 \makeatletter
-\renewcommand{\chapterautorefname}{\S\@gobble}
-\renewcommand{\sectionautorefname}{\S\@gobble}
-\renewcommand{\subsectionautorefname}{\S\@gobble}
-\renewcommand{\appendixautorefname}{\S\@gobble}
+% \renewcommand{\chapterautorefname}{\S\@gobble}
+% \renewcommand{\sectionautorefname}{\S\@gobble}
+% \renewcommand{\subsectionautorefname}{\S\@gobble}
+% \renewcommand{\appendixautorefname}{\S\@gobble}
+\renewcommand{\chapterautorefname}{\textsection\@gobble}
+\renewcommand{\sectionautorefname}{\textsection\@gobble}
+\renewcommand{\subsectionautorefname}{\textsection\@gobble}
+\renewcommand{\appendixautorefname}{\textsection\@gobble}
 
 \newcommand*\l@chapterinfo{\@nodottedtocline{0}{0.0em}{1.5em}}
 \newcommand*\l@sectioninfo{\@nodottedtocline{1}{1.5em}{2.3em}}
@@ -1270,17 +1276,16 @@ Just as with grades (\autoref{chap:your-school}) and GRE (\autoref{sec:gre}), ha
 
 \myepigraphsimpsons{``I'm not a college graduate. I'm not even a high school graduate. But I'm a pretty good judge of character.''}
 
-\section{CV}
+\section{CV}\label{sec:cv}
 \sectioninfo{Highlight and summarize major achievements such as major publications and competitive programming awards.}
 
-The CV provides a summary of the applicant's achievements. Most schools require you to upload your CV with your application. 
+Most schools require you to upload your CV with your application. The main difference between a CV and a resume is that the former is more comprehensive and longer, while the latter is shorter and focuses on job-related experiences. So you don't need to adhere to the 1-page rule of resume in job searching, CV has no such requirement and is often longer.  
 
-Prepare your CV in such a way that allows reviewers to quickly scan to identify major achievements, e.g., Publications, Programming Competition Awards, and Teaching Experience.  Moreover, you don't need to adhere to the 1-page rule of resume in job searching, CV has no such requirement and is often longer. 
-
-
+Use your CV to summarize your achievements, e.g., publications, awards, and teaching experiences. You can also list your personal website, projects, or contributions to open-source projects (\autoref{sec:personal-website}) 
+Prepare your CV in such a way that allows reviewers to quickly scan to identify major achievement.  
 
 \begin{commentbox}
-    Unlike a job application, CV is not as important for PhD admission because we do not screen applicants based on their CV.  Moreover, we care and pay attention more about your LOR, SOP, etc.  So do not spend too much time on your CV, just make sure it is easy to skim through (\autoref{sec:ievaluate}) and well-organized around research activities and achievements.
+    Most applicants do not have much to put in their CVs. Thus adcom members usually do not pay much attention to CV's (and definitely do not screen applicants based on them). So do not spend too much time on your CV, just make sure it is easy to skim through (\autoref{sec:ievaluate}) and well-organized around research activities and achievements.
 \end{commentbox}
 
 \section{Writing Sample}\label{sec:writing-sample}
@@ -1291,9 +1296,21 @@ It is a good idea to upload a writing sample, e.g., a paper you wrote, a report,
 These do not carry much weight as they do not show research ability. We do not care much if you have taken an online Coursera AI course or have a professional certificate from Microsoft.
 However, as mentioned in \autoref{sec:non-stem}, if you do not have a CS background, you might be able to use these to show you have sufficient CS knowledge.
 
+\section{Personal Website and (Github) Projects}\label{sec:personal-website}
+These are \emph{not} required but are increasingly common.  In CS, academic websites are \emph{very} common and used to showcase research, publications, and projects.  You don't need fancy websites with tons of javascript and animations. A simple website with your name, photo, research interests, publications, and projects is enough. Use free services such as \href{https://github.io}{GitHub Pages} to create your website. Many CS students also use Github to host their projects and showcase their involvement in open-source projects.  
+
+You can mention your website and projects in your CV (\autoref{sec:cv}) and SOP (\autoref{chap:sop}).
+Having popular projects or active contributions can help you stand out (\autoref{sec:improve-your-chance}), especially if you do not have much research experience.
+
+
+\begin{commentbox}
+    Many students include linkedIn (or Facebook) profiles in their applications. While these are popular when applying for jobs, they are not very useful for PhD application evaluation.  Many adcom members are not familiar with linkedIn (and definitely do not want to go to a page that requires us to have an account and login), so it is better to have a something like personal and project websites, which are far more common and easier to access. 
+\end{commentbox}
+
+
 \part{After You Apply}\label{part:after-apply}
 
-\chapter{Interview and the Waiting Game}\label{chap:interview}
+\chapter{Interview and The Waiting Game}\label{chap:interview}
 \chapterinfo{Getting an interview is typically a good sign; but no interview does not mean rejection.}
 
 \myepigraphsimpsons{Bart: ``Are we there yet? Are we there yet? Are we there yet?''\\
@@ -1312,7 +1329,7 @@ The timeline for interviews varies.  Faculty set up interviews based on their bu
 Do not be surprised if you get an interview invitation at the last minute. Some profs. are informal and may just email you to chat (e.g., \emph{``could you chat in an hr?''}), while others might schedule a formal interview (e.g., \emph{``can you chat at 2 pm on Friday or 10 am on Monday?''}).
 
 
-Some programs \textbf{do not do interviews} at all (\autoref{sec:no-interview}). They review applications and make decisions based on them.  If you do not get an interview, it does not mean you're out.
+Some programs \emph{do not do interviews} at all (\autoref{sec:no-interview}). They review applications and make decisions based on them.  If you do not get an interview, it does not mean you're out.
 
 \begin{commentbox}
     At GMU, faculty are encouraged to interview candidates. For very strong candidates, the interview is actually to recruit them.  In some cases a faculty interviews a candidate that they see potential and want to advocate for their admission. Without the interview, such applications may be more likely to be rejected.\\
@@ -2667,8 +2684,7 @@ Note that some CS areas, such as PL and SE, are beginning to publish conference 
 \paragraph{Best Paper Awards} Conferences often give out best or distinguished paper awards to a small set of accepted papers (e.g., 10\% of accepted papers at ICSE) to recognize that they hae high-quality and potential impact.
 AI/ML conferences often have many papers and so select a few for ``oral'' presentations, and thus are equivalent to traditional best papers. 
 
-These awards are determine by the program committee and are presented to the authors at the conference. Note that these are not the same as the ``test-of-time''paper awards discussed in \autoref{sec:research-awards}.
-
+These awards are determined by the program committee and presented to the authors at the conference. Note that these are not the same as the ``test-of-time''paper awards discussed in \autoref{sec:research-awards}.
 
 \paragraph{Citations} Citation counts, e.g., through Google Scholar, are often used to measure the impact of a researcher's work---how many people have cited their work. Google Scholar also has other metrics such as h-index and i10-index. The h-index is the number of papers with at least h citations, while the i10-index is the number of papers with at least 10 citations.  
 
