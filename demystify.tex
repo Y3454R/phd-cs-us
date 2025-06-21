@@ -1,5 +1,4 @@
 \documentclass[oneside,11pt,dvipsnames]{book}
-\usepackage[dvipsnames]{xcolor}
 \usepackage{pagecolor}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -17,7 +16,7 @@
 \usepackage{enumitem}
 \usepackage{epigraph}
 \newcommand{\myepigraphsimpsons}[1]{
-\epigraph{\vspace{-0.2in} \emph{#1}}{\textsc{The Simpsons}}
+  \epigraph{\vspace{-0.2in} \emph{#1}}{\textsc{The Simpsons}}
 }
 \usepackage{cite}
 \usepackage{caption}
@@ -32,7 +31,7 @@
 
 \usepackage{tikz}
 \usetikzlibrary{calc}
-
+\usepackage[dvipsnames]{xcolor}
 %\usepackage{anyfontsize}
 %\usepackage{sectsty}
 \usepackage[acronym]{glossaries}
@@ -2070,24 +2069,22 @@ First, read the prof's website, and see if they say something about contacting t
 In general, the best way to catch the prof.'s attention is to \emph{customize your email} for them.  For example, read their papers, know what they work on, and see if you are interested in their research. Then email them and talk about how/why their work would match yours.
 In contrast, if you write a generic email that can be sent to multiple professors (e.g., if you just change some names and keywords in the email or copy and paste paper titles), you will not get a response.
 
-\autoref{fig:good-email} and \autoref{fig:bad-email} show examples of good and bad cold emails to professors.  The good email is personalized, shows interest in the prof's work, and has relevant background. The bad email is generic, does not show potential matching, and asks for vague feedback. 
+Below is a good example:
 
-\begin{figure}
 \begin{examplebox}
+
 Dear Prof. Nguyen,\\
 
-  I am writing to inquire about potential research opportunities as a GRA in your group at GMU. Currently I am an undergraduate student in Computer Science at [UNIV] and plan to graduate in May 2023.
+  I am writing to inquire about potential research opportunities as a GRA in your group at GMU. Currently I am an undergraduate student in Computer Science at UNIV and plan to graduate in May 2023.
     \\
 
-  I have read your TSE'21 paper on numerical invariant generation, and I am interested in this line of dynamic invariant research. I have worked (optional: with prof. [Y] at [Z]) on static program analysis and I think it could be used to tackle the spurious issues mentioned in your paper. I have a short paper at conference/workshop [C] and a project on symbolic execution (Github repo [G]).
+  I have read your TSE'21 paper on numerical invariant generation, and I am interested in this line of dynamic invariant research. I have worked (optional: with prof. Y at Z) on static program analysis and I think it could be used to tackle the spurious issues mentioned in your paper. I have a short paper at conference/workshop C and a project on symbolic execution (Github repo G).
 
   ...
-  
-\end{examplebox}
-\caption{This letter is good because it is written just for me.  It shows that the student knows about my work on invariant generation and has relevant and concrete background (paper C and project G).
-}\label{fig:good-email}
-\end{figure}
 
+ \tcblower
+  This is a good example because it is written just for me.  It shows that the student knows about my work on invariant generation and has a related background (paper C and project G).
+\end{examplebox}
 
 Finally, profs. are very busy so don't take it personally if you don't get anything from them (though I would be very surprised if such thoughtful emails get no replies!).
 See~\autoref{sec:kiss-of-death-emails} for common mistakes in emails and~\autoref{sec:interpreting-response} for interpreting replies.
@@ -2142,27 +2139,6 @@ See~\autoref{sec:kiss-of-death-emails} for common mistakes in emails and~\autore
     
     \item \textbf{Do Not Call}. Not related to email but sometimes students get desperate and call the prof.  This is a big no-no, especially for CS ppl who often prefer email over phone calls. 
 \end{itemize}
-
-
-
-\begin{figure}
-\begin{commentbox}  
-  Dear Professor,\\
-
-I hope this email finds you well.\\
-
-I am writing to express my interest in the PhD program at GMU. Attached is my CV for your reference.\\ 
-
-By way of background, I have spent the past few years working as a backend developer at a tech company in [X], where I gained experience with various technologies in a fast-paced, international environment. This professional journey has fueled my passion for research and innovation, particularly in programming, software engineering, and artificial intelligence.\\
-
-I would greatly appreciate your thoughts on whether my background and experience would make me a suitable candidate for the PhD position at your institution. Additionally, I would welcome any advice you might have regarding the application process or potential research directions within the department.\\
-
-Thank you for your time and consideration. I look forward to your feedback.
-\end{commentbox}  
-\caption{A bad email example. It is generic and can be sent to any prof. It does not mention the prof's work and does not show how their background matches the prof's research. The last paragraph asks for advice on their background and experience and application process, which is something no prof. can answer.}\label{fig:bad-email}
-\end{figure}
-
-
 
 \subsection{Interpreting Response}\label{sec:interpreting-response}
 Even if you avoid the kiss of death emails (\autoref{sec:kiss-of-death-emails}), you might still not get a reply.  There are many reasons why you might not get a reply, e.g., the prof. is not interested, they are too busy (\autoref{sec:busy}), they are not taking students, they are on vacation, etc.  Here are some common responses and what they mean:

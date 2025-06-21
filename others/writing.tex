@@ -1,0 +1,549 @@
+\documentclass[oneside,11pt,dvipsnames]{book}
+\usepackage{pagecolor}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{soul}
+\usepackage[margin=1.5in]{geometry}
+\usepackage{tcolorbox}
+\tcbuselibrary{documentation, skins}
+
+% \setsecnumdepth{subsection}
+% \setcounter{tocdepth}{3}
+\usepackage{fontawesome5}
+\usepackage{censor}
+\usepackage{enumitem}
+\usepackage{epigraph}
+\newcommand{\myepigraphsimpsons}[1]{
+\epigraph{\vspace{-0.2in} \emph{#1}}{\textsc{The Simpsons}}
+}
+\usepackage{cite}
+\usepackage{caption}
+\captionsetup{font=small}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\setlength\intextsep{0pt} % remove extra space above and below in-line float
+
+\usepackage{booktabs}
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage[dvipsnames]{xcolor}
+%\usepackage{anyfontsize}
+%\usepackage{sectsty}
+\usepackage[acronym]{glossaries}
+\setacronymstyle{long-short-desc}
+\makeglossaries{}
+\usepackage[makeroom]{cancel}
+
+% boxes
+\newtcolorbox{marker}[1][]{enhanced,
+  before skip balanced=2mm,after skip balanced=3mm,
+  boxrule=0.4pt,left=5mm,right=2mm,top=1mm,bottom=1mm,
+  colback=yellow!10,
+  sharp corners,rounded corners=southeast,arc is angular,arc=3mm,
+  underlay={%
+    \path[fill=tcbcolback!80!black] ([yshift=3mm]interior.south east)--++(-0.4,-0.1)--++(0.1,-0.2);
+    \path[draw=tcbcolframe,shorten <=-0.05mm,shorten >=-0.05mm] ([yshift=3mm]interior.south east)--++(-0.4,-0.1)--++(0.1,-0.2);
+    \path[fill=tcbcolback!80!black,draw=none] (interior.south west) rectangle node{\large\bfseries {#1}} ([xshift=4mm]interior.north west);
+    },
+  drop fuzzy shadow}
+
+\newenvironment{commentbox}[1][]{
+  \small
+  \begin{marker}[\faChessPawn{}]
+    {\textbf{#1}}
+  }{
+  \end{marker}
+}
+
+\newenvironment{surprisebox}[1][]{
+  \small
+  \begin{marker}[\faChessKnight{}]
+    {\textbf{#1}}
+  }{
+  \end{marker}
+}
+
+\newenvironment{examplebox}[1][]{
+  \small
+  \begin{marker}[\faChessBishop{}]
+    {\textbf{#1}}
+  }{
+  \end{marker}
+}
+
+\newenvironment{questionbox}[1][]{
+  \small
+  \begin{marker}[\faChessRook{}]
+    {\textbf{#1}}
+  }{
+  \end{marker}
+}
+
+\newenvironment{keybox}[1][]{
+\small
+  \begin{marker}[\faChessQueen{}]
+    {\textbf{#1}}
+  }{
+  \end{marker}
+}
+
+\newenvironment{warningbox}[1][]{
+  \small
+  \begin{marker}[\faChessKing{}]
+    {\textbf{#1}}
+  }{
+  \end{marker}
+}
+
+\renewcommand{\figurename}{Fig.}
+\renewcommand{\tablename}{Tab.}
+\def\Section{\S}
+\renewcommand{\figureautorefname}{Fig.}
+\renewcommand{\tableautorefname}{Tab.}
+\makeatletter
+\renewcommand{\chapterautorefname}{\S\@gobble}
+\renewcommand{\sectionautorefname}{\S\@gobble}
+\renewcommand{\subsectionautorefname}{\S\@gobble}
+\renewcommand{\appendixautorefname}{\S\@gobble}
+
+\newcommand*\l@chapterinfo{\@nodottedtocline{0}{0.0em}{1.5em}}
+\newcommand*\l@sectioninfo{\@nodottedtocline{1}{1.5em}{2.3em}}
+\newcommand*\l@subsectioninfo{\@nodottedtocline{2}{3.8em}{3.2em}}
+%\newcommand*\l@subsubsectioninfo{\@nodottedtocline{3}{7.0em}{4.1em}}
+%\newcommand*\l@paragraphinfo{\@nodottedtocline{4}{10em}{5em}}
+%\newcommand*\l@subparagraphinfo{\@nodottedtocline{5}{12em}{6em}}line{5}{12em}{6em}}
+
+% Copied from the book class macro `\@dottedtocline`. Removed the dots and page number
+\def\@nodottedtocline#1#2#3#4#5{%
+  \ifnum #1>\c@tocdepth \else
+    \vskip \z@ \@plus.2\p@
+    {\leftskip #2\relax \rightskip \@tocrmarg \parfillskip -\rightskip
+     \parindent #2\relax\@afterindenttrue
+     \interlinepenalty\@M
+     \leavevmode
+     \@tempdima #3\relax
+     \advance\leftskip \@tempdima \null\nobreak\hskip -\leftskip
+     {#4}\nobreak
+     \leaders\hbox{$\m@th
+        \mkern \@dotsep mu\hbox{\,}\mkern \@dotsep
+        mu$}\hfill
+     \nobreak
+     \hb@xt@\@pnumwidth{\hfil\normalfont \normalcolor }%
+     \par}%
+  \fi}
+
+
+
+\makeatother
+
+\newcommand{\chapterinfo}[1]{%
+  \phantomsection
+  \addcontentsline{toc}{chapterinfo}{\textcolor{black}{\emph{#1}}}%
+}
+\newcommand{\sectioninfo}[1]{%
+  \phantomsection
+  \addcontentsline{toc}{sectioninfo}{\textcolor{black}{\emph{#1}}}%
+}
+\newcommand{\subsectioninfo}[1]{%
+  \phantomsection
+  \addcontentsline{toc}{subsectioninfo}{\textcolor{black}{\texttt #1}}%
+}
+
+\newcommand{\mycomment}[3][\color{blue}]{{#1{{#2}: {#3}}}}
+\newcommand{\tvn}[1]{\mycomment{TVN}{#1}}{}
+\newcommand{\didi}[1]{\mycomment{Didier}{#1}}{}
+\newcommand{\tl}[1]{\mycomment{ThanhLe}{#1}}{}
+\newcommand{\xz}[1]{\mycomment{Xiaokuan}{[#1]}}{}
+\newcommand{\red}[1]{{\color{red}{#1}}}
+
+\newcommand{\mytitle}{Demystifying PhD Admissions in Computer Science}
+\newcommand{\mysubtitle}{A Handbook for Navigating CS PhD Admissions in the U.S.}
+\newcommand{\mybookaddress}{\href{https://roars.dev/phd-cs-us/demystify.pdf}{https://roars.dev/phd-cs-us/demystify.pdf}}
+\newcommand{\mybookgithub}{https://github.com/dynaroars/phd-cs-us}
+\newcommand{\me}{ThanhVu Nguyen}
+\newcommand{\institute}{George Mason University}
+
+\usepackage{hyperref}
+\hypersetup{
+    hidelinks,
+    linktoc=all,
+  colorlinks,
+  citecolor=black,
+  filecolor=black,
+  linkcolor=blue,
+  urlcolor=blue,
+  pdfpagemode=UseOutlines,
+}
+
+
+
+%%% glossaries
+\newglossaryentry{April15}
+{
+        name=April 15,
+        description={The deadline for most US universities to accept or decline offers of admission. This date, set by the Council of Graduate Schools (\href{https://cgsnet.org/wp-content/uploads/2024/01/CGS_April15_Resolution_Jan312024.pdf}{CGS}), states that students are not required to accept offers before this date. Note that, some universities might not follow this deadline, so check with the university you are applying to}
+}
+
+\newglossaryentry{cohort}{
+    name=cohort,
+    description={A group of students who start a program at the same time and take classes together. You should get to know your cohort as they will be your colleagues and friends during your PhD. See selecting and ranking schools in \autoref{sec:selecting-ranking-schools}}
+}
+
+
+\newglossaryentry{ivy}{
+    name = Ivy League,
+    description={A group of eight private universities in the US known for their academic excellence and social prestige. The Ivy League schools are Brown, Columbia, Cornell, Dartmouth, Harvard, the UPenn, Princeton, and Yale. These schools are typically known for their undergraduate programs more than their graduate programs. Moreover, most top CS programs such as CMU, UIUC, UCSD, UWash, MIT, Stanford, are not in the Ivy League.}
+}
+
+  
+\newglossaryentry{adcom-members}{
+    name = adcom members,
+    description={Faculty members who are part of the admission committee. People who review applications and make admission decisions (\autoref{chap:evalapps})}
+    }
+  
+\newglossaryentry{adcom-chair}{
+    name = adcom chair, 
+    description={The faculty member who leads the admission committee. This person is often not involved in individual admission decisions but oversees the process (e.g., resolve disputes, ensure fairness) (\autoref{chap:evalapps})}
+}
+\newglossaryentry{adviser}{
+    name = adviser/superviser,
+    description = {A faculty member who guides and mentors a PhD student throughout their research. This person typically plays a crucial role in a student's academic journey. In the US, the term ``adviser'' is more commonly used than ``supervisor''}
+}    
+
+
+\newglossaryentry{r1}{
+    name=R1, 
+    description={Research 1 (\href{https://en.wikipedia.org/wiki/List_of_research_universities_in_the_United_States}{R1}) universities are universities with the highest level of research activity across various disciplines. Currently, 146 (out of 4000) US universities are classified as R1. 
+    R2 universities also have a high level of research activity but not as high as R1 universities.  R1 universities are typically larger, and have more funding and resources for research.  R2 universities are also good but might have fewer resources and funding}
+}
+
+\newglossaryentry{stipend}{
+    name = stipend,
+    description={A fixed regular sum paid to students as part of their funding package (i.e., salary). This is typically paid monthly or bi-weekly.  Stipend is typically paid to PhD students and not MS students}
+}
+
+\newglossaryentry{rolling-admission}{
+    name = rolling admission,
+    description = {Applications are reviewed as they are received (instead of all at once after the deadline), and decisions are made throughout the admission cycle.  Rolling admission is more common for MS programs and less common for PhD programs (e.g., at GMU, MS is rolling and PhD is not}
+}
+
+\newglossaryentry{toptier}{
+    name = top-tier conferences and journals,
+    description={These are the most prestigious venues for publishing research in CS.  For example, in Software Engineering, top-tier conferences include ICSE, FSE, and ASE and top-tier journals include TSE and TOSEM.  Publishing in these venues is highly competitive and prestigious, and can significantly improve your chances of getting admitted to a good PhD program}
+}
+
+% \newglossaryentry{diversity-statement}{
+%     name = diversity statement, 
+%     description = {A document sometimes required in applications where applicants describe their contributions to diversity and inclusion, or how their background adds to the diversity of the academic community.admissions~\autoref{sec:diversity-statement}}
+% } 
+
+
+\newglossaryentry{fields}{
+    name = fields or areas of research,
+    description={Specific areas of study or research. Fields within CS include Machine Learning, Computer Vision, Software Engineering (\autoref{sec:fields-and-areas})}
+}
+
+\newglossaryentry{international-domestic}{
+    name=International vs. Domestic students, 
+    description={International students are loosely defined as those who would need a visa to study in the US (\autoref{chap:visa}). Domestic students (\autoref{chap:domestic-students}) are those who do not need a visa, typically US citizens or permanent residents}
+    }   
+
+
+\newglossaryentry{in-out-state}{
+    name=In-state vs. Out-of-state,
+    description={In-state tuition is the tuition rate for students who are residents of the state where the university is located. Out-of-state tuition is the tuition rate for students who are not residents of that state. In-state tuition is typically much lower than out-of-state tuition. PhD students typically do not have to pay tuition as it is covered by their funding, but this might be important for MS students}
+    }
+
+\newglossaryentry{lab}{name=Research Lab, description={A group of researchers (profs. and students) working on a common research area, e.g., a Software Engineering Lab.  Typically a lab is led by a single professor, but sometimes it can be co-led by multiple professors. For example, my lab \href{https://roars.dev}{DynaROARS} focuses on my own research area (software verification), but I am also part of the more general SWE group at GMU with other faculty in Software Engineering}}
+
+
+\newglossaryentry{major}{name=Major, description={A student's primary field of study, e.g., Computer Science, Electrical Engineering, Mathematics, etc. Often used in the context of undergraduate studies (e.g., ``what was your major in undergrad?'')}}
+
+% \item[MS \autoref{sec:msrequirement}] Master of Science. A graduate degree that typically requires 2 years of study.
+
+\newglossaryentry{open-house}{name=Open House, description={An event where admitted students visit the university to meet faculty, students, and staff, and learn more about the program. This is a great opportunity to get a feel for the university and the department and decide if it is a good fit for you. Open house can be in-person or virtual \autoref{chap:accepted}}}
+
+%   \item[OPT] Optional Practical Training. A program that allows F-1 students to work in the US for up to 12 months after graduation.
+% \item[CPT] Curricular Practical Training. A program that allows F-1 students to participate in internships or practical training that is an integral part of their academic curriculum.
+% \item[F-1] Student Visa. A visa that allows international students to study full-time at an accredited institution in the US.
+% \item[F-2] Dependent Visa. A visa that allows the spouse and children of an F-1 visa holder to live in the US.
+
+
+
+\newacronym[description={Commonly mentioned by international students to refer to top-tier journals in CS.  Q1 is very well-known in CS in the US (also CS often focuses on confs. rather than journals), and many CS faculty in the US might not know what it means.  If you want to refer to \glslink{toptier}{top-tier} journals, you should mention the specific journals, e.g., TSE in Software Engineering}]{Q1}{Q1}{Scopus Q1 Journals}
+  
+\newacronym[description={A main type of PhD funding where you work on a research project for a professor (\autoref{sec:ra})}]{ra}{RA}{Research Assistantship} 
+\newacronym[description={A main type of PhD funding where you help a a professor with teaching, e.g., grading assignments (\autoref{sec:ta})}]{ta}{TA}{Teaching Assistantship} 
+
+%\newacronym{toef-ielts}{TOEFL/IELTS} Test of English as a Foreign Language. A standardized test to measure the English language ability of non-native speakers.
+
+\newacronym[description={A standardized test that is an admissions requirement for many graduate schools in the US. However, it is not required for most CS PhD programs (\autoref{sec:gre}). Thus unless it is explicitly required, don't worry about it}]{GRE}{GRE}{Graduate Record Examination}
+
+\newacronym[description={A program funded by the NSF to provide research opportunities for undergraduate students}]{REU}{REU}{Research Experience for Undergraduates}
+
+\newacronym[description={A document written by yourself to explains your research interests, background, and reasons for applying to a PhD program (\autoref{chap:sop})}]{SOP}{SOP}{Statement of Purpose}
+\newacronym[description=The group of faculty members who review applications and make admission decisions (\autoref{sec:adcom})]{adcom}{adcom}{Admission Committee}
+\newacronym[description=A doctoral degree that represents the highest level of academic achievement in a particular field of study. In CS it typically requires original research and a dissertation]{phd}{PhD}{Doctor of Philosophy}
+\newacronym[description={A PhD candidate who has finished all course work and exams and only needs to write and defend their dissertation}]{ABD}{ABD}{All But Dissertation}
+
+
+\newacronym[description={lead researcher on a grant or research project, e.g., a PI on an NSF grant.  Prospective students often use this term to refer to a professor they are interested in working with.  However, we do not use it this way in academia, e.g., ``who is your PI?'' might only make sense to fellow Reddit applicants, but might not be understood by others, ``who is your adviser?'' is what you want to use}]{PI}{PI}{Principal Investigator}
+
+\newacronym[description={Fields in or related to these areas are considered STEM fields. CS is a STEM field}]{STEM}{STEM}{Science Technology Engineering and Mathematics}
+
+\newacronym[description={Refers to groups that are underrepresented in higher education, e.g., Black, Hispanic, and Native American students in CS}]{URM}{URM}{Underrepresented Minority}
+
+\newacronym[description={A US government agency that supports research and education in science and engineering. NSF is a major source of funding for RAs in CS research. There are other agencies that support RAs but they might require US citizenship or permanent residency}]{NSF}{NSF}{National Science Foundation}
+
+\newacronym[description={A letter written by a professor or supervisor that assesses your qualifications and potential for graduate study (\autoref{chap:lor})}]{LOR}{LoR}{Letter of Recommendation}
+
+
+\begin{document}
+
+\frontmatter
+%\newpagecolor{SpringGreen}
+
+\begin{titlepage}
+    \begin{tikzpicture}[remember picture, overlay]
+        \draw[OliveGreen, line width = 3pt] ($(current page.north west) + (1in,-1in)$) rectangle ($(current page.south east) + (-1in,1in)$);
+      \end{tikzpicture}
+
+    \centering
+    {\Huge\bfseries\baselineskip1.3em\mytitle\par}\bigskip\bigskip
+    {\large\bfseries\mysubtitle{}}\bigskip\par
+    \vfill
+    \includegraphics[width=0.5\textwidth]{files/angelfish5.png}
+    \vfill
+    {\Large\bfseries\me{}, PhD}\medskip\par
+    {\large\institute{}}%\medskip\par    
+    %{\small\today{}}\medskip\par
+    %\mybookaddress{} (\href{\mybookgithub}{Github})
+\end{titlepage}
+%\restorepagecolor
+\newpage
+\pagestyle{empty}
+
+The goal of this book is to help students---especially those from less privileged backgrounds and do not have insider guidance---to demystify the CS PhD admissions process in the US. That's why the book will \emph{always be free} and available online at \mybookaddress{}.
+
+If you find the book helpful, you can:
+(i) leave a review on \href{https://www.amazon.com/dp/B0F41HP6Y2}{Amazon} and \href{mailto:tvn@gmail.com}{send me} a \emph{“Thank you”} note  and let me know how it helped you (those messages make my day!),
+(ii) give it a star on its \href{\mybookgithub}{GitHub repo},
+(iii) share it with friends, or
+(iv) buy the book on \href{https://www.amazon.com/dp/B0F41HP6Y2}{Amazon}. That last option is so I can brag that I have a book published and available on Amazon (priced at \$7.77---Unix 777 permission and the open nature of the book).
+
+
+The angelfish on the cover, wearing a PhD cap, symbolizes the spirit of this book and its message. In an aquarium, the angelfish fish is considered the centerpiece of the tank and stands out from the rest---an important requirement for a successful CS PhD applicant in a crowded and competitive pool of prospective students.
+
+
+
+\vfill
+
+\begin{tcolorbox}[enhanced]
+    \small
+    This \href{\mybookgithub}{work} © 2025 by \me{} is licensed under CC BY-NC-ND 4.0. To view a copy of this license, visit \url{https://creativecommons.org/licenses/by-nc-nd/4.0/}
+\end{tcolorbox}
+
+
+
+
+\renewcommand{\contentsname}{Contents and Summary}
+\tableofcontents
+
+
+\chapter{Preface}
+
+Having been involved in PhD admission committees for many years, I've observed that students, especially those in smaller countries, less well-known universities, and 1st generation PhD students, often lack a clear understanding of the Computer Science PhD admission process at US universities. This confusion not only discourages students from applying but also creates the perception that getting admitted to a CS PhD program in the US is difficult compared to other countries.
+
+% though \emph{very} top schools could be very selective, e.g., see the \href{https://da-data.blogspot.com/2015/03/reflecting-on-cs-graduate-admissions.html}{admission process} at CMU
+So I want to share some details about the admission process and advice for those who are interested in applying for a \textbf{PhD in Computer Science in the US}.
+Originally, this book was written for international students, but has been expanded to include information for \textbf{US domestic students} (\autoref{chap:domestic-students}).
+Moreover, while this book primarily aims at students interested in CS, it might be relevant to students from various \acrshort{STEM} (Science, Technologies, Engineering, and Mathematics) disciplines.
+Furthermore, although many examples are specifics for schools that I and other contributors of this book know about, the information should be generalizable to other good \Gls{r1} institutions in the US.
+
+This information can also help \textbf{US faculty and admission committee} gain a better understanding of international students and their cultural differences (\autoref{chap:cultural}).  By recognizing and leveraging these differences, CS programs in the US can attract larger and more competitive application pools from international students.
+
+I wish you the best of luck.
+
+
+\mainmatter
+
+\chapter{Introduction}\label{part:intro}
+
+
+
+
+Becoming a tenure-track faculty member in computer science means writing papers, right? Yes—but that’s only a fraction of what you'll actually write. Once you're in the role, you quickly realize that your keyboard time is consumed not just by research, but by a whole ecosystem of writing: letters, reviews, emails, evaluations, statements, proposals, and internal documentation. Some of these genres are high-stakes, others invisible; some are expected, others feel like bureaucratic landmines. But all of them matter.
+
+This book aims to demystify the wide range of writing that CS faculty are expected to produce. Think of it as a survival guide to the unspoken curriculum of academia—the writing that shapes your reputation, your relationships, and your trajectory toward tenure (and beyond).
+
+You’ll find real talk, practical templates, commentary on tone and impact, and insights drawn from lived experience in the trenches. Whether you’re just starting out or halfway to tenure, this guide will help you write smarter, faster, and with more confidence.
+
+
+\chapter{The Academic Paper: From Idea to Camera-Ready}
+
+This is what most faculty expect to write—and often the only thing they’re trained for. But doing it well under pressure, with students, and under constant deadlines is a skill of its own.
+
+Research paper anatomy: title to references
+
+Writing with students vs. writing alone
+
+Responding to reviewer comments and crafting rebuttals
+
+Preprint culture and managing visibility
+
+Strategies for splitting vs. consolidating results
+
+\chapter{Grant Writing: The Other Publication Track}
+
+Grant writing is its own genre, with stakes just as high as research papers—but far less support. You’ll likely fail at first. Then you’ll learn how to write for a different kind of audience—reviewers, not readers.
+
+NSF CAREER vs. Core proposals: structure, voice, and strategy
+
+Budgets and justifications: the art of dry persuasion
+
+Broader impacts without the fluff
+
+Writing to your program officer
+
+Letters of collaboration, biosketches, facilities statements
+
+\chapter{Recommendation Letters: Advocating with Integrity}
+
+You will write a lot of recommendation letters—for students, for colleagues, for strangers. The good ones can change a career; the bad ones can do damage.
+
+\section{Students (internships, grad school, jobs)}
+
+\section{Colleagues (awards, promotion, grants)}
+
+\section{What makes a letter strong—and what sinks it}
+
+\section{Saying yes and no with grace}
+
+\section{Avoiding bias and empty praise}
+
+\chapter{Reviewing for Conferences, Journals, and Panels}
+
+Reviewing is more than a service obligation—it’s a hidden form of scholarly writing and reputation-building. Do it well, and you’ll learn how to write better papers too.
+
+Constructive vs. critical reviewing
+
+Meta-reviews and panel summaries
+
+Grant review panels: what they really look for
+
+How reviewing shapes your own writing
+
+When (and how) to push back on reviews
+
+\chapter{Teaching-Related Writing}
+
+Teaching doesn’t just happen in the classroom. It’s also in how you write your syllabus, assignments, announcements, and evaluations. And all of it feeds back into how your teaching is perceived and assessed.
+
+Syllabi, assignments, and rubrics
+
+Class announcements and feedback emails
+
+Teaching statements (for jobs, for tenure)
+
+Responding to evaluations
+
+Dealing with plagiarism, extensions, and complaints
+
+
+
+\chapter{Professional Communication}
+
+So much of your success depends on how you communicate—especially in writing. Whether it's email, Slack, or a formal memo, tone and clarity can make or break relationships and reputations.
+
+Writing to administrators, editors, and strangers
+
+Cold emails, collaboration invites, and soft introductions
+
+Saying no professionally
+
+Digital etiquette: Slack, Teams, and listservs
+
+Handling conflict or confusion over email
+
+\chapter{Tenure and Promotion Documents}
+
+Your T\&P file is one long, strategic piece of writing. Every document in it—from your CV to your statement—is meant to convince others you’ve earned permanence. No pressure.
+
+\section{The personal statement: narrative strategy}
+
+\section{Internal vs. external CV formatting}
+
+\section{Documenting service and teaching}
+
+\section{Shaping the external letter request list}
+
+\section{Writing annual reports with the long game in mind}
+
+
+\chapter{The Bureaucratic, the Emotional, and the Unseen}
+
+Not all faculty writing is polished or public. Some of it is rushed, reactive, or deeply personal. These moments matter too—and handling them with care can define your professional relationships.
+
+Department memos, task forces, and meeting notes
+
+Response letters to sensitive issues
+
+When not to send the email you just wrote
+
+Writing to defend your time, values, or boundaries
+
+Ghostwriting and invisible labor
+
+\chapter{Personal Branding: Your CV, Website, and Digital Identity}
+
+Beyond your papers and grants, your professional identity is shaped by what people can Google about you. Your CV, website, and online presence aren’t just static documents—they’re living narratives of your career. This chapter walks through how to craft and maintain these materials with intention and clarity.
+
+\section{Academic CVs: structure, tone, and how they evolve over time}
+
+\section{Personal websites: what to include, what to skip, and how to keep it updated}
+
+\section{Research group pages and collaborative branding}
+
+\section{Blogs, Substacks, and other informal writing: risks and rewards}
+
+\section{Google Scholar, ORCID, DBLP, LinkedIn: what matters where}
+
+\section{Balancing professionalism with personality}
+
+
+\chapter{Real Examples and Templates (Anonymized)}
+
+Sometimes the best way to learn is by seeing real writing in action. This chapter offers samples—annotated and explained—to show how others navigated the same challenges.
+
+Paper rebuttal letter
+
+Grant budget justification
+
+Recommendation letter (student)
+
+Tenure statement excerpt
+
+Email templates for tricky situations
+
+
+
+
+
+
+
+
+%\autoref{tab:ranking} lists .
+\chapter{History and Acknowledgement}\label{chap:ack}
+
+\begin{center}
+\today{}
+\end{center}
+
+%\bibliographystyle{abbrv}
+%\bibliography{demystify.bib}
+
+\end{document}
+
