@@ -3070,12 +3070,14 @@ Instead of traditional school rankings, many PhD students and faculty use \href{
 \[
 \text{averageCount} = \sqrt[N]{\prod_{i=1}^N (\text{adjustedCounts}_i + 1)}
 \]
-where $N$ is the number of fields (e.g., OS, Theory, ML, PL) selected (by default all fields are selected), and \texttt{adjustedCounts$_i$} is the number of papers published by faculty of that department in a field $i$. For example, for simplicity assume each paper is worth 1 count, then a department that has 10 papers in each of the 10 areas has an \texttt{averageCount} of $\sqrt[10]{11^{10}}=11$. If a department has 100 papers in one area $X$ and 0 in the others, then the \texttt{averageCount} across all areas is $\sqrt[10]{101 \cdot 1^9} = 1.59$. However, the user of CSRankings can select the number of areas to be included in the ranking. For example, if the student is only interested in area $X$, then the \texttt{averageCount} will be $\sqrt[1]{101} = 101$.
+where $N$ is the number of fields (e.g., OS, Cryptography, ML, PL) selected (by default all fields are selected), and \texttt{adjustedCounts$_i$} is the number of papers published by faculty of that department in a field $i$. For example, for simplicity assume each paper is worth 1 count, then a department that has 10 papers in each of the 10 fields has an \texttt{averageCount} of $\sqrt[10]{11^{10}}=11$. If a department has 100 papers in one field $X$ and 0 in the others, then the \texttt{averageCount} across all areas is $\sqrt[10]{101 \cdot 1^9} = 1.59$. 
+
+Thus, CSRankings---more specifically, geometric mean---places higher value on departments that publish in multiple fields, as it indicates a broader research impact. However, the user can select the number of fields to be included in the ranking. For example, if the student is only interested in field $X$, then the \texttt{averageCount} will be $\sqrt[1]{101} = 101$.
 More details and justficiation for this metric can be found in the \href{https://csrankings.org/faq.html}{CSRankings FAQ}.
 
 
 
-\paragraph{Selecting Faculty} Another useful feature of CSRankings is that you can filter faculty by research areas to find who are active in your area of interest. For example, if you are interested in ML, you can select ML and see departments and faculty members active in ML. You can also see the number of papers published by each faculty in that area,  and their publication counts in recent years (e.g., 2020---2024). This is useful for finding faculty publish frequently in your area of interest and gauge their productivity (\autoref{chap:research-achievements}).
+\paragraph{Selecting Faculty} Another useful feature of CSRankings is that you can filter faculty by research areas to find who are active in your area of interest. For example, if you are interested in ML, you can select ML and see departments and faculty members active in ML. You can also see the number of papers published by each faculty in that area,  and their publication counts in recent years (e.g., 2020--2024). This is useful for finding faculty publish frequently in your area of interest and gauge their productivity (\autoref{chap:research-achievements}).
 
 \section{Top CS Programs in the US}
 \autoref{tab:ranking} lists the top 50 CS programs from CSRankings. For the most up-to-date rankings, visit the website directly.
