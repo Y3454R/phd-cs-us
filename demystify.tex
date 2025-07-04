@@ -3051,7 +3051,7 @@ When researching where to do a CS PhD, many students use rankings like the U.S. 
 
 
 
-\section{What's Wrong with Popular CS Ranking}\label{sec:rankings-cra}
+\section{What's Wrong with Popular CS Rankings}\label{sec:rankings-cra}
 
 Popular college rankings such as the \href{https://www.usnews.com/best-colleges}{U.S. News \& World Report} or \href{https://www.topuniversities.com/university-rankings}{QS World University Rankings} are often based on subjective criteria---such as reputation, faculty credentials, and student satisfaction---and are not transparent---how scores are calculated is often not disclosed.
 CS research community has long questioned and discouraged the use of these rankings. For example, the Computing Research Association (CRA)---a highly respected organization in CS---issued a sharp critique of the U.S. News \& World Report's global rankings for CS depts, calling the methodology \emph{``deeply flawed and misleading''}\footnote{\url{https://cra.org/cra-statement-us-news-world-report-rankings-computer-science-universities/}}. Among many issues, the CRA highlighted that the rankings rely heavily on journal publications indexed by the Web of Science, ignoring conference publications—despite conferences being the primary venue for publishing top-tier CS research (\autoref{sec:pubs-top-tier}).   
@@ -3073,7 +3073,7 @@ Instead of traditional school rankings, many PhD students and faculty use \href{
 where $N$ is the number of fields (e.g., OS, Cryptography, ML, PL) selected (by default all fields are selected), and \texttt{adjustedCounts$_i$} is the number of papers published by faculty of that department in a field $i$. For example, for simplicity assume each paper is worth 1 count, then a department that has 10 papers in each of the 10 fields has an \texttt{averageCount} of $\sqrt[10]{11^{10}}=11$. If a department has 100 papers in one field $X$ and 0 in the others, then the \texttt{averageCount} across all areas is $\sqrt[10]{101 \cdot 1^9} = 1.59$. 
 
 Thus, CSRankings---more specifically, geometric mean---places higher value on departments that publish in multiple fields, as it indicates a broader research impact. However, the user can select the number of fields to be included in the ranking. For example, if the student is only interested in field $X$, then the \texttt{averageCount} will be $\sqrt[1]{101} = 101$.
-More details and justficiation for this metric can be found in the \href{https://csrankings.org/faq.html}{CSRankings FAQ}.
+More details and justfication for this metric can be found in the \href{https://csrankings.org/faq.html}{CSRankings FAQ}.
 
 
 
