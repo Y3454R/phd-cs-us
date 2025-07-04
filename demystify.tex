@@ -3070,9 +3070,10 @@ Instead of traditional school rankings, many PhD students and faculty use \href{
 \[
 \text{averageCount} = \sqrt[N]{\prod_{i=1}^N (\text{adjustedCounts}_i + 1)}
 \]
-where $N$ is the number of fields (e.g., OS, Cryptography, ML, PL) selected (by default all fields are selected), and \texttt{adjustedCounts$_i$} is the number of papers published by faculty of that department in a field $i$. For example, for simplicity assume each paper is worth 1 count, then a department that has 10 papers in each of the 10 fields has an \texttt{averageCount} of $\sqrt[10]{11^{10}}=11$. If a department has 100 papers in one field $X$ and 0 in the others, then the \texttt{averageCount} across all areas is $\sqrt[10]{101 \cdot 1^9} = 1.59$. 
+where $N$ is the number of fields (e.g., OS, Cryptography, ML, PL) selected, and \texttt{adjustedCounts$_i$} is the number of papers published by faculty of that department in a field $i$. 
+CSRankings thus favors departments that publish in multiple fields.  For example, a department that has 10 papers in each of the 10 fields will have a higher \texttt{averageCount} ($\sqrt[10]{11^{10}}=11$) than a department that has 100 papers in one field and 0 in the others ($\sqrt[10]{101 \cdot 1^9} = 1.59$). This is because the geometric mean is designed to favor departments that have a balanced distribution of publications across multiple fields, rather than excelling in just one field. 
 
-Thus, CSRankings---more specifically, geometric mean---places higher value on departments that publish in multiple fields, as it indicates a broader research impact. However, the user can select the number of fields to be included in the ranking. For example, if the student is only interested in field $X$, then the \texttt{averageCount} will be $\sqrt[1]{101} = 101$.
+Note that CSRankings allows users to select the fields they are interested in, so the \texttt{averageCount} can be calculated based on a subset of fields. For example, if the student is only interested in field $X$, then the \texttt{averageCount} will be $\sqrt[1]{101} = 101$.
 More details and justfication for this metric can be found in the \href{https://csrankings.org/faq.html}{CSRankings FAQ}.
 
 
