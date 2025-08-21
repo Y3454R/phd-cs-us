@@ -12,7 +12,7 @@
     [CSRankings.org](https://csrankings.org)
 
 -   To **add/modify** people or details, please create a [Github
-    issue](https://github.com/dynaroars/dynaroars.github.io/issues).
+    issue](https://github.com/dynaroars/phd-cs-us/issues).
 
 
 
