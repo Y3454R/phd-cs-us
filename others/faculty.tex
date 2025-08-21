@@ -1258,10 +1258,36 @@ It is a place where you can put your information, e.g., your CV, publications, t
 \subsection{University and Departmental Website}  Traditionally and also still commonly, faculty uses their departmental or university provided's webspace to host their lab and personal website, e.g., \url{https://cs.gmu.edu/~user}. This makes sense because (i) it is easy to setup (e.g., just \texttt{ssh} and \texttt{sftp} your files there), (ii) it is quite flexible, e.g., you can run various services such as blog, wiki, etc, and (iii) it is free and you don't have to pay for hosting (or backup). Moreover, there's a sense of pride and loyalty to your university (or workspace) and department.
 
 
-\paragraph{Why you should NOT use departmental or university webspace?}  Many faculty nowadays choose not to use their departmental or university webspace for their personal homepages and instead use external hosting such as Github.  While there are various reasons for this, the main ones are: (i) it is more flexibile, e.g., GitHub Pages allows easy static hosting and gives the benefit of revision, and (ii) it is more portable, e.g., you can move your website to a different hosting service without much hassle.
+\paragraph{Why you should NOT use departmental or university webspace?}  Nowadays many faculty use external hosting such as Github instad of their departmental or university webspace.  The main reasons being that: (i) they have always used it, e.g., during their grad school; (ii) it is flexibile, e.g., GitHub Pages allows easy static hosting and gives the benefit of revision; and (iii) it is more portable, e.g., you can move your website to a different hosting service without much hassle.
 
 
-However, a less common but very important reason---when it happens, it can be a big deal---is that your departmental or university webspace is \emph{not} yours.
+However, a less common but very important reason---when it happens, it can be a big deal---is that your departmental or university webspace is \emph{not} yours. You might think that it's your personal website and you won't likely do anything that violates the university's policy, and so nothing to worry about (exactly my thinking for years!). But the reality is that what you put on your \url{cs.univ.edu/~user} can be used against your university, department, or even yourself.  And while your department or university might not care about what you put on your website, they are very scared of lawsuits and negative publicity.
+
+Ok, what's the big deal you said?  I don't put anything controversial on my website, so I am safe, right? Here are something you might not think about.
+
+\paragraph{Compliance} Do you put education materials on your personal website?  a link to course syllabus?  presentations? lecture notes? Guess what, these might not be ADA\footnote{ The Americans with Disabilities Act (ADA) requires that all public websites are accessible to people with disabilities.  This means that your website should be accessible to people who are blind, deaf, or have other disabilities.  If your website is not ADA compliant, then it can be sued by the US Department of Justice or by individuals (e.g., students or their parents).  This is a big deal and can cost your university a lot of money.  So you should make sure that your website is ADA compliant.} compliant (e.g., are you sure the colors or fonts or space on those materials are accessible to people with disabilities?).
+For example, I have students who asked me to use different fonts and colors due to their disabilities, and I happily obliged.  However, I can totally imagine some disgruntled student or parent suing the university because they failed the course due to inaccessible materials.
+
+
+Another related one is student's privacy. Do you run \texttt{turnin} or plagiarism/AI detection stuff on your personal website?  If so then you're essentially storing and processing students' data on your personal website.
+
+\begin{commentbox}
+  At GMU, we are required to put our course materials on the university's Canvas system. Of course we do not know whether the materials are ADA compliant or not, but at least the university has a team of people (and likely automated tools) to check and make sure that the materials are ADA compliant.\\
+
+
+  A teaching colleague said that they do not like these university's services like Canvas or Sharepoint (for file storage) because they suck, but at least they give some peace of mind that the university is responsible for making sure that the materials are compliant with the law, and if people sue, they will sue the university, not that faculty.  Sounds pretty reasonable to me!
+\end{commentbox}
+
+\paragraph{Political} Do you have a link to your personal blog or social media like Facebook that show what your endorse or like? Do you reference Twitter/X posts? these are be interpreted as you, as a faculty member of your department or university because it was posted from a \url{cs.university.edu} subdomain, endorsing a political party or candidate.  For example, the DOJ in 2025 opens an investigation into universities for political discrimination in hiring, and they cite a tweet (back when Twitter was still around) of the president of the university praising a political candidate that is now considered discriminatory.
+
+Universities are very sensitive to these things.  A legal issue, a lawsuit, or a bad publicity bring a lot of trouble to the university, and guess who will be quoted in the news?  You, the faculty member who put the content on your website.  In short, these things sounds absurd, and probably never should happen, but in the current political climate, it does happen, and universities are tightening their policies and practices to avoid these issues.
+
+
+\begin{commentbox}
+
+\end{commentbox}
+
+
 
 
 \begin{commentbox}[Vu:]
