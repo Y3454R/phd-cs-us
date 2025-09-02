@@ -31,7 +31,8 @@
 \usepackage{booktabs}
 
 \usepackage{tikz}
-\usetikzlibrary{calc}
+\usetikzlibrary{positioning,calc,arrows.meta,shapes.geometric}
+
 \usepackage[dvipsnames]{xcolor}
 %\usepackage{anyfontsize}
 %\usepackage{sectsty}
@@ -711,14 +712,14 @@ Note that the assigned reviewers are the main ones deciding your application, bu
 \section{How are Decisions Made?}\label{sec:how-decisions}
 \sectioninfo{Even if all adcom reviewers recommend acceptance, the application can still be rejected. Vice versa, if all reviewers think the application is weak, the student might still be admitted.}
 
-After reviewers have evaluated an application, \gls{adcom-chair} will review all evaluations, look at entered notes, and ask reviewers to discuss and resolve discrepancies to reach a consensus (e.g., a reviewer wants to accept but the other wants to reject).  Typically, the decision is made entirely by the reviewers. There is no involvement from the adcom chair, department chair, or others. In most cases \gls{adcom-members}, even those reviewing the same application, make decisions independently and do not talk to each other (just a common practice to avoid biasing). In some rare cases we might (\autoref{sec:adcom-discuss}).
+After reviewers have evaluated an application, \gls{adcom-chair} will review all evaluations, look at entered notes, and ask reviewers to discuss and resolve discrepancies to reach a consensus (e.g., a reviewer wants to accept but the other wants to reject).  Typically, the decision is made entirely by the reviewers. There is \emph{no involvement} from the adcom chair, department chair, or others. In most cases \gls{adcom-members}, even those reviewing the same application, make decisions independently and do not talk to each other (just a common practice to avoid biasing). In some rare cases we might (\autoref{sec:adcom-discuss}).
 
 
 Even if \emph{all} reviewers recommend acceptance, the application is not automatically accepted, especially if no faculty is willing to advise the student. For example, if the student is interested in a research area that no faculty is working on, or an area where no faculty is taking new students (e.g., AI/ML where faculty likely already has many students) then the student will not be admitted (see more rejection reasons in \autoref{sec:why-rejected}).  This is increasingly common as the number of applicants grows much faster than the number of available faculty. Note that not every CS faculty can formally advise and graduate CS PhD students (\autoref{sec:faculty-types}).
 
-However, if the student has contacted a faculty member and that faculty is interested in the student and has made this known to the admission committee, then the student is likely to be admitted, \emph{even if the faculty does not review the application or has funding} (thus the benefit of contacting faculty as discussed in~\autoref{sec:contact}). 
+However, if the student has contacted a faculty member and that faculty is interested in the student and has made this known to the adcom, then the student is likely to be admitted, even if the faculty does not have funding.  This thus shows the benefit of contacting faculty (\autoref{sec:contact}).
 
-Similarly, if the student mentioned a faculty in their SOP, adcom might ask that faculty to look at their application and if they are interested in the student.  Even if the student has a weak profile (but still passes the minimum requirement from the university), they might be admitted if a faculty is willing to take them. Adcom members, especially in the US, are very reluctant to go against the faculty's decision (e.g., if a faculty wants to admit a student, we are not going to reject them).
+If the student mentioned a faculty in their SOP, adcom might ask that faculty to look at their application and if they are interested in the student.  Even if the student has a weak profile (but still passes the minimum requirement from the university), they might be admitted if a faculty is willing to take them. Adcom members, especially in the US, are very reluctant to go against the faculty's decision (e.g., if a faculty wants to admit a student, we are not going to reject them).
 
 
 \section{Do Adcom Members Talk to Each Other?}\label{sec:adcom-discuss}
@@ -1967,7 +1968,7 @@ If you get admission to several places, you should consider attending Open House
 \end{commentbox}
 
 
-\section{PhD in other related fields: CE, IST, Cybersecurity}\label{sec:related-fields}
+\section{PhD in other Related Fields: CE, IST, Cybersecurity}\label{sec:related-fields}
 
 You \emph{do not} need to do a PhD in CS to work in CS areas. For example, in addition to a traditional CS department, GMU has IST and Cybersecurity departments, both of which have faculty with PhD in CS and work on CS topics (e.g., AI, Security, Robotics).  So you still can do CS research and publish in CS-focused venues even if you're not in a traditional CS program.  It is common to see faculty with PhD in CS in a non-CS department as well as faculty with non-CS PhD in a CS department.
 
@@ -1979,6 +1980,88 @@ It is possible to transfer between departments (and universities). However, this
 
 
 For this specific reason,  CSRankings includes only faculty who can advise CS PhD students. I also have compiled a \href{https://roars.dev/phd-cs-us/viet-cs-profs-us}{list} of Vietnamese faculty who can advise PhD students. \autoref{sec:faculty-types} talks more about who can serve as your PhD adviser.
+
+
+\section{Comparison Factors}
+
+\subsection{Private vs. Public Universities}
+\subsection{Large vs. Small CS Programs}
+
+\subsection{Prestige vs. Opportunities}
+
+\section{University Hierarchy}
+
+While adcom members have direct influence over admissions decisions, they also operate within a larger university hierarchy that can impact those decisions.  For example, in certain years, enrollment and funding levels may lead to changes in admissions criteria or the number of students accepted (e.g., TA reduction).  Understanding this administrative hierarchy can help you understand the situation better.
+
+\subsection{Top governance and Executive Administration}
+At the very top is the \textbf{Board of Visitors} (public schools) or Board of Trustees (private schools). This body is appointed (or self-perpetuating) and has the ultimate authority over the university, approving budgets, tuition levels, new schools/colleges, and presidential hires and firings.
+
+They will not decide how many PhD students a CS department admits, but their decisions---such as approving the creation of a new College of Computing or cutting budgets---can profoundly change the environment you enter.
+
+The \textbf{President} (or \textbf{Chancellor}) is the CEO of the university and reports directly to the Board. Below them is the Provost, the Chief Academic Officer who oversees all colleges and deans. The Provost's office approves tenure policies, new faculty lines, and graduate school rules---decisions that shape the long-term strength of the CS department.
+
+\section{Shared governance}
+
+Alongside the administration is the \textbf{Faculty Senate}, an elected body of professors that represents the faculty’s collective voice. Depending on the university, the Senate may be mostly advisory or may have real power to approve or block changes in curriculum, tenure standards, and academic freedom policies. Senate decisions can indirectly affect CS students by changing graduate requirements or resource allocations.
+
+\section{College/School}
+CS departments are usually housed inside a College of Engineering, College of Arts and Sciences, or, increasingly, a separate College of Computing. Each college is led by a Dean, who allocates budgets and approves new hires. 
+
+\section{Department}
+Inside the department, the Chair (or Head) manages teaching loads, TA/RA funding, and student support. Supporting them are directors of graduate and undergraduate studies, plus administrative staff who manage day-to-day paperwork.
+
+%While your PhD advisor is the single most important person for your success, you should remember that their power is not absolute. They depend on the Chair and Dean for resources, on the Provost for faculty lines, and ultimately on the Board and President for the institution's priorities. Understanding this hierarchy helps you see why the same CS department can thrive under one Dean or struggle under another.
+
+
+
+\begin{tikzpicture}[
+  scale=0.8, transform shape, % <-- adjust scale factor here
+  node distance=1.2cm and 2cm,
+  box/.style={rectangle, draw, rounded corners, align=center, minimum width=3.3cm, minimum height=1cm, font=\small}
+]
+% Top
+\node[box] (board) {Board of Trustees / Visitors};
+
+% Exec side
+\node[box, below=of board] (president) {President / Chancellor};
+\node[box, below=of president] (provost) {Provost};
+\node[box, below=of provost] (grad) {Graduate School Dean};
+\node[box, below=of grad] (dean) {Dean (Engineering / A\&S / Computing)};
+\node[box, below=of dean] (chair) {CS Department Chair};
+\node[box, below left=of chair] (faculty) {CS Faculty / Advisors};
+\node[box, below right=of chair] (staff) {CS Admin Staff};
+\node[box, below=2cm of chair] (students) {PhD Students};
+
+% Governance side
+\node[box, right=5cm of provost] (senate) {Faculty Senate};
+
+% Connections
+\draw[->] (board) -- (president);
+\draw[->] (president) -- (provost);
+\draw[->] (provost) -- (grad);
+\draw[->] (grad) -- (dean);
+\draw[->] (dean) -- (chair);
+\draw[->] (chair) -- (faculty);
+\draw[->] (chair) -- (staff);
+\draw[->] (faculty) -- (students);
+\draw[->] (staff) -- (students);
+
+% Senate influence
+\draw[->, dashed] (senate) -- (provost);
+\draw[->, dashed] (senate) -- (grad);
+\draw[->, dashed] (senate) -- (dean);
+
+% Legend
+\node[draw, align=left, font=\scriptsize, anchor=north west] at ($(students.south west)+(-0.2,-1.2)$) {
+\begin{tabular}{@{}ll@{}}
+\raisebox{0.5ex}{\tikz{\draw[->] (0,0)--(0.6,0);}} & Reporting line \\
+\raisebox{0.5ex}{\tikz{\draw[->, dashed] (0,0)--(0.6,0);}} & Influence / shared governance \\
+\end{tabular}
+};
+\end{tikzpicture}
+
+
+
 
 \chapter{Choosing an Adviser}\label{chap:choosing-adviser}
 \chapterinfo{The best adviser is the one that you can work well with and has the ability to help you succeed. But you do not know that until you start working with them.}
