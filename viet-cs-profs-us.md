@@ -65,7 +65,7 @@
   [Phu Phung](https://scholar.google.com/citations?user=3VspJzMAAAAJ)            |University of Dayton                         |Security
   [My Thai](https://scholar.google.com/citations?user=zLLJimcAAAAJ)                                   |University of Florida                        |Data Mining; ML
   [Duc (David) Tran](https://scholar.google.com/citations?user=Wi02UQoAAAAJ)                           |University of Massachusetts-Boston           |Networking
-  [Dung H. Tran](https://scholar.google.com/citations?user=_RzS3uMAAAAJ)                       |University of Nebraska-Lincoln               |Logic; FM
+  [Dung H. Tran](https://scholar.google.com/citations?user=_RzS3uMAAAAJ)                       |University of Florida               |Logic; FM
   [Son Tran](https://scholar.google.com/citations?user=7jKj_NcAAAAJ)                                       |New Mexico State                             |Multi-Agent Systems
   [Ni Trieu](https://scholar.google.com/citations?user=AZgugwsAAAAJ)                                         |Arizona State University                     |Security
   [Tam Vu](https://scholar.google.com/citations?user=ptStzsoAAAAJ&hl)  |  Darmouth College | Mobile; Wearable System
