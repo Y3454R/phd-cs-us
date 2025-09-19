@@ -34,7 +34,7 @@
   [Viet Tung Hoang](https://scholar.google.com/citations?user=ggcCMuIAAAAJ)                              |Florida State University                     |Cryptography
   [Thang Hoang](https://scholar.google.com/citations?user=VCjqqogAAAAJ)                                   |Virginia Tech                                |Security
   [Dung T. Huynh](https://scholar.google.com/citations?user=Phk4kUwAAAAJ)                                  |University of Texas-Dallas                   |Wireless Networks
-  [Truong Son Hy](https://scholar.google.com/citations?user=xEXxSN4AAAAJ) | University of Alabama-Birmingham                   |AI/ML
+  [Truong Son Hy](https://scholar.google.com/citations?user=JiKBo6UAAAAJ) | University of Alabama-Birmingham                   |AI/ML
   [Hung Manh La](https://scholar.google.com/citations?user=uG-wAt0AAAAJ)                                       |University of Nevada-Reno                    |Robotics; Mobile
   [Hung Le](https://scholar.google.com/citations?user=D8Vbc48AAAAJ)                                        |University of Massachusetts-Amherst          |Theory
   [Ngan Hoang Le](https://scholar.google.com/citations?user=8ck0k_UAAAAJ)                                              |University of Arkansas                       |CV
