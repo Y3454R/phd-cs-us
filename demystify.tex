@@ -208,12 +208,12 @@
     description={A group of eight private universities in the US known for their academic excellence and social prestige. The Ivy League schools are Brown, Columbia, Cornell, Dartmouth, Harvard, the UPenn, Princeton, and Yale. These schools are typically known for their undergraduate programs more than their graduate programs. Moreover, most top CS programs such as CMU, UIUC, UCSD, UWash, MIT, Stanford, are not in the Ivy League.}
 }
 
-  
 \newglossaryentry{adcom-members}{
     name = adcom members,
     description={Faculty members who are part of the admission committee. People who review applications and make admission decisions (\autoref{chap:evalapps})}
     }
-  
+
+
 \newglossaryentry{adcom-chair}{
     name = adcom chair, 
     description={The faculty member who leads the admission committee. This person is often not involved in individual admission decisions but oversees the process (e.g., resolve disputes, ensure fairness) (\autoref{chap:evalapps})}
@@ -267,10 +267,10 @@
     description={In-state tuition is the tuition rate for students who are residents of the state where the university is located. Out-of-state tuition is the tuition rate for students who are not residents of that state. In-state tuition is typically much lower than out-of-state tuition. PhD students typically do not have to pay tuition as it is covered by their funding, but this might be important for MS students}
     }
 
-\newglossaryentry{lab}{name=Research Lab, description={A group of researchers (profs. and students) working on a common research area, e.g., a Software Engineering Lab.  Typically a lab is led by a single professor, but sometimes it can be co-led by multiple professors. For example, my lab \href{https://roars.dev}{DynaROARS} focuses on my own research area (software verification), but I am also part of the more general SWE group at GMU with other faculty in Software Engineering}}
+\newglossaryentry{lab}{name=research lab, description={A group of researchers (profs. and students) working on a common research area, e.g., a Software Engineering Lab.  Typically a lab is led by a single professor, but sometimes it can be co-led by multiple professors. For example, my lab \href{https://roars.dev}{DynaROARS} focuses on my own research area (software verification), but I am also part of the more general SWE group at GMU with other faculty in Software Engineering}}
 
 
-\newglossaryentry{major}{name=Major, description={A student's primary field of study, e.g., Computer Science, Electrical Engineering, Mathematics, etc. Often used in the context of undergraduate studies (e.g., ``what was your major in undergrad?'')}}
+\newglossaryentry{major}{name=major, description={A student's primary field of study, e.g., Computer Science, Electrical Engineering, Mathematics, etc. Often used in the context of undergraduate studies (e.g., ``what was your major in undergrad?'')}}
 
 % \item[MS \autoref{sec:msrequirement}] Master of Science. A graduate degree that typically requires 2 years of study.
 
@@ -281,9 +281,10 @@
 % \item[F-1] Student Visa. A visa that allows international students to study full-time at an accredited institution in the US.
 % \item[F-2] Dependent Visa. A visa that allows the spouse and children of an F-1 visa holder to live in the US.
 
+\newacronym[description={The academic year in the US typically starts in late August or early September and ends in May or June. It is divided into two main semesters: Fall (August/September to December) and Spring (January to May). Some universities also have a Summer semester (May to August) which is often optional and may have fewer courses offered. Some universities, e.g., those in California, use a quarter system instead of semesters, where the year is divided into four quarters: Fall, Winter, Spring, and Summer. Each quarter typically lasts around 10 weeks.}]{AY}{AY}{academic year}
 
-
-\newacronym[description={Commonly mentioned by international students to refer to top-tier journals in CS.  Q1 is very well-known in CS in the US (also CS often focuses on confs. rather than journals), and many CS faculty in the US might not know what it means.  If you want to refer to \glslink{toptier}{top-tier} journals, you should mention the specific journals, e.g., TSE in Software Engineering}]{Q1}{Q1}{Scopus Q1 Journals}
+\newacronym[
+  description={Commonly mentioned by international students to refer to top-tier journals in CS.  Q1 is very well-known in CS in the US (also CS often focuses on confs. rather than journals), and many CS faculty in the US might not know what it means.  If you want to refer to \glslink{toptier}{top-tier} journals, you should mention the specific journals, e.g., TSE in Software Engineering}]{Q1}{Q1}{Scopus Q1 Journals}
   
 \newacronym[description={A main type of PhD funding where you work on a research project for a professor (\autoref{sec:ra})}]{ra}{RA}{Research Assistantship} 
 \newacronym[description={A main type of PhD funding where you help a a professor with teaching, e.g., grading assignments (\autoref{sec:ta})}]{ta}{TA}{Teaching Assistantship} 
@@ -295,8 +296,11 @@
 \newacronym[description={A program funded by the NSF to provide research opportunities for undergraduate students}]{REU}{REU}{Research Experience for Undergraduates}
 
 \newacronym[description={A document written by yourself to explains your research interests, background, and reasons for applying to a PhD program (\autoref{chap:sop})}]{SOP}{SOP}{Statement of Purpose}
+
 \newacronym[description=The group of faculty members who review applications and make admission decisions (\autoref{sec:adcom})]{adcom}{adcom}{Admission Committee}
+
 \newacronym[description=A doctoral degree that represents the highest level of academic achievement in a particular field of study. In CS it typically requires original research and a dissertation]{phd}{PhD}{Doctor of Philosophy}
+
 \newacronym[description={A PhD candidate who has finished all course work and exams and only needs to write and defend their dissertation}]{ABD}{ABD}{All But Dissertation}
 
 
@@ -568,9 +572,9 @@ Moreover, if you have an MS then some course work \emph{might be} transferred fo
 \section{Can I apply for PhD in CS for the Spring or Summer?}\label{sec:apply-spring-summer}
 \sectioninfo{Fall is the most common start time for PhD programs in the US and allows you to apply for funding opportunities.}
 
-Typically, most students apply to start their PhD study in the Fall. This means they send in their application around December and receive admission notification sometime in the Spring, and officially begin their PhD study in the Fall (August or September).
+Most students apply to start their PhD study in the Fall. This means they send in their application around December and receive admission notification sometime in the Spring, and officially begin their PhD study in the Fall (August or September).
 
-Fall---the start of an academic year---is the most common start time for PhD programs in the US, and many universities only accept new PhD students in the Fall. Importantly, applying for the Fall allows you to apply for funding opportunities (\autoref{chap:funding}) that are available only for Fall admits, such as TAships (\autoref{sec:ta}) and fellowships (\autoref{sec:ra}).
+Fall---the start of an \gls{AY}---is the most common start time for PhD programs in the US, and many universities only accept new PhD students in the Fall. Importantly, applying for the Fall allows you to apply for funding opportunities (\autoref{chap:funding}) that are available only for Fall admits, such as TAships (\autoref{sec:ta}) and fellowships (\autoref{sec:ra}).
 
 However, many universities also accept PhD students in the Spring or Summer, especially when you have a specific adviser who would fund you through an RAship (\autoref{sec:ra}). This is less common, and you would loose funding opportunities that are available only for Fall admits.
 
@@ -727,7 +731,7 @@ If the student mentioned a faculty in their SOP, adcom might ask that faculty to
 
 We typically review applications independently and do not talk to each other.  This is to avoid biasing, e.g., if one reviewer says they want to accept, the other might feel pressured to accept as well.  
 
-However, when there are discrepancies in evaluations, the adcom chair will ask reviewers to discuss the application to reach a consensus.  We might also talk to each other for interesting or strong applications, e.g., how to recruit this student or who should be the adviser. 
+However, when there are discrepancies in evaluations, the \gls{adcom-chair} will ask reviewers to discuss the application to reach a consensus.  We might also talk to each other for interesting or strong applications, e.g., how to recruit this student or who should be the adviser. 
 If the student mentioned a faculty member in their SOP, we might ask that faculty if they are interested in the student. 
 
 
@@ -1764,11 +1768,11 @@ Note that funding is typically more available for PhD students than MS (\autoref
 \section{Graduate Assistantship (TA/RA)}\label{sec:ta-ra}
 The most common type of funding is \textbf{graduate assistantship}, which is either TA or RA. Both TA and RA come with tuition waiving (you don't have to pay tuition), health insurance (this takes care of your insurance, which is a must-have in the US), and most importantly, your stipend (i.e., your salary). Some universities also give significant discounts or pay insurance for spouses/children.
 
-Several things about stipends.  First, the amount of stipend \emph{varies} and depends on factors such as location (e.g., a stipend in the DC area is likely higher than in Lincoln, Nebraska due to higher living costs). Second, an academic year (AY)  is typically \emph{9-month} in the US, so the stipend is for 9 months. Third, you might get paid over the summer (\autoref{sec:summer-funding}) through funding from your professor or fellowship (typically no TA over the summer). Fourth, like most sources of income in the US, you will have to \emph{pay tax} on your stipend.  Finally, private universities might pay more for stipends, but they could have extra activity fees or some other hidden ones (e.g., you may need to pay some fees for each credit hour).
+Several things about stipends.  First, the amount of stipend \emph{varies} and depends on factors such as location (e.g., a stipend in the DC area is likely higher than in Lincoln, Nebraska due to higher living costs). Second, an \acrfull{AY}  is typically \emph{9-month} in the US, so the stipend is for 9 months. Third, you might get paid over the summer (\autoref{sec:summer-funding}) through funding from your professor or fellowship (typically no TA over the summer). Fourth, like most sources of income in the US, you will have to \emph{pay tax} on your stipend.  Finally, private universities might pay more for stipends, but they could have extra activity fees or some other hidden ones (e.g., you may need to pay some fees for each credit hour).
 
 
 \begin{commentbox}
-  TA and RA at GMU have similar benefits in tuition waiving and insurance.  The college and department will set the rate for a 9-month graduate assistant stipend.  TA, which is paid by the department, will likely be that amount but RA might be higher depending on  the prof and the stage of the student (1st year vs \acrshort{ABD}\footnote{acrlong{ABD}: close to graduate.}).\\
+  TA and RA at GMU have similar benefits in tuition waiving and insurance.  The college and department will set the rate for a 9-month graduate assistant stipend.  TA, which is paid by the department, will likely be that amount but RA might be higher depending on  the prof and the stage of the student (1st year vs \acrshort{ABD}\footnote{\acrlong{ABD}: close to graduate.}).\\
 
   At GMU, CS TA/RA is paid the highest.  First, CS is under the College of Engineering and Computing (CEC), which already has a higher TA stipend than other colleges.  Second, CS is the largest department in the college, and has the higher TA stipend than what CEC suggests.  Finally, it is a tradition that CS faculty pay their RAs more than the department's TA rate.  So a winning combination for CS PhD students.
   
@@ -1852,7 +1856,7 @@ For a full breakdown of how much a graduate student costs, see \autoref{sec:ra-c
 
 Students often get confused about summer funding, e.g., if they will get paid during the summer.  This is a good question because PhD students have no classes over the summer and so are often more productive and produce good research. However, summer salary is largely depending on your funding source.
 
-First, recall that an academic year (AY)---consisting of Fall and Spring semesters---is typically 9 months, thus your stipend is for 9 months and do not cover the three summer month (and many places allow you to \emph{spread} it over 12 months, so you get paid monthly over 12 months, but the total amount is still the same).
+First, recall that an \acrfull{AY}---consisting of Fall and Spring semesters---is typically 9 months, thus your stipend is for 9 months and do not cover the three summer month (and many places allow you to \emph{spread} it over 12 months, so you get paid monthly over 12 months, but the total amount is still the same).
 
 If your funding source is TA (\autoref{sec:ta}), you typically do not get paid over the summer because there are no classes to teach.  Some CS departments offer summer funding, but it is not guaranteed and might not be a lot. For example, at GMU, we offer summer funding for 1st-year PhD TA students. The amount over the 3-month summer is similar to their monthly stipend (i.e., their 9-month stipend divided by 3 for the 3 summer months).
 
@@ -1861,7 +1865,7 @@ When writing grant proposals, profs. typically include summer funding for their 
 
 
 \begin{commentbox}
-For my students, I have been fortunate to have funding to support them over the summer. Over the 3-summer months, I typically pay them 1/3 of their 9-month stipend. I prioritize summer funding for my students because GMU has very good TA resources so they never have to worry about funding during the AY.
+For my students, I have been fortunate to have funding to support them over the summer. Over the 3-summer months, I typically pay them 1/3 of their 9-month stipend. I prioritize summer funding for my students because GMU has very good TA resources so they never have to worry about funding during the \gls{AY}.
 \end{commentbox}
 
 Finally, for fellowships (\autoref{sec:fellowships}) you might get paid over the summer depending on your fellowship (\autoref{sec:fellowships}). Good ones, e.g., from NSF, Google, and Microsoft, will pay you the whole year.
@@ -1989,11 +1993,58 @@ It is possible to transfer between departments (and universities). However, this
 
 For this specific reason,  CSRankings includes only faculty who can advise CS PhD students. I also have compiled a \href{https://roars.dev/phd-cs-us/viet-cs-profs-us}{list} of Vietnamese faculty who can advise PhD students. \autoref{sec:faculty-types} talks more about who can serve as your PhD adviser.
 
-% \section{Comparison Factors}
+\section{Comparison Factors}
 
 % \subsection{Private vs. Public Universities}
-% \subsection{Large vs. Small CS Programs}
+\subsection{Large/Well-known vs. Small/Unknown CS Programs}
 
+First, large/well-known is subjective and relative, especially for students not familiar with the US higher education system.
+For simplicity I will simply refer to the top 50 CS programs from CSRankings (\autoref{sec:selecting-ranking-schools}) in the US as large/well-known and the rest as small/unknown.
+
+The ``feel-good'' advice is that you should go where it fits you and that a good adviser is more important than the school. But, how do you know what would or would not fit you if you have never been there?  For example, would you refuse to go to UIUC because it is in a middle of nowhere?  Also, how do you know if a prof. is good or not if you have never worked with them? For example, a prof. might seem nice and supportive during your visit, but turns out to be not compatible with you later on.  So while this advice sounds good, it is not very actionable.  The point is:  you have no information to make these decisions, so you should not rely on such vague advice.
+
+So I will be direct and say that \emph{if you don't have any strong preference} (i.e., you don't know much about the schools or profs), then \emph{if you get into a large/well-known program, you should strongly consider going there}.  These programs typically have more resources, more faculty, better students (to work with), and more opportunities (e.g., internships, jobs). 
+
+
+
+\begin{commentbox}
+  Many faculty face this similar dilemma when they apply for faculty jobs: top schools vs. smaller schools. In most cases, when everything else is equal, they would choose the top school for similar reasons: more resources (e.g., funding and support from the university) and most importantly better students!   
+  \\
+
+  The main difference is that faculty have more information (e.g., because they spent 6--7 years in grad school in the US). For example, they prefer West Coast over East Coast because of the weather and lifestyle. They might also want a location closer to their family and friends.  But you, especially international students, do not have (or care about) such information: do you know the difference between Seattle and Boston? Do you know or care about the difference between a college town like Champaign or a big city like Philadelphia?
+  \\
+
+  For someone who has been in the US for a while, these things matter, and they are willing to give up things to be in a place they like.  But for you, these things do not matter much, so you should just go where you can get the best opportunities.
+\end{commentbox}
+
+
+
+One important thing is that  large programs have many faculty in diverse research areas. That means if you don't get along with one prof., you can switch to another one.  In contrast, in a small program, if you don't get along with your prof., you might be stuck or have to transfer to another school (which is very troublesome). 
+
+That said, an advantage of being at a small program is that you can easily stand out. With just a NeurIPS or PLDI paper, you can be the star in your research group and even the entire CS program and can graduate quickly. In contrast, in a large program, those same papers might not get you much attention and you are under more pressure to publish more.  
+
+\begin{commentbox}
+  There are always trade-offs, but I've found that young students—without the burdens of family or other major responsibilities—benefit most from being pushed and exposed to opportunities. As Steve Jobs said, \emph{``Stay hungry, stay foolish.''} You should go where you'll be challenged to grow the most, and large, well-known programs typically provide that.
+\end{commentbox}
+
+% So here are some concrete factors to consider when choosing between large/well-known vs. small/unknown CS programs.
+
+% \begin{table}
+% \centering
+% \caption{Comparison between Large/Well-known vs. Small/Unknown CS Programs}\label{tab:large-vs-small}
+% \begin{tabular}
+% {r|c|c}
+%   \toprule
+%                            & \textbf{Large/Well-known} & \textbf{Small/Unknown} \\
+%   \midrule
+%   \textbf{Faculty}         & Many, diverse research    & Few, focused research  \\
+%   \textbf{Students}        & Many, diverse             & Few, less diverse     \\
+%   \textbf{Funding}         & More, competitive         & Less, stable          \\
+%   \textbf{Reputation}      & High                      & Low                   \\
+%   \textbf{Opportunities}   & Many, competitive         & Fewer, less competitive\\
+%   \bottomrule   
+% \end{tabular}
+% \end{table}
 % \subsection{Prestige vs. Opportunities}
 
 \section{University Hierarchy}
@@ -2073,7 +2124,7 @@ I am one of the faculty senators at GMU. Here, the Faculty Senate serves as an a
 Under the top administration are the various colleges or schools that house different academic departments. Common examples include the College of Engineering, College of Arts and Sciences, and increasingly, a separate College of Computing (e.g., like at Georgia Tech).  Schools are typically under a college, e.g., the School of Computing within the College of Engineering at UNL. But in some universities, the School is a standalone unit, e.g., the School of Computer Science at CMU.
 
 \begin{commentbox}
-  At GMU, CS is under School of Computing (SoC), which is under College of Engineering and Computing (CEC).   The SoC has its own Dean, who reports to the Dean of CEC, who then reports to the Provost.\\
+  At GMU, CS is under School of Computing (SoC), which is under College of Engineering and Computing (CEC).   The Scool of Computing (SoC) has its own Dean, who reports to the Dean of CEC, who then reports to the Provost.\\
 
   GMU SoC consists of CS, IST, Stats.  CEC consists of SoC and other engineering departments such as Electrical and Computing Engineering (ECE), Biomedical Engineering (BME), and Mechanical Engineering (ME).  CEC is one of the largest colleges at GMU, and CS is the largest department in CEC.
 \end{commentbox}
@@ -2091,8 +2142,10 @@ The Chair reports to the Dean and is responsible for implementing college polici
 
 While department chairs do not usually get involved in PhD admissions decisions (see how decisions are made in~\autoref{sec:how-decisions}), they set the overall direction and priorities that shape how many students are admitted and what resources are available to them.
 
-\section{Faculty, and Staff}
-In many cases adcom consults with faculty members who are potential advisers to get their input on applicants (\autoref{sec:applications-assigned}). Thus general faculty can influence admissions by recommending students they want to advise. In addition, a CS department has various \textbf{administrative staff} who handle day-to-day operations, e.g., contacting applicants, processing applications, and managing student records. While staff do not make admissions decisions, they ensure the process runs smoothly and efficiently --- a critical behind-the-scenes role.
+\section{Faculty and Staff}
+In many cases adcom consults with faculty members who are potential advisers to get their input on applicants (\autoref{sec:applications-assigned}). Thus general faculty can influence admissions by recommending students they want to advise. 
+
+In addition, a CS department has various \textbf{administrative staff} who handle day-to-day operations, e.g., contacting applicants, processing applications, and managing student records. While staff do not make admissions decisions, they ensure the process runs smoothly and efficiently---a critical behind-the-scenes role.
 
 
 
@@ -2249,14 +2302,14 @@ Tenured faculty---associate and full profs---are likely older, more well-known, 
 
 \section{Faculty from Your Country}\label{sec:prioritizing-faculty}
 
-Understandably many students prefer to work with faculty whom came from their own country.
+Understandably many students prefer to work with faculty who came from their own country.
 You feel more comfortable as they share the same language and culture, understanding your schools and background, and that they ``get'' you.
 So it is perfectly fine to start with faculty from your country (e.g., a list of \href{https://roars.dev/phd-cs-us/viet-cs-profs-us}{Vietnamese CS faculty} in the US.)
 
-However, this should not the main reason for choosing a faculty, and you should expand your search to include faculty from other countries. Research and higher education in general encourage exploration, e.g., students often go to different grad schools than their undergrad schools, and switching fields (and even advisors) is more common than you think.  It also won't be fun to be in a lab with all Vietnamese with similar background and all speak Vietnamese all the time, you will not learn much from each other.
+However, this should not the main reason for choosing a faculty, and you should expand your search to include faculty from other countries. Research and higher education in general encourage exploration, e.g., students often go to different grad schools than their undergrad schools, and switching fields (and even advisors) is more common than you think.  It also won't be fun to be in a lab with students with similar background and all speak the same language all the time, you will not learn much from each other.
 
 \begin{commentbox}
-While my group has many Vietnamese, I also have many non-Vietnamese students, e.g., from China, Romania, Rwanda, and most of my undergrads are domestic US students (\autoref{chap:domestic-students}). It is more fun this way---they get to learn from each other and share different perspectives, and of course get to try exotic food and their history from different countries (it amazes me on how knowledgeable and enthusiam students have on food!).
+ My \href{https://roars.dev}{research group} has many Vietnamese, but I also have many non-Vietnamese students, e.g., from China, Romania, Rwanda, and most of my undergrads are domestic US students (\autoref{chap:domestic-students}). It is more fun this way---they get to learn from each other and share different perspectives, and of course get to try exotic food and their history from different countries (it amazes me on how knowledgeable and enthusiam students have on food!).
 \end{commentbox}
 
 \section{Should I Contact a Prof. Before Applying? How to Get a Positive Reply?}\label{sec:contact}
@@ -2275,7 +2328,7 @@ First, if you want to contact a prof. to \emph{ask about your admission chance},
 So how to get someone to look at your profile and give input? You could ask your professors, LoR writers, collaborators, or those who have previously applied. For this kind of feedback, ask someone you have a personal connection with.
 
 On the other hand, if you want to contact a prof. to ask about \emph{research opportunities}, or \emph{GTA/GRA} support (\autoref{sec:ta-ra}), then \emph{yes}, I believe you should.
-It is still a long shot (you might not get a reply), but it is \emph{worth trying} (and I say this even though I do not reply to most of these emails, see \autoref{sec:kiss-of-death-emails} for why). 
+It is still a long shot (you probably won't get a reply), but it is \emph{worth trying} (and I say this even though I do not reply to most of these emails, see \autoref{sec:kiss-of-death-emails} for why). 
 However, you really need to put effort into it and do it the \emph{right way}.
 
 The best way to catch the prof.'s attention is to \emph{customize your email} for them.  
@@ -2483,13 +2536,13 @@ But of course, we do respond to well-written emails (\autoref{sec:contact}) that
 As defined in~\autoref{chap:glossary}, international students are those who would need a visa to study in the US.  In most cases, \textbf{F-1} is the main visa needed to study full-time at an accredited institution.  Here are some key points about F-1: 
 
 \begin{itemize}
-\item \textbf{Employment:} You are allowed to work on-campus for up to \textbf{20 hours per week during the academic year} (because you still need to take classes) and \textbf{full-time} (typically 40 hrs) during official school breaks (e.g., summer and winter breaks). Off-campus employment requires authorization, which can be obtained through CPT and OPT programs described below.
+\item \textbf{Employment:} You are allowed to work on-campus for up to \textbf{20 hours per week during the \acrfull{AY}} (because you still need to take classes) and \textbf{full-time} (typically 40 hrs) during official school breaks (e.g., summer and winter breaks). Off-campus employment requires authorization, which can be obtained through CPT and OPT programs described below.
 
 \item \textbf{Curricular Practical Training (CPT):} CPT allows you to participate in internships or practical training that is an integral part of their academic curriculum. CPT must be related to your field of study and can be full-time or part-time. It requires prior authorization from your university and must be completed before graduation.
 
 \item \textbf{Optional Practical Training (OPT):} OPT provides up to 12 months of work authorization for students before or after completing their degree. For students in STEM fields, there is an additional 24-month extension available. OPT requires prior application and approval from USCIS.
 
-\item \textbf{Full-time Enrollment:} You must maintain full-time enrollment status during the academic year. This means taking a minimum number of credits each semester, as defined by your program. Dropping below full-time status can result in loss of visa status.
+\item \textbf{Full-time Enrollment:} You must maintain full-time enrollment status during the \acrshort{AY}. This means taking a minimum number of credits each semester, as defined by your program. Dropping below full-time status can result in loss of visa status.
 \end{itemize}
 
 \includepdf[pages=-]{files/visa.pdf}
@@ -3329,7 +3382,7 @@ In short, rankings from sources like US News are mainly used high school and und
 %     Anyone with knowledge of CS research will see these rankings for what they are — nonsense — and ignore them. But others may be seriously misled. 
 % \end{commentbox}
 
-\section{CSRankings.org}
+\section{CSRankings.org}\label{sec:csrankings}
 Instead of traditional school rankings, many PhD students and faculty use \href{https://www.csrankings.org}{CSRankings.org}, which is a ranking system based on faculty publications at top CS conferences.  The metrics and ranking calculation are transparent and ranking results are updated automatically (after the conference proceedings are indexed in DBLP).  Because the approach is entirely data-driven, it is not influenced by any subjective opinions or biases, and very difficult to manipulate. The number of Github pull requests by CS faculty (in fact, even non-CS faculty) to be included in the rankings is a good indicator of the impact of the rankings.  
 
 \paragraph{Geometric Mean} CSRankings uses the \emph{geometric mean} to summarize the performance of a department across multiple disciplines. The score for each department is calculated as follows:
