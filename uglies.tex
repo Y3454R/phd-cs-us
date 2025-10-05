@@ -1,0 +1,1344 @@
+\documentclass[oneside,11pt,dvipsnames]{book}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1.5in]{geometry}
+\usepackage{soul}
+% \usepackage[small,compact]{titlesec} %very powerful
+\usepackage[most]{tcolorbox}
+% \setsecnumdepth{subsection}
+% \setcounter{tocdepth}{3}
+\usepackage{enumitem}
+\usepackage{epigraph}
+\usepackage{cite}
+\usepackage{caption}
+\captionsetup{font=small}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\setlength\intextsep{0pt} % remove extra space above and below in-line float
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks,
+  citecolor=black,
+  filecolor=black,
+  linkcolor=blue,
+  urlcolor=blue,
+}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{xcolor}
+
+\usepackage{anyfontsize}
+\usepackage{sectsty}
+
+\usepackage[makeroom]{cancel}
+
+\newtcolorbox{mybox}{
+  enhanced,
+  boxrule=0pt,frame hidden,
+  borderline west={2pt}{0pt}{green!75!black},
+  colback=green!10!white,
+  sharp corners
+}
+
+\newenvironment{commentbox}[1][]{
+  \small
+  \begin{mybox}
+    {\small \textbf{#1}}
+  }{
+  \end{mybox}
+}
+
+\newtcolorbox{mydomesticbox}{
+  enhanced,
+  boxrule=0pt,frame hidden,
+  borderline west={2pt}{0pt}{red!75!black},
+  colback=blue!10!white,
+  sharp corners
+}
+
+\newenvironment{domesticbox}[1][]{
+  \small
+  \begin{mydomesticbox}
+    {\small \textbf{#1}}
+  }{
+  \end{mydomesticbox}
+}
+
+\renewcommand{\figurename}{Fig.}
+\renewcommand{\tablename}{Tab.}
+\def\Section{\S}
+\renewcommand{\figureautorefname}{Fig.}
+\renewcommand{\tableautorefname}{Tab.}
+\makeatletter
+\renewcommand{\chapterautorefname}{\S\@gobble}
+\renewcommand{\sectionautorefname}{\S\@gobble}
+\renewcommand{\subsectionautorefname}{\S\@gobble}
+\renewcommand{\appendixautorefname}{\S\@gobble}
+\makeatother
+
+\newcommand{\mycomment}[3][\color{blue}]{{#1{{#2}: {#3}}}}
+\newcommand{\tvn}[1]{\mycomment{TVN}{#1}}{}
+\newcommand{\didi}[1]{\mycomment{Didier}{#1}}{}
+\newcommand{\tl}[1]{\mycomment{ThanhLe}{#1}}{}
+\newcommand{\red}[1]{{\color{red}{#1}}}
+\newcommand{\xz}[1]{\mycomment{Xiaokuan}{[#1]}}{}
+
+
+\begin{document}
+
+\pagestyle{empty}
+\begin{tikzpicture}[overlay,remember picture]
+
+    % Background color
+    \fill[
+    black!2]
+    (current page.south west) rectangle (current page.north east);
+    
+    % Rectangles
+    \shade[
+    left color=Dandelion, 
+    right color=Dandelion!40,
+    transform canvas ={rotate around ={45:($(current page.north west)+(0,-6)$)}}] 
+    ($(current page.north west)+(0,-6)$) rectangle ++(9,1.5);
+    
+    \shade[
+    left color=lightgray,
+    right color=lightgray!50,
+    rounded corners=0.75cm,
+    transform canvas ={rotate around ={45:($(current page.north west)+(.5,-10)$)}}]
+    ($(current page.north west)+(0.5,-10)$) rectangle ++(15,1.5);
+    
+    \shade[
+    left color=lightgray,
+    rounded corners=0.3cm,
+    transform canvas ={rotate around ={45:($(current page.north west)+(.5,-10)$)}}] ($(current page.north west)+(1.5,-9.55)$) rectangle ++(7,.6);
+    
+    \shade[
+    left color=orange!80,
+    right color=orange!60,
+    rounded corners=0.4cm,
+    transform canvas ={rotate around ={45:($(current page.north)+(-1.5,-3)$)}}]
+    ($(current page.north)+(-1.5,-3)$) rectangle ++(9,0.8);
+    
+    \shade[
+    left color=red!80,
+    right color=red!80,
+    rounded corners=0.9cm,
+    transform canvas ={rotate around ={45:($(current page.north)+(-3,-8)$)}}] ($(current page.north)+(-3,-8)$) rectangle ++(15,1.8);
+    
+    \shade[
+    left color=orange,
+    right color=Dandelion,
+    rounded corners=0.9cm,
+    transform canvas ={rotate around ={45:($(current page.north west)+(4,-15.5)$)}}]
+    ($(current page.north west)+(4,-15.5)$) rectangle ++(30,1.8);
+    
+    \shade[
+    left color=RoyalBlue,
+    right color=Emerald,
+    rounded corners=0.75cm,
+    transform canvas ={rotate around ={45:($(current page.north west)+(13,-10)$)}}]
+    ($(current page.north west)+(13,-10)$) rectangle ++(15,1.5);
+    
+    \shade[
+    left color=ForestGreen,
+    rounded corners=0.3cm,
+    transform canvas ={rotate around ={45:($(current page.north west)+(18,-8)$)}}]
+    ($(current page.north west)+(18,-8)$) rectangle ++(15,0.6);
+    
+    \shade[
+    left color=ForestGreen,
+    rounded corners=0.4cm,
+    transform canvas ={rotate around ={45:($(current page.north west)+(19,-5.65)$)}}]
+    ($(current page.north west)+(19,-5.65)$) rectangle ++(15,0.8);
+    
+    \shade[
+    left color=OrangeRed,
+    right color=red!80,
+    rounded corners=0.6cm,
+    transform canvas ={rotate around ={45:($(current page.north west)+(20,-9)$)}}] 
+    ($(current page.north west)+(20,-9)$) rectangle ++(14,1.2);
+    
+    % Year
+    \draw[ultra thick,gray]
+    ($(current page.center)+(5,2)$) -- ++(0,-3cm) 
+    node[
+    midway,
+    left=0.25cm,
+    text width=5cm,
+    align=right,
+    black!75
+    ]
+    {
+    {\fontsize{25}{30} \selectfont \bf Computer\\[8pt] Science}
+    } 
+    node[
+    midway,
+    right=0.25cm,
+    text width=6cm,
+    align=left,
+    ForestGreen]
+    {
+    {\fontsize{40}{42} \selectfont Academia}
+    };
+    
+    % Title
+    \node[align=center] at ($(current page.center)+(0,-5)$) 
+    {
+    {\fontsize{24}{24} \selectfont {{Uglies in Academia}}} \\[0.15in]
+    %{\fontsize{18}{18} \selectfont {{Recognize them, Accept them, and Not Give a Damn About Them}}} \\[1in]    
+    %{\fontsize{18}{18} \selectfont {{A Handbook for International and Domestic Students}}} \\[0.5in]    
+
+    {\fontsize{16}{19.2} \selectfont \textcolor{ForestGreen}{ \bf ThanhVu (Vu) Nguyen}}\\[0.1in]
+    George Mason University, Dept. of Computer Science\\[0.1in]
+    \today{} (latest version available on  \href{https://github.com/nguyenthanhvuh/phd-cs-us}{Github})
+    };
+    \end{tikzpicture}
+
+\chapter{Preface}
+This documents my tenure track journey in computer science and the lessons I have learned along the way. It is a way for me to reflect on my experiences and share them with others who may be interested in pursuing a similar path. I hope that it will be helpful to those who are in their early stages of academia (e.g., tenure-track faculty), especially in computer science.
+
+This document is available at 
+
+\begin{center}
+  \href{https://nguyenthanhvuh.github.io/phd-cs-us/faculty.pdf}{nguyenthanhvuh.github.io/phd-cs-us/faculty.pdf},
+\end{center}
+
+\noindent and its \LaTeX{} source is also on \href{https://github.com/nguyenthanhvuh/phd-cs-us}{Github}. If you have questions or comments, feel free to create a \href{https://github.com/nguyenthanhvuh/phd-cs-us/issues}{GitHub issue} for discussion.
+
+\newpage
+\tableofcontents*
+
+\chapter{Summary}\label{sec:summary}
+\mainmatter
+\chapter{Intro}
+
+
+\section{The 5 jobs of an assistant professor}
+An tenure-track professor in CS (and likely in other STEM fields) at an R1 university typically has \emph{five} jobs:
+
+\begin{enumerate}
+\item[\textbf{Research}] You need to do research and publish papers.  To establish yourself as an independent research, you should publish papers with your students (and not solely with your PhD or postdoc adviser).
+
+\item[\textbf{Funding}] You need to write (many) proposals and secure funding. Typical sponsors include government agencies (e.g., NSF) and industry.
+
+\item[\textbf{Mentoring}] You need to recruit, mentor, and graduate PhD students.  You likely need to graduate at least a 1 PhD by the time you go up for tenure.
+
+\item[\textbf{Teaching}] You need to teach! Typically, you will teach about 1--2 courses per semester.
+
+  \item[\textbf{Service}]  You need to serve for your research community (e.g., PC, review journals, NSF panels) for your institution (e.g., PhD admission committees, dissertation committee).  You also need to do other things including writing LoRs for your students (and even your peers).
+
+
+\end{enumerate}
+
+
+So, there you go. A new assistant prof. opening their own lab starting their academic career typically has these 5 duties.  In some sense having your own lab is like opening your own start up company. You have to work on raising funding, recruiting employees, do the actual work, etc.  You don't have a boss, but you are responsible for everything.  
+
+
+\section{Pros and Cons}
+
+Pros:
+\begin{itemize}
+\item Freedom. You don’t have a boss. Seriously! You can work on any research topics you want, choose your own students and collaborators, work on your own time, and freedom to travel and work from anywhere.
+
+  \item Students. It's a great award when seeing how your students evolve to be more mature and become an expert in their research.
+
+\item Flexibility. You can do pretty much anything.  Travels, give talks, write paper/blogs/books (like this one).  Create new courses and even online courses.  Collaborate  with academia, government, research lab, industry.  Start your own company when you retire!
+
+\item Time with family. This might seem like a weird pro, but as a professor, I have much more
+control over my time than many other jobs. It lets me schedule my work so that I can
+spend more with my family. For example, when my ﬁrst kid was born, my department
+gave me teaching time off so that I could spend time with him. I spent six months with
+my son – irreplaceable time that is harder to get in many other jobs (this is especially
+true in the USA where paternity and maternity leave is minimal in many jobs).
+\end{itemize}
+
+Cons:
+\begin{itemize}
+\item Responsibility: The role carries high responsibility, not only for one's own career but also for the careers of PhD students under their supervision.
+\item Stress: The initial years are particularly stressful as one learns various aspects of the job while under pressure.
+\item Poor financial compensation: Assistant professors typically earn less than they would in industry, leading to a significant opportunity cost over time.
+\item Funding: Securing research funds requires substantial time and effort, with no guarantee of success, given the competitive nature of grant applications.
+\item Culture of unpaid labor: Academia in the USA often relies on unpaid work, both from faculty and students, which can be a significant drawback compared to industry where compensation is typically fairer.
+\end{itemize}
+
+\chapter{Research and Publications}\label{chap:research}
+
+Research, in particular publications, is a major component of P\&T and of course in getting your name out there. P\&T evaluation requires no specific conferences/journals or numbers of papers, but typically you will want to have a good number of papers in top venues.
+Papers and work that won awards, e.g., best paper awards, can help a lot in P\&T. Papers with very high citations also help.  Research areas that you started and are now popular also count.  Finally, new research directions that can help get grants are also good.
+
+\section{Venues}
+
+Depending on your field, you might focus on publishing at top conferences or journal.  You probably should know what's popular in your area already (if not, ask your senior colleagues). If you're at an R1 university, you will want to publish at top venues, and not just any venue.  You should also aim to publish at a variety of venues, and not just one.  This will show that your research is of interest to a wide range of people.
+
+\subsection{Conferences}
+In most CS fields, conferences are more common and competitive than journals. Each field has several of top conferences every year (e.g., in Software Engineering, ICSE, FSE, ASE, and ISSTA are top four).  They are often scheduled so that if you miss (or get rejected) from one, you can submit to another.
+
+You probably will want to get at least about 2 papers at top places each year. This is an average and so you might have 3 one year and 1 the next. Papers with your students are likely more preferred than papers with your peers (and their students) because it shows that you are mentoring your students well and that the project is lead by your group.
+
+
+
+
+\subsection{Journals}
+In some fields, journals are more common and prestigious. Moreover, many areas have top journals in additions to well-known conferences (e.g., in addition to the main four confs as mentioned above, SE also has Trans. of Software Engr. or TSE, which is a very well-known and high-quality journal).  Typically, or at least in SE, the common approach is publishing new work to conference and followup work to journals (e.g., so the journal paper is an substantial extension of the conf. paper with new experiments, studies, theorems, etc). In some sense, journals are for more mature work, and conferences are for new ideas.
+
+While you are not expected to publish regularly in journals, having a few papers in top journals by your tenure evaluation shows the diversity of your research and that you can publish in different venues.
+
+
+
+\subsection{Short papers, workshops, etc} Short papers in workshop or non-research tracks at a conference (e.g., tool, demo, vision, etc) do not count as much.
+They describe work that might not be as mature (e.g., new idea) or as complete (e.g., a tool or a demo), and also have higher acceptance rate. Many people use them as a way to get feedback on their work before submitting to a full paper venue.  Many P\&T committees do not count or care much about these and having too many of them can be a negative signal.
+
+While many faculty do not value short papers, I find that they are are very useful for writing grant proposals. They show that you have a new idea and good preliminary results that are worth pursuing further. Sometimes a full paper is not as good because the research is relatively complete with strong results, which bring the concern that you already did all the cool work and the proposal is minor and not exciting.
+I have used results from short papers in many of my grants, e.g., NIER (New Idea and Emerging Results) papers for my NSF CAREER and Tool Demo and SEIP (SE in Practice) paper for my Facebook gift.
+
+\paragraph{Artifact Evaluation (AE)} AE is is probably more well-known in SE conferences, but it allows authors of accepted papers to submit their tools to be evaluated by reviewers. The intention is to show that your research is reproducible. However, I never liked it because it's a lot of work and many of my experiments require heavy computation that the reviewers do not have. In many cases reviewers are students and have no technical expertise how to run things (even though it is already in Docker) or insists on using their own environment (e.g., Mac) while the developed tool is explicitly for Linux.
+Finally, I also don't think it's very useful as I have always make my code, benchmarks, and results open source (through Github). I found it strange that many SE conference have recently required this as part of the submission process. It makes the submission process much more complicated and time-consuming.
+
+
+\section{FAQs}
+
+
+
+\subsection{Your university does not recognize conference value}
+
+Journals, not conferences, are the main venue for publication for most non-CS engineering fields. While places with a strong CS department are well aware of the value of top confs. in CS, many other places are not (especially smaller universities or CS depts run by engineering people). In many cases such places put a workshop paper in the same class as a top conference paper and also cannot differentiate between a good vs bad journals in CS (because they do not know CS well). Also,  they often value quantity over quality because they cannot properly evaluate paper quality.
+
+This is a cultural issue and is very difficult to change. Many good researchers have left such places because of this.  Some were able to leverage this and publish at easy places and do really well within their department.  However, while they thrive at such places, they will likely not get funding and recognition in their field.  This is a trade-off that you need to consider.
+
+
+\subsection{Papers with your adviser(s)}
+One common question is whether you should publish papers with your adviser(s) after you start your own lab and become a professor.  The straight answer is that if you collaborate too much with your adviser(s), it's not good and brings concern about you not being an independent researcher (you are already a professor and so are expected to be able to do research on your own). I have seen many cases where a new professor has published many papers with their adviser(s) and then had trouble getting tenure (even renewal).
+
+However, this does not mean you should not work with your adviser(s). You can continue doing research and write grant proposals with them, but you should also work and write papers with other people, and especially your students.
+
+% 5.1 Evaluating Research from the Point of View of Tenure
+
+% 	•	Key Components: Publication record and expert letters.
+% 	•	Consistency & Impact: Steady publication in top venues, with standout work defining one’s reputation.
+% 	•	Research Independence: Importance of showing independent work, separate from past advisors.
+
+% 5.2 Coming up with a Research Agenda
+
+% 	•	Research Agenda vs. Project: A broad goal guiding multiple projects.
+% 	•	Criteria: Inspiring, technically challenging, and doable work, ideally tied to the professor’s expertise.
+
+% 5.3 Picking Research Problems
+
+% 	•	Importance of Selection: Prioritizing meaningful, high-impact problems.
+% 	•	Criteria: Should be either intellectually elegant or practically useful, balancing theory and practical applications.
+
+% 5.4 Knowing When to Give Up
+
+% 	•	Decision Making: Assessing progress and potential, setting early criteria for success, and being willing to pivot if necessary.
+
+% 5.5 Managing Collaborations
+
+% 	•	Balancing Collaborations: Limiting them to maintain focus on primary research.
+% 	•	Industrial Collaborations: Handling agreements, IP, and publication protocols.
+
+% Summary
+
+% The chapter covers developing a research agenda, selecting impactful problems, knowing when to pivot, and managing collaborations, emphasizing focus and strategic decision-making.
+
+
+
+\chapter{Funding and Grant Proposals}\label{chap}
+Without a doubt, grants are one of the most, if not \emph{the} most, important factors in P\&T (or any kind of performance) evaluation.  The most common reason for not getting tenure is the lack of funding. Ideally research results, e.g., publications (\autoref{chap:research}), would be the more important thing for a researcher; but in reality, funding is often considered more important for P\&T at most R1 universities.
+The amount of funding you have is a direct reflection of your research impact and productivity. More practically, grants are needed to pay for your students, travel conference, research equipments, and even your own summer salary.
+
+In general, the more funding you have, the better.  However, the \emph{quality} of the funding is also important.  For example, external NSF grants are more prestigious than an internal grant because they give more money and are also more competitive.  Also, funding from industry, while has a much smaller amount, is often highly competitive, prestigious, and can help show that your research is of interest to industry.  Finally, you should aim to get funding from a variety of sources, including NSF, Defense, industry, and internal grants.  This shows that you can work with different types of sponsors and that your research is of interest to a wide range of people.
+
+\section{Types of Funding}\label{sec:fuding-types}
+There are several types of funding sources, including external funding (e.g., NSF, DARPA), internal funding (e.g., from your university), and industrial gifts (e.g., from Amazon or Google).  Each type of funding has its own pros and cons, and you should aim to get funding from a variety of sources.
+\subsection{External Funding}\label{sec:external}
+\paragraph{NSF} NSF is the obvious funding source for CS. 
+Two things stand out for NSF grants are (i. \emph{transparency}) proposals are evaluated by an independent panel and are based on merit rather than personal connections, and (ii. \emph{autonomy}) the flexibility and freedom given to focus on pure research without the pressure of producing concrete deliverables.  
+
+Because of these reasons, NSF funding is often considered the prestigious and competitive, even for very experienced senior researchers from top places (which don't mean anything). Note that a PI can use at most 2 months of summer salary from NSF grants (if you need the 3rd summer month, you need to find other sources of funding).
+
+\paragraph{DARPA, ONR, and other defense sponsors} Most of these awards are like a \emph{contract}, with deliverables required at regular intervals. Contracts are awarded in phases to multiple teams, and funding is cut for underperforming teams. This puts a lot of pressure on both the PIs and their students, requiring them to spend significant time on reports, meetings, and product development (e.g., creating hacker-proof software rather than research prototypes). Additionally, in many cases funding often depends on existing connections or being affiliated with institutions that frequently receive such awards.
+
+However, these sponsors are good sources of funding and can provide the additional resources (e.g., your ``3rd'' non-NSF summer month). Note that some defense programs, e.g., Young Investigator Award, are more like NSF grants, with less stringent requirements and no deliverables required. 
+
+
+\subsection{Internal Funding}\label{sec:internal}
+These are funds from your university, city, or state (e.g., Virginia has the CCI program that provide ``seed'' grants for researchers from public universities in Virginia).  Your ``startup'' package is also be considered as a large funding from an internal source (your university) to kickstart your research. These funding are less competitive than NSF, but they are also less prestigious (e.g., they aren't much and usually don't count as much for tenure).  However, they are good sources of funding to get preliminary results and later apply for traditional grants.
+
+\subsection{Industrial Gifts}
+Industrial gifts are \emph{unrestricted funding} from companies such as Amazon, Microsoft, Facebook, and Google. While some are connection-based (e.g., for your ongoing work with a collaborator at Facebook), most are based on the merits of your research.
+While such unrestricted gifts are not a lot (e.g., \$100K), they are highly competitive and prestigious (e.g., the solicitation is open worldwide, and you compete with top researchers from top places).  
+They also show that your research has values and impact beyond academia and is interested to industry. 
+They are also very flexible (hence the term unrestricted):  (1) indirect costs or overheads are typically not levied on these gifts (so you get most of the money), (2) there is no associated timeline by when you should spend them (they give it to you and forget about it), and (3) you can use them for a broader range of things than university and grant/contract funding (e.g., summary salary, equipments, or even bowling events for your group).
+
+\paragraph{Personal Experiences}
+As with most TT professors, I focus mostly on NSF grants.  I only have one grant from Army Research Office (ARO) in which I am a co-PI and didn't have to write the proposal. I have tried to get other DoD funding, but without much success, I find that DoD program managers difficult to make contact with and to get feedback from.  I have also received internal funding from my university and industrial gifts from Amazon, and Facebook.  I have found that industrial gifts are the best kind of funding, as they are unrestricted and have no associated timeline by when you should spend them.  They are also highly competitive and prestigious, and are a great way to show research impact.
+
+\section{Most people suck at grant writing (at first)} Most new assistant professors have no experience in grant writing, and struggle with it. It becomes especially stressful starting your 3rd year when departmental evaluation starts to look at your funding. By your midterm or fourth-year review, you are expected to have at least some external funding, and can be in trouble if you don't have any. However, despite initial struggles, most people get better at grant writing over time.  The best researchers in the world get rejected all the time. So don't get discouraged.  Keep trying, and you will get better over time.
+
+
+
+
+\paragraph{It is very different than writing research papers} Grant writing is a very different skill than writing research papers.  In research papers, you describe what you \emph{did}. You convince people the merits of your work by showing the technical details, e.g., the algorithm,math, and proofs, and presenting experiments and results supporting your claim. You don't need to tell people who you are (often the authors are anonymous), and you don't need to convince people that you are the right person to do the work.  Your reviewers are typically experts in your field and know a bit about the paper topic, and they are judging your work based on the technical merits.
+
+In grant writing, you are trying to convince people to give you money to do something you \emph{haven't done yet}.  You need to convince people at a much higher level that your idea is important (impactful) and that you are the right person (with the right collaboration, resource, and plan) to do it. Getting too much into technical details can be a turn off.  Your reviewers might not also experts in your field, and they are judging your work based on the \emph{big picture}. 
+
+
+However, it's a skill that can be learned.  The best way to learn is to read other people's grants, and to write your own.  You will likely get rejected many times, but that's normal.  You will get better over time.  The key is to keep trying, and to not give up.  If you are not getting rejected, you are not aiming high enough.  The best researchers in the world get rejected all the time.  It's part of the process.  So don't get discouraged.  Keep trying, and you will get better over time.
+
+
+
+% Chapter 3: Funding
+% Let’s talk about what, for many professors, is the least favorite part of the job: making sure you
+% have enough money to keep the lights on in the lab. Essentially, a professor applies for grants
+% (money from the government, industry, or other charitable foundations) by writing a proposal as
+% the Principal Investigator (PI). The funding agency reviews the proposal. If they decide to fund it,
+% they send the money to your university. The university then takes its cut of the funding
+% (essentially to pay for common services like buildings, admins, etc) and gives you the rest. You
+% then spend it on your summer salary, the salaries of your students, equipment, travel,
+% registration costs and other expenses associated with your research.
+% There are some nuances about the different types of funding, and how you can spend different
+% kinds of funding. So let us get into the details. Unfortunately, these details tend to vary a lot by
+% country, so everything I’m talking about in this chapter applies only to the US.
+% 3.1 An example budget
+% Let me walk you through an example budget. Let us say you are writing a proposal for \$100,000
+% USD (100K USD). The budget will talk about how you plan to spend this money. The following
+% table (Table 1) shows the example budget.
+% Budget
+% Graduate Research Assistant - 1
+% Total Salary 40,000
+% Fringe Benefits 12,000
+% Total Salary and Fringe Benefits 52,000
+% Total Materials \& Supplies 0
+% International travel to a conference 2500
+% Domestic travel to a conference 1481
+% Total Travel Costs 3,981
+% Tuition for Fall or Spring 4,746
+% Tuition for Summer 1,778
+% GRA Tuition for 1 year 11,270
+% Total Direct Costs 67,251
+% Modified Total Direct Cost (MTDC) 55,981
+% Indirect Costs 58.5% of MTDC 32,749
+% Total Cost (Direct + indirect costs) 100,000
+% 37
+% I will explain the various parts of this example budget. I will be talking about terms such as
+% direct costs and indirect costs as defined by the University of Texas – I believe it is similar at
+% most other US universities, but there might be differences. Please check with your university to
+% make sure.
+% Fringe. Let us say you want to support a student on this grant. In addition to paying for the
+% student’s salary, you also have to pay for non-wage expenses: things like health insurance, social
+% security, and medicare. This is usually expressed as a percentage of the student’s salary. At the
+% University of Texas at Austin, this was 30% in 2022 (For a comparison point, it was 32% at
+% Princeton). The stipend of a graduate research assistant (GRA) at UT is about \$30K USD for the
+% fall and spring semesters ($40K USD including summer). So salary and fringe for a GRA for a
+% year is \$52K.
+% You also have to pay the tuition of the GRA, and at UT, this is about \$11.2K USD for a year. To
+% keep things simple, I am using a single number for the tuition, but this depends on factors such
+% as whether you are in-state or out-of-state, your progress in the PhD program (if you are
+% all-but-dissertation, your tuition is lower), and whether you are a US citizen or not. It also
+% depends on the fraction of time spent as GRA/TA: if this drops below 20 hours a week
+% (considered full-time for students), tuition might have to be charged at the out-of-state rate. If
+% the student is only doing 5 hours a week as GRA, it might also impact how much of their tuition
+% can be covered by the grant; at 5 hours a week, the student might not be eligible for insurance. I
+% highly recommend talking to your admin if you are accounting for less than 20 hours a week for
+% your student on the project. Some schools also calculate tuition as a % of the stipend.
+% So the total cost for supporting a GRA for one year is \$63.2K USD. While you are paying \$63.2K
+% for each student for a year, the student's take-home pay is only the stipend part (minus taxes
+% that are withheld): \$35.2K assuming a 12% tax rate.
+% Note that fringe also applies to you (the PI) when you pay yourself out of your grants for your
+% summer months.
+% Direct costs. The direct cost part of your budget includes salaries, fringe benefits, travel, and
+% equipment and supplies that contribute directly towards performing the proposed research.
+% Direct costs are exclusive to each proposal: a piece of equipment can only be a direct cost on
+% one proposal, and a GRA can be assigned only to one proposal at a given time. In our example,
+% let us assume the only direct costs are supporting the student and paying for the student’s
+% travel (including registration, transportation, lodging, and food) for one international and one
+% domestic conference.
+% Modified Total Direct Costs (MTDC). MTDC is a portion of the total direct costs used for
+% calculating the indirect costs. It is the direct costs minus tuition, fellowships, equipment, and
+% capital expenditures. Travel also counts as MTDC. In this budget, we are not spending anything
+% 38
+% on materials and supplies in this budget, but if we did, it would be part of MTDC. Check with
+% your university to determine exactly what is counted as MTDC – this can be surprisingly tricky.
+% For example, you might expect computers to not count towards MTDC as it is “equipment”, but it
+% may be counted as a “supply” if the university is unable to amortize its cost. In the example
+% above, total direct costs is \$67.2K USD (63.2K for one GRA plus 4K for travel), but MTDC is only
+% $56K (leaving out the \$11.2K for tuition).
+% Indirect costs. The university takes a portion of all the money you receive, to pay for centralized
+% functions such as building costs, utilities, admin, and libraries. This is termed as the “indirect”
+% cost, usually expressed as a percentage of the MTDC. At most universities in the US, indirect
+% costs are more than 50% of the MTDC. At UT, it is 58.5% (Mike Freedman reports it is 63% at
+% Princeton). Thus, in our budget, we would have .585 * 56K = \$32.7K added as indirect costs. As
+% a result, it would cost 67.2 + 32.7 = \$100K USD for supporting a single GRA and some travel on
+% this grant. Note that even though the 58.5% number is scary, you are only paying 33% of your
+% budget for indirect costs; in other words, you don’t lose 58.5% of the total budget to indirect
+% costs.
+% As you can see from the preceding table, the \$100K USD budget only covers one student for one
+% year. At some universities, a GRA costs more, requiring more funding.
+% This should give you a picture of how expensive it is to maintain large groups! If you had ten
+% students, you would need to pull in a million dollars each year to fund your students.
+% It is useful to think of your budget in terms of student-years. \$400K is simply two students for
+% two years. A dissertation, roughly five student years, is \$500K. If you get the NSF CAREER grant,
+% you would typically be able to support one dissertation. This helps determine the scope of your
+% proposal: if you need five students to work on it for two years, a grant that provides \$250K will
+% not be a good match.
+% Summer months in your budget. PIs at most R1 universities in the US are expected to fund
+% themselves via grants in the summer. When you are drawing up your budget, you are expected
+% to estimate how much of your summer months you will dedicate to this project. This is taken as
+% an indication of PI commitment at the funding agency – you don’t want to write a budget where
+% your estimated time involvement is zero. So if you have one NSF grant where you estimate your
+% time commitment to be one month, you can only put in one more month for another NSF grant
+% proposal (since NSF limits total PI compensation to be two months per year across all NSF
+% grants).
+% 3.2 Types of grants
+% Broadly speaking, there are four different kinds of grants or funding, each with different
+% restrictions on how you can use the money. The differences come down to what you can spend
+% the money on, how long you can keep the money, and what the overhead is.
+% 39
+% We can term the four kinds of funding as grants, contracts, university funding, and gift funding.
+% Let me go over each type of funding.
+% Grants. The National Science Foundation (NSF), the Defense Advanced Research Projects
+% Agency (DARPA), the Army, the Navy, and the Air Force all fund research related to computer
+% science. These grants are competitive – NSF has a 25% acceptance rate (though this varies by
+% the directorate), and I imagine the other programs are similar.
+% This money can typically only be used for funding students, yourself, travel, and equipment
+% purchases that you had already put in the budget. For example, if you suddenly want to
+% purchase equipment not in the original budget, it needs to be approved by the Office of
+% Sponsored Research at your university (which makes sure you are spending the money in the
+% right way). You cannot use government funding to pay for things like a meal with your students
+% during the semester (meals during travel is allowed).
+% Government funding has strict timelines by which the money has to be spent. Typically, the
+% money is released on a yearly basis. You have to show that you have used the previous
+% installment to get the next round of funding. This sometimes results in professors making last
+% minute purchases to exhaust their grant!
+% In some cases, you can ask your funding program manager for a no-cost extension to your
+% grant. This typically means that you don’t need extra money, but you want extra time to use the
+% money. This is usually considered on a case-by-case basis, and I would not recommend
+% counting on getting a no-cost extension.
+% Indirect costs are levied on government funding (more generally, on all funding that goes
+% through the Office of Sponsored Research). The example budget I showed in the previous
+% section assumes funding is via sponsored research.
+% Grant proposals typically have reporting requirements (for example, you have to submit a report
+% once a year for an NSF grant). However, grants typically do not expect any concrete deliverables
+% to be provided at the end of the funding period. Essentially, the grant allows you to carry out the
+% proposed research: the act of publishing itself is the desired outcome. As a result, grants have a
+% strong alignment between the PIs and the funding agency: they both just want to get research
+% done.
+% Contracts. The second kind of funding is via contracts. Contract funding comes with an explicit
+% contract you must fulfill to keep and obtain more funding. For example, there may be quarterly
+% or monthly reports, or on-site visits by the sponsor. Contract funding typically also has
+% deliverables that are expected at regular intervals during the funding period. One example of
+% contract funding is DARPA funding, which comes with a number of deliverables and reporting
+% requirements. Contract funding is less aligned with the PIs than grant funding: apart from doing
+% the core research, the PI’s students will have to spend time on creating the deliverables, and the
+% PI herself has to spend a significant amount of time on reports and meetings.
+% 40
+% NSF vs DARPA. NSF is a good example of grant funding, while DARPA is a good example of
+% contract funding. Both these agencies fund a lot of computer science research. DARPA requires
+% deliverables and reports to be produced regularly during the grant duration. NSF only requires a
+% report to be submitted for each year of the grant duration. You can apply for NSF funds as
+% someone on a visa, while DARPA and other similar government funding programs might require
+% you to be a US citizen or a permanent resident.
+% University funding. Your university, or your college, or your department may choose to give you
+% funding. Typically when you start, you get a “startup” package that allows you to kickstart your
+% research group. University funding is “internal” funding in a way, and as such has fewer
+% restrictions than government funding. But this really depends on the specific university. I know
+% universities where startup funding cannot be used for covering summer salary of PIs. Apart
+% from startup funding, your university might have internal competitions to award “seed” funding
+% (typically under 50K) that you can then use to get preliminary results and later apply for
+% traditional grants.
+% University funding is also associated with timelines. For example, startup funding usually has to
+% be spent before you get tenure. However, university funding deadlines might be a little more
+% flexible than grant or contract funding deadlines.
+% University funding typically does not have associated indirect costs (as it is already university
+% money). You still have to pay fringe support for your students and your own summer salary.
+% An interesting sub-category of university funding are Research Centers. A research center is
+% funded by sponsors to carry out a certain mission over a span of around 5 years. The research
+% center has a program director who is responsible for allocating the funding. PIs at the university
+% apply for funding from the research center (a sort of internal grant), and are allocated funding.
+% Obtaining funding in this manner is easier than competing for an external grant. Particularly for
+% assistant professors who are just starting, research centers can provide seed funding before the
+% first grants are obtained. Check out the ADA center at Michigan for a good example.
+% Gift funding or unrestricted research funding. Companies or charitable foundations may
+% choose to fund your research in the form of “gifts” or unrestricted research grants. This is the
+% best kind of funding, for three reasons: indirect costs are typically not levied on these gifts, there
+% is no associated timeline by when you should spend them, and you can use them for a broader
+% range of things than university and grant/contract funding.
+% Indirect costs are not levied because the gift-giver can specify that it cannot be used for indirect
+% costs (the university has to honor this). Since it is an unrestricted gift, there are no limits on
+% what you can spend them on, or by when you should spend them. This doesn’t mean you can
+% spend the money on personal expenses. All expenses still have to be approved by the university,
+% and should be used for research-related expenses. But things like taking your research group
+% out for a meal can be expensed during gift funding (but not government funding).
+% 41
+% Indirect costs not being levied can make a huge difference. For example, in our budget from
+% earlier, if you were using gift funding to fund the student, you don’t have to pay indirect costs,
+% and thus get over \$30K back. Considering a student costs \$63K, you get to sponsor the student
+% for 1.5 years rather than 1 year!
+% How should you use your funding? Let us say that you are lucky enough to have all four kinds of
+% funding. And you have an expense that could be assigned to any of these funding (note that this
+% is often not the case: you can’t use a grant on topic X to support a student working on Y if X and
+% Y are not closely related). What should you use?
+% The typical rule is “Use the most restricted funding that will expire the earliest”. Thus, you should
+% always use the appropriate grant/contract funding first, then your university funding, and finally
+% gift funding. Gift funding is the most flexible, so use it only when you have no other option.
+% Always spend your gift funding on expenses that will have overhead (if funded from grants),
+% such as students. Do not spend it on things like equipment (be careful to ask what counts as
+% equipment at your university) which do not have overhead even when expensed to grants.
+% Writing a grant with other PIs. While you could write smaller grants as the sole PI, typically for
+% larger grants, you need to collaborate with other PIs and submit as a team. For example, you
+% cannot submit NSF Large grants as a solo PI. One thing to remember though: all the funding is
+% shared between the PIs. For example, imagine a grant for one million USD. It sounds amazing!
+% However, if the grant was awarded to a team of two PIs, and the grant duration is five years,
+% each PI can only support one student on it for the grant duration (100K * 2 * 5). Similarly, if a
+% grant of 10 million USD was won by a team of five PIs, each PI can only support one student for
+% four years (100K * 5 * 4). So in the end, the share of each PI is similar or lower than that of an
+% NSF CAREER.
+% This is not to say you should not collaborate with other PIs to write grants. Collaboration often
+% brings new ideas and research directions that are unlikely or impossible when working alone.
+% And bigger grants often provide prestige: for example, landing an NSF Large grant is significant
+% and puts you on the map. But it is useful to calculate how much you expect to receive if a grant
+% proposal is funded.
+% 3.3 The grant application process
+% So how does one go about submitting a grant? There are several steps in the process:
+% 1. The funding agency first puts out a call for proposals. For example, check out the NSF
+% call for CRII grants, a startup grant meant for new PIs who have not yet received a grant.
+% Note that PIs at many R1 universities are not eligible for CRII. This was posted on May 18,
+% 2022. Each call has a solicitation page with details about the program and how the
+% proposal should be structured – you should read this carefully.
+% 42
+% 2. In some cases, there are webinars where the program managers explain the grant
+% opportunity. CRII had such a webinar on Jul 13 2022. I highly recommend attending
+% these webinars if it is your first time submitting for a particular grant opportunity.
+% 3. In some cases, the funding agency might want you to submit a preliminary proposal.
+% They will review the preliminary proposals and inform you if they would like you to go
+% ahead with the full proposal. This is not the case for CRII.
+% 4. There will be a due date by which you need to submit the proposal. For the CRII, this is
+% Sep 19 2022. The proposal will have a number of parts, and the solicitation will clearly lay
+% out what the proposal should look like.
+% 5. You write the proposal, and sometime before you submit, you send it to the Office of
+% Sponsored Research (OSP or OSR) at your university. They have to approve the proposal
+% before you can submit, and they may request to see your proposal a week or 10 days
+% before you submit. Please make sure you get a draft to the OSP on time!
+% 6. Finally, you submit the proposal, and you wait. To be exact, your admin/OSP submits for
+% you, so you want to let them know when you are done. You and your admin/OSP will be
+% submitting a lot of proposals together; make sure you get to know the folks doing this. I
+% only have experience with NSF proposals, but these usually take 6-8 months to be
+% reviewed. In some cases, it might take even longer.
+% 7. If you are lucky enough to get your proposal funded, you might get an email or a call from
+% the NSF program manager. They might ask you to slightly modify your budget. For
+% example, I was asked to reduce my NSF CAREER budget (and appropriately reduce the
+% scope of my tasks as well). You will be asked to provide an abstract that will be displayed
+% on the NSF website. For example, check out the abstract for my CAREER award.
+% 8. Finally, you will get an official email that your grant has been awarded, it will become
+% public on the NSF website, and you will get the first installment delivered to your
+% university. You can then begin spending it in accordance with what you proposed.
+% 9. In the unlucky case that your proposal is not funded, you will get back three or more
+% reviews from NSF. These reviews tend to be short, and nowhere as detailed as paper
+% reviews. As such, it can be hard to figure out what to do after getting a rejection. My
+% advice is to go talk to senior faculty in your department if this happens, and they should
+% be able to guide you in the right direction.
+% 3.3 Writing your first grant proposal
+% Writing your first grant can be a stressful experience, since it is quite different from writing a
+% research paper. There are a number of differences.
+% First, the audience for a grant proposal is broader than that of a research paper; it is guaranteed
+% that non-experts in your area will be reading and evaluating your proposal (for example, if I write
+% 43
+% a grant proposal about storage research, I can expect it to be read by someone working in
+% systems broadly, but not necessarily someone doing storage research). As a result, it has to be
+% much broader and more accessible than a research paper. Proposal reviewers might also have a
+% smaller amount of time to spend on each proposal – some funding agencies ask reviewers to
+% read a dozen proposals in around a month when you serve on their panel. You can imagine how
+% much time each proposal would get. Thus, your proposal must be easy to skim and read, must
+% get to the major points quickly, and must be accessible to a broad audience.
+% Second, in a research paper, you are reporting on something that is already done. The focus is
+% on the technical details: how you were able to achieve the result, what are the drawbacks, etc.
+% However, in a grant proposal, you are talking about things that you will do in the future. In a grant
+% proposal, the most important thing is to be able to inspire the reviewer, and convince them that
+% this is a thing worth doing (and funding). In this respect, it is much more similar to a founder
+% pitching before an investor, than a professor talking to her peers about her research. While the
+% details do matter to some extent, what is much more important is that you paint a big picture of
+% how your proposed research will make the world a better place. This is quite different from
+% writing a research paper, and takes some practice.
+% For writing your first grant proposal, I’d recommend two things. First, talk to folks who have
+% gotten the grant you are submitting for, and ask if you could see their grant proposal. Many folks
+% are happy to share privately. Some folks, like Jeff Bigham and Gillian Hayes, are publicly sharing
+% some of their proposals. Second, write up your draft proposal, and show it to senior folks in your
+% department. They would be able to catch errors that could cause rejection.
+% When submitting grant proposals, do not be disheartened if it gets rejected. As far as I can tell,
+% most proposals, even from experienced faculty, get rejected a few times before getting
+% accepted. Grant rejections are a bit more painful because the waiting time is high, you might
+% only get to submit to a grant opportunity once per year. But with time and repeated submissions,
+% many grant proposals do get funded.
+
+% 3.4 Serving on grant panels
+% 44
+% 3.5 Getting funding from industry
+% Since I started at UT, I have been fortunate to receive funding from a number of companies:
+% Meta, Google, VMware, and Toyota. How did I get this funding? Unlike with government
+% agencies, there is no set process to follow in general (exception being Google with the Google
+% Research award).
+% Giving talks and networking. The process is more organic: I give talks at various companies
+% about my research, and talk to their engineers about how my group’s research can impact them.
+% This is useful to gain an understanding of how our work will play out in the real world, and to
+% understand the problems they are facing.
+% Sometimes after talks like these, the company reaches out to see if they can sponsor our
+% research. At other times, the company is looking for academic groups to invest in, and my talk
+% puts our group on their radar. Note that you might sometimes receive funding even without
+% doing this – good work is always noticed and rewarded (especially if close to the company’s
+% interests).
+% In rare cases, if you know the folks at the company really well, you can also reach out and say I
+% am trying to achieve research goal X, is your company looking to fund anybody in this space.
+% But you only do this after building up strong ties with the company over a long period of time.
+% You can’t start out by saying “can you give me some money”.
+% Networking and building connections always pay out over the long term. So you shouldn’t have
+% the mindset of “I gave a talk at company X, I should get some funding from them soon”. Rather,
+% you should aim to get your group’s research out there and known by companies in that space.
+% The funding will follow later, but time spent networking and giving talks is never wasted.
+% 3.6 Financial planning for your research group
+% Finally, I want to talk a little bit about financial planning for your group. As a professor, you are
+% now a manager, and you should ensure that the students working with you are adequately
+% funded. If you are unable to fund your graduate students, your department might be able to fund
+% them as TAs, though the dept would need some advance notice. For postdocs, this option is not
+% there, so you need to make sure you have funding for your postdocs.
+% Runway. In general, it is good practice to think six months to 1 year ahead, and make sure you
+% have enough funding for existing students/postdocs and folks you are planning to hire. Initially,
+% you will have your startup funding, so you start with a full tank of gas. For every
+% student/postdoc you hire, you should check how much runway your group has: how long until
+% your group runs out of funding. You should ensure you have a runway of 6 months to 1 year.
+% 45
+% This means that if you have 1 year of runway, you need to write grant proposals now (since it
+% usually takes about a year to be reviewed and funded). At the start of every semester, review
+% your finances with your admin and make sure you have enough of a runway.
+% Savings. An important part of financial planning is to always have a little bit extra in your coffers
+% than your anticipated expenses. For example, imagine that you got a paper accepted, and there
+% is no associated grant you can expense it to. If you don’t have some money left over, you would
+% not be able to sponsor your student attending the conference and presenting the paper.
+% Summers. Part of this financial planning is also deciding what to do in your summers. I strongly
+% advocate ensuring that you can both pay yourself for the summer, and pay your students. This
+% might require being conservative in taking on students until you are sure you can pay them.
+% There is the temptation to cut back on your own summer salary so that you can pay your
+% students; I would recommend avoiding this. While it can be a temporary fix, it is necessary for
+% your long-term health, and that of your group, if you maintain your own summer payment.
+% If you are able to work at a company for the summer, this can reduce the strain on your group’s
+% finances while also helping your research become more grounded. I spent one summer at
+% VMware after joining UT Austin, and that time spent was useful for my research. You would
+% probably need to reach out much earlier to set this up – the group hosting you would need to
+% make sure they have the budget to host you for the summer.
+% Coordinating with admins. You want to make sure you and your admin are on the same page
+% regarding what funding to use for each expense (sometimes it can be hard to move expenses
+% between accounts). Most admins are experienced and get the picture quickly once you describe
+% your overall strategy.
+% Acknowledgements
+% Thanks to Gabriel Parmer, Indranil Gupta, Jeff Bigham, Michael Ekstrand, Michael Freedman,
+% Satish Puri, Siddharth Joshi, Solel Pirelli, and Stefan Savage for pointing out errors and providing
+% suggestions for the chapter.
+% Summary
+% In this chapter, we talked about how grants work, what the application process looks like, and
+% different sources of funding for research. We went over an example budget that shows all the
+% different overheads involved in funding research.
+% We have now discussed two of the four main big roles of a professor: managing students and
+% managing funding. Next, we will discuss teaching
+
+\chapter{Teaching}\label{chapter:teaching}
+
+While teaching takes about 40\% of your time, it is not as nearly as important as research for tenure.  Moreover, most TT faculty do not prioritize teaching compared to writing grants or working with students on papers.  However, teaching is still important for your tenure case, and being a good teacher can be very rewarding. Innovative integration of research and teaching can also help you get good students and even NSF grants.
+
+
+
+\section{Courses Taught}\label{sec:teaching-load}
+
+
+% At most large R1 universities the teaching load for TT faculty is 1+1 (1 course / semester). While some univs might give you a lighter load in your first year, most univs expect you to teach 1+1 starting your second year. In many cases, 1+1 is only for the first 2 or 3 years and after that it increases to 1+2 (or 2+1). It is rare that a TT in CS at R1 universities would have to teach 2+2 during the tenure track.
+% In some cases your contract might list 1+1 for the first X year and 1+2 after until tenure, but the dept unofficial gives TT faculty 1+1 until tenure. Some other ways to reduce teaching load include \emph{buying out} of teaching with a grant, leading a very large grant, and teaching many large classes.
+
+
+  
+Most places want to see that you have taught both undergrad and grad courses by the time you go up for tenure.  A good dept. would allow and encourage faculty to pick their favorite courses to teach. In some cases, they let you develop your own grad course (e.g., Software Verification) but ask you to teach an existing core undergraduate one (e.g., Theory, Operating Systems). A good dept. also "protects" you from teaching intro courses (e.g., Intro to Programming), which are usually very large and the most time-consuming to teach.
+
+
+It is likely that you get to repeat the same courses, which significant reduces the amount of time you need to prepare for the course.  However, you should not teach the same course every semester, and you will want to alternate between grad and undergrad courses.
+
+
+\begin{commentbox}[Vu]
+  At GMU, I teach the same Software Specification and Construction course at both grad (SWE-619) and undergrad (SWE-419) levels. This is very nice because I don't have to prepare much for the course.  I did try to teach an AI Assurance graduate seminar once, but never liked it much because it only has MS students, who were not very interested in research.
+  \\
+
+  In contrast, I teach various courses at UNL. I teach the several undergraduate courses including Theory, Software Engineering, and design my own two courses on Compilers and Software Analysis. I also create a grad seminar on Software Verification.\\
+
+ THus UNL is a bit more flexible in creating new classes compared to GMU.  However, I spent much less time prepare for courses at GMU.
+\end{commentbox}
+
+
+
+\paragraph{Teaching load} New TT faculty often have a lighter teaching load in their first several years or until they get tenure.  This is to give you time to establish your research program.
+\begin{commentbox}[Vu]
+  At UNL, TT faculty is 1+1 for the first 3 years, and 1+2 after that.  At GMU, it is 1+1 for the first 3 years, but most TT faculty would continue this teaching load until they get tenure. In addition, GMU grants all TT faculty a semester off from teaching before tenure. Some faculty use this to work on their NSF CAREER proposal while others use it to prepare their tenure application. 
+\end{commentbox}
+
+
+
+\paragraph{Co-Teaching}
+Some places encourage new TT faculty to co-teach with another faculty. This is a way to share the workload and to learn from your more experienced colleague. It has many benefits, but it can also be challenging if you and your co-teacher have different teaching styles.
+
+\begin{commentbox}[Vu]
+I co-taught an undergrad Software Engineering course once at UNL with a teaching faculty.  I didn't like it because the teaching faculty was very experienced and good at teaching, and I felt that I was not contributing much.  I never co-taught again after that.
+\end{commentbox}
+
+
+\section{Teaching Evaluation}\label{sec:teaching-evaluation}
+
+Teaching evaluations are a critical component of P\&T, and you will include these in your dossier when you go up for tenure. 
+It provides a quantitative measure on how students and peers perceive your teaching.
+You should pay attention to evaluations, and make changes to your teaching based on the feedback, and show that you continuously strive to improve your teaching.
+
+
+\paragraph{Student Evaluation}
+At the end of each semester, students are asked to evaluate the instructor. The evaluation often includes both quantitative (e.g., ratings on a scale of 1-5) and qualitative (e.g., comments) feedback.  In addition to default questions, you can add your own questions. The results are shared anonymously with the instructor to help them improve their teaching. 
+You will want to get good evaluations, ``above'' the average of the dept or college (which might be challenging because you are compared to all faculty, including teaching faculty who are very good at teaching). 
+
+One issue with teaching evaluation is that not many students respond, and the few that do are usually the students who are unhappy and thus will give highly negative evaluation. This is the reason why many instructors do not like teaching evaluations, especially when it is used to evaluate their performance.  
+
+
+\begin{commentbox}[Vu]
+  In recent years I encourage student to do teaching evaluation by giving the whole class a small bonus point if everyone completes the evaluation. The bonus is calculated as the percentage of responses multiplied by a factor (X). So, if X is 0.5 and everyone participates, they get 0.5 points each. If only half respond, it's 0.25 points each. It might seem small, but it can make a difference for borderline grades. Since I don't curve grades, this is their only chance to boost their scores. Moreover, since evaluations happen before finals and grades aren't finalized, everyone's motivated to participate as they don't want to miss out. Students not only do it themselves but also remind their friends. 
+  \\
+ 
+  This works well for me: Spring '24 I had a 90\% response rate (25 out of 28 students), and Fall '23 was a perfect 100\% (16 out of 16 students). Before, my response rate was about 50\%, which is already higher than the average.
+  \end{commentbox}
+
+
+\paragraph{Peer Evaluations}
+
+In addition to student feedback, there is peer evaluation where a more experienced faculty member observes your class and provides feedback.  This is usually required for P\&T (e.g., both GMU and UNL require it).  Like with student evaluation, incorporating feedback from peer evaluation into your teaching and describe your changes and improvements.  Peer evaluation letters can also help you get Teaching Awards and other recognitions.
+
+
+\section{Recruiting Students for Research} Many TT faculty use their teaching to recruit students for their research group.  Seminar and special topics courses are designed to introduce grad students to your research area. Similarly, you might be able to recruit undergrads from your 400 level courses.  Taking students from your class has the benefits that you and the students already know each other, and you know their strengths and weaknesses, e.g., through their programming assignments in your class.  
+
+
+\begin{commentbox}[Vu]
+  I have recruited my first PhD student Guolong from my seminar and many undergrads from my classes. However, other than Guolong, the undergrads recruited from my class did not work out well.  I found that undergrads recruited from my class are not as motivated as those who come to me on their own. So, I stop recruiting students from my class and only take those who come to me on their own. More about recruiting students in \autoref{sec:recruiting}
+\end{commentbox}
+
+
+
+
+\chapter{Recruiting and Mentoring}
+
+Successfully mentoring students is import for P\&T process.  Many universities expect you to graduate at least one PhD student to get tenure.  
+There will be times when you feel discouraged and frustrated, but there will also be times when you feel proud and happy.  In short, mentoring students is a key and most rewarding part of your job as a faculty member. 
+
+\section{Recruiting}\label{sec:recruiting}
+
+
+\section{Mentoring Graduate Students}
+You will need to mentor PhD students and help them find research topics, do research, publish papers, and become independent researchers. This is a long and challenging process, but it is also very rewarding. 
+
+
+\section{Mentoring Undergraduate Students}
+I have mentored a dozen of undergrad students. Most of them did not last long, but some of them did great work. 
+Surprisingly, some of the best research projects I have seen come from undergraduate students.  
+
+
+I have worked with many undergrads (15+ since 2016).
+
+
+\section{Mentoring Postdocs}
+
+I never formally mentored a postdoc, but I have worked with several postdocs. They are more like colleague than students as they are more mature and independent, e.g., writing own papers and leading projects.
+
+\section{Mentoring Junior Faculty}
+
+\chapter{Services}\label{sec:services}
+
+
+Officially services are counted for only 10\% of your work. However, they are very important for your P\&T and career in general.
+%You are expected to have certain types of services as a faculty member.  
+Some services are required (e.g., when your department chair assigns you to some committees), but some are not and can be declined (e.g., an invitation to be a PC member).  
+
+
+\section{Service to Research Community}
+
+These are services that you do for your research community. They will help you to get to know people in your field, and to get your name out.  Common examples include serving on the program committees (PC) of conferences, serving on editorial boards of journal, and serving on grant panels (e.g., from NSF).
+
+\subsection{Serving on Program Committees (PCs) and Editorial Boards} You should try to serve on the PCs  of the \emph{top} conferences in your field. This is a good way to know how to write good papers, and get to know the literature, what is hot in your field, and the people (who do what). It is also a good way to get your name out.  
+
+
+You should also try to serve on the editorial boards of top journals in your field.
+Similar to being in conf. PCs, this essentially means reviewing paper submissions. However, unlike PC reviews, you typically will not have to discuss and reach a consensus with other reviewers. The journal editor will make the decision based on the reviews. 
+
+\subsection{Serving on NSF Panels} As mentioned, faculty in CS typically get most of their funding from NSF. Thus, you should serve on NSF panels to learn about the grant process: how to distinguish between good and bad proposals and how people review proposals.
+It is also a good way learn what other people are doing, what is hot, and what is not. In short, it is a good way to learn how to write successful proposals.
+
+Just like serving on a PC, you will review proposals and you will have to argue for why a proposal should be funded or not.  Unlike PC where discussions can spread over many days (and there are also rebuttals), NSF panels are usually a two-day event.  You do get paid a bit for serving on NSF panels and you get to travel to NSF headquarters in Virginia (except during the pandemic where everything is remote).
+
+
+
+\subsection{Volunteer for Leadership roles} Once you have served on a few PCs and NSF panels, you should aim for more leadership roles.  For example, you can volunteer to be a chair of certain sessions/tracks of a large conference, or even a general chair of a workshop or conference.  These roles are more time-consuming, but they can be more rewarding (e.g., more people will know about you) and in general can help your career, especially your tenure case.
+
+\subsection{How to get invited for these services?} 
+
+You can directly ask people to recommend you. For example, for PC, ask senior colleagues or even your PhD advisor/collaborators to recommend you to the PC chairs. You can also directly email the PC chairs and ask to serve.  Once you have served well, you will likely be invited to serve again.  
+Similarly, for NSF Panels, you can cold email program managers in your area and ask to be on their panels.  Unfortunately, I do not have much experience with non-NSF panels or proposals. For leadership roles, you can directly ask the general chair of a conference to see if you can take more leadership roles.
+
+\paragraph{Personal Experience} I mostly cold email people for opportunities. For example, I directly email OOPSLA and PLDI PC chairs and asked, and they invited me. I tried this with ICSE (and also nominate myself through the official form), and it never works, even though I have many papers at ICSE. 
+For NSF, I just emailed program managers and asked to serve on their panels, and they invited me.
+
+I felt that I didn't get much out of serving on conf. PCs and didn't really like the review process much.
+However, I still do it because I feel it is my responsibility, i.e., people spent time reviewing my papers, so I should also volunteer my time to review theirs.
+
+On the other hand, I thoroughly enjoy serving on NSF panels (though of course my proposals still got rejected very often). To this date I have served on 8 NSF panels (at least once every year since 2019) and I look forward to serving more. While NSF review is more intense and takes more time (compared to conf. reviews), I found it more rewarding and enjoy the discussions. 
+
+
+I have also volunteered for leadership roles, e.g., I directly asked the general chair of ICSE'21 to see if I can take more leadership roles and was then invited to serve as a proceeding co-chair. In hindsight this particular role is a lot of work, and I didn't really like some aspects of it, but it was an eye-openning experience. 
+
+
+\section{Service to the Department}\label{sec:services-dept}
+Your department chair will assign you to some committees to help run the department.  For tenure-track faculty the services are often lighter than tenured ones (e.g., less leadership roles). 
+
+Common ones include PhD and/or MS admission, faculty search,  colloquium committees. Serving in the PhD adcom is very common for new assistant professors, as it is a good way to recruit students for your lab. Serving on the faculty search committee is also a good way to recruit new faculty members that you like (and also let you know what the job market is like, what is hot and not). Finally, being on the colloquium committee is a good way to invite speakers in your field that can be your \emph{tenure letter writers}.
+
+Other types of services include leadership roles (e.g., being the director of a program), and representing the dept in various university committees.
+These are not assigned by the dept, but rather you volunteer for them. Taking on a leadership role or representing the dept in certain university committees, which is less common for tenure-track profs., help the dept/chair in certain areas and can make you a good ``citizen'' which helps in your tenure case.
+
+A good department/chair will try to match you with committees that can help junior faculty build their lab and tenure case (and shield you from committees that are not as useful).
+
+
+\paragraph{Personal Experience} Since coming to GMU, I have been very active in serving the department.  In addition to the typical services load, I volunteer to serve in additional committees and leadership roles. For example, I maintain the CSRankings DB for the department, organize the Open House to recruit admitted students, participate in the Dept Chair renewal committee, etc.
+Even though I am not on the search committee, I meet with every faculty candidate (I talked to 22 people in Spring'23, which was during my study break). I also serve in the Chair Renewal committee and as the director of the MS SWE program, which is a lot of work and typically done by tenured faculty. 
+
+
+Occasionally I do feel overwhelmed by having many services, but I share the vision of the department and want to help achieve it.
+I learn a lot from being in various roles (e.g., how class scheduling work, how the department is run, how to recruit students and recruit faculty, how to deal with difficult people and situation, etc).
+I am also building a good relationship with my colleagues (and also head-butt with some), and that is important for my tenure case. 
+
+In general, I was way more active than most junior faculty in the department.  I was also a lot more involved in the department than I was in my previous department at UNL.
+In short, if you want to make a difference, and \emph{feel comfortable} at handling additional load, you can volunteer for more services. Otherwise, you can just ``stay low'',
+do the required services and focus on your research and teaching. This is probably the best strategy for most junior faculty. 
+
+\section{Service to the University}
+You can also serve the university in various committees.
+Common examples include serving the faculty senate, scholarship committee, etc. The university often sends out emails asking for volunteers (this is somewhat generic and you can safely ignore), and sometimes people such as your dept chair or dean can directly ask you to serve (in which case you will want to consider it).
+
+\paragraph{Personal Experience} I have limited experience with these services. I served in a couple of grants and scholarship committees, in which I review applications for scholarship and grants for students. I also help represent the college in serving as judge of the Kimmy-Duong foundation scholarship. These are time-consuming (e.g., the KimmyDuong scholarship reviews and interview process happen during weekends!), but they are also rewarding as you get to know students and help them (many have unique and interesting stories). 
+
+In general, I would recommend doing these services only if you have the time and have interest in them. However, sometimes they can be rewarding and fun, so you might want to try them out.
+
+\section{Other Types of Services}
+
+\paragraph{PhD Dissertation Committee} Being in a PhD committee is a common task to help your colleagues (e.g., the adviser of the student asks you to be in student dissertation committee) and the students (e.g., you are involved or are interested in the research of the student).  You can serve in the PhD or MS committee of students in your dept, in other dept, or even in a different university (external committee member).
+
+\paragraph{Writing Recommendation Letters} You will be asked to write recommendation letters for both students and sometimes even colleagues. For example, I write on average ten reference letters for students each year, including letters for grad schools, jobs, or scholarships. I view writing letters as my responsibility as a faculty member, and so I usually do not say no to any student who asks for a letter. However, I would tell a student I do not know well that I can only write a generic  (i.e., weak) letter for them. 
+
+
+\section{Conclusion}
+
+Many would (rightly) advise about being strategic about your services. I didn't really follow this and just volunteer for services that I think it is my responsibility (e.g., being in PCs, though I never liked them much) and those that I enjoy (NSF panels, services to the depts). I enjoy services to my dept. and in many cases would take on tasks that no one wants to do because I feel that someone gotta do it and I can help out, e.g., various misc tasks in the dept.
+
+
+% Once you become a PI, you will get invited to serve on grant review committees. You can directly
+% email program managers and say you are interested in reviewing, and they will see if they can
+% recruit you for the next reviewing cycle. I highly recommend doing this if you can: it is really
+% eye-opening to see how the sausage gets made! Serving on a grant review committee is
+% educational: you will immediately pick up what you need to do to make your proposals better.
+% If you do volunteer for grant proposal reviewing, expect this to take up a lot of time. You will be
+% asked to review a dozen proposals (or more) in a month or so. It will be similar to a program
+% committee meeting, where all the proposals will be discussed. You will be expected to share
+% your view of the paper, and argue for why it should be funded or not.
+
+
+
+% One part of the professor job that doesn’t get a lot of attention is service. However,
+% understanding and managing this component is important, both for your own tenure case and
+% for the wider community. Let us start by talking about what service is, and why it is important.
+% 7.1 Defining and managing service
+% So what do I mean when I say service? I would loosely define service as optional tasks that your
+% community requests from you. You are free to decline these tasks without a direct impact on
+% your career (there might be indirect impacts). These tasks are important to keep the community
+% running.
+% For example, your peer researchers may ask you to serve on the program committee for a
+% conference, or review a paper for a journal. You will get a lot of these requests, and you are not
+% expected to say yes to all of them. Your department will expect you to do some service each
+% year, and there is an expectation that you get invited to serve on the PCs of the top conferences
+% in your research area. But beyond that, you don’t get any benefits by doing a lot of service.
+% Why should you do service? To put it in a nutshell, doing service is part of being a good citizen,
+% both inside your department, and inside your wider academic community. This is because of the
+% way academia operates, fully dependent on freely volunteered labor.
+% For example, imagine that you want to run a conference. You need someone to organize the
+% conference, and someone to review submissions and select papers for the program. One way
+% to do this is to recruit reviewers, pay them for their time, and pay other folks to handle the
+% logistics of running the conference. Speakers would get paid. All the money would come from a
+% combination of sponsors and the fees that attendees provide. This is how industrial
+% conferences operate.
+% Academia uses a different model. People volunteer their time to act as reviewers or conference
+% organizers. This allows the conference organizers to reduce the cost that needs to be paid by
+% attendees (even so, the cost is usually several hundreds of US dollars). USENIX uses a slightly
+% different model where the conference organizers are paid professionals, but the technical
+% reviewing is still done by volunteers. This results in a slightly higher registration fee for
+% attendees (compared to when everything is done by volunteers).
+% Thus, almost everything in academia runs on volunteer labor. All the events you attend, the
+% conferences and journals you publish in, the panels you enjoy, the awards that are given out, all
+% depend on people volunteering their time. Since you get a net benefit from the time volunteered
+% by others, it is only fair that you do your share of volunteering as well.
+% 72
+% There are some other fringe benefits to volunteering. One is that you get your name out. When
+% you are an assistant professor and you are struggling to establish yourself, it can be useful to
+% have folks know you and recognize your name. The second benefit is that you get to meet folks
+% in the course of doing service and form your network; this is particularly useful when you are
+% just starting out.
+% Why should you not do service? While it is important to do service, I’ve seen folks go overboard
+% on this (and did too much myself in my first year). Doing service feels good: you are doing
+% something for your community, and it feels like you are getting your name out. And it is hard to
+% say no when folks you respect request you to join a committee.
+% But you should always, always remember: you will not get tenure for service. No matter how
+% good the service is. The first consideration at R1 universities is always research. If your research
+% is not good, having done amazing service will not get you tenure.
+% Apart from not helping you with tenure, taking on too many service commitments will make you
+% bad at service. If you say yes to too many concurrent PCs, you will have a tough time doing a
+% good job at reviewing papers for all of them. Nobody wins in this situation: the conferences and
+% authors get crappy reviews, and you get a reputation for writing bad reviews.
+% Managing service commitments. As an assistant professor, you should do enough service to be
+% a good citizen, but not so much that it affects your other job responsibilities. You should
+% conserve your limited energy for research and teaching. Be thoughtful and intentional about the
+% service requests you accept – always think about how much time you are committing down the
+% line (even if it is several months or a year away). The way to think about it is that you can do two
+% to four big service requests each year. A big service request is something like an organizational
+% role at a conference, or a program committee assignment where you will be reviewing 10+
+% papers. You should really be doing only a few of these each year. Smaller service requests, such
+% as being an external reviewer for a conference, you can do more of; but be careful that they don’t
+% pile up.
+% Saying no. How do you say no politely, especially when it is someone you respect and look up
+% to? You should remember that folks who run conferences expect a lot of people to say no. It
+% happens all the time, and if you decline, they will not take it personally. You don’t need to worry,
+% “If I say no this year, maybe they will not invite me ever again”. I can relate because I had this
+% exact worry at the beginning. I’m happy to report that I have declined to review at conferences,
+% and still been invited the following year. As long as you do good research and write good
+% reviews, you will be invited back. So do not let this consideration make you say yes when you
+% don’t have the time to do a good job.
+% I usually say something like: “Thank you for inviting me. Unfortunately, I am overloaded on
+% service commitments this year, and I don’t think I will have enough time to do a good job.
+% Therefore I will have to decline”. As you get a bit more senior, you could recommend a junior
+% faculty member they could invite in your place.
+% 73
+% 7.2 Serving on program committees and editorial boards
+% When you get started as an assistant professor, serving on program committees will form the
+% bulk of your service. At first, it can be super flattering to be invited to a program committee: I
+% definitely remember my first such invitation. You now have a voice at the table in determining
+% the program! You can review papers alongside researchers you looked up to. As a result, you
+% pretty much say yes to all the invitations you initially get.
+% This is not a great strategy, though: you end up over-committing yourself in your initial years. I
+% would recommend saying yes only in the following cases:
+% 1) The conference is your home venue, where you have been publishing in grad school, and
+% where you hope to publish in the future.
+% 2) It is the top (or one of the top) conferences in your area.
+% 3) It is a community that you want to join, or an area that you want to publish in.
+% 4) It is a workshop specializing in your area.
+% For example, I publish regularly at systems conferences such as ATC/FAST, so I tend to review
+% papers for them. SOSP and OSDI are the top conferences in my area, so I almost always accept
+% PC invitations for them. HotOS and HotStorage are the relevant workshops for my area, so I
+% review papers for them as well.
+% Don’t accept invitations to be on the PC for conferences that you have never published in, and
+% are unlikely to do so in the future. Don’t accept invitations just because you know the PC chair if
+% you are already committed to other PCs.
+% Overall, a good number to aim for is about 1-2 big PCs each year (10+ papers per PC) and 1-2
+% smaller ones (5+ papers per PC). Between research and teaching, it will be hard to do a good job
+% with more PCs.
+% University expectations regarding PCs. Generally, your department or university likes to see that
+% you are being invited to serve on the PCs of the top conferences in your area. If you become an
+% assistant professor and receive no PC invitations, that can be a bit of a red flag. However,
+% beyond expecting to see some service (a few PCs each year), the department/university doesn’t
+% really care how much service you do – they assume you will manage your service workload
+% efficiently.
+% How much time does reviewing a paper take? This really varies by area. I would say anywhere
+% between one to four hours per paper is common. Do not spend more than half a day on a single
+% paper. You should read actively, trying to get the main ideas and insights, which will enable you
+% to write a good review. You should aim to read the paper only once (this gets easier with
+% practice), taking notes as you go. Having questions you want to answer as you read will help
+% make reviewing easier.
+% 74
+% If you find yourself spending more than 1 day a week on average (or 8 hours per week) for
+% reviewing papers, you have accepted too many PC invitations. It can be hard to properly track
+% this though, since you have a lot of activity near the reviewing deadlines, and not much on other
+% weeks.
+% I’ve mostly talked about program committees since conferences are considered the primary
+% publication venue in computer science, but much of the advice applies to journals as well. Only
+% review for journals where you publish regularly, and track and manage how many submissions
+% you accept to review.
+% 7.3 Serving on dissertation committees
+% Another form of service is participating on dissertation committees, where you read the
+% dissertation and attend the thesis proposal/defense. This can take up a lot more time, since you
+% have to read an entire dissertation. It helps if you already know the students work, since that
+% will form a significant portion of the dissertation. Still, serving on a dissertation committee can
+% be an entire day’s worth of work.
+% Requests for serving on dissertation committees can come from within the department or
+% externally. The internal ones are harder to say no, since these are the colleagues you work with
+% on a daily basis. Nevertheless, track how much time you are spending on this. Don’t say yes to
+% more than one or two dissertation committees per semester/quarter.
+% From the university viewpoint, I don’t think there are concrete expectations regarding serving on
+% dissertation committees. Not being on dissertation committees early on in your career will not
+% be seen as a red flag (to the same extent that not being on PCs would be).
+% 7.4 Serving as a session chair
+% Another form of service is serving as the Session Chair at a conference. The session chair will
+% introduce the session (typically 1 to 1.5 hours) at the front, introduce the speakers, and
+% moderate the questions. The session chair also kicks off the QnA if there are no questions from
+% the audience at first.
+% Being a session chair is a fantastic service opportunity, and you should definitely sign up
+% whenever you get the chance. It gets you face-time in front of the community, you get your name
+% out, and the work required for being a good session chair is modest. Grab session chair
+% opportunities with both hands when you are starting out!
+% 7.5 Organizational service roles
+% As you become a bit more experienced, you will be offered organizational roles such as being
+% the Publicity Chair, the Web Chair, the Poster Chair, or the Program Committee chair. Of these,
+% being the chair of the program committee is most prestigious, since you are responsible for
+% 75
+% delivering a high quality program in coordination with your chosen program committee. So if you
+% are invited to be the PC chair of a conference or workshop you normally publish in, you should
+% accept the invitation. Your university or department will care about whether you have been
+% invited to be the PC chair (once you become a bit more senior).
+% However, the other roles involve a lot of work and little recognition. Ideally, these would be done
+% by professionals (as in the case of USENIX). However, for non-USENIX conferences, someone
+% has to step up and do them. Be aware of the work-reward ratio if you choose to accept an
+% assignment like this though.
+% During my time as an assistant professor, I co-chaired HotStorage 2020 and SyStor 2021. I was
+% also one of the General Chairs for SOSP 21. I enjoyed doing all three roles, but it was definitely a
+% lot of work! I would not recommend doing any of these roles (especially being General Chair)
+% early on as an assistant professor; it is a better fit when you are close to going up for tenure.
+% 7.6 Departmental and university service
+% Apart from serving on program committees, editorial boards, and organizing conferences and
+% workshops, you are also expected to do “local” service for your department and university. This
+% can take multiple forms.
+% At the department level, this means you will serve on one or more committees. Assistant
+% professors are usually assigned to either the PhD admissions committee or the faculty
+% recruiting committee. Both committees are extremely important and directly influence the future
+% of the department. Other committees include Faculty Evaluation Committees, Budget
+% Committees, and Promotion Committees that you can participate on once you become more
+% senior. Expect to spend at least a couple of weeks (put together, it will be spread over the
+% semester) on departmental committee work each year.
+% At the university level, there will be committees deciding overall university policy. Typically, your
+% department or college will need to be represented on these committees. As an assistant
+% professor, it will be rare for you to be nominated by your department for these committees;
+% typically, more senior professors participate in these committees.
+% Summary
+% The most important thing to remember about service is that it is like chores around the house;
+% you need to regularly clean your house, water your plants, etc. You do this because you want a
+% nice place to live in; similarly, service provides you a nice community to do research in. However,
+% carefully manage the amount of service you do. You will be bombarded with requests, and it is
+% all too easy to say yes to too many requests. Don’t accept so many service requests that it
+% impacts your other responsibilities as a professor.
+% 76
+
+
+\chapter{Tenure Application}
+
+After 5 or 6 years, it is time for you to go up (apply) for tenure.  You will need to submit a tenure package.  The department will then review your package and vote on whether to recommend you for tenure.  If the department votes in your favor, the package will then go to the college, and then to the university (e.g., provost, president, board of visitors, etc).  The university will then make the final decision on whether to grant you tenure (typically they follow the department's recommendation, but not always).
+
+%I will focus more on the tenure application process, as the renewal process is similar but less  intense.
+
+%are so important, you should start preparing for them early.  You should also talk to your department chair and mentor about the process and what is expected of you.  You should also talk to your colleagues who have gone through the process and ask for their advice.
+
+%This document shows my experience in preparing my tenure package and applying for tenure. I will share my timeline, the package (statements, letter writer sections), and the process.  I will also share some advice on this process.
+
+
+\section{Timeline}
+
+If you plan to apply for tenure in year X (and get tenure in year X+1), you will first mention your intention to the dept chair (at GMU this is at least a semester before, i.e., in December of year X-1). The chair might then assign you a mentor who will help you with the process. You will apply for tenure in the summer or early Fall of year X, the decision will be made in the next Spring semester of year X+1, and if everything goes well, you will get tenure in the Fall semester in year X+1.
+
+My timeline is as follows:
+
+\begin{itemize}
+  \item Fall 2021: Moved to GMU with accelerated tenure clock (meaning I don't have to restart from the beginning as I have already been at UNL since 2016).
+  \item (late) Fall 2022: Told my dept. chair that I plan to apply for tenure in Summer 2023.
+  \item Spring 2023: Prepared my tenure package, which includes writing statements and thinking about reference letter writers.  Also took this semester off (no teaching no services) because GMU has a pre-tenure study break policy.
+  \item Summer 2023: Submitted my tenure package.
+  \item Fall 2024: Gave a tenure talk. Department voted in my favor, and then the college voted in favor, and the decision goes up to the university.
+  \item Spring 2024: In May, got the official notification that I got tenure and promoted to Associate Prof., beginning in Fall 2024.
+\end{itemize}
+
+\section{The Package}
+
+\subsection{CV}
+
+For P\&T (Promotion and Tenure), universities often have a very strict and specific format for the CV, e.g., what to include, how to format, order of sections and subsections, etc.  
+Fortunately I have always been using the university CV format and also kept my CV up-to-date, so I didn't have to do much (here's my most \href{https://dynaroars.github.io/people/nguyenthanhvuh/latex-cv/cv-nguyen.pdf}{recent CV}). 
+I did have to add more \emph{personal} details (e.g., teaching evaluation and funding amounts that match what the university has in their system). 
+
+I also looked at CVs of other people in the dept. who recently got tenure. I also sent my CV to  my mentors and got many feedback. In fact, I also asked a Division Dean in the College who is in charge of P\&T procedure to review my CV for formatting and other issues. In short, the CV is the easiest part of my tenure package, and so I want to make sure mine has no silly mistakes.
+
+\subsection{Statements}
+
+You will need to prepare a statement for your tenure package.  Typically, the statement talks about your achievements and plans in (i) research and funding, (ii) advising and mentoring, (iii) teaching, and (iv) services. This order is somewhat standard, but you can change it if you want. In a sense, this statement is similar to your job application statement, but it is more focused on what you have done (and less on what you will do). However, unlike job application, tenure statement has a page limit (e.g., 8 pages at GMU).
+
+Here is my \href{https://dynaroars.github.io/people/nguyenthanhvuh/files/pt/statement-annotated.pdf}{tenure application statement}, annotated with comments. The unique part of my statement is the first page where I highlight and summarize my achievements (e.g., papers, fundings, students, etc). I got these information and numbers from my CV.
+While preparing the statement was the most time-consuming part of my tenure package, it wasn't too bad and just took a couple of days.  I was able to reuse lots of text and contents from my job application statements (when I applied to GMU in 2021). I also got statements from colleagues at GMU who recently got tenure and a couple of people at other universities to get some ideas on what to write.  I did not send my statement for feedback because I felt that it was good enough and I didn't want to bother people (reading an 8-page statement is a lot more work).
+
+\subsection{Letters}
+You will need 4--6 letters from senior people in your area to vouch for your work. Your department will be ask people for these letters on your behalf. You can suggest who to ask.  This process doesn't take much of your time (because you don't write the letters) but it might cause you a lot of stress (because you don't have much control over it).
+
+Typically, your department will compile \emph{two lists} of letter writers: one consisting of people suggested by you and the other consisting of people suggested by the department (i.e., your dept will come up with a list of people they think are good letter writers for you). The people on the departmental list often "weight" more than those on your list.
+There can also be another list, the ``blacklist'' where you list people that you don't want to write letters for you.
+
+\begin{commentbox}[Vu:]
+Originally I asked several senior people to write my letters. Then I found out that there is a rule at GMU that I cannot ask people whom have collaboration with me in the last 7 years!!! That invalidates most of my letter writers.  Moreover, GMU (and likely most other universities) would prefer writers not from my list (because people on my list are likely to be biased), and has a rule that at least 60\% of the letter writers must be from the department's list. There's also a good chance that a letter writer will decline the invitation, so there should be more names.
+\end{commentbox}
+
+I had just 2 names on my list (0 on blacklist) and let the department decide the rest. I feel I don't have too many ``enemies'' out there that would write bad things about me ( those that don't know me well will likely just decline the letter invitation instead of writing a bad letter).  This also gives the department more choices on their list (recall that people on the dept. list often weight more).
+Note I also thought about leaving my list empty, but then that seems to be too weird. I don't want to give the impression that I don't have any ``friends'' in academic. 
+
+The department selected 1 of the 2 names on my list and 4 names from the department's list. It appears that no one declines, so my letter writers were all set fairly quickly. All of my letters were very good and give positive comments about me as summarized in my evaluation letter (sent to me after the tenure decision).  I will never know who wrote the letters, but I am very grateful to them.
+
+\section{Others}
+\subsection{Tenure Talk}
+After you submit your tenure package, you might be asked to give a tenure talk, which summarizes your research, teaching, and services, and future plans.  The talk is open to the public, about 1 hour long, and has Q\&A session afterward.
+
+Here is my \href{https://dynaroars.github.io/people/nguyenthanhvuh/files/pt/slides.pdf}{talk}, which took place in Fall'23 (after I submit my tenure package in Summer'23). I focus on my recent research direction on neural network verification and just briefly on my past work. Overall, I didn't have to spend too much time on preparing because I reused slides from my job and research talk and just added at the end a ``stats'' slide on my funding, pubs, teaching, services, etc. 
+
+
+\subsection{Your ``Champion'' in the P\&T Meeting}
+
+You will need a senior faculty member from your department to present your case in the department P\&T meeting. This person (i.e., your ``champion'') will present your achievements and argue for your case.  Typically, the champion is your mentor, but it can be anyone in the department that you trust and who knows your work well.
+A good champion won't likely be able to help a bad case, but a bad champion can hurt a good case.  So do pay attention to this.
+
+
+At GMU I was assigned a mentor when I joined.  I discussed with him about letter writers, and he put together my ``stats'' page and asked me to review it. Overall, I think my case is relatively strong and so the whole thing was a ``smooth sail'' according my mentor. 
+
+\begin{commentbox}[Vu:]
+    If a case is not strong enough (e.g., lack of funding) then the department chair and mentor will likely advise the candidate against applying for tenure and instead seek for extension to improve. I think this is a good practice to  ``save face'' for the candidate and avoid a negative tenure decision, in which case they likely have to find a new job.
+\end{commentbox}
+
+
+\subsection{Tenure Visits and Colloquium} Closer to the tenure application (e.g., during the Spring), some candidates will visit other universities to give talks and meet people. 
+Sometimes the candidate is assigned to be the chair of the colloquium in the department, and they can invite their potential tenure letter writers to give talks.
+Both are good ways to get your name out and to get letters.
+The traditional way is a physical visit, but since the pandemic, many of these visits are done remotely, which is more convenient for many people.
+
+
+\begin{commentbox}
+I did not do these visits, partly because I am not a travel person, and also I felt that I would have enough good letter writers.
+However, during the Spring'23 semester before my tenure application, I did participate more in the dept. activities, e.g., in recruiting by meeting with 20+ faculty candidates, even though I am not in the search committee and really didn't have service requirements during this pre-tenure study break. This helps me build a good relationship with my colleagues in the dept.
+\end{commentbox}
+
+
+
+\section{Midterm Review}
+
+
+
+%As mentioned, a good dept chair or mentor will likely advise against applying for tenure unless they think your case is strong enough.  This is to avoid a direct tenure deny, which can be very hard and bad for the candidate. 
+%On the other hand, 4-th year renewal is unavoidable and often used as a ``warning'' to the candidate that they need to improve. 
+
+Midterm review happens midway through the tenure period, i.e., the 3rd year in a 6-year tenure track. You will need to submit a midterm \emph{renewal} application to renew your contract (and your next renewal will be the tenure application).
+While somewhat similar to tenure evaluation described above, midterm review is less intense and  does not require reference letters or presentation.
+%The department will then review your application and vote on whether to renew you for your 4th (and perhaps also 5th year). 
+Your mentor will also present and argue for your case in the dept. meeting, but the decision is made within the dept. and usually does not go up to the college or university.  It is still signed by the Dean, who often just follows the dept's recommendation.
+
+While the renewal is straightforward for most people, it can be a surprise and shock to some. Ideally, it should not be a surprise, as your annual evaluation or dept. chair and mentor should tell you if you're not doing well and what to improve.  However, things can become complicated due to various reasons such as new dept. chair or administrative changes who have different expectations. 
+
+
+%I didn't have a good experience with the 4-th year renewal process at UNL, which is one of the reasons why I had to leave UNL. 
+
+
+% \begin{commentbox}[Vu:]
+%     While I have not experienced with an ineffective mentor, I have heard about cases where the mentor did not do a good job, which can hurt strong candidates during the 4-th year renewal process. For example, a candidate might have few, but impactful high-quality publications, and the mentor did not emphasize this enough. In some case, an ineffective mentor actually turn a significant accomplishment into a negative, e.g., getting a 10-year Most Influential paper award is a big deal in certain fields, but the mentor did not emphasize this or allow it being downplayed by others (and allow idiotic comments from other faculty such as the work has been done 10 year ago). So do pay attention to this and make sure you have a good mentor who can defend you. If necessary, you can ask your chair to assign you a different mentor.
+
+% \end{commentbox}
+
+\appendix
+\chapter{NSF Panel Reviews}
+\chapter{Personal Homepage and Computer Setup}
+\section{University-owned Computer}
+
+
+\section{Personal Homepage}
+It goes without saying that as CS faculty, especially tenure-track one, you should have a personal homepage.
+It is a place where you can put your information, e.g., your CV, publications, teaching materials, etc. It is a CS academic culture that CS faculty (and even PhD students) has a personal homepage. That's how people Google you and find out about you. Your website is your online presence! Of course nowadays, you can also use social media such as Twitter/X, LinkedIn, etc, but a personal homepage is still the best way to present yourself and your work.
+
+
+
+\subsection{University and Departmental Website}  Traditionally and also still commonly, faculty uses their departmental or university provided's webspace to host their lab and personal website, e.g., \url{https://cs.gmu.edu/~user}. This makes sense because (i) it is easy to setup (e.g., just \texttt{ssh} and \texttt{sftp} your files there), (ii) it is quite flexible, e.g., you can run various services such as blog, wiki, etc, and (iii) it is free and you don't have to pay for hosting (or backup). Moreover, there's a sense of pride and loyalty to your university (or workspace) and department.
+
+
+\paragraph{Why you should NOT use departmental or university webspace?}  Nowadays many faculty use external hosting such as Github instad of their departmental or university webspace.  The main reasons being that: (i) they have always used it, e.g., during their grad school; (ii) it is flexibile, e.g., GitHub Pages allows easy static hosting and gives the benefit of revision; and (iii) it is more portable, e.g., you can move your website to a different hosting service without much hassle.
+
+
+However, a less common but very important reason---when it happens, it can be a big deal---is that your departmental or university webspace is \emph{not} yours. You might think that it's your personal website and you won't likely do anything that violates the university's policy, and so nothing to worry about (exactly my thinking for years!). But the reality is that what you put on your \url{cs.univ.edu/~user} can be used against your university, department, or even yourself.  And while your department or university might not care about what you put on your website, they are very scared of lawsuits and negative publicity.
+
+Ok, what's the big deal you said?  I don't put anything controversial on my website, so I am safe, right? Here are something you might not think about.
+
+\paragraph{Compliance} Do you put education materials on your personal website?  a link to course syllabus?  presentations? lecture notes? Guess what, these might not be ADA\footnote{ The Americans with Disabilities Act (ADA) requires that all public websites are accessible to people with disabilities.  This means that your website should be accessible to people who are blind, deaf, or have other disabilities.  If your website is not ADA compliant, then it can be sued by the US Department of Justice or by individuals (e.g., students or their parents).  This is a big deal and can cost your university a lot of money.  So you should make sure that your website is ADA compliant.} compliant (e.g., are you sure the colors or fonts or space on those materials are accessible to people with disabilities?).
+For example, I have students who asked me to use different fonts and colors due to their disabilities, and I happily obliged.  However, I can totally imagine some disgruntled student or parent suing the university because they failed the course due to inaccessible materials.
+
+
+Another related one is student's privacy. Do you run \texttt{turnin} or plagiarism/AI detection stuff on your personal website?  If so then you're essentially storing and processing students' data on your personal website.
+
+\begin{commentbox}
+  At GMU, we are required to put our course materials on the university's Canvas system. Of course we do not know whether the materials are ADA compliant or not, but at least the university has a team of people (and likely automated tools) to check and make sure that the materials are ADA compliant.\\
+
+
+  A teaching colleague said that they do not like these university's services like Canvas or Sharepoint (for file storage) because they suck, but at least they give some peace of mind that the university is responsible for making sure that the materials are compliant with the law, and if people sue, they will sue the university, not that faculty.  Sounds pretty reasonable to me!
+\end{commentbox}
+
+\paragraph{Political} Do you have a link to your personal blog or social media like Facebook that show what your endorse or like? Do you reference Twitter/X posts? these are be interpreted as you, as a faculty member of your department or university because it was posted from a \url{cs.university.edu} subdomain, endorsing a political party or candidate.  For example, the DOJ in 2025 opens an investigation into universities for political discrimination in hiring, and they cite a tweet (back when Twitter was still around) of the president of the university praising a political candidate that is now considered discriminatory.
+
+Universities are very sensitive to these things.  A legal issue, a lawsuit, or a bad publicity bring a lot of trouble to the university, and guess who will be quoted in the news?  You, the faculty member who put the content on your website.  In short, these things sounds absurd, and probably never should happen, but in the current political climate, it does happen, and universities are tightening their policies and practices to avoid these issues.
+
+
+\begin{commentbox}
+
+\end{commentbox}
+
+
+
+
+\begin{commentbox}[Vu:]
+  test
+
+\end{commentbox}
+
+\section{External Hosting}
+
+\section{VPN}
+
+
+
+
+\section{My Setup}
+Just a simple setup that works for me.
+
+
+\begin{itemize}
+  \item Webpage: My lab website is hosted on GitHub Pages with a custom domain \url{roars.dev}.  Github Pages is free, relatively flexible (you can host some dynamic content there, e.g., see \url{https://roars.dev/csconfs}), gives the benefits of revision control, and is commonly used by many CS faculty.  My domain name \texttt{roars.dev} is through \texttt{porkbun.com}. I really didn't have much preference on domain hosting, I just go with porkbun because it is cheap (\$12/year) and has a good reputation.
+  \item Email: I use my GMU email---hosted on GMU (more precisely Office365)---mainly for professional communication (e.g., with students and university/departmental matters). I have my personal email \url{tvn@roars.dev} for most other communications.  For my personal email I do not use a dedicated, paid mail hosting but instead just use \texttt{iCloud+}, which I already have and supports custom domain email.
+  \item VPN: I have a Linux box at home running Wireguard, a VN server, and automatically connects all my connections (e.g., laptop, phone, etc) to it. Really convenient for accessing my home network when I am away, e.g., when I travel or work from home. My Linux box also runs a DNS server (Adguard) to block ads and trackers.
+  I also connect to GMU's VPN when I need to access my lab network or other resources that are only accessible from the GMU network (e.g., magainze subscriptions, etc).
+\end{itemize}
+
+
+\chapter{Issues}
+
+
+% \section{Change in Department. Moving from UNL to GMU}
+
+% I joined UNL in 2016 and was very happy there until 2020, when people start leaving and the dept. changed its leadership and organization.  All of these uncertainties and other issues lead to my decision to be on the job market again.  
+
+% I will skip the details and just summarize several important and disappointing events.
+
+% \begin{itemize}
+% \item 2019: four senior professors (in SE) left.  One of these 4 was the dept chair (and he left just after 2 months of being chair). There were issues of upper admin didn't work well with the dept chair (and this issue has been going for years).
+% \item 2020: College of Engr pressure dept to move entirely to it. The new chair candidate only agrees to accept the job if the faculty moved to CoE, putting pressure on the move. Faculty are split on the decision and eventually moved with lots of mistrusts and concerns under CoE.
+% \item Salary inversion:  new chair offers new AP salary that is much higher than current AP, leading to jokes that current AP should just reapply to UNL.  This became a serious issue and many people at UNL use this as a reason on why they move. 
+% \item Senior faculty fighting on mailing list. 
+
+% \end{itemize}
+
+
+% Note that even after leaving Lincoln, my family and I still have a soft spot for the city and its people.  It was a great place to live and raise a family, but unfortunately not a good place to work for me. 
+
+\bibliographystyle{abbrv}
+\bibliography{demystify.bib}
+
+\end{document}
+
+https://vijay03.github.io/asstprofbook/chapters/job.pdf
