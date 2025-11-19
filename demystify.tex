@@ -8,7 +8,6 @@
 \tcbuselibrary{documentation, skins}
 \usepackage{titlesec}
 
-
 % \setsecnumdepth{subsection}
 % \setcounter{tocdepth}{3}
 \usepackage{fontawesome5}
@@ -110,10 +109,6 @@
 \renewcommand{\figureautorefname}{Fig.}
 \renewcommand{\tableautorefname}{Tab.}
 \makeatletter
-% \renewcommand{\chapterautorefname}{\S\@gobble}
-% \renewcommand{\sectionautorefname}{\S\@gobble}
-% \renewcommand{\subsectionautorefname}{\S\@gobble}
-% \renewcommand{\appendixautorefname}{\S\@gobble}
 \renewcommand{\chapterautorefname}{\textsection\@gobble}
 \renewcommand{\sectionautorefname}{\textsection\@gobble}
 \renewcommand{\subsectionautorefname}{\textsection\@gobble}
@@ -122,9 +117,6 @@
 \newcommand*\l@chapterinfo{\@nodottedtocline{0}{0.0em}{1.5em}}
 \newcommand*\l@sectioninfo{\@nodottedtocline{1}{1.5em}{2.3em}}
 \newcommand*\l@subsectioninfo{\@nodottedtocline{2}{3.8em}{3.2em}}
-%\newcommand*\l@subsubsectioninfo{\@nodottedtocline{3}{7.0em}{4.1em}}
-%\newcommand*\l@paragraphinfo{\@nodottedtocline{4}{10em}{5em}}
-%\newcommand*\l@subparagraphinfo{\@nodottedtocline{5}{12em}{6em}}line{5}{12em}{6em}}
 
 % Copied from the book class macro `\@dottedtocline`. Removed the dots and page number
 \def\@nodottedtocline#1#2#3#4#5{%
@@ -208,12 +200,12 @@
     description={A group of eight private universities in the US known for their academic excellence and social prestige. The Ivy League schools are Brown, Columbia, Cornell, Dartmouth, Harvard, the UPenn, Princeton, and Yale. These schools are typically known for their undergraduate programs more than their graduate programs. Moreover, most top CS programs such as CMU, UIUC, UCSD, UWash, MIT, Stanford, are not in the Ivy League.}
 }
 
-  
 \newglossaryentry{adcom-members}{
     name = adcom members,
     description={Faculty members who are part of the admission committee. People who review applications and make admission decisions (\autoref{chap:evalapps})}
     }
-  
+
+
 \newglossaryentry{adcom-chair}{
     name = adcom chair, 
     description={The faculty member who leads the admission committee. This person is often not involved in individual admission decisions but oversees the process (e.g., resolve disputes, ensure fairness) (\autoref{chap:evalapps})}
@@ -245,10 +237,10 @@
     description={These are the most prestigious venues for publishing research in CS.  For example, in Software Engineering, top-tier conferences include ICSE, FSE, and ASE and top-tier journals include TSE and TOSEM.  Publishing in these venues is highly competitive and prestigious, and can significantly improve your chances of getting admitted to a good PhD program}
 }
 
-% \newglossaryentry{diversity-statement}{
-%     name = diversity statement, 
-%     description = {A document sometimes required in applications where applicants describe their contributions to diversity and inclusion, or how their background adds to the diversity of the academic community.admissions~\autoref{sec:diversity-statement}}
-% } 
+\newglossaryentry{diversity-statement}{
+    name = diversity statement, 
+    description = {A document sometimes required in applications where applicants describe their contributions to diversity and inclusion, or how their background adds to the diversity of the academic community.admissions~\autoref{sec:diversity-statement}}
+} 
 
 
 \newglossaryentry{fields}{
@@ -257,20 +249,20 @@
 }
 
 \newglossaryentry{international-domestic}{
-    name=International vs. Domestic students, 
-    description={International students are loosely defined as those who would need a visa to study in the US (\autoref{chap:visa}). Domestic students (\autoref{chap:domestic-students}) are those who do not need a visa, typically US citizens or permanent residents}
+    name=international vs. domestic students, 
+    description={International students are loosely defined as those who would need a visa to study in the US. Domestic students (\autoref{chap:domestic-students}) are those who do not need a visa, typically US citizens or permanent residents}
     }   
 
 
 \newglossaryentry{in-out-state}{
-    name=In-state vs. Out-of-state,
+    name=in-state vs. out-of-state,
     description={In-state tuition is the tuition rate for students who are residents of the state where the university is located. Out-of-state tuition is the tuition rate for students who are not residents of that state. In-state tuition is typically much lower than out-of-state tuition. PhD students typically do not have to pay tuition as it is covered by their funding, but this might be important for MS students}
     }
 
-\newglossaryentry{lab}{name=Research Lab, description={A group of researchers (profs. and students) working on a common research area, e.g., a Software Engineering Lab.  Typically a lab is led by a single professor, but sometimes it can be co-led by multiple professors. For example, my lab \href{https://roars.dev}{DynaROARS} focuses on my own research area (software verification), but I am also part of the more general SWE group at GMU with other faculty in Software Engineering}}
+\newglossaryentry{lab}{name=research lab, description={A group of researchers (profs. and students) working on a common research area, e.g., a Software Engineering Lab.  Typically a lab is led by a single professor, but sometimes it can be co-led by multiple professors. For example, my lab \href{https://roars.dev}{ROARS} focuses on my own research area (software verification), but I am also part of the more general SWE group at GMU with other faculty in Software Engineering}}
 
 
-\newglossaryentry{major}{name=Major, description={A student's primary field of study, e.g., Computer Science, Electrical Engineering, Mathematics, etc. Often used in the context of undergraduate studies (e.g., ``what was your major in undergrad?'')}}
+\newglossaryentry{major}{name=major, description={A student's primary field of study, e.g., Computer Science, Electrical Engineering, Mathematics, etc. Often used in the context of undergraduate studies (e.g., ``what was your major in undergrad?'')}}
 
 % \item[MS \autoref{sec:msrequirement}] Master of Science. A graduate degree that typically requires 2 years of study.
 
@@ -281,9 +273,10 @@
 % \item[F-1] Student Visa. A visa that allows international students to study full-time at an accredited institution in the US.
 % \item[F-2] Dependent Visa. A visa that allows the spouse and children of an F-1 visa holder to live in the US.
 
+\newacronym[description={The academic year in the US typically starts in late August or early September and ends in May or June. It is divided into two main semesters: Fall (August/September to December) and Spring (January to May). Some universities also have a Summer semester (May to August) which is often optional and may have fewer courses offered. Some universities, e.g., those in California, use a quarter system instead of semesters, where the year is divided into four quarters: Fall, Winter, Spring, and Summer. Each quarter typically lasts around 10 weeks.}]{AY}{AY}{Academic Year}
 
-
-\newacronym[description={Commonly mentioned by international students to refer to top-tier journals in CS.  Q1 is very well-known in CS in the US (also CS often focuses on confs. rather than journals), and many CS faculty in the US might not know what it means.  If you want to refer to \glslink{toptier}{top-tier} journals, you should mention the specific journals, e.g., TSE in Software Engineering}]{Q1}{Q1}{Scopus Q1 Journals}
+\newacronym[
+  description={Commonly mentioned by international students to refer to top-tier journals in CS.  Q1 is very well-known in CS in the US (also CS often focuses on confs. rather than journals), and many CS faculty in the US might not know what it means.  If you want to refer to \glslink{toptier}{top-tier} journals, you should mention the specific journals, e.g., TSE in Software Engineering}]{Q1}{Q1}{Scopus Q1 Journals}
   
 \newacronym[description={A main type of PhD funding where you work on a research project for a professor (\autoref{sec:ra})}]{ra}{RA}{Research Assistantship} 
 \newacronym[description={A main type of PhD funding where you help a a professor with teaching, e.g., grading assignments (\autoref{sec:ta})}]{ta}{TA}{Teaching Assistantship} 
@@ -295,8 +288,11 @@
 \newacronym[description={A program funded by the NSF to provide research opportunities for undergraduate students}]{REU}{REU}{Research Experience for Undergraduates}
 
 \newacronym[description={A document written by yourself to explains your research interests, background, and reasons for applying to a PhD program (\autoref{chap:sop})}]{SOP}{SOP}{Statement of Purpose}
+
 \newacronym[description=The group of faculty members who review applications and make admission decisions (\autoref{sec:adcom})]{adcom}{adcom}{Admission Committee}
+
 \newacronym[description=A doctoral degree that represents the highest level of academic achievement in a particular field of study. In CS it typically requires original research and a dissertation]{phd}{PhD}{Doctor of Philosophy}
+
 \newacronym[description={A PhD candidate who has finished all course work and exams and only needs to write and defend their dissertation}]{ABD}{ABD}{All But Dissertation}
 
 
@@ -325,7 +321,7 @@
     {\Huge\bfseries\baselineskip1.3em\mytitle\par}\bigskip\bigskip
     {\large\bfseries\mysubtitle{}}\bigskip\par
     \vfill
-    \includegraphics[width=0.5\textwidth]{files/angelfish5.png}
+    \includegraphics[width=0.8\textwidth]{files/usamap.png}
     \vfill
     {\Large\bfseries\me{}}\medskip\par
     {\large\institute{}}%\medskip\par    
@@ -367,7 +363,7 @@ Having been involved in PhD admission committees for many years, I've observed t
 % though \emph{very} top schools could be very selective, e.g., see the \href{https://da-data.blogspot.com/2015/03/reflecting-on-cs-graduate-admissions.html}{admission process} at CMU
 So I want to share some details about the admission process and advice for those who are interested in applying for a \emph{PhD in CS in the US}.
 Originally, this book was written for international students, but has been expanded to generalize and include specific tips for \emph{US domestic students} (\autoref{chap:domestic-students}).
-Moreover, while this book aims at students interested in CS, it might be relevant to students from various \acrshort{STEM} (Science, Technologies, Engineering, and Mathematics) disciplines (\autoref{sec:fields-and-areas}).
+Moreover, while this book aims at students interested in CS, it might be relevant to students from various \acrshort{STEM} disciplines (\autoref{sec:fields-and-areas}).
 Furthermore, although many examples are specifics for schools that I and other contributors of this book know about, the information should be generalizable to other good \Gls{r1} institutions in the US.
 
 This book can help \emph{US faculty and admission committee} gain a better understanding of international students and their cultural differences (\autoref{chap:cultural}).  By recognizing and leveraging these differences, CS programs in the US can attract larger and more competitive application pools from international students.
@@ -397,11 +393,12 @@ This book aims to address these concerns.
 If you believe you have a chance in other countries, e.g., Australia, Canada, Japan, Germany, UK, South Korea, and Singapore, then you will surely have a chance in the US as well.
 
 \begin{commentbox}
-Note that the most selective US schools, e.g., top 10 in CS (\autoref{chap:rankings}), are extremely competitive for everyone, regardless of background. Don't be discouraged if you don't get into a ``household name'' university; hundreds of excellent CS PhD programs offer world-class research opportunities (\autoref{sec:selecting-ranking-schools}).\\
+The most selective US schools, e.g., top 10 in CS (\autoref{chap:rankings}), are extremely competitive for everyone, regardless of background. Don't be discouraged if you don't get into a ``household name'' university as there are many excellent CS programs (\autoref{sec:selecting-ranking-schools}) in the US that are not as well-known internationally but still offer great research opportunities and training. In fact, many top CS researchers and faculty members in the US did not graduate from Ivy League or top 10 schools.\\
 
-Standing out is important (\autoref{sec:improve-your-chance})! US programs also value applicants from diverse and nontraditional backgrounds. If you're not from a top school, or your path has been unusual (e.g., you climb Mt. Everest, you may actually stand out---in a good way!\\
 
-Many students, especially those from smaller countries or schools, feel \emph{imposter syndrome}---worrying they're ``not good enough'',  or get discouraged when competing with others with ``stronger'' profiles (\autoref{sec:profile-not-strong}) Remember (\autoref{chap:evalapps}): admissions committees look for potential, not perfection, and for evidence you'll thrive in research environment and fit well at their institution---in other words, things that usually have nothing to do with your GPA or GRE scores.
+%Standing out is important (\autoref{sec:improve-your-chance})! US programs value applicants from diverse and nontraditional backgrounds. If you're not from a top school, or your path has been unusual (e.g., you climb Mt. Everest, you may actually stand out---in a good way!\\
+
+Many students, especially those from smaller countries or schools, feel \emph{imposter syndrome}---worrying they're ``not good enough'',  or get discouraged when competing with others with ``stronger'' profiles (\autoref{sec:profile-not-strong}) Remember (\autoref{chap:evalapps}): adcom looks for potential and evidence you'll thrive in research environment and fit well at their institution---in other words, things that usually have nothing to do with your GPA or GRE scores.
 
 \end{commentbox}
 \paragraph{Funding Is Not An Issue} In most cases CS PhD students \emph{do not} need to worry about funding, especially at good R1
@@ -553,13 +550,14 @@ In short, you \emph{do not need} to formally take CS courses, you just need to s
 \section{Is MS Required for CS PhD Admission?}\label{sec:msrequirement}
 \sectioninfo{You do not need an MS to do PhD in CS.}
 
-No, while other countries often require an MS for PhD student in CS (\autoref{sec:non-us-differences}), it is common in the US to apply for a PhD program directly after a 4-year undergrad program (e.g., after getting a B.S degree).  Most CS PhD programs are designed so that students can get MS degree ``along the way'' to PhD, e.g., after finishing the 2-year course work. 
+No, while other countries often encourage or even require an MS for PhD student in CS (\autoref{sec:non-us-differences}), it is common in the US to directly apply for a PhD program after a 4-year undergrad program (e.g., after getting a B.S degree).  In addition, most CS PhD programs are designed so that students can get MS degree ``along the way'' to PhD, e.g., after finishing the 2-year course work. This is one of the reasons why CS PhD in the US takes longer (5--7 years, \autoref{sec:time}) than other countries.
 
-However, MS can help admission if it gives research experience or is from a more well-known school than your undergrad institution (\autoref{chap:your-school}).
-Moreover, if you have an MS then some course work \emph{might be} transferred for course credits, which \emph{might} save some time. But in general don't count finishing earlier just because you have an MS. 
+However, MS \emph{can help} admission if it gives research experience or is from a more well-known school than your undergrad institution (\autoref{chap:your-school}).
+Some profs. also prefer students with an MS since they have more experience and are more mature.  But this is not a requirement, and many profs. are happy to take students without an MS.
+Moreover, if you have an MS then some course work \emph{might be} transferred for course credits, which \emph{might} save some time. But in general don't count finishing earlier just because you have an MS.
 
 \begin{commentbox}
-    I start my PhD with an MS in CS from a US university.  I found that the MS helped me in gaining research experience, but I still had to retake courses because I did my MS at a different university.  So in the end, I did not save any time because of the MS.
+    I start my PhD with an MS in CS from a US university.  MS helped me in gaining research experience, but I still had to retake courses because I did my MS at a different university.  So in the end, I did not save any time because of the MS.\\
     
     In general, don't worry if you don't have an MS. But also don't feel that you wasted your time if you have an MS, as it can help you in research.
   \end{commentbox}
@@ -568,9 +566,9 @@ Moreover, if you have an MS then some course work \emph{might be} transferred fo
 \section{Can I apply for PhD in CS for the Spring or Summer?}\label{sec:apply-spring-summer}
 \sectioninfo{Fall is the most common start time for PhD programs in the US and allows you to apply for funding opportunities.}
 
-Typically, most students apply to start their PhD study in the Fall. This means they send in their application around December and receive admission notification sometime in the Spring, and officially begin their PhD study in the Fall (August or September).
+Most students apply to start their PhD study in the Fall. This means they send in their application around December and receive admission notification sometime in the Spring, and officially begin their PhD study in the Fall (August or September).
 
-Fall---the start of an academic year---is the most common start time for PhD programs in the US, and many universities only accept new PhD students in the Fall. Importantly, applying for the Fall allows you to apply for funding opportunities (\autoref{chap:funding}) that are available only for Fall admits, such as TAships (\autoref{sec:ta}) and fellowships (\autoref{sec:ra}).
+Fall---the start of an \gls{AY}---is the most common start time for PhD programs in the US, and many universities only accept new PhD students in the Fall. Importantly, applying for the Fall allows you to apply for funding opportunities (\autoref{chap:funding}) that are available only for Fall admits, such as TAships (\autoref{sec:ta}) and fellowships (\autoref{sec:ra}).
 
 However, many universities also accept PhD students in the Spring or Summer, especially when you have a specific adviser who would fund you through an RAship (\autoref{sec:ra}). This is less common, and you would loose funding opportunities that are available only for Fall admits.
 
@@ -581,7 +579,6 @@ However, many universities also accept PhD students in the Spring or Summer, esp
 
 
 \section{PhD in the US vs. Other Countries}\label{sec:non-us-differences}
-
 \sectioninfo{Among several differences, CS PhD in the US does not require an MS degree but has a longer PhD study time.}
 
 \begin{table}
@@ -686,7 +683,7 @@ The PhD adcom typically involves assistant professors in the department (see \au
 
 
 
-Each application is assigned to about three adcom members, who will evaluate your profile and reach a consensus.  They will consider various factors including LoRs, SOP, research experience, GPA, test scores, and interviews. More details about these factors are discussed in \autoref{part:appendices}.
+Each application is assigned to about three adcom members, who will evaluate your profile and reach a consensus.  They will consider various factors including LoRs, SOP, research experience, GPA, test scores, and interviews. More details about these factors are discussed in \autoref{part:applications}.
 
 
 
@@ -727,7 +724,7 @@ If the student mentioned a faculty in their SOP, adcom might ask that faculty to
 
 We typically review applications independently and do not talk to each other.  This is to avoid biasing, e.g., if one reviewer says they want to accept, the other might feel pressured to accept as well.  
 
-However, when there are discrepancies in evaluations, the adcom chair will ask reviewers to discuss the application to reach a consensus.  We might also talk to each other for interesting or strong applications, e.g., how to recruit this student or who should be the adviser. 
+However, when there are discrepancies in evaluations, the \gls{adcom-chair} will ask reviewers to discuss the application to reach a consensus.  We might also talk to each other for interesting or strong applications, e.g., how to recruit this student or who should be the adviser. 
 If the student mentioned a faculty member in their SOP, we might ask that faculty if they are interested in the student. 
 
 
@@ -904,6 +901,16 @@ For example, they can provide convincing and concrete examples based on their ex
 \end{commentbox}
 
 
+% \subsection{Not having LoRs from Research Advisors or Mentors}\label{sec:no-research-lor}
+
+% Sometimes students do not want to ask their research advisors or mentors for LoRs, e.g., they didn't have a good relationship with them, they think that the advisors might not write a strong letter, or they do not want to reveal their intention to go abroad.  So the question is would adcom raise a concern if the student does not have a LoR from their research advisors or mentors?
+
+% The short answer is that, yes, we would raise a concern, e.g., th  
+
+
+
+
+
 \section{Asking for LoRs}\label{sec:asking-lor}
 \sectioninfo{Ask for LoRs at least a month before the deadline.  Waive your right to see the letter. Help your writers by providing details about your research experience and potential.}
 
@@ -1027,18 +1034,6 @@ Thus you do want to send reminders because professors can be quite busy and migh
 
 
 
-\subsection{Thanking and Updating Your Writers}\label{sec:thank-writers}
-After your application is submitted and your writers have submitted their letters---i.e., the wait begins (\autoref{part:after-apply})---you should send quick thank you notes to your writers.  This  serves both as an acknowledgement that you know they have submitted the letters and as an appreciation for their help.
-
-You should also update them with the outcome of your application, regardless of whether you are admitted or not.  In addition to being a common courtesy, this can also help maintain a good relationship with your writers (\autoref{sec:maintaining-relationships}), which can be useful in the future (e.g., if you need another letter for another round of applications or for a job reference).
-
-More generally, you should do the same for anyone who has helped you during the application process, such as profs. who provided advice, mentors who guided you, or friends and family who supported you. 
-
-
-% \begin{commentbox}
-% For Vietnamese students, it's worth mentioning the \href{https://vef2.org/}{VEF2.0 program}, which has helped many students gain admission to top CS PhD programs in the US. VEF2.0 invites US faculty members from leading institutions to conduct rigorous interviews with VEF students and subsequently provide reference letters on their behalf. Despite the limited interaction between the interviewer and the interviewee (primarily just the interview), these reference letters are generally effective and have helped many students get into good PhD programs.
-% \end{commentbox}
-
 \subsection{Will It Be Annoying If You Ask For Many Letters?}\label{sec:many-letters}
 \begin{commentbox}
 I personally do not mind writing many letters for my students \emph{once I have agreed to write for them} (\autoref{sec:lor-writing}). Profs. in general are used to writing many letters, especially during the application season. Moreover, once a letter is written, it can be reused for multiple applications, so it does not take much time to submit the letter to different universities (5--10 minutes per submission).
@@ -1058,12 +1053,24 @@ I will also let the student know if I cannot write a strong letter for them (e.g
 
 Strong letters take a lot longer as it will be personalized.  While I have a general template for LoR, it still can take me \emph{an hour or more} to write it.  I often ask the students to provide information (\autoref{sec:help-your-LOR-writers}) and what they think I should highlight in the letter. They can also provide me their SOP (if they already have written one) so I can complement what they say with my own perspective.  I often do not share what I write with the students, just to keep it more genuine and honest.\\
 
-My letter always has the university letterhead, my signature, and is signed and dated.  While using a letterhead or signing the letter is not required (I never paid much attention to these when reading LoRs), it makes the letter more official and professional.  
+My letter always has the university letterhead, my signature, and is signed and dated.  While using a letterhead or signing the letter is \emph{not required} (I never paid much attention to these when reading LoRs), it makes the letter more official and professional.  
 This website has the template of the letter with letterhead and signature: \url{https://www.overleaf.com/read/xzyrxkdjfxsp#2a1f9e}.\\
 
 I usually submit a letter for a student in batch (e.g., I submit to all universities that student is applying to at the same time). Typically, each submission takes from 5--10 mins, depending on the application system.  I will also let the student know when I have submitted the letter, and ask if I miss any.\\
 
 \end{commentbox}
+
+\subsection{Thanking and Updating Your Writers}\label{sec:thank-writers}
+After your application is submitted and your writers have submitted their letters---i.e., the wait begins (\autoref{part:after-apply})---you should send quick thank you notes to your writers.  This  serves both as an acknowledgement that you know they have submitted the letters and as an appreciation for their help.
+
+You should also update them with the outcome of your application, regardless of whether you are admitted or not.  In addition to being a common courtesy, this can also help maintain a good relationship with your writers (\autoref{sec:maintaining-relationships}), which can be useful in the future (e.g., if you need another letter for another round of applications or for a job reference).
+
+More generally, you should do the same for anyone who has helped you during the application process, such as profs. who provided advice, mentors who guided you, or friends and family who supported you. 
+
+
+% \begin{commentbox}
+% For Vietnamese students, it's worth mentioning the \href{https://vef2.org/}{VEF2.0 program}, which has helped many students gain admission to top CS PhD programs in the US. VEF2.0 invites US faculty members from leading institutions to conduct rigorous interviews with VEF students and subsequently provide reference letters on their behalf. Despite the limited interaction between the interviewer and the interviewee (primarily just the interview), these reference letters are generally effective and have helped many students get into good PhD programs.
+% \end{commentbox}
 
 
 
@@ -1086,7 +1093,7 @@ Here we look at publications and other research experiences that can strengthen 
     \caption{Applicants to top CS programs have multiple first-authored papers at top places.}\label{fig:wu}
 \end{figure}  
 
-The most concrete evidence of research ability is having \emph{papers in reputable international journals or conferences}.
+The most concrete evidence of research ability is having \emph{papers in reputable international conferences or journals}.
 Having published papers, especially at top venues, is a sign that you have been successfully involved in research. 
 
 Publications are \emph{never required} for PhD application. However, given the competitiveness of CS admission, they can significantly strengthen your application and \emph{are becoming the norm}. Applicants admitted to top schools, especially in popular \gls{fields} such as ML and NLP, often have multiple first-authored papers at top places. Fig.~\ref{fig:wu} shows examples of applicants to Stanford CS PhD.
@@ -1094,13 +1101,13 @@ Publications are \emph{never required} for PhD application. However, given the c
 \paragraph{Not the First Author} Being the first author typically means own the work and therefore knows the research well. However, it's \emph{perfectly OK to be second or third or even last}.  Adcom members know it is difficult to publish a good paper, and so being a co-author is still a good sign about your research experience. In any case, especially in the case when you're not the first author, you should explain the work and your contribution.  Better yet, have your LoR writers (\autoref{sec:help-your-LOR-writers}) talk about your work and contribution in their letters.
 
 \paragraph{Publications Not Relevant To CS or Your Research Interest}
-If you have published papers in other fields, e.g., physics, math, or even CS but not in your research interest, you should still talk about them in your SOP (\autoref{chap:sop}) and upload them as writing samples (\autoref{sec:writing-sample}).
-While not as strong as CS publications, they still show your research ability and experience. 
+If you have published papers in other fields, e.g., physics, math, or even CS but not in your research interest, you should still talk about them in your SOP (\autoref{chap:sop}) and upload them as writing samples (\autoref{sec:writing-sample}). Also, have your LoR writers (\autoref{sec:help-your-LOR-writers}) talk about them in their letters.
+While not as strong as CS publications, they still show your research ability and experience, which is what adcom members care about.
 
 \subsection{What If You Don't Have Any Publications?} 
 
 Many students do not have the opportunity to publish papers. Thus, other writings, even those under submissions or even rejected, would still help. 
-Be sure to upload your these with your application (\autoref{sec:writing-sample}) and mention them in your SOP (\autoref{chap:sop}). Adcom members can quickly skim over the paper to determine its quality (\autoref{sec:ievaluate}).
+Be sure to upload your these with your application (\autoref{sec:writing-sample}) and mention them in your SOP (\autoref{chap:sop}). Adcom members can quickly skim over the paper and determine its quality (\autoref{sec:ievaluate}).
 
 Note that local conferences and non-English journals or conferences do
 not carry as much weight since their quality is often unknown. However, if you have published in such places, you should still upload them, mention them in your statement, and explain why they are good.
@@ -1120,11 +1127,11 @@ not carry as much weight since their quality is often unknown. However, if you h
   \begin{questionbox}[Thanh:]
       Due to academic culture, professors in Vietnam usually aim for (international) journals instead of conferences. Could you give some tips on how to know whether a journal is good (CSrankings, unfortunately, only consider conferences)?
       \tcblower
-      \textbf{Vu}: One way is looking at what well-known researchers publish. For example, if you are interested in a field X, you can use CSRankings to look at active faculty in X, and then look at their websites to see what journals they publish at.
+      \textbf{Vu}: One way is looking at where well-known researchers publish. For example, if you are interested in a field X, you can use CSRankings to look at active faculty in X, and then look at their websites to see what journals they publish at.
   \end{questionbox}
 
-\section{Work Experience} Work---more specifically, research---experience at \emph{well-known research laboratories}, such as Microsoft Research, can strengthen your
-application.  The emphasis here is \emph{research} places, not software development or non-research work. For example, working at a FAANG (Facebook, Amazon, Apple, Netflix, Google) company as a software engineer does not count as research experience, although it can be helpful for MS applications (\autoref{chap:ms}). Similarly, a LoR from your supervisor for non-research experience might not count much (\autoref{sec:admin-letters}). So do not spend much time talking about development job in your SOP.
+\section{Work Experience} Research experience at \emph{well-known laboratories}, such as Microsoft Research, can strengthen your application.  The emphasis here is \emph{research} work, not software development or non-research work. For example, working at a FAANG (Facebook, Amazon, Apple, Netflix, Google) company as a software engineer does not count as research experience. While it can be helpful for MS applications (\autoref{chap:ms}), software development, even at a top company, does not demonstrate your research ability and potential for a PhD program. 
+Similarly, a LoR from your supervisor for non-research experience might not count much (\autoref{sec:admin-letters}). So do not spend much time talking about development job in your SOP.
 
 
 Note that adcom reviewers might not be familiar with all research labs, especially those outside the US. For example, while VinAI is well-known in Vietnam and potentially in Asia, it might not be well-known in the US. So you or your LoR writers should explicitly say something about them in your statement or letter.  In general, if you did some good research work, then you should mention that in your SOP and ask your supervisor to write about it in their LOR (\autoref{chap:lor}).
@@ -1132,7 +1139,7 @@ Note that adcom reviewers might not be familiar with all research labs, especial
 \section{Competitions}\label{sec:competitions}
 
 Winning \emph{internationally recognized competitions} can demonstrate your research potential.
-For example, participating in Math Olympiads if you want to do theory or winning ACM programming contests if you want to ``build'' systems, e.g., software analysis.  
+For example, participating in Math Olympiads if you want to do theory or winning ACM programming contests if you want to ``build'' systems (e.g., research prototypes).
 So do talk about them in your SOP (\autoref{chap:sop}) and have your LoR writers mention them in their letters (\autoref{sec:help-your-LOR-writers}).
 
 
@@ -1192,7 +1199,7 @@ These names, numbers, and stats are harder to fake and concretely show your expe
 
 \item \textbf{Mentioning wrong professors}: Do not mention emeritus professors or those who have left.  Teaching and adjunct faculty are often not active in mentoring PhD students (\autoref{sec:faculty-types}). Do your homework and mention profs who are till active in research. 
 
-\item \textbf{Too Long and Fancy Format}: Keep it under 2 pages. Don't use too much coloring or fancy fonts (like those in Words). Don't use left alignment (seems to be default in Words) as it is hard to read.
+\item \textbf{Too Long and Fancy Format}: Keep it under 2 pages\footnote{May vary but this is my personal preference.}. Don't use too much coloring or fancy fonts (like those in Words). Don't use left alignment (seems to be default in Words) as it is hard to read.
 
 CS academics like using \LaTeX{} (common way to write our papers and other documents), so write your SOP using \LaTeX{} (with Times or default font, 11pt, and 1-inch margin as described in~\autoref{chap:writing-latex}).
 \end{itemize}
@@ -1204,7 +1211,7 @@ As AI and LLMs become more popular, many students wonder if they could use AI to
 Personally I \emph{do not} check your statements for AI contents. First, I do not have the time to do that.  It is much easier for me to just read the statement and see if it makes sense and stands out (\autoref{sec:ievaluate}). Hint: AI-generated content reads very strangely and faculty is just too experienced in reading essays and SOPs from students to not notice it.
 Second, AI-checking technology is very unreliable and inconsistent. For example, a checker might claim that 80\% of an essay is AI-generated while another says it is 0\%.  
 
-Finally, I think it is fine to use AI to help you polish your writing, e.g., the ``proofread'' feature in Apple's \texttt{Writing Tools} is quite useful for fixing writing issues or finding better terminologies or phrases. This thus can help international students who might struggle with writing English and are not familiar with the academic writing style (you see how many ``thus'' used in this book?). 
+Finally, I think it is fine to use AI to help you polish your writing, e.g., the ``proofread'' feature in Apple's \texttt{Writing Tools} is quite useful for fixing writing issues or finding better terminologies or phrases. This can help international students who might struggle with writing English and are not familiar with the academic writing style (you see how many ``thus'' used in this book?). 
 
 
 % \subsection*{Additional Resources}
@@ -1215,30 +1222,37 @@ Finally, I think it is fine to use AI to help you polish your writing, e.g., the
 % \end{itemize}
 % \subsection{Outline of a LOR}\label{sec:lor-outline}
 
-% \section{Diversity Statement}\label{sec:diversity-statement}
-% no longer relevant as most univs do not require this anymore
 
-% Some universities require a \gls{diversity-statement} as part of the application. Students, especially international ones, often struggle with what to write, especially when they are not from a minority group or do not have much experience in DEI.
+\section{Diversity Statement}\label{sec:diversity-statement}
 
-% A DEI statement is about showing your \emph{awareness} of DEI, \emph{understanding} of the challenges others face, and \emph{potential things} you can do to contribute. 
-
-% \begin{itemize}
-% \item \textbf{You don't have to be from a minority group.} You just need to understand what DEI is, e.g., be aware of challenges faced by minority groups in studying CS, STEM fields, academia, workplace. Show that you understand the importance of DEI and how it can benefit the CS field and society. 
-
-% \item \textbf{Show your awareness, customized to your own experiences}. If you come from a different culture or country, talk about DEI there. Many countries, especially developing countries, do not have/care about DEI or even have laws against it, so does minority group face in your country?  How do you think DEI can benefit? Remember, you would have a unique perspective on this topic that we might not know about, so use that to your advantage.
-
-% \item \textbf{Highlight your contributions}.  You do not need to be in any group or organization specific to DEI.  You can talk about your contributions to your community, e.g., mentoring students, organizing events, or even just helping people in needs. If you don't believe you have done anything much, then talk about what you plan to do. 
-
-% \item \textbf{Customized it to your application} Can your PhD study or research contribute to DEI?  Can you help or mentor students from underrepresented groups from your country?  These are very doable and can be very convincing.  
-
-% \end{itemize}
+Some universities require a \gls{diversity-statement}---a statement about 
+Diversity, Equity, and Inclusion (DEI)---as part of the application.  While the topic on DEI  has become politically contested in the U.S., you should be prepared to address it when asked. Many students, especially international ones, find this statement confusing because they are unsure what it is about (truth is, even people in the U.S. struggle with this topic).
 
 
-% \begin{commentbox}
-% One common pitfall is to write about how you are from a poor family, a small town, or a developing country.  These are not related to DEI and show that you do not understand the topic.   I have seen people consider themselves as minority because they are Asian or international students studying in the US (have you seen how many Asian or international students are in CS programs?).\\
+At a high level, a diversity statement is not an ideological endorsement, but rather to assess your \emph{awareness} of DEI issues, \emph{understanding} of challenges faced by minority groups, and potential \emph{contributions} you can make.
+\begin{itemize}
 
-% Moreover, do not make up stories or exaggerate your experiences.  Just show your awareness and understanding of the topic and what you did or how you plan to contribute to it (e.g., mentoring students, helping others). One of the best statements I have read starts the acknowledgement that the applicant is not a minority, but a white male in a STEM field (i.e., they are the majority), and that they do not have much experience in DEI, but show that they are aware of the challenges faced by minority groups and how they can contribute to it.
-% \end{commentbox}
+\item \textbf{You don't have to be from a specific DEI/minority group.} You just need to understand what DEI is, e.g., be aware of challenges faced by minority groups in studying CS, STEM fields, academia, and workplace. Show that you are aware of DEI issues and how they impact your chosen field and society.
+
+
+\item \textbf{Show your awareness, customized to your own experiences}. If you come from a different culture or country, talk about DEI (or lack thereof) there.  You would have a unique perspective on this topic that adcom might not know about and would be interested in hearing.
+
+
+\item \textbf{Highlight your contributions}.  You do not need to be in any group or organization specific to DEI.  You can talk about your contributions to your community, e.g., mentoring students, organizing events, or even just helping people in needs. If you don't believe you have done anything much, then talk about what you plan to do.
+
+
+\item \textbf{Customized it to your application} 
+Think about your research or teaching: could it indirectly support or create collaboration across under-represented groups? Could you mentor students from underrepresented groups? Could you help improve access to technology or education in underserved communities? These are all valid and meaningful contributions.
+
+\end{itemize}
+
+
+\begin{commentbox}
+One common pitfall is to write about how you are from a poor family, a small town, or a developing country.  These are not related to DEI and show that you do not understand the topic.  I have seen people consider themselves as minority because they are Asian or international students studying in the US (have you seen how many Asian or international students are in CS programs?).\\
+
+Moreover, do not make up stories or exaggerate your experiences.  Just show your awareness and understanding of the topic and what you did or how you plan to contribute to.  A good diversity statement I've read starts by the acknowledgement that the applicant is not a minority, but a white male in a STEM field (i.e., they are the majority), and that they do not have much experience in DEI, but show that they are aware of the challenges faced by minority groups and how they can contribute.
+\end{commentbox}
+
 
 
 \chapter{Your School and Grades}\label{chap:your-school}
@@ -1246,7 +1260,9 @@ Finally, I think it is fine to use AI to help you polish your writing, e.g., the
 
 \myepigraphsimpsons{``Woohoo! I'm a college man! I won't need my high school diploma anymore''}
 
-\section{School} Graduating from top universities \emph{that adcom members recognize helps}. For example, if you are an international student and your school is well-known, then it is \emph{``top foreign''}, which is a plus.
+\section{School} Graduating from top universities \emph{that adcom members recognize helps}. 
+The emphasis here is \emph{``that adcom members recognize''} because many international students mistakenly assume that their school is well-known, but in fact, it is not (\autoref{sec:why-rejected}).
+For example, if you are an international student and your school is well-known, then it is \emph{``top foreign''}, which is a plus.
 However, if we do not know much about schools in your country, then we are uncertain about the quality of your school and likely treat your school as \emph{``unknown foreign''}, which can be a minus point.
 
 The reason is similar to LoRs from well-known researchers (\autoref{sec:famous-lor}). If we know your school has a good reputation, then we can trust its education and grades. Otherwise, we are uncertain about the quality of the school and the grades you received.
@@ -1267,7 +1283,7 @@ Of course, if you're interested in working with Vietnamese, consider  \href{http
 Compared to other factors such as LoRs (\autoref{chap:lor}) and research experiences (\autoref{chap:research-experience}), grades generally do not matter much for CS PhD admission. PhD in CS is a research degree and doing well in undergrad courses does not necessarily mean you can do research---other factors such as research experiences, pubs, LoRs are more important.  In fact, many CS faculty members themselves have bad grades in undergrad courses (and some were proud of that!).
 
 \begin{commentbox}
-\href{https://jeffe.cs.illinois.edu/}{Jeff Erickson} (UIUC) has an undergraduate GPA (2.4/4.0) and wrote a \href{https://3dpancakes.typepad.com/ernie/2005/03/re_phd_with_low.html}{blog} about it.
+\href{https://jeffe.cs.illinois.edu/}{Jeff Erickson} (UIUC) has an undergraduate GPA (2.4/4.0) and wrote a \href{https://jeffgerickson.substack.com/p/re-phd-with-low-gpa}{blog} about it.
 \end{commentbox}
 
 Nonetheless, if you are from a well-known school (\autoref{chap:your-school}), having good grades do help (not a lot though), e.g., adcom members often note details such as "good GPA from well-known school (\autoref{sec:ievaluate}). However if your school is not well-known, having top grades or rankings usually will not help because we cannot evaluate them (e.g., we don't know how hard it is to get a 4.0 or A's at your school). This can be an issue for students in many top international universities where the competition is so high that very good students can still have low rankings from these schools (and be overlooked by adcom).
@@ -1283,14 +1299,16 @@ As with school reputation, you and your LoR writers can mention the grading syst
 
   
 \paragraph{Bad Grades} 
-While having good GPA might not help much (again, due to other more important factors such as LoRs and research experiences), having bad GPA can hurt your application.  Many universities have a minimum GPA requirement (e.g., $> 3.0$) and will automatically reject applications with lower GPAs.  
-If you have bad grades, you should explain them in your SOP or better yet, have your LOR writers explain them in their letters if they know the reasons.
+While having good GPA might not help much (again, due to other more important factors such as LoRs and research experiences), \emph{having bad GPA will likely hurt your application}.  Many universities have a minimum GPA requirement (e.g., $> 3.0$) and will automatically reject applications with lower GPAs.
+If you have bad grades, you should explain them in your SOP, or better yet, have your LOR writers explain them in their letters if they know the reasons.
 
 Moreover, having bad grades in relevant courses, e.g., Math and CS, can be a \red{red flag}.
-Adcom members often scan through transcripts (\autoref{sec:ievaluate}) looking for C and lower grades in Math and CS courses and might raise concerns if they see several of them.
-Note that bad grades in non-relevant courses, e.g., about politics or history, are not as concerning.
+Adcom members often scan through transcripts (\autoref{sec:ievaluate}) looking for C and lower grades in Math and CS courses and raise concerns if they see several of them.
+Note that bad grades in non-relevant courses, e.g., politics or history, are not as concerning.
 
-Should you explain bad grades in relevant courses in your SOP?  If you have just a few,  they do not matter much, so don't spend much time explaining them (many adcom reviewers themselves have bad grades in relevant courses!). But if you have many bad grades for an entire semester or year due to some specific reasons, then you can explain them in your SOP.
+Should you explain bad grades in relevant courses in your SOP?  If you have just a few,  they do not matter much, so don't spend much time explaining them (many adcom reviewers themselves have bad grades in relevant courses!). But if you have many bad grades for an entire semester or year due to some specific reasons, then try to explain them in your SOP.
+
+
 
 \chapter{Standard Tests (GRE and IELTS)}\label{chap:standard-tests}
 \chapterinfo{Standard tests are \textbf{not} important. \acrshort{GRE} typically \emph{is not} required. For standard English tests (not required for domestic students), just do enough to pass the minimum requirements.}
@@ -1421,7 +1439,7 @@ Some programs \emph{do not do interviews} at all (\autoref{sec:no-interview}). T
 You might be asked to talk about your research experience and interests and to read a paper and discuss it. In some rare cases you might also be asked to solve a problem (one of my colleagues at GMU likes coding interview).
 
 
-You should treat the interview as an informal chat. Prepare an \emph{``elevator pitche''} about your research experience and interests. You might also want to have a 5-minute presentation about your research. If a prof. asks you to read a paper, do it and be prepared to discuss it. You should also ask if you need to prepare for coding. Finally, the interview gives you an opportunity to ask questions, e.g., about the program and the professor's research.  You should definitely ask as it shows that you're interested.  See \href{https://github.com/dynaroars/dynaroars.github.io/wiki/Answers-to-Ph.D-Advisor-Guide}{some questions} you can ask.
+You should treat the interview as an informal chat. Prepare an \emph{``elevator pitch''} about your research experience and interests. You might also want to have a 5-minute presentation about your research. If a prof. asks you to read a paper, do it and be prepared to discuss it. You should also ask if you need to prepare for coding. Finally, the interview gives you an opportunity to ask questions, e.g., about the program and the professor's research.  You should definitely ask as it shows that you're interested.  See \href{https://github.com/dynaroars/dynaroars.github.io/wiki/Answers-to-Ph.D-Advisor-Guide}{some questions} you can ask.
 
 
 
@@ -1552,6 +1570,41 @@ However, in general, retracting an acceptance can have ethical implications. Whe
 Ultimately, this choice is personal and involves a balance between personal benefit and ethical considerations.
 \end{commentbox}
 
+\section{Offer Letters and Terms}\label{sec:offer-letters}
+\sectioninfo{The offer letter is essentially an employment contract.  Make sure to read and understand the terms of the offer.}
+
+Your admission notification will likely come with an offer letter (in some cases it might come separately).
+This letter is essentially a contract between you and the school, and lists the terms of the offer, including stipend, tuition waiver, health insurance, and other benefits.  The letter might also have some conditions, e.g., maintaining a certain GPA, etc. 
+You will likely need to sign and return the letter to accept the offer, e.g., by \gls{April15}--the deadline for many schools.
+
+\autoref{fig:gra-offer} shows an example of a GRA offer letter from GMU. It shows the 9-month stipend\footnote{Note RAs often get additional summer funding from their prof. (\autoref{sec:summer-funding}), but this is not shown in the offer letter.}, the funding source (i.e., the prof. who provided the RA), tuition waivers (9-credit, which is full time for grad student), and health insurance.
+
+In contrast,~\autoref{fig:gta-offer} shows an example of a GTA offer letter from GMU. Unlike GRA offer, the GTA assignment does not specify the prof. who will supervise you, as TAs are typically assigned by the department. However, other benefits such as stipend, tuition waiver, and health insurance are similar to GRA offers.
+
+It is \emph{unlikely} that you can negotiate things like stipend, as it is standard across all students.  However, you might ask your prof. for computer equipments and others (\autoref{sec:negotiate}).
+
+
+\begin{commentbox}
+    You might receive ``informal'' offer from the prof., e.g., through email or verbally. This is typically as the profs. are excited to have you and want to give you important details such as stipend. You can ``informally'' accept the offer, but you will still need to sign the official offer letter to make it official. 
+\end{commentbox}    
+
+
+\begin{figure}
+    \centering
+    \includegraphics[page=1,width=.80\textwidth]{files/gra_offer.pdf} 
+    \caption{An example of a GRA offer letter.}\label{fig:gra-offer}
+\end{figure}
+
+
+\begin{figure}
+    \centering
+    \includegraphics[page=1,width=.80\textwidth]{files/gta_offer.pdf} 
+    \caption{An example of a GTA offer letter.}\label{fig:gta-offer}
+\end{figure}
+
+
+%\includepdf[pages=1]{files/gra_offer.pdf}
+
 \section{Negotiating PhD offer (e.g., having multiple offers)?}\label{sec:negotiate}
 \sectioninfo{You will not be able to negotiate stipend, but you can ask for specific start date, TA assignment, and conference travel budget.}
 
@@ -1561,43 +1614,17 @@ Typically, the most wiggle room is funding in the summer (\autoref{sec:summer-fu
 
 For a specific start date or TA assignment (e.g., TA'ing a particular course), you can ask for it. Also, there is typically no moving allowance for PhD students. In short, standard things set by the university or department are unlikely negotiable.  However, you can ask for things such as books and computer equipment (\autoref{sec:buying-equipment}).
 
-\section{Offer Letters and Terms}\label{sec:offer-letters}
-\sectioninfo{The offer letter is essentially an employment contract.  Make sure to read and understand the terms of the offer.}
-
-Your admission notification will likely come with an offer letter (in some cases it might come separately).
-This letter is essentially a contract between you and the school, and lists the terms of the offer, including stipend, tuition waiver, health insurance, and other benefits.  The letter might also have some conditions, e.g., maintaining a certain GPA, etc. 
-You will likely need to sign and return the letter to accept the offer, e.g., by \gls{April15}--the deadline for many schools.
-
-
-\autoref{fig:gra-offer} shows an example of a GRA offer letter from GMU. It shows the 9-month stipend\footnote{Note RAs often get additional summer funding from their prof. (\autoref{sec:summer-funding}), but this is not shown in the offer letter.}, the funding source (i.e., the prof. who provided the RA), tuition waivers (9-credit, which is full time for grad student), and health insurance.
-
-It is \emph{unlikely} that you can negotiate things like stipend and such, as it is standard across all students.  However, you might ask your prof. for computer equipments and others (\autoref{sec:negotiate}).
-
-
-\begin{commentbox}
-    You might receive ``informal'' offer from the prof., e.g., through email or verbally. This is typically as the profs. are excited to have you and want to give you important details such as stipend. You can ``informally'' accept the offer, but you will still need to sign the official offer letter to make it official. 
-\end{commentbox}    
-
-
-
-
-
-\begin{figure}
-    \centering
-    \includegraphics[page=1,width=.80\textwidth]{files/gra_offer.pdf} 
-    \caption{An example of a GRA offer letter.}\label{fig:gra-offer}
-\end{figure}
-%\includepdf[pages=1]{files/gra_offer.pdf}
 
 
 \section{Buying Computer Equipment}\label{sec:buying-equipment}
 \sectioninfo{Ask your prof. if they can buy computer equipment and such for your research.}
 
-Students understandably get excited about their upcoming PhD journey and want to buy new computer equipment and electronics to prepare. However, you should first check with your professor.  They might have funding to buy you computers and other equipment (e.g., software, books, keyboards, headphones, tablets, etc). Many CS programs also provide budget or computer equipment---such as a laptop---to incoming PhD students. Keep in mind that these computers and equipment would be university property, which might be monitored and have certain restrictions, e.g., do not install illegal software on them (\autoref{sec:illegal-software}).  You will likely need to return them when you graduate. 
+Students understandably get excited about their upcoming PhD journey and want to buy new computer equipment and electronics to prepare. However, you should first check with your professor.  They might have funding to buy you computers and other equipment (e.g., software, books, keyboards, headphones, tablets, etc). Many CS programs also provide budget or computer equipment---such as a laptop---to incoming PhD students.
 
 
 However, do not assume that your prof. will automatically provide you a new laptop and other equipments. Check with them first. Some professors have grants or discretionary funds to do this, but it's not a guarantee. Some prefer that you have been with them for a while before they buy some powerful hardware. 
 
+Finally, keep in mind that these computers and equipment would be university property, which might be monitored and have certain restrictions, e.g., do not install illegal software on them (\autoref{sec:illegal-software}).  You will likely need to return them when you graduate. 
 
 \chapter{Dealing with Rejection}\label{chap:not-accepted}
 \chapterinfo{Rejection is part of academia.  Common reasons for rejection include aiming too high, not a good fit, and bad luck.  Do not take rejection personally. Learn from it and try again.} 
@@ -1630,14 +1657,14 @@ No, don't bother.  You will likely not get any useful feedback.  We are not will
 Many students lament that they get no interviews or are rejected and that the admission process seems random.  However, while it is true that the process can involve some luck and randomness, it is not completely random.  There are many reasons why you might get rejected, e.g., your profile is not as strong as you \emph{think} it is (\autoref{sec:profile-not-strong}).  Even if your profile is strong, you still can get rejected, e.g., aim too high (\autoref{sec:chance-me}), not a good fit, overqualified, having red flags, etc. 
 
 
-\subsection{Your profile is not as strong as you think}\label{sec:profile-not-strong}  
+\subsection{Your profile is \emph{not} as strong as you think}\label{sec:profile-not-strong}  
 I have seen multiple cases where students think they have a strong profile, but they do not. Here are some common examples.
 
 Your \emph{LoRs} (\autoref{sec:lor-writers}) might not be as strong as you think. Your ref. writers---who might be very well-known within your institution---might not be very well-known internationally, or they might not be very active in research, or even know how to write a good letter. 
 
 Your \emph{school} (\autoref{chap:your-school}) might not be as good as you think.  It might be the ``top'' in your country (or in your own definition), but we do not know about it, e.g., most wel-known schools in Vietnam are not well-known outside of Vietnam.
 
-Your \emph{research} (\autoref{chap:research-experience}) might not be as strong as you think.  Doing research does not mean much (or anything) if there is no results, e.g,. publications (\autoref{sec:publications}). Moreover, publications might not have much value if they were published locally or through unknown places.  Even papers at top venues might not be as good as you think, e.g., many AI/ML/NLP faculty are not too interested in ``dataset'' work, even if they appear at top venues like NeurIPS as shown in~\autoref{fig:comment-neurips}.
+Your \emph{research} (\autoref{chap:research-experience}) might not be as strong as you think.  Participating in a research project does not mean much (or anything) if there is no results, e.g,. publications (\autoref{sec:publications}). Moreover, publications might not have much value if they were published locally or through unknown places.  Even papers at top venues might not be as good as you think, e.g., many AI/ML/NLP faculty are not too interested in ``dataset'' work, even if they appear at top venues like NeurIPS as shown in~\autoref{fig:comment-neurips}.  However, while you might not have papers, you might be able to get good LoRs from professors or PhD students you worked with closely on research projects. But just saying you do research is not enough.
 
 \begin{figure}
     \begin{examplebox}
@@ -1764,11 +1791,11 @@ Note that funding is typically more available for PhD students than MS (\autoref
 \section{Graduate Assistantship (TA/RA)}\label{sec:ta-ra}
 The most common type of funding is \textbf{graduate assistantship}, which is either TA or RA. Both TA and RA come with tuition waiving (you don't have to pay tuition), health insurance (this takes care of your insurance, which is a must-have in the US), and most importantly, your stipend (i.e., your salary). Some universities also give significant discounts or pay insurance for spouses/children.
 
-Several things about stipends.  First, the amount of stipend \emph{varies} and depends on factors such as location (e.g., a stipend in the DC area is likely higher than in Lincoln, Nebraska due to higher living costs). Second, an academic year (AY)  is typically \emph{9-month} in the US, so the stipend is for 9 months. Third, you might get paid over the summer (\autoref{sec:summer-funding}) through funding from your professor or fellowship (typically no TA over the summer). Fourth, like most sources of income in the US, you will have to \emph{pay tax} on your stipend.  Finally, private universities might pay more for stipends, but they could have extra activity fees or some other hidden ones (e.g., you may need to pay some fees for each credit hour).
+Several things about stipends.  First, the amount of stipend \emph{varies} and depends on factors such as location (e.g., a stipend in the DC area is likely higher than in Lincoln, Nebraska due to higher living costs). Second, an \acrfull{AY}  is typically \emph{9-month} in the US, so the stipend is for 9 months. Third, you might get paid over the summer (\autoref{sec:summer-funding}) through funding from your professor or fellowship (typically no TA over the summer). Fourth, like most sources of income in the US, you will have to \emph{pay tax} on your stipend.  Finally, private universities might pay more for stipends, but they could have extra activity fees or some other hidden ones (e.g., you may need to pay some fees for each credit hour).
 
 
 \begin{commentbox}
-  TA and RA at GMU have similar benefits in tuition waiving and insurance.  The college and department will set the rate for a 9-month graduate assistant stipend.  TA, which is paid by the department, will likely be that amount but RA might be higher depending on  the prof and the stage of the student (1st year vs \acrshort{ABD}\footnote{acrlong{ABD}: close to graduate.}).\\
+  TA and RA at GMU have similar benefits in tuition waiving and insurance.  The college and department will set the rate for a 9-month graduate assistant stipend.  TA, which is paid by the department, will likely be that amount but RA might be higher depending on  the prof and the stage of the student (1st year vs \acrshort{ABD}\footnote{\acrlong{ABD}: close to graduate.}).\\
 
   At GMU, CS TA/RA is paid the highest.  First, CS is under the College of Engineering and Computing (CEC), which already has a higher TA stipend than other colleges.  Second, CS is the largest department in the college, and has the higher TA stipend than what CEC suggests.  Finally, it is a tradition that CS faculty pay their RAs more than the department's TA rate.  So a winning combination for CS PhD students.
   
@@ -1852,7 +1879,7 @@ For a full breakdown of how much a graduate student costs, see \autoref{sec:ra-c
 
 Students often get confused about summer funding, e.g., if they will get paid during the summer.  This is a good question because PhD students have no classes over the summer and so are often more productive and produce good research. However, summer salary is largely depending on your funding source.
 
-First, recall that an academic year (AY)---consisting of Fall and Spring semesters---is typically 9 months, thus your stipend is for 9 months and do not cover the three summer month (and many places allow you to \emph{spread} it over 12 months, so you get paid monthly over 12 months, but the total amount is still the same).
+First, recall that an \acrfull{AY}---consisting of Fall and Spring semesters---is typically 9 months, thus your stipend is for 9 months and do not cover the three summer month (and many places allow you to \emph{spread} it over 12 months, so you get paid monthly over 12 months, but the total amount is still the same).
 
 If your funding source is TA (\autoref{sec:ta}), you typically do not get paid over the summer because there are no classes to teach.  Some CS departments offer summer funding, but it is not guaranteed and might not be a lot. For example, at GMU, we offer summer funding for 1st-year PhD TA students. The amount over the 3-month summer is similar to their monthly stipend (i.e., their 9-month stipend divided by 3 for the 3 summer months).
 
@@ -1861,7 +1888,7 @@ When writing grant proposals, profs. typically include summer funding for their 
 
 
 \begin{commentbox}
-For my students, I have been fortunate to have funding to support them over the summer. Over the 3-summer months, I typically pay them 1/3 of their 9-month stipend. I prioritize summer funding for my students because GMU has very good TA resources so they never have to worry about funding during the AY.
+For my students, I have been fortunate to have funding to support them over the summer. Over the 3-summer months, I typically pay them 1/3 of their 9-month stipend. I prioritize summer funding for my students because GMU has very good TA resources so they never have to worry about funding during the \gls{AY}.
 \end{commentbox}
 
 Finally, for fellowships (\autoref{sec:fellowships}) you might get paid over the summer depending on your fellowship (\autoref{sec:fellowships}). Good ones, e.g., from NSF, Google, and Microsoft, will pay you the whole year.
@@ -1975,6 +2002,33 @@ If you get admission to several places, you should consider attending Open House
   %
 \end{commentbox}
 
+\section{Large/Well-known vs. Small/Unknown Programs}
+
+The ``feel-good'' advice is to go where it fits you and a good adviser is the most important. But, how do you know what would or would not fit you if you have never been there?   Also, how do you know if a prof. is good and compatible with you or not if you have never worked with them?  So while this advice sounds good, it is vague and not actionable because you do not have enough information to decide.
+
+In addition, while~\autoref{sec:selecting-ranking-schools} talks about various factors (e.g., faculty interests, locations, funding), most students, especially international ones, simply do not have enough information to evaluate these factors properly.  Even if you \emph{think} you know, you might be wrong.  For example, many students think they want to be in California because of the weather, but they might do just fine in colder places like Wisconsin or Michigan or hotter places like Texas and Arizona.
+
+So I will be direct and say that \emph{if you don't have any strong preference} (i.e., you don't know much about the schools or profs), then \emph{if you get into a large/well-known program, you should strongly consider going there}.  These programs typically have more resources, more faculty, better students (to work with), and more opportunities (e.g., internships, jobs). Note here that "large/well-known" is subjective and relative. For simplicity, I refer to the top 50 CS programs from CSRankings (\autoref{sec:selecting-ranking-schools}) in the US as large/well-known.
+
+\begin{commentbox}
+  Many PhD candidates face this similar dilemma when they apply for faculty jobs. In most cases, when everything else is equal, they would choose the top school for similar reasons: more resources (e.g., funding and support from the university) and better students (which are critical for research).
+  \\
+
+  The main difference is that these PhD candidates have more information (e.g., they spent 6--7 years in grad school in the US). For example, they know and prefer West Coast over East Coast because of the culture and lifestyle. They might want a location closer to their family and friends. 
+  For these folks (who are about to enter the work force and sometimes already have families), these things matter, and they are willing to sacrifice some prestige and opportunities just to be in a place that fit them (and their family) better. 
+\end{commentbox}
+
+
+
+One important thing is that  large programs have many faculty in diverse research areas. That means if you don't get along with one prof., you can switch to another one.  In contrast, in a small program, if you don't get along with your prof., you might be stuck or have to transfer to another school (which is very troublesome). 
+
+That said, an advantage of being at a small program is that you can easily stand out. With just a NeurIPS or PLDI paper, you can be the star in your research group and even the entire CS program and can graduate quickly. In contrast, in a large program, those same papers might not get you much attention and you are under more pressure to publish more.  
+
+\begin{commentbox}
+  There are always trade-offs, but I've found that young students---without the burdens of family or other major responsibilities---benefit most from being pushed and exposed to opportunities. As Steve Jobs said, \emph{``Stay hungry, stay foolish.''} You should go where you'll be challenged to grow the most, and large, well-known CS programs typically provide that.
+\end{commentbox}
+
+
 
 \section{PhD in other Related Fields: CE, IST, Cybersecurity}\label{sec:related-fields}
 
@@ -1989,12 +2043,29 @@ It is possible to transfer between departments (and universities). However, this
 
 For this specific reason,  CSRankings includes only faculty who can advise CS PhD students. I also have compiled a \href{https://roars.dev/phd-cs-us/viet-cs-profs-us}{list} of Vietnamese faculty who can advise PhD students. \autoref{sec:faculty-types} talks more about who can serve as your PhD adviser.
 
-
-% \section{Comparison Factors}
+%\section{Comparison Factors}
 
 % \subsection{Private vs. Public Universities}
-% \subsection{Large vs. Small CS Programs}
 
+
+% So here are some concrete factors to consider when choosing between large/well-known vs. small/unknown CS programs.
+
+% \begin{table}
+% \centering
+% \caption{Comparison between Large/Well-known vs. Small/Unknown CS Programs}\label{tab:large-vs-small}
+% \begin{tabular}
+% {r|c|c}
+%   \toprule
+%                            & \textbf{Large/Well-known} & \textbf{Small/Unknown} \\
+%   \midrule
+%   \textbf{Faculty}         & Many, diverse research    & Few, focused research  \\
+%   \textbf{Students}        & Many, diverse             & Few, less diverse     \\
+%   \textbf{Funding}         & More, competitive         & Less, stable          \\
+%   \textbf{Reputation}      & High                      & Low                   \\
+%   \textbf{Opportunities}   & Many, competitive         & Fewer, less competitive\\
+%   \bottomrule   
+% \end{tabular}
+% \end{table}
 % \subsection{Prestige vs. Opportunities}
 
 \section{University Hierarchy}
@@ -2065,7 +2136,7 @@ Thus, Senate decisions can indirectly affect CS students by changing graduate re
 The Senate acts as an independent check on the administration. They can question decisions (e.g., of the Board and the President), propose resolutions, and advocate for faculty interests. Even though they are not part of the executive chain, they are the \emph{voice} of the faculty, and thus the Board and President will typically listen to them.
 
 \begin{commentbox}
-At GMU, the Faculty Senate serves as an advisory body to administration. It does not have administrative power, but can propose resolutions and advocate for faculty interests. The Senate has various committees that touch on all aspects of university life, including research, teaching, student affairs, and even its athletic aspects. The Senate has representatives from each college, and I am one of the senators from CEC.
+I am one of the faculty senators at GMU. Here, the Faculty Senate serves as an advisory body to administration. It  does not have administrative power, but can propose resolutions and advocate for faculty interests. The Senate has various committees that touch on all aspects of university life, including research, teaching, student affairs, and even its athletic aspects. %The Senate has representatives from each college, and I am one of the senators from CEC.
 \end{commentbox}
 
 
@@ -2074,7 +2145,7 @@ At GMU, the Faculty Senate serves as an advisory body to administration. It does
 Under the top administration are the various colleges or schools that house different academic departments. Common examples include the College of Engineering, College of Arts and Sciences, and increasingly, a separate College of Computing (e.g., like at Georgia Tech).  Schools are typically under a college, e.g., the School of Computing within the College of Engineering at UNL. But in some universities, the School is a standalone unit, e.g., the School of Computer Science at CMU.
 
 \begin{commentbox}
-  At GMU, CS is under School of Computing (SoC), which is under College of Engineering and Computing (CEC).   The SoC has its own Dean, who reports to the Dean of CEC, who then reports to the Provost.\\
+  At GMU, CS is under School of Computing (SoC), which is under College of Engineering and Computing (CEC).   The Scool of Computing (SoC) has its own Dean, who reports to the Dean of CEC, who then reports to the Provost.\\
 
   GMU SoC consists of CS, IST, Stats.  CEC consists of SoC and other engineering departments such as Electrical and Computing Engineering (ECE), Biomedical Engineering (BME), and Mechanical Engineering (ME).  CEC is one of the largest colleges at GMU, and CS is the largest department in CEC.
 \end{commentbox}
@@ -2092,8 +2163,10 @@ The Chair reports to the Dean and is responsible for implementing college polici
 
 While department chairs do not usually get involved in PhD admissions decisions (see how decisions are made in~\autoref{sec:how-decisions}), they set the overall direction and priorities that shape how many students are admitted and what resources are available to them.
 
-\section{Faculty, and Staff}
-In many cases adcom consults with faculty members who are potential advisers to get their input on applicants (\autoref{sec:applications-assigned}). Thus general faculty can influence admissions by recommending students they want to advise. In addition, a CS department has various \textbf{administrative staff} who handle day-to-day operations, e.g., contacting applicants, processing applications, and managing student records. While staff do not make admissions decisions, they ensure the process runs smoothly and efficiently --- a critical behind-the-scenes role.
+\section{Faculty and Staff}
+In many cases adcom consults with faculty members who are potential advisers to get their input on applicants (\autoref{sec:applications-assigned}). Thus general faculty can influence admissions by recommending students they want to advise. 
+
+In addition, a CS department has various \textbf{administrative staff} who handle day-to-day operations, e.g., contacting applicants, processing applications, and managing student records. While staff do not make admissions decisions, they ensure the process runs smoothly and efficiently---a critical behind-the-scenes role.
 
 
 
@@ -2206,7 +2279,7 @@ Most universities also restrict who can advise PhD students based on departmenta
 
 \subsection{Ranks (Assistant, Associate, Full, and More)} 
 
-Regardless of type (tenure-track or teaching), faculty are generally assigned one of three academic ranks:
+Regardless of type (tenure-line or teaching), faculty are generally assigned one of three academic ranks:
 \begin{enumerate}
     \item Assistant: typically an early-career faculty member
     \item Associate: mid-career, often after tenure or promotion
@@ -2250,14 +2323,14 @@ Tenured faculty---associate and full profs---are likely older, more well-known, 
 
 \section{Faculty from Your Country}\label{sec:prioritizing-faculty}
 
-Understandably many students prefer to work with faculty whom came from their own country.
+Understandably many students prefer to work with faculty who came from their own country.
 You feel more comfortable as they share the same language and culture, understanding your schools and background, and that they ``get'' you.
 So it is perfectly fine to start with faculty from your country (e.g., a list of \href{https://roars.dev/phd-cs-us/viet-cs-profs-us}{Vietnamese CS faculty} in the US.)
 
-However, this should not the main reason for choosing a faculty, and you should expand your search to include faculty from other countries. Research and higher education in general encourage exploration, e.g., students often go to different grad schools than their undergrad schools, and switching fields (and even advisors) is more common than you think.  It also won't be fun to be in a lab with all Vietnamese with similar background and all speak Vietnamese all the time, you will not learn much from each other.
+However, this should not the main reason for choosing a faculty, and you should expand your search to include faculty from other countries. Research and higher education in general encourage exploration, e.g., students often go to different grad schools than their undergrad schools, and switching fields (and even advisors) is more common than you think.  It also won't be fun to be in a lab with students with similar background and all speak the same language all the time, you will not learn much from each other.
 
 \begin{commentbox}
-While my group has many Vietnamese, I also have many non-Vietnamese students, e.g., from China, Romania, Rwanda, and most of my undergrads are domestic US students (\autoref{chap:domestic-students}). It is more fun this way---they get to learn from each other and share different perspectives, and of course get to try exotic food and their history from different countries (it amazes me on how knowledgeable and enthusiam students have on food!).
+ My \href{https://roars.dev}{research group} has many Vietnamese, but I also have many non-Vietnamese students, e.g., from China, Romania, Rwanda, and most of my undergrads are domestic US students (\autoref{chap:domestic-students}). It is more fun this way---they get to learn from each other and share different perspectives, and of course get to try exotic food and their history from different countries (it amazes me on how knowledgeable and enthusiam students have on food!).
 \end{commentbox}
 
 \section{Should I Contact a Prof. Before Applying? How to Get a Positive Reply?}\label{sec:contact}
@@ -2276,7 +2349,7 @@ First, if you want to contact a prof. to \emph{ask about your admission chance},
 So how to get someone to look at your profile and give input? You could ask your professors, LoR writers, collaborators, or those who have previously applied. For this kind of feedback, ask someone you have a personal connection with.
 
 On the other hand, if you want to contact a prof. to ask about \emph{research opportunities}, or \emph{GTA/GRA} support (\autoref{sec:ta-ra}), then \emph{yes}, I believe you should.
-It is still a long shot (you might not get a reply), but it is \emph{worth trying} (and I say this even though I do not reply to most of these emails, see \autoref{sec:kiss-of-death-emails} for why). 
+It is still a long shot (you probably won't get a reply), but it is \emph{worth trying} (and I say this even though I do not reply to most of these emails, see \autoref{sec:kiss-of-death-emails} for why). 
 However, you really need to put effort into it and do it the \emph{right way}.
 
 The best way to catch the prof.'s attention is to \emph{customize your email} for them.  
@@ -2355,11 +2428,12 @@ See~\autoref{sec:kiss-of-death-emails} for common mistakes in emails and~\autore
     
     \item \textbf{Ignoring the Prof's guideline} and asking questions that are already answered on their website.  Many profs. put very specific information on how to contact them on their website (e.g., email subject, what to include).  Following this helps you stand out and increase your chance of getting a reply.
     
-    \item \textbf{Fancy format}.  Do not use colors, fancy fonts or formats. While not really a kiss of death, it is very annoying, especially for people in CS (and probably many other fields) who often prefer plain messages.
-    
-    \item \textbf{Mass emails}. I've seen it many times when a student mass emails all profs in a department (e.g., through CC or even BCC---we know because faculty talk to each other).  This will result in no reply or a very harsh one on how unprofessional you are.
+   
+    \item \textbf{Mass emails}. I've seen it many times when a student mass emails all profs in a department, e.g., through CC or even BCC.  This will result in no reply or a very harsh one on how unprofessional you are.
     
     \item \textbf{Do Not Call}. Not related to email but sometimes students get desperate and call the prof.  This is a big no-no, especially for CS ppl who often prefer email over phone calls. 
+    
+    \item \textbf{Fancy format}.  Do not use colors, fancy fonts or formats, e.g., bold. While not really a kiss of death, it is very annoying, especially for people in CS (and probably many other fields) who often prefer plain email messages.    
 \end{itemize}
 
 \subsection{Interpreting Response}\label{sec:interpreting-response}
@@ -2472,44 +2546,44 @@ But of course, we do respond to well-written emails (\autoref{sec:contact}) that
 
 %T10,T20,T50,TX
 
-\chapter{Visa for International Students}\label{chap:visa}
+% \chapter{Visa for International Students}\label{chap:visa}
 
-\myepigraphsimpsons{``I didn't do it. Nobody saw me do it. You can't prove anything!''}
+% \myepigraphsimpsons{``I didn't do it. Nobody saw me do it. You can't prove anything!''}
 
-% \begin{center}
-%     \includegraphics[scale=0.8]{files/visa.pdf}
-% \end{center}
+% % \begin{center}
+% %     \includegraphics[scale=0.8]{files/visa.pdf}
+% % \end{center}
 
-As defined in~\autoref{chap:glossary}, international students are those who would need a visa to study in the US.  In most cases, \textbf{F-1} is the main visa needed to study full-time at an accredited institution.  Here are some key points about F-1: 
+% As defined in~\autoref{chap:glossary}, international students are those who would need a visa to study in the US.  In most cases, \textbf{F-1} is the main visa needed to study full-time at an accredited institution.  Here are some key points about F-1: 
 
-\begin{itemize}
-\item \textbf{Employment:} You are allowed to work on-campus for up to \textbf{20 hours per week during the academic year} (because you still need to take classes) and \textbf{full-time} (typically 40 hrs) during official school breaks (e.g., summer and winter breaks). Off-campus employment requires authorization, which can be obtained through CPT and OPT programs described below.
+% \begin{itemize}
+% \item \textbf{Employment:} You are allowed to work on-campus for up to \textbf{20 hours per week during the \acrfull{AY}} (because you still need to take classes) and \textbf{full-time} (typically 40 hrs) during official school breaks (e.g., summer and winter breaks). Off-campus employment requires authorization, which can be obtained through CPT and OPT programs described below.
 
-\item \textbf{Curricular Practical Training (CPT):} CPT allows you to participate in internships or practical training that is an integral part of their academic curriculum. CPT must be related to your field of study and can be full-time or part-time. It requires prior authorization from your university and must be completed before graduation.
+% \item \textbf{Curricular Practical Training (CPT):} CPT allows you to participate in internships or practical training that is an integral part of their academic curriculum. CPT must be related to your field of study and can be full-time or part-time. It requires prior authorization from your university and must be completed before graduation.
 
-\item \textbf{Optional Practical Training (OPT):} OPT provides up to 12 months of work authorization for students before or after completing their degree. For students in STEM fields, there is an additional 24-month extension available. OPT requires prior application and approval from USCIS.
+% \item \textbf{Optional Practical Training (OPT):} OPT provides up to 12 months of work authorization for students before or after completing their degree. For students in STEM fields, there is an additional 24-month extension available. OPT requires prior application and approval from USCIS.
 
-\item \textbf{Full-time Enrollment:} You must maintain full-time enrollment status during the academic year. This means taking a minimum number of credits each semester, as defined by your program. Dropping below full-time status can result in loss of visa status.
-\end{itemize}
+% \item \textbf{Full-time Enrollment:} You must maintain full-time enrollment status during the \acrshort{AY}. This means taking a minimum number of credits each semester, as defined by your program. Dropping below full-time status can result in loss of visa status.
+% \end{itemize}
 
-\includepdf[pages=-]{files/visa.pdf}
+% \includepdf[pages=-]{files/visa.pdf}
 
 
-\section{For Spouses and Children}
+% \section{For Spouses and Children}
 
-The spouses and children of F-1 visa holders can enter the US under the F-2 visa status. The F-2 visa allows family members to live in the US with the following conditions:
+% The spouses and children of F-1 visa holders can enter the US under the F-2 visa status. The F-2 visa allows family members to live in the US with the following conditions:
 
-For Spouse: 
-\begin{itemize}
-\item \textbf{Work Restrictions:} F-2 spouses are not permitted to work in the US.
-\item \textbf{Education:} They can study part-time but cannot enroll in full-time degree programs.
-\end{itemize}
-For Children:
-\begin{itemize}
-\item \textbf{Education:} F-2 children can attend K-12 schools but cannot pursue higher education full-time.
-\item \textbf{Work Restrictions:} Like F-2 spouses, children are not allowed to work under any circumstances.
-\end{itemize}
-F-2 visa holders must leave the US if the primary F-1 student visa holder loses status or completes their program.
+% For Spouse: 
+% \begin{itemize}
+% \item \textbf{Work Restrictions:} F-2 spouses are not permitted to work in the US.
+% \item \textbf{Education:} They can study part-time but cannot enroll in full-time degree programs.
+% \end{itemize}
+% For Children:
+% \begin{itemize}
+% \item \textbf{Education:} F-2 children can attend K-12 schools but cannot pursue higher education full-time.
+% \item \textbf{Work Restrictions:} Like F-2 spouses, children are not allowed to work under any circumstances.
+% \end{itemize}
+% F-2 visa holders must leave the US if the primary F-1 student visa holder loses status or completes their program.
 
 \chapter{Domestic Students}\label{chap:domestic-students}
 \chapterinfo{Specific benefits and opportunities for domestic students applying to CS PhD programs.}
@@ -2692,53 +2766,56 @@ This is less common but several places offer virtual internships and research pr
 
 % \paragraph{Online Conferences and Workshops}: Attending online conferences and workshops is another way to gain exposure to cutting-edge research and establish connections with experts in the field. Many conferences now provide virtual participation options, enabling students to access research talks, poster sessions, and panel discussions and sometimes access designated chat rooms or networking events where participants can engage with researchers, ask questions, and seek potential research collaborations. By creating profiles, joining relevant research groups, and participating in discussions, students can connect with established researchers, contribute to ongoing projects, and potentially collaborate on publications or research proposals as they provide access
 
-\chapter{Publication Authorship}\label{chap:authorship}
-\chapterinfo{How authorship is determined in research papers.}
+% \chapter{Publication Authorship}\label{chap:authorship}
+% \chapterinfo{How authorship is determined in research papers.}
 
-Having a good pbulication shows your research potential and can significantly improve your chances of admission (\autoref{sec:publications}). Moreover, LOR writers often refer to your publications to support their claims about your research abilities (\autoref{chap:lor}). Likewise, you should also describe your work that has been published in your SOP (\autoref{chap:sop}).  Of course all of these are only true if you are a significant contributor to the work.  
+% Having a publication shows your research potential and can significantly improve your admission chances (\autoref{sec:publications}). Moreover, LOR writers often refer to your publications to support their claims about your research abilities (\autoref{chap:lor}). Likewise, you should also describe your work that has been published in your SOP (\autoref{chap:sop}).  Of course all of these are only true if you are a significant contributor to the work.
 
-New researchers, especially students, often have questions about contributions and authorship, which arguably is one of the most sensitive and important aspects of academic publishing.   If not handled properly, disputes over authorship can lead to misunderstandings and conflicts, changing from a positive experience to a negative one and damaging reputations and relationships. This section provides some guidance on authorship practices and pitfalls.
-
-
-\section{Contributions in the Work}
-Consider a typical CS research project that involves the following tasks leading to a publication:
-\begin{itemize}
-\item The idea: This involves identifying a research problem, knowing the related work, and proposing a solution or approach.  For most new researchers, this part is often done by the adviser or senior researchers. For example, your mentor suggests a problem to work on and ask you to try some specific approach.  Typicaly the problem and approach are vague and you need to refine them, e.g., by reading more related work and trying out different ideas.
-
-\item The implementation: In fields such as software and systems, this involves implementing the proposed approach.  You might need to try different algorithms, data structures, and optimizations to make the prototype work.  In some fields, such as theory, the implementation part might not be needed and instead it might involve developing mathematical models and proving theorems.  In other fields, such as HCI, it might involve user studies and qualitative analysis. Regardless, this part is often the most time-consuming and challenging part of the work.
-
-The person doing the implementation understand the most about the approach and its strengths and weaknesses.  It is very rare that the mentor or adviser would get involved in the implementation as they often want to manage at a high level and give the student freedom to explore and learn.  The student would regularly update the mentor on the progress and discuss any issues.  The mentor would provide high-level guidance, e.g., suggesting different algorithms or optimizations to try, but would not do the implementation themselves.
-
-\item Designing the methodology or experiments: Once the prototype is ready (often determined by the adviser), you need to design the experiments to evaluate the approach.  This involves forming research questions and hypotheses (e.g., does the approach improve performance? how does it compare to the state-of-the-art?).  These research questions then determine how the experiments are designed, e.g., what datasets to use, what baselines to compare against, what metrics to measure.  
-
-This part is often shared by both the student and the advisor, where the adviser provides high-level guidance and the student does the details.  Moreover, this part often requires multiple iterations, e.g., the initial experiments might not work well and you need to refine the research questions and experiment design.
-
-\item Collecting and analyzing data: This involves running the experiments, collecting data, and analyzing the results.  This part is often done by the student, who needs to ensure that the experiments are run correctly and the data is collected accurately.  The student also needs to analyze the data and draw conclusions from the results.
-
-In most cases, the student doing the implementation would also do this part, as they understand the approach and its strengths and weaknesses the most, and can easily update the implementation and refine the experiments as needed.  Like the implementation part, the adviser does not get involved in this part but would provide high-level guidance and discuss the results with the student.  In many projects, this part also involve other people, e.g., undergraduate students, who help run the experiments and collect data.  
-
-
-\item Writing the manuscript: Once the experiments are done and the results are promising, your adviser would ask you to write a draft of the manuscript to a target conference or journal (this helps determine the format and audience of the work).  
-Writing is often the most challenging part for new researchers as it is a skill that needs to be learned and practiced. You can learn from looking at other papers, e.g., from your own group and other papers published in the target conference or journal. 
-
-In most cases, the student would provide the first draft of the manuscript, which would then be revised and refined by the adviser and other co-authors.  Other contributors, e.g., those who helped with the experiments, might also contribute to the writing, e.g., by writing specific sections and give feedback on the draft.  
-Once a relatively complete draft is ready, the student would share it with the adviser and co-authors for feedback.  This part is often done through multiple iterations, where the student revises the draft based on feedback from the adviser and co-authors. In many cases, during the writing process the student might find issues with the approach and experiments, and need to go back to the implementation and experiment design parts to refine them. 
-
-
-\end{itemize}
-
-
-After the manuscript is ready, it is time to submit the work. At this point the author list and order should be finalized! While there are other parts involved, e.g., rebuttal or response to reviewers' comments, and revisions, these should not affect the author list and order---in many cases the venue would not allow changes to the author list after submission.  Note that for journal where significant revisions are often needed (or a conference paper being rejected and resubmit), the author list and order can be changed during the revision process, e.g., additional contributors can be added.
+% New researchers, especially students, often have questions about contributions and authorship, which arguably is one of the most sensitive and important aspects of academic publishing.   If not handled properly, disputes over authorship can lead to misunderstandings and conflicts, changing from a positive experience to a negative one and damaging reputations and relationships.
 
 
 
+% \section{Contributions in the Work}
+% A  typical CS research project involves the following tasks leading to a publication:
+% \begin{itemize}
+%   \item \textbf{Idea}: This involves identifying a research problem, knowing the related work, and proposing a solution or approach.  For most new researchers, this part is often done by the adviser or senior researchers. For example, your mentor suggests a problem to work on and ask you to try some specific approach.  Typicaly the problem and approach are vague and you need to refine them, e.g., by reading more related work and trying out different ideas.
+
+%   \item \textbf{Implementation}: This involves implementing the proposed approach.  You might need to try different methods, algorithms, data structures, and optimizations to make the prototype work.  In system fields such as software, implementation involves coding and building a prototype.  In other fields, such as theory, it might involve developing mathematical models and proving theorems.  In other fields, such as HCI, it might involve user studies and qualitative analysis. Regardless, this part is often the most time-consuming and challenging part of the work.
+
+%   The person doing the implementation understand the most about the approach and its strengths and weaknesses.  It is very rare that the mentor or adviser would get involved in the implementation as they often want to manage at a high level and give the student freedom to explore and learn.  The student would regularly update the mentor on the progress and discuss any issues.  The mentor would provide high-level guidance, e.g., suggesting different algorithms or optimizations to try, but would not do the implementation themselves.
+
+%   \item \textbf{Evaluation}: Once implementation is done (often determined by the adviser), you need to design the experiments to evaluate the approach.  This involves forming research questions and hypotheses (e.g., does the approach improve performance? how does it compare to the state-of-the-art?).  These research questions then determine how the experiments are designed, e.g., what datasets to use, what baselines to compare against, what metrics to measure.
+
+%   This part is often shared by both the student and the advisor, where the adviser provides high-level guidance and the student does the details.  Moreover, this part often requires multiple iterations, e.g., the initial experiments might not work well and you need to refine the research questions and experiment design.
+
+%   \item \textbf{Collecting and Analyzing data}: This involves running the experiments, collecting data, and analyzing the results.  This part is often done by the student, who needs to ensure that the experiments are run correctly and the data is collected accurately.  The student also needs to analyze the data and draw conclusions from the results.
+
+%   In most cases, the student doing the implementation would also do this part, as they understand the approach and its strengths and weaknesses the most, and can easily update the implementation and refine the experiments as needed.  Like the implementation part, the adviser does not get involved in this part but would provide high-level guidance and discuss the results with the student.  In many projects, this part also involve other people, e.g., undergraduate students, who help run the experiments and collect data.
 
 
+%   \item \textbf{Writing}: Once you get promising experimental results, your adviser would ask you to write a draft of the paper to a target conference or journal (this helps determine the format and audience of the work).
+%   Writing is often the hardest part for new researchers as it requires a different skill set (e.g., you could be very good with technical work but not good at writing). You can learn from looking at other papers, e.g., from your own group and other papers published in the target conference or journal.
+
+%   In most cases, the student would provide the first draft of the manuscript.  Other contributors, e.g., those who helped with the experiments, might also contribute to the writing, e.g., by writing specific sections and give feedback on the draft.
+
+%   Once a draft is ready, the student would share it with the adviser and co-authors for feedback.  This part is often done through multiple iterations, where the student revises the draft based on feedback from the adviser and co-authors. In many cases, during the writing process the student might find issues with the approach and experiments, and need to go back to the implementation and experiment design parts to refine them.
+
+
+% \end{itemize}
+
+
+% After the manuscript is ready, it is time to submit the work. At this point the author list and order should be finalized! In most cases the venue would not allow changes to the author list after submission.  While there are other parts involved, e.g., rebuttal or response to reviewers' comments, and revisions, these should not affect the author list and order.  Note that for journal where significant revisions are often needed (or a conference paper being rejected and resubmit), the author list and order can be changed during the revision process, e.g., additional contributors can be added.
 
 
 
 % \section{Authorship Criteria and Order}
 
+% \paragraph{Who should be an author?} The short version: people who made significant contributions to the work should be authors.
+% Longer version below.
+
+% First, in CS, the number of authors is typically small, e.g., 2--5 authors.  This is unlike some other fields, e.g., biology and medicine, where the number of authors can be very large, e.g., 10--20 authors.  Thus, in CS, authorship is a big deal and should be reserved for those who made significant contributions to the work.
+
+% \paragraph{Order of authorship} The short version: the first author is typically the primary contributor, the last author is typically the senior author (e.g., adviser), and middle authors are ranked by level of contribution.
 
 
 
@@ -2812,9 +2889,9 @@ The NSF GRFP is a prestigious fellowship for US citizens, nationals, and permane
 \subsection{How Applications are Evaluated}
 
 \begin{itemize}
-\item Each applicant is assigned to \emph{about 3 reviewers} who have expertise in the applicant's research field (e.g., if your topic is in PL, your reviewers will likely be in PL). This means reviewers are quite knowledgeable in your field and your work, your LoR writers and their work, and thus can evaluate your application quite in depth. This is different from PhD applications where adcom reviewers (\autoref{sec:adcom}) might not be in your field.
+\item Each applicant is assigned to \emph{about 3 reviewers} who have expertise in the applicant's research field (e.g., if your topic is in PL, your reviewers will likely work in PL or did their PhD in PL). This means reviewers are quite knowledgeable in your field and your work, your LoR writers and their work, and thus can evaluate your application quite in depth. This is different from PhD applications where adcom reviewers (\autoref{sec:adcom}) might not be in your field.
 
-\item Reviewers might not be research-focused faculty members (e.g., tenure-line), they can be teaching faculty (\autoref{sec:faculty-types}). In fact, I believe many reviewers are teaching faculty. So this means they may not be familiar to the latest related work or trend in your field. So make your research plan easy to understand and well-motivated (see \autoref{sec:grfp-pitfalls}).
+\item While reviewers are likely in your field, they might not be research-focused faculty members (e.g., tenure-line), they can be teaching faculty (\autoref{sec:faculty-types}). In fact, I believe many reviewers are teaching faculty. So this means they may not be familiar to the latest related work or trend in the field. So make your research plan easy to understand and well-motivated (see \autoref{sec:grfp-pitfalls}).
 
 
 \item Reviewers typically try to compare applicants \emph{within their cohort level}.  This means that we do not compare an undergrad, who is still applying to grad school, to a 2nd year PhD student who already has an adviser and published multiple papers. This ensures that each applicant is evaluated fairly based on their level.
@@ -2851,10 +2928,10 @@ So avoid technical jargon, explain things in simple terms, and motivate your wor
 
 \item \textbf{Related Work and Challenges.} Many research plans motivate the problem well but do not discuss limitations of existing work, making it questionable if the problem is important or if you are aware of the challenges.  Thus, you should do a thorough literature review and discuss what people have done and their limitations.  Your research plan should then talk about how you plan to address these limitations, i.e., fill the gap in the literature.  
 
-\item \textbf{Do not BS.} Many research plans include technical details or proposed work that are vauge, unrealistic, or even impossible. This is similar to a student taking an exam and write a lot of nonsense and hope for partial credits.  As mentioned, reviewers are often chosen based on their expertise in your field and can detect B.S. Again, do your homework and ask someone who knows the field, e.g., your advisor or LoR writer, to review your research plan.
+\item \textbf{Do not BS.} Many research plans include technical details or proposed work that are vague, unrealistic, or even impossible. This is similar to a student taking an exam and write a lot of nonsense and hope for partial credits.  As mentioned, reviewers are often chosen based on their expertise in your field and can detect B.S. Again, do your homework and ask someone who knows the field, e.g., your advisor or LoR writer, to review your research plan.
 
 
-\item \textbf{Overexaggeration Lors.} Many GRFP applicants have ref. letters from professors that are very good at writing LoRs. However, they often use flowery language and overrate their students. Reviewers can sense this overexaggeration and might not trust the LoRs. This is similar to overclaiming research conributions when writing papers---so ask your LoR writers to tone down their enthusiam and be specific with concrete examples to demonstrate why you're \emph{``the best''}. 
+\item \textbf{Overexaggeration Lors.} Many GRFP applicants have ref. letters from professors that are very good at writing LoRs. However, they often use flowery language and overrate their students. Reviewers can sense this overexaggeration and might not trust the LoRs. This is similar to overclaiming research contributions when writing papers---so \emph{ask your LoR writers to tone down} their enthusiasm and be specific with concrete examples to demonstrate why you're \emph{``the best''}. 
 
 
 
@@ -2873,7 +2950,7 @@ Reviewers mainly get to know you and evaluate your application by reading your r
 \paragraph{Non-expert} NDSEG reviewers hold advanced degrees in STEM fields. However, NDSEG reviewers are more general and might not be in your specific field. For example, in GRFP I mostly review applications in PL, while in NDSEG it seems that I review applications in all fields of CS and even non-CS.  Thus, you should make your research plan \emph{more accessible to a general audience}.
 
 \begin{commentbox}
-I find a bit difficult to evaluate NDSEG applications because I do not have the full picture.  For example, a student mentioned that they have published in the topic they proposed but redacted all information about the publication, so I have no idea where they published, what the paper is about, etc.  
+I find it a bit difficult to evaluate NDSEG applications because I do not have the full picture.  For example, a student mentioned that they have published in the topic they proposed but redacted all information about the publication, so I have no idea where they published, what the paper is about, etc.  
 It is also difficult to evaluate the academic background of the student, e.g., some student just started grad school and so their transcript is essentially blank. It is also annoying to see CVs with so many blanked out information (they might as well should just submit a blank CV).
 \\
 
@@ -2898,7 +2975,7 @@ These are some common pitfalls I see in NDSEG applications and tips to avoid the
     
     You should pick a few thing and provide concrete examples and details.  For example, talk about what you have accomplished in your robotics club, e.g., you built a robot that won a competition.  Just a small, interesting detail can make your essay stand out.
     
-    \item \textbf{Not using all allowed pages}. Many research plans use only 1/2 or 2/3 of the number of allowed pages, which themselves are already quite short. Such documents are often not detailed enough and do not provide enough information for reviewers to understand and evaluate the research plan.  So use all allowed pages to provide enough details about your research plan. This is especially important as we do not know much about you due to redacted materials.
+    \item \textbf{Not using all allowed pages}. Many research plans use only 1/2 or 2/3 of the number of allowed pages, which themselves are already quite short. This often does not provide enough information for reviewers to understand and evaluate the research plan.  So use all allowed pages to provide enough details about your research plan. This is especially important as we do not know much about you due to redacted materials.
     
 %personal essay / stories are written in text box and so do not llook very professional and doesn't seem to be heavily weighted compared to research plan (e.g., very few questions asked about the personal stories compared to questions asked on research plan).  
 
@@ -2907,13 +2984,14 @@ These are some common pitfalls I see in NDSEG applications and tips to avoid the
 \end{itemize}
 
 
-
 \section{Common Tips for Both Fellowships}
 
 \begin{itemize}
   \item \textbf{Use \LaTeX{} to write your research plan and essays} (\autoref{chap:writing-latex}).  This is the standard in CS and engineering and will make your application look  professional.  Moreover, do not use the default Word settings, e.g., left justification, as it is not standard in CS and engineering and difficult to read.  
 
   \item \textbf{Ask your LoR writers and adviser to look at your writing/essays} (this is very important so I keep repeating it).  You are new to the field and research writing, and your ideas might not be accurate or have already been explored. It's better that they tell you now than for you to find out later from reviewers.
+  
+  \item \textbf{Do not BS}. I said this before (\autoref{sec:grfp-pitfalls}) and I say it again. Many times students have some achievements (e.g., publications) and thought they know a lot and start BSing. Surprisingly I find this being more common with students from top schools with strong LoRs and good research experience.
 \end{itemize}
 
 
@@ -2923,10 +3001,10 @@ These are some common pitfalls I see in NDSEG applications and tips to avoid the
 I find the GRFP more familiar compared to NDSEG, which redacts most applicant information as mentioned above. I also spent more time reviewing GRFP applications---mainly because NDSEG doesn't provide much info to work with.
 \\
 
-I also find GRFP applicants have stronger \emph{research plans}. GRFP applicants often already have good research experience, with many  have top tier publications. They also tend to come from well-known institutions with ``fancy'' LoRs. In contrast, NDSEG applicants come from a broader range of schools and backgrounds. Interestingly, I find the \emph{personal statements} in NDSEG applications more appealling, largely due to their personal stories and varied experiences.
+I also find GRFP applicants have stronger \emph{research plans}. GRFP applicants often already have good research experience, with many have top tier publications. They also tend to come from well-known institutions with ``fancy'' LoRs. In contrast, NDSEG applicants come from a broader range of schools and backgrounds. Interestingly, I find the \emph{personal statements} in NDSEG applications more appealling, largely due to their personal stories and varied experiences.
 \\
 
-A quick note on compensation: GRFP reviewers, like other NSF panelists, receive a modest honorarium (\$200 total; I probably spent several full days reviewing over 10 applications). NDSEG reviewers aren't officially paid, though I did receive some compensation, e.g., \$50 Amercian Express gift card---but for whatever reason never worked when I tried to use it. So, not much for compensation (days of reviewing and writing comments for a couple of hundred dollars), but I really enjoy the experience and would do it for free!
+A quick note on compensation: GRFP reviewers, like other NSF panelists, receive a modest honorarium (\$200 total; I probably spent several full days reviewing dozen of applications). NDSEG reviewers aren't officially paid, though I did receive some compensation, e.g., \$50 Amercian Express gift card---but for whatever reason never worked when I tried to use it. So, not much for compensation (ays of reviewing and writing comments for a couple of hundred dollars), but I really enjoy the experience and would do it for free!
 \end{commentbox}
 
 
@@ -2936,7 +3014,7 @@ A quick note on compensation: GRFP reviewers, like other NSF panelists, receive 
 Lisa Simpson: You won a Grammy.\\
 Homer: I mean an award that's worth winning.''}
 
-When exploring potential advisors, students often look at faculty websites to learn about their research and achievements. Common indiciators of research productivity include publications and involvement in research community. However, beyond these, CS has certain prestigious and meaningful achievements that researchers aim for, but that are not as well-known to prospective students. 
+When exploring potential advisors, students often look at faculty websites to learn about their research and achievements. Common indiciators of research productivity include publications and involvement in research community. However, beyond these, CS has several prestigious and meaningful achievements that researchers aim for, but that are not as well-known to prospective students. 
 
 This chapter first looks at the common research activities and then discusses the ``big'' research achievements that faculty often highlight on their websites, CVs, or departmental news and awards pages (e.g., at \href{https://cs.gmu.edu/about/faculty-awards/}{GMU} and \href{https://www.cs.washington.edu/people/honors-awards/}{UWash}).
 
@@ -2948,30 +3026,32 @@ Publications and involvement in the research community are common indicators of 
 
 \subsection{Publications in Top-Tier Venues}\label{sec:pubs-top-tier}
 
-Publications in top-tier venues are the most reliable factor to measure the productivity of a faculty. They give visibility to the faculty's work and help establish their reputation in the area. For tenure-track faculty (\autoref{sec:faculty-types}), especially at top CS programs, publications at top-tier conferences and journals are often the most important factor for tenure.
+Publications in \emph{top-tier} venues are the most reliable factor to measure the productivity of a faculty. They give visibility to the faculty's work and help establish their reputation in the area. For tenure-track faculty (\autoref{sec:faculty-types}), especially at top CS programs, publications at top-tier conferences and journals are often the most important factor for tenure.
 
 \textbf{Conferences.} Unlike many STEM disciplines like Maths and Physics (\autoref{sec:fields-and-areas}) that prefer journals, most CS fields  focus on publising at \emph{conferences}. One of the main reasons is that CS is a very fast moving and journals are often too slow---taking 1--2 years to publish---by which time the results may already be outdated.  In contrast, conferences have a much faster review process, typically taking 3--6 months from submission to publication.
 
 Each CS field (\autoref{sec:fields-and-areas}) has its own ``top'' conferences---usually around 2--4 per area. For example, NeurIPS, ICLR, and ICML are considered top conferences in AI/ML, while ICSE and FSE are among the the tops in Software Engineering.
 These conferences have very rigorous review process, and only a small percentage of papers are accepted. 
 
-As mentioned in~\autoref{chap:research-experience}, having a paper accepted at a top-tier conference is a big deal and makes you stand out from other prospective students. 
+As mentioned in~\autoref{chap:research-experience}, having a paper accepted at a top-tier conference can be a big deal and makes you stand out from other prospective students. 
 CSrankings (\autoref{chap:rankings}) gives the top conferences in each area and rank departments based on their publications in these conferences.
 
 
 \textbf{Journals.} While journals are not as popular in CS, they exist and serve a different purpose---to publish more mature and complete work.
+For example, a conference paper might present a new algorithm and some initial experiments, while a journal paper would include full detailed proofs and more thorough experiments and analysis. 
+
 Many CS areas do not have journals but some do. For example, TSE (Transactions on Software Engineering) is a top journal in SE and has exceptionally high impact-factors (higher than many top conferences)---but this is a rare exception.
 
 %It is expected that a tenure-track faculty in SE would have a few journal papers in addition to conference papers when going up for tenure.  However, in general, journals are not as important as conference papers in CS and many fields do not even have a top journal.
 
 \begin{commentbox}
-Note that some CS areas, such as PL and SE, are beginning to publish conference papers as journals, which among other reasons allow for for longer papers and to be consistent with other disciplines such as math and physics. For example, papers in well-known PL conferences including  POPL and OOPSLA are now published as special issues in the PACMPL (Proceedings of the ACM on Programming Languages) journal. However, despite this publishing technicality, these are still considered conferences and has the benefits of conferences such as fast review and publication process. Most researchers would treat them exactly as conference papers. 
+Note that some CS areas, such as PL and SE, are beginning to publish conference papers as journals, which among other reasons allow for  longer papers and to be consistent with other disciplines such as math and physics. For example, papers in well-known PL conferences including  POPL and OOPSLA are now published as special issues in the PACMPL (Proceedings of the ACM on Programming Languages) journal. However, despite this publishing technicality, these are still considered conferences and has the benefits of conferences such as fast review and publication process, and in-person presentation at the conference. Most researchers would treat them exactly as conference papers. 
 \end{commentbox}
 
-\paragraph{Best Paper Awards} Conferences often give out best or distinguished paper awards to a small set of accepted papers (e.g., 10\% of accepted papers at ICSE) to recognize that they hae high-quality and potential impact.
-AI/ML conferences often have many papers and so select a few for ``oral'' presentations, and thus are equivalent to traditional best papers. 
+\paragraph{Best Paper Awards} Conferences often give out best or distinguished paper awards to a small set of accepted papers (e.g., 10\% of accepted papers at ICSE) to recognize that they have high-quality and potential impact.
+AI/ML have ``oral'' and ``spotlight'' papers that are selected from accepted papers based on their quality and potential impact, and thus are equivalent to traditional best papers.
 
-These awards are determined by the program committee and presented to the authors at the conference. Note that these are not the same as the ``test-of-time' 'paper awards discussed in \autoref{sec:research-awards}.
+These best paper awards are determined by the program committee and often presented to the authors at the conference. Note that these are not the same class as the ``test-of-time'' paper awards discussed in \autoref{sec:research-awards}.
 
 \paragraph{Citations} Citation counts, e.g., through Google Scholar, are often used to measure the impact of a researcher's work---how many people have cited their work. Google Scholar also has other metrics such as h-index and i10-index. The h-index is the number of papers with at least h citations, while the i10-index is the number of papers with at least 10 citations.  
 
@@ -2982,10 +3062,10 @@ Thus take citations with a grain of salt when it comes to selecting advisors. Fo
 \subsection{Involvement in the Research Community}
 
 Faculty have various activities within their research community.
-These are mostly voluntay, but they are important for establishing and maintaining their reputation and visibility.
+These are mostly voluntary, but they are important for establishing and maintaining their reputation and visibility.
 
 \emph{Being a PC member}---reviewer for papers---of a top conference is the most common. Just as publishing in top conferences, this gives visibility and establish repuation.
-New faculty aims to be on the PC of a top conference in their area, and go for more leadership roles as they become more well-known. PC chairs of top conferences are often senior and well-known reseachers.
+New faculty aims to be on the PC of a top conference in their area, and  for more leadership roles as they become more well-known. PC chairs of top conferences are often senior and well-known reseachers.
 
 Similar to PC member, faculty also serve as reviewers for journals such as being on the \emph{editorial board} of major SE journals like TSE, JSS, and TOSEM. 
 However, being a journal reviewer is less visible than being a PC member because the journals do not list their reviewers as conferences do with PC members. Moreover, due to the focus of conferences in CS, many faculty do not publish in journals and therefore do not review for them.
@@ -2996,7 +3076,7 @@ is reviewing proposals for funding agencies like the NSF. In addition to shaping
 
 \section{Research Achievements and Awards}
 
-Activities listed in~\autoref{sec:common-research-indicators}---publishing papers and involving in research community---are common and expected for all research faculty.  After all, you rarely see departments celebrating someone's paper acceptance, but they will spotlight certain awards and honors that are genuinely exceptional and give more meaningful insights into a researcher's impact and standing in the field.
+Activities listed in~\autoref{sec:common-research-indicators}---publishing papers and involving in research community---are common and \emph{expected} for all research faculty, especially those at top institutions.  After all, you rarely see departments celebrating someone's paper acceptance, but they will spotlight certain awards and honors that are genuinely exceptional and give more meaningful insights into a researcher's impact and standing in the field.
 
 
 \begin{figure}
@@ -3021,7 +3101,7 @@ Activities listed in~\autoref{sec:common-research-indicators}---publishing paper
     \item \textbf{PECASE} (Presidential Early Career Award for Scientists and Engineers) A small number of CAREER awardees are selected for this recognition and therefore highly prestigious. PECASE is given by the White House and is the highest honor given to early-career scientists and engineers. See an \href{https://www.csail.mit.edu/news/csails-broderick-and-carbin-earn-presidential-early-career-awards}{example} of a PECASE awardee from MIT.
   \end{itemize}  
   
-  \item \textbf{YIP (Young Investigator Program)} Given by defense agencies such as the DoD, DARPA, ONR and have the similar goals as CAREER but strictly for US citizen or permanent residents. They are not as popular as CAREER, focus on very restricted topics (e.g., only in DoD's interest areas), and have a shorter duration---3 years instead of 5. YIP recipients can also be considered for the mentioned PECASE recognition.
+  \item \textbf{YIP (Young Investigator Program)} Given by defense agencies such as the DoD, DARPA, ONR and have the similar goals as CAREER but strictly for US citizen or permanent residents. They are not as popular as CAREER, focus on very restricted topics (e.g., only in areas that the DoD is interested in), and have a shorter duration---3 years instead of 5. YIP recipients can also be considered for the mentioned PECASE recognition.
   
   \item \textbf{Sloan Fellowship}  Comes with a \$75K research grant over 2 years for junior faculty with exceptional potential in their field. Unlike the CAREER or YIP, these are nominated by their institutions and are not open to self-application.
   
@@ -3029,7 +3109,7 @@ Activities listed in~\autoref{sec:common-research-indicators}---publishing paper
 
 Other awards that junior faculty can get include the \emph{ACM Dissertation Awards} and early career awards from the industry. 
 The ACM SIGs (Special Interest Groups) such as SIGPLAN (programming languages) and SIGARCH (architecture) have  dissertation awards for best PhD dissertation in different areas of CS. These are typically given \emph{after} the student has graduated and thus are given very junior faculty who recently graduated.   
-Some industry labs---like Google and \cancel{Microsoft} (used to)---have fellowship programs for early-career faculty. These are very competitive and come with funding for one or two years. 
+Some industry labs---like \cancel{Google} and \cancel{Microsoft} (used to)---have fellowship programs for early-career faculty. These are also competitive and come with funding for one or two years. 
 
 
 %  These industrial awards are very flexible (unrestricted) and thus prof. often save them for emergencies (e.g., when they cannot get NSF funding).
@@ -3044,7 +3124,7 @@ These can be (i) lifetime achievements in the field---such as ACM or IEEE Fellow
 \paragraph{Lifetime Achievements} 
 
 \begin{itemize}  
-  \item \textbf{\href{https://awards.acm.org/fellows}{ACM} and IEEE Fellows} are for researchers with long-term contributions and leadership in computing fields. These are typically given to very senior researchers (e.g., full professors). Note that there are also ACM and IEEE Senior Members, which are a step below Fellows and can be self-applied (see news examples of an IEEE Fellow at \href{https://siebelschool.illinois.edu/news/elevation-to-ieee-fellow-further-proves-significance-of-hoiems-impact-in-computer-vision}{UIUC} and Senior Member at \href{https://uwaterloo.ca/computer-science/news/ian-goldberg-named-senior-member-ieee}{Waterloo}).
+  \item \textbf{\href{https://awards.acm.org/fellows}{ACM} and IEEE Fellows} are prestigious honors for researchers with long-term contributions and leadership in computing fields. These are typically given to very senior researchers (e.g., full professors). Note that there are also ACM and IEEE Senior Members, which are a step below Fellows and can be self-applied (see news examples of an IEEE Fellow at \href{https://siebelschool.illinois.edu/news/elevation-to-ieee-fellow-further-proves-significance-of-hoiems-impact-in-computer-vision}{UIUC} and Senior Member at \href{https://uwaterloo.ca/computer-science/news/ian-goldberg-named-senior-member-ieee}{Waterloo}).
   
   \item \textbf{\href{https://www.macfound.org/programs/awards/fellows/}{McArthur Fellowship}} are also known as the \emph{``Genius Grant''} and given to individuals who have shown exceptional creativity in their work and the promise for more in the future. 
   
@@ -3067,13 +3147,12 @@ Note that these paper awards are different than Distinguished or Best Paper awar
       has earned two of these awards already, less than ten years after completing \censor{his} PhD ...''}\\
 
     \end{examplebox}
-    \caption{LoR for a junior faculty written by an ACM and IEEE Fellow (some texts endacted for anonymity).}\label{fig:lor4junior}
+    \caption{LoR written by an ACM and IEEE Fellow for a junior faculty (some texts endacted for anonymity).}\label{fig:lor4junior}
   \end{figure}
 
   Note that while typically given to senior researchers, some junior faculty have received these highly prestigious awards for their work as shown in~\autoref{fig:lor4junior}. 
 
 \subsection{Industrial and Other Awards}
-
 
 CS faculty also aim to win awards from industry, which can be a sign of their impact on real-world applications and industry relevance. Some well-known ones include:
 
@@ -3084,9 +3163,10 @@ CS faculty also aim to win awards from industry, which can be a sign of their im
 
 \end{itemize}
 
-There are also many awards from others companies and organization but only in specific areas relevant to their business, e.g., Sony, Samsung, Comcast, Ethereum Foundation. There are also awards given to a specific list of universities selected by a company or organization (e.g., faculty awards from Intel and Qualcomm, and Packard Fellowships). 
-While these awards are not open to all researchers and face less competition (e.g., compared to the ARA from Amazon which attracts a huge number of applicants from all over the world), they still show the faculty's impact and connections in the industry.
+There are also many awards from others companies and organization but only in specific areas relevant to their business, e.g., Sony, Samsung, Comcast, Nvidia, Ethereum Foundation. 
 
+Some companies have partnerships with universities and created awards only for faculty (and students) at these universities (e.g., faculty awards from Intel and Qualcomm, and Packard Fellowships). 
+These awards are not open to all researchers and face less competition (e.g.,  compared to the Amazon ARA which attracts a huge number of applicants from all over the world).
 
 %\paragraph{Students' Achievements} 
 %faculty proudly show achievements of their students, e.g., best paper awards, internships at top companies, and faculty positions at top universities.  Dissertation awards, GRFP , Undergrad students research awards, etc
@@ -3117,35 +3197,6 @@ While these awards are not open to all researchers and face less competition (e.
 %     \item \textbf{Consistency of funding} – Advisers with multiple ongoing grants can better support students with travel, equipment, and stipends.
 % \end{itemize}
 % If an adviser has continuously secured funding over time, it suggests a stable research environment and long-term support for students.
-
-% \section{Leadership \& Service in the Research Community}
-% You will often see faculty members list their services in their research community, e.g., serving on program committees or editor boards, organizing and chairing sessions and workshops. These are not awards but are important indicators of a faculty member's standing in the field. Below lists some of the common service roles that faculty members often list on their CVs. Note the assumption that these are top conferences and journals in the field.
-
-
-% \begin{itemize}
-%   \item \textbf{Program Committee (PC) for Conferences} This typically means server as reviewers for a conference.  This is a common service role and is expected of researchers, as shows they are active in the community. While serving on PC is not a big deal (more like a minimum requirement for faculty), \emph{not being} on PC regularly is a red flag, especially for junior faculty.
-  
-%   \item \textbf{Editorial Board of Journals} This is also similar to PC for conference but for journals where you serve as a reviewer for journal papers. However, given that CS is a conference-driven field, this is not as popular as PC for conferences---it is common that a faculty member serves on PC for conferences but not on editorial boards of journals. 
-
-%   \item \textbf{General or Program Chair of major conferences} Program Chair is the chair of the program committee, i.e., the person who leads the committee and is responsible for selecting PC members and papers.  This is a very prestigious role and is often given to very well-known faculty.    General chair is the chair of the whole conference, i.e., the person who is responsible for organizing the whole conference. This is often given to well-known researcher or someone local to the conference location. Being a PC or general chair of a top conference is sometimes required for full professorship (\autoref{sec:faculty-types}). Many universities give course releases or summer salary to faculty who are chairs of major conferences.
-  
-% %  \item \textbf{Departmental leadership roles} While not always a direct research indicator, serving as Department Chair, Dean, or leading a research institute often signals strong influence.
-% \end{itemize}
-
-
-%\paragraph{Departmental Services} All faculty are expected to serve on departmental committees, e.g., adcmission committee (adcom!), faculty search committee, and promotion and tenure committee. These are requirement (and many faculty try to avoid them).  However, a few ldeadership roles do indicate strong influence in the department, e.g., serving as Department Chair, Chair or Director of a large program (e.g., PhD, MS, undergraduate program). 
-
-% \paragraph{What This Means for You as a PhD Student}
-% Evaluating these factors helps you understand:
-% \begin{itemize}
-%     \item \textbf{How well-known your potential adviser is in the field} – This impacts your career prospects after graduation.
-%     \item \textbf{How active their lab is} – A productive lab means more opportunities for collaboration, funding, and conference travel.
-%     \item \textbf{How stable the research funding is} – A well-funded lab ensures you have the resources you need to succeed.
-% \end{itemize}
-% While no single factor is definitive, a combination of these elements can give you a strong sense of whether an adviser and their lab are truly productive and well-respected in the field.
-
-
-
 
 \chapter{Writing in \LaTeX{}}\label{chap:writing-latex}
 \chapterinfo{You should write your academic documents in \LaTeX{}.}
@@ -3326,7 +3377,7 @@ In short, rankings from sources like US News are mainly used high school and und
 %     Anyone with knowledge of CS research will see these rankings for what they are — nonsense — and ignore them. But others may be seriously misled. 
 % \end{commentbox}
 
-\section{CSRankings.org}
+\section{CSRankings.org}\label{sec:csrankings}
 Instead of traditional school rankings, many PhD students and faculty use \href{https://www.csrankings.org}{CSRankings.org}, which is a ranking system based on faculty publications at top CS conferences.  The metrics and ranking calculation are transparent and ranking results are updated automatically (after the conference proceedings are indexed in DBLP).  Because the approach is entirely data-driven, it is not influenced by any subjective opinions or biases, and very difficult to manipulate. The number of Github pull requests by CS faculty (in fact, even non-CS faculty) to be included in the rankings is a good indicator of the impact of the rankings.  
 
 \paragraph{Geometric Mean} CSRankings uses the \emph{geometric mean} to summarize the performance of a department across multiple disciplines. The score for each department is calculated as follows:
@@ -3391,11 +3442,11 @@ More details and justfication for this metric can be found in the \href{https://
 \section{About This Book}\label{sec:about-this-book}
 \sectioninfo{This book aims to provide in depth information about the CS PhD admission process in the US. It is particularly useful for international students from smaller countries and less well-known universities as they often lack access to such information.}
 
-\paragraph{History} This book was conceived during a lunch with a faculty at GMU.  We talked about why GMU was not able to attract good Vietnamese and other international students, despite having a much stronger CS program than many schools that these students want to go to (part of the reason is described in \autoref{sec:selecting-ranking-schools}). We wish there were a way for international students to know about PhD programs in the US.
+\paragraph{History} This book was conceived during a lunch with a faculty at GMU.  We talked about why GMU was not able to attract good Vietnamese and other international students, despite having a much stronger CS program than many schools that these students want to go to (part of the reason is described in \autoref{sec:selecting-ranking-schools}). We wish there were a way for international students to understand more about PhD programs in the US.
 
 I am also a member of the large VietPhD group on Facebook and often browse Internet forums (e.g., \href{https://www.reddit.com/r/gradadmissions/}{Reddit/gradadmission} and \href{https://forum.thegradcafe.com/}{GradCafe}). There I saw many questions from students about PhD programs.  However, most participants are students, many of whom in non-CS fields or not in the US, and their answers are typically not accurate and often lead to more confusion. So I thought it would be useful to have a handbook that is specific to CS PhD programs in the US from an insider perspective.
 
-I started writing this book in May 2023 and have been updating it since then (mostly around deadline time when I procrastinate, i.e., \emph{productive procrastination}!). The book was initially intended for international students but has been updated to include domestic students (\autoref{chap:domestic-students} and \autoref{chap:fellowships}).
+I started writing this book in May 2023 and have been updating it since then (mostly around deadline time when I procrastinate, i.e., \emph{productive procrastination}!). The book was initially intended for international students but has been expanded to include advice for domestic students (e.g., \autoref{chap:domestic-students} and \autoref{chap:fellowships}).
 
 
 
@@ -3427,12 +3478,12 @@ Finally, this book is highly \emph{opinionated} and \emph{subjective}, which is 
 \subsection{How to Read This Book?}
 This book is designed to be read in any order. So you can start with any chapter that fit your current needs and stage in the application process.  For example, if you are still in undergrad, then you might be interested in getting research experience (\autoref{chap:research-opportunities}). If you are ready to apply, you can read on how your application is evaluated (\autoref{chap:evalapps}) or funding opportunities (\autoref{chap:funding}). If you are a domestic student, you can look at advice (\autoref{chap:domestic-students}) and fellowships (\autoref{chap:fellowships}) specifically for you.
 
-\begin{commentbox}
-The angelfish on the cover, wearing a PhD cap, symbolizes the spirit of this book and its message. In an aquarium, the angelfish fish is considered the centerpiece of the tank and stands out from the rest---an important factor for a successful CS PhD applicant in a crowded and competitive pool of prospective students.\\
+% \begin{commentbox}
+% The angelfish on the cover, wearing a PhD cap, symbolizes the spirit of this book and its message. In an aquarium, the angelfish fish is considered the centerpiece of the tank and stands out from the rest---an important factor for a successful CS PhD applicant in a crowded and competitive pool of prospective students.\\
 
-I also have angelfish in my aquarium, and they are my favorite. They live the longest and very resilient (e.g., to water quality)---which makes them a good metaphor for PhD prospective students.
-I also like O'Reilly's books with their animal covers, so I thought it would be fun to have an animal cover for this book.
-\end{commentbox}
+% I also have angelfish in my aquarium, and they are my favorite. They live the longest and very resilient (e.g., to water quality)---which makes them a good metaphor for PhD prospective students.
+% I also like O'Reilly's books with their animal covers, so I thought it would be fun to have an animal cover for this book.
+% \end{commentbox}
 
 
 \paragraph{Notation} \autoref{tab:chess-icons} summarizes the notation and icons, inspired by chess pieces, used throughout the book.
@@ -3482,7 +3533,7 @@ You can also: (i) leave a review on \href{https://www.amazon.com/dp/B0F41HP6Y2}{
 \section{About Me}\label{sec:about-me} 
 
 I am an associate professor in the CS dept at George Mason University (GMU). 
-Before GMU, I was at the University of Nebraska-Lincoln (UNL). Both UNL and GMU are \gls{r1} research universities in the US and have many international students in their CS graduate programs. I work in Software Engineering and Formal Mehods.  My research lab website is at \href{https://roars.dev}{roars.dev}. 
+Before GMU, I was at the University of Nebraska-Lincoln (UNL). Both UNL and GMU are \gls{r1} research universities in the US and have many international students in their CS graduate programs. I work in Software Engineering and Formal Methods.  My research lab website is at \href{https://roars.dev}{roars.dev}. 
 
 I have been involved the PhD admission process at GMU and UNL for many years. This allows me to have a good understanding of the process, the challenges students face, and what faculty are looking for. Currently I am the program director of the MS program in Software Engineering at GMU (thus also have experience with MS admission, which is quite different than PhD as discussed in~\autoref{chap:ms}). I also have served in the panels of PhD fellowships including NSF GRFP and DoD NDSEG, which allows me to provide some insights on external fellowhip applications (\autoref{chap:fellowships}).
 
@@ -3495,7 +3546,7 @@ Finally, my upbringing in the US provides a perspective aligned with American cu
 
 \section{Disclaimer}\label{sec:disclaimer}
 
-This book is inherently \emph{subjective} and \emph{opinionated} based on my experience in PhD adcoms and student advising (\autoref{sec:about-me}). Such a candid approach is beneficial, because overly neutral advice often fails to address the specific challenges faced by students.
+This book is inherently \emph{subjective} and \emph{opinionated} based on my experience in PhD adcoms and student advising (\autoref{sec:about-me}). Such a candid approach is beneficial, because overly neutral and ``feel-good'' advice often fails to address the specific challenges faced by students.
 
 Moreover, since PhD admission varies significantly across institutions, there's rarely a universal ``correct'' way, and too many choices often lead to confusion. Clear and direct guidance---even if opinionated---can provide practical pathways to help students like yourself to navigate the PhD admissions process better.
 
@@ -3518,5 +3569,6 @@ Finally, thanks to my wife and kids for always supporting me and putting up with
 %\bibliography{demystify.bib}
 
 \end{document}
+
 
 
