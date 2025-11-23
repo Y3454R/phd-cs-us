@@ -17,11 +17,14 @@
 
 ##  2. <a name='LinksforProspectiveStudents'></a>Links for Prospective Students
 
+
 1. [Applying to PhD Programs in Computer Science by Mor Harchol-Balter](https://www.cs.cmu.edu/~harchol/gradschooltalk.pdf)
 
 1. [Getting a Computer Science PhD in the USA by Shriram Krishnamurthi](https://parentheticallyspeaking.org/articles/us-cs-phd-faq/)
 
 1. [Blog post on PhD Admission by Philip Guo](https://pg.ucsd.edu/PhD-application-tips.htm)
+
+1. [Grad School Application Guide by Weimer et. al.](https://csguides.github.io/grad-school-application-guide/)
 
 1. [PhD Admission post by Yonatan Bisk (customized for CMU admission)](https://talkingtorobots.com/FAQ.html)
 
