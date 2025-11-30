@@ -1,9 +1,5 @@
 % makeindex style file created by the glossaries package
-<<<<<<< HEAD
 % for document 'demystify' on 2025-11-29
-=======
-% for document 'demystify' on 2025-11-24
->>>>>>> caee97dc8c772182e07e19dc1d426e291fffc7c8
 actual '?'
 encap '|'
 level '!'
