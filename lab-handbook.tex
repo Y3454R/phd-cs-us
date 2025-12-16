@@ -1,0 +1,506 @@
+\documentclass[oneside,11pt,dvipsnames]{book}
+\usepackage{pagecolor}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{soul}
+\usepackage[margin=1.5in]{geometry}
+\usepackage{tcolorbox}
+\tcbuselibrary{documentation, skins}
+\usepackage{titlesec}
+
+% \setsecnumdepth{subsection}
+% \setcounter{tocdepth}{3}
+\usepackage{fontawesome6}
+\usepackage{censor}
+\usepackage{enumitem}
+\usepackage{epigraph}
+\newcommand{\myepigraphsimpsons}[1]{
+  \epigraph{\vspace{-0.2in} \emph{#1}}{\textsc{The Simpsons}}
+}
+
+\usepackage{cite}
+\usepackage{caption}
+\captionsetup{font=small}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\setlength\intextsep{0pt} % remove extra space above and below in-line float
+
+\usepackage{booktabs}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning,calc,arrows.meta,shapes.geometric}
+
+\usepackage[dvipsnames]{xcolor}
+%\usepackage{anyfontsize}
+%\usepackage{sectsty}
+\usepackage[acronym]{glossaries}
+\setacronymstyle{long-short-desc}
+\makeglossaries{}
+\usepackage[makeroom]{cancel}
+
+% boxes
+\newtcolorbox{marker}[1][]{enhanced,
+  before skip balanced=2mm,after skip balanced=3mm,
+  boxrule=0.4pt,left=5mm,right=2mm,top=1mm,bottom=1mm,
+  colback=yellow!10,
+  sharp corners,rounded corners=southeast,arc is angular,arc=3mm,
+  underlay={%
+    \path[fill=tcbcolback!80!black] ([yshift=3mm]interior.south east)--++(-0.4,-0.1)--++(0.1,-0.2);
+    \path[draw=tcbcolframe,shorten <=-0.05mm,shorten >=-0.05mm] ([yshift=3mm]interior.south east)--++(-0.4,-0.1)--++(0.1,-0.2);
+    \path[fill=tcbcolback!80!black,draw=none] (interior.south west) rectangle node{\large\bfseries {#1}} ([xshift=4mm]interior.north west);
+    },
+  drop fuzzy shadow}
+
+\newenvironment{commentbox}[1][]{
+  \small
+  \begin{marker}[\faChessPawn{}]
+    {\textbf{#1}}
+  }{
+  \end{marker}
+}
+
+\newenvironment{surprisebox}[1][]{
+  \small
+  \begin{marker}[\faChessKnight{}]
+    {\textbf{#1}}
+  }{
+  \end{marker}
+}
+
+\newenvironment{examplebox}[1][]{
+  \small
+  \begin{marker}[\faChessBishop{}]
+    {\textbf{#1}}
+  }{
+  \end{marker}
+}
+
+\newenvironment{questionbox}[1][]{
+  \small
+  \begin{marker}[\faChessRook{}]
+    {\textbf{#1}}
+  }{
+  \end{marker}
+}
+
+\newenvironment{keybox}[1][]{
+\small
+  \begin{marker}[\faChessQueen{}]
+    {\textbf{#1}}
+  }{
+  \end{marker}
+}
+
+\newenvironment{warningbox}[1][]{
+  \small
+  \begin{marker}[\faChessKing{}]
+    {\textbf{#1}}
+  }{
+  \end{marker}
+}
+
+\renewcommand{\figurename}{Fig.}
+\renewcommand{\tablename}{Tab.}
+%\def\Section{\S}
+\newcommand{\Section}{\textsection}
+
+\renewcommand{\figureautorefname}{Fig.}
+\renewcommand{\tableautorefname}{Tab.}
+\makeatletter
+\renewcommand{\chapterautorefname}{\textsection\@gobble}
+\renewcommand{\sectionautorefname}{\textsection\@gobble}
+\renewcommand{\subsectionautorefname}{\textsection\@gobble}
+\renewcommand{\appendixautorefname}{\textsection\@gobble}
+
+\newcommand*\l@chapterinfo{\@nodottedtocline{0}{0.0em}{1.5em}}
+\newcommand*\l@sectioninfo{\@nodottedtocline{1}{1.5em}{2.3em}}
+\newcommand*\l@subsectioninfo{\@nodottedtocline{2}{3.8em}{3.2em}}
+
+% Copied from the book class macro `\@dottedtocline`. Removed the dots and page number
+\def\@nodottedtocline#1#2#3#4#5{%
+  \ifnum #1>\c@tocdepth \else
+    \vskip \z@ \@plus.2\p@
+    {\leftskip #2\relax \rightskip \@tocrmarg \parfillskip -\rightskip
+     \parindent #2\relax\@afterindenttrue
+     \interlinepenalty\@M
+     \leavevmode
+     \@tempdima #3\relax
+     \advance\leftskip \@tempdima \null\nobreak\hskip -\leftskip
+     {#4}\nobreak
+     \leaders\hbox{$\m@th
+        \mkern \@dotsep mu\hbox{\,}\mkern \@dotsep
+        mu$}\hfill
+     \nobreak
+     \hb@xt@\@pnumwidth{\hfil\normalfont \normalcolor }%
+     \par}%
+  \fi}
+
+
+
+\makeatother
+
+\newcommand{\chapterinfo}[1]{%
+  \phantomsection
+  \addcontentsline{toc}{chapterinfo}{\textcolor{black}{\emph{#1}}}%
+}
+\newcommand{\sectioninfo}[1]{%
+  \phantomsection
+  \addcontentsline{toc}{sectioninfo}{\textcolor{black}{\emph{#1}}}%
+}
+\newcommand{\subsectioninfo}[1]{%
+  \phantomsection
+  \addcontentsline{toc}{subsectioninfo}{\textcolor{black}{\texttt #1}}%
+}
+
+\newcommand{\mycomment}[3][\color{blue}]{{#1{{#2}: {#3}}}}
+\newcommand{\tvn}[1]{\mycomment{TVN}{#1}}{}
+\newcommand{\didi}[1]{\mycomment{Didier}{#1}}{}
+\newcommand{\tl}[1]{\mycomment{ThanhLe}{#1}}{}
+\newcommand{\xz}[1]{\mycomment{Xiaokuan}{[#1]}}{}
+\newcommand{\red}[1]{{\color{red}{#1}}}
+
+\newcommand{\mytitle}{Roars Lab's Handbook}
+%\newcommand{\mysubtitle}{A Handbook for Navigating CS PhD Admissions in the U.S.}
+%\newcommand{\mybookaddress}{\href{https://roars.dev/phd-cs-us/demystify.pdf}{https://roars.dev/phd-cs-us/demystify.pdf}}
+\newcommand{\mybookgithub}{https://code.roars.dev/phd-cs-us}
+\newcommand{\me}{Roars' Members}
+\newcommand{\institute}{George Mason University}
+
+\usepackage{hyperref}
+\hypersetup{
+    hidelinks,
+    linktoc=all,
+  colorlinks,
+  citecolor=black,
+  filecolor=black,
+  linkcolor=blue,
+  urlcolor=blue,
+  pdfpagemode=UseOutlines,
+}
+
+
+
+
+
+\begin{document}
+
+\frontmatter
+%\newpagecolor{SpringGreen}
+
+\begin{titlepage}
+    \begin{tikzpicture}[remember picture, overlay]
+        \draw[OliveGreen, line width = 3pt] ($(current page.north west) + (1in,-1in)$) rectangle ($(current page.south east) + (-1in,1in)$);
+      \end{tikzpicture}
+
+    \centering
+    {\Huge\bfseries\baselineskip1.3em\mytitle\par}\bigskip\bigskip
+    \vfill
+    \includegraphics[width=1\textwidth]{files/dino.png}
+    \vfill
+    {\Large\bfseries\me{}}\medskip\par
+    {\large\institute{}}%\medskip\par    
+    %{\small\today{}}\medskip\par
+    %\mybookaddress{} (\href{\mybookgithub}{Github})
+\end{titlepage}
+%\restorepagecolor
+\newpage
+\pagestyle{empty}
+
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[scale=0.1]{files/IMG_0785.jpeg}
+%     \caption{Two of my angels. They are breeding and laying eggs.}\label{fig:angelfish}
+%   \end{figure}
+  
+
+
+\renewcommand{\contentsname}{Contents and Summary}
+\tableofcontents
+
+
+\chapter{Preface}
+
+\mainmatter
+\part{Introduction}\label{part:intro}
+\chapter{Meeting}
+
+\part{Writing}
+\chapter{Papers}
+\chapter{Rebuttal}
+\chapter{Presentation}
+
+\part{Classes}
+
+\part{Travel}
+
+\chapter{Conferences}
+
+
+\paragraph{Meals}
+We are paid per diem for meals when we travel for conferences. The per diem rates depend on the city we are visiting. This means you don't need to save or submit receipts for meals.  If you don't eat anything (please do not do this), you will still get the per diem amount.
+
+The first day and the last day of travel, they will not pay the full per diem rate because you are not there for the full day.
+
+
+\part{Equipment}
+
+\chapter{Servers}
+
+\section{Server Specs}
+
+We have \textbf{four} servers (\hyperref[pictures]{pictures}).
+
+\begin{enumerate}
+    \item \faMugHot{} \textbf{Boba}: ideal for AI-based projects, e.g., generative LLMs
+    \begin{itemize}
+        \item \href{https://www.nvidia.com/en-us/products/workstations/dgx-spark/}{NVIDIA DGX Spark}
+        \item CPU: NVidia GB10 Chip, 20 core Arm (10 Cortex-X925 + 10 Cortex-A725 Arm)
+        \item Unified Memory/Graphic: 128GB RAM
+        \item OS: NVIDIA DGX OS (based on Ubuntu LTS)
+    \end{itemize}
+
+    \item \faPizzaSlice{} \textbf{Pizza}: ideal for projects that can leverage many cores and specialized GPU.
+    \begin{itemize}
+        \item Custom built
+        \item CPU: 32 cores, 64 threads, 3.6GHz (AMD Ryzen Threadripper PRO 5975WX)
+        \item Graphic: 2x Nvidia RTX 4090 24GB RAM
+        \item Memory: 128GB RAM
+        \item OS: Debian Stable
+    \end{itemize}
+    \begin{quote}
+        This system is ideal for projects that can leverage many cores and specialized GPU.
+    \end{quote}
+
+    \item \faFish{} \textbf{Sushi}
+    \begin{itemize}
+        \item Lenovo ThinkStation P620
+        \item CPU: 64 cores, 128 threads, 4.3GHz (AMD Ryzen Threadripper PRO 3995WX)
+        \item Graphic: Nvidia RTX 5090 RTX 24GB RAM
+        \item Memory: 128GB RAM
+        \item OS: Debian Stable
+    \end{itemize}
+
+
+    \item \faUtensils{} \textbf{Taco}: ideal for experiments that need fast CPU (but not lots of core) and fast GPU.
+    \begin{itemize}
+        \item Alienware Aurora
+        \item CPU: 16 cores, 24 threads, 5.20GHz (Intel 12th Gen Core i9-12900KF)
+        \item Graphic: Nvidia RTX 3080 Ti 12GB RAM
+        \item Memory: 64GB RAM
+        \item OS: Debian Stable
+    \end{itemize}
+\end{enumerate}
+
+\begin{warningbox}
+    For Debian machines, \textbf{DO NOT} install anything other than Debian stable packages to these computers (e.g., \textbf{do not mix unstable or new repositories} to \texttt{apt} sources list). You can download and install anything in your home (local) directory. If in doubt, contact us.
+\end{warningbox}
+
+\section{Getting an Account}
+
+To get an account on the server, send a request and your \textbf{SSH public key} (for \emph{password-less} log in).
+
+\section{Miscs}
+
+\begin{enumerate}
+    \item You can use an IDE such as \texttt{VSCode} to do remote development on these servers (just connect to the server via the builtin remote login method in VSCode). You can also use other editors that support remote development (e.g., \texttt{Emac} + \texttt{TRAMP}).
+    \item Do take advantage of the multicores these machines have. Most programming languages support multiprocessing (e.g., \texttt{Python}) and can significantly reduce program runtime.
+    \item Periodically check \texttt{top} and \texttt{htop} to make sure \textbf{you} are not taking too much CPU or memory.
+    \item Periodically check \texttt{/var/tmp} or \texttt{/tmp/} to make sure \textbf{you} are not taking too much space there.
+\end{enumerate}
+
+\section{Pictures}
+\label{pictures}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{files/sushi.jpg}
+    \caption{\faFish{} \textbf{Sushi}}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{files/sushi-fan.jpg}
+    \caption{\faFish{} \textbf{Sushi Cooling System}}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{files/pizzabox.jpg}
+    \caption{\faPizzaSlice{} \textbf{Pizza}}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{files/boba.jpg}
+    \caption{\faUtensils{} \textbf{Boba}}
+\end{figure}
+
+
+
+
+\appendix
+\chapter{LoRs}
+
+\section{Asking}
+
+\begin{itemize}
+    \item If you want a letter from me, you should \textbf{ask} at least 2 weeks in advance (ideally a month).
+    \begin{itemize}
+        \item \textbf{DO NOT} put my name in the application system without explicitly asking me first.
+    \end{itemize}
+
+    \item If I don't know you well enough, I will let you know and advise you to find someone else. But if you insist, I will still write you a letter.
+    \item You need to \textbf{waive your right} to view the letter. It is a confidential evaluation, and I will not write one if you insist on seeing what I write.
+    \item You should provide me your CV and, if you'd like, your SOP, so I can determine whether I could complement some of the things you've said.
+    \begin{itemize}
+        \item Feel free to provide me with any other information that you think is relevant, e.g., your grades, projects, research experience, awards, etc. I might not use them if I don't think they are relevant, but they might help if I miss something.
+    \end{itemize}
+\end{itemize}
+
+\section{Writing}
+
+\begin{itemize}
+    \item I \textbf{will not ask you to draft a letter} for me. My reputation is on the line, and I do not want a student (or AI) writing a letter on my behalf.
+    \item I \textbf{do not write negative letters}, i.e., I don't say bad things about you (even if you're bad). However, if I don't know you well then a neutral, short, or generic letter will not help your case given the competitiveness.
+    \item It takes me about \textbf{an hour} for a strong letter for someone I know well, and about 10 minutes for a letter for someone I don't know well.
+    \item In all letters, at the end I will include a short paragraph about \textbf{an area you need to improve}, regardless of whether you're super strong or weak. But I will phrase it in such a way that the graduate study environment or a good advisor can help you overcome it. It makes the letter more complete and not just full of praise.
+    \item I \textbf{do not customize} the letter for specific schools.
+    \begin{itemize}
+        \item You customize your SOP to explain why you want to apply to school \texttt{X} and work with professor \texttt{Y}. I do not need to explain why you want to go to school \texttt{X} or why you would be a good fit for professor \texttt{Y}. Note that if I know you and \texttt{Y} very well, then I might send a letter directly to \texttt{Y} to mention you.
+    \end{itemize}
+    \item My letter will have the university logo and my (digital) signature.
+    \begin{itemize}
+        \item However, I should note that when I read a LoR, I do not pay attention to whether it has a logo or signature.
+    \end{itemize}
+\end{itemize}
+
+\section{Sending}
+
+\begin{itemize}
+    \item After you put my email into the application system, it will send me a request email with a unique URL to go to. It will also give me some deadline that is \emph{likely} not the same as yours---usually later.
+    \begin{itemize}
+        \item In some cases the systems don't even give me a deadline (various LoR request examples are shown in my \texttt{Demystify} book, e.g., Section 3.2.3: \href{https://github.com/dynaroars/phd-cs-us/}{https://github.com/dynaroars/phd-cs-us/}).
+    \end{itemize}
+    \item I \textbf{do not mind if the student is anxious and sends me multiple reminders}. I will likely not respond to them. But I am not bothered by reminders. Over-communication is better than under.
+    \item Most systems simply ask me to upload the letter---though a few have short questions like comparing the applicant to undergrads or grad students. As an adcom reviewer, I don't really pay attention to these comparisons---only the letter matters.
+    \item I usually send my letter (in PDF) in \textbf{batch mode}, e.g., I just sent out 10+ letters all at once and cleared my inbox of these requests.
+    \begin{itemize}
+        \item For each request, it took me less than 30 seconds to upload the PDF and hit \texttt{submit}. So do not worry that it is time-consuming or a burden; it's not.
+    \end{itemize}
+    \item After I send my batch, I'll let you know I just sent everything and ask if I missed any.
+    \begin{itemize}
+        \item I would appreciate if you share an online spreadsheet showing what schools you have asked me to write letters for so I know what to expect (and if I miss something).
+    \end{itemize}
+\end{itemize}
+
+\section{Updating}
+
+\begin{itemize}
+    \item Let me know your progress and especially your outcomes, e.g., interviews, offers, and where you eventually go to. I'd love to hear these updates from you.  
+    \item This is a common courtesy. Though I probably won't remember or expect you to do this.  However, if you do this and then years later reach out for another letter, I might not be able to help you.    
+\end{itemize}
+\chapter{Templates}
+
+
+%\bibliographystyle{abbrv}
+%\bibliography{demystify.bib}
+
+\end{document}
+
+
+
+
+
+# Writing Papers
+## LaTeX Writing 
+- Use `~\cite{..}` and `~\ref{...}`: this ensures that the reference and figure numbers are not separated by a line break.
+- Use `\autoref` for figures, tables, sections, equations, etc.  This will automatically add the correct prefix (e.g., "Fig.", "Table", "Section", "Eq.") to the reference. E.g., `In~\autoref{fig:ex}, ...` gives `In Fig. 1, ...`
+
+
+
+
+
+
+
+
+# Managing Git repo and File structures
+
+### Seperate Github Repo for Each Project 
+  
+  - Name the repo `paper_projectname`, e.g., `paper_gentree` where `gentree` is the name of the work.
+  - I do not put conference name as part of the repo name because it might end up not being in that conference. Instead I use `filename` and (optionally)`git tag` ([shown below](#after-submission)) to identify submission to conference.
+
+### File structures
+
+1 directory per paper (which is a clone of a Github repo), e.g., `paper_gentree`
+ - Within the directory, I use very few files (`paper.tex`) and no subdirectories (or at most one for figures).
+    - `paper.tex`: I use a **single** `TeX` file for the entire paper.
+      > Others might prefer using multiple files / directories (e.g., `intro.tex`, `eval.txt`, `sections/related.txt`). But I find it easier to just use a single file because I can easily search and replace for things and I don't have to switch between files.
+    -  Even when sharing or collaborating with others, in which conflict edits can arise, a single file still works well because `Git` is pretty good at resolving conflict issues.  I have been using this approach for the last 10+ years and rarely have unresolved conflicts. Note that I do have conflicts with this approach, but they also happen with multiple files.
+    - `paper.bib`: I use a single `bib` file for bibs. My collaborators sometimes put in their own bib files.
+    - `arch.(pdf|png)` (optional): a diagram describing the architecture of the framework or tool
+
+## After submission
+
+After submitting a paper, I save a copy of the submitted pdf file and create a tag for the latest commit to keep a history of that submission.
+1. Save the submitted pdf file as `VenueYearX.pdf`, where `X` is submit for the original submission version, `final` for final (camera-ready) version and `rI` for the `ith` revision for additional revisions between the original submission and final (e.g., for jounal).
+
+    ````
+    git add icse2021submit.pdf  
+    ````
+
+2. Then create an annotated tag for the commit
+    ````
+    git tag -a icse2021submit -m "ICSE 2021 original submission" commit_hashid (optional)
+    git push origin icse2021submit
+    git show icse2020submit
+    ````
+
+### After rebuttal
+
+After submitting a rebuttal, save a copy of the reviews and rebuttal as a plain `text` file
+
+````
+git add pldi2023-reviews.txt
+git commit -am "reviews and rebuttal"
+````
+
+### Miscs
+- Prefer high-level description than technical one
+  - People will not be interested in reading the rest if they can't understand (or get excited about) Intro
+  - Start technical sections with something high level, e.g., an overview picture or algorithm.  Don't go directly into formulae and theorems.  
+  - Before (or after) presenting some technical things (e.g., a theorem), explain why it is needed or useful.
+- Think of a presentation as an introduction to a paper (i.e., after seeing the slides, people will want to read the paper); and think of the paper as an introduction to the work/code (i.e.., after reading the paper, people will want to use your work/code).
+
+
+
+----
+
+
+# Lab Manual
+
+
+
+
+
+## Publications
+
+### Authorship
+ 
+
+## Rebuttal
+- Start with a **thank you note** to the reviewers for their time and feedback. I insist on this because reviewing is a thankless job and reviewers often put in lots of time and effort to provide feedback.  Even if the reviews are harsh and you disagree, do it anyway.
+
+## Data Availability
+- We will *always* make the data available. So make sure prototypes, tools, results, etc are avail on Github.
+- Github repo:
+    - README.md: include a description of the project, how to install and use the tool.
+    - For tools submitted to conferences, include scripts to generate the data and run the experiments.
+
+
+
+
+
