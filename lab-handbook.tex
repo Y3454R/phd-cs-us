@@ -1,4 +1,5 @@
-\documentclass[oneside,11pt,dvipsnames]{book}
+\PassOptionsToPackage{dvipsnames}{xcolor}
+\documentclass[oneside,11pt]{book}
 \usepackage{pagecolor}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -10,13 +11,14 @@
 
 % \setsecnumdepth{subsection}
 % \setcounter{tocdepth}{3}
-\usepackage{fontawesome6}
+\usepackage{fontawesome5}
 \usepackage{censor}
 \usepackage{enumitem}
 \usepackage{epigraph}
 \newcommand{\myepigraphsimpsons}[1]{
   \epigraph{\vspace{-0.2in} \emph{#1}}{\textsc{The Simpsons}}
 }
+
 
 \usepackage{cite}
 \usepackage{caption}
@@ -32,13 +34,13 @@
 \usepackage{tikz}
 \usetikzlibrary{positioning,calc,arrows.meta,shapes.geometric}
 
-\usepackage[dvipsnames]{xcolor}
+%\usepackage[dvipsnames]{xcolor}
 %\usepackage{anyfontsize}
 %\usepackage{sectsty}
-\usepackage[acronym]{glossaries}
-\setacronymstyle{long-short-desc}
-\makeglossaries{}
-\usepackage[makeroom]{cancel}
+%\usepackage[acronym]{glossaries}
+%\setacronymstyle{long-short-desc}
+%\makeglossaries{}
+%\usepackage[makeroom]{cancel}
 
 % boxes
 \newtcolorbox{marker}[1][]{enhanced,
