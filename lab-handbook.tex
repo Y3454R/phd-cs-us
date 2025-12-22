@@ -567,21 +567,487 @@ git commit -am "reviews and rebuttal"
 
 
 
+# Building a machine for Neural Network Verification
 
-    Dear colleagues, 
+We have just built a new machine **"PizzaBox"** for our research group.  Linhan and Hai built it on Oct 31st (Halloween) and it is up running since Nov 1.  The machine will be mainly used for our SE/PL research. In particular, we will use it for **neural network verification**, which is a bit different than an ML machine that focuses on training and therefore requires different hardware components and setup.
 
-As this is the grading period, here is the usual reminder about the CS 998/999 grades. 
+This machine is both cheaper than a machine with similar specs from Dell or Lenovo. It also runs a lot faster than computer servers available at GMU that we have access to.  We believe such customized computers are best for our purpose and hope that this post will be useful for others who are interested in building a similar machine.
 
-If you have PhD students taking CS 998 (Dissertation Proposal) or CS 999 (Dissertation), first, don't forget to submit the grades by December 18, and second, make sure to read the guidelines below about the valid grades for CS 998/999.
+## The Specs and Cost 
 
-For CS 998 (Dissertation Proposal) or CS 999 (Dissertation), you should submit IP (In Progress) on PatriotWeb at the end of semester, and not S (Satisfactory).  All those IP grades are converted to S (Satisfactory)  at the end of semester when the students advance to candidacy (for CS 998), or when they graduate (for CS 999). 
+| Hardware | Details     | Cost | Notes |
+|----------|-------------|------|-------|
+| Motherboard| [ASUS Pro WS WRX80E-SAGE SE WiFi II AMD](https://www.amazon.com/gp/product/B0BZT9NF57/ref=ppx_yo_dt_b_asin_title_o05_s03?ie=UTF8&psc=1) | $1,070.52 | | 
+| CPU      | AMD Ryzen™ Threadripper™ PRO 5975WX, 32-core, 64-Thread|  $2,749.98 |  from Microcenter
+| GPU      | [GIGABYTE GeForce Nvidia 4090 RTX 24 GB VRAM](https://www.amazon.com/gp/product/B0BGP8FGNZ/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&th=1) |$1,699.99 | |
+| RAM     | [Corsair Vengeance LPX 128GB](https://www.amazon.com/gp/product/B085WQXKM2/ref=ppx_yo_dt_b_asin_title_o05_s02?ie=UTF8&th=1) |$259.99 |
+| HD  | [Western Digital BLACK 2TB SN850X NVMe](https://www.amazon.com/gp/product/B0B7CMZ3QH/ref=ppx_yo_dt_b_asin_title_o07_s00?ie=UTF8&th=1) |$119.99 | 
+| PSU | [Corsair RM1000E](https://www.amazon.com/gp/product/B0BYQHWJXC/ref=ppx_yo_dt_b_asin_title_o05_s00?ie=UTF8&psc=1)|$179.99 | 
+| Case | [CORSAIR 7000D AIRFLOW Full-Tower--WHITE](https://www.amazon.com/gp/product/B09444VWX2/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&th=1) | $244.99 | 
+| Fan (CPU) | [Cooler Master](https://www.amazon.com/gp/product/B07H25DZ3M/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&psc=1) | 119.00 | 
+| Fan (Case) | 4 x Noctua 140mm  | $23.95 | | 
+|    |         |**$6,468.4**   |    |
 
-The only exception to this is when you know that your student is advancing to candidacy or graduating at the end of this semester. If that is the case, you can submit S (for CS 998 or CS 999). 
 
-Unfortunately, failures to comply with this rule trigger several problems at the registrar level every semester and cause delay for advancement or graduation paperwork processing.   So, please keep the rules above in mind when submitting grades for CS 998 or 999 for your PhD students. 
+The CPU and GPU are the two main components we need for our DNN verification. The other components are flexible.  For CPU, we go with the AMD Threadripper 32 cores (64 threads).  This is the 2nd, not top, of the line because the Threadripper 64 cores costs quite a bit and would require additional paperwork to purchase.  For GPU, we go with the current top of the line for gaming, the NVIDIA RTX 4090.  
 
-Also,  the university has recently updated the catalog language to enable the faculty who are advising students who are taking 998/999 to submit NC (No credits) if the student's progress during the semester towards the proposal or dissertation is truly unsatisfactory, instead of IP (In progress).  This could happen, for example, when your PhD student has not contacted you during the semester without any excuse or made no progress at all.  The NC grade has impact only for the current semester, and it implies that the student will not receive credits for the current semester's 998/999 when they graduate. After receiving NC, the student can still register for 998/999 next semester and receive IP for future sessions (until they advance or graduate), if they perform satisfactorily. 
 
-While this is a new option, it goes without saying that the NC grade for 998/999 should be used as the last resort and in cases where the student did not make any tangible progress and without any excuse, because they will not receive credits for the current 998/999 session when they graduate. I would suggest being in touch with your student and confirm that they have no legitimate excuse, before submitting the NC grade. In all other cases, IP should be submitted. 
+## Timeline
+- 9/11: order components
+- 10/31: complete the build (1 day)
 
-Hakan 
+## Building It
+> *Before you start*
+> - make sure to discharge yourself before touching the parts.
+
+
+- **Open the boxes!**
+- **Install SSD, CPU, RAM:**
+  - _It's often a good idea to install smaller parts onto the motherboard first._ Working in the chassis can be more challenging due to limited space.
+    - **CPU:**
+      - Our CPU (59775wx) uses an sWRX8 socket. The installation is a bit different from the other consumer CPUs we've seen, so it took us a while to read the manual and figure out how.
+    - **SSD:**
+      - Very typical NVMe SSD installation. We removed a cover from the motherboard to expose the M.2 slot, and installed the SSD in the M.2_1 slot (M.2_1 is usually directly connected to the CPU, which gives better performance).
+    - **Install RAM:**
+      - Nothing special about the RAM installation, either. The CPU & MB together have 8 RAM slots, each with a dedicated channel, so we used every other slot for better thermal performance. On some MBs, multiple slots might share a channel; when this happens, the MB's manual will tell you what to do.
+- **Install MB:**
+  - Now we can put the MB into the chassis. The chassis comes with extra standoffs and panels for ATX MBs, so we had to remove them before proceeding (because we're using an Extended-ATX, which is larger). Fit the I/O panel into the slot on the back of the chassis, and align the standoffs to the holes on the MB. Lastly, tighten the screws in an alternating pattern (so the force is evenly distributed).
+- **Install PSU:**
+  - Our MB was interesting; it has one MB power connector, two CPU power connectors, and one extra PCIe power connector (which is not common). The GPU uses one of the 12VHPWR connectors. We attached the cables to the PSU first, because it will be much harder to add power connectors once the PSU is in the chassis.
+- **Install fans/airflow configuration:**
+  - We used the conventional airflow configuration, front-to-back/top. The 140 mm fans by Noctua are really powerful yet quiet. When shopping for fans, we aimed for airflow, not air pressure, because we're not using an AIO cooler (AIO needs higher pressure to push the air through the radiators). Once we installed the fans, we routed the wires to the back of the MB, preparing for cable management.
+- **Install CPU cooler:**
+  - Our cooler comes with thermal paste pre-applied, so all we did was put it on the CPU and tighten the screws in an alternating pattern. This fancy cooler has a 4-pin fan connector and another SATA power connector for RGB (which none of us care about).
+- **Install GPU:**
+  - To install the GPU, we had to take off the PCIe slot covers. Our GPU uses two slots, so we took off two of the covers, and then we just snapped the GPU into the 1st PCIe slot. Because the 4090 is so heavy, we had to order an additional GPU supporting bracket, or the MB would be at risk.
+- **Connecting cables/cable management:**
+  - The last step is to connect the cables. It's simple but kind of tedious. The only potentially challenging part is connecting the system panel connectors (power button, restart button, etc.). Cable management is optional but recommended; it requires patience and some skill. 
+- **Test build/install OS:**
+  - After connecting everything, we pluged in the power cord and gave the system a test drive. The hardware works as expected and everything was detected by the MB. So, we continued to install the OS. However, this didn't work as well as we expected. The system boots into the installation media with no issue, but as soon as we start the installation, the keyboard stops working. After spending a couple of hours looking for a solution online, we found out that disabling SR-IOV does the trick. Strange. [link](https://www.overclock.net/threads/asus-pro-ws-wrx80e-sage-se-wifi-installing-linux.1804562/). 
+
+
+## Pros and Cons
+- **Pros**
+    - Fun
+    - Easier to upgrade (comparing PCs that uses OEM parts)
+    - Full control over your machine
+- **Cons**
+    - unexpected problems
+    - time
+    - risk of braking parts
+
+
+## Benchmarks
+
+
+## Thoughts
+
+
+
+---
+
+
+#+TITLE: Writing
+#+date: <2021-02-01 03:39>
+#+description: how I write LaTeX stuff
+#+filetags: computer setup blog writing
+#+HTML_HEAD: <link rel="stylesheet" href="https://dynaroars.github.io/files/org.css">
+
+Managing my $\LaTeX$ writings. 
+
+* Writing Technical Papers
+  :PROPERTIES:
+  :CUSTOM_ID: writing-papers
+  :END:
+
+
+** Order
+
+   I often write papers in the following order. For a concrete example, see the [[https://dynaroars.github.io/pubs/ishimwe2021dynaplex.pdf][Dynaplex paper]] published at OOPSLA'21.
+   
+   1. =Overview= section (Section 2).
+      - start with this section, which should contain an =illustrative example=.
+        - after reading this illustrative example (and perhaps the =Introduction=, the readers should have a good understanding of the approach.
+        - /The goal is to have the readers (or reviewers) make up their mind whether they like or do not like the proposed work after reading this part/.
+      - A good place to add some overview =figure= highlighting the main components of the technique or tool.
+      - Can also summarize background or important concepts in this section
+      - Typically contains:
+        - An architecture or overview figure of the approach (e.g., Fig 1 in the Dynaplex paper)
+        - A motivation or illustration example
+          - Sec 2.1: Show how Dynaplex works at high level on an input program, what results does it produce.
+        - Main definitions and background (optional)
+          - Sec 2.2: general background on dynamic inference and specific features/properties of Dynaplex
+   
+   - =Experimental= section (Section 4).
+     1. Some implementation details     
+     1. Benchmark programs: descript benchmarks used
+     1. Experiment Setup
+        - Machine specs
+        - How experiments were run (multiple times and report the mean, etc)
+     1. Research Questions
+       - E.g., How accurate is the technique? How efficient ?  Comparing to existing approaches
+       - Experimental results are designed to answer these questions
+       
+   - =Algorithm/Techniques= (Section 3)
+     
+   - =Related Work= (Section 5)
+     - Break into multiple subsections if necessary
+     - After each subsection that talks about related work, have a new paragraph and talk about why my work is different/related to other work.
+       
+   - =Conclusion= (Section 6).
+     - This should be the /conclusion/ not the /summary/.
+     - Future work can also go here
+       
+   - =Introduction= (Section 1).
+     - write this last, because by the time I write the Intro, I would already have all needed info (e.g., so I can summarize the diff with state of the art, technical contributions, and results.
+     - Typically contains several main things:
+       - What is the problem?  Why is it important (i.e., if we can solve it, then what do we accomplishes)? 
+       - Existing work:  basically answering why it is challenging (i.e., why existing work is not sufficient)?
+       - The proposed approach of this paper: how does it address the limitations of existing work listed above?  What other benefits does it have?
+       - Results: briefly summarize the results.
+   
+   
+
+** Paper naming convention
+   :PROPERTIES:
+   :CUSTOM_ID: paper-naming-convention
+   :END:
+
+- I use Google Scholar's convention  =lastnameoffirstauthor~publishedyear~firsttitleword=, e.g., =nguyen2021gentree.pdf= for the paper  =KimHao Nguyen and ThanhVu Nguyen. GenTree: Using Decision Trees to Learn Interactions for Configurable Software=
+- I also use this convention for =bibtex= entry and reference, e.g.,
+  =GenTree paper~\cite{nguyen2021gentree}=
+- If there's a conflict, then append the name with a number, e.g.,
+  =nguyen2021gentree1=, =nguyen2021gentree2=
+
+
+  
+** Citation
+   :PROPERTIES:
+   :CUSTOM_ID: citation
+   :END:
+   
+- As with [[#paper-naming-convention][paper naming]], for citation I follow Google Scholar's convention and thus often use Google Scholar to search for  =bibtex= entry of a paper I want to cite.  For example, to cite the GenTree example paper, I search for it on Google Scholar and get the =bibtex= content.
+  #+begin_src bibtex
+    @inproceedings{nguyen2021gentree,
+      title={GenTree: Using decision trees to learn interactions for configurable software},
+      author={Nguyen, KimHao and Nguyen, ThanhVu},
+      booktitle={2021 IEEE/ACM 43rd International Conference on Software Engineering (ICSE)},
+      pages={1598--1609},
+      year={2021},
+      organization={IEEE}
+    }
+  #+end_src
+Then I copy/paste this =bibtex= content to my the bib file of my project, and cite the paper with =\cite{nguyen2021gentree}=.
+  
+** Do and Don't
+   - Do
+     - Split into multiple paragraphs.  Long paragraphs are simply hard to read!
+
+   - Do not
+
+     - Delay talking about the main work until the 2nd page of the introduction.  It's not good if people read a whole page and still don't know what you're proposing!
+       
+     - Use unnecessary roadmaps.  Eg.., at the end of an intro, many papers have something like this
+       #+begin_src txt
+       This paper is organized as follows. In Section 2, we describe the background. In Section 3, we establish theorem X. In Section 4, we describe algorithm Y and implementation Z. In Section 5, we present experimental results from our implementation and compare to the state of the art.  In Section 6, we review related work and conclude in Section 7.
+       #+end_src
+       - This might make sense for a long Ph.D. thesis or book (in fact, I wouldn't use this roadmap even for these), but doesn't make much sense for a 10 page paper where one easily guess all these from the section names?
+
+     - Similarly, we can elimiate roadmap at the beginning of a section
+        #+begin_src txt
+        In this section, we first describe X, then present Y.  We also do Z.
+        #+end_src
+        - This might be OK, especially for a long section.  But in general I prefer just start talking about the main stuff in the section.
+
+          
+   
+** Trimming / Space saving
+   - Rewrite and shorten sentences!! 
+     
+
+** Miscs
+- One setence per line
+  
+  #+begin_example
+      This is a line.
+      This is another, longer line.
+  #+end_example
+
+- If possible, put figures, tables, code, etc on top, e.g., using
+  =\begin{figure}[t]=
+- Rewrite to avoid lines with single or lone words
+
+  #+begin_example
+      It just looks
+      bad.
+  #+end_example
+
+- Comment:  so that my coauthors and I can add comments to paper, e.g., =\tvn{This is my comment}= 
+  #+begin_src latex
+    \newcommand{\mycomment}[3][\color{red}]{{#1{[{#2}: {#3}]}}}
+    \newcommand{\tvn}[1]{\mycomment[\color{red}]{TVN}{#1}}
+   #+end_src
+
+
+* Managing Git repo and File structures
+   :PROPERTIES:
+   :CUSTOM_ID: git-repo
+   :END:
+
+- 1 Git repo for each paper
+  - Name the repo =paper_name=, e.g., =paper_gentree= where =gentree= is the name of the work. 
+  - I do not put conference name as part of the repo name because it might end up not being in that conference. Instead I use git =tag= ([[#after-submission][shown below]]) to identify submission to conference.
+
+** Paper structure
+    :PROPERTIES:
+    :CUSTOM_ID: paper-structure
+    :END:
+
+- 1 directory per paper (which is a clone of a Github repo as described [[#git-repo][above]]), e.g., =paper_gentree/=
+- Within the directory, I use very few files:
+  - =paper.tex=: I use a single $\TeX$ file for the entire paper.
+    - Others like to split into multiple files (e.g., =intro.tex=, =eval.txt=, =related.txt=, etc). But I find it easier for me to just use 1 file. Even when sharing or collaborating with others, in which conflict edits can arise, a single file still works well as git is pretty good at resolving conflict issues.
+  - =paper.bib=: I use a single =bib= file for bibs. My collaborators sometimes put in their own =bib= files. 
+  - =arch.(pdf|png)= (optional): a diagram describing the architecture of the framework or tool
+
+** After submission
+   :PROPERTIES:
+   :CUSTOM_ID: after-submission
+   :END:
+
+After submitting a paper, I save a copy of the submitted pdf file and create a tag for the latest commit to keep a history of that submission.
+   
+1. Save the submitted pdf file as =VenueYearX.pdf=, where ~X~ is ~submit~ for the original submission version, ~final~ for final (camera-ready) version, and ~rI~ for the $i^{th}$ revision for additional revision submissions between the original submission and final (e.g., for jounal).
+   #+begin_example
+     git add icse2021submit.pdf  
+   #+end_example
+1. Create an annotated =tag= for the commit
+  #+begin_example bash
+    git tag -a icse2021submit -m "ICSE 2021 original submission" commit_hashid (optional)
+    git push origin icse2021submit
+    git show icse2020submit
+  #+end_example
+
+** After rebuttal
+After submitting a rebuttal, save a copy of the reviews and rebuttal as a plain ~text~ file
+   #+begin_example
+     git add pldi2023-reviews.txt
+     git commit -am "reviews and rebuttal"
+   #+end_example
+
+
+* Quick Fixes
+   1. Avoid passive tense
+   - Know the difference between /Such as/  and /like/
+   - Avoid long paragraphs
+   - Spell out numbers less than 10 (/three/ steps instead of /3/ steps).
+   - Use Eq. X instead of Equation X
+   - Don't put /etc/ in e.g., or such as
+   - In order to do this -> To do this
+   - New paragraph for new thought/idea. Sentences in the same paragraph should be connected.
+
+* Presentation/Talk
+  :PROPERTIES:
+  :CUSTOM_ID: presentation
+  :END:
+
+- Slides
+
+  - Put numbers on every slide: so that people can refer to slide X
+  - For an N-minute presentation: create about N slides
+  - Don't put too much words, also no need to put full sentences
+
+
+
+
+
+   
+* Useful Links
+  - http://www.cs.cmu.edu/%7Ejrs/sins.html
+
+
+
+  ----
+
+
+#+TITLE: GMU CS FAQ
+#+date: <2022-09-05 Mon>
+#+description: Things about GMU CS
+#+filetags: gmu cs bsd guide 
+
+#+HTML_HEAD: <link rel="stylesheet" href="https://dynaroars.github.io/files/org.css">
+
+
+
+* Funding
+** GRA Offerring
+*** For grant fund GRAs (e.g., from NSF)
+   - Contact Terri and her team to make such offers and to generate contracts
+*** For CEC fund GRAs (e.g., from your startup GRAs)
+   - Contact Jennifer Lee and her team to make such offer and to generate contracts
+
+** Unrestricted Gift / Industrial Awards
+This will go through *[[https://gmuf.org/][GMU Foundation (GMUF)]]*.  GMU will create an account for you for your unrestricted gift. You can use the same account for multiple awards (e.g., convenient because you don't have to remember too many account/org #'s)
+** Contact
+   - *Beth Cantrell* ecantrel@gmuf.org (Vice President and Chief Financial Officer of GMUF)
+   - *Kira Woitek* kwoitek@gmu.edu (Director of Development, CEC)
+
+  Beth is the financial point of contact at GMUF.  Kira's office helps with creating an account for the gift.
+
+  
+*** GMU Charge
+GMUF assesses a 6% fee on any current-use (spendable) gifts at the time of the gift.  So if you have a 30K gift, then GMU takes $1800. The fee supports future Advancement initiatives as well as the Foundation's infrastructure necessary to administer funds.
+
+* Purchase
+* Teaching
+* Travel
+** What can and cannot be reimbursed for travelling
+*** Can be purchased through P-card
+    - Airline tickets
+    - Conference registration.
+*** Can be reimbursed (purchase individually and get reimbursed)
+  - Everything else involved in travel must be purchased by the individual and reimbursed.  This includes things like the hotel, Uber, taxi's, food, car rentals, subways,  parking, tolls and more.
+*** Cannot be reimbursed
+- *Insurance associated with rental cars in the United States* (see car rental information below)
+- Damage to personal vehicles
+- Expenses related to personal negligence of the traveler, such as fines
+- Services to gain entry to locked vehicles
+- Towing charges
+- Luxury vehicle rentals
+- Excessive parking and gasoline charges
+- University parking fees
+- Local commuting expenses
+- Travel between lodging and places where meals may be taken
+
+** Per diem
+- https://fiscal.gmu.edu/travel/learn-about-meals-per-diem-rates/
+
+** Reimbursement
+** Max meal
+** Car Rental
+- GMU/Commonwealth of VA has its own insurance  for rental cars in the US (i.e., you DO NOT need to get them — if you do, you are not getting reimbursed).  https://risk.gmu.edu/insurance/vehicle/
+  - For International, you can get reimbursed. 
+  - However, to use this insurance, you need to submit this MVR form  and schedule to take a training course (Zoom,  https://risk.gmu.edu/training/driver-training/). You only do this once.
+  - GMU prefers Enterprise for car rentals — but I don’t think they would deny you the insurance if you use a different company.
+* Miscs
+** Creasing a website
+
+
+
+  
+
+
+
+
+# Research
+> This is about publishing papers.
+
+## Advise
+- **Short/workshop papers can be very useful**
+- 
+
+# Funding
+> This is about obtaining grants to support students and summer salary for faculty.
+
+
+
+
+## Advise
+
+- **Volunteer to serve in NSF Panels**
+  - Contact program managers in your area and ask to volunteer to serve on their NSF Panels. In general NSF PMs are very nice and they'd love to support junior faculty.
+  
+- **Done with draft early to get feedback**
+
+- **Have preliminary results**
+
+- **Have supporting letters**: a supporting letter can help.  Just like having preliminary results, these letters show that you will have collaborators and expoert that can help with the proposed work.  Support letters can be from anyone with the right background that fit with the proposed work (e.g., a high school teacher for hs outreach activity, a collaborator from the industry).
+
+# Mentoring
+> This is about working with and mentoring students.
+
+# Teaching
+> This is about teaching graduate and undergraduate courses
+
+# Service
+> This is about serving in your professional communities (e.g., serving in program committees of conferences) and department/universities (e.g., serving in the Ph.D. admission committee)
+
+
+
+
+
+# Research
+> This is about publishing papers.
+
+## Advise
+- **Short/workshop papers can be very useful**
+- 
+
+# Funding
+> This is about obtaining grants to support students and summer salary for faculty.
+
+## Types of Funding
+### Grants
+  - Freedom to pursue basic research
+
+#### Where to get them?  
+  - NSF
+    - Has REU supplement (e.g., 16K for each NSF grant)
+    - Typically has a 1 year no-cost extension
+  - DARPA
+  - Army/Navy/Airforce
+
+### Contract
+  - Usually have some sort of "deliverables" or report requirements
+  - Doesn't give lots of freedom as other grants.
+
+### Internal Funding
+  - Start up package
+    - when you join the faculty at a school (either startiong completely new assistant profs. or moving from another place)
+    - Typically has GRA and Summer supports. Also funding for various other things such as equipments, conference travels. 
+    - Expire after 3 years or so
+    
+  - University funding, e.g., "Seed" funding
+    - Usually small, 20K or below, 1 or 2 years.
+    - Might not support faculty summer salary
+    - The goal is to help you start some project to get external funding later
+    
+  - Statewide Initiative / Research Center
+    - Similar to University funding but usually give more, e.g., 50 K or so
+    - Goal is to initiate a project or collaboration (e.g., with faculty at another school in the state) to prepare for larger external proposal
+  
+### Industrial/Foundation Funding  
+  - Unrestricted gifts: The *best* kind of funding
+    - No indirect cost: university cannot charge indirect cost to these funds
+    - No expiration: you can just leave them there and use in case of emergency only
+    - Can be used for much broader range of things: e.g., paying for meals for your research group
+    - Can be highly competitive:  you're competing against everyone
+
+#### Where to get them?
+    - Industrial: Amazon, Google, Facebook, Microsoft, etc
+    - Foundation: Sloan, 
+
+## Advise
+
+- **Volunteer to serve in NSF Panels**
+  - Contact program managers in your area and ask to volunteer to serve on their NSF Panels. In general NSF PMs are very nice and they'd love to support junior faculty.
+  
+- **Done with draft early to get feedback**
+
+- **Have preliminary results**
+
+- **Have supporting letters**
+
+
+# Mentoring
+> This is about working with and mentoring students.
+
+# Teaching
+> This is about teaching graduate and undergraduate courses
+
+# Service
+> This is about serving in your professional communities (e.g., serving in program committees of conferences) and department/universities (e.g., serving in the Ph.D. admission committee)
+
+
+# Links
+- https://vijay03.github.io/asstprofbook/
