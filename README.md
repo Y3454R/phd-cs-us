@@ -1,4 +1,4 @@
-#  PhD Demystify: A book for Prospective PhD Students in CS
+#  PhD Demystify: A book for Prospective PhD Students in Computer Science
 
 <p align="center">
   <a href="https://roars.dev/phd-cs-us/demystify.pdf" title="CS PhD Demystify book">
