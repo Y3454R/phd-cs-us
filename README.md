@@ -1,7 +1,4 @@
-# Applying to Computer Science PhD programs in the US
-
-
-##  <a name='PhDDemystify:AGuidelineforProspectivePhDStudentsinCS'></a>PhD Demystify: A book for Prospective PhD Students in CS
+#  PhD Demystify: A book for Prospective PhD Students in CS
 
 <p align="center">
   <a href="https://roars.dev/phd-cs-us/demystify.pdf" title="CS PhD Demystify book">
