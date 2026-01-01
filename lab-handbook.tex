@@ -229,18 +229,280 @@
 \chapter{Meeting}
 
 \begin{itemize}
-    \item Meeting is mandatory for all lab members and is in-person.
-    \item We meet every Thursday from 2pm to 3pm.  Typically, our meeting directly follows the Software Engineering seminar (Thurs from 1pm to 2pm).
+    \item Meeting is \emph{mandatory} for all lab members and is in-person.
+    \item We meet \emph{every Thursday from 2pm to 3pm}.  Typically, our meeting directly follows the Software Engineering seminar (Thurs from 1pm to 2pm).
     \item We meet in the main CS conference room (Room \#4201 Nguyen Engineering Building).
     \item If you need to attend remotely, you can join via Zoom but you need to inform me ahead of time.
 \end{itemize}
 \part{Writing}
+
+Oral and written communication is critical to research and science. You can create the most powerful systems with ground breaking results, but none of this matters if you cannot communicate or \emph{``sell''} these to others. 
+
 \chapter{Papers}
+
+% Writing papers
+% 
+
+
+
+% Further, I would argue that for technical HCI research particularly—where we build and study novel interactive systems—writing and scholarship is one of the primary differentiators between raw engineering/innovation, which you might do at a startup or tech company, and academic research. If you simply want to focus on building and engineering but not on science and scholarship then one must carefully reflect on whether a PhD is an appropriate investment and career path.
+% The problem: writing is hard. It requires practice, iteration, and time. And academic writing is different, unlike any prior writing you have likely experienced. Even those first-year PhD students who are gifted writers or who have explicitly focused on developing their writing ability struggle with the transition to academic writing. I’ve written over 120+ scientific publications but I still consistently work on, study, and try to improve my academic writing.
+% The opportunity: writing can be a huge differentiator in your career. It can improve your efficiency by reducing rejection rates and amplify your impact by making the results of your research interesting and understandable. You need to study great academic writing (and writers) and actively work on improving your skills. It will take time to hone your academic voice. Like any craft, it takes serious investment and practice. But it is worth it.
+% Writing also has important intellectual benefits: it forces you to think deeply about your work, carefully articulate and contextualize differences with prior research, find gaps in your thinking or study design, and even has generative effects—you will think of new research ideas as you write (yay!).
+
+% Figure. A metaphorical illustration of the generative effects of writing: writing forces your brain into thinking deeply
+%  about a subject and unlocks new thoughts and possibilities. Source: David Perell. 
+
+\section{Where do we publish?}
+
+We aim to submit our work to the highest quality, most prestigious---``tier 1''venues but also the best fit for a specific project. 
+Such top venues (generally) provides top peer review, a strong community of researchers, and if our work is accepted, provides visibility, credibility, and the opportunity for the most impact. 
+
+\textbf{Conferences}
+Typically we aim for conferences considered by CSRankings and other well-known conferences in SE and PL. Recently we also publish in Logics and AI/ML venues.
+
+\begin{itemize}
+\item SE venues: ICSE, FSE, ASE, and ISSTA. 
+\item PL venues: POPL, PLDI, OOPSLA.  We have never published at POPL but it is a good venue for more theoretical work.
+\item Logics venues: CAV and TACAS.
+\item AI/ML venues: NeurIPS, ICML, ICLR, AAAI.
+\end{itemize}
+
+\textbf{Journals}
+Journals are not the main publication venue in most CS fields. However, we sometimes submit extended versions of our conference papers to top SE journals such as TSE and TOSEM.
+
+
+
+\section{How to write research papers}
+% There are three common writing applications for HCI publications: Google Docs, Microsoft Word, and Overleaf (LaTeX)—each have their merits. Overleaf has become the primary scientific authoring tool in our lab but Google Docs also plays a role in offering a lightweight space to collaboratively brainstorm ideas, outline sections, and potentially even drafting early sections; however, it is not an appropriate tool for actually writing submittable papers.
+% Here is a document capturing LaTeX and TAPs tips started by PhD student, Chu Li.   
+% To use Overleaf for an ACM submission, begin with the ACM Overleaf template. See ACM’s Overleaf page and Word webpage. Please make sure you use your cs.uw.edu account as the Allen School pays for a premium Overleaf subscription (and this gives us features like track changes, etc.)
+
+\begin{itemize}
+\item Always use LaTeX for writing papers. Do not use Word or Google Docs.
+\item The paper should \emph{tell a story}. Humans are storytellers and story receivers.
+\item Be concise. Use the fewest words to communicate effectively.  For example, change ``In order to'' to just ``To'': that's 2/3rds cost savings for the same information.
+\end{itemize}
+
+
+% Interaction design is a largely visual discipline. So too then are HCI papers. We need to craft and tell visual stories. Here's a set of exemplary figures curated by the Makeability Lab to help you study and create the best figures for your papers!
+% Scientific writing is rhetoric: your paper is an argument. What is new? What is different? Why do these differences matter? Notably, all of these statements can only be addressed comparatively by citing literature.
+
+% Write rhythmically—draw your reader in with differently punctuated phrasings. But aim for concision.
+% Do not use idioms (“on the other hand”) or cliches (“machine learning is not rocket science”)
+% In prose, you should almost never have two sig figs after the decimal. Save such things for our tables (if even necessary there). Most of the time, two sig figs is overkill.
+
+\section{Roar Lab Writing Style Guide}
+% My professional authorial name is Jon E. Froehlich. I should generally be last author on our papers together unless otherwise discussed.
+% Related work is, in itself, plural. You should not say “Related Works.” Similarly, do not say “prior works” but rather “prior work.”
+% Italicize all Latin abbreviations and words such as e.g., i.e., etc., et al., ad hoc, in situ
+% All section and subsection headers must be followed by a strong topic sentence. No empty section/subsection headers with no prose.
+% Numbers reported in prose should use one-sig fig (e.g., report 5.2 rather than 5.21). Two-sig figs is OK for tables and charts, as relevant.
+% Italicize the first mention of a system. “In this paper, we introduce GazePointAR” in the Intro and first content section of the paper. Also italicize first mention of other systems (e.g., YOLOv8, Microsoft HoloLens 2)
+\subsubsection{Writing Introductions}
+The Introduction is the most important part of any paper. It must both excite your reader and provide a high-level view of your entire paper. Indeed, by the end of the Intro, your reader should want to read more but also have sufficient understanding about the key takeaways that if they stopped, they would ``largely get it.'' 
+
+The intro has 5-6 paragraphs:
+%And remember, your text alone is insufficient (even for the most gifted writers amongst us); your prose should be complemented by an amazing Figure 1 (see our “How to Figures” guide). 
+% So, what are these 5-6 paragraphs?
+% Para 1: Motivation and problem statement. Start with a compelling hook (a quote can work well, but don’t force it—here’s a lovely example from Chheda-Kothary et al.) then clearly begin defining and scoping your problem space.
+% Para 2: Related work (RW) paragraph. What have others done to address said problem? What are some key benefits as well as drawbacks/gaps with past solutions? Frame limitations to help bolster offerings from the approach you provide in Para 3.
+% Para 3: Our solution para. What are we doing to address said problem? What are key differentiating methods/benefits of our approach? As a writing crutch, think about starting this para with “In this paper, we introduce…” or “In this work, we examine…” (later, you might remove the “In this paper” part but good to keep for an initial draft.
+% Para 4: Evaluation/validation para. How did you evaluate your solution? Explain the method, data collected, and analysis techniques. Use appropriate citations (e.g., generally we use well-vetted analysis techniques from the literature rather than pursuing something ad hoc, so cite that!)
+% Para 5: Findings para. What are the key findings and takeaways? How do these findings advance the literature and what is currently known? Note: to make claims about advancements, you will inherently need to cite prior work. 
+% Para 6: Summary of contributions.
+% Now, of course, there are variations to any formula—so, appreciate this as a loose guide. For example, one common variation is to combine Para 1 and Para 2 so that your motivation para also introduces key RW and key limitations therein so that you can introduce your solution in Para2—this results in a five paragraph Intro rather than six. Similarly, you could imagine condensing Para 4 and 5 into one (the approach and the findings together).
+% Moreover, this structure is more befitting of an HCI systems paper that introduces a specific solution to a problem. However, let’s imagine a different type of HCI paper—a formative inquiry or qualitative study paper. The formula (read: required paras) does change but not much:
+% Para 1: Motivation and problem statement. Stays the same
+% Para 2: RW para. Stays the same
+% Para 3: Largely the same but introduce the key topical focus of the study and key research questions. “In this paper, we examine <some phenomenon>. Our research questions are threefold: RQ1: <write>, RQ2: <write>, and RQ3: <write>”
+% Para 4: largely the same but now pivot to writing about how to address those RQs. “To address the above RQs, we conducted a three-part, semi-structured interview with 12 participants. <expand.>”
+% Para 5: Findings para. Stays the same
+% Para 6: Summary of contributions. Stays the same.
+% Regardless, if you nail the above six things, you will have a strong Introduction.
+% Also remember: each paragraph is only 4-6 sentences. Write concisely. This takes discipline and iteration. Your first draft will not be a perfect distillation of your arguments and key points; so, don’t worry about length until later drafts. For the initial drafts, focus on capturing the key arguments and points.
+% Writing Discussions
+% The key argument and differentiation for your paper is largely expressed through the Introduction, the Related Work section, and Discussion. These are the core argumentative sections; they are also all the most challenging to write. 🧠🤯 You must clearly situate and differentiate your work in the literature and emphasize why those differences matter. 
+% The Discussion, in particular, is an opportunity to reflect on primary (and surprising) findings and situate them in the literature (think of phrases like “Our findings reaffirm those by Johnson et al. and Li et al. by…” or “In contrast to Smith et al., we found”). While Discussion sections also vary by paper type (e.g., Systems HCI paper vs. a qualitative study paper), they all generally:
+% Restate and situate key contributions in literature (I often like to start Discussion sections with a summary of key findings situated in literature)
+% Enumerate key limitations
+% Highlight opportunities for future work
+% If you included specific research questions (RQs) in your paper, it’s often useful to organize some Discussion subsections around those (e.g., see Arnavi’s Best Paper from ASSETS’24).
+% Another way to organize your Discussion is around questions (as sub-headers). This is a fun and compelling writing device that helps draw your readers in and helps you (as a writer) organize your thoughts. Note: I don’t think you can do this for all your papers but it’s fun to consider. See:
+% Lee et al., CookAR, UIST’24
+% Hara et al., Tohme, UIST’14
+% Here are some recommended Discussion sections from our lab:
+% Study papers:
+% Li et al., “I never realized sidewalks were a big deal”: A Case Study of a Community-Driven Sidewalk Audit Using Project Sidewalk, CHI’24
+% McDonnell et al., Social, Environmental, and Technical: Factors at Play in the Current Use and Future Design of Small-Group Captioning, CSCW’21 Honorable Mention
+% Saha et al., Urban Accessibility as a Socio-Political Problem: A MultiStakeholder Analysis, CSCW’20
+% Jain et al., Autoethnography of a Hard of Hearing Traveler, ASSETS’19 Honorable Mention
+% Jain et al., Towards Accessible Conversations in a Mobile Context for People who are Deaf and Hard of Hearing, ASSETS’18
+% Mauriello et al., Understanding the Role of Thermography in Energy Auditing:
+% Current Practices and the Potential for Automated Solutions, CHI’15
+% HCI Systems Papers
+% Froehlich et al., StreetViewAI: Making Street View Accessible Using Context-Aware Multimodal AI, UIST’25
+% Lee et al., CookAR: Affordance Augmentations in Wearable AR to Support Kitchen Tool Interactions for People with Low Vision, UIST’24 Best Inclusion Award
+% Saha et al., Project Sidewalk: A Web-based Crowdsourcing Tool for Collecting Sidewalk Accessibility Data at Scale, CHI’19 Best Paper
+% Kang et al., SharedPhys: Live Physiological Sensing, Whole-Body Interaction, and Large-Screen Visualizations to Support Shared Inquiry Experiences, IDC’16
+% Resources on paper writing
+% Writing papers by Professor Eric Gilbert
+% Writing papers guide by Professor Sean Munson
+% How to write better discussions by Professor Daniel Buschek
+% Five tweets of excellent writing tips by Professor Rodrigues
+% How to write clear and concise sentences by Professor Huang
+% Receiving feedback on writing by Dr. Karen Rosenberg, former Director of the Writing & Communication Center at the Bothell Campus
+% TODO: need more on writing process. 
+% Include different types of research contributions. Include different types of papers that can serve as templates
+% Emphasize how iteration and practice is crucial. Give yourself time to write, rewrite x 10, and succeed.
+% Sandy Kaplan and writing services within Allen School
+% Often, junior students approach writing as they would a term paper in ugrad—it is left to the last moment. This approach will not succeed and does injustice to the underlying research. 
+% Join a writing group: https://twitter.com/ThrivePhD/status/1433459109630824448?s=20. Provides structure and social support.
+% Making Figure 1
+% Need info on how to make accessible PDFs, etc.
+\section{Authorship order and inclusion criteria}
+
+\begin{itemize}
+\item The first author is often the lead PhD student on a project, the last author is the PI, and the remaining authors are ordered based on contribution size. 
+\item Establish authorship order early in a project's existence and to communicate expectations with all team members. 
+\item However, this is not always possible and certain authorship inclusions and orderings may remain fluid until paper submission.
+\end{itemize}
+\subsection{Determining authorship}
+% Generally, I lean towards an inclusive authorship heuristic: anyone who has provided clear and concrete contributions to a project from data analysis to system building to paper writing. We need to be honest with ourselves, our team, and have transparent discussions. 
+% Official authorship inclusion guidelines are often less permissive. For example, the ACM’s Criteria for Authorship states: 
+% “Anyone listed as Author on an ACM submission must meet all the following criteria:
+% They have made substantial intellectual contributions to some components of the original work described in the manuscript; and
+% They have participated in drafting and/or revision of the manuscript and
+% They are aware the manuscript has been submitted for publication; and
+% They agree to be held accountable for any issues relating to correctness or integrity of the work”
+% Similarly, the APA’s Publication Practices and Responsible Authorship guide states:
+% “Authorship credit should reflect the individual's contribution to the study. An author is considered anyone involved with initial research design, data collection and analysis, manuscript drafting, or final approval. However, the following do not necessarily qualify for authorship: providing funding or resources, mentorship, or contributing research but not helping with the publication itself. The primary author assumes responsibility for the publication, making sure that the data are accurate, that all deserving authors have been credited, that all authors have given their approval to the final draft; and handles responses to inquiries after the manuscript is published.”
+% CASRAI and the National Information Standards Organization (NISO) has produced a taxonomy of 14 roles—called CRediT—that describe the typical scientific roles in scholarly output, including conceptualization, data curation, analysis, validation, visualization, and writing. We can refer to these contribution types when determining authorship decisions, as necessary.
+
 \chapter{Rebuttal}
 
 \begin{itemize}
 \item Start with a \emph{thank you note} to the reviewers for their time and feedback. Reviewing is a thankless job and reviewers often put in lots of time and effort to provide feedback.  Even if the reviews are harsh and you disagree, do it anyway. It can make them more receptive to your points.
 \end{itemize}
+
+
+% After submitting a paper and receiving reviews, HCI publication venues typically have two different processes for authorial responses (assuming the paper is not outright accepted): (1) revise and resubmit, which has been adopted by CHI and CSCW; (2) or a rebuttal process like at UIST and ASSETS.
+% Writing rebuttals is hard: you are often space limited (to 5k characters) and must convincingly rebut reviewer criticism in hopes of changing minds. Plus, it is an emotional experience to read criticisms of your work, even if constructive. Remember, research is hard; this is a process. Your work is strong and strong work eventually finds a home. You can do this! 🚀
+% To help guide you in writing, please see these resources:
+% Attributes of a Strong Rebuttal and Things to Avoid, Jon E. Froehlich
+% Jeff’s Rebuttal Guide, Jeff Bigham
+% My Rebuttal-Writing Process for HCI Venues, Merrie Ringel Morris
+% Technical Paper Rebuttals Aren’t Just for “Factual Errors”, Aaron Hertzmann
+% For process, the best advice I can give is to:
+% First analyze and synthesize your reviews. My students often use a spreadsheet or Google Doc to, essentially, generate an affinity diagram, which extracts and thematically groups primary criticisms.
+% Second, write a draft rebuttal and iterate, iterate, iterate. Seek feedback from trusted colleagues. Iterate gain.
+% Third and finally, be concrete and concise. See Attributes of a Strong Rebuttal referenced above.
+% Finally, we have a collection of reviews and rebuttals from past papers (shared with permission). Please request access if you’d like to see them. Note: do not share these reviews or rebuttals as they are confidential.
+% You might also benefit from the Writing Reviews section of our handbook.
+% Preparing and giving talks
+% “Tell someone a fact and you reach their minds; give them a story and you touch their souls.”
+% - A Hasidic Proverb
+% When you give a talk, you not only have an opportunity to demonstrate the strength and impact of your research but also your ability to organize and clearly articulate thoughts, to control and confidently adapt to an audience, and to tell a meaningful story. Like writing, giving a good talk takes serious preparation and rehearsal. But it’s worth it. In academia, there is a popular adage “every talk is a job talk.” I have found this to be true.
+% In my group, I have long-emphasized that you can give an amazing, thought-provoking talk without slides but not the other way around—think Martin Luther King Jr.’s I Have a Dream speech, Amanda Gorman’s inauguration poem, or Abraham Lincoln’s Gettysburg Address. None had slides! The slides do not make your talk, you do. 
+% Still, in HCI/d fields, well-designed slides are important, necessary, and reflect your aptitude and understanding of graphic design and visual communication. Slides are also necessary to properly capture our interaction design research! High-quality imagery and videos help highlight your incredible user interfaces and built artifacts. 
+% One type of long-form, summative presentation is your “job talk”, which we cover in the Academic Job Talk section.
+% Conference Talk Tips/Tricks
+% Talks are unique mediums that are completely separate/independent from communicating science via a written publication. Do not treat them the same way! Do not formulate your oral communication with the same phrasing as your written communication (they are different!)
+% You have to EARN your audience attention and then WORK to keep it throughout the talk
+% Start with an undeniable hook that DRAWS your viewer in
+% Leverage the unique multimodality of a talk: use your VOICE, use VISUALS, use VIDEOS, and use textual ANNOTATIONS
+% If you say more than a single sentence without a backing written point or visual augmentation, you will begin to LOSE your audience. Thus, substantiate and complement your voice with the unique offerings of a modern presentation: images, videos, text
+% On-screen text is critical but never write full sentences; use punchy text points
+% Never use figures/images directly copy/pasted from your paper figures. Talks are a completely separate beast that requires a different type of visual communication. For example, observe how I introduce this rather complex graph slowly, introducing key elements first (and the skeleton for the graph) before animating in results and stepping my audience through key takeaways. Also note my :haircut: . :rolling_on_the_floor_laughing: 
+% Your audience will hardly remember ANYTHING (want proof: think back to all of the conferences you have attended, what do you remember?). Thus, you need to really hammer in your key points and contributions. You can bring them up in the beginning of the talk and at the end. And again, be CREATIVE in how you get and sustain your audience attention
+% Develop a commanding stage presence: do not read your slides, make eye contact, use gesticulation, modify the rhythm and cadence of your voice, draw your audience in with questions. Analyze your talk in terms of key beats---where will things be a bit more tedious for your audience? How can you followup that portion of the talk with something that again gets their attention?
+
+% Resources
+% TODO: resources for preparing good talks
+% TODO: let’s list some of the best academic talks we’ve seen. 
+% TODO: Here’s an old Dropbox folder of resources that I made. I need to go through this
+% Writing Reviews
+% In our field, our scientific papers are submitted to venues like CHI, UIST, ASSETS, and beyond and then undergo “dual-anonymous” (or “double-masked”) peer review. This means that both the paper is anonymous—we do not put our titles or affiliations on the paper for review—and that we do not know the identity of our reviewers.
+% While review criteria can differ depending on field and publication venue, the primary criterion for judging a paper at CHI is “Does this submission provide a strong research contribution to the field of HCI?” This, of course, is not always so easy to determine and requires expertise in the field and an understanding of “strong”. For CHI’24, they’ve broken down review criteria into primary categories, including:
+% Originality: what new ideas or approaches are introduced? We want to emphasize that an acceptable paper must make a clear contribution to Human-Computer Interaction;
+% Significance: evaluate the paper's contribution to HCI and the benefit that others can gain from the contribution: why do the contribution and benefit matter?
+% Research quality: how confidently can researchers and practitioners use the results?
+% Previous work: is prior work adequately reviewed?
+% Presentation clarity: how well is the paper framed and is the argument clear throughout the paper?
+% Like anything, writing reviews takes time, effort, and iteration. You will get better with practice. There are also courses and online resources such as Professor Lennart E. Nacke’s short course previously offered at CHI How to Write and Review CHI Papers, which he has given since 2017 (see the course overview here, which also has some helpful advice).
+% Example Reviews
+% As a graduate student and junior scholar, I adopted a rigorous, critical eye for each review—carefully examining every section and sentence to determine quality and validity but with an overall philosophy of “this paper better prove to me it is worthy of acceptance.” I suppose, over time, I have softened my perspective: each paper and underlying system or study has flaws. The key is: does the paper advance the literature in interesting/impactful ways despite those flaws? Notably, this is a relativist framing not an absolute one and contributions, then, must be deeply situated in the relevant literature (by the authors, ideally) to assess such things. Moreover, my overall tone has shifted from one of criticism to one of support: how can I help the authors improve their work and correct underlying flaws?
+% And perhaps my most important tenet: write a review like you would want received for your own paper. 😊
+% Since my students have asked, I have provided some example reviews that I wrote 7+ years ago to help them better understand how I approach reviewing and structure my reviews (link). This is a private, curated set of reviews. Importantly, these example reviews are for my students only and not to be shared (students, please do not download them locally but view them in your browser). Even though much time has passed, revealing my identity for these reviews would break the principle of “double-anonymous” reviewing and, perhaps, cause emotional hardship or embarrassment for me or others.
+% I am also happy to supply reviews we have received for any of our previous papers—assuming I still have them (sometimes, it is best to let them float away with time). Indeed, we provide some examples in the Writing Rebuttals subsection of this handbook.
+% Resources
+% Guide to Reviewing Papers, CHI’24
+% An Unofficial Guide to Seven Stages of Reviewing for CHI, Neha Kumar, Sep 2020
+% ACL’23 Peer Review Policies
+% How to Become Good at Peer Review: A Guide for Young Scientists, Jennifer Raff, Dec 2023
+% Making research videos
+% Creating videos of your research is both a norm and expectation in HCI, particularly for UIST-style innovation or system work. While time consuming, creating a strong video to highlight your work can draw broad interest. Think about this: magnitudes more people will view your videos than ever read your papers. And the cost of preparing a strong video is amortized as you’ll be able to use video clips in your talk, on the Makeability Lab website, and more. So, we should aim to make videos for every project in our group! 📽
+% This “Makeability Lab How to Videos” guide includes some exemplary videos curated by our lab as well as some guiding principles on making a good video.
+% Here are some example videos from our group:
+% ProtoSound video, CHI’22
+% ARMath video, CHI’20
+% Ondulé video, UIST’19
+% ProtypAR video, IDC’19
+% Project Sidewalk video, CHI’19 
+% TouchCam video, IMWUT’17
+% MakerWear video, CHI’16
+% SharedPhys video, IDC’16
+% BodyVis video, CHI’15
+% Uploading and sharing videos
+% As a lab, we decided in 2024 that our default option was to upload videos under the Makeability Lab YouTube account to create uniformity and maximize visibility; however, you are still welcome to instead upload your video to a personal account and we can link it with the Makeability Lab playlist.
+% Note: we have tried other video hosting services in the past but they do not seem to draw as large of audiences (e.g., Vimeo).
+% Intro sequence
+% Movie studios famously use intro sequences for branding and visibility. Research labs do this too (e.g,. see example from Chris Harrison’s Future Interfaces Group). At UMD, some high school students and I collectively made the “HCIL Hackerspace” intro sequence in Adobe After Effects (see example); however, we never made one for the Makeability Lab (though I long wanted to!).
+% Now, at UW, we finally have our intro sequence creating programmatically using p5.js and a custom reverse explosion animation (see p5.js program). My vision is to create an “infinite” number of these intro sequences based on this program (with different start locations, easing functions, and other animations). For now, I’ve exported one sequence and created three different videos:
+% Makeability Lab Intro Sequence (2 secs)
+% Makeability Lab Intro Sequence (5 secs)
+% Makeability Lab Intro Sequence with DUB and CSE Logos (4.5 secs)
+% Adding captions
+% Creating accessible videos is important and a key ethic of our lab. It is best to not burn in your captions but rather to generate .srt or .vtt files that can be uploaded to YouTube or other services (.vtt files can also be associated with videos in PowerPoint to be able to selectively turn on/off captions). Our group recommends three captioning approaches:
+% Adobe Premiere has built-in captioning tools, including automatic speech-to-text recognition
+% If you don’t have access to Premiere, we suggest Happyscribe and Flixier
+% Preparing and presenting posters
+
+% Figure. An example research poster fair (at the Transportation Research Board conference in Washington DC). How will you make your research poster stand out? What will make someone stop at your poster to learn more?
+% With a research poster, you have roughly 36”x60” to capture your viewer’s attention and communicate your research. My view is that the research poster is an advertisement for your paper, an advertisement for you (yes, you! And the team!), and should be designed as a visual aid complement to you standing there and communicating your research. Some tips:
+% Make the title big, bold, attractive. Consider asking a question. The title should be readable from 15-30 feet away.
+% Use visuals to communicate your story complemented by very little text.
+% If you must use text, avoid prose. Use bullets.
+% Remember, your poster will often be in a hall with ~100-200 other posters. How will you grab your viewers attention? As a passerby walks by, what will make them stop? If you have a wall of text, they will just move right along. See figure above.
+% Good and Bad Poster Designs
+% Figure. A famous poster redesign by Michigan State University doctoral student Mike Morrison. Image from NPR. Notice how it draws you in from afar. And then once you walk close, you can read a bullet-pointed overview augmented by visuals.
+% Here is but a small selection of some of my favorite posters from the Makeability Lab:
+
+
+
+% BodyVis poster by UMD MS student Leyla Norooz (great use of graphics & colors; however, fonts are too thin and insufficient contrast with text colors and background)
+% Ondule poster by UW PhD student Liang He (again, great use of graphics, clearly communicates research, maybe a bit visually busy)
+% Social Fabric Fitness poster by Jon E. Froehlich (in retrospect, too much text; should have eliminated 80% of the text and bullet pointed but the poster does draw you in with the graphic and question)
+
+
+
+% In contrast, here is a poorly designed research poster: text heavy, no clear reading direction, boring.
+
+% Figure. A poorly designed poster example (from Better Posters)
+
+
+% What tools to use?
+% I tend to make my posters in PowerPoint (go into the Design tab and set the Slide Size to Custom Slide Size of whatever your dimensions are—for example, 34” x 56”). Note that PowerPoint limits their max slide size to 56” x 56”.
+% Others use Adobe Illustrator (e.g., FuzzPrint), Photoshop (e.g., TacTILE), or Figma (e.g., BusStopCV, Sidewalk Equity)
+% Where to print a poster?
+% In the Allen School, we are fortunate to have a poster printer! You can learn more about using it here. This is useful for Affiliates Day and other on-campus events. For a conference that requires travel, you can print a poster in the Allen School and travel with it using a carrying tube. Or, you can print the poster at your destination (if you know a poster printer is available).
+% Resources
+% A Graphic Design Revolution for Scientific Conference Posters, Forbes, 2019; Eva Amsen
+% To Save the Science Poster, Researchers Want to Kill it And Start Over, NPR, 2019; Nell Greenfieldboyce
+% The Better Posters Gallery, which is part of the Better Posters blog by Zen Faulkes
+% Better Posters Blog, by Zen Faulkes
+
+
 \chapter{Presentation}
 
 \begin{itemize}
@@ -286,20 +548,20 @@ The first day and the last day of travel, they will not pay the full per diem ra
 
 \paragraph{Linux} \url{https://its.gmu.edu/knowledge-base/how-to-set-up-eduroam-on-linux/}
 \begin{itemize}
-  \item Select eduroam from the list of available wireless networks.
+  \item Select \texttt{eduroam} from the list of available wireless networks.
   \item Configure the following settings:
   \begin{itemize}
     \item Wi-Fi security: WPA \& WPA2 Enterprise
     \item Authentication: Protected EAP (PEAP)
     \item Anonymous: leave this blank
-    \item Domain: gmu.edu
+    \item Domain: \texttt{gmu.edu}
     \item Check No CA certificate is required
     \item PEAP version: Automatic
     \item Inner Authentication: MSCHAPv2
-    \item Username: Your FULL George Mason email address (netid@gmu.edu)
-    \item Password: Your Patriot Pass Password
+    \item Username: Your FULL George Mason email address (e.g., \texttt{netid@gmu.edu})
+    \item Password: Your Patriot Password
   \end{itemize}
-\item Hit Connect. You should now be connected to \texttt{eduroam}.
+\item Finally, click \texttt{Connect}. You should now be connected to \texttt{eduroam}.
 \end{itemize}
 \section{Connecting to VPN}
 TBD
@@ -398,6 +660,94 @@ To get an account on the server, send a request and your \textbf{SSH public key}
     \includegraphics[width=0.8\textwidth]{files/boba.jpg}
     \caption{\faUtensils{} \textbf{Boba}}
 \end{figure}
+
+
+% Makeability Lab Resources
+% As lab PI, I want to provide you with the resources and equipment necessary to do your research, fulfill your potential, and be successful. If you need something, please ask. I will work with you on a solution.
+% Communication
+% We primarily use Slack and email for communication:
+% Mailing me. If something is important and you want me to add it to my work queue (e.g., give feedback on a design mock, review a paper draft), please email me at jonf@cs.uw.edu. You can also ping me on the Makeability Lab Slack. It’s best to include a deadline so I can prioritize when to provide feedback. Please follow-up if you do not hear back. I don’t mind!
+% Mailing lists. We have multiple Makeability Lab mailing lists. For current PhD students, I will often email announcements or forward opportunities to makeabilitylab-grad@cs.uw.edu. We also have a general makeabilitylab@cs.uw.edu that goes to all active students (high school, ugrad, grad) and makeabilitylab-alumni@cs.uw.edu.  
+% Slack. For synchronous communication and more informal chats, we use Slack: https://makeabilitylab.slack.com. If you’re on the Project Sidewalk team, please join both the Makeability Lab Slack and the Project Sidewalk Slack: https://projectsidewalk.slack.com.
+% Twitter. Our lab maintains two Twitter accounts: @makeabilitylab and @projsidewalk. Jon is at @jonfroehlich.
+% Makeability Lab website. We post all projects and papers to the Makeability Lab website. When you join the lab, you should get added to the lab website.
+% Lab Space
+% The Allen School is privileged with lab space, which brings choice and opportunity. Ideally, to build rapport between us, we would all work in the same lab space. I realize, however, that preferences and needs differ. For example, some of us work with hardware, others do not.
+% There are two hardware/fabrication lab spaces. You need to sign up for training to use this equipment. Email Alexander Lefort and sign up for the fablab mailing list.
+% The Ubiquitous Computing Lab (Ubicomp Lab) in the Allen Center (CSE 605 & 615). I moved my office to CSE642 specifically to be close to the UbiComp Lab. My preference is that you use this as your primary lab space given its proximity to my office and the opportunity to intermix with UbiComp Lab students.
+% The FabLab in the Gates Center (CSE2 G15)
+% And two HCI lab spaces:
+% The HCI Lab in the Allen Center (CSE 591)
+% The HCI Lab in the Gates Center (CSE2 283)
+% Lab Access
+% To request lab access, send an email to cardkey@cs.washington.edu and CC me with the specific location (e.g., UbiComp Lab in CSE605) with a specific date range.
+% HCI/UbiComp Lab Spaces
+% The Ubicomp Lab (CSE 605)
+
+% Figure. Pictures of the Ubicomp Lab workspace (CSE605) and neighboring fabrication space (CSE615). You can access CSE615 via CSE605.
+% The UbiComp Lab (CSE 605) has 21 assigned seats for research assistants and a connected fab lab (CSE 615) with 3D printers (e.g, Stratasys F370, F120, Form 3, and Ultimaker 3), laser cutters (e.g., Glowforge), a reflow oven (LPKF ProtoFlow S), and soldering stations. 
+% To request a seat, please email me so I can work with Shwetak on lab assignments (the seat chart is here).
+% To request keycard access to the fab lab side (CSE615), please email cardkey@cs.washington.edu and CC me
+% The FabLab (CSE2 G15)
+
+% Figure. Pictures of the FabLab in CSE2 (G15). You need training to use these spaces and some equipment requires additional training.
+% The FabLab (CSE2 G15) is not intended as a fulltime workspace but rather a place to drop in for specialized fabrication projects. Besides three desktop 3D printers (2 Ultimaker 3 extended and 1 Form 3) and a laser cutter (Glowforge), this lab offers more advanced equipment options. To name a few (see figure below): knitting machine Shima Seiki SWG091N2, Stratasys-FDM 3D printers F170/f120, Desktop Metal 3D Studio printer, Stratasys Objet 30 polyjet 3D printer, Trotec Speedy 300 laser cutter,  LPKF Protolaser S4 PCB laser cutter, ShopBot PRS-Alpha CNC router, Drill Press Powermatic PM2800B, and Tablesaw Sawstop JSS Pro. Please check the full list of equipment on the official website of FabLab. To use this equipment, please reach out to the lab manager Alexander Lefort (aalefort@cs.washington.edu) for training first. 
+
+% Figure. Pictures of the FabLab equipment in CSE2 (G15). 
+% Allen Center HCI Lab (CSE 591)
+% Figure. A picture of the Allen Center HCI Lab (CSE591) with ideation spaces and a few desks for working..
+% The Allen Center HCI Lab (CSE 591) provides a casual and collaborative ideation space with a whiteboard, projection screen, and couches as well as eight desks for graduate students and postdocs. Currently, the lab is mostly inhabited by Professor Reinecke and Fogarty’s students.
+% Gates Center HCI Lab (CSE2 283)
+
+% Figure. A picture of the Gates Center HCI Lab (CSE2 283) with a hardware workshop, ideation spaces, and a few desks for working.
+% The Gates Center HCI Lab (CSE2 283) provides a casual and collaborative ideation space with a large whiteboard, a mini-workshop for tinkering on hardware projects, and couches as well as six desks for graduate students. Currently, the lab is mostly inhabited by Professor Mankoff’s students.
+
+
+\chapter{Lab Website and Other Online Resources}
+% Our lab website is at https://makeabilitylab.cs.washington.edu/ and is built in Django (Python). All code is open source and available on GitHub (link). We currently have over 100 open issues. If you like web development and/or have Django experience, we would greatly appreciate your help. 🙏
+% If you are a grad student or research scientist in our lab, you should:
+% Make project pages
+% Add in news
+% Add your publications
+% You can use the gradmin account (Slack us for the password). Xia Su is currently our lab website manager. He can help you!
+% Lab Photos
+% Our lab history and time together is captured (in part) by our collection of photos and videos stored here (this is a private link for Makeability Lab members only).
+% Lab GitHub
+% We use GitHub religiously for hosting and coordinating our research projects. Your code can begin in a private repo but should be released on the Makeability Lab organization, when possible, when your research is published. One exception is Project Sidewalk, which exists as its own GitHub organization.
+% Generally, we aim to support open science, which means releasing our code and datasets for scientific replicability and to enable future research. README.md should have clear instructions, compelling visuals, and descriptions on how to replicate the scientific work. Please also include a citation (e.g., if you use our code, datasets, or ideas in our paper, please cite us as <include bibtex>). Some good model repos are:
+% CookAR
+% RampNet
+% Kind reminder: you should never write research code without continuously backing it up (ideally, using a version control system like Git) but, in the worst case, Dropbox, GDrive, Box, iCloud, etc.
+% Lab Logos
+% Here are links to logos for the Makeability Lab, the Allen School and UW, and UW CREATE. The logos for Project Sidewalk are in the Project Sidewalk Design GitHub repo. Logos should be used on the first and last slide. Here are some ideas/templates.
+
+% Lab IRB Applications
+% All “human subjects” studies in our lab must be reviewed by UW’s Institutional Review Board (IRB) in their Human Subjects Division. As a graduate student, you will lead the preparation of our IRB application with feedback and vetting from me. Fortunately, UW uses an online submission system called Zipline.
+% To assess whether your planned study needs IRB, the UW’s IRB website has a four-step process. See Do I need IRB Review? If in doubt, talk to me—I’ll probably encourage you to email (hsdinfo@uw.edu) or call the IRB offices directly. 
+% To help you prepare your own IRB application, please see our lab archive here (this is a private link for current Makeability Lab members).
+% Accessing CSE Linux Servers
+% The Makeability Lab website, Project Sidewalk, and even your academic website runs on CSE Linux servers. It’s fastest and easiest to setup an SSH key to quickly SSH into these servers.
+% Mac/Linux
+% On Mac or Linux, open up the terminal. Run:
+% > ssh-keygen
+% Hit <Enter> to accept the defaults (no passphrase needed). The key will be saved in ~/.ssh/id_rsa and the public key in ~/.ssh/id_rsa.pub.
+% Then, again in terminal, run:
+% > ssh-copy-id user@host
+% So, for example, I would run
+% > ssh-copy-id jonf@recycle.cs.washington.edu
+% Here, you’ll be asked to login for the final time with your password. Once this completes, you should be able to do this:
+% > ssh jonf@recycle.cs.washington.edu
+% And it will succeed without having to enter a password.
+% Windows
+% On Windows, open up Windows Powershell and type:
+% > ssh-keygen
+% Hit <Enter> to accept the defaults (no passphrase needed). The key will be saved in $env:USERPROFILE/.ssh/id_rsa and the public key in $env:USERPROFILE
+% /.ssh/id_rsa.pub.
+% Unlike on Mac/Linux, the command ssh-copy-id does not exist, so to move your key onto the server, you need to do something else:
+% > type $env:USERPROFILE\.ssh\id_rsa.pub | ssh {IP-ADDRESS-OR-FQDN} "cat >> .ssh/authorized_keys"
+% So, in our case, we would type:
+% > type $env:USERPROFILE\.ssh\id_rsa.pub | ssh recycle.cs.washington.edu "cat >> .ssh/authorized_keys"
+% The server recycle.cs.washington.edu will ask you to login one last time with a password. Once you do that, you should be able to login without one.
 
 
 
