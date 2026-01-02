@@ -238,7 +238,7 @@
 
 Oral and written communication is critical to research and science. You can create the most powerful systems with ground breaking results, but none of this matters if you cannot communicate or \emph{``sell''} these to others. 
 
-\chapter{Papers}
+\chapter{PUblications}
 
 % Writing papers
 % 
@@ -259,7 +259,7 @@ We aim to submit our work to the highest quality, most prestigious---``tier 1''v
 Such top venues (generally) provides top peer review, a strong community of researchers, and if our work is accepted, provides visibility, credibility, and the opportunity for the most impact. 
 
 \textbf{Conferences}
-Typically we aim for conferences considered by CSRankings and other well-known conferences in SE and PL. Recently we also publish in Logics and AI/ML venues.
+Typically we aim for conferences considered by CSRankings and other well-known ones in SE and PL. Depending on the topics of the work, we may also consider other venues.  For example, recently we also publish in Logics and AI/ML venues.
 
 \begin{itemize}
 \item SE venues: ICSE, FSE, ASE, and ISSTA. 
@@ -363,18 +363,24 @@ The intro has 5-6 paragraphs:
 \section{Authorship order and inclusion criteria}
 
 \begin{itemize}
-\item The first author is often the lead PhD student on a project, the last author is the PI, and the remaining authors are ordered based on contribution size. 
+\item The first author is often the lead PhD student on a project, the last author is the PI, and the remaining authors are ordered based on contribution. 
 \item Establish authorship order early in a project's existence and to communicate expectations with all team members. 
 \item However, this is not always possible and certain authorship inclusions and orderings may remain fluid until paper submission.
 \end{itemize}
 \subsection{Determining authorship}
 % Generally, I lean towards an inclusive authorship heuristic: anyone who has provided clear and concrete contributions to a project from data analysis to system building to paper writing. We need to be honest with ourselves, our team, and have transparent discussions. 
-% Official authorship inclusion guidelines are often less permissive. For example, the ACM’s Criteria for Authorship states: 
-% “Anyone listed as Author on an ACM submission must meet all the following criteria:
-% They have made substantial intellectual contributions to some components of the original work described in the manuscript; and
-% They have participated in drafting and/or revision of the manuscript and
-% They are aware the manuscript has been submitted for publication; and
-% They agree to be held accountable for any issues relating to correctness or integrity of the work”
+% Official authorship inclusion guidelines are often less permissive. 
+
+\begin{commentbox}[ACM's Criteria for Authorship]
+Anyone listed as Author on an ACM submission must meet all the following criteria:
+\begin{itemize}
+\item They have made substantial intellectual contributions to some components of the original work described in the manuscript; and
+\item They have participated in drafting and/or revision of the manuscript and
+\item They are aware the manuscript has been submitted for publication; and
+\item They agree to be held accountable for any issues relating to correctness or integrity of the work
+\end{itemize}
+\end{commentbox}
+
 % Similarly, the APA’s Publication Practices and Responsible Authorship guide states:
 % “Authorship credit should reflect the individual's contribution to the study. An author is considered anyone involved with initial research design, data collection and analysis, manuscript drafting, or final approval. However, the following do not necessarily qualify for authorship: providing funding or resources, mentorship, or contributing research but not helping with the publication itself. The primary author assumes responsibility for the publication, making sure that the data are accurate, that all deserving authors have been credited, that all authors have given their approval to the final draft; and handles responses to inquiries after the manuscript is published.”
 % CASRAI and the National Information Standards Organization (NISO) has produced a taxonomy of 14 roles—called CRediT—that describe the typical scientific roles in scholarly output, including conceptualization, data curation, analysis, validation, visualization, and writing. We can refer to these contribution types when determining authorship decisions, as necessary.
@@ -399,6 +405,7 @@ The intro has 5-6 paragraphs:
 % Third and finally, be concrete and concise. See Attributes of a Strong Rebuttal referenced above.
 % Finally, we have a collection of reviews and rebuttals from past papers (shared with permission). Please request access if you’d like to see them. Note: do not share these reviews or rebuttals as they are confidential.
 % You might also benefit from the Writing Reviews section of our handbook.
+
 % Preparing and giving talks
 % “Tell someone a fact and you reach their minds; give them a story and you touch their souls.”
 % - A Hasidic Proverb
@@ -509,6 +516,19 @@ The intro has 5-6 paragraphs:
 \item \textbf{Number your slides}.  This is useful when people want to ask questions (or give feedback) on specific slides (e.g., \emph{``on slide 10, you said ...''}).
 \item \textbf{Every slide takes approximately 1 minutes}. Using this rule of thumb, you can estimate how many slides you need for your presentation.
 \end{itemize}
+
+
+\chapter{Data and Code Management}
+\section{Data Availability}
+\begin{itemize}
+\item We will \emph{always} make the data available. So make sure prototypes, tools, results, etc are avail on Github.
+\item Github repo:
+\begin{itemize}
+\item \texttt{README.md}: include a description of the project, how to install and use the tool.
+ \item For tools submitted to conferences, include scripts to generate the data and run the experiments.
+\end{itemize}
+\end{itemize}
+
 
 \part{Classes}
 
@@ -704,6 +724,10 @@ To get an account on the server, send a request and your \textbf{SSH public key}
 
 
 \chapter{Lab Website and Other Online Resources}
+
+\begin{itemize}
+\item Our main Roars lab website is at \url{https://roars.dev/}.  It is in plain HTML. All code is open source and available on GitHub (\url{https://code.roars.dev}).
+\end{itemize}
 % Our lab website is at https://makeabilitylab.cs.washington.edu/ and is built in Django (Python). All code is open source and available on GitHub (link). We currently have over 100 open issues. If you like web development and/or have Django experience, we would greatly appreciate your help. 🙏
 % If you are a grad student or research scientist in our lab, you should:
 % Make project pages
@@ -721,10 +745,7 @@ To get an account on the server, send a request and your \textbf{SSH public key}
 % Lab Logos
 % Here are links to logos for the Makeability Lab, the Allen School and UW, and UW CREATE. The logos for Project Sidewalk are in the Project Sidewalk Design GitHub repo. Logos should be used on the first and last slide. Here are some ideas/templates.
 
-% Lab IRB Applications
-% All “human subjects” studies in our lab must be reviewed by UW’s Institutional Review Board (IRB) in their Human Subjects Division. As a graduate student, you will lead the preparation of our IRB application with feedback and vetting from me. Fortunately, UW uses an online submission system called Zipline.
-% To assess whether your planned study needs IRB, the UW’s IRB website has a four-step process. See Do I need IRB Review? If in doubt, talk to me—I’ll probably encourage you to email (hsdinfo@uw.edu) or call the IRB offices directly. 
-% To help you prepare your own IRB application, please see our lab archive here (this is a private link for current Makeability Lab members).
+
 % Accessing CSE Linux Servers
 % The Makeability Lab website, Project Sidewalk, and even your academic website runs on CSE Linux servers. It’s fastest and easiest to setup an SSH key to quickly SSH into these servers.
 % Mac/Linux
@@ -891,25 +912,8 @@ git commit -am "reviews and rebuttal"
 ----
 
 
-# Lab Manual
 
 
-
-
-
-## Publications
-
-### Authorship
- 
-
-## Rebuttal
-
-
-## Data Availability
-- We will *always* make the data available. So make sure prototypes, tools, results, etc are avail on Github.
-- Github repo:
-    - README.md: include a description of the project, how to install and use the tool.
-    - For tools submitted to conferences, include scripts to generate the data and run the experiments.
 
 
 
