@@ -10,3 +10,4 @@
 - PDF: [https://roars.dev/phd-cs-us/demystify.pdf](https://roars.dev/phd-cs-us/demystify.pdf)
 - Amazon: [Kindle](https://www.amazon.com/dp/B0F41HP6Y2)
 - For discussion and questions, open a new Github issue [https://github.com/dynaroars/phd-cs-us/issues](https://github.com/dynaroars/phd-cs-us/issues)
+- [CSPicks](https://roars.dev/cspicks/compare.html): compare universities among different research areas in Computer Science; also check out the historical mode where we try to track faculty changing affiliation.
