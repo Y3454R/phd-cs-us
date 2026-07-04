@@ -2700,19 +2700,14 @@ The processing time for the I-20 form varies from 1 day to 2 months, depending o
 \
 === I-901 Payment Confirmation
 When you receive your I-20 form, you will see a SEVIS (Student and Exchange Visa Information System) ID on it. You need to activate this SEVIS ID by going to the
-#link("http://www.fmjfee.com")[
-  #text(fill: blue)[I-901 Form website]
-] and paying the \$350 I-901 fee. Then you should print the I-901 fee payment receipt and bring it to the visa interview. For additional information about who is required to pay this fee, see SEVP at the
-#link("http://www.fmjfee.com")[
-  #text(fill: blue)[I-901 Form website]].
+#link("http://www.fmjfee.com")[I-901 Form website] and paying the \$350 I-901 fee. Then you should print the I-901 fee payment receipt and bring it to the visa interview. For additional information about who is required to pay this fee, see SEVP at the
+#link("http://www.fmjfee.com")[I-901 Form website].
 
 #tip-block[One option you have regarding your SEVIS ID is that, if you change your mind about the PhD program you want to join and decide to attend another program, you can transfer the SEVIS ID to the new program within a one-year timeframe, free of charge.]
 
 === DS-160 Form Submission Confirmation
 The DS-160 form is an online form that applicants must complete for a non-immigrant visa application. After receiving your I-20, you must visit the
-#link("https://ceac.state.gov/genniv/")[
-  #text(fill: blue)[Consular Electronic Application Center (CEAC)]
-] to complete the DS-160 form. The questions on the DS-160 form are mostly about your personal information, your parents, whether you have immediate family members or relatives in the U.S., your educational background, your work history, your travel history, your social media accounts, etc. You should also provide contact information for two references in your country of residence. To book your visa interview, you need the barcode number of your DS-160 form. Fill out the DS-160 form accurately because you cannot make any changes after submission. Once you submit the form, you have the option to download it, but if you do not, you will not have access to it later. So, it would be better to download and keep it. You do not need to bring this downloaded file to the visa interview, but you must bring a printout of your DS-160 submission confirmation to the interview.
+#link("https://ceac.state.gov/genniv/")[Consular Electronic Application Center (CEAC)] to complete the DS-160 form. The questions on the DS-160 form are mostly about your personal information, your parents, whether you have immediate family members or relatives in the U.S., your educational background, your work history, your travel history, your social media accounts, etc. You should also provide contact information for two references in your country of residence. To book your visa interview, you need the barcode number of your DS-160 form. Fill out the DS-160 form accurately because you cannot make any changes after submission. Once you submit the form, you have the option to download it, but if you do not, you will not have access to it later. So, it would be better to download and keep it. You do not need to bring this downloaded file to the visa interview, but you must bring a printout of your DS-160 submission confirmation to the interview.
 \
 \
 === Visa Appointment Scheduling Confirmation
@@ -2758,8 +2753,7 @@ You should schedule your visa interview appointments at the U.S. embassy/consula
   )
 ]
 
-After determining where you should schedule your visa interview, go to the #link("https://www.ustraveldocs.com/")[
-  #text(fill: blue)[USTravelDocs website]], select the location and language, then select “Nonimmigrant Visa” to create a new account.
+After determining where you should schedule your visa interview, go to the #link("https://www.ustraveldocs.com/")[USTravelDocs website], select the location and language, then select “Nonimmigrant Visa” to create a new account.
 
 #note-block[You should check the #link("https://travel.state.gov/content/travel/en/News/visas-news/suspension-of-visa-issuance-to-foreign-nationals-to-protect-the-security-of-the-united-states.html")[
  U.S. Department of State website] to see whether there are any entry restrictions or travel bans for citizens of your country that would prevent you from obtaining the visa.
@@ -2876,15 +2870,14 @@ If the consular officer finds you are not eligible to receive an F-1 visa, your 
     A refusal or ineligibility under section 214(b) is not permanent and is for that specific application. There is no appeal process. After being found ineligible for a visa, you may reapply in the future. To reapply, you must complete a new DS-160 form, pay another MRV fee, and schedule an appointment for a new interview. You will not need to pay the SEVIS fee again. In your new visa application, you should be able to present evidence of significant changes in circumstances since your last application.
 
 For more information about visa denial, visit the 
-  #link("https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/visa-denials.html")[
-    #text(fill: blue)[U.S. Department of State visa denials webpage]].
+  #link("https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/visa-denials.html")[U.S. Department of State visa denials webpage].
 
 == Details of Visa Stamp
 When your visa is issued and attached to your passport, you can see some personal details. The key ones are: entries, issue date, and expiration date.
 
 #figure(
 image("files/visa-stamp.jpg", width: 70%), 
-  caption: [A U.S. visa stamp #link("https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/frequently-asked-questions/what-is-us-visa.html")[#text(fill: blue)[[Reference]]]]
+  caption: [A U.S. visa stamp #link("https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/frequently-asked-questions/what-is-us-visa.html")[[Reference]]]
 )
 \
 
@@ -2901,12 +2894,9 @@ You can receive your F-1 visa up to 365 days before your program's start date. A
 
 == General Information on Visa Issuance Statistics
 The U.S. Department of State publishes monthly statistics on nonimmigrant visa issuance by nationality and by post
-#link("https://travel.state.gov/content/travel/en/legal/visa-law0/visa-statistics/nonimmigrant-visa-statistics/monthly-nonimmigrant-visa-issuances.html")[
-  #text(fill: blue)[here]]. For example, the September 2025 data by nationality is available 
-#link("https://travel.state.gov/content/dam/visas/Statistics/Non-Immigrant-Statistics/MonthlyNIVIssuances/SEPTEMBER%202025%20-%20NIV%20Issuances%20by%20Nationality%20and%20Visa%20Class.pdf")[
-  #text(fill: blue)[here]], and the data by post for the same month is available
-#link("https://travel.state.gov/content/dam/visas/Statistics/Non-Immigrant-Statistics/MonthlyNIVIssuances/SEPTEMBER%202025%20-%20NIV%20Issuances%20by%20Post%20and%20Visa%20Class.pdf")[
-  #text(fill: blue)[here]]. You can check them out to get a sense of the trend.
+#link("https://travel.state.gov/content/travel/en/legal/visa-law0/visa-statistics/nonimmigrant-visa-statistics/monthly-nonimmigrant-visa-issuances.html")[here]. For example, the September 2025 data by nationality is available 
+#link("https://travel.state.gov/content/dam/visas/Statistics/Non-Immigrant-Statistics/MonthlyNIVIssuances/SEPTEMBER%202025%20-%20NIV%20Issuances%20by%20Nationality%20and%20Visa%20Class.pdf")[here], and the data by post for the same month is available
+#link("https://travel.state.gov/content/dam/visas/Statistics/Non-Immigrant-Statistics/MonthlyNIVIssuances/SEPTEMBER%202025%20-%20NIV%20Issuances%20by%20Post%20and%20Visa%20Class.pdf")[here]. You can check them out to get a sense of the trend.
 
 
 
