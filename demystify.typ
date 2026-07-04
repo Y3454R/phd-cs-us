@@ -1593,7 +1593,7 @@ Congratulations---getting multiple offers is a wonderful problem to have. Now yo
 
 #simpsons[You tried your best and you failed miserably. The lesson is: never try.]
 
-Rejection is a common part of the PhD application process. In fact, rejection is part of academia (e.g., you will get rejected for papers, grants, jobs, etc). Don't take rejection personally and learn from it.
+Rejection is a common part of the PhD application process. In fact, rejection is part of academia (e.g., you _will_ get rejected for papers, grants, jobs, etc). Don't take rejection personally and learn from it.
 
 === Try Again! <sec:try-again>
 
@@ -1630,7 +1630,7 @@ Your #strong[Research] (@chap:research-experience) might not be as strong as you
 #figure(
   caption: [Comment from an NLP researcher on an applicant with multiple NeurIPS papers.],
   align(left)[
-    #text(size: 0.8em)[
+    #text(size: 0.9em)[
       #emph-block[_"The applicant has done some interesting work, but much of what they have done has been only on dataset creation, with almost nothing on actual modeling or tackling tasks. This has merits, but it's more of an engineering feat than a research feat."_]
     ]]  
 ) <fig:comment-neurips>
@@ -1697,7 +1697,7 @@ Note that what I said above might not apply to BS or even MS degrees, which ofte
 
 #figure(
   image("files/alpinist-climbing-peak-mountain-comic-hand-drawn-vector-illustration.jpg", width: 50%),
-  caption: [#drafttag Standing out (@sec:stand-out) often comes down to persistence and grit---like summiting a peak---not just a polished profile.],
+  caption: [Standing out (@sec:stand-out) often comes down to persistence and grit---like summiting a peak---not just a polished profile.],
 ) <fig:alpinist>
 
 Given the high number of quality applicants and a limited number of spots, in addition to having a good application profile, you want to show something that makes you #highlight[stand out]. For example, even if you do not have research experience, you can talk about your personal projects, as long as they show you can do research. If you have an open-source project (@sec:open-source-contribs) that has lots of stars on GitHub, mention it. If you often write technical, research-like blogs with many viewers, talk about them too.
@@ -1780,7 +1780,7 @@ Note that funding is typically more available for PhD students than MS (@sec:ms-
 ) <tab:funding>
 
 == Graduate Assistantship (GTA/GRA) <sec:ta-ra>
-The most common type of funding is a *graduate #gls("assistantship")*, which comes in two main forms: GTA (Graduate Teaching Assistant, a #gls("TA", first:true)) and GRA (Graduate Research Assistant, an #gls("RA", first:true)). Both positions typically include a tuition waiver (so you don't pay tuition), health insurance (which is required in the US), and a #gls("stipend") (your salary). Some universities also offer discounts or insurance coverage for spouses and children.
+The most common type of funding is a *graduate #gls("assistantship")*, which comes in two main forms: #gls("TA", first:true) and #gls("RA", first:true). Both positions typically include a tuition waiver (so you don't pay tuition), health insurance (which is required in the US), and a #gls("stipend") (your salary). Some universities also offer discounts or insurance coverage for spouses and children.
 
 A few notes about stipends:
 - The stipend amount *varies* by location (e.g., higher in expensive areas like DC than in Lincoln, Nebraska), university, and sometimes by department.
@@ -1801,8 +1801,10 @@ A few notes about stipends:
 
 TA is common at the beginning of a PhD, when you have not yet found an advisor who can support you as  a GRA. It is also common to alternate between TA and RA, for example when your professor does not have enough funding or when you want to gain teaching experience.
 
+#definition-box[Graduate Teaching Assistant or GTA][
 As a GTA, you are paid through the school or department to help with teaching. You typically work up to 20 hours per week and assist with classes, for example by grading, running labs, or leading recitations.
 During a semester, a GTA might work with several courses and professors, not necessarily their advisor. GTA funding is *not* typically available during the summer (@sec:summer-funding), when there are fewer courses.
+]
 
 *How to get GTA?* Unless you have other funding such as GRA or fellowships, GTA is typically the default funding source for CS PhD programs. In your application, simply indicate that you need financial assistance. Typically, adcom will either admit you with GTA support or reject you. We do not admit students without supporting them (@sec:ievaluate).
 
@@ -1819,8 +1821,11 @@ Even if you have other funding and do not need a GTA, you should still try GTA a
 *Where does GTA funding come from?* Typically, the department receives GTA funding from the college based on enrollment and budget, and then assigns GTAs to courses based on instructional needs and student qualifications. For example, a CS department often has many GTAs because it has high enrollment and many courses. In contrast, a department such as Math might have fewer GTAs because it has lower enrollment and fewer courses.
 
 === Research Assistant (GRA) <sec:ra>
+
+#definition-box[Research Assistant or GRA][
 GRA support is provided by a professor through their funding so that you can work on their research project.
 As a GRA, you generally do not need to teach, so you can focus on research. Depending on the professor, GRA support may also be available during the summer. See @sec:ra-cost for more details on GRA budgeting.
+]
 
 *How to get GRA?* When a professor recruits you, they might offer you an GRA immediately, so you start the program with GRA support. However, a more common scenario is that you first get admitted with GTA support, then after a year or two you find an advisor who can support you as an GRA.
 
@@ -3646,7 +3651,7 @@ When researching where to do a CS PhD, many students use rankings like the U.S. 
 
 #figure(
 align(left)[
-  #text(size: 0.8em)[
+  #text(size: 0.9em)[
     #emph-block[_"The ranking methodology \[of US News\] is flawed, for a simple reason that any computer science researcher could tell them immediately. And we did. Influential researchers in computer science pointed out the flaws directly to editors at US News; they were ignored."_
 
     _"No ranking is perfect, but this \[CSrankings\] is defensible and open."_]]],
