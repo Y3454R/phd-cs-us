@@ -2688,27 +2688,30 @@ You must attend an in-person visa interview at the consular section. In general,
 If any of your documents are in another language, bring the original and an English translation. We will discuss each document in detail as follows.
 \
 \
-=== I-20 Form
+=== Forms
+
+#paragraph[I-20][
 An I-20 form is a document issued by a university to certify that an F-1 student has met admission requirements and has proof of sufficient financial resources for their studies. The first step to obtaining an I-20 form is to find the international department of your intended university and follow the steps on its website. Usually, you need to upload your passport, financial documents, etc. In the following cases, you will need to provide financial proof, such as a bank statement, that you are able to cover all the expenses and will not face financial problems for your studies.
 -	You are self-funded (your admission offer does not include any funding)
 -	You are partially funded (your funding is less than the total of tuition fees plus living expenses)
 -	You have dependents accompanying you (whether you are self-funded, partially funded, or fully funded)
 
 The processing time for the I-20 form varies from 1 day to 2 months, depending on the university. The I-20 form must be signed by both the school official and the applicant. So before your appointment at the embassy/consulate, print your I-20 and sign it.
-\
-\
-=== I-901 Payment Confirmation
+]
+
+#paragraph[I-901 Payment Confirmation][
 When you receive your I-20 form, you will see a SEVIS (Student and Exchange Visa Information System) ID on it. You need to activate this SEVIS ID by going to the
 #link("http://www.fmjfee.com")[I-901 Form website] and paying the \$350 I-901 fee. Then you should print the I-901 fee payment receipt and bring it to the visa interview. For additional information about who is required to pay this fee, see SEVP at the
 #link("http://www.fmjfee.com")[I-901 Form website].
+]
 
 #tip-block[One option you have regarding your SEVIS ID is that, if you change your mind about the PhD program you want to join and decide to attend another program, you can transfer the SEVIS ID to the new program within a one-year timeframe, free of charge.]
 
-=== DS-160 Form Submission Confirmation
+#paragraph[DS-160 Form Submission Confirmation][
 The DS-160 form is an online form that applicants must complete for a non-immigrant visa application. After receiving your I-20, you must visit the
 #link("https://ceac.state.gov/genniv/")[Consular Electronic Application Center (CEAC)] to complete the DS-160 form. The questions on the DS-160 form are mostly about your personal information, your parents, whether you have immediate family members or relatives in the U.S., your educational background, your work history, your travel history, your social media accounts, etc. You should also provide contact information for two references in your country of residence. To book your visa interview, you need the barcode number of your DS-160 form. Fill out the DS-160 form accurately because you cannot make any changes after submission. Once you submit the form, you have the option to download it, but if you do not, you will not have access to it later. So, it would be better to download and keep it. You do not need to bring this downloaded file to the visa interview, but you must bring a printout of your DS-160 submission confirmation to the interview.
-\
-\
+]
+
 === Visa Appointment Scheduling Confirmation
 You should schedule your visa interview appointments at the U.S. embassy/consulate in your country of nationality or of residence. If you are a national of a country where the U.S. government does not conduct routine nonimmigrant visa operations, you must apply at the #link("https://travel.state.gov/content/travel/en/News/visas-news/adjudicating-niv-applicants-in-their-country-of-residence.html")[designated embassy/consulate] unless you reside elsewhere.
 
@@ -2758,22 +2761,23 @@ After determining where you should schedule your visa interview, go to the #link
  U.S. Department of State website] to see whether there are any entry restrictions or travel bans for citizens of your country that would prevent you from obtaining the visa.
 ]
 
-=== MRV Fee Payment Confirmation
+#paragraph[MRV Fee Payment Confirmation][
 Now that you have created an account on 
-the #link("https://www.ustraveldocs.com/")[USTravelDocs website], you can select the visa type you are applying for and the number of applicants accompanying you. Then you must pay the MRV fee of \$185. Visa application fees are non-refundable and non-transferable. You can use this fee to schedule an appointment within one year of the payment date. After this payment, you can access the calendar, choose your preferred date and time, and book your visa interview appointment.
+the #link("https://www.ustraveldocs.com/")[USTravelDocs website], you can select the visa type you are applying for and the number of applicants accompanying you. Then you must pay the MRV fee of \$185. Visa application fees are non-refundable and non-transferable. You can use this fee to schedule an appointment within one year of the payment date. After this payment, you can access the calendar, choose your preferred date and time, and book your visa interview appointment.]
 
 #tip-block[You can reschedule your appointment a limited number of times for free.]
 
+=== Documents to Bring to the Interview
 
-=== Admission Letter
+#paragraph[Admission Letter][
 You should print and bring your admission letter to the interview.
+]
 
-
-=== Funding Letter (if applicable)
+#paragraph[Funding Letter (if applicable)][
 You should print and bring your funding letter to the interview.
+]
 
-
-=== Research Plan
+#paragraph[Research Plan][
 //TODO: not sure about this as research plan is not a common requirement for US PhD programs. 
 
 You need to provide a letter from your U.S. academic advisor, known as the Research Plan, which:
@@ -2783,45 +2787,46 @@ You need to provide a letter from your U.S. academic advisor, known as the Resea
 -	Describes any export-controlled technology and/or information that will be shared with you.
 
 This letter should be printed on the university's letterhead and originally signed by your academic advisor. Your academic advisor can scan and email it to you. Then you can print and take it to the interview.
-\
-\
-=== Statement of Purpose
+]
+
+#paragraph[Statement of Purpose][
 It is the same statement of purpose that you submitted when you applied to the PhD program at the university.
-\
-\
-=== Applicant's CV
+]
+
+#paragraph[Applicant's CV][
 It is the same CV that you submitted when you applied to the PhD program at the university. In your CV, you should: 
 -	List your entire educational background, including dates attended, degrees received, projects worked on, names of professors you worked with, and any publications you wrote.
 -	List your entire employment background, including employers, dates, locations, specific duties and responsibilities.
 -	List references in your country of birth or residence
-\
-=== Intended PhD Advisor's CV
-Ask your U.S. faculty advisor for a detailed resume and list of published work.
-\
-\
-=== Passport
+]
+
+#paragraph[Intended PhD Advisor's CV][
+Ask your U.S. faculty advisor for a detailed resume and list of published work.]
+
+#paragraph[Passport][
 Your current passport must be valid for at least six months beyond the period of stay in the U.S. (unless exempt by #link("https://www.cbp.gov/document/bulletins/six-month-validity-update")[country-specific agreements]). Also, if applicable, bring the passport containing the most recently issued U.S. visa.
-\
-\
-=== Applicant's Photo
+]
+
+#paragraph[Applicant's Photo][
 You should take a 51 x 51 millimeter (2 x 2 inches) color photo within the last 6 months before the visa interview. For the photo, you should follow the Department of State #link("https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/photos.html")[photo guidelines].
-\
-\
-=== Supporting Documents
+]
+
+#paragraph[Other Supporting Documents][
 You may also bring any supporting documents you believe support the information provided to the consular officer. Supporting documents are only one of many factors a consular officer will consider in your interview. Consular officers consider professional, social, cultural, and other factors during adjudication. Consular officers may consider your specific intentions, family situation, and long-term plans and prospects in your country of residence. The supporting documents include:
 -	Documents demonstrating strong financial, social, and family ties to your home country that will compel you to return to your country after your program of study in the U.S. ends.
 -	Academic documents that show scholastic preparation. Useful documents include school transcripts (original copies are preferred) with grades, public examination certificates (A-levels, etc.), standardized test scores (SAT, TOEFL, etc.), and diplomas.
 -	(In case you are self-funded, partially funded, or have dependents) Financial and any other documents you believe will support your application and which give credible evidence that you have enough readily-available funds to meet all expenses for the first year of study and that you have access to funds sufficient to cover all expenses while you remain in the U.S.. 
 -	(In case you are self-funded, partially funded, or have dependents) If you are financially sponsored by another person, bring proof of your relationship to the sponsor (such as your birth certificate), the sponsor's most recent original tax forms, and the sponsor's bankbooks and/or fixed deposit certificates.
+]
 
-==== Supporting Documents for Dependents
+#paragraph[For Dependents][
 If you have dependents, you must also provide:
 - Your spouse's CV
 -	Proof of your relationship to your spouse and/or children (e.g., marriage and birth certificates).
 -	It is preferred that families apply for their visas at the same time, but if the spouse and/or children must apply separately at a later time, they should bring a copy of the student visa holder's passport and visa, along with all other required documents.
-\
-\
-== The Visa Interview
+]
+
+=== The Visa Interview
 Arrive at the embassy/consulate 15 minutes before your scheduled time. The embassy/consulate environment is calm and formal, similar to a bank. There are several counters, with officers at each interviewing applicants. Translators are also present beside each officer in case an applicant cannot speak English. However, as a prospective PhD student at a U.S. university, you are expected to speak English. So, it is highly recommended to do the interview in English. The questions in the interview vary based on your specific case, but here are some general ones you can expect:
 -	What is the purpose of your travel to the U.S.?
 -	What kind of research have you done in your previous studies?
@@ -2840,7 +2845,7 @@ Give concise, complete, and to-the-point answers. Your answers should demonstrat
 #tip-block[While there is no official dress code, your appearance and demeanor should be consistent with your status as a student.
 ]
 
-== Outcome of the Visa Interview
+=== Outcome of the Visa Interview
 There are only two possible outcomes for a U.S. visa application. The consular officer will either issue or refuse the visa.
 Regardless of the outcome of your visa interview, you can always check your visa status #link("https://ceac.state.gov/CEACStatTracker/Status.aspx?App=NIV")[
   here].
@@ -2871,7 +2876,7 @@ If the consular officer finds you are not eligible to receive an F-1 visa, your 
 For more information about visa denial, visit the 
   #link("https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/visa-denials.html")[U.S. Department of State visa denials webpage].
 
-== Details of Visa Stamp
+=== Details of Visa Stamp
 When your visa is issued and attached to your passport, you can see some personal details. The key ones are: entries, issue date, and expiration date.
 
 #figure(
@@ -2891,7 +2896,7 @@ You can receive your F-1 visa up to 365 days before your program's start date. A
 #note-block[Before you travel to the U.S., you might want to check the #link("https://www.cbp.gov/travel/us-citizens/know-before-you-go/prohibited-and-restricted-items")[U.S. Customs and Border Protection (CBP) website] to find out which items you can bring and to make sure they are not prohibited or restricted.]
 
 
-== General Information on Visa Issuance Statistics
+=== General Information on Visa Issuance Statistics
 The U.S. Department of State publishes monthly statistics on nonimmigrant visa issuance by nationality and by post
 #link("https://travel.state.gov/content/travel/en/legal/visa-law0/visa-statistics/nonimmigrant-visa-statistics/monthly-nonimmigrant-visa-issuances.html")[here]. For example, the September 2025 data by nationality is available 
 #link("https://travel.state.gov/content/dam/visas/Statistics/Non-Immigrant-Statistics/MonthlyNIVIssuances/SEPTEMBER%202025%20-%20NIV%20Issuances%20by%20Nationality%20and%20Visa%20Class.pdf")[here], and the data by post for the same month is available
