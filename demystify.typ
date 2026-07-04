@@ -2387,19 +2387,22 @@ Either can be a good advisor, but they have different strengths and weaknesses. 
 
 === Faculty from Your Country <sec:prioritizing-faculty>
 
-Understandably, many students prefer to work with faculty from their own country. You feel more comfortable as they share the same language and culture, understanding your schools and background, and that they "get" you. So it is perfectly fine to start with faculty from your country (e.g., a #link("https://roars.dev/phd-cs-us/viet-cs-profs-us")[list of Vietnamese CS faculty] in the US).
+Understandably, many students prefer to work with faculty from their own country (e.g., 
+Chinese students with Chinese faculty, Indian students with Indian faculty
+). You feel more comfortable as they share the same language and culture, understanding your schools and background, and that they "get" you. So it is perfectly fine to start with faculty from your country (e.g., a #link("https://roars.dev/phd-cs-us/viet-cs-profs-us")[list of Vietnamese CS faculty] in the US).
 
-However, this should not be the main reason for choosing a faculty, and you should expand your search to include faculty from other countries. Research and higher education in general encourage expLORation, e.g., students often go to different grad schools than their undergrad schools, and switching fields (and even advisors) is more common than you might think. It also won't be fun to be in a lab with students with similar background all speaking the same language all the time; you will not learn as much from each other.
+However, this should not be the main reason for choosing a faculty (@chap:choosing-advisor), and you should expand your search to include faculty from other countries. Research and higher education in general encourage exploration, e.g., students often go to different grad schools than their undergrad schools, and switching fields (and even advisors) is more common than you might think. It also won't be fun to be in a lab with students with similar background all speaking the same language all the time; you will not learn as much from each other.
 
 #remark-box[
-  My #link("https://roars.dev")[research group] has many Vietnamese, but I also have many non-Vietnamese students, e.g., from China, Romania, Rwanda, Pakistan, and most of my undergrads are domestic US students (@chap:domestic-students). It is more fun this way—they get to learn from each other and share different perspectives, and of course get to try exotic food and learn about their history from different countries (it amazes me how knowledgeable and enthusiastic students are about food!).
+  My #link("https://roars.dev")[Roar] research group has many Vietnamese, but I also have many non-Vietnamese students, e.g., from China, Romania, Rwanda, Pakistan, and most of my undergrads are domestic US students (@chap:domestic-students). It is more fun this way—they get to learn from each other and share different perspectives and cultures
+  (it also amazes me how knowledgeable and enthusiastic students are about food!).
 ]
 
 Some students might hesitate to apply to a lab where they see the faculty has many students from their country already, i.e., thinking that it's a red flag. They might think they won't fit in or the prof. is biased toward students from their country.
 
 However, the main reason a prof. has many students from a particular country can simply be because students from that country apply more to that prof. Vietnamese students tend to apply to Vietnamese profs. more, Chinese students tend to apply to Chinese profs. more, etc. Most profs., in my experience, _do not_ have preference for students from any specific country and simply take students who are a good fit for their research group.
 
-Thus, don't worry about this too much and just apply to the profs. you think are a good fit for you (@sec:finding-advisor). In fact, this might be an advantage because profs. who have many students from their own country might want to diversify their group and take students with different backgrounds.
+Thus, don't worry about this too much and just apply to the profs. you think are a good fit for you (@sec:finding-advisor). In fact, this might be an _advantage_ because profs. who have many students from their own country might want to diversify their group and take students with different backgrounds.
 
 === Should I Contact a Prof. Before Applying? How to Get a Positive Reply? <sec:contact>
 
@@ -2407,7 +2410,7 @@ Thus, don't worry about this too much and just apply to the profs. you think are
 
 Faculty often receive "cold" emails from prospective students. Most of the time, we #highlight[just ignore such emails] (@sec:busy), but on some rare occasions, we do answer them. _So how to write an email that gets our attention?_
 
-First, if you want to contact a prof. with the purpose of checking about _potential admission chance_, *don't*. We don't know and can't answer because, as explained in @chap:evalapps, we don't make individual decisions and might not even be assigned to evaluate your application. It is the same as sending a paper draft to a journal editor or program chair and asking them if your paper has a chance. 
+First, if you want to contact a prof. with the purpose of checking about _potential admission chance_, *don't*. We don't know and can't answer because, as explained in @chap:evalapps and @sec:direct-vs-committee, we don't make individual decisions and might not even be assigned to evaluate your application. It is the same as sending a paper draft to a journal editor or program chair and asking them if your paper has a chance. 
 
 So how to get someone to look at your profile and give input? You could ask your professors, LOR writers, collaborators, or those who have previously applied. For this kind of feedback, ask someone you have a personal connection with.
 
@@ -2426,11 +2429,11 @@ Below is a good example:
 
   _[also strong, but more conventional and a bit boring]_ I have read your TSE'21 paper on numerical invariant generation, and I am interested in this line of dynamic invariant research. I have worked (optional: with prof. Y at Z) on static program analysis and I think it could be used to tackle the spurious issues mentioned in your paper. I have a short paper at conference/workshop C and a project on symbolic execution (Github repo G).
 
-  [something more personal and will catch my attention] I also have read your advising guide emphasizing independence and result-oriented research, and I think this is a good fit because ...
+  _[something more personal and will catch my attention]_ I also have read your advising guide emphasizing independence and result-oriented research, and I think this is a good fit because ...
 
   ---
 
-  This is a good example because it is written just for me. It shows that the student has done their homework, followed my instructions, and knows my work well.
+  _[This is a good example because it is written just for me. It shows that the student has done their homework, followed my instructions, and knows my work well.]_
 ]
 
 Many profs. explicitly state on their website how prospective students should (or should not) contact them, e.g., using specific email subjects and additional information (e.g., read specific papers, try some programming tasks). If they don't state anything, you can still customize your email by showing that you have read their papers know their work. This is a good way to show that you are genuinely interested in their work and not just sending a generic email.
@@ -2657,9 +2660,16 @@ For children:
 - *Education:* F-2 children can attend K-12 schools but cannot pursue higher education full-time.
 - *Work Restrictions:* Like F-2 spouses, children are not allowed to work under any circumstances.
 F-2 visa holders must leave the US if the primary F-1 student visa holder loses status or completes their program.
-\
-\
+
+
 == Documents you need for the visa interview
+
+#emph-block[
+This section was contributed by a student who kindly shared her experience and advice on how to prepare for the visa interview (🙏, and if you have any to share, please do).
+
+]
+
+
 You must attend an in-person visa interview at the consular section. In general, you are allowed to enter the consular section only if you have a scheduled appointment. The embassy/consulate where you scheduled your visa interview will email you instructions and let you know what to bring, but here is a common list:
 -	I-20 form
 -	I-901 payment confirmation
@@ -2670,10 +2680,10 @@ You must attend an in-person visa interview at the consular section. In general,
 -	Funding letter (if applicable)
 -	Research plan
 -	Statement of purpose
--	Applicant’s CV
--	Intended PhD advisor’s CV
+-	Applicant's CV
+-	Intended PhD advisor's CV
 -	Passport
--	Applicant’s photo
+-	Applicant's photo
 -	Supporting documents
 If any of your documents are in another language, bring the original and an English translation. We will discuss each document in detail as follows.
 \
@@ -2695,9 +2705,8 @@ When you receive your I-20 form, you will see a SEVIS (Student and Exchange Visa
 #link("http://www.fmjfee.com")[
   #text(fill: blue)[I-901 Form website]].
 
-*Tip:* One option you have regarding your SEVIS ID is that, if you change your mind about the PhD program you want to join and decide to attend another program, you can transfer the SEVIS ID to the new program within a one-year timeframe, free of charge.
-\
-\
+#tip-block[One option you have regarding your SEVIS ID is that, if you change your mind about the PhD program you want to join and decide to attend another program, you can transfer the SEVIS ID to the new program within a one-year timeframe, free of charge.]
+
 === DS-160 Form Submission Confirmation
 The DS-160 form is an online form that applicants must complete for a non-immigrant visa application. After receiving your I-20, you must visit the
 #link("https://ceac.state.gov/genniv/")[
@@ -2706,8 +2715,7 @@ The DS-160 form is an online form that applicants must complete for a non-immigr
 \
 \
 === Visa Appointment Scheduling Confirmation
-You should schedule your visa interview appointments at the U.S. embassy/consulate in your country of nationality or of residence. If you are a national of a country where the U.S. government does not conduct routine nonimmigrant visa operations, you must apply at the designated embassy/consulate unless you reside elsewhere. For more information, visit #link("https://travel.state.gov/content/travel/en/News/visas-news/adjudicating-niv-applicants-in-their-country-of-residence.html")[
-  #text(fill: blue)[here]].
+You should schedule your visa interview appointments at the U.S. embassy/consulate in your country of nationality or of residence. If you are a national of a country where the U.S. government does not conduct routine nonimmigrant visa operations, you must apply at the #link("https://travel.state.gov/content/travel/en/News/visas-news/adjudicating-niv-applicants-in-their-country-of-residence.html")[designated embassy/consulate] unless you reside elsewhere.
 
 #show figure.where(
   kind: table
@@ -2715,7 +2723,7 @@ You should schedule your visa interview appointments at the U.S. embassy/consula
 
 #figure(
   kind: table,
-  caption: [Designated Locations for Nonimmigrant Visa Processing],
+  caption: [Designated Locations for Nonimmigrant Visa Processing (as of 2026)],
 )[
   #table(
     columns: 2,
@@ -2752,58 +2760,57 @@ You should schedule your visa interview appointments at the U.S. embassy/consula
 After determining where you should schedule your visa interview, go to the #link("https://www.ustraveldocs.com/")[
   #text(fill: blue)[USTravelDocs website]], select the location and language, then select “Nonimmigrant Visa” to create a new account.
 
-*Note:* You should check the #link("https://travel.state.gov/content/travel/en/News/visas-news/suspension-of-visa-issuance-to-foreign-nationals-to-protect-the-security-of-the-united-states.html")[
-  #text(fill: blue)[U.S. Department of State website]] to see whether there are any entry restrictions or travel bans for citizens of your country that would prevent you from obtaining the visa.
-\
-\
+#note-block[You should check the #link("https://travel.state.gov/content/travel/en/News/visas-news/suspension-of-visa-issuance-to-foreign-nationals-to-protect-the-security-of-the-united-states.html")[
+ U.S. Department of State website] to see whether there are any entry restrictions or travel bans for citizens of your country that would prevent you from obtaining the visa.
+]
+
 === MRV Fee Payment Confirmation
 Now that you have created an account on 
-the #link("https://www.ustraveldocs.com/")[
-  #text(fill: blue)[USTravelDocs website]], you can select the visa type you are applying for and the number of applicants accompanying you. Then you must pay the MRV fee of \$185. Visa application fees are non-refundable and non-transferable. You can use this fee to schedule an appointment within one year of the payment date. After this payment, you can access the calendar, choose your preferred date and time, and book your visa interview appointment.
+the #link("https://www.ustraveldocs.com/")[USTravelDocs website], you can select the visa type you are applying for and the number of applicants accompanying you. Then you must pay the MRV fee of \$185. Visa application fees are non-refundable and non-transferable. You can use this fee to schedule an appointment within one year of the payment date. After this payment, you can access the calendar, choose your preferred date and time, and book your visa interview appointment.
 
-*Tip:* You can reschedule your appointment a limited number of times for free.
-\
-\
+#tip-block[You can reschedule your appointment a limited number of times for free.]
+
+
 === Admission Letter
 You should print and bring your admission letter to the interview.
-\
-\
+
+
 === Funding Letter (if applicable)
 You should print and bring your funding letter to the interview.
-\
-\
+
+
 === Research Plan
+//TODO: not sure about this as research plan is not a common requirement for US PhD programs. 
+
 You need to provide a letter from your U.S. academic advisor, known as the Research Plan, which:
 -	Explains goals of your research and any practical applications;
 -	Identifies the lab or center in which research will take place and provides details on what you will have access to in the university lab;
 -	States source and amounts of any U.S. government money (or funding from U.S. corporations assisting the U.S. government) to be used to support that research; and
 -	Describes any export-controlled technology and/or information that will be shared with you.
 
-This letter should be printed on the university’s letterhead and originally signed by your academic advisor. Your academic advisor can scan and email it to you. Then you can print and take it to the interview.
+This letter should be printed on the university's letterhead and originally signed by your academic advisor. Your academic advisor can scan and email it to you. Then you can print and take it to the interview.
 \
 \
 === Statement of Purpose
 It is the same statement of purpose that you submitted when you applied to the PhD program at the university.
 \
 \
-=== Applicant’s CV
+=== Applicant's CV
 It is the same CV that you submitted when you applied to the PhD program at the university. In your CV, you should: 
 -	List your entire educational background, including dates attended, degrees received, projects worked on, names of professors you worked with, and any publications you wrote.
 -	List your entire employment background, including employers, dates, locations, specific duties and responsibilities.
 -	List references in your country of birth or residence
 \
-=== Intended PhD Advisor’s CV
+=== Intended PhD Advisor's CV
 Ask your U.S. faculty advisor for a detailed resume and list of published work.
 \
 \
 === Passport
-Your current passport must be valid for at least six months beyond the period of stay in the U.S. (unless exempt by #link("https://www.cbp.gov/document/bulletins/six-month-validity-update")[
-  #text(fill: blue)[country-specific agreements]]). Also, if applicable, bring the passport containing the most recently issued U.S. visa.
+Your current passport must be valid for at least six months beyond the period of stay in the U.S. (unless exempt by #link("https://www.cbp.gov/document/bulletins/six-month-validity-update")[country-specific agreements]). Also, if applicable, bring the passport containing the most recently issued U.S. visa.
 \
 \
-=== Applicant’s Photo
-You should take a 51 x 51 millimeter (2 x 2 inches) color photo within the last 6 months before the visa interview. For the photo, you should follow the Department of State #link("https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/photos.html")[
-  #text(fill: blue)[photo guidelines]].
+=== Applicant's Photo
+You should take a 51 x 51 millimeter (2 x 2 inches) color photo within the last 6 months before the visa interview. For the photo, you should follow the Department of State #link("https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/photos.html")[photo guidelines].
 \
 \
 === Supporting Documents
@@ -2815,7 +2822,7 @@ You may also bring any supporting documents you believe support the information 
 
 ==== Supporting Documents for Dependents
 If you have dependents, you must also provide:
-- Your spouse’s CV
+- Your spouse's CV
 -	Proof of your relationship to your spouse and/or children (e.g., marriage and birth certificates).
 -	It is preferred that families apply for their visas at the same time, but if the spouse and/or children must apply separately at a later time, they should bring a copy of the student visa holder's passport and visa, along with all other required documents.
 \
@@ -2836,50 +2843,41 @@ Arrive at the embassy/consulate 15 minutes before your scheduled time. The embas
 
 Give concise, complete, and to-the-point answers. Your answers should demonstrate seriousness, preparation, and language proficiency. Speak confidently and naturally, and avoid sounding memorized or robotic. If you have practiced interview questions with a friend or AI tools, avoid giving the officer pre-prepared speeches or scripted responses. An officer can easily detect memorized responses, and doing so has a negative effect on the impression you make during the interview. If you are a non-native English speaker, do not try to impress the officer by memorizing advanced vocabulary or complex phrases that you would not normally use. Instead, speak in your own words and at your natural level of English proficiency. Doing so will make you sound more genuine and credible.
 
-*Tip:* While there is no official dress code, your appearance and demeanor should be consistent with your status as a student.
-\
-\
+#tip-block[While there is no official dress code, your appearance and demeanor should be consistent with your status as a student.
+]
+
 == Outcome of the Visa Interview
 There are only two possible outcomes for a U.S. visa application. The consular officer will either issue or refuse the visa.
 Regardless of the outcome of your visa interview, you can always check your visa status #link("https://ceac.state.gov/CEACStatTracker/Status.aspx?App=NIV")[
-  #text(fill: blue)[here]].
-\
-\
-=== Approval
+  here].
+
+#paragraph[Approval][
 The officer might say your visa is approved and give you a paper that shows the outcome of your interview. He/she will keep your passport to process and issue your visa, and say they will notify you by email so you can pick it up in a few days.
-\
-\
-=== Refusal
+]
+
+#paragraph[Refusal][
 If the consular officer finds you are not eligible to receive an F-1 visa, your visa application will be denied (refused), and you will be provided a reason for the denial. There are many reasons a visa applicant could be found ineligible for a visa. These reasons, called ineligibilities, are listed in the Immigration and Nationality Act (INA) and other immigration laws. Here are the common ones:
-\
-\
-==== INA section 221(g)
-A visa denial under section 221(g) of the INA means that the consular officer did not have all of the information required to conclude that you are eligible to receive a visa. This means you are not eligible for the visa now, for one of two reasons: missing documents and/or administrative processing.
-\
-\
-===== Your application is incomplete and/or further documentation is required
-Applicants whose application forms or other documentation are incomplete are refused. If further documents are required to complete your case, you will be informed what is needed and how to provide it to the embassy/consulate. You will also be given a letter stating your application has been denied under 221(g) and listing which documents you need to provide.
+]
 
-If your application was denied because documentation or information is missing, you can provide the missing documents or information as soon as possible. After submitting the documentation, your visa application can then be re-assessed to determine whether you qualify for a visa. You have one year from the date you were refused a visa to submit the additional information. Otherwise, if you do not provide the required additional information within one year, you must reapply for the visa and pay another application fee.
-\
-\
-===== Administrative processing
-The consular officer could not conclude that you were eligible for the visa sought, and additional administrative processing of your application is required. You will be given a letter stating this; the embassy/consulate will contact you when the administrative processing is complete.
+- INA section 221(g): A visa denial under section 221(g) of the INA means that the consular officer did not have all of the information required to conclude that you are eligible to receive a visa. This means you are not eligible for the visa now, for one of two reasons: missing documents and/or administrative processing.
+  + Your application is incomplete and/or further documentation is required:  Applicants whose application forms or other documentation are incomplete are refused. If further documents are required to complete your case, you will be informed what is needed and how to provide it to the embassy/consulate. You will also be given a letter stating your application has been denied under 221(g) and listing which documents you need to provide.
 
-If your application requires further administrative processing, this takes additional time after your interview. Processing times can vary based on individual circumstances. It is possible that a consular officer will reconsider a visa application refused under 221(g) at a later date, based on additional information or upon the resolution of administrative processing, and determine that the applicant is eligible.  
-\
-\
-==== INA section 214(b)
-If you are refused a visa under section 214(b), it means that you:
--	Did not sufficiently demonstrate to the consular officer that you qualify for the F-1 visa; and/or
--	Did not overcome the presumption of immigrant intent by sufficiently demonstrating that you have strong ties to your home country that will compel you to leave the U.S. at the end of your temporary stay.
-A refusal or ineligibility under section 214(b) is not permanent and is for that specific application. There is no appeal process. After being found ineligible for a visa, you may reapply in the future. To reapply, you must complete a new DS-160 form, pay another MRV fee, and schedule an appointment for a new interview. You will not need to pay the SEVIS fee again. In your new visa application, you should be able to present evidence of significant changes in circumstances since your last application.
+    If your application was denied because documentation or information is missing, you can provide the missing documents or information as soon as possible. After submitting the documentation, your visa application can then be re-assessed to determine whether you qualify for a visa. You have one year from the date you were refused a visa to submit the additional information. Otherwise, if you do not provide the required additional information within one year, you must reapply for the visa and pay another application fee.
+  + Administrative processing: The consular officer could not conclude that you were eligible for the visa sought, and additional administrative processing of your application is required. You will be given a letter stating this; the embassy/consulate will contact you when the administrative processing is complete.
+
+    If your application requires further administrative processing, this takes additional time after your interview. Processing times can vary based on individual circumstances. It is possible that a consular officer will reconsider a visa application refused under 221(g) at a later date, based on additional information or upon the resolution of administrative processing, and determine that the applicant is eligible.  
+
+- INA section 214(b)
+  If you are refused a visa under section 214(b), it means that you:
+  -	Did not sufficiently demonstrate to the consular officer that you qualify for the F-1 visa; and/or
+  -	Did not overcome the presumption of immigrant intent by sufficiently demonstrating that you have strong ties to your home country that will compel you to leave the U.S. at the end of your temporary stay.
+
+    A refusal or ineligibility under section 214(b) is not permanent and is for that specific application. There is no appeal process. After being found ineligible for a visa, you may reapply in the future. To reapply, you must complete a new DS-160 form, pay another MRV fee, and schedule an appointment for a new interview. You will not need to pay the SEVIS fee again. In your new visa application, you should be able to present evidence of significant changes in circumstances since your last application.
 
 For more information about visa denial, visit the 
-#link("https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/visa-denials.html")[
-  #text(fill: blue)[U.S. Department of State visa denials webpage]].
-\
-\
+  #link("https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/visa-denials.html")[
+    #text(fill: blue)[U.S. Department of State visa denials webpage]].
+
 == Details of Visa Stamp
 When your visa is issued and attached to your passport, you can see some personal details. The key ones are: entries, issue date, and expiration date.
 
@@ -2888,18 +2886,18 @@ image("files/visa-stamp.jpg", width: 70%),
   caption: [A U.S. visa stamp #link("https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/frequently-asked-questions/what-is-us-visa.html")[#text(fill: blue)[[Reference]]]]
 )
 \
-\
-=== Entries
-When your visa is issued, check the "Entries" field on your visa. If it contains a specific number, you can enter the U.S. that many times using this visa. After you have used all permitted entries, you must reapply for a new visa to enter the U.S. again. If the "Entries" field is marked "M", you can enter the U.S. as many times as you want until the visa's expiration date.
-\
-\
-=== Timeframe of your first entry to the U.S. with the F-1 visa
-You can receive your F-1 visa up to 365 days before your program's start date. Any date between the issue date and the expiration date listed on your visa is valid for travel to the U.S. However, your I-20 form shows the earliest admission date, which is one month before the start date of your program. Therefore, you can only enter the U.S. after that date with the F-1 visa. If you want your first entry into the U.S. on an F-1 visa to be after your program's start date, you need to ask your university for late-arrival permission. Without a late-arrival arrangement, the Customs and Border Protection officer at the port of entry may deny your admission.
 
-*Note:* Before you travel to the U.S., you might want to check the #link("https://www.cbp.gov/travel/us-citizens/know-before-you-go/prohibited-and-restricted-items")[
-  #text(fill: blue)[U.S. Customs and Border Protection (CBP) website]] to find out which items you can bring and to make sure they are not prohibited or restricted.
-\
-\
+#paragraph[Entries][
+When your visa is issued, check the "Entries" field on your visa. If it contains a specific number, you can enter the U.S. that many times using this visa. After you have used all permitted entries, you must reapply for a new visa to enter the U.S. again. If the "Entries" field is marked "M", you can enter the U.S. as many times as you want until the visa's expiration date.
+]
+
+#paragraph[Timeframe of your first entry to the U.S. with the F-1 visa][
+You can receive your F-1 visa up to 365 days before your program's start date. Any date between the issue date and the expiration date listed on your visa is valid for travel to the U.S. However, your I-20 form shows the earliest admission date, which is one month before the start date of your program. Therefore, you can only enter the U.S. after that date with the F-1 visa. If you want your first entry into the U.S. on an F-1 visa to be after your program's start date, you need to ask your university for late-arrival permission. Without a late-arrival arrangement, the Customs and Border Protection officer at the port of entry may deny your admission.
+]
+
+#note-block[Before you travel to the U.S., you might want to check the #link("https://www.cbp.gov/travel/us-citizens/know-before-you-go/prohibited-and-restricted-items")[U.S. Customs and Border Protection (CBP) website] to find out which items you can bring and to make sure they are not prohibited or restricted.]
+
+
 == General Information on Visa Issuance Statistics
 The U.S. Department of State publishes monthly statistics on nonimmigrant visa issuance by nationality and by post
 #link("https://travel.state.gov/content/travel/en/legal/visa-law0/visa-statistics/nonimmigrant-visa-statistics/monthly-nonimmigrant-visa-issuances.html")[
@@ -3188,7 +3186,7 @@ This is less common but several places offer virtual internships and research pr
 
 // % Special Situations
 // % 	•	Disputes and Conflicts: If disagreements arise, try to resolve them internally, ideally with lab policies set in advance. If necessary, department chairs, deans, or professional guidelines can mediate.
-// % 	•	Students and Mentors: Students often deserve first authorship when the work stems from their thesis or project, with advisors typically listed last. However, advisors should resist the temptation to minimize a student’s contribution.
+// % 	•	Students and Mentors: Students often deserve first authorship when the work stems from their thesis or project, with advisors typically listed last. However, advisors should resist the temptation to minimize a student's contribution.
 // % 	•	Cross-disciplinary Teams: Different disciplines may have conflicting norms. In such cases, negotiate a compromise and explain the order in a contribution statement.
 // % 	•	Reproducibility and Responsibility: Every listed author should be willing to stand publicly behind the integrity of the work. Even middle authors bear responsibility—not just the first or last.
 
