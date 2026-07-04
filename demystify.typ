@@ -366,7 +366,7 @@ CS is a broad academic discipline with many specialized areas of research. Under
   caption: [Disciplines "arranged by purity." CS sits close to math on this spectrum. Source: #link("https://xkcd.com/435/")[xkcd 435], #link("https://creativecommons.org/licenses/by-nc/2.5/")[CC BY-NC 2.5].],
 ) <fig:purity>
 
-#definition[STEM][#gls("STEM") collectively refers to the fields of Science, Technology, Engineering, and Mathematics: 
+#definition-box[STEM][#gls("STEM") collectively refers to the fields of Science, Technology, Engineering, and Mathematics: 
 
 - *Science:* Physics, Chemistry, Biology, Geology
 - *Technology:* Computer Science, Cybersecurity, Data Science, Information Technology
@@ -595,7 +595,9 @@ After screening, your application is complete and forwarded to the CS department
 === Admission Committee <sec:adcom>
 // \sectioninfo{Adcom members are faculty who evaluate your application. They consider various factors, e.g., research experience, LORs, SOP}
 
-Your applications are reviewed by a PhD #gls("adcom", first:true), which consists of CS faculty with diverse expertise (e.g., AI, Systems, Theory, SE, HCI). Some committees may include affiliated faculty from other disciplines.
+#definition-box[Admission Committee or Adcom][The PhD #gls("adcom", first:true) is a committee of CS faculty who review PhD applications and make admission decisions. Each application is typically evaluated by about three of its members.]
+
+The adcom consists of CS faculty with diverse expertise (e.g., AI, Systems, Theory, SE, HCI). Some committees may include affiliated faculty from other disciplines.
 
 The size and workload of the adcom depend on the department. At GMU, the PhD adcom has about 15--20 faculty, each reviewing \~30 applications. Large schools often have separate adcoms for MS programs (@chap:ms).
 
@@ -681,6 +683,8 @@ Unfortunately, even if all reviewers recommend a student, they might not be admi
 
 Discussions on Reddit and Discord on graduate admissions often mention _"direct admit"_---the student is "directly admitted" by an individual faculty vs _"committee admit"_---the student is admitted by the adcom committee.  Answers to these questions---often from applicants who are not familiar with the admission process---make it sound more mysterious than it actually is.
 
+#definition-box[Direct Admit vs. Committee Admit][A _direct admit_ is a student admitted largely because an individual faculty member wants to advise (and often fund) them; a _committee admit_ is admitted through the regular adcom review. In reality, _all_ applications go through the committee---a "direct admit" simply has a faculty advocate, which makes the committee much less likely to contest the decision.]
+
 The short answer is that _all_ applications go through the adcom committee. However, admission decision is _heavily influenced_ by whether an individual faculty member is interested in the student and willing to advise them, but this is still part of the committee review process. So even if a student is "directly admitted" by a faculty member, their application still likely goes through normal committee review process (though it will be _much less likely_ be contested as someone is already taking responsibility for the student), and the final decision is made by the committee based on the evaluations of all reviewers ("committee admit").
 
 
@@ -748,7 +752,9 @@ The committee will look at various factors, but the most important ones are #gls
   caption: [A #gls("LOR") from a professor who barely remembers you is generic and weak (@sec:generic-letters)---ask people who know your research well. Source: #link("https://phdcomics.com")[PhD Comics] (© Jorge Cham).],
 ) <fig:lor-comic>
 
-#gls("LOR",plural:true) are crucial for PhD because (i) they paint a picture of your research ability and potential from someone who has worked closely with you, and (ii) adcom trust the opinions of your LOR writers, who are usually faculty members or researchers who have the expertise and reputation to evaluate your research ability (@sec:LOR-writers). Most PhD programs require at least _two_ LORs. 
+#definition-box[Letter of Recommendation or LOR][A #gls("LOR") is a confidential letter (@sec:waive-right), written by someone who has worked closely with you (typically a professor or researcher), that evaluates your research ability and potential. Most PhD programs require at least _two_ LORs.]
+
+#gls("LOR",plural:true) are crucial for PhD because (i) they paint a picture of your research ability and potential from someone who has worked closely with you, and (ii) adcom trust the opinions of your LOR writers, who are usually faculty members or researchers who have the expertise and reputation to evaluate your research ability (@sec:LOR-writers).
 
 #example-box[
 When reviewing applications (@sec:ievaluate), I usually read LORs first, then the SOP (@chap:sop). If these make a strong impression, I skim through the rest of the materials; if not, I pay closer attention to other aspects before making a decision.
@@ -1078,7 +1084,9 @@ So do talk about them in your SOP (@chap:sop) and have your writers mention them
   caption: [What _not_ to write in your #gls("SOP") (@sec:kiss-of-death-sop). Source: #link("https://phdcomics.com")[PhD Comics] (© Jorge Cham).],
 ) <fig:sop-comic>
 
-While you might not have control over LORs (@chap:LOR) or where you go to school (@chap:your-school), you do have control over your #gls("SOP",first:true) or personal statement#footnote[Some schools separate these documents and ask you to write both: SOP, which focuses on research experiences, and personal statement, which covers more personal aspects, e.g., why PhD, challenges, etc.]. A well-written SOP also demonstrates that you can communicate effectively, which is crucial in research and important for GTA funding (@chap:funding). Many SOP samples for CS are #link("https://cs-sop.org/")[available here].
+#definition-box[Statement of Purpose or SOP][The #gls("SOP", first:true) is an essay describing your research experience, interests, and goals, and why you are applying to a particular program. Some schools separate these into two documents: an SOP, which focuses on research experiences, and a _personal statement_, which covers more personal aspects, e.g., why PhD, challenges you have overcome.]
+
+While you might not have control over LORs (@chap:LOR) or where you go to school (@chap:your-school), you do have control over your #gls("SOP") or personal statement. A well-written SOP also demonstrates that you can communicate effectively, which is crucial in research and important for GTA funding (@chap:funding). Many SOP samples for CS are #link("https://cs-sop.org/")[available here].
 
 In your SOP, focus on research potential (@chap:research-experience) and convince reviewers through your experience, e.g., published papers (@sec:publications). Back up your claims with *concrete evidence*. For example, if you say you have teaching experience, show what you did, e.g., undergraduate TA or mentoring someone. If you say you worked on a research project, show some results, e.g., paper submitted (or even rejected), achieved certain performance improvement over the state of the art.
 
@@ -1780,7 +1788,10 @@ Note that funding is typically more available for PhD students than MS (@sec:ms-
 ) <tab:funding>
 
 == Graduate Assistantship (GTA/GRA) <sec:ta-ra>
-The most common type of funding is a *graduate #gls("assistantship")*, which comes in two main forms: #gls("TA", first:true) and #gls("RA", first:true). Both positions typically include a tuition waiver (so you don't pay tuition), health insurance (which is required in the US), and a #gls("stipend") (your salary). Some universities also offer discounts or insurance coverage for spouses and children.
+
+#definition-box[Graduate Assistantship][A graduate #gls("assistantship") is a funded position that comes in two main forms: #gls("TA", first:true) and #gls("RA", first:true). Both typically include a *tuition waiver* (so you don't pay tuition), *health insurance* (which is required in the US), and a #gls("stipend") (your salary).]
+
+The graduate assistantship is the most common type of PhD funding. Some universities also offer discounts or insurance coverage for spouses and children.
 
 A few notes about stipends:
 - The stipend amount *varies* by location (e.g., higher in expensive areas like DC than in Lincoln, Nebraska), university, and sometimes by department.
@@ -1843,8 +1854,9 @@ Typically, each grant can support one or at most two students per year, and each
 
 == Fellowships/Scholarships <sec:fellowships>
 
-Fellowship is another type of funding that students can get from the university, industries, or government.
+#definition-box[Fellowship][Fellowship is another type of funding that students can get from the university, industries, or government.
 Fellowships are typically competitive and generous, giving pretty much all benefits tuition/insurance that a GTA/GRA has.  They might even give higher stipends (including summer) and open doors for job opportunities such as internships.
+]
 
 #paragraph[How to get Fellowship?][Many schools provide fellowships to attract students. You likely will not need to do anything and adcom will recommend such fellowships to strong students. Some schools automatically offer a fellowship to all accepted students, while others only award it to a limited number of admitted students, such as the top percentile.]
 
@@ -2645,7 +2657,9 @@ But there's a good chance that we would respond to well-written emails (@sec:con
   caption: [#gls("F-1") student visa process.  Source: #link("https://phdcomics.com")[PhD Comics] (© Jorge Cham).],
 ) <fig:visa>
 
-As defined in @chap:glossary, international students are those who would need a visa to study in the US.  In most cases, the #gls("F-1", first:true) is the main visa needed to study full-time at an accredited institution.  Here are some key points about F-1:
+#definition-box[F-1 Visa][The #gls("F-1", first:true) is the main visa needed to study full-time at an accredited US institution. It allows limited on-campus work; off-campus work such as internships requires #gls("CPT-OPT") authorization, described below.]
+
+As defined in @chap:glossary, international students are those who would need a visa to study in the US.  Here are some key points about F-1:
 
 - *Employment:* You are allowed to work on-campus for up to *20 hours per week during the #gls("AY")* (because you still need to take classes) and *full-time* (typically 40 hrs) during official school breaks (e.g., summer and winter breaks). Off-campus employment, such as internship, requires authorization, which can be obtained through CPT and OPT programs described below.
 
@@ -2952,6 +2966,8 @@ You are also more familiar with the US education system and academic culture (@c
 While both MS and PhD programs are graduate degrees, they are _very different_ in terms of objective, admission requirements, course requirements, duration, and funding. This section discusses the differences and provides guidance on applying to MS programs.
 
 == Differences between PhD and MS <sec:phd-vs-ms>
+
+#definition-box[MS vs. PhD][An MS is a #highlight[coursework degree]: typically 2 years, usually _not_ funded (@sec:ms-funding), and prepares you for industry. A PhD is a #highlight[research degree]: 5--7 years, funded (@chap:funding), and prepares you for research careers (@sec:worth-it).]
 
 #figure(
   caption: [MS vs. PhD],
