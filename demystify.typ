@@ -2666,7 +2666,7 @@ F-2 visa holders must leave the US if the primary F-1 student visa holder loses 
 == Visa Documents and Interview
 
 #emph-block[
-This section was contributed by a student who kindly shared her experience and advice on how to prepare for the visa interview (🙏, and if you have any to share, please do).
+This section was contributed by Hediyeh Savari, who kindly shared her experience and advice on how to prepare for the visa interview (🙏, and if you have any to share, please do).
 ]
 
 
