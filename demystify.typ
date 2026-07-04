@@ -291,7 +291,7 @@ Full funding for CS PhD students is the norm in the US, and I'd go as far as to 
 
 So far I have tried to convince you that getting into a CS PhD program in the US is not as hard or as expensive as you might think. But _should_ you do a PhD at all? Te honest answer is: _not everyone should_.
 
-A CS PhD is a #highlight[5--6 year commitment] (@sec:time) that mainly trains you to do _research_. If your goal is to become a professor, an industry research scientist, or to work on hard open-ended problems in a national lab or research-heavy team, then a PhD is essentially required and well worth it. If your goal is to be a strong software engineer at a tech company, a PhD is _not_ required and, in many cases, not the most efficient path (learning _vibe coding_ with LLMs is probably a better way to go).
+#definition-box[A CS PhD is a #highlight[5--6 year commitment] (@sec:time) that mainly trains you to do _research_. If your goal is to become a professor, an industry research scientist, or to work on hard open-ended problems in a national lab or research-heavy team, then a PhD is essentially required and well worth it. If your goal is to be a strong software engineer at a tech company, a PhD is _not_ required and, in many cases, not the most efficient path (learning _vibe coding_ with LLMs is probably a better way to go).]
 
 .
 
@@ -333,7 +333,9 @@ If yes, you are the kind of person who tends to thrive. If the PhD is mainly a m
 //\sectioninfo{A PhD in CS is a \textbf{research} degree that transforms you into a researcher in a specific area of CS.
 // You will become an expert in a particular topic and know more about it than anyone else in the world (in many cases even your advisor).}
 
+#definition-box[
 A PhD in CS is a #highlight[research degree] in Computer Science. Unlike undergraduate or even Master's programs (@chap:ms), which focus on breadth of knowledge through coursework, it is about _depth_ and pushing the boundary of a specific area within a CS fields, such as software verification within the field of Programming Languages or Formal Methods (@sec:fields-and-areas). You will become an expert in your area of research and contribute something new to the field that has never been done before. 
+]
 
 Job-wise, a CS PhD is the standard credential for positions where doing research _is_ the job. In academia, it is a hard requirement for tenure-track professorships (@sec:faculty-types) and most postdoc and research faculty roles. In industry, it is expected (and often required) for titles like _research scientist_ or _applied scientist_ at places such as Google DeepMind, Microsoft Research, and Meta AI, and it is highly valued for researcher and senior R&D roles. It also qualifies you for research staff positions at national labs (e.g., Sandia, Oak Ridge) and government agencies, (e.g., NSF, DOE, Defense Research) and for founding or early technical roles at deep-tech startups. Note that for _ordinary software engineering_ jobs, however, a PhD is rarely required (though Google and Amazon often hire PhDs as software engineers)---the degree pays off specifically when the job involves open-ended problems no one yet knows how to solve.
 
@@ -1893,7 +1895,7 @@ For a full breakdown of how much a graduate student costs, see @sec:ra-cost.
 
 PhD students might wonder why their #gls("stipend") is low compared to the large grants their advisors get. They also wonder why their offer letters sometimes show that their benefits are higher than what they receive as stipend (e.g., your financial assistance says you get a package of \$60K, but your stipend is only \$30K).  The reason is that the cost of supporting a PhD student is much higher than just their stipend.  In fact, the total cost of supporting a PhD student can be around \$70K per year, which includes not only the stipend but also tuition, health insurance, and other expenses. Over the course of a 5-6 year PhD program, this can add up to around \$400K.
 
-#draftbanner(note: "This image (files/c6.png) is the SAME LOR comic used at the start of @chap:LOR (fig:lor-comic), and it looks misplaced here in the cost section---it has nothing to do with PhD cost. Did you mean a different cartoon? I left the image but removed the duplicate display; pick a fitting one or delete.")
+// #draftbanner(note: "This image (files/c6.png) is the SAME LOR comic used at the start of @chap:LOR (fig:lor-comic), and it looks misplaced here in the cost section---it has nothing to do with PhD cost. May be I mean a different cartoon?")
 
 #figure(
   caption: [GRA cost breakdown. F & A is Facilities & Administrative Cost Base and MTDC is Modified Total Direct Cost. These are things that the university can charge overhead to.],
@@ -1934,7 +1936,7 @@ In the end, the total budget comes out to be \$73K/year to support a PhD student
 
 == Practical Finances for International Students <chap:practical-finances>
 
-#draftbanner(note: "I'm not a tax advisor---add a disclaimer and tell readers to confirm with the international student office. Numbers here are ballpark; update them. Maybe move parts of this into @chap:cultural.")
+#draftbanner(note: "Maybe move parts of this into @chap:cultural.")
 
 Your funding (@chap:funding) covers tuition, health insurance, and a stipend, so you will _not_ go into debt for your PhD. But a stipend is modest, and there are some practical money matters---especially for international students---that catch people off guard. This section is a quick survival guide.
 
@@ -1975,7 +1977,7 @@ Most US universities have CS programs, but many _do not_ have a _CS PhD_ program
 
 Thus, if your goal is a PhD in CS, you must target only schools offering such a degree. While the large number of US universities can be confusing, a little research on each school's website will clarify what degrees are available. Schools listed in @chap:rankings all have PhD programs in CS, so you can start there.
 
-#note-block[#drafttag There are _far_ more options than the dozen or so "famous" names. The #link("https://datavisualization.cra.org/TaulbeeSurvey/CRA_Taulbee_Survey_Report_2024.html")[2024 CRA Taulbee Survey] tracks over *300 PhD-granting CS/CE departments* in North America, and CS doctoral production hit a record high (up about 8% in a single year). The point: there is a large and growing landscape of strong programs beyond the top 10 (@sec:selecting-ranking-schools, @sec:chance-me), so cast a wide net.]
+#note-block[There are _far_ more options than the dozen or so "famous" names. The #link("https://datavisualization.cra.org/TaulbeeSurvey/CRA_Taulbee_Survey_Report_2024.html")[2024 CRA Taulbee Survey] tracks over *300 PhD-granting CS/CE departments* in North America, and CS doctoral production hit a record high (up about 8% in a single year). The point: there is a large and growing landscape of strong programs beyond the top 10 (@sec:selecting-ranking-schools, @sec:chance-me), so cast a wide net.]
 
 // % \subsection{R1, R2, ...}
 
@@ -2290,7 +2292,7 @@ Ultimately, choose a prof. that fits you by communicating with them, taking thei
 
 _*Not every faculty*_ can serve as your official PhD advisor. Understanding the different types of faculty roles such as  tenured, tenure-track, teaching, research, adjunct, and emeritus professors will help you avoid common mistakes, e.g.,  contacting the wrong person (@sec:contact) for research opportunities or listing in your SOP (@chap:sop) someone who can't actually supervise PhD students.
 
-#paragraph[Faculty Types][At most #gls("R1") universities, faculty fall into two categories:
+#definition-box[Faculty Types][At most #gls("R1") universities, faculty fall into two categories:
 + Tenure-line faculty (tenured or tenure-track)
 + Non-tenure-line faculty (e.g., teaching, adjunct, or research faculty)
 ]
@@ -2298,11 +2300,13 @@ The key distinction is in their responsibilities—whether they are expected to 
 
 ==== Tenure-Line Faculty
 
-_Tenure-line_ faculty members are expected to perform research, publish in top venues, get funding (@sec:ra), and mentor PhD students. They typically teach fewer courses—often just one per semester—and are the *main group eligible to serve as primary PhD advisors*. Tenure-line faculty consist of two subcategories:
+_Tenure-line_ faculty members are expected to perform research, publish in top venues, get funding (@sec:ra), and mentor PhD students. They typically teach fewer courses—often just one per semester—and are the *main group eligible to serve as primary PhD advisors*. 
+
+#definition-box[Tenure-line Faculty][Tenure-line faculty consist of two subcategories:
 
 - *Tenure-track faculty* are on the path to tenure and are often actively recruiting students.
 - *Tenured faculty* have already earned tenure or permanent status and might be less active in research or more selective in recruiting new students.
-
+]
 #emph-block[
   *If you're reaching out to professors about potential advising, focus on tenure-line faculty*. These are the faculty most likely to have funding, institutional authority, and the capacity to take on new PhD students. See @sec:tenure-vs-tenure-track for more on choosing between tenured and tenure-track faculty as advisors.
 ]
@@ -2350,10 +2354,11 @@ So check these carefully as this is different from one university to another.
 
 ==== Ranks (Assistant, Associate, Full, and More)
 
-Regardless of type--tenure-line or teaching, faculty are generally assigned one of three academic ranks:
+#definition-box[Regardless of type--tenure-line or teaching, faculty are generally assigned one of three academic ranks:
 + *Assistant*: typically an early-career faculty member
 + *Associate*: mid-career, often after tenure
 + *Full*: senior, often tenured with a strong record of achievement
+]
 
 Tenure-line faculty generally start as assistant professor, undergo a rigorous review around year six, and if successful are promoted to associate professor with tenure. Note that getting tenure is a huge deal, and it might change the way they work with students (@sec:tenure-vs-tenure-track).
 
@@ -2950,7 +2955,7 @@ While both MS and PhD programs are graduate degrees, they are _very different_ i
     align: left,
     stroke: none,
     table.header(
-      [], [*MS*], [*PhD*],
+      [], [*MS*], [*PhD* (@sec:worth-it)],
     ),
     table.hline(),
     [Objective], [Industry], [Research],
@@ -2965,7 +2970,7 @@ While both MS and PhD programs are graduate degrees, they are _very different_ i
 
 @tab:phd-vs-ms summarizes the main differences between MS and PhD programs:
 
-- *Objective:* an MS is typically to prepare you for #emph[industry], while a PhD is to prepare you for research and academia. Some MS has thesis option but in general research is not a focus in MS programs.
+- *Objective:* an MS is typically to prepare you for #emph[industry], while a PhD is to prepare you for research and academia (@sec:worth-it). Some MS has thesis option but in general research is not a focus in MS programs.
 
 - *Admission requirements* (@sec:ms-admission): MS also requires a good GPA, LORs, SOP, and test scores, but research experience is not required. PhD requires all of these, but research experience is a must.
 
