@@ -3435,7 +3435,7 @@ Note that these paper awards are different than Distinguished or Best Paper awar
 Note that while typically given to senior researchers (due to the 10+ years requirement), some junior faculty have received these highly prestigious awards for their work as shown in @fig:LOR4junior. 
 
 #figure(
-  align(left)[#text(size: 0.8em)[
+  align(left)[#text(size: 0.9em)[
     #emph-block[
     _"It is highly noteworthy that #redact[Vu] has earned two 10-year test-of-time awards for [his] papers [, including a prestigious ICSE Most Influential Paper Award]. Senior computer scientists count themselves fortunate to
     earn even one such award at some point in their careers, but it is highly unusual and commendable that #redact[Vu]
@@ -3546,7 +3546,7 @@ Many people maintain lifelong relationships with their professors and colleagues
 
 #figure(
   image("files/c5.png", width: 85%),
-  caption: [#drafttag A (humorous) flowchart for deciding how to address your professor---when in doubt, use "Prof./Dr. Lastname" (@sec:address). Source: #link("https://phdcomics.com")[PhD Comics] (© Jorge Cham).],
+  caption: [A (humorous) flowchart for deciding how to address your professor: when in doubt, use "Prof./Dr. Lastname" (@sec:address). Source: #link("https://phdcomics.com")[PhD Comics] (© Jorge Cham).],
 ) <fig:address-comic>
 
 If you're reaching out to a professor for the first time,  address them as Prof. or Dr. Lastname (if you know that they do not have a PhD, then don't use Dr., but Prof. is fine). Many international students use Prof. or Dr. FirstName LastName, but this can come across as if you're simply copying and pasting names. So just stick with Prof. or Dr. Lastname.  Using _Prof._ is generally the safest option.
