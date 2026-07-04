@@ -202,7 +202,7 @@
 
 #v(1fr)
 #emph-block[
-    This #link(mybookgithub)[work] © #datetime.today().year() by #me is licensed under CC BY-NC-ND 4.0. To view a copy of this license, visit #link("https://creativecommons.org/licenses/by-nc-nd/4.0/")[creativecommons.org].
+    This #link(mybookgithub)[work] © #datetime.today().year() by #me is licensed under CC BY-NC 4.0. To view a copy of this license, visit #link("https://creativecommons.org/licenses/by-nc/4.0/")[creativecommons.org].
 ]
 
 
@@ -3735,7 +3735,7 @@ More details and justification for this metric can be found in the #link("https:
 
 == CSPicks <sec:cspicks>
 
-#link("https://roars/dev/cspicks")[CSPicks]---developed by students from my #link("https://roars.dev")[ROARS lab]---is a new website that aims to help prospective students (and faculty candidate) explore the research strengths of CS departments and their faculty. It is _not_ a ranking system like CSRankings, but rather a tool to help students find faculty and departments that match their research interests. It allows you see trends and growths of CS departments and faculty, such as the number of publications in different areas over time.
+#link("https://roars/dev/cspicks")[CSPicks]---developed by students from my #link("https://roars.dev")[ROARS lab]---is a new web app that aims to help prospective students (and faculty candidate) explore the research strengths of CS departments and their faculty. It is _not_ a ranking system like CSRankings, but rather a tool to help students find faculty and departments that match their research interests. It allows you see trends and growths of CS departments and faculty, such as the number of publications in different areas over time.
 @fig:cspicks-gmu shows an example of CSPicks showing research areas of the CS department at George Mason.
 
 
@@ -3760,38 +3760,38 @@ More details and justification for this metric can be found in the #link("https:
 // % = Advisor Guide: Answers to Common Questions <chap:advising-guide}
 // % Specific answers to questions about my advising guide in \href{https://roars.dev}{Roars Lab}. Adapted from \href{https://www.cs.columbia.edu/wp-content/uploads/2019/03/Get-Advisor.pdf}{this guide}.
 
-#pagebreak()
-= Frequently Asked Questions <chap:faq>
+// #pagebreak()
+// = Frequently Asked Questions <chap:faq>
 
-#draftbanner(note: "These are a quick-reference digest of points made in depth elsewhere. Pull more from the Reddit/Facebook questions I keep seeing. Keep each answer to a sentence or two and link to the full discussion.")
+// #draftbanner(note: "These are a quick-reference digest of points made in depth elsewhere. Pull more from the Reddit/Facebook questions I keep seeing. Keep each answer to a sentence or two and link to the full discussion.")
 
-This is a quick-reference list of the questions I am asked most often. Each answer is intentionally short and points to the full discussion elsewhere in the book.
+// This is a quick-reference list of the questions I am asked most often. Each answer is intentionally short and points to the full discussion elsewhere in the book.
 
-#paragraph[Do I need an MS before applying for a PhD?][No. You can apply directly from a bachelor's degree (@sec:msrequirement). An MS can help but is not required.]
+// #paragraph[Do I need an MS before applying for a PhD?][No. You can apply directly from a bachelor's degree (@sec:msrequirement). An MS can help but is not required.]
 
-#paragraph[Do I need a CS degree?][No. Many successful applicants come from Math, EE, Physics, and other fields (@sec:non-stem). What matters is evidence you can do CS research.]
+// #paragraph[Do I need a CS degree?][No. Many successful applicants come from Math, EE, Physics, and other fields (@sec:non-stem). What matters is evidence you can do CS research.]
 
-#paragraph[Do I need to take the GRE?][Usually no---most CS PhD programs have made it optional and it rarely matters (@sec:gre). A bad score can only hurt, so omit it unless it is strong.]
+// #paragraph[Do I need to take the GRE?][Usually no---most CS PhD programs have made it optional and it rarely matters (@sec:gre). A bad score can only hurt, so omit it unless it is strong.]
 
-#paragraph[Do I need publications?][They help a lot, but they are not strictly required (@sec:publications). Strong projects, letters, and research experience can substitute (@chap:research-experience, @sec:stand-out).]
+// #paragraph[Do I need publications?][They help a lot, but they are not strictly required (@sec:publications). Strong projects, letters, and research experience can substitute (@chap:research-experience, @sec:stand-out).]
 
-#paragraph[Is my GPA too low?][Probably not by itself. Grades are a weak signal (@sec:good-grades); research, letters, and an upward trend matter more (@sec:academic-recovery). Very low grades in Math/CS can be a red flag (@sec:why-rejected).]
+// #paragraph[Is my GPA too low?][Probably not by itself. Grades are a weak signal (@sec:good-grades); research, letters, and an upward trend matter more (@sec:academic-recovery). Very low grades in Math/CS can be a red flag (@sec:why-rejected).]
 
-#paragraph[Should I email professors before applying?][It can help if done well (@sec:contact), but a generic or self-focused email hurts (@sec:kiss-of-death-emails). It is optional, not required.]
+// #paragraph[Should I email professors before applying?][It can help if done well (@sec:contact), but a generic or self-focused email hurts (@sec:kiss-of-death-emails). It is optional, not required.]
 
-#paragraph[How many schools should I apply to?][There is no magic number, but aim for a mix of reach, match, and safety schools (@sec:selecting-ranking-schools). Apply where there are 2--3 faculty you would want to work with.]
+// #paragraph[How many schools should I apply to?][There is no magic number, but aim for a mix of reach, match, and safety schools (@sec:selecting-ranking-schools). Apply where there are 2--3 faculty you would want to work with.]
 
-#paragraph[Will I get funded?][At good R1 programs, CS PhD admission almost always comes with full funding---tuition, health insurance, and a stipend (@chap:funding). If an offer is _not_ funded, think hard before accepting (@sec:offer-letters).]
+// #paragraph[Will I get funded?][At good R1 programs, CS PhD admission almost always comes with full funding---tuition, health insurance, and a stipend (@chap:funding). If an offer is _not_ funded, think hard before accepting (@sec:offer-letters).]
 
-#paragraph[I haven't heard back---is that a rejection?][Not necessarily. Schools notify in batches, some do rolling admission, and some keep students on a waitlist (@sec:late-rejection). No news is not bad news; be patient and avoid status-check emails.]
+// #paragraph[I haven't heard back---is that a rejection?][Not necessarily. Schools notify in batches, some do rolling admission, and some keep students on a waitlist (@sec:late-rejection). No news is not bad news; be patient and avoid status-check emails.]
 
-#paragraph[I didn't get any interviews. Am I rejected?][No---many programs admit without interviews (@sec:no-interview). An interview is a good sign, but its absence is not a verdict.]
+// #paragraph[I didn't get any interviews. Am I rejected?][No---many programs admit without interviews (@sec:no-interview). An interview is a good sign, but its absence is not a verdict.]
 
-#paragraph[Does ranking matter?][As a rough filter, yes; as a decision rule, no (@chap:rankings). Advisor fit (@chap:choosing-advisor) matters far more than a school's name.]
+// #paragraph[Does ranking matter?][As a rough filter, yes; as a decision rule, no (@chap:rankings). Advisor fit (@chap:choosing-advisor) matters far more than a school's name.]
 
-#paragraph[Can I use AI to write my application?][Use it to edit and polish, not to write for you (@sec:using-ai). An obviously AI-written SOP is forgettable and can be a #alert[red flag].]
+// #paragraph[Can I use AI to write my application?][Use it to edit and polish, not to write for you (@sec:using-ai). An obviously AI-written SOP is forgettable and can be a #alert[red flag].]
 
-#paragraph[What if I get rejected everywhere?][It is common, and not the end (@chap:not-accepted). Figure out why (@sec:why-rejected), strengthen your profile, and try again (@sec:try-again).]
+// #paragraph[What if I get rejected everywhere?][It is common, and not the end (@chap:not-accepted). Figure out why (@sec:why-rejected), strengthen your profile, and try again (@sec:try-again).]
 
 #pagebreak()
 = About <chap:about>
