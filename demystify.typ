@@ -2663,7 +2663,7 @@ For children:
 F-2 visa holders must leave the US if the primary F-1 student visa holder loses status or completes their program.
 
 
-== Documents you need for the visa interview
+== Visa Documents and Interview
 
 #emph-block[
 This section was contributed by a student who kindly shared her experience and advice on how to prepare for the visa interview (🙏, and if you have any to share, please do).
@@ -2860,7 +2860,7 @@ The officer might say your visa is approved and give you a paper that shows the 
 If the consular officer finds you are not eligible to receive an F-1 visa, your visa application will be denied (refused), and you will be provided a reason for the denial. There are many reasons a visa applicant could be found ineligible for a visa. These reasons, called ineligibilities, are listed in the Immigration and Nationality Act (INA) and other immigration laws. Here are the common ones:
 ]
 
-- INA section 221(g): A visa denial under section 221(g) of the INA means that the consular officer did not have all of the information required to conclude that you are eligible to receive a visa. This means you are not eligible for the visa now, for one of two reasons: missing documents and/or administrative processing.
++ INA section 221(g): A visa denial under section 221(g) of the INA means that the consular officer did not have all of the information required to conclude that you are eligible to receive a visa. This means you are not eligible for the visa now, for one of two reasons: missing documents and/or administrative processing.
   + Your application is incomplete and/or further documentation is required:  Applicants whose application forms or other documentation are incomplete are refused. If further documents are required to complete your case, you will be informed what is needed and how to provide it to the embassy/consulate. You will also be given a letter stating your application has been denied under 221(g) and listing which documents you need to provide.
 
     If your application was denied because documentation or information is missing, you can provide the missing documents or information as soon as possible. After submitting the documentation, your visa application can then be re-assessed to determine whether you qualify for a visa. You have one year from the date you were refused a visa to submit the additional information. Otherwise, if you do not provide the required additional information within one year, you must reapply for the visa and pay another application fee.
@@ -2868,10 +2868,10 @@ If the consular officer finds you are not eligible to receive an F-1 visa, your 
 
     If your application requires further administrative processing, this takes additional time after your interview. Processing times can vary based on individual circumstances. It is possible that a consular officer will reconsider a visa application refused under 221(g) at a later date, based on additional information or upon the resolution of administrative processing, and determine that the applicant is eligible.  
 
-- INA section 214(b)
++ INA section 214(b)
   If you are refused a visa under section 214(b), it means that you:
-  -	Did not sufficiently demonstrate to the consular officer that you qualify for the F-1 visa; and/or
-  -	Did not overcome the presumption of immigrant intent by sufficiently demonstrating that you have strong ties to your home country that will compel you to leave the U.S. at the end of your temporary stay.
+  +	Did not sufficiently demonstrate to the consular officer that you qualify for the F-1 visa; and/or
+  +	Did not overcome the presumption of immigrant intent by sufficiently demonstrating that you have strong ties to your home country that will compel you to leave the U.S. at the end of your temporary stay.
 
     A refusal or ineligibility under section 214(b) is not permanent and is for that specific application. There is no appeal process. After being found ineligible for a visa, you may reapply in the future. To reapply, you must complete a new DS-160 form, pay another MRV fee, and schedule an appointment for a new interview. You will not need to pay the SEVIS fee again. In your new visa application, you should be able to present evidence of significant changes in circumstances since your last application.
 
