@@ -689,9 +689,9 @@ Thus, it comes down to who can advocate for you in the review process. This is t
 
 == Application Timeline and Checklist <chap:timeline>
 
-#draftbanner(note: "Double-check the months against the current cycle---deadlines have crept earlier over the years. Consider replacing the text table with a nicer figure/timeline graphic later.")
+// #draftbanner(note: "Double-check the months against the current cycle---deadlines have crept earlier over the years. Consider replacing the text table with a nicer figure/timeline graphic later.")
 
-The CS PhD application process spans almost a full year, from the time you start researching programs to the time you make a final decision (@sec:accept-postpone-decline). Below is a rough month-by-month timeline for a _Fall admission_ (the most common; @sec:apply-spring-summer explains why Spring/Summer admission is rare). The exact dates shift from year to year and school to school, so treat this as a map rather than a strict schedule.
+The CS PhD application process spans almost a full year, from the time you start researching programs to the time you make a final decision (@sec:accept-postpone-decline). Below is a rough month-by-month timeline for a _Fall admission_ (the most common; @sec:apply-spring-summer explains why Spring/Summer admission is rare). The exact dates shift from year to year and school to school, so treat this as a rough guide.
 
 #figure(
   table(
@@ -700,28 +700,29 @@ The CS PhD application process spans almost a full year, from the time you start
     inset: 6pt,
     stroke: 0.5pt + gray,
     table.header([*When*], [*What to do*]),
-    [*Jan--Apr* (year before)], [Decide whether a PhD is right for you (@sec:worth-it). Start getting research experience, especially for the coming summer (@chap:research-experience, @chap:research-opportunities). Identify fields and areas you like (@sec:fields-and-areas).],
+    [*Jan--Apr* (year before)], [Decide whether a PhD is right for you (@sec:worth-it). Start getting research experience, especially for the summer (@chap:research-experience, @chap:research-opportunities). Identify fields and areas you like (@sec:fields-and-areas).],
     [*May--Jul*], [Build a long list of schools and potential advisors (@chap:choosing-school, @sec:finding-advisor). Take the English test if needed (@sec:english-tests)---it is valid for 2 years. Start a first draft of your SOP (@chap:sop).],
     [*Aug--Sep*], [Narrow your school list (#gls("reach-safety", first:true); a mix of reach / match / safety). Ask for letters of recommendation _early_ (@sec:asking-LOR). Email professors you are interested in, if appropriate (@sec:contact). Update your CV (@sec:cv) and personal website (@sec:personal-website).],
     [*Oct--Nov*], [Tailor your SOP per school (@chap:sop). Give your letter writers everything they need (@sec:help-your-LOR-writers). Fill out the online application portals. Request fee waivers where eligible (@sec:fee-waive).],
     [*Dec*], [Submit! Most deadlines fall between *Dec 1 and Dec 15* (some as early as Nov, a few in Jan). Send polite reminders to letter writers a week before each deadline (@sec:remind-writers).],
-    [*Jan--Feb*], [Interviews happen for some programs (@sec:interviews). Be patient during the waiting game (@sec:late-rejection).],
-    [*Feb--Mar*], [Admission decisions roll out. Attend open houses / visit days (@sec:visit-days). Talk to potential advisors and their students.],
+    [*Jan--March*], [Interviews happen for some programs (@sec:interviews). Time varies by school, but most are in this period.
+    Be patient during the waiting game (@sec:late-rejection).],
+    [*Feb--April*], [Admission decisions roll out. Attend open houses / visit days (@sec:visit-days). Talk to potential advisors and their students.],
     [*By Apr 15*], [Compare offers (@sec:visit-days), negotiate if you have multiple (@sec:negotiate), and accept/decline (@sec:accept-postpone-decline). #gls("April 15") is the deadline most US schools honor.],
   ),
   caption: [A rough month-by-month timeline for Fall CS PhD admission.],
 ) <tab:timeline>
 
 #paragraph[A condensed checklist][Before you submit, make sure you have:
-- A *focused SOP* tailored to each school, naming 2--3 potential advisors (@chap:sop).
+- A *SOP* tailored to each school, naming 2--3 potential advisors (@chap:sop).
 - *3 strong letters* from people who know your research ability (@chap:LOR), with writers reminded before each deadline.
 - An up-to-date *CV* (@sec:cv) and, ideally, a *personal website* (@sec:personal-website).
-- *English test scores* sent if required (@sec:english-tests); GRE only if it helps (@sec:gre).
+- *English test scores* sent if required (@sec:english-tests); GRE _only_ if it helps (@sec:gre).
 - A *school list* that mixes ambitious reaches with realistic matches and safeties (@sec:selecting-ranking-schools).
 - *Fee waivers* requested wherever you qualify (@sec:fee-waive).
 ]
 
-#tip-block[The single most common timing mistake is asking for letters of recommendation too late (@sec:asking-LOR). Professors are busy (@sec:busy) and write many letters each cycle; give them at least *3--4 weeks* of notice, and more during the holidays. Everything else on this list is under your control, but your letters depend on someone else's calendar.]
+#tip-block[A common mistake is starting the application process too late. As you can see, there are many things to do, and some of them do not depend on you, e.g., waiting for LORs. So _start early_ and give yourself enough time to prepare a strong application and to reduce stress.]
 
 #pagebreak()
 = Application Materials <part:application>
@@ -3868,7 +3869,7 @@ This book is designed to be read in any order. So you can start with any chapter
 == Contributing and Supporting This Book <sec:contribute>
 
 This book will _always be free_ and _open source_ at
-#emph-block[#mybookgithub]
+#emph-block[#link(mybookgithub)[#mybookgithub]]
 
 If you spot an error, have a different experience, or want to suggest something, open an issue on the #link(mybookgithub)[GitHub repo]. Community input helps keep the book current and useful.
 
@@ -3906,7 +3907,7 @@ Moreover, since PhD admission varies significantly across institutions, there's 
 
 Many people have contributed to this book.
 Profs. Craig Yu (GMU), Hakan Aydin (GMU), 
-Xiaokuan Zhang (GMU), Hung Le (UMass), and Deepak Kapur (UNM) provided valuable input in the early version. Many students including Didier (GMU), Thanh (Melbourne), and Dat (Melbourne) have contributed valuable questions and feedback (@sec:contribute).
+Xiaokuan Zhang (GMU), Hung Le (UMass), and Deepak Kapur (UNM) provided valuable input in the early version. Many students including Didier (GMU), Thanh (Melbourne), Hediyeh (Univ. of Tehran), and Dat (Melbourne) have contributed valuable questions and feedback (@sec:contribute).
 
 Also thanks to NSF for encouraging faculty to be creative in research and education, which allows me to work on this book and other projects. 
 
