@@ -419,7 +419,7 @@ For example, my own #link("https://roars.dev")[research profile] can be structur
 
 
 
-=== How long to complete the CS PhD program? <sec:time>
+=== How Long to Complete the CS PhD Program? <sec:time>
 // \sectioninfo{About 5--7 years in the US.}
 
 Typically it takes 5--7 years for a CS PhD in the US. This is usually longer compared to other countries (@sec:non-us-differences), which might require having an MS (@sec:phd-vs-ms).
@@ -489,7 +489,7 @@ Moreover, if you have an MS, then some coursework _might_ be transferred for cou
 ]
 
 
-=== Can I apply for PhD in CS for the Spring or Summer? <sec:apply-spring-summer>
+=== Can I Apply for PhD in CS for the Spring or Summer? <sec:apply-spring-summer>
 Most students apply to start their PhD in the Fall. This means they submit their application around December, receive admission decisions (@chap:accepted) sometime in the Spring, and officially begin their PhD in the Fall (usually late August).
 
 Fall---the start of the #gls("AY")---is the most common time to begin PhD programs in the US, and many universities _only_ accept new PhD students in the Fall. Importantly, applying for the Fall gives you access to funding opportunities (@chap:funding) that are available only for Fall admits, such as TAships (@sec:ta) and some fellowships.
@@ -581,7 +581,7 @@ Some programs also waive the fee if applicants attend their open house or inform
 ]
 
 
-== How is Your Application Evaluated? <chap:evalapps>
+== How Is Your Application Evaluated? <chap:evalapps>
 
 // \chapterinfo{Applications are evaluated by the PhD Admission (\acrshort{adcom}) committee and each application is typically reviewed by three \glslink{adcom-members}{faculty members}.}
 
@@ -610,7 +610,7 @@ Each application is assigned to about three #gls("adcom members",first: false), 
 ]
 
 
-=== How Applications are Assigned to Adcom Members? <sec:applications-assigned>
+=== How Applications Are Assigned to Adcom Members? <sec:applications-assigned>
 // \sectioninfo{Adcom members only review applications assigned to them (typically matching their expertise) and rarely get involved in other applications}
 
 
@@ -618,7 +618,7 @@ Each application is assigned to about three #gls("adcom members",first: false), 
 
 Note that the assigned reviewers are the main ones deciding your application, but at many schools other faculty in the department can also have access to your application and provide inputs and opinions on your profile. Thus, it helps to contact faculty (@sec:contact) and mention faculty you're interested in your SOP (@chap:sop).
 
-=== How are Decisions Made? <sec:how-decisions>
+=== How Are Decisions Made? <sec:how-decisions>
 // \sectioninfo{Even if all adcom reviewers recommend acceptance, the application can still be rejected. Vice versa, if all reviewers think the application is weak, the student might still be admitted.}
 
 After reviewers have evaluated an application, #gls("adcom chair") will review all evaluations, look at entered notes, and ask reviewers to discuss and resolve discrepancies to reach a consensus (e.g., a reviewer wants to accept but the other wants to reject).  Typically, the decision is made entirely by the reviewers. There is _no involvement_ from the adcom chair, department chair, or others. In most cases #gls("adcom members"), even those reviewing the same application, make decisions independently and do not talk to each other (just a common practice to avoid biasing). In some rare cases we might
@@ -789,7 +789,7 @@ However, don't worry if you haven't worked directly with well-known researchers.
   *Vu*: This is an interesting detail that US faculty might not be aware of. Students should mention this in their SOPs (@chap:sop). In general, someone with a PhD has been through the research process and therefore can better evaluate your research ability.  But if you do not have such writer, then someone who can properly evaluate your research ability is OK (and still better than someone who has a PhD but does not know you well).
 ]
 
-==== Generic Letters are Bad <sec:generic-letters>
+==== Generic Letters Are Bad <sec:generic-letters>
 When the writers do not know much about the applicants (e.g., just taking some course with them or not making any impression to write about), they often write a _generic_ and short letter, which is not useful and also considered weak. 
 
 Note that _this does not mean the ref writer is not reputable or does not care about you_, but they just do not know you well enough to write meaningful things about you.
@@ -826,7 +826,7 @@ This is unfortunate but common, and if you are in this situation, you should fin
 
 
   
-==== Self-written Letters are Bad <sec:self-letters>
+==== Self-written Letters Are Bad <sec:self-letters>
 
 Many LOR writers ask students to write their own letters---a common practice in many countries. Unfortunately, such letters have _little value_ and are considered weak by reviewers---why can you not even find someone who cares or knows enough about you to write a candid personal reference letter?  Instead of the ref. writer talking about you, in it is you who write about yourself (and they just sign the letter). 
  
@@ -883,7 +883,7 @@ If you do not waive your right, the letter writer may refuse or write a generic 
 
 #example-box[
 If you ask me to write a letter and do not waive your right, I will refuse. I will explain why you should waive your right, but if you insist, I *will not* write for you.
-])
+]
   
 
 ==== Helping Your LOR Writer <sec:help-your-LOR-writers>
@@ -1355,7 +1355,7 @@ After you apply, you _might_ get interviews. The most common case is that a spec
 
 Note that unlike other fields (e.g., Physics as shown in @fig:adcom-discuss-physics) that has formal interview where adcom members interview selected applicants to accept them in the program, CS interviews are usually with just one prof. or a few profs.---who might not adcom members---that have interests in recruiting specific applicants to work directly with them or their research group. In CS, adcom members rarely do interview to get students for the program as a whole.
 
-==== When do interviews happen?
+==== When Do Interviews Happen?
 
 The timeline for interviews varies.  Faculty set up interviews based on their busy (@sec:busy) and erratic schedule. Some try to get interviews done before the winter holidays, while others do them after the holidays.
 Do not be surprised if you get an interview invitation at the last minute. Some profs. are informal and may just email you to chat (e.g., _"could you chat in an hr?"_), while others might give you several options (e.g., _"can you chat at 2 pm on Friday or 10 am on Monday?"_).
@@ -1370,7 +1370,7 @@ Some programs _do not do interviews_ at all (@sec:no-interview). They review app
     In short, getting an interview is a good sign; it means that someone is considering you. If we are not interested in your application, we will not waste our (and your) time interviewing you.
   ]
 
-==== Preparing for interviews
+==== Preparing for Interviews
 
 Typically, an interview takes about 15--30 minutes, and one important aspect of evaluation is your ability to effectively communicate, including speaking and understanding English. 
 You might be asked to talk about your research experience and interests and to read a paper and discuss it. In some rare cases you might also be asked to solve a problem (one of my colleagues at GMU likes coding interview).
@@ -1388,10 +1388,10 @@ You should treat the interview as an informal chat. Prepare an _"elevator pitch"
 === Not Getting Interviews <sec:no-interview>
 While in general it is good to get an interview, not getting one *does not* mean you're out. Many programs do not have the tradition of interviewing applicants. For example, at GMU, most admitted students with GTA (@sec:ta) do not go through interviews.
 
-However, no interview usually means you are less likely to get an GRA (@sec:ra), which is typically offered by an individual faculty member. If they want you to do research with them, they will likely interview you first. If you have no interviews, your application (and GTA/fellowship funding) is decided by the adcom.
+However, no interview usually means you are less likely to get a GRA (@sec:ra), which is typically offered by an individual faculty member. If they want you to do research with them, they will likely interview you first. If you have no interviews, your application (and GTA/fellowship funding) is decided by the adcom.
 
 
-=== Notification Timeline: Why rejection letters are sent so late? <sec:late-rejection>
+=== Notification Timeline: Why Rejection Letters Are Sent So Late? <sec:late-rejection>
 // \sectioninfo{Grad programs often wait for accepted students to make their decisions, typically by \Gls{April15}, before sending out rejection letters.}
 
 //%"Just reject me already!" is a common sentiment among applicants.  Indeed, school will first send out admission offers to the top candidates. They do not send out rejection letters because there is still a chance that some of the top candidates will decline the offer. If they do, then the school will go to the next set of candidates and send out offers to them.  This process continues until all spots are filled.  This is why you might not hear back until late in the admission cycle.
@@ -1547,7 +1547,7 @@ It is #emph[unlikely] that you can negotiate things like stipend, as it is stand
 
 // %\includepdf[pages=1]{files/gra_offer.pdf}
 
-=== Negotiating PhD offer (e.g., having multiple offers)? <sec:negotiate>
+=== Negotiating PhD Offer (e.g., Having Multiple Offers)? <sec:negotiate>
 // \sectioninfo{You will not be able to negotiate stipend, but you can ask for specific start date, TA assignment, and conference travel budget.}
 
 In CS, negotiating a GTA stipend is unlikely, as it is determined by the university (@sec:ta). For RA (@sec:ra), advisors have more leeway as it is funded by their grants. However, they will likely not negotiate RA stipend as they have to be fair to other students and also have to follow departmental standards. Note that the university typically automatically increases these stipends each year by a small amount.
@@ -1619,12 +1619,12 @@ You can consider applying to MS programs, which are typically easier to get in; 
 No, don't bother. You will likely not get any useful feedback. We are not willing (sometimes not allowed) to reveal your evaluation results or give you feedback on how to improve your profile. So just move on. If you really want advice, ask your professors, collaborators, ref writers, or those who have previously applied.
 
 
-=== Why did you get rejected? <sec:why-rejected>
+=== Why Did You Get Rejected? <sec:why-rejected>
 // \subsectioninfo{You aim too high, are overqualified, or even because you applied to AI/ML, a super competitive field in recent years with many applicants.}
 
 Many students lament that they get no interviews or are rejected and that the admission process seems random. However, while it is true that the process can involve some luck and randomness, it is not completely random. There are many reasons why you might get rejected, e.g., your profile is *not* as strong as you *think* it is (@sec:profile-not-strong). Even if your profile is strong, you still can get rejected, e.g., aiming too high (@sec:chance-me), not a good fit, overqualified, having red flags, etc.
 
-==== Your profile is *not* as strong as you think <sec:profile-not-strong>
+==== Your Profile Is *Not* as Strong as You Think <sec:profile-not-strong>
 I have seen many cases where students think they have a strong profile, but they do not. Here are some common examples:
 
 Your #strong[LORs] (@chap:LOR) might not be as strong as you think. Your reference writers—who might be very well-known within your institution—might not be well-known internationally, or they might not be very active in research, or may not know how to write a strong letter.
@@ -1760,7 +1760,7 @@ A low GPA, a failed course, or a degree from a less-known school (@chap:your-sch
 #simpsons[Bart, with \$10,000, we'd be millionaires! We could buy all kinds of useful things like ... love!]
 
 If you're admitted to a #emph[good] CS PhD program, you should not have to worry about funding!
-In the US, the common types of funding for PhDs are #emph[graduate teaching assistant] (GTA or TA), #emph[graduate research assistant] (GRA or RA), and #emph[Fellowship].
+In the US, the common types of funding for PhDs are #emph[graduate teaching assistant] (GTA or TA), #emph[graduate research assistant] (GRA or RA), and #emph[fellowship].
 GRA is paid by a prof. for you to do their research. GTA is paid by the dept. for you to help with teaching. Finally, fellowship is independent funding that can come from a school, a company, or an organization. 
 
 @tab:funding summarizes the differences.
@@ -1838,7 +1838,7 @@ GRA support is provided by a professor through their funding so that you can wor
 As a GRA, you generally do not need to teach, so you can focus on research. Depending on the professor, GRA support may also be available during the summer. See @sec:ra-cost for more details on GRA budgeting.
 ]
 
-*How to get GRA?* When a professor recruits you, they might offer you an GRA immediately, so you start the program with GRA support. However, a more common scenario is that you first get admitted with GTA support, then after a year or two you find an advisor who can support you as an GRA.
+*How to get GRA?* When a professor recruits you, they might offer you a GRA immediately, so you start the program with GRA support. However, a more common scenario is that you first get admitted with GTA support, then after a year or two you find an advisor who can support you as a GRA.
 
 It is important to note that GRA support is *never guaranteed* because it depends on the professor's funding situation. So you should also pay attention to GTA availability, since GTA is a good backup plan and usually comes with benefits similar to GRA. In other words, you should check whether GTA support is readily available for PhD students in the program.
 
@@ -1871,7 +1871,7 @@ Such major fellowships typically require a clear and good research plan (the GRF
 
 In general, external fellowships are highly competitive and prestigious---you will stand out if you get one.  Every PhD student has pubs, but only a few would have the NSF GRFP#footnote[#link("https://www.alexhunterlang.com/nsf-fellowship")[This link] is a good starting place for the GRFP with lots of proposal examples.] or Microsoft fellowships. In fact, these are so prestigious that even if you didn't get it but make it to the final round or even _"honorable mentioning"_ you should put it on your CV. @chap:fellowships discusses the evaluation processes of the #gls("GRFP") and #gls("NDSEG").
 
-== Funding Miscs
+== Funding Misc.
 
 
 === Funding in the Summer <sec:summer-funding>
@@ -1907,7 +1907,7 @@ For a full breakdown of how much a graduate student costs, see @sec:ra-cost.
 
 #note-block[#drafttag Another useful, crowd-sourced source is #link("http://www.phdstipends.com/results")[phdstipends.com], where students anonymously report their actual stipends. As a rough guide, CS PhD stipends at good programs typically fall in the *\$35K--\$45K* range (2024), with higher numbers at expensive coastal schools and lower ones in cheaper areas---which is exactly why you should weigh a stipend against the local cost of living (@chap:practical-finances) rather than its headline number.]
 
-=== How much do YOU cost? <sec:ra-cost>
+=== How Much Do YOU Cost? <sec:ra-cost>
 // \subsectioninfo{Your entire PhD program costs about \$400K in total, but you \emph{do not} pay for it.}
 
 PhD students might wonder why their #gls("stipend") is low compared to the large grants their advisors get. They also wonder why their offer letters sometimes show that their benefits are higher than what they receive as stipend (e.g., your financial assistance says you get a package of \$60K, but your stipend is only \$30K).  The reason is that the cost of supporting a PhD student is much higher than just their stipend.  In fact, the total cost of supporting a PhD student can be around \$70K per year, which includes not only the stipend but also tuition, health insurance, and other expenses. Over the course of a 5-6 year PhD program, this can add up to around \$400K.
@@ -1990,7 +1990,7 @@ Choosing a school and an advisor (@chap:choosing-advisor) is clearly among the m
 
 === Schools offering PhD in CS <sec:schools-offering-phd>
 
-Most US universities have CS programs, but many _do not_ have a _CS PhD_ program. These universities might offer just BacheLOR's degrees (e.g., BS) with no graduate studies (no MS or PhD), or only MS programs (but no PhD). For example, Penn State University Park has a PhD in CS, but Penn State Harrisburg offers only BS and MS in CS, and Penn State York offers only BS in CS. Conversely, multiple University of Texas locations—Austin, Dallas, and Arlington—all have PhDs in CS.
+Most US universities have CS programs, but many _do not_ have a _CS PhD_ program. These universities might offer just Bachelor's degrees (e.g., BS) with no graduate studies (no MS or PhD), or only MS programs (but no PhD). For example, Penn State University Park has a PhD in CS, but Penn State Harrisburg offers only BS and MS in CS, and Penn State York offers only BS in CS. Conversely, multiple University of Texas locations—Austin, Dallas, and Arlington—all have PhDs in CS.
 
 Thus, if your goal is a PhD in CS, you must target only schools offering such a degree. While the large number of US universities can be confusing, a little research on each school's website will clarify what degrees are available. Schools listed in @chap:rankings all have PhD programs in CS, so you can start there.
 
@@ -2129,7 +2129,7 @@ For this specific reason, CSRankings and CSPicks focus on faculty who can advise
 // \node[box] (board) {Board of Trustees / Visitors};
 
 // % Exec side
-// \node[box, below=of board] (president) {President / ChancelLOR};
+// \node[box, below=of board] (president) {President / Chancellor};
 // \node[box, below=of president] (provost) {Provost};
 // \node[box, below=of provost] (grad) {Graduate School Dean};
 // \node[box, below=of grad] (dean) {Dean (Engineering / A\&S / Computing)};
@@ -2178,7 +2178,7 @@ For this specific reason, CSRankings and CSPicks focus on faculty who can advise
 
     // Nodes (column, row)
     node((0,0), [Board of Trustees / Visitors], name: <board>),    
-    node((0,1), [President / ChancelLOR], name: <president>),
+    node((0,1), [President / Chancellor], name: <president>),
     node((0,2), [Provost], name: <provost>),
     node((0,3), [Graduate School Dean], name: <grad>),
     node((0,4), [Dean (Engineering / Art and Science / Computing)], name: <dean>),
@@ -2305,7 +2305,7 @@ Ultimately, choose a prof. that fits you by communicating with them, taking thei
 // %   \item \href{https://www.cs.columbia.edu/wp-content/uploads/2019/03/Get-Advisor.pdf}{The Definitive "what do I ask/look for" in a PhD advisor Guide}
 // % \end{itemize}
 
-=== Types of Faculty: Who can serve as a PhD advisor? <sec:faculty-types>
+=== Types of Faculty: Who Can Serve as a PhD Advisor? <sec:faculty-types>
 
 _*Not every faculty*_ can serve as your official PhD advisor. Understanding the different types of faculty roles such as  tenured, tenure-track, teaching, research, adjunct, and emeritus professors will help you avoid common mistakes, e.g.,  contacting the wrong person (@sec:contact) for research opportunities or listing in your SOP (@chap:sop) someone who can't actually supervise PhD students.
 
@@ -2371,7 +2371,7 @@ So check these carefully as this is different from one university to another.
 
 ==== Ranks (Assistant, Associate, Full, and More)
 
-#definition-box[Regardless of type--tenure-line or teaching, faculty are generally assigned one of three academic ranks:
+#definition-box[Faculty Ranks][Regardless of type---tenure-line or teaching---faculty are generally assigned one of three academic ranks:
 + *Assistant*: typically an early-career faculty member
 + *Associate*: mid-career, often after tenure
 + *Full*: senior, often tenured with a strong record of achievement
@@ -2564,7 +2564,7 @@ But there's a good chance that we would respond to well-written emails (@sec:con
 // % %This question arises often for international (and even domestic) students. The main worry is that they might get discriminated against, as often happen in their countries or personal experiences. %, and (ii) mentioning this might make them look like they are asking for special treatment.
 
 // % In my personal opinion, highlighting URM or LGBTQ+ identity can \emph{be beneficial}, especially if you can articulate how your diverse experiences contribute to diversity and inclusion in academics.  Many universities have a strong commitment to diversity and inclusion and actively
-// % \emph{recruit students from underepresentative backgrounds} (e.g., some \href{https://cse-climate.engin.umich.edu/reports/climate-dei-reports/cse-climate-and-dei-report-2022-2023/#grad-ethnicity}{stats from UMich CSE} and GMU often touts itself as one of the most diverse universities in the US). Moreover, many scholarships and fellowships are created specifically for URM and LGBTQ+ students, which you should expLORe if qualify.
+// % \emph{recruit students from underepresentative backgrounds} (e.g., some \href{https://cse-climate.engin.umich.edu/reports/climate-dei-reports/cse-climate-and-dei-report-2022-2023/#grad-ethnicity}{stats from UMich CSE} and GMU often touts itself as one of the most diverse universities in the US). Moreover, many scholarships and fellowships are created specifically for URM and LGBTQ+ students, which you should explore if qualify.
 
 // % Understandably, you might feel uncomfortable disclosing this, fearing you would lose a chance of working with a faculty due to their bias.  However, if someone has this issue, then you might not want to work with them anyway (and such bias is not acceptable in academics and likely would not be tolerated by the university). In my experience, it is often the opposite: \emph{many profs. actively seek to work with students from diverse backgrounds and view diversity as an asset to their research group}.
 
@@ -2983,7 +2983,7 @@ While both MS and PhD programs are graduate degrees, they are _very different_ i
     [Admission Req], [No research experience], [Research experience],
     [Coursework Req], [Yes], [Yes (but research is much more important)],
     [Duration], [2 years], [5--7 years],
-    [advisor Req], [No], [Yes],
+    [Advisor Req], [No], [Yes],
     [Funding], [No], [Yes],
     table.hline()
   ),
@@ -2999,7 +2999,7 @@ While both MS and PhD programs are graduate degrees, they are _very different_ i
 
 - *Duration:* an MS typically takes 2 years while a PhD takes 5--7 years (or even longer). Many students get an MS along the way to a PhD, e.g., after finishing the 2-year course work.
 
-- *advisor:* MS students typically do not have an advisor (if you do thesis option then you will have one), while PhD students need an advisor who guides them in their research.
+- *Advisor:* MS students typically do not have an advisor (if you do thesis option then you will have one), while PhD students need an advisor who guides them in their research.
 
 - *Funding:* MS is typically #emph[not funded], while PhD is (@chap:funding). See @sec:ms-funding for more details on MS funding.
 
@@ -3130,7 +3130,7 @@ This is less common but several places offer virtual internships and research pr
 
 // %   \item \textbf{Implementation}: This involves implementing the proposed approach.  You might need to try different methods, algorithms, data structures, and optimizations to make the prototype work.  In system fields such as software, implementation involves coding and building a prototype.  In other fields, such as theory, it might involve developing mathematical models and proving theorems.  In other fields, such as HCI, it might involve user studies and qualitative analysis. Regardless, this part is often the most time-consuming and challenging part of the work.
 
-// %   The person doing the implementation understand the most about the approach and its strengths and weaknesses.  It is very rare that the mentor or advisor would get involved in the implementation as they often want to manage at a high level and give the student freedom to expLORe and learn.  The student would regularly update the mentor on the progress and discuss any issues.  The mentor would provide high-level guidance, e.g., suggesting different algorithms or optimizations to try, but would not do the implementation themselves.
+// %   The person doing the implementation understand the most about the approach and its strengths and weaknesses.  It is very rare that the mentor or advisor would get involved in the implementation as they often want to manage at a high level and give the student freedom to explore and learn.  The student would regularly update the mentor on the progress and discuss any issues.  The mentor would provide high-level guidance, e.g., suggesting different algorithms or optimizations to try, but would not do the implementation themselves.
 
 // %   \item \textbf{Evaluation}: Once implementation is done (often determined by the advisor), you need to design the experiments to evaluate the approach.  This involves forming research questions and hypotheses (e.g., does the approach improve performance? how does it compare to the state-of-the-art?).  These research questions then determine how the experiments are designed, e.g., what datasets to use, what baselines to compare against, what metrics to measure.
 
@@ -3319,7 +3319,7 @@ These are some common pitfalls I see in NDSEG applications and tips to avoid the
 - *Do not BS*. I said this before (@sec:grfp-pitfalls) and I say it again here. Many times students have some achievements (e.g., publications) and thought they know a lot and start BSing. This will greatly _annoy_ reviewers, especially experts in the field. (Un)Surprisingly I find this being more common with students from _top schools_ with strong LORs and good research experience.
 
 
-== My experience as a reviewer
+== My Experience as a Reviewer
 
 #remark-block[
 I enjoy reviewing the GRFP applications more than NDSEG, which redacts most applicant information as mentioned above. I can review GRFP applications more carefully because NDSEG doesn't provide much info to work with.
@@ -3600,7 +3600,7 @@ Note that in some universities the formal title Dr. Lastname is preferred over P
 Do not include ranking (@sec:faculty-types), e.g., Assistant, Associate, Scientist, ..., when referring to someone. I see many international students include a lengthy title of people they know, e.g., _I am advised by Asst. Prof. X, and also collaborate with Distinguished Scientist Y_.
 This is _not necessary_ and makes it look like you're trying to show off your connections. These nuances represent some cultural and academic differences in the US that you may encounter but will gradually adapt to.]
 ]
-== Miscs <chap:cultural-misc>
+== Misc. <chap:cultural-misc>
   
 Here are some other common surprises for international students in the US. Note that I skip topics involving politics, religion, tax, and racism as these happen in many countries and are not unique to the US.
 
@@ -3659,7 +3659,7 @@ In general, tipping on the pre-tax amount is common and the logic is that tax is
 
 #pagebreak()
 = Rankings of CS PhD programs <chap:rankings>
-// \chapterinfo{CSRankings.org is a ranking system based on faculty publications at top CS conferences. CSPicks is not a ranking system and instead focuses on expLORing the research strengths of CS departments and faculty.}
+// \chapterinfo{CSRankings.org is a ranking system based on faculty publications at top CS conferences. CSPicks is not a ranking system and instead focuses on exploring the research strengths of CS departments and faculty.}
 
 #simpsons[The whole damn system is wrong!]
 
@@ -3745,7 +3745,7 @@ More details and justification for this metric can be found in the #link("https:
 //     [*22*], [University of Massachusetts-Amherst#super[*]], [*45*], [University of North Carolina#super[*]],
 //     [*23*], [University of Chicago], [*48*], [Oregon State University#super[*]],
 //     [*24*], [Stony Brook University#super[*]], [*48*], [Rice University],
-//     [*25*], [Univ. of California - Irvine], [*48*], [University of CoLORado-Boulder],
+//     [*25*], [Univ. of California - Irvine], [*48*], [University of Colorado-Boulder],
 //     [], [], [*48*], [University of Minnesota],
 //   ),
 //   caption: [The top 50 CS programs in the US (#link("https://www.csrankings.org")[CSRankings.org], Jan. 2025). #super[*] indicates that the university has Vietnamese prof. that can advise CS PhD students.],
@@ -3923,7 +3923,7 @@ Moreover, since PhD admission varies significantly across institutions, there's 
 #note-block[This #link("https://roars.dev/phd-cs-us/advising.pdf")[advising guide] is another example of a highly subjective and opinionated document that I wrote for my current and prospective PhD students.]
 
 
-= Acknowledgement 
+= Acknowledgments
 
 Many people have contributed to this book.
 Profs. Craig Yu (GMU), Hakan Aydin (GMU), 
