@@ -1905,7 +1905,7 @@ For a full breakdown of how much a graduate student costs, see @sec:ra-cost.
 #remark-block[ The website #link("https://csstipendrankings.org/")[CS Stipend Rankings] shows stipend for various CS PhD programs. You can use it to get idea on how much you can expect to get paid. However, I would ignore about the Living Cost because it does not fit most students' lifestyle and thus makes you unnecessarily worry. For example,  it says with GMU's stipend \$40K and Fairfax's living expense \$75K, you will be in _deficit_ of \$35K annually --- which is ridiculous because all GMU PhD CS students are doing just fine with that stipend, and even enough to support their families.
 ]
 
-#note-block[#drafttag Another useful, crowd-sourced source is #link("http://www.phdstipends.com/results")[phdstipends.com], where students anonymously report their actual stipends. As a rough guide, CS PhD stipends at good programs typically fall in the *\$35K--\$45K* range (2024), with higher numbers at expensive coastal schools and lower ones in cheaper areas---which is exactly why you should weigh a stipend against the local cost of living (@chap:practical-finances) rather than its headline number.]
+//#note-block[There's a crowd-sourced source is #link("http://www.phdstipends.com/results")[phdstipends.com], where students anonymously report their actual stipends. However, I find that the "living expense" numbers are often exaggerated and not representative of most students' lifestyles. If using the way this website calculates, almost every PhD program would be in deficit, which is not true.]
 
 === How Much Do YOU Cost? <sec:ra-cost>
 // \subsectioninfo{Your entire PhD program costs about \$400K in total, but you \emph{do not} pay for it.}
