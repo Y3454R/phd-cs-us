@@ -1677,11 +1677,11 @@ Many international students aim for very top schools such as Stanford and MIT, a
 
 #strong[You are unlikely to get in these schools.] While being ambitious is good, you also need to be realistic, and the harsh reality is that it is very unlikely that you will get into MIT or Harvard unless you are very exceptional (in which case you would not be asking about your chances on Reddit).
 
-#note-block[#drafttag These programs rarely publish CS-specific numbers, but the scale is sobering: university-wide PhD admit rates at places like #link("https://irds.stanford.edu/data-findings/doctoral-admissions")[Stanford run around 5--7%], and the most selective CS programs admit an even _smaller_ slice---often low single digits---out of thousands of applicants. Treat these as rough estimates, not official figures, but the takeaway is clear: even a stellar applicant is playing a numbers game at the very top, which is exactly why you should also apply to the many excellent programs below the "household names" (@sec:selecting-ranking-schools).]
+#note-block[PhD programs rarely publish admission numbers, but the scale is sobering: university-wide PhD admit rates at places like #link("https://irds.stanford.edu/data-findings/doctoral-admissions")[Stanford run around 5--7%], and the most selective CS programs admit an even _smaller_ slice---often low single digits---out of thousands of applicants (and usually those applicants are already very strong). So you should also apply to the many excellent programs below the "household names" (@sec:selecting-ranking-schools).]
 
 #figure(
   image("files/xkcd_survivorship_bias.png", width: 35%),
-  caption: [#drafttag The "chance me" posts you read are survivorship bias in action: you mostly hear from the few who got in, not the many who did not. Source: #link("https://xkcd.com/1827/")[xkcd 1827], #link("https://creativecommons.org/licenses/by-nc/2.5/")[CC BY-NC 2.5].],
+  caption: [The "chance me" posts you read are survivorship bias in action: you mostly hear from the few who got in, not the many who did not. Source: #link("https://xkcd.com/1827/")[xkcd 1827], #link("https://creativecommons.org/licenses/by-nc/2.5/")[CC BY-NC 2.5].],
 ) <fig:survivorship>
 
 People who do get into these schools often were explicitly encouraged by their mentors and LOR writers, who themselves might be alumni of these schools or are academic celebrities who've sent many of their students there. If you are not in this category (doubt you are, because you're asking random people on the internet instead of your trusted LOR writers), then you're likely not going to get in, and MIT and Stanford would gladly take your application money.
