@@ -1998,8 +1998,8 @@ Thus, if your goal is a PhD in CS, you must target only schools offering such a 
 
 === Selecting and Ranking Schools <sec:selecting-ranking-schools>
 #figure(
-  image("files/c1.png", width: 50%),
-  caption: [#drafttag How _not_ to choose schools: by name brand, #gls("Ivy League") prestige, rankings, or weather---instead of research fit (@sec:selecting-ranking-schools). Source: #link("https://phdcomics.com")[PhD Comics] (© Jorge Cham).],
+  image("files/c1.png", width: 80%),
+  caption: [How _not_ to choose schools (@sec:selecting-ranking-schools). Source: #link("https://phdcomics.com")[PhD Comics] (© Jorge Cham).],
 ) <fig:schools-comic>
 
 Many students put universities into two bins: (i) top schools that they dream about, and (ii) everything else. They often use rankings from US News, which is not transparent and questionable (@chap:rankings). Sometimes they evaluate based on the reputation of the school's undergrad program or the reputation of the school's non-CS programs such as medical, math, or physics.
@@ -3680,7 +3680,7 @@ align(left)[
 
 #figure(
   image("files/xkcd_standards.png", width: 70%),
-  caption: [#drafttag Rankings proliferate the same way standards do---each claims to be the definitive one, so no single ranking should be treated as authoritative. Source: #link("https://xkcd.com/927/")[xkcd 927], #link("https://creativecommons.org/licenses/by-nc/2.5/")[CC BY-NC 2.5].],
+  caption: [Rankings proliferate the same way standards do---each claims to be the definitive one, so no single ranking should be treated as authoritative. Source: #link("https://xkcd.com/927/")[xkcd 927], #link("https://creativecommons.org/licenses/by-nc/2.5/")[CC BY-NC 2.5].],
 ) <fig:standards>
 
 Popular college rankings such as #link("https://www.usnews.com/best-colleges")[U.S. News & World Report] or #link("https://www.topuniversities.com/university-rankings")[QS World University Rankings] are often based on subjective criteria---such as reputation, faculty credentials, and student satisfaction---and are not transparent---how scores are calculated is often not disclosed.
