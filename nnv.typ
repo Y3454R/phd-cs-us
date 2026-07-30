@@ -22,20 +22,21 @@
 #set heading(numbering: "1.1.1.1.1")
 //#set math.equation(numbering: none)
 #set math.equation(numbering: "(1)")
-#set page(numbering: "1", number-align: center)
+#set page(numbering: "1", number-align: center, margin: 1.5in)
 #set par(justify: true)
 #set text(
-  size: 12pt
+  size: 11pt
 )
 
 #set list(indent: 1em)
 #set enum(indent: 1em)
 #show heading: set block(below: 1.5em, above: 1.5em)
 #show math.equation: set text(size: 0.9em)
-#show figure.caption: set align(left)
+#show figure.caption: set align(center)
 #show ref: set text(fill:blue)
 #show link: it => text(fill:blue, underline(it))
 #show figure.caption: set text(size: 0.9em)
+#show figure.where(kind: table): set figure.caption(position: top)
 
 // Inline code
 #show raw.where(block: false): it => box(fill: rgb("#f0f0f0"), inset: (x: 2pt), radius: 2pt, it)
@@ -53,6 +54,7 @@
 #let code(body) = raw(body, lang: none)
 #let sat = smallcaps[sat]
 #let unsat = smallcaps[unsat]
+#let relu = math.op("relu")
 
 
 //#set par(first-line-indent: (amount: 1.5em, all: false))
@@ -719,13 +721,13 @@ mydnn(sc: 100%),
 
 
 - The hidden neurons compute:
-  $ x_3 =  "relu"(-0.5 x_1 + 0.5 x_2 + 1.0), x_4 =  "relu"(0.5 x_1 - 0.5 x_2 - 1.0), $
-  where $ "relu"(x) = "max"(x, 0)$ is the ReLU activation function.
+  $ x_3 =  relu(-0.5 x_1 + 0.5 x_2 + 1.0), x_4 =  relu(0.5 x_1 - 0.5 x_2 - 1.0), $
+  where $ relu(x) = "max"(x, 0)$ is the ReLU activation function.
 - The output neuron computes:
   $ x_5 = -1.0 dot x_3 + 1.0 dot x_4 - 1.0. $
 
 Thus, this NN computes a function $f: RR^2 -> RR$ where:
-$ f(x_1, x_2) = - "relu"(-0.5 x_1 + 0.5 x_2 + 1.0) +  "relu"(0.5 x_1 - 0.5 x_2 - 1.0) - 1.0. $
+$ f(x_1, x_2) = - relu(-0.5 x_1 + 0.5 x_2 + 1.0) +  relu(0.5 x_1 - 0.5 x_2 - 1.0) - 1.0. $
 ] <ex:dnn>
 
 == Affine Transformation <sec:affine>
@@ -824,7 +826,7 @@ ReLU is a widely used activation function in neural networks. It is defined as:
 
 
 $
- "relu"(x) = max(0, x) = cases(
+ relu(x) = max(0, x) = cases(
 0 & "if " x <= 0,
 x & "if " x > 0
 )
@@ -884,7 +886,7 @@ A ReLU activated neuron is said to be _active_ if its input is greater than zero
 ReLU can be encoded using the following logical formula:
 
 $
-y =  "relu"(x) <==> (x <= 0 and y = 0) or (x > 0 and y = x)
+y =  relu(x) <==> (x <= 0 and y = 0) or (x > 0 and y = x)
 $
 
 In other words, if $x <= 0$, $y$ must be 0; otherwise, $y$ must equal $x$.
@@ -904,8 +906,8 @@ In Z3, we can declare ReLU using `If()`
 #paragraph[Nonlinear Property][
 Despite being piecewise linear, ReLU is *nonlinear* because it does not satisfy the two core properties of a linear function:
 
-- _Additivity:_ $ "relu"(x + y) !=  "relu"(x) +  "relu"(y)$ in general.
-- _Homogeneity:_ $ "relu"(alpha x) != alpha dot  "relu"(x)$ when $alpha < 0$.
+- _Additivity:_ $ relu(x + y) !=  relu(x) +  relu(y)$ in general.
+- _Homogeneity:_ $ relu(alpha x) != alpha dot  relu(x)$ when $alpha < 0$.
 
 In simpler terms, ReLU is nonlinear because it does not form a straight line. It has a *kink*---a sharp bend---when $x = 0$, where the slope changes abruptly from $0$ to $1$. This discontinuity in the derivative prevents the function from being globally linear.
 
@@ -1389,7 +1391,7 @@ Widely used feedforward architectures include fully connected, convolutional, an
 
 
 #example[CNN Computation][
-@fig:cnn shows a simple CNN with four inputs, three hidden neurons, and three outputs. Given an input vector $bold(x) = [x_1, x_2, x_3, x_4]$, the computation of the first output proceeds as follows. The first hidden unit forms a linear combination of its inputs as $h_1 = 2x_1 - x_2 + 0.5$. This value is then passed through the ReLU activation function, resulting in $hat(h)_1 = "relu"(h_1) = max(0, 2x_1 - x_2 + 0.5)$. Finally, the first output is simply $y_1 = hat(h)_1 - 1$.
+@fig:cnn shows a simple CNN with four inputs, three hidden neurons, and three outputs. Given an input vector $bold(x) = [x_1, x_2, x_3, x_4]$, the computation of the first output proceeds as follows. The first hidden unit forms a linear combination of its inputs as $h_1 = 2x_1 - x_2 + 0.5$. This value is then passed through the ReLU activation function, resulting in $hat(h)_1 = relu(h_1) = max(0, 2x_1 - x_2 + 0.5)$. Finally, the first output is simply $y_1 = hat(h)_1 - 1$.
 ]
 
 #paragraph[Residual Networks (ResNets)][ResNets extend FNNs by adding _skip connections_ --- direct links that bypass one or more layers. ResNets are often used in image recognition and classification.]
@@ -1496,8 +1498,8 @@ Widely used feedforward architectures include fully connected, convolutional, an
 #example[ResNet Computation][
 @fig:resnet shows an example of a ResNet. Assuming each hidden node applies the ReLU activation, with the weights and biases shown in the diagram, the outputs are:
 $
-h_1 = "relu"(x + 1) quad & h_2 = "relu"(2h_1 + x - 1) \
-h_3 = "relu"(-h_2 + 0.5) quad & y = 0.5h_3 + h_2 + 2
+h_1 = relu(x + 1) quad & h_2 = relu(2h_1 + x - 1) \
+h_3 = relu(-h_2 + 0.5) quad & y = 0.5h_3 + h_2 + 2
 $
 ]
 
@@ -1687,7 +1689,7 @@ Currently, most NNV work tackles RNNs by _unrolling_ them into an equivalent fee
 ) <fig:rnn>
 
 #example[RNN Computation][
-@fig:rnn shows a simple RNN cell. Assume the input sequence is $bold(x) = [x_1, x_2, x_3, x_4]$ and the initial hidden state is $h_0$. For the first time step, $h_1 = "relu"(2x_1 - h_0 + 0.5)$ and $y_1 = h_1 - 0.5$. For the second time step, $h_2 = "relu"(2x_2 - h_1 + 0.5)$ and $y_2 = h_2 - 0.5$.
+@fig:rnn shows a simple RNN cell. Assume the input sequence is $bold(x) = [x_1, x_2, x_3, x_4]$ and the initial hidden state is $h_0$. For the first time step, $h_1 = relu(2x_1 - h_0 + 0.5)$ and $y_1 = h_1 - 0.5$. For the second time step, $h_2 = relu(2x_2 - h_1 + 0.5)$ and $y_2 = h_2 - 0.5$.
 ]
 
 ==== Transformers
@@ -1809,7 +1811,7 @@ ONNX operators that cover most sequential feedforward networks include:
   For the network in @fig:dnn, the ONNX representation would include:
 
   - Input: $x_1, x_2$.
-  - Hidden layer: $x_3 =  "relu"(-0.5x_1 + 0.5x_2 + 1.0)$, $x_4 =  "relu"(0.5x_1 - 0.5x_2 + 1.0)$.
+  - Hidden layer: $x_3 =  relu(-0.5x_1 + 0.5x_2 + 1.0)$, $x_4 =  relu(0.5x_1 - 0.5x_2 + 1.0)$.
   - Output: $x_5 = -x_3 + x_4 - 1$.
 
   The ONNX representation would look like:
@@ -1821,11 +1823,13 @@ ONNX operators that cover most sequential feedforward networks include:
     input: "x"
     output: "x5"
 
-    node { op_type: "Gemm" input: "x" input: "W1" input: "b1" output: "h1" }   # -0.5*x1+0.5*x2+1
-    node { op_type:  "relu" input: "h1" output: "x3" }
+    node { op_type: "Gemm" input: "x" input: "W1" input: "b1"
+           output: "h1" }   # h1 = -0.5*x1 + 0.5*x2 + 1
+    node { op_type: "relu" input: "h1" output: "x3" }
 
-    node { op_type: "Gemm" input: "x" input: "W2" input: "b2" output: "h2" }   # 0.5*x1-0.5*x2+1
-    node { op_type:  "relu" input: "h2" output: "x4" }
+    node { op_type: "Gemm" input: "x" input: "W2" input: "b2"
+           output: "h2" }   # h2 = 0.5*x1 - 0.5*x2 + 1
+    node { op_type: "relu" input: "h2" output: "x4" }
 
     node { op_type: "Neg" input: "x3" output: "nx3" }
     node { op_type: "Add" input: "nx3" input: "x4" output: "s1" }
@@ -2313,7 +2317,7 @@ For example, for a fully-connected neural network (@sec:ffn) with $L$ layers and
 $ 
 alpha =    and.big (i in [1, L], j in [1, N])
     v_(i, j) =
-     "relu"(
+     relu(
       sum_(k in [1, N])
       (w_(i - 1, j, k) dot v_(i - 1, k))
       + b_(i, j)
@@ -2373,8 +2377,8 @@ that the negation of the first formula is equivalent to the second formula.
 We represent the network in @fig:dnn-b as a formula $alpha$:
 
 $
-  x_3 =  "relu"(-0.5 x_1 + 0.5 x_2 + 1.0) and \
-  x_4 =  "relu"(0.5 x_1 - 0.5 x_2 - 1.0) and \
+  x_3 =  relu(-0.5 x_1 + 0.5 x_2 + 1.0) and \
+  x_4 =  relu(0.5 x_1 - 0.5 x_2 - 1.0) and \
   x_5 = -x_3 + x_4 - 1.0
 $
 
@@ -2610,7 +2614,7 @@ A straightforward and automated way to do this encoding is using _symbolic execu
 We can adapt traditional SE to our problem by treating the network as a program and neurons as variables and executing the network on symbolic inputs. Affine transformations can easily be represented as logical formulae because they are linear functions. Activation functions such as ReLUs are translated to disjunctions of linear functions or if-then-else statements:
 
 $
-  y =  "relu"(x)  \
+  y =  relu(x)  \
   y = max(x, 0) \
   y = "if" x > 0 "then" x "else" 0\
   (x > 0 and y = x) or (x <= 0 and y = 0)
@@ -3164,7 +3168,7 @@ This chapter discusses the interval, zonotope, and polytope abstract domains com
     polytope-abstraction(scale: 1.5),
     [(a) Interval], [(b) Zonotope], [(c) Polytope]
   ),
-  caption: [Abstractions of $"relu"(x) = max(0,x)$ over $x in [l_x, u_x]$ using (a) interval, (b) zonotope, (c) polytope abstractions.]
+  caption: [Abstractions of $relu(x) = max(0,x)$ over $x in [l_x, u_x]$ using (a) interval, (b) zonotope, (c) polytope abstractions.]
 ) <fig:relu-all-abstractions>
 
 #paragraph[Abstractions for ReLU][
@@ -3514,13 +3518,13 @@ $
 
 === ReLU Transformer
 
-For $"relu"(x) = max(0, x)$, the abstract transformer is defined as:
-$ "relu"^a ([l, u]) = ["relu"(l), "relu"(u)] = [max(0, l), max(0, u)] $
+For $relu(x) = max(0, x)$, the abstract transformer is defined as:
+$ relu^a ([l, u]) = [relu(l), relu(u)] = [max(0, l), max(0, u)] $
 
 This is equivalent to three cases shown in @fig:relu-interval-cases:
-+ If $u < 0$, then $"relu"^a ([l, u]) = [0, 0]$. If inputs are negative, the output is also negative.
-+ If $l >= 0$, then $"relu"^a ([l, u]) = [l, u]$. If inputs are positive, the output is exactly the same.
-+ If $l < 0 < u$, then $"relu"^a ([l, u]) = [0, u]$. If inputs are mixed, the output is approximated to $[0, u]$.
++ If $u < 0$, then $relu^a ([l, u]) = [0, 0]$. If inputs are negative, the output is also negative.
++ If $l >= 0$, then $relu^a ([l, u]) = [l, u]$. If inputs are positive, the output is exactly the same.
++ If $l < 0 < u$, then $relu^a ([l, u]) = [0, u]$. If inputs are mixed, the output is approximated to $[0, u]$.
 
 #import "@preview/cetz:0.3.4"
 
@@ -3593,8 +3597,8 @@ This is equivalent to three cases shown in @fig:relu-interval-cases:
 ) <fig:relu-interval-cases>
 
 #example[ReLU Interval][
-For @ex:transformer-affine1, applying $"relu"^a$ to neuron $x_3$ gives:
-$ "relu"^a ([-0.5, 2.0]) = ["relu"(-0.5), "relu"(2.0)] = [0, 2.0]. $
+For @ex:transformer-affine1, applying $relu^a$ to neuron $x_3$ gives:
+$ relu^a ([-0.5, 2.0]) = [relu(-0.5), relu(2.0)] = [0, 2.0]. $
 ]
 
 #problem[Interval Abstraction][
@@ -3609,7 +3613,7 @@ However, the cost of efficiency is _precision_.
 #example[Interval Overapproximation][
 Suppose we have $v_1 in [0, 1]$, $v_2 = -v_1$, and $z = v_1 + v_2$.
 The concrete value of $z$ would always be 0, but interval abstraction gives $z in [-1, 1]$, which is a very loose over-approximation.
-Moreover, if we apply ReLU, then the output would be $"relu"(z) = "relu"(0) = 0$, but the interval gives $"relu"^a ([-1, 1]) = [0, 1]$, which is again a loose over-approximation.
+Moreover, if we apply ReLU, then the output would be $relu(z) = relu(0) = 0$, but the interval gives $relu^a ([-1, 1]) = [0, 1]$, which is again a loose over-approximation.
 ] <ex:interval-overapproximation>
 
 Interval overapproximation grows quickly as we propagate through many layers of a large network, i.e., it keeps "inflating" the bounds, leading to a loose approximation of the output and becoming unable to verify valid properties. For example, $z <= 0$ is a valid property for @ex:interval-overapproximation, but the interval abstraction gives $z in [0, 1]$, which is not tight (precise) enough to show this property.
@@ -3903,11 +3907,11 @@ $ f(x_1, x_2) = 0.5 x_1 - 0.5 x_2 - 1 $
 ==== ReLU Transformer
 
 Activation functions like ReLU are non-affine and do not preserve zonotope structure.
-For $"relu"(x) = max(0, x)$, the shape of the input region changes at $x = 0$: $x < 0$ maps to $0$ (a flat line), while $x >= 0$ maps to $x$ (a slanted line). Thus, we over-approximate these shapes with a new zonotope --- a parallelogram --- that contains the entire ReLU output region.
+For $relu(x) = max(0, x)$, the shape of the input region changes at $x = 0$: $x < 0$ maps to $0$ (a flat line), while $x >= 0$ maps to $x$ (a slanted line). Thus, we over-approximate these shapes with a new zonotope --- a parallelogram --- that contains the entire ReLU output region.
 
 We can distinguish three possible cases of ReLU depending on the bounds $[l, u]$ of the input zonotope:
-- *Active case* ($l >= 0$): All values are non-negative, so $"relu"^a (x) = x$ (identity function), i.e., the output zonotope is the same as the input zonotope.
-- *Inactive case* ($u <= 0$): All values are negative, so $"relu"^a (x) = { 0 }$, i.e., the output zonotope is a single point at zero.
+- *Active case* ($l >= 0$): All values are non-negative, so $relu^a (x) = x$ (identity function), i.e., the output zonotope is the same as the input zonotope.
+- *Inactive case* ($u <= 0$): All values are negative, so $relu^a (x) = { 0 }$, i.e., the output zonotope is a single point at zero.
 - *Unstable case* ($l < 0 < u$): The range crosses zero, requiring over-approximation using a parallelogram that bounds ReLU over $[l, u]$ as described below.
 
 *Building parallelogram.*
@@ -4362,8 +4366,8 @@ if it is an empty set $emptyset$, it is the empty pattern as in
 Once having an activation pattern $p$, we can simplify the formula $alpha$
 representing the network by replacing each ReLU function with a linear
 constraint according to the activation status specified in $p$. For example,
-if $p$ specifies that neuron $n_i$ is active, we replace $ "relu"(z_i)$ with
-$z_i >= 0$. Otherwise, if $n_i$ is inactive, we replace $ "relu"(z_i)$ with
+if $p$ specifies that neuron $n_i$ is active, we replace $ relu(z_i)$ with
+$z_i >= 0$. Otherwise, if $n_i$ is inactive, we replace $ relu(z_i)$ with
 $z_i < 0$. This gives us the formula $alpha_p$ corresponding to the linear
 region defined by $p$.
 
@@ -4385,8 +4389,8 @@ easier than checking that of $alpha and phi_"in" and not phi_"out"$.
   $
     & hat(x)_3 = -0.5x_1 + 0.5x_2 + 1.0 \
     & hat(x)_4 = 0.5x_1 - 0.5x_2 - 1.0 \
-    & x_3 =  "relu"(hat(x)_3) \
-    & x_4 =  "relu"(hat(x)_4) \
+    & x_3 =  relu(hat(x)_3) \
+    & x_4 =  relu(hat(x)_4) \
     & x_5 = -x_3 + x_4 - 1.0,
   $
   where $hat(x)_3$ and $hat(x)_4$ are the pre-activation values of the ReLU
@@ -4417,7 +4421,7 @@ easier than checking that of $alpha and phi_"in" and not phi_"out"$.
     $alpha$ reduces to:
     $
       & hat(x)_4 = 0.5x_1 - 0.5x_2 - 1.0 \
-      & x_4 =  "relu"(hat(x)_4) \
+      & x_4 =  relu(hat(x)_4) \
       & x_5 = -(-0.5x_1 + 0.5x_2 + 1.0) + x_4 - 1.0.
     $
     Because $q$ does not fix the status of $x_4$, we cannot simplify the ReLU
@@ -4709,8 +4713,8 @@ We reuse @ex:bab to illustrate #smallcaps[ProofGen]. The goal is to verify the p
 #problem[Proof Tree Construction][
 Consider the following network:
 $
-hat(x)_3 &= x_1 - 2x_2 + 1, quad x_3 = "relu"(hat(x)_3) \
-hat(x)_4 &= -x_1 + x_3 + 0.5, quad x_4 = "relu"(hat(x)_4) \
+hat(x)_3 &= x_1 - 2x_2 + 1, quad x_3 = relu(hat(x)_3) \
+hat(x)_4 &= -x_1 + x_3 + 0.5, quad x_4 = relu(hat(x)_4) \
 y &= -x_3 + 2x_4
 $
 The input region is $(x_1, x_2) in [-1,1] times [-1,1]$ and the property to verify is $y <= 5$.
@@ -5329,8 +5333,8 @@ Recall the network from @fig:dnn-b can be represented as:
 $
   hat(x)_3 = -0.5x_1 + 0.5x_2 + 1.0 and \
   hat(x)_4 = 0.5x_1 - 0.5x_2 + 1.0 and \
-  x_3 = "relu"(hat(x)_3) and \
-  x_4 = "relu"(hat(x)_4) and \
+  x_3 = relu(hat(x)_3) and \
+  x_4 = relu(hat(x)_4) and \
   x_5 = -x_3 + x_4 - 1.0,
 $
 and input property $phi_"in"$: $-1 <= x_1 <= 1 and -2 <= x_2 <= 2$.
@@ -11016,7 +11020,8 @@ Now you have all the components to build the verifier. Follow the naming convent
   [A single Python file `verify.py` that accepts three command line arguments and runs the verification. This provides a unified interface for testing your implementation.
 
   ```sh
-  python verify.py [path/to/network.onnx] [path/to/property.vnnlib] [timeout_in_seconds]
+  python verify.py [path/to/network.onnx] [path/to/property.vnnlib] \
+      [timeout_in_seconds]
 
   # E.g.
   python verify.py acasxu/Network1_1.onnx acasxu/Property7.vnnlib 116
@@ -11068,174 +11073,89 @@ You must submit a *zip file* containing the following files. Use the following n
   - 6 points --- for running your verifier on ACAS XU benchmarks (first 90 instances)
 - 10 points --- for completed README with analysis.
 
-// = Schedule <chap:schedule}
+= Schedule <chap:schedule>
 
-// \begin{itemize}
-//     \item Week 1 (1/20): 
-//     \begin{itemize}
-//         \item Introduction / Syllabus Overview
-//         \item Formal Methods and Specifications Overview (@chap:formal-methods)
-//         \item HW: Post a short introduction about yourself on Canvas
-//     \end{itemize}
-    
-//     \item Week 2 (2/3):
-//     \begin{itemize}
-//     \item Topics: Background on Logic and Satisfiability~@chap:logics
-//     \item Quiz:~@problem:duplicate-specs
-//     \item HW: Using Z3 SMT Solver to check satisfiability.
-//     \begin{itemize}
-//         \item Familiarize yourself with Z3 and install it on your machine (@sec:z3). Try a few examples as given in~@ex:z3-propositional and~@ex:z3-linear-constraints.
-//       \item Do~@prob:z3-0,~@prob:z3-1,~@prob:z3-2,~@prob:z3-3
-//     \end{itemize}
-      
-            
-//     \end{itemize}
+#tvn[DRAFT --- ported from `../nnv/book.tex` (Schedule chapter) on 2026-07-30; needs review.]
 
-//     \item Week 3 (2/10):
-//     \begin{itemize}
-//         \item Backgrounds on Linear Programming (@chap:lp)
-//         \item Topics: NNV and Properties and their formal representation (@chap:nn-basics and~@chap:properties)
-//         \item Short Videos
-//         \begin{itemize}
-//             %\item Formal Verification: A Quick Primer~\cite{axiomise2020formal}
-//             \item But what is a neural network?~\cite{3blue1brown2017neuralnetworks}
-//             %\item Large Language Models~\cite{3blue1brown2017llms}
-//         \end{itemize}
-//         \item Quiz:~@problem:short-questions             
-//         \item HW: MILP problem~@ex:milp-online
-            
-//     \end{itemize}
+- Week 1 (1/20):
+  - Introduction / Syllabus Overview
+  - Formal Methods and Specifications Overview (@chap:formal-methods)
+  - HW: Post a short introduction about yourself on Canvas
 
+- Week 2 (2/3):
+  - Topics: Background on Logic and Satisfiability @chap:logics
+  - Quiz: @prob:remove_duplicates
+  - HW: Using Z3 SMT Solver to check satisfiability.
+    - Familiarize yourself with Z3 and install it on your machine (@sec:z3). Try a few examples as given in @ex:z3-propositional and @ex:z3-linear-constraints.
+    - Do @prob:z3-0, @prob:z3-1, @prob:z3-2, @prob:z3-3
 
-//     \item Week 4 (2/17):
-//     \begin{itemize}
-//         \item Topics: NN Properties~@chap:properties 
-//         \item In class exercise: Using Z3 to check satisfiability of networks and properties~@prob:z3-dnn
-//         \item Quiz:~@problem:milp-hand
-//         \item HW: Neural Networks and Properties~@problem:z3-properties
+- Week 3 (2/10):
+  - Backgrounds on Linear Programming (@chap:lp)
+  - Topics: NNV and Properties and their formal representation (@chap:nn-basics and @chap:properties)
+  - Short Videos
+    - But what is a neural network? @3blue1brown2017neuralnetworks
+  - Quiz: @problem:short-questions
+  - HW: MILP problem @ex:milp-online
 
-//     \end{itemize}
+- Week 4 (2/17):
+  - Topics: NN Properties @chap:properties
+  - In class exercise: Using Z3 to check satisfiability of networks and properties @prob:z3-dnn
+  - Quiz: @problem:milp-hand
+  - HW: Neural Networks and Properties @problem:z3-properties
 
-//     \item Week 4 (2/24):
-//     \begin{itemize}
-//         \item Topics: Neural Network Verification (NNV) (@sec:verification) and Symbolic Execution~@sec:se-smt
-//         \item In class exercise:~@ex:dnn-b and~@problem:z3-dnn
-//         \item Quiz:~@problem:drone
-//         \item HW:~@ex:negation-trick
-//     \end{itemize}
-       
-//     \item Programming Assignment 1 (PA1)
-//     \begin{itemize}
-//         \item Topics: Symbolic Execution of Neural Networks~@sec:pa1
-//         \item Due date \alert{Monday March 17, 2026 11:59 PM}         
-//     \end{itemize}
+- Week 4 (2/24):
+  - Topics: Neural Network Verification (NNV) (@sec:nnv-problem) and Symbolic Execution @sec:se-smt
+  - In class exercise: @ex:dnn-b and @problem-z3-dnn
+  - Quiz: @problem:drone
+  - HW: @ex-negation-trick
 
+- Programming Assignment 1 (PA1)
+  - Topics: Symbolic Execution of Neural Networks @sec:pa1
+  - Due date #alert[Monday March 17, 2026 11:59 PM]
 
-//     \item Week 5 (3/3):
-//     \begin{itemize}
-//         \item Topics: MILP Enncoding of NNVs (@sec:using-milp)        
-//         \item Quiz:~@problem:mydnntwo. You don't need to do question 4 (Z3) for the quiz.
-//         \item HW: Do~@problem:relu-milp-bounds and~@prob:milp-dnn
-//     \end{itemize}
+- Week 5 (3/3):
+  - Topics: MILP Encoding of NNVs (@sec:using-milp)
+  - Quiz: @problem:mydnntwo. You don't need to do question 4 (Z3) for the quiz.
+  - HW: Do @problem:relu-milp-bounds and @prob:milp-dnn
 
-//     \item Week 6 (3/17):
-//     \begin{itemize}
-//         \item Topics: Abstraction (@chap:abstractions), Interval Abstraction  (@sec:interval-abstraction)        
-//         \item Quiz: (Re)Do~@ex:milp-dnn by hand
-//         \item HW: No HW because we didn't get a chance to cover the material in class.
-//     \end{itemize}
+- Week 6 (3/17):
+  - Topics: Abstraction (@chap:abstractions), Interval Abstraction (@sec:interval-abstraction)
+  - Quiz: (Re)Do @ex:milp-dnn by hand
+  - HW: No HW because we didn't get a chance to cover the material in class.
 
-//     \item Week 7 (3/24):
-//     \begin{itemize}
-//         \item Topics: Abstraction (@chap:abstractions), Interval and Zonotope (@sec:interval-abstraction,~@sec:zonotope-abstraction)
-//         \item Quiz: No Quiz because no HW due this week.
-//         \item HW: Do~@prob:int-abs and~@ex:zonotope_linear_example (this is a complete example so just rewrite it by hand and submit it as HW)      
-//     \end{itemize}
+- Week 7 (3/24):
+  - Topics: Abstraction (@chap:abstractions), Interval and Zonotope (@sec:interval-abstraction, @sec:zonotope-abstraction)
+  - Quiz: No Quiz because no HW due this week.
+  - HW: Do @prob:int-abs and @ex:zonotope_linear_example (this is a complete example so just rewrite it by hand and submit it as HW)
 
-//     \item Programming Assignment 2 (PA2)
-//     \begin{itemize}
-//         \item Abstraction~@sec:pa2
-//         \item Due date \alert{Monday April 13, 2026 11:59 PM}
-//     \end{itemize}
-    
-//     \item Week 8 (3/31):
-//     \begin{itemize}
-//         \item Topics: Branch and Bound (@chap:bab), Activation Pattern Search (@sec:activation-patterns)
-//         \item Quiz:~@prob:zonotope_linear_example_x4
-//         \item HW:~@problem:pattern-enumeration and~@problem:nnv-pattern
+- Programming Assignment 2 (PA2)
+  - Abstraction @sec:pa2
+  - Due date #alert[Monday April 13, 2026 11:59 PM]
 
-//     \end{itemize}
+- Week 8 (3/31):
+  - Topics: Branch and Bound (@chap:bab), Activation Pattern Search (@sec:activation-patterns)
+  - Quiz: @prob:zonotope_linear_example_x4
+  - HW: @problem:pattern-enumeration and @problem:nnv-pattern
 
-//     \item Week 9 (April 7):
-//     \begin{itemize}
-//         \item Topics: Adversarial Attacks~@chap:adversarial-attacks %and Proof Certificates~@chap:proof-gen-check        
-//         \item Quiz:~@problem:counting-patterns
-//         %~@prob:bab-understanding
-//         \item HW: Do~@prob:bab-detailed,~@prob:compute-gradients,~@prob:pgd-iterations (due date extended to Friday April 17, 2026 11:59pm)
-//         % ~@prob:bab-counterexample, and ~@prob:bab-interval
+- Week 9 (April 7):
+  - Topics: Adversarial Attacks @chap:adversarial-attacks
+  - Quiz: @problem:counting-patterns
+  - HW: Do @prob:bab-detailed, @prob:compute-gradients, @prob:pgd-iterations (due date extended to Friday April 17, 2026 11:59pm)
 
-//     \end{itemize}
-//     \item Programming Assignment 3 (PA3)
-//     \begin{itemize}
-//         \item Branch and Bound~@sec:pa3
-//         \item Due date \alert{Friday May 1, 2026 11:59pm}
-//     \end{itemize}
+- Programming Assignment 3 (PA3)
+  - Branch and Bound @sec:pa3
+  - Due date #alert[Friday May 1, 2026 11:59pm]
 
+- Week 10 (April 14):
+  - Topics: Branch and Bound (@chap:bab), Activation Pattern Search (@sec:activation-patterns)
+  - Quiz: No quiz due to homework extension
+  - HW: no new HW
 
-// %     \item Week 7 (Oct 8):
-// %     \begin{itemize}
-// %         \item No HW because of PA1 due date
-// %         \item 
-// %         
-// %     \end{itemize}
-// %     \item Week 8 (Oct 15):
-// %     \begin{itemize}
-// %       
-// %        \item Topics: Abstraction (@chap:abstractions), Interval and Zonotope (@sec:interval-abstraction,~@sec:zonotope-abstraction)
-// %        \item Quiz:~@prob:stable-neuron
-// %     \end{itemize}
-// %   \item Week 9 (Oct 22):
-// %         \begin{itemize}
-// %           \item Topics: Abstraction (@chap:abstractions), Interval and Zonotope (@sec:interval-abstraction,~@sec:zonotope-abstraction)
-// %           \item HW: Do~@prob:int-abs
-// %           \item Quiz:~@prob:correct-abs
-// %         \end{itemize}
-// %     \item Week 10 (Oct 29):
-// %     \begin{itemize}
-// %         \item No HW because of PA2 due date
-// %         \item Topics: Zonotope~@sec:zonotope-abstraction and BaB Algorithm~@chap:bab
-// %         \item Quiz: attendance
-// %     \end{itemize}
-//     \item Week 10 (April 14):
-//     \begin{itemize}
-//         \item Topics: Branch and Bound (@chap:bab), Activation Pattern Search (@sec:activation-patterns)
-//         \item Quiz: No quiz due to homework extension
-//         \item HW: no new HW
-//     \end{itemize}
-
-//     \item Week 11 (April 21):
-//     \begin{itemize}
-//         \item Short Clip: \href{https://www.youtube.com/watch?v=YYgepDY3rHw}{Mathematical Proofs}
-//         \item Topics: Proof Generation for NNV~@chap:proof-gen-check, Engineering and Optimization Tricks~@chap:common-engineering, \neuralsat{} algorithm~@chap:neuralsat. %, \reluplex{} algorithm~@chap:reluplex
-//         \item Quiz:~@prob:pgd-iterations (part 2 only)
-//         \item HW: Do~@prob:proof-tree  and~@problem:reluplex-hand
-//     \end{itemize}        
-
-// %     \item Week 13 (Nov 19):
-// %     \begin{itemize}
-// %         \item Topics: TBD
-// %         
-// %         \item Quiz: @problem:reluplex-basic-nonbasic
-// %     \end{itemize}
-// %     \item Final Project---Programming Assignment 4 (PA4)
-// %     \begin{itemize}
-// %         \item Putting everything together~@sec:pa4
-// %         \item Due date \alert{Wednesday Dec 10, 2025 11:59pm}
-// %     \end{itemize}
-
-
-// \end{itemize}
-
+- Week 11 (April 21):
+  - Short Clip: #link("https://www.youtube.com/watch?v=YYgepDY3rHw")[Mathematical Proofs]
+  - Topics: Proof Generation for NNV @chap:proof-gen-check, Engineering and Optimization Tricks @chap:common-engineering, #tool algorithm @chap:neuralsat
+  - Quiz: @prob:pgd-iterations (part 2 only)
+  - HW: Do @prob:proof-tree and @problem:reluplex-hand
 
 #pagebreak()
 #bibliography("nnv.bib", style:"ieee")
