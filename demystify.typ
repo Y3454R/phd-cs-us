@@ -58,6 +58,15 @@
       #text(style:"italic", size:0.85em)[#s]
   ]
 
+// Chapter-opening pull-stat: a large italic hook placed right after a chapter heading.
+#let chapter-opener(stat, source: none) = block(above: 0.6em, below: 1.6em, breakable: false)[
+  #text(size: 15pt, style: "italic", fill: rgb("#1a1a1a"))[#stat]
+  #if source != none [
+    #h(0.5em)
+    #text(size: 8.5pt, fill: gray)[#source]
+  ]
+]
+
 #import "@preview/theorion:0.6.0": *
 //#import cosmos.simple: *
 #import cosmos.fancy: *
@@ -176,7 +185,7 @@ Additional information about the book can be found in @chap:about.
 
 == Should You Apply? <chap:should>
 
-//Definitely, yes. CS PhD study in the US is often *fully funded* and admission into good universities in the US is *not* any harder than in other countries.
+#chapter-opener([Definitely, yes. CS PhD study in the US is often *fully funded* and admission into good universities in the US is *not* any harder than in other countries.])
 
 #simpsons[
   Don't make fun of graduate students. They just made a terrible life choice.
@@ -446,7 +455,7 @@ Some programs also waive the fee if applicants attend their open house or inform
 
 == How is Your Application Evaluated? <chap:evalapps>
 
-// \chapterinfo{Applications are evaluated by the PhD Admission (\acrshort{adcom}) committee and each application is typically reviewed by three \glslink{adcom-members}{faculty members}.}
+#chapter-opener([Applications are evaluated by the PhD Admission (#gls("adcom")) committee and each application is typically reviewed by three #gls("adcom members", display: [faculty members]).])
 
 After you submit your PhD application (@part:application), it will be checked for general requirements---whether you submit your transcripts and standard scores? Usually, this screening process is done through a central university system, i.e., not by CS faculty.
 
@@ -565,7 +574,7 @@ The committee will look at various factors, but the most important ones are #gls
 
  
 == Letters of Recommendation (LOR) <chap:LOR>
-// \chapterinfo{LORs are very important, but only if they are \textbf{personalized} and \textbf{research focused}.}
+#chapter-opener([LORs are very important, but only if they are *personalized* and *research focused*.])
 
 #simpsons[To whom it may concern… D'oh!]
 
@@ -828,7 +837,7 @@ Finally, I usually submit a letter for a student in *batch*—submit to all univ
 #pagebreak()
 
 == Research Experience (e.g., Publications) <chap:research-experience>
-// \chapterinfo{Publications are not \textbf{required} but can \textbf{greatly help}. Papers in good venues are concrete evidence that you have successfully engaged in research.}
+#chapter-opener([Publications are not *required* but can *greatly help*. Papers in good venues are concrete evidence that you have successfully engaged in research.])
 
 #simpsons[I've got to study harder and publish faster!]
 
@@ -894,7 +903,7 @@ So do talk about them in your SOP (@chap:sop) and have your writers mention them
 
 #pagebreak()
 == Statement of Purpose (SOP) <chap:sop>
-// \chapterinfo{SOP is important. Write it in such a way that makes you \textbf{stand out}.}
+#chapter-opener([SOP is important. Write it in such a way that makes you *stand out*.])
 
 #simpsons[All my life I've had one dream: to achieve my many goals.]
 
@@ -983,7 +992,7 @@ At a high level, a diversity statement is _not_ an ideological endorsement, but 
 
 #pagebreak()
 == Your School and Grades <chap:your-school>
-// \chapterinfo{Your schools might not as well-known as you think.  High grades probably won't help much, but bad ones likely will raise concerns.}
+#chapter-opener([Your schools might not as well-known as you think. High grades probably won't help much, but bad ones likely will raise concerns.])
 
 #simpsons[Woohoo! I'm a college man! I won't need my high school diploma anymore]
 
@@ -1043,7 +1052,7 @@ Should you explain bad grades in relevant courses in your SOP? If you have just 
 
 #pagebreak()
 == Standard Tests (GRE and IELTS) <chap:standard-tests>
-// \chapterinfo{Standard tests are \textbf{not} important. \acrshort{GRE} typically \emph{is not} required. For standard English tests (not required for domestic students), just do enough to pass the minimum requirements.}
+#chapter-opener([Standard tests are *not* important. #gls("GRE") typically *is not* required. For standard English tests (not required for domestic students), just do enough to pass the minimum requirements.])
 
 
 #simpsons[I've got to study harder. Everyone knows standardized tests are biased against the poor, the lazy, and the stupid.]
@@ -1130,7 +1139,7 @@ Having popular projects or active contributions can help you stand out (@sec:sta
 = After You Apply <part:after-apply>
 
 == Interview and The Waiting Game <chap:interview>
-// \chapterinfo{Getting an interview is typically a good sign; but no interview does not mean rejection.}
+#chapter-opener([Getting an interview is typically a good sign; but no interview does not mean rejection.])
 
 #simpsons[Bart: "Are we there yet? Are we there yet? Are we there yet?"
 
@@ -1251,8 +1260,7 @@ Not much you can do here. You can try to contact the school to ask about your st
 
 #pagebreak()
 == Getting Admitted <chap:accepted>
-// \chapterinfo{Congrats! Now it is your turn to evaluate the school!
-// Attend \emph{Open House} to learn more about the place and \emph{interview} profs---they would be much more willing to talk to you now.}
+#chapter-opener([Congrats! Now it is your turn to evaluate the school! Attend *Open House* to learn more about the place and *interview* profs---they would be much more willing to talk to you now.])
 
 #simpsons[Oh... and how is education supposed to make me feel smarter? Besides, every time I learn something new, it pushes some old stuff out of my brain. Remember when I took that home wine-making course and I forgot how to drive?]
 
@@ -1367,7 +1375,7 @@ However, do not assume that your prof. will automatically provide you a new lapt
 Finally, keep in mind that these computers and equipment would be university property, which might be monitored and have certain restrictions, e.g., do not install illegal software on them (@sec:illegal-software). You will likely need to return them when you graduate.
 
 == Dealing with Rejection <chap:not-accepted>
-// \chapterinfo{Rejection is part of academia.  Common reasons for rejection include aiming too high, not a good fit, and bad luck.  Do not take rejection personally. Learn from it and try again.} 
+#chapter-opener([Rejection is part of academia. Common reasons for rejection include aiming too high, not a good fit, and bad luck. Do not take rejection personally. Learn from it and try again.])
 
 #simpsons[You tried your best and you failed miserably. The lesson is: never try.]
 
@@ -1482,7 +1490,7 @@ There are other things you might not think are important but can make you stand 
 
 = Funding <chap:funding>
 
-// \chapterinfo{TAs, RAs, and fellowships are main funding sources for PhDs.  TAs are provided by the department to help with classes. RAs are given by profs. to help with their research.  Fellowships, provided by the university, department, or external sources such as government or industry, give move flexibility but can be very competitive.}
+#chapter-opener([TAs, RAs, and fellowships are main funding sources for PhDs. TAs are provided by the department to help with classes. RAs are given by profs. to help with their research. Fellowships, provided by the university, department, or external sources such as government or industry, give more flexibility but can be very competitive.])
 
 #simpsons[Bart, with \$10,000, we'd be millionaires! We could buy all kinds of useful things like ... love!]
 
@@ -1674,7 +1682,7 @@ In the end, the total budget comes out to be \$73K/year to support a PhD student
 
 
 == Choosing Schools <chap:choosing-school>
-// \chapterinfo{Not every university has a CS PhD program. Not every professor, even those in CS, can advise or graduate CS PhD students.}
+#chapter-opener([Not every university has a CS PhD program. Not every professor, even those in CS, can advise or graduate CS PhD students.])
 
 #simpsons[It's not the school you go to, it's what you do while you're there!]
 // %\myepigraphsimpsons{"The answer to life's problems aren't at the bottom of a bottle. Heh heh! They're on TV!"}
@@ -1951,7 +1959,7 @@ In addition, a CS department has various *administrative staff* who handle day-t
 
 #pagebreak()
 == Choosing an Advisor <chap:choosing-advisor>
-// \chapterinfo{The best advisor is the one that \textbf{fits}, e.g., you can work well with, and has the ability to help you succeed. But you do not know that until you start working with them.}
+#chapter-opener([The best advisor is the one that *fits*, e.g., you can work well with, and has the ability to help you succeed. But you do not know that until you start working with them.])
 
 #simpsons[It's not easy being a mentor. But it sure is funny to watch other people screw up.]
 
@@ -2342,7 +2350,7 @@ F-2 visa holders must leave the US if the primary F-1 student visa holder loses 
 
 #pagebreak()
 = Domestic Students <chap:domestic-students>
-// \chapterinfo{Specific benefits and opportunities for domestic students applying to CS PhD programs.}
+#chapter-opener([Specific benefits and opportunities for domestic students applying to CS PhD programs.])
 
 #simpsons[I'm not a bad guy! I work hard, and I love my kids. So why should I spend half my Sunday hearing about how I'm going to Hell?]
 
@@ -2373,7 +2381,7 @@ You are also more familiar with the US education system and academic culture (@c
 
 #pagebreak()
 = MS Admission <chap:ms>
-// \chapterinfo{MS focuses on coursework and prepares you for \emph{industry}, while PhD focuses on research and prepares you for academia or research. So admission requirements are different.}
+#chapter-opener([MS focuses on coursework and prepares you for *industry*, while PhD focuses on research and prepares you for academia or research. So admission requirements are different.])
 
 While both MS and PhD programs are graduate degrees, they are _very different_ in terms of objective, admission requirements, course requirements, duration, and funding. This section discusses the differences and provides guidance on applying to MS programs.
 
@@ -2479,7 +2487,7 @@ Because of the differences between MS and PhD programs (@sec:phd-vs-ms), you sho
 
 #pagebreak()
 = Research Opportunities <chap:research-opportunities>
-// \chapterinfo{How to get research experience as an undergrad.}
+#chapter-opener([How to get research experience as an undergrad.])
 
 #simpsons[Kids, you tried your best and you failed miserably. The lesson is: never try.]
 
@@ -2625,7 +2633,7 @@ This is less common but several places offer virtual internships and research pr
 #pagebreak()
 
 = Fellowship Applications <chap:fellowships>
-// \chapterinfo{How fellowships such as NSF GRFP and DOD DSEG are evaluated.}
+#chapter-opener([How fellowships such as NSF GRFP and DoD NDSEG are evaluated.])
 
 #simpsons[You mean those leagues where parents push their kids into vicious competition to compensate for their own failed dreams of glory?]
 
@@ -2901,7 +2909,7 @@ These awards are not open to all researchers and therefore face less competition
 
 #pagebreak()
 = Writing in LaTeX or Typst <chap:writing-latex>
-// \chapterinfo{You should write your academic documents in \LaTeX{}.}
+#chapter-opener([You should write your academic documents in LaTeX.])
 
 #simpsons[Coming to the book fair sure was a great idea. 'Cause you can't write if you don't know what the competition is up to.]
 
@@ -3067,7 +3075,7 @@ In general, tipping on the pre-tax amount is common and the logic is that tax is
 
 #pagebreak()
 = Rankings of CS PhD programs <chap:rankings>
-// \chapterinfo{CSRankings.org is a ranking system based on faculty publications at top CS conferences. CSPicks is not a ranking system and instead focuses on expLORing the research strengths of CS departments and faculty.}
+#chapter-opener([CSRankings.org is a ranking system based on faculty publications at top CS conferences. CSPicks is not a ranking system and instead focuses on exploring the research strengths of CS departments and faculty.])
 
 #simpsons[The whole damn system is wrong!]
 
