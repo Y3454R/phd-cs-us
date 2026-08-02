@@ -62,9 +62,9 @@
 ]
 
 #import "@preview/theorion:0.6.0": *
-#import cosmos.simple: *
+//#import cosmos.simple: *
 //#import cosmos.fancy: *
-//#import cosmos.rainbow: *
+#import cosmos.rainbow: *
 //#import cosmos.clouds: *
 #show: show-theorion
 
@@ -3693,7 +3693,7 @@ I am also a member of the VietPhD group on Facebook and often browse forums like
 I started writing this book in May 2023 and have updated it since then (mostly around deadline when I procrastinate—#highlight[productive procrastination]). The book was initially intended for international students but has expanded to include advice for domestic students (e.g., @chap:domestic-students and @chap:fellowships).]
 
 
-== Who Is This Book For?
+=== Who Is This Book For?
 
 While this book can be useful for all students, it would most benefit *international students* from *smaller countries and less well-known universities*. It is also useful for *domestic students* from small US universities with no PhD programs or limited research opportunities (@chap:research-opportunities).
 
@@ -3709,7 +3709,7 @@ My goal is thus to level the playing field by providing info that is not readily
 ]
   
 
-== Why This Book (Instead Of Others)? <sec:why-this-book>
+=== Why This Book (Instead Of Others)? <sec:why-this-book>
 
 This book aims to be a comprehensive guide to the CS PhD admission process in the US.  It is based on my and other contributors' experiences. I try to explain _the reasons behind the admission process_.
 While there are numerous #link("https://code.roars.dev/phd-cs-us")[resources online] that tell you _"what"_ to do, few explain the _"why"_---why LORs matter so much, why you should not draft your own LOR, why you should contact professors, etc. Moreover, it aims to help _international students_ who have very different backgrounds and experiences than domestic students (e.g., asking for LORs, research experience, cultural differences, etc.)#footnote([Though of course, domestic students often face similar challenges as international students, especially those from smaller schools or underrepresented groups.]).  Understanding the reason and mindset of the adcom and profs. can help you prepare better. 
@@ -3720,7 +3720,8 @@ Writing is a relaxing process for me, and I enjoy experimenting with new things 
 Finally, this book is highly _opinionated_ and _subjective_, which is both a strength and a weakness (see @sec:disclaimer).
 
 
-== How to Read This Book?
+
+=== How to Read This Book?
 This book is designed to be read in any order. So you can start with any chapter that fits your current needs and stage in the application process. If you want the shortest route to understanding the book's admissions advice, begin with how I actually review an application (@sec:ievaluate); it explains why the later chapters emphasize specific LORs, concrete research evidence, a tailored SOP, and faculty advocacy. If you are still an undergraduate, start with research opportunities (@chap:research-opportunities). Domestic students can jump to @chap:domestic-students and fellowship advice (@chap:fellowships).
 
 // % \begin{commentbox}
@@ -3769,9 +3770,8 @@ You can also:
 - Give it a star ⭐ on its #link(mybookgithub)[GitHub repo],
 - Buy the Kindle book on #link("https://www.amazon.com/dp/B0F41HP6Y2")[Amazon]. Note that I actually _do not_ think you should buy the book, which is free and more updated on GitHub. Making the Kindle version is just a fun experiment in self-publishing and allows me to brag about having a book on Amazon (priced at \$7.77---Unix/Linux 777 permission and the open nature of the book).
 ]
-#pagebreak()
 
-= About Me  <sec:about-me>
+== About Me  <sec:about-me>
 
 I am an associate professor in the CS department at George Mason University (GMU). 
 Before GMU, I was at the University of Nebraska-Lincoln (UNL). Both UNL and GMU are #gls("R1") research universities in the US and have many international students in their CS graduate programs. I work in Software Engineering and Formal Methods. My research lab website is at #link("https://roars.dev")[roars.dev]. 
@@ -3781,7 +3781,7 @@ I have been involved in the PhD admission process at GMU and UNL for many years.
 Though I was _not_ an international student, many of my students and collaborators are or were. I also mentor students from Vietnam and have close colleagues and friends who were once international students. I hope to capture the diverse challenges and experiences they have faced in this book so that it can be a valuable resource for prospective international students.
 Finally, my upbringing in the US provides a perspective aligned with American culture, allowing me to shed light on various issues, particularly those related to cultural differences (@chap:cultural).
 
-= Disclaimer <sec:disclaimer>
+== Disclaimer <sec:disclaimer>
 
 This book is inherently #highlight[_subjective_ and _opinionated_] based on my experience in PhD adcoms and student advising (@sec:about-me). Such a candid approach is beneficial, because overly neutral and "feel-good" advice are often useless and unrealistic in the competitive CS PhD admissions process.
 
@@ -3790,7 +3790,7 @@ Moreover, since PhD admission varies significantly across institutions, there's 
 #note-block[This #link("https://roars.dev/phd-cs-us/advising.pdf")[advising guide] is another example of a highly subjective and opinionated document that I wrote for my current and prospective PhD students.]
 
 
-= Acknowledgments
+== Acknowledgments
 
 Many people have contributed to this book.
 Profs. Craig Yu (GMU), Hakan Aydin (GMU), 
