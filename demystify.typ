@@ -62,8 +62,8 @@
 ]
 
 #import "@preview/theorion:0.6.0": *
-//#import cosmos.simple: *
-#import cosmos.fancy: *
+#import cosmos.simple: *
+//#import cosmos.fancy: *
 //#import cosmos.rainbow: *
 //#import cosmos.clouds: *
 #show: show-theorion
@@ -1093,7 +1093,7 @@ Have your SOP reviewed by your LOR writers (@sec:help-your-LOR-writers) and prof
   You are applying for a job. I want evidence that you are likely to do that job well. I don't want to be entertained. I want to be *informed*.
 ]
 
-#caution-block[*Do not do this:* Do not mention _emeritus_ or _adjunct_ faculty as intended primary advisors (@sec:faculty-types), send a statement naming professors at another school, or write about George Washington when applying to George Mason. I have seen all of these mistakes. They tell me that the applicant did not perform even the most basic research before asking us for five years of support.]
+#caution-block[Do not mention _emeritus_ or _adjunct_ faculty as intended primary advisors (@sec:faculty-types), send a statement naming professors at another school, or write about George Washington when applying to George Mason. I have seen all of these mistakes. They tell me that the applicant did not perform even the most basic research before asking us for five years of support.]
 
 === Kiss of Death in SOP <sec:kiss-of-death-sop>
 
@@ -3577,47 +3577,46 @@ Note that CSRankings allows users to select the fields they are interested in, s
 More details and justification for this metric can be found in the #link("https://csrankings.org/faq.html")[CSRankings FAQ].
 
 
-
-
 #paragraph[Selecting Faculty][Another useful feature of CSRankings is that you can filter faculty by research areas to find who are active in your area of interest. For example, if you are interested in ML, you can select ML and see departments and faculty members active in ML. You can also see the number of papers published by each faculty in that area,  and their publication counts in recent years (e.g., 2020--2024). This is useful for finding faculty publish frequently in your area of interest and gauge their productivity (@chap:research-achievements).]
 
-// === Top CS Programs in the US
-// @tab:ranking lists the top 50 CS programs from CSRankings. For the most up-to-date rankings, visit the website directly.
+=== Top CS Programs in the US
+@tab:ranking lists the top 50 CS programs from CSRankings. For the most up-to-date rankings, visit the website directly.
 
 
-// #figure(
-//   table(
-//     columns: (auto, 1fr, auto, 1fr),
-//     stroke: none,
-//     [*1*], [Carnegie Mellon], [*25*], [University of Chicago],
-//     [*2*], [Univ. of Illinois at Urbana-Champaign#super[*]], [*27*], [Univ. of California - Riverside],
-//     [*3*], [Univ. of California - San Diego], [*28*], [University of Virginia],
-//     [*4*], [Georgia Institute of Technology], [*29*], [Rutgers University#super[*]],
-//     [*5*], [MIT], [*30*], [Duke University],
-//     [*6*], [University of Washington], [*30*], [University of Utah],
-//     [*7*], [Univ. of California - Berkeley], [*32*], [George Mason University#super[*]],
-//     [*8*], [Cornell University], [*32*], [Pennsylvania State University],
-//     [*9*], [Univ. of Maryland - College Park], [*34*], [Texas A&M University#super[*]],
-//     [*10*], [University of Michigan], [*34*], [Univ. of California - Santa Barbara],
-//     [*11*], [Stanford University], [*36*], [Boston University],
-//     [*12*], [Northeastern University#super[*]], [*36*], [Virginia Tech#super[*]],
-//     [*13*], [Purdue University], [*38*], [Univ. of California - Santa Cruz],
-//     [*14*], [New York University], [*39*], [Arizona State University#super[*]],
-//     [*14*], [University of Texas at Austin], [*39*], [Harvard],
-//     [*14*], [University of Wisconsin - Madison#super[*]], [*39*], [Johns Hopkins University],
-//     [*17*], [Princeton University#super[*]], [*39*], [University of Illinois at Chicago],
-//     [*18*], [University of Pennsylvania#super[*]], [*43*], [North Carolina State University],
-//     [*19*], [Columbia University], [*43*], [Rice University],
-//     [*20*], [Univ. of California - Los Angeles], [*43*], [University of North Carolina],
-//     [*21*], [University of Southern California], [*43*], [Yale University],
-//     [*22*], [Univ. of California - Irvine], [*47*], [Ohio State],
-//     [*23*], [Univ. of Massachusetts Amherst#super[*]], [*47*], [Univ. of California - Davis],
-//     [*24*], [Stony Brook University], [*47*], [University at Buffalo#super[*]],
-//     [*25*], [Northwestern University], [*47*], [University of Colorado Boulder],
-//     [], [], [*47*], [University of Minnesota],
-//   ),
-//   caption: [The top 50 CS programs in the US (#link("https://www.csrankings.org")[CSRankings.org], Aug. 2026). #super[*] indicates that the university has Vietnamese prof. that can advise CS PhD students.],
-// ) <tab:ranking>
+#figure(
+  caption: [The top 50 CS programs in the US (#link("https://www.csrankings.org")[CSRankings.org], Aug. 2026). #super[\*] indicates that the university has  #link("https://roars.dev/phd-cs-us/viet-cs-profs-us")[Vietnamese prof.] that can advise CS PhD students.],
+  text(size: 0.9em,
+  table(
+    columns: (auto, 1fr, auto, 1fr),
+    stroke: none,
+    [*1*], [Carnegie Mellon], [*25*], [University of Chicago],
+    [*2*], [Univ. of Illinois at Urbana-Champaign#super[\*]], [*27*], [Univ. of California - Riverside],
+    [*3*], [Univ. of California - San Diego], [*28*], [University of Virginia],
+    [*4*], [Georgia Institute of Technology], [*29*], [Rutgers University#super[\*]],
+    [*5*], [MIT], [*30*], [Duke University],
+    [*6*], [University of Washington], [*30*], [University of Utah],
+    [*7*], [Univ. of California - Berkeley], [*32*], [George Mason University#super[\*]],
+    [*8*], [Cornell University], [*32*], [Pennsylvania State University],
+    [*9*], [Univ. of Maryland - College Park], [*34*], [Texas A&M University#super[\*]],
+    [*10*], [University of Michigan], [*34*], [Univ. of California - Santa Barbara],
+    [*11*], [Stanford University], [*36*], [Boston University],
+    [*12*], [Northeastern University#super[\*]], [*36*], [Virginia Tech#super[\*]],
+    [*13*], [Purdue University], [*38*], [Univ. of California - Santa Cruz],
+    [*14*], [New York University], [*39*], [Arizona State University#super[\*]],
+    [*14*], [University of Texas at Austin], [*39*], [Harvard],
+    [*14*], [University of Wisconsin - Madison#super[\*]], [*39*], [Johns Hopkins University],
+    [*17*], [Princeton University#super[\*]], [*39*], [University of Illinois at Chicago],
+    [*18*], [University of Pennsylvania#super[\*]], [*43*], [North Carolina State University],
+    [*19*], [Columbia University], [*43*], [Rice University],
+    [*20*], [Univ. of California - Los Angeles], [*43*], [University of North Carolina],
+    [*21*], [University of Southern California], [*43*], [Yale University],
+    [*22*], [Univ. of California - Irvine], [*47*], [Ohio State],
+    [*23*], [Univ. of Massachusetts Amherst#super[\*]], [*47*], [Univ. of California - Davis],
+    [*24*], [Stony Brook University], [*47*], [University at Buffalo#super[\*]],
+    [*25*], [Northwestern University], [*47*], [University of Colorado Boulder],
+    [], [], [*47*], [University of Minnesota],
+  ))
+) <tab:ranking>
 
 
 == CSPicks <sec:cspicks>
