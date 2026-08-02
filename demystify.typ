@@ -30,12 +30,6 @@
   text(size: 0.85em, it)
 )
 
-#let paragraph(title, body) = {
-  v(0.5em)
-  par(first-line-indent: 0em)[#text[_*#title*_] #h(0.5em) #body]
-}
-
-
 #let mytitle = "Demystifying PhD Admissions in Computer Science"
 #let mysubtitle = "A Handbook for Navigating CS PhD Admissions in the U.S."
 #let me = "ThanhVu (Vu) Nguyen"
@@ -174,7 +168,7 @@
   (key: "preprint", description: [A version of a paper shared publicly before (or without) formal peer review.]),
   (key: "peer-review", description: [Evaluation of a paper, proposal, or grant by other independent experts in the field.]),
   (key: "POI", long: "professor of interest", description: [A faculty member a prospective student would like to work with as an advisor.]),
-  (key: "reach-safety", short: "reach vs. safety", long: "reach vs. safety schools", description: [Reach schools are ambitious targets; safety schools are very likely to admit you. A good list mixes both.]),
+  (key: "reach-safety", short: "reach vs. safety", long: "reach vs. safety schools", description: [Reach schools are ambitious targets; so-called safety schools are less selective, but no credible PhD program is guaranteed because admission depends on research match, funding, and capacity.]),
   (key: "waitlist", description: [A pool of qualified applicants who may receive an offer if admitted students decline theirs.]),
   (key: "deferral", short: "deferral", long: "deferred admission", description: [Postponing your admission start date, typically by up to a year, with the program's approval.]),
   (key: "assistantship", description: [A funded position---a TA or RA---that typically covers tuition, health insurance, and a stipend.]),
@@ -298,13 +292,12 @@ Full funding for CS PhD students is the norm in the US, and I'd go as far as to 
 
 //#draftbanner(note: "Be honest here---I don't want to come across as recruiting everyone into a PhD. Maybe add a short anecdote about a student who chose industry and was happy.")
 
-So far I have tried to convince you that getting into a CS PhD program in the US is not as hard or as expensive as you might think. But _should_ you do a PhD at all? Te honest answer is: _not everyone should_.
+So far I have tried to convince you that getting into a CS PhD program in the US is not as hard or as expensive as you might think. But _should_ you do a PhD at all? The honest answer is: _not everyone should_.
 
 #definition-box[A CS PhD is a #highlight[5--6 year commitment] (@sec:time) that mainly trains you to do _research_. If your goal is to become a professor, an industry research scientist, or to work on hard open-ended problems in a national lab or research-heavy team, then a PhD is essentially required and well worth it. If your goal is to be a strong software engineer at a tech company, a PhD is _not_ required and, in many cases, not the most efficient path (learning _vibe coding_ with LLMs is probably a better way to go).]
 
-.
 
-#caution-block[It is also worth knowing that a PhD is _hard_, and not everyone finishes. Across US doctoral programs, roughly #link("https://www.statisticssolutions.com/almost-50-of-all-doctoral-students-dont-graduate/")[*half of students do not complete the degree*], and even the #link("https://cgsnet.org/project/minority-attrition-and-completion-in-stem-doctoral-programs")[10-year completion rate hovers around 55--65% in STEM fields]. I mention this not to discourage you, but to be honest about the challenges. The good news is that the biggest predictor of finishing is not raw talent but _grit_ and a _good_ advisor (@chap:choosing-advisor).]
+#caution-block[It is also worth knowing that a PhD is _hard_, and not everyone finishes. The #link("https://cgsnet.org/project/minority-attrition-and-completion-in-stem-doctoral-programs")[10-year completion rate hovers around 55--65% in STEM fields]. I mention this not to discourage you, but to be honest about the challenges. Persistence matters, and research on #link("https://www.phdcompletion.org/promising-practices/mentoring-and-advising/")[doctoral completion] also emphasizes the importance of a close and effective relationship with your advisor and mentors (@chap:choosing-advisor).]
 
 #figure(
   statbar((
@@ -332,7 +325,7 @@ So far I have tried to convince you that getting into a CS PhD program in the US
 None of this is meant to scare you. The point is simply that a PhD is a particular kind of training for a particular kind of career, and it is worth being honest with yourself about whether that is what you want _before_ you spend a year on applications.
 
 
-#tip-block[A useful test: would you still want to do a PhD if it did _not_ lead to a higher salary or a fancier job title---purely because you enjoy digging into a hard problem for years? Would you still want to spend 5--7 years on a PhD if if it does not improve your immigration status or make you more employable?
+#tip-block[A useful test: would you still want to do a PhD if it did _not_ lead to a higher salary or a fancier job title---purely because you enjoy digging into a hard problem for years? Would you still want to spend 5--7 years on a PhD if it does not improve your immigration status or make you more employable?
 
 If yes, you are the kind of person who tends to thrive. If the PhD is mainly a means to a job that does not actually require it, pause and reconsider]
 
@@ -343,7 +336,7 @@ If yes, you are the kind of person who tends to thrive. If the PhD is mainly a m
 // You will become an expert in a particular topic and know more about it than anyone else in the world (in many cases even your advisor).}
 
 #definition-box[
-A PhD in CS is a #highlight[research degree] in Computer Science. Unlike undergraduate or even Master's programs (@chap:ms), which focus on breadth of knowledge through coursework, it is about _depth_ and pushing the boundary of a specific area within a CS fields, such as software verification within the field of Programming Languages or Formal Methods (@sec:fields-and-areas). You will become an expert in your area of research and contribute something new to the field that has never been done before. 
+A PhD in CS is a #highlight[research degree] in Computer Science. Unlike undergraduate or even Master's programs (@chap:ms), which focus on breadth of knowledge through coursework, it is about _depth_ and pushing the boundary of a specific area within a CS field, such as software verification within the field of Programming Languages or Formal Methods (@sec:fields-and-areas). You will become an expert in your area of research and contribute something new to the field that has never been done before.
 ]
 
 Job-wise, a CS PhD is the standard credential for positions where doing research _is_ the job. In academia, it is a hard requirement for tenure-track professorships (@sec:faculty-types) and most postdoc and research faculty roles. In industry, it is expected (and often required) for titles like _research scientist_ or _applied scientist_ at places such as Google DeepMind, Microsoft Research, and Meta AI, and it is highly valued for researcher and senior R&D roles. It also qualifies you for research staff positions at national labs (e.g., Sandia, Oak Ridge) and government agencies, (e.g., NSF, DOE, Defense Research) and for founding or early technical roles at deep-tech startups. Note that for _ordinary software engineering_ jobs, however, a PhD is rarely required (though Google and Amazon often hire PhDs as software engineers)---the degree pays off specifically when the job involves open-ended problems no one yet knows how to solve.
@@ -375,13 +368,7 @@ CS is a broad academic discipline with many specialized areas of research. Under
   caption: [Disciplines "arranged by purity." CS sits close to math on this spectrum. Source: #link("https://xkcd.com/435/")[xkcd 435], #link("https://creativecommons.org/licenses/by-nc/2.5/")[CC BY-NC 2.5].],
 ) <fig:purity>
 
-#definition-box[STEM][#gls("STEM") collectively refers to the fields of Science, Technology, Engineering, and Mathematics: 
-
-- *Science:* Physics, Chemistry, Biology, Geology
-- *Technology:* Computer Science, Cybersecurity, Data Science, Information Technology
-- *Engineering:* Electrical, Mechanical, Civil, Chemical, and Bioengineering
-- *Mathematics:* Pure and Applied Math, Statistics, Operations Research
-]
+#gls("STEM") collectively refers to Science, Technology, Engineering, and Mathematics. In this book, the important point is not the acronym itself but that funding, publication culture, and admissions practices can differ substantially even among STEM fields.
 
 #paragraph[Fields][Within a discipline such as CS, we have #gls("fields")---major branches that often correspond to faculty groups, conference communities, and sometimes even degree tracks. Common fields in CS include:
 
@@ -604,13 +591,11 @@ After screening, your application is complete and forwarded to the CS department
 === Admission Committee <sec:adcom>
 // \sectioninfo{Adcom members are faculty who evaluate your application. They consider various factors, e.g., research experience, LORs, SOP}
 
-#definition-box[Admission Committee or Adcom][The PhD #gls("adcom", first:true) is a committee of CS faculty who review PhD applications and make admission decisions. Each application is typically evaluated by about three of its members.]
-
-The adcom consists of CS faculty with diverse expertise (e.g., AI, Systems, Theory, SE, HCI). Some committees may include affiliated faculty from other disciplines.
+The PhD #gls("adcom", first:true) is a committee of CS faculty who review applications and recommend admission decisions. Each application is typically evaluated by about three members with relevant expertise (e.g., AI, Systems, Theory, SE, or HCI).
 
 The size and workload of the adcom depend on the department. At GMU, the PhD adcom has about 15--20 faculty, each reviewing \~30 applications. Large schools often have separate adcoms for MS programs (@chap:ms).
 
-PhD adcoms typically include assistant professors (@sec:faculty-types), giving junior faculty opportunities to recruit students. The #gls("adcom chair",first:false) is usually a senior faculty who assigns applications to reviewers based on research interests or faculty mentioned by applicants (e.g., I review SE applicants).
+PhD adcoms typically include assistant professors (@sec:faculty-types), partly because junior faculty need students to build their labs, produce research, and make progress toward tenure. That does not make their reviews dishonest; it means admissions is inseparable from faculty needs. The #gls("adcom chair",first:false) is usually a senior faculty member who assigns applications based on research interests or faculty mentioned by applicants (e.g., I review SE applicants).
 
 Each application is assigned to about three #gls("adcom members",first: false), who independently evaluate your profile and then reach a consensus. They consider factors such as #glspl("LOR"), #gls("SOP"), research experience, GPA, test scores, and interviews. (see @part:application).
 
@@ -627,18 +612,19 @@ Each application is assigned to about three #gls("adcom members",first: false), 
 
 Note that the assigned reviewers are the main ones deciding your application, but at many schools other faculty in the department can also have access to your application and provide inputs and opinions on your profile. Thus, it helps to contact faculty (@sec:contact) and mention faculty you're interested in your SOP (@chap:sop).
 
-=== How Are Decisions Made? <sec:how-decisions>
+=== How Are Decisions Really Made? <sec:how-decisions>
 // \sectioninfo{Even if all adcom reviewers recommend acceptance, the application can still be rejected. Vice versa, if all reviewers think the application is weak, the student might still be admitted.}
 
-After reviewers have evaluated an application, #gls("adcom chair") will review all evaluations, look at entered notes, and ask reviewers to discuss and resolve discrepancies to reach a consensus (e.g., a reviewer wants to accept but the other wants to reject).  Typically, the decision is made entirely by the reviewers. There is _no involvement_ from the adcom chair, department chair, or others. In most cases #gls("adcom members"), even those reviewing the same application, make decisions independently and do not talk to each other (just a common practice to avoid biasing). In some rare cases we might
-(@sec:adcom-discuss).
+After reviewers have evaluated an application, #gls("adcom chair") reviews their recommendations and asks them to resolve major disagreements. Typically, the assigned reviewers make the decision; the department chair and senior administrators do not rank individual applicants. In most cases, reviewers work independently and discuss an application only when their recommendations conflict (@sec:adcom-discuss).
+
+#caution-block[*What faculty will not tell you:* PhD admission is not a merit ranking in which the strongest applicants automatically occupy the available seats. It is a matching process constrained by faculty attention, research needs, grant funding, TA budgets, and advising capacity. The tenth-strongest applicant on paper may be admitted while the fifth-strongest is rejected because someone is prepared to advise the former and nobody can responsibly take the latter.]
 
 
 Even if all reviewers recommend acceptance, the application is not automatically accepted—especially if no faculty is willing to advise the student. For example, if the applicant is interested in a research area with no available faculty (e.g., AI/ML where faculty may already have many students), then the student will not be admitted (see more rejection reasons in @sec:why-rejected). This is increasingly common as the number of applicants grows faster than available faculty. Note that not every CS faculty can formally advise and graduate CS PhD students (@sec:faculty-types).
 
-However, if a faculty member is interested in the student and makes this known to the adcom, the student is likely to be admitted—even if the faculty does not have funding. This shows the benefit of contacting faculty (@sec:contact).
+However, if a faculty member is interested in the student and makes this known to the adcom, the student is much more likely to be admitted—even if that faculty member expects the department to provide initial GTA funding. By advocating for a student, the professor is effectively saying, _"I am willing to spend years advising this person."_ That commitment carries more weight than another small difference in GPA. This is the real benefit of contacting faculty (@sec:contact).
 
-If the student mentions a faculty in their SOP, adcom may ask that faculty to review the application. Even if the student has a weak profile (but still passes the university's minimum requirements), they might be admitted if a faculty is willing to advise them. Adcom members, especially in the US, are very reluctant to go against a faculty's decision to admit a student.
+If the student mentions a faculty member in their SOP, adcom may ask that faculty member to review the application. Even a student with a weaker conventional profile may be admitted if a professor provides a concrete reason to believe the student will succeed in their group. Adcom members are understandably reluctant to overrule the person accepting the advising responsibility.
 
 
 === Do Adcom Members Talk to Each Other? <sec:adcom-discuss>
@@ -662,30 +648,29 @@ In CS, both the reviews and interviews are often done independently (@sec:interv
   
 
 
-=== How Long To Evaluate An Application? <sec:ievaluate>
-// \sectioninfo{It takes me about 10--15 minutes to review an application.}
+=== How I Actually Review a PhD Application <sec:ievaluate>
 
+This is how _I_ review applications at GMU and previously at UNL. It is not a universal rubric, and another professor may read files in a different order. That is precisely why I am describing my real process instead of pretending that admissions follows one clean formula.
 
-In the schools I've been at, the application deadline is in Dec, and adcom meets when school starts in mid or end of Jan. The adcom chair sends out review assignments to adcom members, about 30-ish per faculty (@sec:adcom). We usually have about 2 weeks to review all applications. As mentioned in @sec:adcom-discuss, adcom members review applications individually and independently. We only discuss when there are disagreements (e.g., adcom chair noticed that one reviewer gave a very different score than another).
+#paragraph[The uncomfortable arithmetic][I am usually assigned about 30 applications and given roughly two weeks. I reserve one or two days and spend about 10--15 minutes per application: less on an obvious rejection, much more on someone I may advocate for. That sounds brutally short, but faculty cannot spend an hour on every file. Philip Guo reports spending only #link("https://pg.ucsd.edu/PhD-application-tips.htm")[3--5 minutes] per application. Your materials must therefore make their evidence easy to find.]
 
-I typically reserve a whole day (or two days) to review all applications.
-On average, I spend about 10--15 minutes reviewing each application (less for clear rejections and more for potential acceptances). While this seems short, it is not that difficult to tell if an application is good or bad. In fact, this is twice what other faculty spend on average; for example, Philip Guo spent #link("https://pg.ucsd.edu/PhD-application-tips.htm")[3--5 minutes] per application.
+#paragraph[Stage 1: Can the university admit you?][Our system gives me one PDF containing the application summary, transcripts, test scores, #glspl("LOR"), CV, #gls("SOP"), and writing samples. I first check the summary for hard problems: an English score below the university minimum, missing credentials, or grades that may violate graduate-school requirements (@chap:standard-tests). This stage rarely makes me excited about an applicant; it only determines whether the rest of the review is worth doing.]
 
-For each application, our system compiles a single PDF file, which consists of a summary (degrees, GPAs, etc.), transcripts, test scores, LORs, a CV, SOP, and writing samples (@sec:writing-sample). I usually read in this order. I start with the _summary_, checking for low GPAs or test scores below the university minimum (@chap:standard-tests). I then skim the _transcripts_ for low grades in relevant courses, noting issues like _"many low grades in math or CS courses"_ or _"unknown international school with good GPA"_. These are not as important as LORs or SOP, but I read them first because the review system has questions about them (e.g., _"is GPA good?"_ and _"is IELTS sufficient?"_).
+#paragraph[Stage 2: Is there credible evidence of research ability?][I skim the transcript for repeated low grades in relevant Math or CS courses, then move quickly to the evidence that matters more. I look through the CV for research experience, publications, serious projects, and unusual achievements. I read strong, specific LORs carefully and skim generic ones. _"The student earned an A in my class"_ tells me almost nothing. A letter describing the problem you attacked, where you struggled, what you contributed, and how you compare with previous researchers can change my decision (@chap:LOR).]
 
-I read _strong LORs_ carefully and skim weaker ones, noting either strong letters from well-known professors/researchers that discuss research experience, or weak letters with generic content (e.g., _"student was in my class"_). I skim the _CV_ and look for publications, research experiences, and notable achievements. I take notes of things like _"published papers in top venues"_ or _"gold medal in a well-known international competition."_
+#paragraph[Stage 3: Do I believe your story?][I read the SOP to see whether it connects your past work to a plausible research direction and to faculty who can advise you here (@chap:sop). I do not need childhood inspiration or declarations that AI will change the world. I want concrete evidence, technical maturity, and a reason this application belongs at this department rather than twenty others. Weak SOPs get skimmed; strong ones slow me down.]
 
-I skim weak _SOPs_ but read strong ones carefully. I note whether the SOP is exciting, research-oriented, stands out, and is tailored to our program (e.g., if they are familiar with the work of some faculty or have talked to them). These notes are entered into the evaluation system.
+#paragraph[Stage 4: Is there a reason to advocate for you?][This is the real decision point. Passing every requirement is not enough. I ask: _What will I tell the other reviewers that makes this applicant worth one of our limited offers?_ The answer might be unusually strong research, a trusted letter, a striking technical achievement, clear resilience, or an excellent match with a faculty member who needs exactly this background. If I cannot find such a sentence, the application is likely to be rejected even if nothing is obviously wrong.]
 
-Finally, I enter my decision, which is usually either a rejection or an offer of admission with full funding (e.g., TA). I also recommend very strong candidates for the University Presidential Fellowship, which is a fellowship from GMU that provides funding similar to  a GRA (@chap:funding).
-Note that while the system has other decision options, e.g., admit without funding, provisional admission (e.g., if they need to take some courses), I do not use them, simply because we either reject or admit with funding.
+#example-box[*A composite application, annotated as I read it*][Suppose I open a file from an applicant at a university I do not know. The GPA is 3.65: fine, but not meaningful to me yet. The transcript has solid CS and Math grades: _no red flag_. The CV lists a workshop paper: _interesting, but I need to know the contribution_. One letter says only that the student was among the top 10% in a class: _generic_. A second letter describes how the student found a flaw in the original experiment, rebuilt the evaluation, and drove the resulting paper: _now I am paying attention_. The SOP explains that work clearly and connects it to two active faculty in our department: _now I have a case to make_. I would likely recommend admission or ask those faculty whether they want to interview the student.
 
-Note that I _do not_ need to interview a student to make a decision. I can tell from the application if they are strong or not. However, if I want to recruit a student, I will ask them to chat with me.
-This is quite different from other disciplines, where reviews, interviews, and selection are done in multiple rounds (see @sec:adcom-discuss for an example in Physics).
+Notice what did _not_ decide the case: the applicant did not need a 4.0, a famous university, or three publications. The decision changed when the file supplied credible, specific evidence that the student could do research and had somewhere to do it.]
 
-Of course, my recommendation is just one of the three or four faculty reviews of the application. The adcom chair compiles all recommendations and makes a decision based on them (@sec:adcom-discuss).
-If there are disagreements, the adcom chair asks the reviewers to discuss the application.
-Unfortunately, even if all reviewers recommend a student, they might not be admitted (@sec:why-rejected) if there are too many students or they are not a good fit for the program (e.g., no one is willing to advise them).
+#paragraph[Stage 5: What recommendation will I enter?][At GMU, my recommendation is usually either rejection or admission with full funding, commonly a GTA (@chap:funding). I may nominate an exceptional applicant for a Presidential Fellowship. Although the system offers options such as provisional or unfunded admission, I rarely use them: in my view, we should either support a full-time PhD student or not admit them.]
+
+#paragraph[Interviews are often recruiting, not screening][I do _not_ need an interview to recommend admission. If I ask to chat, it is often because I am considering advising or recruiting the student, not because every applicant must pass another formal round (@sec:interviews). Other disciplines and some CS departments use interviews differently (@sec:adcom-discuss).]
+
+#paragraph[My decision rule][A clean application keeps you alive; a concrete reason for a faculty member to advocate for you gets you admitted. This distinction explains why generic perfection often loses to a less conventional file with credible research evidence and a committed advisor.]
 
 
 === Direct Admit vs Committee Admit <sec:direct-vs-committee>
@@ -747,8 +732,9 @@ The CS PhD application process spans almost a full year, from the time you start
 #simpsons[Son, if you really want something in this life, you have to work for it. Now quiet! They're about to announce the lottery numbers.]
 
 
-The goal of #gls("adcom") is to evaluate your research experience, potential, and interest to see if you _fit into their PhD program_! The emphasis here is #highlight[_fitting_], which varies from school to school, faculty to faculty, and even from year to year.  
-The committee will look at various factors, but the most important ones are #gls("LOR", first:true),  #gls("SOP", first:true), and research background and experience, e.g., publications.
+The goal of #gls("adcom") is not to reward the applicant who collected the most credentials. It is to find students with credible research potential whom the department can actually advise and support. The emphasis is #highlight[_matching_], which varies from school to school, faculty to faculty, and even from year to year. @sec:ievaluate shows exactly how I turn these materials into an admission recommendation.
+
+The committee considers many factors, but the most important are #gls("LOR", first:true), #gls("SOP", first:true), and research experience, including publications and serious projects.
 
  
 == Letters of Recommendation (LOR) <chap:LOR>
@@ -761,13 +747,9 @@ The committee will look at various factors, but the most important ones are #gls
   caption: [A #gls("LOR") from a professor who barely remembers you is generic and weak (@sec:generic-letters)---ask people who know your research well. Source: #link("https://phdcomics.com")[PhD Comics] (© Jorge Cham).],
 ) <fig:lor-comic>
 
-#definition-box[Letter of Recommendation or LOR][A #gls("LOR") is a confidential letter (@sec:waive-right), written by someone who has worked closely with you (typically a professor or researcher), that evaluates your research ability and potential. Most PhD programs require at least _two_ LORs.]
-
 #gls("LOR",plural:true) are crucial for PhD because (i) they paint a picture of your research ability and potential from someone who has worked closely with you, and (ii) adcom trust the opinions of your LOR writers, who are usually faculty members or researchers who have the expertise and reputation to evaluate your research ability (@sec:LOR-writers).
 
-#example-box[
-When reviewing applications (@sec:ievaluate), I usually read LORs first, then the SOP (@chap:sop). If these make a strong impression, I skim through the rest of the materials; if not, I pay closer attention to other aspects before making a decision.
-]
+#caution-block[*My decision rule:* A detailed letter from an unknown researcher who supervised you closely is usually more useful than a vague letter from a celebrity. Prestige makes me notice a letter; specific evidence makes me believe it. In my actual review process (@sec:ievaluate), a letter becomes decisive when it tells me what _you_ did and why that predicts research success.]
 
 
 === LOR Writers <sec:LOR-writers>
@@ -841,7 +823,7 @@ Many LOR writers ask students to write their own letters---a common practice in 
  
 
 Self-written letters are _easy to spot_ because an experienced professor would write differently compared to an undergraduate student.
-For example, they can provide convincing and concrete examples based on their experience and compare you to their own students, and of course the writing style is different---imagine the difference between a letter written by a professors who has been writing letters for decades and a letter written by an undergraduate student who has never written a letter before, even if the student used AI and LLMs (@sec:using-ai). Worse yet, if we suspect that the student wrote the letter, it is a #alert[red flag] as we will question both the student's integrity and the letter writer's credibility (because they allow this to happen).
+For example, they can provide convincing and concrete examples based on their experience and compare you to their own students, and of course the writing style is different---imagine the difference between a letter written by a professor who has been writing letters for decades and a letter written by an undergraduate student who has never written a letter before, even if the student used AI and LLMs (@sec:using-ai). Worse yet, if we suspect that the student wrote the letter, it is a #alert[red flag] as we will question both the student's integrity and the letter writer's credibility (because they allow this to happen).
 
 
 #remark-block[Well-known and well-respected profs would _not_ ask you to write your own letter (in fact, even not well-known ones wouldn't do this to students they care about). This might be a common practice at specific universities and the students do not have a choice as they need the letter.  However, think about this: if a prof. does this often, then they either don't know how to write a LOR (more common than you would think) or simply do not know or care enough about you.  In any case, such LORs are not useful and might even hurt your application.  So if you are in this situation, you should find someone else to write for you.
@@ -902,7 +884,7 @@ You can also provide them with a draft of your SOP so that they can see what you
 
 Sometimes your writer will explicitly ask you for such information, but if not, you should provide it anyway (especially if you have not interacted with them much or have not done much research with them).
 
-#tip-block[If your grading system is not US standard, or you are from a good school but is unknown outside your country, you can ask your reference writers to explain that in their letters. For example, _Bach Khoa's_ are the top universities in Vietnam for STEM studies but few people outside Vietnam know about them. So if you are from there, you should ask your reference writers to mention that.
+#tip-block[If your grading system is not standard in the US, or you are from a good school that is unknown outside your country, you can ask your reference writers to explain that in their letters. For example, the _Bach Khoa_ schools are among the top universities in Vietnam for STEM studies, but few people outside Vietnam know about them. So if you are from one, you should ask your reference writers to mention that.
 ]
 
 ==== Reminding Your Writers <sec:remind-writers>
@@ -913,7 +895,7 @@ Note that many places only have deadlines for the applicant, but are very flexib
 
 
 #example[LOR invitations *with NO deadline*][
-*Sample 1 (Umas, No deadline):*
+*Sample 1 (UMass, no deadline):*
 
 .. is applying for admission into the Computer Science (Ph.D.) program in the Graduate School at the University of Massachusetts Amherst and has listed you as a reference.
 
@@ -1093,9 +1075,9 @@ So do talk about them in your SOP (@chap:sop) and have your writers mention them
   caption: [What _not_ to write in your #gls("SOP") (@sec:kiss-of-death-sop). Source: #link("https://phdcomics.com")[PhD Comics] (© Jorge Cham).],
 ) <fig:sop-comic>
 
-#definition-box[Statement of Purpose or SOP][The #gls("SOP", first:true) is an essay describing your research experience, interests, and goals, and why you are applying to a particular program. Some schools separate these into two documents: an SOP, which focuses on research experiences, and a _personal statement_, which covers more personal aspects, e.g., why PhD, challenges you have overcome.]
-
 While you might not have control over LORs (@chap:LOR) or where you go to school (@chap:your-school), you do have control over your #gls("SOP") or personal statement. A well-written SOP also demonstrates that you can communicate effectively, which is crucial in research and important for GTA funding (@chap:funding). Many SOP samples for CS are #link("https://cs-sop.org/")[available here].
+
+#caution-block[*What applicants get wrong:* An SOP is not an autobiography, a motivational speech, or a love letter to Computer Science. It is an argument that you are ready to become a researcher and that this department has a plausible place for you. If the statement gives me no concrete sentence I can use to advocate for you, it has failed (@sec:ievaluate).]
 
 In your SOP, focus on research potential (@chap:research-experience) and convince reviewers through your experience, e.g., published papers (@sec:publications). Back up your claims with *concrete evidence*. For example, if you say you have teaching experience, show what you did, e.g., undergraduate TA or mentoring someone. If you say you worked on a research project, show some results, e.g., paper submitted (or even rejected), achieved certain performance improvement over the state of the art.
 
@@ -1113,11 +1095,7 @@ Have your SOP reviewed by your LOR writers (@sec:help-your-LOR-writers) and prof
   You are applying for a job. I want evidence that you are likely to do that job well. I don't want to be entertained. I want to be *informed*.
 ]
 
-#tip-block[
-  I often read LORs and SOP first (@sec:ievaluate). If I am persuaded by them, I would skim over other factors and advocate for admission (unless I see red flags elsewhere). However, if I am not convinced, then I will likely recommend rejection (unless I see something stand out in other parts).
-
-  Do careful research on professors; don't mention _emeritus_ or _adjunct_ faculty (@sec:faculty-types). Also, be careful not to send statements to the wrong schools or provide wrong information (e.g., talking about school X but mentioning working with professors at school Y; and do not talk about George Washington when applying to George Mason). I have seen such statements more times than I should.
-]
+#tip-block[*Do not do this:* Do not mention _emeritus_ or _adjunct_ faculty as intended primary advisors (@sec:faculty-types), send a statement naming professors at another school, or write about George Washington when applying to George Mason. I have seen all of these mistakes. They tell me that the applicant did not perform even the most basic research before asking us for five years of support.]
 
 === Kiss of Death in SOP <sec:kiss-of-death-sop>
 
@@ -1270,7 +1248,7 @@ Just as with grades (@chap:your-school) and GRE (@sec:gre), having high scores i
   - #link("https://www.gmu.edu/international/english-language-requirements")[English proficiency requirements] (one of the below)
     - TOEFL: 80 OR
     - IELTS: $>= 6.5$ OR
-    - DuoLingo Graduate English: $>= 120$ OR
+    - Duolingo Graduate English: $>= 120$ OR
     - Pearson Test of Academic English: $>= 67$
 ]
 #pagebreak()
@@ -1292,7 +1270,7 @@ Prepare your CV in such a way that allows reviewers to quickly scan to identify 
 ]
 
 === Writing Sample <sec:writing-sample>
-It is a *good idea* to upload a writing sample, e.g., a paper you wrote, a report, or a thesis. Whether the paper is published, not published, on Arxiv, or even rejected (but you think it's good), you should upload it. Because samples are part of the application package, adcom members can quickly skim through it to see your research and writing abilities.
+It is a *good idea* to upload a writing sample, e.g., a paper you wrote, a report, or a thesis. Whether the paper is published, unpublished, on arXiv, or even rejected (but you think it's good), you should upload it. Because samples are part of the application package, adcom members can quickly skim through it to see your research and writing abilities.
 
 A quick read through a writing sample can reveal a lot about your research work and writing skills, which sometimes are not well presented in your SOP or LORs. But of course if your writing sample is not good, then it can hurt your application. So make sure you upload something serious and well-written.
 
@@ -1301,14 +1279,14 @@ A quick read through a writing sample can reveal a lot about your research work 
 These do not carry much weight as they do not show research ability. We do not care much if you have taken an online Coursera AI course or have a professional certificate from Microsoft.
 However, as mentioned in @sec:non-stem, if you do not have a CS background, you might be able to use these to show you have sufficient CS knowledge.
 
-=== Personal Website and (Github) Projects <sec:personal-website>
-These are _not_ required but are increasingly common. In CS, academic websites are _very_ common and used to showcase research, publications, and projects. You don't need fancy websites with tons of javascript and animations. A simple website with your name (and sometimes photo), research interests, publications, and projects is enough. You can use free services such as #link("https://github.io")[GitHub Pages] to create your website. Many CS students also use Github to host their projects and demonstrate their involvement in open-source projects.
+=== Personal Website and GitHub Projects <sec:personal-website>
+These are _not_ required but are increasingly common. In CS, academic websites are _very_ common and used to showcase research, publications, and projects. You don't need fancy websites with tons of JavaScript and animations. A simple website with your name (and sometimes photo), research interests, publications, and projects is enough. You can use free services such as #link("https://github.io")[GitHub Pages] to create your website. Many CS students also use GitHub to host their projects and demonstrate their involvement in open-source projects.
 
 You can mention your website and projects in your CV (@sec:cv) and SOP (@chap:sop).
 Having popular projects or active contributions can help you stand out (@sec:stand-out), especially if you do not have much research experience.
 
 #tip-block[
-  Many students include LinkedIn (or Facebook and X/Twitter) profiles in their applications. While these might be popular when applying for jobs, they might not be very useful for PhD application evaluation. Adcom members might not familiar with LinkedIn (and might not want to go to a page that requires us to have an account and login), so it is better to have a something like personal and project websites, which are far more common and easier to access.
+  Many students include LinkedIn (or Facebook and X/Twitter) profiles in their applications. While these might be popular when applying for jobs, they might not be very useful for PhD application evaluation. Adcom members might not be familiar with LinkedIn (and might not want to visit a page that requires an account and login), so it is better to have something like a personal or project website, which is far more common and easier to access.
 ]
 
 == Using AI and LLMs in Your Application <sec:using-ai>
@@ -1316,7 +1294,7 @@ Having popular projects or active contributions can help you stand out (@sec:sta
 
 As AI and LLMs become more popular, many students wonder if they could use AI chatbots such as ChatGPT and Claude to help with their application materials, especially statements. Of course, they worry if the university or adcom reviewers would check and penalize them for doing so.
 
-Nowdays it would be naive to tell you or student to ignore AI (and frankly I use them myself extensively). So the question is not whether you can use AI, but how to use it properly.
+Nowadays it would be naive to tell you or any student to ignore AI (and frankly I use these tools myself extensively). So the question is not whether you can use AI, but how to use it properly.
 
 // I think it is _fine_ to use AI to help your writing, e.g., the _"proofread"_ feature in Apple's `Writing Tools` is quite useful for fixing writing issues or finding better terminologies or phrases. 
 // This can help international students who might struggle with writing English and are not familiar with the academic writing style (you see how many _"thus"_ used in this book?). 
@@ -1324,7 +1302,7 @@ Nowdays it would be naive to tell you or student to ignore AI (and frankly I use
 //Thus, it's OK to use AI to help you but you should be the main part of the writing loop, i.e., you should be the one who writes the content and use AI to help you improve and refine it.
 
 
-#paragraph[How to Use AI][The key is to #highlight[use AI as an editor and brainstorming partner, not as a relacement of your own thinking]. You should write the first draft yourself, in your own words, with your own examples. Then use AI to improve that draft. If you start from a blank page and ask AI to "write me an SOP," you have already lost the one thing that makes an application standout and memorable---*you*.]
+#paragraph[How to Use AI][The key is to #highlight[use AI as an editor and brainstorming partner, not as a replacement for your own thinking]. You should write the first draft yourself, in your own words, with your own examples. Then use AI to improve that draft. If you start from a blank page and ask AI to "write me an SOP," you have already lost the one thing that makes an application stand out and become memorable---*you*.]
 
 
 #paragraph[Where it goes wrong][The problem is not AI itself; it is _outsourcing the thinking_. Adcom members (@sec:adcom) read hundreds of essays, and AI-written SOPs have a recognizable flavor: generic enthusiasm, vague claims, flowery phrasing (_"I have always been deeply passionate about the ever-evolving landscape of..."_), and no _specific detail_ about _your_ research and story. A SOP like that is a kiss of death (@sec:kiss-of-death-sop) because it is instantly forgettable.]
@@ -1537,7 +1515,7 @@ You will need to sign and return the letter to accept the offer, e.g., by April 
 
 In contrast, @fig:gta-offer shows an example of a GTA offer letter from GMU. Unlike GRA offer, the GTA assignment does not specify the prof. who will supervise you, as TAs are typically assigned by the department. However, other benefits such as stipend, tuition waiver, and health insurance are similar to GRA offers.
 
-It is #emph[unlikely] that you can negotiate things like stipend, as it is standard across all students. However, you might ask your prof. for computer equipments and others (@sec:negotiate).
+It is #emph[unlikely] that you can negotiate things like the stipend, as it is standard across all students. However, you might ask your professor for computer equipment or other support (@sec:negotiate).
 
 #note-block[
   You might receive "informal" offer from the prof., e.g., through email or verbally. This is typically as the profs. are excited to have you and want to give you important details such as stipend. You can "informally" accept the offer, but you will still need to sign the official offer letter to make it official.
@@ -1564,9 +1542,7 @@ Typically, the most wiggle room is funding in the summer (@sec:summer-funding) w
 
 For a specific start date or GTA assignment (e.g., TA'ing a particular course), you can ask for it. Also, there is typically no moving allowance for PhD students. In short, standard things set by the university or department are unlikely negotiable. However, you can ask for things such as books and computer equipment (@sec:buying-equipment).
 
-#remark-block[
-  This is my personal opinion (as with all advice in this book): #highlight[don't try to negotiate your TA/RA offer]. You will likely not be able to get anything due to reasons mentioned above, and risk offending the prof. who made the offer. Negotiation is more common in job offers, and perhaps other graduate programs, but not in CS PhD.
-]
+#remark-block[*My decision rule:* #highlight[Don't try to negotiate a standard TA/RA offer merely because career websites say you should negotiate everything.] You will likely not change a centrally determined stipend, and you risk signaling that you misunderstand how PhD funding works. Ask informed questions about summer support, equipment, start dates, and funding duration instead. Negotiation is normal for many jobs; it is not automatically useful in CS PhD admissions.]
 
 === Buying Computer Equipment <sec:buying-equipment>
 //\sectioninfo{Ask your prof. if they can buy computer equipment and such for your research.}
@@ -1665,7 +1641,7 @@ You could have an excellent profile, but if your research interests don't align 
 Bad timing also plays a role. For instance, since 2024, there's been a surge in AI/NLP applicants (thanks, ChatGPT!). Overwhelmed AI/NLP faculty may reject strong candidates simply due to capacity.
 
 #tip-block[
-Before applying, ask your professors and LoR writers for honest feedback on where you should target. Apply to a range of schools, including "safety" options.
+Before applying, ask your professors and LOR writers for honest feedback on where you should target. Apply to a range of schools, including "safety" options.
 ]
 
 #strong[Lack of interest or overqualification.]
@@ -1682,6 +1658,8 @@ Various issues can raise concerns: many STEM courses with low grades or withdraw
 ==== "Chance me" on Getting into T10 Programs <sec:chance-me>
 
 Many international students aim for very top schools such as Stanford and MIT, and #link("https://en.wikipedia.org/wiki/Ivy_League")[Ivy League schools]. Every year #link("https://www.reddit.com/r/gradadmissions/")[Reddit] and other forums have numerous students asking for evaluation of their chances of getting into these schools (the so-called #emph["chance me"] or #emph["roast my CV/profile"] posts) and then later posts on being #emph["ghosted and rejected everywhere"]. Here's my take on this (adapted from my #link("https://www.reddit.com/r/gradadmissions/comments/1fogyg5/reality_check_for_aspiring_phd_applicants_youre/")[post on Reddit]):
+
+#caution-block[*Unpopular opinion:* There is no true "safety" PhD program. A less famous department may still reject you because nobody works in your area, the relevant professor has no capacity, or the TA budget was cut (@sec:how-decisions). Build a balanced list, but do not confuse lower ranking with guaranteed admission.]
 
 #strong[You are unlikely to get in these schools.] While being ambitious is good, you also need to be realistic, and the harsh reality is that it is very unlikely that you will get into MIT or Harvard unless you are very exceptional (in which case you would not be asking about your chances on Reddit).
 
@@ -1726,38 +1704,49 @@ There are other things you might not think are important but can make you stand 
 
 == Advice for Specific Applicant Profiles <chap:profiles>
 
-#draftbanner(note: "Add more profiles if I think of them (e.g., career-switchers from a totally different discipline, military veterans). Keep the tone encouraging---these applicants often count themselves out unnecessarily.")
+//#draftbanner(note: "Add more profiles if I think of them (e.g., career-switchers from a totally different discipline, military veterans). Keep the tone encouraging---these applicants often count themselves out unnecessarily.")
 
-Much of this book describes the "typical" applicant: a student applying straight out of (or shortly after) an undergraduate or MS program. But many strong applicants do not fit that mold, and they often count themselves out for the wrong reasons. This section addresses two common cases.
+Much of this book describes the "typical" applicant: a student applying straight out of (or shortly after) an undergraduate or MS program. But many strong applicants do not fit that mold, and they often count themselves out for the wrong reasons when in fact they can leverage their unique experiences to make a compelling case, i.e., stand out (@sec:stand-out).
+
 
 === Non-Traditional and Returning Applicants <sec:non-traditional>
 
-If you have been working in industry for several years, are older than the typical applicant, or are switching careers, you may worry that adcoms (@sec:adcom) will see you as a poor fit. In my experience the opposite is often true: #highlight[work experience can be a real asset], as long as you connect it to research.
+If you have been working in industry for several years, are older than the typical applicant, or are switching careers, you may worry that adcoms (@sec:adcom) will see you as a poor fit and not as competitive as younger applicants.
+However, in my experience, #highlight[work experience can be a real asset], as long as you connect it to research.
 
-#paragraph[Strengths to lean on][Industry experience shows you can ship real systems, work on a team, and persevere through hard problems---all things that matter in research. If your work involved anything research-adjacent (building ML models, doing performance analysis, contributing to open-source @sec:open-source-contribs), foreground it. A few years of maturity also tends to make for a more focused SOP (@chap:sop), because you have a clearer sense of what you want.]
+#paragraph[Experience][Industry experience shows you can ship real systems, work on a team, and _persevere_ through hard problems---all things that matter in research. If your work involved anything research-adjacent (building ML models, analyzing systems, or contributing to open-source projects; @sec:open-source-contribs), highlight it in your application.
+
+If you have a publication or two, even better. The writing doesn't have to be in a top venue, technical reports or white papers or just technical blog posts are sufficient to show you can communicate your work.]
+
+
+
+#tip-block[In the era of AI and LLMs, younger applicants is not always better as many of them just throw things into Claud and don't understand the underlying systems. Prof. are well aware of that and have the fatigue of dealing with such students. So, ironically, modern technological advances have made older applicants more competitive than before: we need people who can understand the underlying systems and can grind through hard problems instead of just burning token credits on LLMs.
+]
 
 #paragraph[Challenges to address][The two real challenges are (1) *letters of recommendation* (@chap:LOR)---you may no longer be in touch with professors---and (2) *demonstrating research interest*, since industry work is not the same as research.
 
-For letters, a manager or senior engineer who can speak concretely to your technical ability and initiative is fine, ideally alongside at least one academic letter if you can get one (@sec:admin-letters explains why a generic letter from someone senior but distant is weak). For research interest, use your SOP to explain _why_ you are leaving a (presumably well-paid) job to do a PhD---a thoughtful answer here is compelling precisely because the opportunity cost is real (@sec:worth-it).]
+For letters, a manager or senior engineer who can speak concretely to your technical ability and initiative is fine, ideally alongside at least one academic letter if you can get one (or at least someone who has a PhD and actively does research).
+
+For research interest, use your SOP to explain _why_ you are leaving a (presumably well-paid) job to do a PhD---a thoughtful answer here is compelling precisely because the opportunity cost is real (@sec:worth-it).]
 
 #tip-block[If it has been a while since you did anything academic, consider getting a small amount of recent research exposure first---a side collaboration, an open-source contribution (@sec:open-source-contribs), or a virtual research program (@chap:research-opportunities). It refreshes your skills, gives you a recent academic letter, and signals that your interest is genuine and current.]
 
 === Applicants with a Weak Academic Record <sec:academic-recovery>
 
-A low GPA, a failed course, or a degree from a less-known school (@chap:your-school) is not the end of your chances. As I explain throughout @chap:evalapps, adcoms look for _evidence you will thrive in research_, and grades are only one weak signal among many. Good grades won't help you much (@sec:good-grades), but the inverse is also true: you can compensate for weak grades with strong evidence elsewhere.
+A low GPA, a failed course, or a degree from a less-known school (@chap:your-school) is not the end of your chances.
 
 #paragraph[What actually moves the needle][In rough order of impact:
 - *Research experience and publications* (@chap:research-experience)---the single strongest counterweight to a weak transcript.
 - *Strong, specific letters* (@chap:LOR) from people who can vouch for your research ability.
-- *An upward trend*---if your later grades, especially in CS and Math, are strong, that matters more than a rough start.
-- *Evidence of standing out* (@sec:stand-out)---projects, competitions (@sec:competitions), open-source work.
+//- *An upward trend*---if your later grades, especially in CS and Math, are strong, that matters more than a rough start.
+- *Additional Evidence of standing out* (@sec:stand-out)---projects, competitions (@sec:competitions), open-source work.
 ]
 
-#paragraph[Addressing it directly][If there is a clear explanation for a bad patch (illness, family circumstances, a rough adjustment year), you can briefly and factually mention it---most often in a diversity or additional-information statement (@sec:diversity-statement) rather than dwelling on it in your SOP. State what happened, what you learned, and what you did afterward. Then move on to your strengths. Do _not_ make excuses or spend half your essay on it.]
+#paragraph[Addressing it directly][If there is a clear explanation for a bad patch (illness, family circumstances, a rough adjustment year), you can briefly and factually mention it in your SOP. State what happened, what you learned, and what you did afterward (preferably, your grades should show an upward trend). Then move on to your strengths. Do _not_ make excuses or spend half your essay on it.]
 
 #caution-block[Be aware that grades _below a hard cutoff_ in relevant courses (Math, CS) can read as a #alert[red flag] (@sec:why-rejected), and some programs have minimum GPA requirements for funding. If you are near a cutoff, it is even more important that the rest of your application gives the committee a reason to advocate for you.]
 
-#remark-block[Plenty of successful researchers, myself included, did not have a flawless record. Adcoms know that grades measure coursework, not research potential, and the two are only loosely related (@sec:profile-not-strong). Tell a story of growth and back it with evidence, and a weak transcript becomes a footnote rather than a verdict.]
+//#remark-block[Plenty of successful researchers, myself included, did not have a flawless record. Adcoms know that grades measure coursework, not research potential, and the two are only loosely related (@sec:profile-not-strong). Tell a story of growth and back it with evidence, and a weak transcript becomes a footnote rather than a verdict.]
 
 #pagebreak()
 
@@ -1770,6 +1759,8 @@ A low GPA, a failed course, or a degree from a less-known school (@chap:your-sch
 If you're admitted to a #emph[good] CS PhD program, you should not have to worry about funding!
 In the US, the common types of funding for PhDs are #emph[graduate teaching assistant] (GTA or TA), #emph[graduate research assistant] (GRA or RA), and #emph[fellowship].
 GRA is paid by a prof. for you to do their research. GTA is paid by the dept. for you to help with teaching. Finally, fellowship is independent funding that can come from a school, a company, or an organization. 
+
+#caution-block[*What faculty will not tell you:* Funding is not merely a benefit added after admission; it often determines admission. A department with fewer TA lines must admit fewer students. A professor with a new grant may suddenly recruit several students, while the same professor may recruit nobody after a proposal is rejected. This is why a strong applicant can be rejected one year and welcomed the next without becoming a different person (@sec:how-decisions).]
 
 @tab:funding summarizes the differences.
 Note that funding is typically more available for PhD students than MS (@sec:ms-funding).
@@ -1903,14 +1894,14 @@ Finally, for fellowships (@sec:fellowships) you might get paid over the summer d
 
 Students might think their stipend is too low and not enough to live on.  For example, if you look at the stipend at GMU, which is around \$40K (including summer), and then compare it to the #link("https://www.epi.org/resources/budget/")[living cost] of Fairfax, VA, which says you need \$75K _annually_ to live in a 1-bed apartment, then you might be in a panic.
 
-However,  in almost all cases, the stipend is enough to live on.  You might not be able to live in a 1-bed apartment by yourself, but you can live in a shared apartment or house with other students (most grad students shared apt).  You might not be able to buy a new car, but you get a good, used one (most students do this) or use public transportation.  In short, while stipend looks bad compared to living expense, you can make it work by adjusting your lifestyle and living arrangements.
+Whether a stipend is enough depends on local housing costs and your circumstances. You might not be able to live in a one-bedroom apartment by yourself, but sharing an apartment or house with other students can substantially reduce your expenses. You might not be able to buy a new car, but you could get a reliable used one or use public transportation where it is available. In short, a stipend that looks low relative to a general-purpose living-cost estimate may be workable with different housing and transportation choices.
 
-In fact, it might be enough to support your spouse and kids.  Many CS PhD students have their families with them (a student of mine lives with his wife, who does not work as spouse of international students typically cannot work in the US, and 1 child in a 1-bed apartment and they are doing fine with just his stipend). So don't worry too much about the stipend.  A good school would know that it has to be competitive to attract students.  For example, at GMU, every year we try to improve the benefits, and especially stipend, for our graduate students.
+In some cases, it might even be enough to support a spouse and children, though this depends heavily on rent, healthcare, childcare, and the family's circumstances. Many CS PhD students have their families with them; for example, one of my students supports his wife and child on his stipend. A good school knows that its funding package must be competitive to attract students. At GMU, for example, we try each year to improve the benefits, especially the stipend, for our graduate students.
 
 For a full breakdown of how much a graduate student costs, see @sec:ra-cost.
 
 
-#remark-block[ There are websites such as  #link("http://www.phdstipends.com/results")[phdstipends.com] and #link("https://csstipendrankings.org/")[CS Stipend Rankings], where students report their stipends.You can use it to get idea on how much you can expect to get paid. However, I would ignore about the "Living Cost" because it does not fit most students' lifestyle and would make every PhD program look like it is in deficit. For example, it says with GMU's stipend \$40K and Fairfax's living expense \$75K, you will be in _deficit_ of \$35K annually --- which is ridiculous because all GMU PhD CS students are doing just fine with that stipend, and even enough to support their families. 
+#remark-block[There are websites such as #link("http://www.phdstipends.com/results")[phdstipends.com] and #link("https://csstipendrankings.org/")[CS Stipend Rankings], where students report their stipends. You can use them to get an idea of how much you can expect to be paid. Treat their living-cost comparisons cautiously, however: a general household budget may assume a lifestyle or household composition that does not match yours. For example, directly comparing GMU's roughly \$40K stipend with a \$75K Fairfax living-cost estimate suggests a \$35K annual deficit, but that comparison does not account for common graduate-student choices such as shared housing. Use the figures as a starting point and make your own budget based on rent, transportation, dependents, and other actual expenses.
 ]
 
 === How Much Do YOU Cost? <sec:ra-cost>
@@ -1957,25 +1948,6 @@ These numbers are based on my experience at public universities in the US. Priva
 
 In the end, the total budget comes out to be \$73K/year to support a PhD student. The summary is that #highlight[over your 5--6 years of your PhD, you cost about \$400K], and while your stipend is X, your advisor probably pays 2X for you. But of course, the nicest thing is that you do not have to pay for any of this! You get to gain the knowledge, do research, travel, and also get paid!
 
-== Practical Finances for International Students <chap:practical-finances>
-
-#draftbanner(note: "Maybe move parts of this into @chap:cultural.")
-
-Your funding (@chap:funding) covers tuition, health insurance, and a stipend, so you will _not_ go into debt for your PhD. But a stipend is modest, and there are some practical money matters---especially for international students---that catch people off guard. This section is a quick survival guide.
-
-#paragraph[The first month is the hardest][Your stipend is paid on the university's schedule (often monthly, sometimes with the first paycheck arriving several weeks after you start). Meanwhile you arrive needing to pay a security deposit and first month's rent, buy furniture, and cover initial expenses---all _before_ any money comes in. Budget to bring enough savings (a few thousand dollars) to cover *6--8 weeks* of living costs on arrival. This is the single most common cash-flow surprise.]
-
-#paragraph[Cost of living dominates the stipend's value][A \$35K stipend goes much further in, say, Pittsburgh or Blacksburg than in the Bay Area or New York City (@sec:selecting-ranking-schools). When comparing offers (@sec:visit-days), mentally divide the stipend by local rent. A nominally smaller stipend in a cheaper city can leave you more comfortable than a bigger one in an expensive one.]
-
-#paragraph[Taxes][Yes, you pay US taxes on your stipend (the portion that is salary), and as an international student your situation has extra wrinkles---tax treaties between the US and your home country may reduce what you owe, and you typically file as a non-resident for tax purposes for your first several years. Most universities provide tax-filing software (e.g., Sprintax) and workshops through the international student office. Do _not_ ignore tax filing; it is required, and it matters for future visa and green-card steps (@chap:visa).]
-
-#paragraph[Banking and credit][You will arrive with _no US credit history_, which makes renting and getting a credit card harder at first. Open a US bank account early, get a basic (often secured) credit card, and use it responsibly to start building credit. This pays off later when you rent an apartment or buy a car.]
-
-#paragraph[Health insurance is included---use it][Your assistantship includes health insurance (@chap:funding), and it is required (@chap:cultural-misc). Don't skip checkups assuming you are young and healthy---US healthcare is extremely expensive if you ever need it without coverage, and you are already paying for the insurance.]
-
-#tip-block[Your university's _international student office_ is your best resource for all of this---taxes, social security numbers, banking, on-campus work rules, and visa paperwork (@chap:visa). They do this for thousands of students every year. Lean on them rather than piecing together advice from forums.]
-
-#caution-block[As an #gls("F-1") student, there are _legal restrictions_ on how and where you can work (@chap:visa)---generally on-campus work tied to your #gls("assistantship"), with off-campus work requiring specific authorization (#gls("CPT-OPT", first:true)). Do not take side gigs or freelance work without checking with the international student office first; an unauthorized job can jeopardize your visa status.]
 
 #pagebreak()
 = Schools and Profs. <part:schools-profs>
@@ -1987,7 +1959,7 @@ Your funding (@chap:funding) covers tuition, health insurance, and a stipend, so
 #simpsons[It's not the school you go to, it's what you do while you're there!]
 // %\myepigraphsimpsons{"The answer to life's problems aren't at the bottom of a bottle. Heh heh! They're on TV!"}
 
-Choosing a school and an advisor (@chap:choosing-advisor) is clearly among the most important and difficult tasks when you apply and especially when you get admitted. This is further complicated due to cultural differences (@chap:cultural) and the unfamiliarity of international students with the US higher education system. This section aims to mitigate some confusion and help you make informed decisions.
+Choosing a school and an advisor (@chap:choosing-advisor) is among the most consequential decisions in the process, yet much of the standard advice is useless: _"choose the place that feels right," "follow your passion,"_ or _"ranking does not matter."_ Applicants who have never visited the US, worked with these professors, or seen the departments cannot reliably act on that advice. This chapter gives you cruder but more actionable rules and explains where they can fail.
 
 // % \section{Choosing a University <sec:choosing-university}
 // % \sectioninfo{Select schools based on their CS program and faculty research interests.}
@@ -2009,6 +1981,8 @@ Thus, if your goal is a PhD in CS, you must target only schools offering such a 
   image("files/c1.png", width: 80%),
   caption: [How _not_ to choose schools (@sec:selecting-ranking-schools). Source: #link("https://phdcomics.com")[PhD Comics] (© Jorge Cham).],
 ) <fig:schools-comic>
+
+#caution-block[*When conventional advice fails:* "Ignore rankings and choose based on fit" assumes that you already know how to evaluate fit. Most applicants do not. Rankings are a crude filter, but an imaginary sense of fit based on a polished faculty webpage is not automatically wiser. Use rankings to discover programs, then investigate the people, funding, and alternatives inside each program.]
 
 Many students put universities into two bins: (i) top schools that they dream about, and (ii) everything else. They often use rankings from US News, which is not transparent and questionable (@chap:rankings). Sometimes they evaluate based on the reputation of the school's undergrad program or the reputation of the school's non-CS programs such as medical, math, or physics.
 Many international students rank universities based on popular places they know in the US, e.g., California, Texas, and New York.
@@ -2219,47 +2193,17 @@ For this specific reason, CSRankings and CSPicks focus on faculty who can advise
 Adcom has direct influence over admissions decisions (@sec:adcom), but they operate within a larger university hierarchy that can impact those decisions. For example, enrollment and funding levels may lead to changes in admissions criteria or the number of students accepted (e.g., TA reduction). @fig:university-hierarchy illustrates the typical hierarchy in a US university and how different entities influence CS PhD admissions.
 
 ==== Top Governance and Executive Administration
-At the top is the *Board of Visitors* in public schools or Board of Trustees in private schools. This body is appointed (or self-perpetuating) and has the ultimate authority over the university, approving budgets, tuition levels, new colleges and schools, and presidential hires and firings.
-
-They will not decide how many PhD students a CS department admits, but their decisions---such as approving the creation of a new College of Computing or cutting budgets---can significantly change your graduate experience.
-
-The *President* (or *Chancellor*) is the "CEO" of the university and reports directly to the Board. Below them is the *Provost*, the Chief Academic Officer who oversees all colleges and deans. The Provost's office approves tenure policies, new faculty lines, and graduate school rules; all these decisions shape the direction and operations of the CS department.
+The Board, President or Chancellor, and Provost control university-level budgets, policies, and faculty growth. They do not read your application. They matter because a budget cut, hiring initiative, or new college can change how many faculty and TAs the department can support---and therefore how many PhD offers it can make.
 
 ==== Shared Governance
-
-Alongside the administration is the *Faculty Senate*, an elected body of professors that represents the faculty's collective voice. Depending on the university, the Senate may be mostly advisory (do not make decisions) or have real power to approve or block changes in curriculum, tenure standards, and academic freedom policies. 
-Thus, Senate decisions can indirectly affect CS students by changing graduate requirements or faculty hiring standards.
-
-The Senate acts as an independent check on the administration. They can question decisions (e.g., of the Board and the President), propose resolutions, and advocate for faculty interests. Even though they are not part of the executive chain, they are the #emph[voice] of the faculty, and thus the Board and President will typically listen to them.
-
-#note-block[
-  I am one of the faculty senators at GMU. Here, the Faculty Senate serves as an advisory body to administration. It does not have administrative power, but can propose resolutions and advocate for faculty interests. The Senate has various committees that touch on all aspects of university life, including research, teaching, student affairs, and even its athletic aspects.
-]
+The *Faculty Senate* represents faculty and may influence curriculum, graduate requirements, and academic policy, but it does not evaluate individual applicants. I serve as a faculty senator at GMU; in my experience, this work can shape the rules around a program but is far removed from deciding whether a particular applicant is admitted.
 
 ==== Local Units (College/School/Dept)
+Colleges and schools control budgets and enrollment targets; departments control the local implementation. A dean may fund more TA positions or authorize faculty hiring, while the CS chair determines priorities and appoints the adcom. These officials normally do not choose individual applicants, but they determine the size and shape of the pool the committee is allowed to admit (@sec:how-decisions).
 
-Under the top administration are the various colleges or schools that house different academic departments. Common examples include the College of Engineering, College of Arts and Sciences, and increasingly, a separate College of Computing (e.g., like at Georgia Tech).  
+The people who matter directly to _your_ application are much closer to the bottom of @fig:university-hierarchy: the assigned adcom reviewers and potential advisors. Faculty can advocate for students they want to advise (@sec:applications-assigned); administrative staff verify and process the file but do not decide its academic merits.
 
-Schools are typically under a college, e.g., the School of Computing within the College of Engineering at UNL. But in some universities, the School is a standalone unit, e.g., the School of Computer Science at CMU.
-
-#note-block[
-  At GMU, CS is under School of Computing (SoC), which is under College of Engineering and Computing (CEC).   The School of Computing (SoC) has its own Dean, who reports to the Dean of CEC, who then reports to the Provost.
-
-  GMU SoC consists of CS, IST, Stats.  CEC consists of SoC and other engineering departments such as Electrical and Computing Engineering (ECE), Biomedical Engineering (BME), and Mechanical Engineering (ME).  CEC is one of the largest colleges at GMU, and CS is the largest department in CEC.
-]
-
-Each college and school is led by a *Dean*, who reports to the Provost. The Dean, together with their *associate* deans, who are responsible for specific areas such as research, teaching, or student affairs, oversees all departments within the college, managing budgets, faculty hiring, and strategic planning. The deans also advocate for their college's needs to the Provost and President.  
-
-Due to their roles, the deans have influence over CS admissions by setting college-wide policies on funding, enrollment targets, and interdisciplinary initiatives. For example, if the Dean prioritizes growth in computing, they may push for more CS faculty hiring and PhD admissions (e.g., through increased TA funding or new program initiatives).
-
-*Department*: Inside the department, the *Chair* (or Head) manages financial and personnel matters, including faculty hiring, promotions, resource allocation, and enrollment and admissions processes. Supporting them are *associate chairs* of graduate and undergraduate studies and *directors* of various programs. In addition, the Chair forms various committees to handle specific tasks, e.g., admissions, curriculum, and faculty hiring (search).  
-The Chair reports to the Dean and is responsible for implementing college policies at the department level. 
-
-While department chairs do not usually get involved in PhD admissions decisions (see how decisions are made in @sec:how-decisions), they set the overall direction and priorities that shape how many students are admitted and what resources are available to them.
-
-*Faculty and Staff*: In many cases adcom consults with faculty members who are potential advisors to get their input on applicants (@sec:applications-assigned). Thus general faculty can influence admissions by recommending students they want to advise. 
-
-In addition, a CS department has various *administrative staff* who handle day-to-day operations, e.g., contacting applicants, processing applications, and managing student records. While staff do not make admissions decisions, they ensure the process runs smoothly and efficiently---a critical behind-the-scenes role.
+#caution-block[*What applicants get wrong:* Writing to a dean, provost, or department chair rarely creates influence. It usually reveals that you do not understand who evaluates the application. Contact a plausible advisor about research fit, and contact staff about missing documents or procedure.]
 
 
 #pagebreak()
@@ -2269,6 +2213,8 @@ In addition, a CS department has various *administrative staff* who handle day-t
 #simpsons[It's not easy being a mentor. But it sure is funny to watch other people screw up.]
 
 There is no one-size-fits-all answer to finding an #gls("advisor"). The best advisor is the one that fits you, e.g., you can work well with, and has the ability to help you succeed. But how do you find such a person?
+
+#caution-block[*When conventional advice fails:* "Choose a good advisor who fits you" is empty advice unless it tells you what to investigate. You cannot observe compatibility from a homepage. Ask how often the professor meets students, who chooses problems, how authorship works, what happens when a project fails, where funding comes from, and why students have left the group. Then verify the answers with current and former students (@sec:visit-days).]
 
 Fortunately, while some non-US programs require finding an advisor and research topic before starting the PhD (@sec:non-us-differences), CS PhD programs in the US will typically give you a couple of years to "shop" for advisors and research topics. This is especially true if you're admitted with GTA (@sec:ta), which gives you time to explore and find an advisor.
 
@@ -2406,6 +2352,8 @@ Now that you know a bit about tenured and tenure-track faculty (@sec:faculty-typ
 
 Either can be a good advisor, but they have different strengths and weaknesses. The below gives some ideas; however, the best indicator of their research productivity and impact is their publication and recognition record (@chap:research-achievements). Some profs. publicly share their advising style and expectations, like #link("https://roars.dev/phd-cs-us/advising.pdf")[this] and #link("https://jbhuang0604.github.io/advisor_guide.html")[that], to help prospective students decide.
 
+#caution-block[*What faculty will not tell you:* Advisors do not recruit students out of pure generosity. We need collaborators who can help turn grants and ideas into papers, software, and trained researchers. A junior professor may invest enormous time in you because your success is tied to their tenure case. A senior professor may offer a powerful network but have less time because they already manage a large lab, company, or administrative role. These incentives are not automatically good or bad; you should understand what bargain you are entering.]
+
 *Tenure-track faculty*—like assistant professors—are typically young and active in research (they have to be, to get tenure). Thus, they will devote more time to work with you and push you to do research and publish. However, you might not become too independent because they may be too hands-on with you. For example, you might not learn how to fully form research ideas, design experiments, and write papers on your own. Also, they may not have as much experience in managing students or may not yet have substantial funding.
 
 *Tenured faculty*—associate and full professors—are likely older, more well-known, and have more experience in managing students. However, they might not push you as hard and will expect you to figure things out yourself, i.e., you need to be independent. Some tenured faculty are also no longer active in research and are more involved with administrative responsibilities or their startup companies (which means they will likely not take new students).
@@ -2439,11 +2387,15 @@ Thus, don't worry about this too much and just apply to the profs. you think are
 
 Faculty often receive "cold" emails from prospective students. Most of the time, we #highlight[just ignore such emails] (@sec:busy), but on some rare occasions, we do answer them. _So how to write an email that gets our attention?_
 
+#caution-block[*Do not ask a professor to predict your admission chances.* That question asks us to perform a private application review for a stranger, usually before seeing the letters and complete file. Ask whether our research interests overlap or whether we expect to recruit students. Those are questions we can answer and have an incentive to answer.]
+
 First, if you want to contact a prof. with the purpose of checking about _potential admission chance_, *don't*. We don't know and can't answer because, as explained in @chap:evalapps and @sec:direct-vs-committee, we don't make individual decisions and might not even be assigned to evaluate your application. It is the same as sending a paper draft to a journal editor or program chair and asking them if your paper has a chance. 
 
 So how to get someone to look at your profile and give input? You could ask your professors, LOR writers, collaborators, or those who have previously applied. For this kind of feedback, ask someone you have a personal connection with.
 
 On the other hand, if you want to contact a prof. to ask about _research opportunities_, or _GTA/GRA_ support (@sec:ta-ra), then _yes_, I believe you *should* try. It is still a _very_ long shot (you likely won't get any reply), but it is _worth trying_ (and I say this even though I do not reply to most of these emails; see @sec:kiss-of-death-emails for why). Thus, you really need to put effort into it and do it the _right way_ to get a positive reply.
+
+#paragraph[What faculty will not tell you][A professor replies when the expected value of the conversation exceeds its cost. Junior faculty may urgently need students for a new grant or to build a lab; another professor may already advise ten students, be leaving the university, lack funding, or simply not need your background this year. Silence is often about bandwidth and incentives, not a verdict on your worth. A good email lowers the cost of evaluating you and gives the professor a concrete reason to imagine working with you. If that interest turns into advocacy, it can materially affect the review described in @sec:ievaluate and @sec:how-decisions.]
 
 The best way to catch the prof.'s attention is to _customize your email_ for them and _make yourself stand out_ from the crowd. First, customize your email so that it is about how/why their work would match yours, how you have followed their work and did what they ask from their website (if they have any). In contrast, if you write a generic email that can be sent to multiple professors (e.g., if you just change some names and keywords in the email or copy and paste paper titles), you will not get a response.
 
@@ -2454,9 +2406,9 @@ Below is a good example:
 
   I am writing to inquire about potential research opportunities as a GRA in your group at GMU. Currently, I am an undergraduate student in Computer Science at UNIV and plan to graduate in May 2023.
 
-  _[a very strong version and customized specifically for me]_ I have followed your instructions on your website and created a PR to fix the Github issue X in your project Y. I also notice that the project might be beneficial with some additional features, e.g., Z, and I am working on a PR for it.
+  _[a very strong version and customized specifically for me]_ I have followed your instructions on your website and created a PR to fix the GitHub issue X in your project Y. I also notice that the project might benefit from some additional features, e.g., Z, and I am working on a PR for it.
 
-  _[also strong, but more conventional and a bit boring]_ I have read your TSE'21 paper on numerical invariant generation, and I am interested in this line of dynamic invariant research. I have worked (optional: with prof. Y at Z) on static program analysis and I think it could be used to tackle the spurious issues mentioned in your paper. I have a short paper at conference/workshop C and a project on symbolic execution (Github repo G).
+  _[also strong, but more conventional and a bit boring]_ I have read your TSE'21 paper on numerical invariant generation, and I am interested in this line of dynamic invariant research. I have worked (optional: with prof. Y at Z) on static program analysis and I think it could be used to tackle the spurious issues mentioned in your paper. I have a short paper at conference/workshop C and a project on symbolic execution (GitHub repo G).
 
   _[something more personal and will catch my attention]_ I also have read your advising guide emphasizing independence and result-oriented research, and I think this is a good fit because ...
 
@@ -2663,9 +2615,7 @@ But there's a good chance that we would respond to well-written emails (@sec:con
   caption: [#gls("F-1") student visa process.  Source: #link("https://phdcomics.com")[PhD Comics] (© Jorge Cham).],
 ) <fig:visa>
 
-#definition-box[F-1 Visa][The #gls("F-1", first:true) is the main visa needed to study full-time at an accredited US institution. It allows limited on-campus work; off-campus work such as internships requires #gls("CPT-OPT") authorization, described below.]
-
-As defined in @chap:glossary, international students are those who would need a visa to study in the US.  Here are some key points about F-1:
+The #gls("F-1", first:true) is the main visa used for full-time study at an accredited US institution. Here are the restrictions that matter most to a PhD student:
 
 - *Employment:* You are allowed to work on-campus for up to *20 hours per week during the #gls("AY")* (because you still need to take classes) and *full-time* (typically 40 hrs) during official school breaks (e.g., summer and winter breaks). Off-campus employment, such as internship, requires authorization, which can be obtained through CPT and OPT programs described below.
 
@@ -2700,92 +2650,18 @@ This section was contributed by Hediyeh Savari, who kindly shared her experience
 ]
 
 
-You must attend an in-person visa interview at the consular section. In general, you are allowed to enter the consular section only if you have a scheduled appointment. The embassy/consulate where you scheduled your visa interview will email you instructions and let you know what to bring, but here is a common list:
--	I-20 form
--	I-901 payment confirmation
--	DS-160 form submission confirmation
--	Visa appointment scheduling confirmation
--	MRV fee payment confirmation
--	Admission letter
--	Funding letter (if applicable)
--	Research plan
--	Statement of purpose
--	Applicant's CV
--	Intended PhD advisor's CV
--	Passport
--	Applicant's photo
--	Supporting documents
-If any of your documents are in another language, bring the original and an English translation. We will discuss each document in detail as follows.
-\
-\
+Most F-1 applicants attend an in-person interview, though procedures and waiver eligibility can change. Treat your embassy's instructions as authoritative. The summary below explains the major forms and decisions; it is not a substitute for the current #link("https://travel.state.gov/content/travel/en/us-visas/study/student-visa.html")[Department of State instructions] or the website of the embassy where you apply.
+
 === Forms
 
-#paragraph[I-20][
-An I-20 form is a document issued by a university to certify that an F-1 student has met admission requirements and has proof of sufficient financial resources for their studies. The first step to obtaining an I-20 form is to find the international department of your intended university and follow the steps on its website. Usually, you need to upload your passport, financial documents, etc. In the following cases, you will need to provide financial proof, such as a bank statement, that you are able to cover all the expenses and will not face financial problems for your studies.
--	You are self-funded (your admission offer does not include any funding)
--	You are partially funded (your funding is less than the total of tuition fees plus living expenses)
--	You have dependents accompanying you (whether you are self-funded, partially funded, or fully funded)
-
-The processing time for the I-20 form varies from 1 day to 2 months, depending on the university. The I-20 form must be signed by both the school official and the applicant. So before your appointment at the embassy/consulate, print your I-20 and sign it.
-]
-
-#paragraph[I-901 Payment Confirmation][
-When you receive your I-20 form, you will see a SEVIS (Student and Exchange Visa Information System) ID on it. You need to activate this SEVIS ID by going to the
-#link("http://www.fmjfee.com")[I-901 Form website] and paying the \$350 I-901 fee. Then you should print the I-901 fee payment receipt and bring it to the visa interview. For additional information about who is required to pay this fee, see SEVP at the
-#link("http://www.fmjfee.com")[I-901 Form website].
-]
+- *Form I-20:* Your university issues this after admission and verification of funding. Follow its international-student office instructions, provide any requested financial proof, and sign the form before the interview.
+- *I-901 SEVIS fee:* Use the SEVIS ID on the I-20 to pay the current fee through the official #link("https://www.fmjfee.com/")[I-901 website], then retain the receipt.
+- *Form DS-160:* Complete the online nonimmigrant-visa application through #link("https://ceac.state.gov/genniv/")[CEAC]. Save the confirmation page and barcode needed to schedule the interview.
 
 #tip-block[One option you have regarding your SEVIS ID is that, if you change your mind about the PhD program you want to join and decide to attend another program, you can transfer the SEVIS ID to the new program within a one-year timeframe, free of charge.]
 
-#paragraph[DS-160 Form Submission Confirmation][
-The DS-160 form is an online form that applicants must complete for a non-immigrant visa application. After receiving your I-20, you must visit the
-#link("https://ceac.state.gov/genniv/")[Consular Electronic Application Center (CEAC)] to complete the DS-160 form. The questions on the DS-160 form are mostly about your personal information, your parents, whether you have immediate family members or relatives in the U.S., your educational background, your work history, your travel history, your social media accounts, etc. You should also provide contact information for two references in your country of residence. To book your visa interview, you need the barcode number of your DS-160 form. Fill out the DS-160 form accurately because you cannot make any changes after submission. Once you submit the form, you have the option to download it, but if you do not, you will not have access to it later. So, it would be better to download and keep it. You do not need to bring this downloaded file to the visa interview, but you must bring a printout of your DS-160 submission confirmation to the interview.
-]
-
 === Visa Appointment Scheduling Confirmation
-You should schedule your visa interview appointments at the U.S. embassy/consulate in your country of nationality or of residence. If you are a national of a country where the U.S. government does not conduct routine nonimmigrant visa operations, you must apply at the #link("https://travel.state.gov/content/travel/en/News/visas-news/adjudicating-niv-applicants-in-their-country-of-residence.html")[designated embassy/consulate] unless you reside elsewhere.
-
-#show figure.where(
-  kind: table
-): set figure.caption(position: top)
-
-#figure(
-  kind: table,
-  caption: [Designated Locations for Nonimmigrant Visa Processing (as of 2026)],
-)[
-  #table(
-    columns: 2,
-    align: center,
-    stroke: 0.5pt,
-
-    table.header(
-      [*National of*],
-      [*Designated Location(s)*],
-    ),
-
-    [Afghanistan], [Islamabad],
-    [Belarus], [Vilnius, Warsaw],
-    [Burkina Faso], [Lome],
-    [Chad], [Yaoundé],
-    [Central African Republic], [Yaoundé],
-    [Cuba], [Georgetown],
-    [Haiti], [Nassau],
-    [Iran], [Dubai],
-    [Libya], [Tunis],
-    [Niger], [Lome],
-    [Russia], [Astana, Warsaw],
-    [Somalia], [Nairobi],
-    [South Sudan], [Nairobi],
-    [Sudan], [Cairo],
-    [Syria], [Amman],
-    [Ukraine], [Krakow, Warsaw],
-    [Venezuela], [Bogota],
-    [Yemen], [Riyadh],
-    [Zimbabwe], [Johannesburg],
-  )
-]
-
-After determining where you should schedule your visa interview, go to the #link("https://www.ustraveldocs.com/")[USTravelDocs website], select the location and language, then select “Nonimmigrant Visa” to create a new account.
+Schedule your interview in your country of nationality or residence. If routine nonimmigrant visa operations are unavailable there, use the Department of State's current #link("https://travel.state.gov/content/travel/en/News/visas-news/adjudicating-niv-applicants-in-their-country-of-residence.html")[designated-post guidance]. I deliberately do not reproduce the country-by-country table here because it can change; check the official page immediately before scheduling. The relevant embassy website will direct you to its appointment service, which may be #link("https://www.ustraveldocs.com/")[USTravelDocs] or another provider.
 
 #note-block[You should check the #link("https://travel.state.gov/content/travel/en/News/visas-news/suspension-of-visa-issuance-to-foreign-nationals-to-protect-the-security-of-the-united-states.html")[
  U.S. Department of State website] to see whether there are any entry restrictions or travel bans for citizens of your country that would prevent you from obtaining the visa.
@@ -2799,62 +2675,27 @@ the #link("https://www.ustraveldocs.com/")[USTravelDocs website], you can select
 
 === Documents to Bring to the Interview
 
-#paragraph[Admission Letter][
-You should print and bring your admission letter to the interview.
-]
+#caution-block[The #link("https://travel.state.gov/content/travel/en/us-visas/study/student-visa.html")[U.S. Department of State's standard list] of required F-1 interview documents includes your passport, DS-160 confirmation page, fee receipt when applicable, photo, and Form I-20. A consular officer or a specific embassy may request additional documents. The admission letter, funding evidence, research plan, SOP, and CV materials below are useful supporting documents, but they are not universal requirements. Always follow the instructions published by the embassy or consulate where you will apply.]
 
-#paragraph[Funding Letter (if applicable)][
-You should print and bring your funding letter to the interview.
-]
+#paragraph[Admission and funding][Bring your admission letter and evidence showing how tuition and living expenses will be paid. Your funding letter may be sufficient for a fully funded PhD; self-funded or partially funded applicants and those bringing dependents may need additional financial evidence.]
 
 #paragraph[Research Plan][
-//TODO: not sure about this as research plan is not a common requirement for US PhD programs. 
+Some applicants, particularly those whose work involves sensitive scientific or technical fields, may be asked to provide a research plan or a letter from their U.S. academic advisor. If your embassy or consular officer requests one, it may need to:
+- Explain the goals of your research and any practical applications;
+- Identify the lab or center in which the research will take place and describe what you will have access to in the university lab;
+- State the sources and amounts of any U.S. government funding (or funding from U.S. corporations assisting the U.S. government) that will support the research; and
+- Describe any export-controlled technology or information that will be shared with you.
 
-You need to provide a letter from your U.S. academic advisor, known as the Research Plan, which:
--	Explains goals of your research and any practical applications;
--	Identifies the lab or center in which research will take place and provides details on what you will have access to in the university lab;
--	States source and amounts of any U.S. government money (or funding from U.S. corporations assisting the U.S. government) to be used to support that research; and
--	Describes any export-controlled technology and/or information that will be shared with you.
-
-This letter should be printed on the university's letterhead and originally signed by your academic advisor. Your academic advisor can scan and email it to you. Then you can print and take it to the interview.
+If requested, ask the embassy and your university whether the letter must be printed on university letterhead and signed by your academic advisor.
 ]
 
-#paragraph[Statement of Purpose][
-It is the same statement of purpose that you submitted when you applied to the PhD program at the university.
-]
+#paragraph[Academic and research material][Your SOP and applicant CV can help explain your academic history, employment, projects, and publications. Some posts may also request your intended advisor's CV or publication list. Bring these when the post requests them or when they clarify your proposed work; they are not universal core documents.]
 
-#paragraph[Applicant's CV][
-It is the same CV that you submitted when you applied to the PhD program at the university. In your CV, you should: 
--	List your entire educational background, including dates attended, degrees received, projects worked on, names of professors you worked with, and any publications you wrote.
--	List your entire employment background, including employers, dates, locations, specific duties and responsibilities.
--	List references in your country of birth or residence
-]
+#paragraph[Passport and photo][Bring a passport valid for at least six months beyond your intended stay unless a #link("https://www.cbp.gov/document/bulletins/six-month-validity-update")[country-specific agreement] provides an exception, plus any passport containing your most recent U.S. visa. Follow the Department of State #link("https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/photos.html")[photo requirements].]
 
-#paragraph[Intended PhD Advisor's CV][
-Ask your U.S. faculty advisor for a detailed resume and list of published work.]
+#paragraph[Other supporting documents][Depending on your case and post, useful material may include transcripts and diplomas, evidence of financial support, and evidence concerning your plans and ties outside the US. If another person sponsors you, the post may ask for proof of the relationship and the sponsor's finances. Bring originals and translations when instructed, but do not assume that carrying a mountain of paper can compensate for unclear or inconsistent interview answers.]
 
-#paragraph[Passport][
-Your current passport must be valid for at least six months beyond the period of stay in the U.S. (unless exempt by #link("https://www.cbp.gov/document/bulletins/six-month-validity-update")[country-specific agreements]). Also, if applicable, bring the passport containing the most recently issued U.S. visa.
-]
-
-#paragraph[Applicant's Photo][
-You should take a 51 x 51 millimeter (2 x 2 inches) color photo within the last 6 months before the visa interview. For the photo, you should follow the Department of State #link("https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/photos.html")[photo guidelines].
-]
-
-#paragraph[Other Supporting Documents][
-You may also bring any supporting documents you believe support the information provided to the consular officer. Supporting documents are only one of many factors a consular officer will consider in your interview. Consular officers consider professional, social, cultural, and other factors during adjudication. Consular officers may consider your specific intentions, family situation, and long-term plans and prospects in your country of residence. The supporting documents include:
--	Documents demonstrating strong financial, social, and family ties to your home country that will compel you to return to your country after your program of study in the U.S. ends.
--	Academic documents that show scholastic preparation. Useful documents include school transcripts (original copies are preferred) with grades, public examination certificates (A-levels, etc.), standardized test scores (SAT, TOEFL, etc.), and diplomas.
--	(In case you are self-funded, partially funded, or have dependents) Financial and any other documents you believe will support your application and which give credible evidence that you have enough readily-available funds to meet all expenses for the first year of study and that you have access to funds sufficient to cover all expenses while you remain in the U.S.. 
--	(In case you are self-funded, partially funded, or have dependents) If you are financially sponsored by another person, bring proof of your relationship to the sponsor (such as your birth certificate), the sponsor's most recent original tax forms, and the sponsor's bankbooks and/or fixed deposit certificates.
-]
-
-#paragraph[For Dependents][
-If you have dependents, you must also provide:
-- Your spouse's CV
--	Proof of your relationship to your spouse and/or children (e.g., marriage and birth certificates).
--	It is preferred that families apply for their visas at the same time, but if the spouse and/or children must apply separately at a later time, they should bring a copy of the student visa holder's passport and visa, along with all other required documents.
-]
+#paragraph[For dependents][Follow the post's F-2 instructions and bring evidence of your relationship, such as marriage and birth certificates. Dependents applying later should generally bring copies of the F-1 student's passport and visa in addition to their own required documents.]
 
 === The Visa Interview
 Arrive at the embassy/consulate 15 minutes before your scheduled time. The embassy/consulate environment is calm and formal, similar to a bank. There are several counters, with officers at each interviewing applicants. Translators are also present beside each officer in case an applicant cannot speak English. However, as a prospective PhD student at a U.S. university, you are expected to speak English. So, it is highly recommended to do the interview in English. The questions in the interview vary based on your specific case, but here are some general ones you can expect:
@@ -3258,7 +3099,7 @@ Your application will be evaluated based on two criteria: Intellectual Merit (IM
 
   Instead, the evaluation is based on your _potential_ of being a good researcher using various criteria, e.g., your research experience, what others think of you (LORs), research plan, etc. This also means that even if you have very little research experience, you can still get the fellowship if you can convince the reviewers that you have the potential to be a good researcher.  Vice versa, if you have a lot of research experience and in very top places but cannot convince the reviewers that you have the potential to be a good researcher, you will not get the fellowship.
 
-+ *Broader impacts (BI):* BI is a common and important component in NSF application. It is about how you and your research can _benefit society_.  Many students just mention how their research is cross-discipline and thus has broader impacts (e.g., improve software quality and thus help society).  This is too common and not enough.  You also want to talk about how you, as a grad student with your research, can help society, e.g., through outreach, mentoring, etc. As mentioned below, you will want to be specific and concrete, e.g., _"I will work with highschool students .."_ is not as convincing as _"I have had experience in mentoring highschool students X and will continue to do so through Y,Z ..."_.  
++ *Broader impacts (BI):* BI is a common and important component of an NSF application. It is about how you and your research can _benefit society_. Many students just mention how their research is cross-disciplinary and thus has broader impacts (e.g., improving software quality and thereby helping society). This is too common and not enough. You also want to discuss how you, as a graduate student, can help society through outreach, mentoring, and similar activities. As mentioned below, you will want to be specific and concrete, e.g., _"I will work with high school students"_ is not as convincing as _"I have experience mentoring high school students through X and will continue to do so through Y and Z."_
 
   Writing BI is often difficult, not only for students but also new faculty.  You should ask someone who has experience writing NSF proposals to review your BI.
 
@@ -3330,9 +3171,9 @@ These are some common pitfalls I see in NDSEG applications and tips to avoid the
 #remark-block[
 I enjoy reviewing the GRFP applications more than NDSEG, which redacts most applicant information as mentioned above. I can review GRFP applications more carefully because NDSEG doesn't provide much info to work with.
 
-I also find GRFP applicants have stronger _research plans_. GRFP applicants often already have good research experience, with many have top tier publications. They also tend to come from well-known institutions with "fancy" LORs. In contrast, NDSEG applicants come from a broader range of schools and backgrounds. Interestingly, I find the _personal statements_ in NDSEG applications more appealling, largely due to their personal stories and varied experiences.
+I also find GRFP applicants have stronger _research plans_. GRFP applicants often already have good research experience, with many having top-tier publications. They also tend to come from well-known institutions with "fancy" LORs. In contrast, NDSEG applicants come from a broader range of schools and backgrounds. Interestingly, I find the _personal statements_ in NDSEG applications more appealing, largely due to their personal stories and varied experiences.
 
-A quick note on compensation: GRFP reviewers, like other NSF panelists, receive a modest honorarium (\$200 total; I probably spent several full days reviewing dozen of applications). NDSEG reviewers aren't officially paid, though I did receive some compensation, e.g., \$50 Amercian Express gift card---but for whatever reason never worked when I tried to use it. So, not much for compensation (days of reviewing and writing comments for a couple of hundred dollars), but I enjoy the experience and would do it for free anyway!
+A quick note on compensation: GRFP reviewers, like other NSF panelists, receive a modest honorarium (\$200 total; I probably spent several full days reviewing dozens of applications). NDSEG reviewers aren't officially paid, though I did receive some compensation, e.g., a \$50 American Express gift card---but for whatever reason it never worked when I tried to use it. So, not much compensation (days of reviewing and writing comments for a couple of hundred dollars), but I enjoy the experience and would do it for free anyway!
 ]
 
 #pagebreak()
@@ -3360,7 +3201,7 @@ Each CS field (@sec:fields-and-areas) has its own "top" conferences---usually ar
 These conferences have a rigorous #gls("peer-review", first:true) process, and only a small percentage of papers are accepted.
 
 As mentioned in @chap:research-experience, having a paper accepted at a top-tier conference can be a big deal and makes you stand out from other prospective students. 
-CSrankings and CSPicks (@chap:rankings) gives the top conferences in each area and rank departments based on their publications in these conferences.
+CSRankings and CSPicks (@chap:rankings) identify the top conferences in each area and rank departments based on their publications in these conferences.
 
 
 *Journals.* While journals are not as popular in CS, they exist and serve a different purpose---to publish more mature and complete work.
@@ -3447,7 +3288,7 @@ These can be (i) lifetime achievements in the field---such as ACM or IEEE Fellow
 
 ==== Lifetime Achievements  <sec:lifetime-achievements>
 
-- *#link("https://awards.acm.org/turing")[Turing Award]* is the _highest honor_ in CS for lifetime achievements and contributions to the computing community. It comes with a \$1M prize and is often called the _"Nobel Prize of Computing."_ (Computer Sciene does not have a Nobel Prize, but the Turing Award is often considered its equivalent.) Turing Award winners are often senior researchers with a long history of impactful contributions to the field. For example, the 2020 Turing Award was given to Alfred Aho and Jeffrey Ullman for their work on algorithms and programming languages,and the 2018 Turing Award was given to Yann LeCun, Geoffrey Hinton, and Yoshua Bengio for their work on deep learning.
+- *#link("https://awards.acm.org/turing")[Turing Award]* is the _highest honor_ in CS for lifetime achievements and contributions to the computing community. It comes with a \$1M prize and is often called the _"Nobel Prize of Computing."_ (Computer Science does not have a Nobel Prize, but the Turing Award is often considered its equivalent.) Turing Award winners are often senior researchers with a long history of impactful contributions to the field. For example, the 2020 Turing Award was given to Alfred Aho and Jeffrey Ullman for their work on algorithms and programming languages, and the 2018 Turing Award was given to Yann LeCun, Geoffrey Hinton, and Yoshua Bengio for their work on deep learning.
 
 - *#link("https://www.macfound.org/programs/awards/fellows/")[MacArthur Fellowship]* are also known as the _"Genius Grant"_ and given to individuals who have shown exceptional creativity in their work and the promise for more in the future.  For example, in CS, the 2020 MacArthur Fellowship was given to Dawn Song for her work on security and privacy, and the 1998 MacArthur Fellowship was given to Tim Berners-Lee for inventing the World Wide Web.
 
@@ -3546,7 +3387,7 @@ Here are the typical steps that will happen if you are caught cheating (e.g., on
 
 It is important to note that in most cases _after_ receiving the report from your prof., OAI _completely_ takes over and makes its decision.  
 This means begging your professor will not help because they simply are no longer involved in the case and cannot do anything.
-This is because OAI is an independent office that is separate from your prof. and depatment that handles all academic integrity cases at the university, and they have their own procedures and policies.  If you are found guilty, you can appeal to OAI, but not to your prof. or department.
+This is because OAI is an independent office, separate from your professor and department, that handles all academic integrity cases at the university and has its own procedures and policies. If you are found responsible, you can appeal to OAI, but not to your professor or department.
 
 == Illegal Software <sec:illegal-software>
 
@@ -3555,7 +3396,7 @@ This is because OAI is an independent office that is separate from your prof. an
 
 == Costly Gifts <sec:gifts>
 
-In many countries, it is customary to give professors costly gifts---such as fancy liquors, jewelry, or even an envelope stuff with cash during the holidays or special occastions.  It's meant to show respect and appreciation (or let's be honest, an attempt to get better grades or recommendations). Understandbly this is a cultural norm in many countries, and professors and students are used to it. However, in the US, this is can be considered _widly inappropriate_ and strongly discouraged. Given your profs. these gifts will make them feel very uncomfortable and in many cases they are required to report them to the university.  
+In many countries, it is customary to give professors costly gifts---such as fancy liquor, jewelry, or even an envelope stuffed with cash during holidays or special occasions. It's meant to show respect and appreciation (or, let's be honest, as an attempt to get better grades or recommendations). Understandably, this is a cultural norm in many countries, and professors and students are used to it. However, in the US, it can be considered _highly inappropriate_ and is strongly discouraged. Giving your professors these gifts will make them feel very uncomfortable, and in many cases they are required to report them to the university.
 
  However, that doesn't mean you can't show your appreciation. In fact, small, personal tokens, like small souvenir from your country, a fridge magnet, keychain from your hometown, or even just simple thank-you hand-written card, are very welcomed.  Some professors proudly display their gifts, which can come from students and colleagues (e.g., when they travel to their home countries or conferences). In summary, #highlight[small gifts are fine], but avoid anything that might make your professors uncomfortable.
 
@@ -3606,11 +3447,32 @@ Note that in some universities the formal title Dr. Lastname is preferred over P
 Do not include ranking (@sec:faculty-types), e.g., Assistant, Associate, Scientist, ..., when referring to someone. I see many international students include a lengthy title of people they know, e.g., _I am advised by Asst. Prof. X, and also collaborate with Distinguished Scientist Y_.
 This is _not necessary_ and makes it look like you're trying to show off your connections. These nuances represent some cultural and academic differences in the US that you may encounter but will gradually adapt to.]
 ]
+
+
+== Practical Finances <chap:practical-finances>
+
+
+Your funding (@chap:funding) covers tuition, health insurance, and a stipend, so you will _not_ go into debt for your PhD. But a stipend is modest, and there are some practical money matters---especially for international students---that catch people off guard. This section is a quick survival guide.
+
+#paragraph[The first month is the hardest][Your stipend is paid on the university's schedule (often monthly, sometimes with the first paycheck arriving several weeks after you start). Meanwhile you arrive needing to pay a security deposit and first month's rent, buy furniture, and cover initial expenses---all _before_ any money comes in. Budget to bring enough savings (a few thousand dollars) to cover *6--8 weeks* of living costs on arrival. This is the single most common cash-flow surprise.]
+
+#paragraph[Cost of living dominates the stipend's value][A \$35K stipend goes much further in, say, Pittsburgh or Blacksburg than in the Bay Area or New York City (@sec:selecting-ranking-schools). When comparing offers (@sec:visit-days), mentally divide the stipend by local rent. A nominally smaller stipend in a cheaper city can leave you more comfortable than a bigger one in an expensive one.]
+
+#paragraph[Taxes][Yes, you generally pay US income tax on the taxable portion of your stipend, and as an international student your situation has extra wrinkles---tax treaties between the US and your home country may reduce what you owe. According to the #link("https://www.irs.gov/individuals/international-taxpayers/foreign-student-liability-for-social-security-and-medicare-taxes")[IRS], F-1 students are generally nonresident aliens for tax purposes during their first five calendar years, though individual circumstances vary. Most universities provide tax-filing software (e.g., Sprintax) and workshops through the international student office. Do _not_ ignore tax filing; it is required, and it matters for future visa and green-card steps (@chap:visa).]
+
+#paragraph[Banking and credit][You will arrive with _no US credit history_, which makes renting and getting a credit card harder at first. Open a US bank account early, get a basic (often secured) credit card, and use it responsibly to start building credit. This pays off later when you rent an apartment or buy a car.]
+
+#paragraph[Health insurance is included---use it][Your assistantship includes health insurance (@chap:funding), and it is required (@chap:cultural-misc). Don't skip checkups assuming you are young and healthy---US healthcare is extremely expensive if you ever need it without coverage, and you are already paying for the insurance.]
+
+#tip-block[Your university's _international student office_ is your best resource for all of this---taxes, social security numbers, banking, on-campus work rules, and visa paperwork (@chap:visa). They do this for thousands of students every year. Lean on them rather than piecing together advice from forums.]
+
+#caution-block[As an #gls("F-1") student, there are _legal restrictions_ on how and where you can work (@chap:visa). The #link("https://www.ice.gov/sevis/employment")[Student and Exchange Visitor Program] explains that qualifying on-campus work is generally permitted, while off-campus work requires specific authorization (#gls("CPT-OPT", first:true)). Do not take side gigs or freelance work without checking with your designated school official first; unauthorized employment can jeopardize your visa status.]
+
 == Misc. <chap:cultural-misc>
   
 Here are some other common surprises for international students in the US. Note that I skip topics involving politics, religion, tax, and racism as these happen in many countries and are not unique to the US.
 
-#paragraph[Small talks][People often engage in small talks, e.g., about the weather, sports, or weekend plans. This is a way to start a conversation and how social interaction starts in the US.
+#paragraph[Small talk][People often engage in small talk, e.g., about the weather, sports, or weekend plans. This is a common way to start a conversation in the US.
 
 However, avoid asking personal questions, e.g., about salary, age, relationship status, or health, as these are considered private. Talking about kids' activities or schools are OK. Also, do not talk about politics or religion. In fact, we even avoid talking about these sensitive subjects with our family and friends to avoid conflicts.
 
@@ -3619,7 +3481,7 @@ Sometimes foreigners are surprised by how Americans do not talk about their pers
 
 #paragraph[Healthcare System][You (and your spouse) will need health insurance! Otherwise you will be charged a lot for healthcare services when you need them. However, as mentioned in @chap:funding, your TA/RA (and fellowships) will cover health insurance. Your spouse/children also get health insurance or significant discounts under your plan.
 
-Note that even with insurance, heathcare services might still be expensive. So you should know what your insurance covers and be prepared for unexpected costs. Moreover, healthcare system has many confusing jargons such as HMO, PPO, deductibles, co-pays, and coinsurance (try take a look at the Explanation of Benefits or EoB statement you received from your insurance company). It's arguably the most complicated system in the US and even Americans often do not understand it (and politicians often exploit this to their advantage). Do not hesitate to ask your HR or the insurance company for help.]
+Note that even with insurance, healthcare services might still be expensive. You should know what your insurance covers and be prepared for unexpected costs. Moreover, the healthcare system has many confusing terms, such as HMO, PPO, deductibles, co-pays, and coinsurance (take a look at the Explanation of Benefits, or EOB, statement you receive from your insurance company). It's arguably the most complicated system in the US, and even Americans often do not understand it (and politicians often exploit this to their advantage). Do not hesitate to ask your HR office or insurance company for help.]
 
 #paragraph[Car Dependency][Most places in the US are highly car-dependent. If you do not have a car, you will need to rely on friends, Uber, or public transportation, which can be inconvenient and time-consuming. Many international students end up getting a driver's license, which is highly convenient and replaces many documents (e.g., ID, passport), and eventually buying a car.]
 
@@ -3671,6 +3533,8 @@ In general, tipping on the pre-tax amount is common and the logic is that tax is
 
 When researching where to do a CS PhD, many students use rankings like the U.S. News & World Report. However, these widely publicized rankings are often criticized by CS researchers (e.g., @fig:csrankings-quote) for their lack of transparency and relevance. In contrast, data-driven open source ones such as CSRankings.org are increasingly used by faculty and PhD students to assess the true research strengths of CS depts. 
 
+#caution-block[*Unpopular opinion:* Ranking matters, but usually not in the way applicants think. A famous university name can open doors, and a large department can provide more advisors, collaborators, and escape routes if one lab fails. But a university-wide number cannot tell you whether anybody there works on your problem, has funding, or wants another student. Treat ranking as evidence, not a command.]
+
 #figure(
 align(left)[
   #text(size: 0.9em)[
@@ -3678,7 +3542,7 @@ align(left)[
 
     _"No ranking is perfect, but this \[CSrankings\] is defensible and open."_]]],
 
-  caption:[#link("https://www.theexclusive.org/2017/11/cs-rankings.html")[Charles Sutton (Google Deepmind).]])<fig:csrankings-quote>
+  caption:[#link("https://www.theexclusive.org/2017/11/cs-rankings.html")[Charles Sutton (Google DeepMind).]])<fig:csrankings-quote>
 
 
 
@@ -3701,7 +3565,7 @@ CS research community has long questioned and discouraged the use of these ranki
 // % \end{commentbox}
 
 == CSRankings.org <sec:csrankings>
-Instead of traditional school rankings, many PhD students and faculty use #link("https://www.csrankings.org")[CSRankings.org], which is a ranking system based on faculty publications at top CS conferences.  The metrics and ranking calculation are transparent and ranking results are updated automatically (after the conference proceedings are indexed in DBLP).  Because the approach is entirely data-driven and open source, it is not influenced by any subjective opinions or biases, and very difficult to manipulate. The number of #link("https://github.com/emeryberger/CSrankings/pulls")[Github pull requests] by CS faculty (in fact, even non-CS faculty) to be included in the rankings is a good indicator of the impact of the rankings.  
+Instead of traditional school rankings, many PhD students and faculty use #link("https://www.csrankings.org")[CSRankings.org], which is a ranking system based on faculty publications at top CS conferences.  The metrics and ranking calculation are transparent and ranking results are updated automatically (after the conference proceedings are indexed in DBLP).  Because the approach is entirely data-driven and open source, it is not influenced by any subjective opinions or biases, and very difficult to manipulate. The number of #link("https://github.com/emeryberger/CSrankings/pulls")[GitHub pull requests] by CS faculty (in fact, even non-CS faculty) to be included in the rankings is a good indicator of the impact of the rankings.
 
 #paragraph[Ranking Method][CSRankings uses the _geometric mean_ to summarize the performance of a department across multiple disciplines. The score for each department is calculated as follows:
 
@@ -3860,7 +3724,7 @@ Finally, this book is highly _opinionated_ and _subjective_, which is both a str
 
 
 == How to Read This Book?
-This book is designed to be read in any order. So you can start with any chapter that fit your current needs and stage in the application process.  For example, if you are still in undergrad, then you might be interested in getting research experience (@chap:research-opportunities). If you are ready to apply, you can read on how your application is evaluated (@chap:evalapps) or funding opportunities (@chap:funding). If you are a domestic student, you can look at advice (@chap:domestic-students) and fellowships (@chap:fellowships) specifically for you.
+This book is designed to be read in any order. So you can start with any chapter that fits your current needs and stage in the application process. If you want the shortest route to understanding the book's admissions advice, begin with how I actually review an application (@sec:ievaluate); it explains why the later chapters emphasize specific LORs, concrete research evidence, a tailored SOP, and faculty advocacy. If you are still an undergraduate, start with research opportunities (@chap:research-opportunities). Domestic students can jump to @chap:domestic-students and fellowship advice (@chap:fellowships).
 
 // % \begin{commentbox}
 // % The angelfish on the cover, wearing a PhD cap, symbolizes the spirit of this book and its message. In an aquarium, the angelfish fish is considered the centerpiece of the tank and stands out from the rest---an important factor for a successful CS PhD applicant in a crowded and competitive pool of prospective students.\\
@@ -3947,9 +3811,9 @@ Finally, thanks to my wife and kids for always supporting me and putting up with
 #pagebreak()
 = Templates and Samples <chap:templates>
 
-#draftbanner()
+//#draftbanner()
 
-This appendix collects concrete starting points for the materials and emails discussed throughout the book. #alert[A warning before you use them:] these are _skeletons_, not scripts. The entire point of an application is to sound like _you_ (@sec:using-ai). If you copy these word-for-word, you will produce exactly the generic, forgettable material that adcoms (@sec:adcom) reject. Use them to see the _structure_, then fill them with your own specifics.
+This appendix collects concrete starting points for the materials and emails discussed throughout the book. #alert[A warning before you use them:] these are _skeletons_, not scripts. The entire point of an application is to customize it to your own voice and experiences. If you copy these word-for-word, you will produce exactly the generic, forgettable material that adcoms (@sec:adcom) reject. Use them to see the _structure_, then fill them with your own specifics.
 
 == Email to a Potential Advisor <sec:tmpl-contact-email>
 
@@ -3973,7 +3837,6 @@ fall with the hope of working with you.
 I have attached my CV. I would be grateful for any thoughts on whether my
 background is a fit for your group. Thank you for your time.
 
-Best regards,
 <Name>
 <link to website / Google Scholar / GitHub, if relevant>
 ```
@@ -3990,14 +3853,9 @@ Subject: Request for a recommendation letter for PhD applications
 Dear Prof. <Lastname>,
 
 I am applying to CS PhD programs this fall and would be grateful if you
-would be willing to write me a strong letter of recommendation. I really
-valued <specific experience: the research project, the course, the work>
-and felt you knew my <research ability / work> well.
+would be willing to write me a strong letter of recommendation. I really valued <specific experience: the research project, the course, the work> and felt you knew my <research ability / work> well.
 
-I completely understand if you are too busy or do not feel you can write a
-strong letter. If you are able to, I will send you everything you need:
-my CV, draft SOP, a short summary of what we worked on together and my achievements, the list
-of schools with deadlines, and the submission links.
+I completely understand if you are too busy or do not feel you can write a strong letter. If you are able to, I will send you everything you need: my CV, draft SOP, a short summary of what we worked on together and my achievements, the list of schools with deadlines, and the submission links.
 
 Thank you very much for considering this.
 
