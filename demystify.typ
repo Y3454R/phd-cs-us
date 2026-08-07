@@ -660,18 +660,13 @@ This is how _I_ review applications at GMU and previously at UNL. We do not have
 
 I read strong, specific LORs carefully and skim generic ones. _"The student earned an A in my class"_ tells me almost nothing. A letter describing the problem you attacked, where you struggled, what you contributed, and how you compare with previous researchers get my attention more (@chap:LOR).]
 
-#paragraph[Stage 3: Your story][I read the SOP to see whether it connects your past work to a plausible research direction and to faculty who can advise you here (@chap:sop). I do not need childhood inspiration or declarations that AI will change the world. I want concrete evidence, technical maturity, and a reason this application belongs at this department rather than twenty others. I read strong SOPs much more carefully than weak ones, which I often skim.
+#paragraph[Stage 3: Your story][I read the SOP to see whether it connects your past work to a plausible research direction and to faculty who can advise you here (@chap:sop). I do not need childhood inspiration or your interests in changing the field or the world with AI. I want concrete evidence, technical maturity, and a reason this application belongs at this department rather than twenty others. I read strong SOPs much more carefully than weak ones, which I often skim.
 ]
 
-#paragraph[Stage 4: Standing Out][The key to a successful application is standing out from the crowd. You need to be standing out somehow, e.g., unusually strong research, a trusted and revealing letter, a striking technical achievement, clear resilience, or an excellent match with a faculty member (in which case I might pass the file to that faculty member for a second opinion). If I cannot find such a reason, the application is likely to be rejected even if nothing is obviously wrong.]
+#paragraph[Stage 4: Standing Out][The key to a successful application is standing out from the crowd (@sec:standing-out). You need to be standing out somehow, e.g., unusually strong research, a trusted and revealing letter, a striking technical achievement, clear resilience, or an excellent match with a faculty member (in which case I might pass the file to that faculty member for a second opinion). If I cannot find such a reason, the application is likely to be rejected even if nothing is obviously wrong.]
 
 #example-box[Suppose I open a file from an applicant at a university I do not know. The GPA is 3.6: fine, it passes the university minimum, but doesn't mean much to me (note that even 3.9 or 4.0 also does not mean much, unless it's from a very selective school that I recognize then I will make a note about it).  The transcript has solid CS and Math grades: _no red flag_. The CV lists several IEEE papers that I don't recognized: _Noted, hope they will be mentioned in the SOP or LOR_. One letter says only that the student excel in a class: _generic, don't care_. A second letter describes how the student found a flaw in the original experiment, rebuilt the evaluation, and drove the resulting paper: _now I am paying attention_. The SOP explains that work clearly, result in publications, and connects it to two active faculty in our department: _now I have a case to make_.
 ]
-
-#remark-block[It should be noted that in recent AI era where publication counts are high, I have seen many applicants with 5--10 publications, but their quality is low (note that _IEEE_ or whatever papers do not mean much to me if they are not in a reputable venue---and even reputable venues can have low-quality papers). 
-
-Make sure you also upload your best work, even unpublished, to your application  (@sec:writing-sample). This allows me to evaluate your work and writing.]
-
 
 #paragraph[Stage 5: Entering Recommendations][At GMU, my recommendation is usually either rejection or admission with full funding, commonly a GTA (@chap:funding). I may nominate an exceptional applicant for a Presidential Fellowship. Although the system offers options such as provisional or unfunded admission, I rarely use them: in my view, we should either support a full-time PhD student or not admit them.]
 
