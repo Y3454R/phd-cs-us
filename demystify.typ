@@ -1673,7 +1673,7 @@ People who do get into these schools often were explicitly encouraged by their m
 
 #strong["Your" top might not really be top in CS.] Harvard and the Ivies? Yes, good for many things but usually not coding marathons and typically absent from top CS conferences. (Okay, they are still good, but a school somewhere in Maryland, Wisconsin, or the Urbana-Champaign cornfield would likely beat them by far in CS). MIT and Stanford? Yes, they are top, but many others are equivalent, and there are many CS areas (@sec:csrankings) where they are not as strong as other schools. Caltech and Johns Hopkins? Are you confusing CS with Physics and Medicine?
 
-You're missing out on some serious CS PhD programs: UCSD, UW, UMD, Michigan, Purdue, Stony Brook. These all have strong CS programs but rarely get mentioned compared to the usual suspects. Utah, Rutgers, Buffalo, Penn State, UVA, Ohio, UC Riverside, GMU—any of them ring a bell? These might not rank very high on QS or US News and are not household names to you, your friends, or your parents, but they are excellent CS schools where graduating students from your dream schools often apply for faculty positions (e.g., see #link("https://github.com/dynaroars/dynaroars.github.io/wiki/About-GMU")[GMU stats]). You can go to these places and be a superstar there—be the big fish in a small pond, instead of a small fish in a big pond.
+You're missing out on some serious CS PhD programs: UCSD, UW, UMD, Michigan, Purdue, Stony Brook. These all have strong CS programs but rarely get mentioned compared to the usual suspects. Utah, Rutgers, Buffalo, Penn State, UVA, Ohio, UC Riverside, GMU—any of them ring a bell? These might not rank very high on QS or US News and are not household names to you, your friends, or your parents, but they are excellent CS schools where graduating students from your dream schools often apply for faculty positions (e.g., see #link("https://realgmucs.github.io/stats")[GMU stats]). You can go to these places and be a superstar there—be the big fish in a small pond, instead of a small fish in a big pond.
 
 #strong[You don't need to be top.] Top schools will open doors to more opportunities. In countries like Vietnam, there are few top schools, and if you don't get into them, you are doomed (or so you think). But that is not the case in the US. There are many good schools, and it is not a binary choice between top X or nothing. In fact, equity is emphasized in the US and "smaller" schools are often given more resources and attention to help students succeed.  
 
@@ -3411,8 +3411,9 @@ Many people maintain lifelong relationships with their professors and colleagues
 #example-box[
   I maintain a close relationship with my former professors and mentors. When there is a new event in my life (or theirs), I often email them or call them, e.g., when I get married, have a new baby, new job, etc. I think this does not bother them a bit; they are genuinely interested in knowing and helping solve these "dramas" in my life.
 
-  I also visit my former professors when I am in their area. I meet Thang Bui (my MS advisor) at least once a year when I come back to Harrisburg to visit my parents. When Steph was in DC for a meeting, I invited her to give a research talk at GMU. I have also collaborated with them after I graduated e.g., I recently got an NSF grant with Deepak.
-
+  I have also collaborated with them after I graduated e.g., I recently got an NSF grant with Deepak, who was my PhD advisor.
+  I also visit my former professors when I am in their area. I meet Thang Bui (my MS advisor) at least once a year when I come back to Harrisburg to visit my parents. When Steph, my other PhD advisor, was in DC for a meeting, I invited her to give a Distinguish Research talk at GMU. 
+  
   In short, while I am a bit closer to my former advisors and mentors than most people (e.g., I still keep in touch with my middle school teacher), it is always a good idea to maintain a good relationship with people who have helped or worked well with you. A simple, short email or text once in a while (e.g., a _"Hi X, I heard you just got promoted ... Congrats!"_) would suffice. They will appreciate it, and you never know when you might need their help.
 ]
 
@@ -3457,15 +3458,19 @@ Your funding (@chap:funding) covers tuition, health insurance, and a stipend, so
 
 #paragraph[Cost of living dominates the stipend's value][A \$35K stipend goes much further in, say, Pittsburgh or Blacksburg than in the Bay Area or New York City (@sec:selecting-ranking-schools). When comparing offers (@sec:visit-days), mentally divide the stipend by local rent. A nominally smaller stipend in a cheaper city can leave you more comfortable than a bigger one in an expensive one.]
 
-#paragraph[Taxes][Yes, you generally pay US income tax on the taxable portion of your stipend, and as an international student your situation has extra wrinkles---tax treaties between the US and your home country may reduce what you owe. According to the #link("https://www.irs.gov/individuals/international-taxpayers/foreign-student-liability-for-social-security-and-medicare-taxes")[IRS], F-1 students are generally nonresident aliens for tax purposes during their first five calendar years, though individual circumstances vary. Most universities provide tax-filing software (e.g., Sprintax) and workshops through the international student office. Do _not_ ignore tax filing; it is required, and it matters for future visa and green-card steps (@chap:visa).]
+#paragraph[Taxes][Yes, you pay US income tax on the taxable portion of your stipend, and as an international student your situation has extra wrinkles---tax treaties between the US and your home country may reduce what you owe. According to the #link("https://www.irs.gov/individuals/international-taxpayers/foreign-student-liability-for-social-security-and-medicare-taxes")[IRS], F-1 students are generally nonresident aliens for tax purposes during their first five calendar years, though individual circumstances vary. Most universities provide tax-filing software (e.g., Sprintax) and workshops through the international student office. Do _not_ ignore tax filing; it is required, and it matters for future visa and green-card steps (@chap:visa).]
 
 #paragraph[Banking and credit][You will arrive with _no US credit history_, which makes renting and getting a credit card harder at first. Open a US bank account early, get a basic (often secured) credit card, and use it responsibly to start building credit. This pays off later when you rent an apartment or buy a car.]
 
-#paragraph[Health insurance is included---use it][Your assistantship includes health insurance (@chap:funding), and it is required (@chap:cultural-misc). Don't skip checkups assuming you are young and healthy---US healthcare is extremely expensive if you ever need it without coverage, and you are already paying for the insurance.]
+#paragraph[Health insurance is included---Use it!][Your assistantship includes health insurance (@chap:funding), and it is required (@chap:cultural-misc). Don't skip checkups assuming you are young and healthy---US healthcare is extremely expensive if you ever need it without coverage, and you are already paying for the insurance.]
 
-#tip-block[Your university's _international student office_ is your best resource for all of this---taxes, social security numbers, banking, on-campus work rules, and visa paperwork (@chap:visa). They do this for thousands of students every year. Lean on them rather than piecing together advice from forums.]
+#tip-block[Your university's _international student office_ (referred to as OIPS at GMU) is your best resource for all of this---taxes, social security numbers, banking, on-campus work rules, and visa paperwork (@chap:visa). They do this for thousands of students every year. Lean on them rather than piecing together advice from forums.]
 
 #caution-block[As an #gls("F-1") student, there are _legal restrictions_ on how and where you can work (@chap:visa). The #link("https://www.ice.gov/sevis/employment")[Student and Exchange Visitor Program] explains that qualifying on-campus work is generally permitted, while off-campus work requires specific authorization (#gls("CPT-OPT", first:true)). Do not take side gigs or freelance work without checking with your designated school official first; unauthorized employment can jeopardize your visa status.]
+
+// #example-box[
+//   My international PhD student, Hai, works at Amazon during the summer (where interntional students are allowed to work). Because he did well during his internship, Amazon offered him to continue working there during the next semester, where he is scheduled to be a full time GRA student. He cannot do part-time GRA because that would void his benefits (e.g., health insurance, tuition) and violate his visa status. 
+// ]
 
 == Misc. <chap:cultural-misc>
   
@@ -3489,7 +3494,7 @@ Note that even with insurance, healthcare services might still be expensive. You
 
 You should also tip other services, e.g., Uber, taxi, haircuts, and hotel services. The minimum wage for tipped employees is typically lower than the standard minimum wage, so tips are an important part of their income.
 
-#tip-block[
+#note-block[
 For convenience, many restaurants and services have a tipping option built into their payment system (e.g., on the receipt or app), which makes it easy to add a tip. If you go with a large group, the restaurant might automatically add a gratuity (e.g., 18%) to the bill, so be sure to check the bill before adding an additional tip. You can also tip in cash, which is sometimes preferred by service workers because they receive the full amount without any processing fees. However, tipping through the payment system is more convenient and common.
 
 In addition, while many tip on the total (post-tax) amount, some tip on the pre-tax amount. For example, if your bill is \$100 before tax and \$108 after tax, a 20% tip would be \$20 if you tip on the pre-tax amount, and \$21.60 if you tip on the post-tax amount. 
@@ -3622,7 +3627,7 @@ More details and justification for this metric can be found in the #link("https:
 
 == CSPicks <sec:cspicks>
 
-#link("https://cspicks.roars.dev")[CSPicks]---developed by students from my #link("https://roars.dev")[ROARS lab]---is a new web app that aims to help prospective students (and faculty candidate) explore the research strengths of CS departments and their faculty. It is _not_ a ranking system like CSRankings, but rather a tool to help students find faculty and departments that match their research interests. It allows you see trends and growths of CS departments and faculty, such as the number of publications in different areas over time. It also lets you compare two schools or two research areas head-to-head (@fig:cspicks-compare), browse a "Discoveries" page of notable, data-derived trends (@sec:selecting-ranking-schools discusses using this to spot rising departments), and search which faculty and departments have NSF funding.
+#link("https://cspicks.roars.dev")[CSPicks]---developed by students from my #link("https://roars.dev")[ROARS lab]---is a new web app that aims to help prospective students (and faculty candidate) explore the research strengths of CS departments and their faculty. It is _not_ a ranking system like CSRankings (but it uses its data and others like DBLP for publication information and OpenAlex for affiliation information), but rather a tool to help students find faculty and departments that match their research interests. It allows you see trends and growths of CS departments and faculty, such as the number of publications in different areas over time. It also lets you compare two schools or two research areas head-to-head (@fig:cspicks-compare), browse a "Discoveries" page of notable, data-derived trends (@sec:selecting-ranking-schools discusses using this to spot rising departments), and search which faculty and departments have NSF funding.
 @fig:cspicks-gmu shows an example of CSPicks showing research areas of the CS department at George Mason.
 
 
@@ -3805,6 +3810,47 @@ Finally, thanks to my wife and kids for always supporting me and putting up with
 
 
 //write quick def on postdoc; adjuct has limited affiliation; write about TA policies (e.g., 1 GRA 1 GTA etc)
+
+// #pagebreak()
+// = Additional Resources <chap:additional-resources>
+
+// This book tries to be comprehensive, but it is still one person's (and a few contributors') take on the process (@sec:disclaimer). This chapter collects other resources---guides written by other faculty and students, GitHub repos and tools, and books about the PhD experience itself---that you might find useful alongside this book.
+
+// == More Guides on Admissions <sec:more-guides>
+
+// Many faculty and students have written their own admission guides, and reading a few different perspectives is useful, especially since advice sometimes conflicts (@sec:disclaimer explains why that is fine). A few worth your time:
+
+// - #link("https://www.cs.cmu.edu/~harchol/gradschooltalk.pdf")[Applying to PhD Programs in Computer Science] by Mor Harchol-Balter (CMU)---one of the most widely circulated guides, especially strong on the mechanics of the application itself.
+// - #link("https://parentheticallyspeaking.org/articles/us-cs-phd-faq/")[Getting a Computer Science PhD in the USA] by Shriram Krishnamurthi (Brown)---an FAQ covering many of the same questions as this book, from a different adcom's perspective.
+// - #link("https://pg.ucsd.edu/PhD-application-tips.htm")[PhD application tips] by Philip Guo (UCSD), whose reviewing pace I mention in @sec:ievaluate.
+// - #link("https://matt.might.net/articles/how-to-apply-and-get-in-to-graduate-school-in-science-mathematics-engineering-or-computer-science/")[HOWTO: Get into grad school] by Matt Might (Utah), whose LOR guide I also reference in @chap:LOR.
+// - #link("https://csguides.github.io/grad-school-application-guide/")[Grad School Application Guide] by Weimer et al.---a crowd-maintained, open-source guide (fittingly, hosted on GitHub).
+// - #link("https://jedyang.com/post/list-of-awesome-cs-phd-application-advice/")[Awesome CS PhD application advice] by Jed Yang---a large curated list of links in the same spirit as this section, but far more exhaustive.
+// - #link("https://cs-sop.org")[CS-SOP], a database of real, anonymized SOPs from students who were admitted---useful for seeing the _range_ of acceptable structures (@chap:sop).
+
+// #tip-block[These guides overlap with each other and with this book quite a bit---that convergence is itself a signal. When independent sources agree (e.g., "don't mass-email professors," "a specific LOR beats a famous name"), treat the advice as reliable regardless of which one you happened to read first.]
+
+// == GitHub Repos and Tools <sec:github-repos>
+
+// A few open-source projects worth knowing about, beyond CSRankings (@sec:csrankings) and CSPicks (@sec:cspicks):
+
+// - #link("https://github.com/chinasatokolo/csGraduateFellowships")[Computer Science Awards, Scholarships, & Fellowships] by Chinasa T. Okolo---a maintained list of funding opportunities beyond NSF GRFP and DoD NDSEG (@chap:fellowships).
+// - #link("https://github.com/jeanqasaur/academic-application-materials")[academic-application-materials] by Jean Yang---real SOPs, fellowship statements, and other application documents shared publicly by their author.
+// - #link("https://github.com/jbhuang0604/awesome-tips")[awesome-tips] by Jia-Bin Huang (UMD)---bite-sized, illustrated advice on research, writing, presenting, and grad-school life generally, not limited to admissions.
+// - The #link("https://github.com/dynaroars/dynaroars.github.io/wiki")[dynaroars lab wiki], which I sometimes point applicants to for specific questions, e.g., #link("https://github.com/dynaroars/dynaroars.github.io/wiki/Foreign-Top-Schools")[evaluating foreign universities] (@sec:selecting-ranking-schools) or #link("https://realgmucs.github.io/stats")[GMU's placement record] (@chap:choosing-school).
+
+
+// == The PhD Grind: What It Actually Feels Like <sec:phd-grind>
+
+// Everything else in this book is about _getting into_ a PhD program. It is worth reading at least one honest account of what happens _after_ you get in, so your expectations are calibrated before you commit five-plus years (@sec:phd-in-cs).
+
+// #paragraph[The PhD Grind][#link("http://www.pgbovine.net/PhD-memoir/pguo-PhD-grind.pdf")[_The PhD Grind_] by Philip Guo is a free, roughly 100-page memoir of his six years as a CS PhD student at Stanford---probably the most detailed and widely-read account of what a CS PhD actually feels like, written by the same Philip Guo cited earlier (@sec:ievaluate) for his admissions advice. It does not sugarcoat the slow years, the abandoned projects, or the anxiety of not knowing whether the work will pan out.]
+
+// #paragraph[The Illustrated Guide to a Ph.D.][Matt Might's #link("https://matt.might.net/articles/phd-school-in-pictures/")[short, illustrated essay] uses a simple picture---concentric circles of human knowledge---to explain what a PhD actually adds to the world: a small, specific bump at the edge of what's known. It takes two minutes to read and is one of the best explanations of _why_ the work is worth doing, even though from the inside it rarely feels like progress.]
+
+// #paragraph[A PhD Is Not Enough][Peter Feibelman's book #emph[A PhD Is Not Enough: A Guide to Survival in Science] is older (physics-focused, first published in 1993) but still widely recommended for its practical advice on picking an advisor, giving talks, and navigating a research career---topics this book only partially covers, since it mostly stops at admission.]
+
+// #caution-block[None of these accounts should talk you out of applying. The grind is real, but so is the payoff, and the difficulty is exactly why @chap:choosing-advisor and @sec:phd-in-cs matter so much: a good advisor and honest expectations make the grind survivable, and often enjoyable.]
 
 #pagebreak()
 = Templates and Samples <chap:templates>
