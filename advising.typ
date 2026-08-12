@@ -66,7 +66,7 @@
 
   My undergrads are often supported either through research grants (e.g., NSF REU and university funding) or hourly pay. I #highlight[treat my undergrads as PhD students], give them flexibility to find solutions, and push them (_way_) beyond their comfort zone to realize their potential.
 
-  As examples, Linhan started as an undergrad at UNL and continued as a PhD student GMU, KimHao published _9 papers at top conferences and journals_ as an undergrad at UNL, Stefania won the Outstanding Undergraduate Research Award at GMU, and Azan---a first year freshman when joining our lab---built #link("https://roars.dev/cspicks")[CSPicks] within just a week of joining.
+  As examples, Linhan started as an undergrad at UNL and continued as a PhD student GMU, KimHao published _9 papers at top conferences and journals_ as an undergrad at UNL, Stefania won the Outstanding Undergraduate Research Award at GMU, and Azan---a first year freshman when joining our lab---built #link("https://cspicks.roars.dev")[CSPicks] within just a week of joining.
 
   See the #link("https://roars.dev#people")[Roars People section] for current undergrad members.
 
@@ -77,7 +77,7 @@
 
   #highlight[Each student—regardless of undergrad or PhD—has projects that they lead]. However, everyone is encouraged to collaborate and help each other. In weekly lab meetings, you will hear about the progress of other projects and can contribute ideas. We also have a lab server on Discord where we chat about research and other random things.
 
-  As examples, Didier works on Complexity analysis. KimHao worked analyzing build systems, and also complexity analysis and invariant generation. Hai works on DNN verification. Linhan works on DNN testing. Hai, Linhan, and Nguyen often talk to each other as their projects involve neural networks. Long does not work with verification but contributes ideas and expertise as he knows ML systems well. And everyone contributes to fun web apps (e.g., #link("https://roars.dev/cspicks")[CSPicks] by Azan).
+  As examples, Didier works on Complexity analysis. KimHao worked analyzing build systems, and also complexity analysis and invariant generation. Hai works on DNN verification. Linhan works on DNN testing. Hai, Linhan, and Nguyen often talk to each other as their projects involve neural networks. Long does not work with verification but contributes ideas and expertise as he knows ML systems well. And everyone contributes to fun web apps (e.g., #link("https://cspicks.roars.dev")[CSPicks] by Azan).
 
 == Do students mostly work with senior students or directly with professor?
   They work directly with me, but I encourage new lab members to work with senior students with similar interests.  Our lab members are very close and collaborative: they challenge each other's ideas and help each other with problems.
@@ -287,7 +287,7 @@
     
   In addition, I am *not* into broad *interdisciplinary research*, which would be beneficial for co-advising. I prefer to work on problems in my fields of SE/PL/FM and related ones (e.g., logics, mathematical proofs). So if you want to do interdisciplinary research in areas outside my core expertise (e.g., CS + Bio), then I may not be the best fit for you. While interdisciplinary work has many values (and I admire people who do it well), I have determined that it is not my strength and I prefer to focus on my core areas.
 
-  If you'd like to do interdisciplinary work that I am not too interested then I would not want to be your main advisor. I would rather you find another faculty member who is more interested in your work and can help you with it, (e.g., the #link("https://roars.dev/cspicks")[CSPicks] tool can help explore faculty interests). I think this is a better fit for both of us.
+  If you'd like to do interdisciplinary work that I am not too interested then I would not want to be your main advisor. I would rather you find another faculty member who is more interested in your work and can help you with it, (e.g., the #link("https://cspicks.roars.dev")[CSPicks] tool can help explore faculty interests). I think this is a better fit for both of us.
 
 == How do you handle it when a student outgrows your expertise — they know more than you? 
 

@@ -9,14 +9,14 @@
     </a>
   </p> -->
 
-  "**Demystify**" is an insider's guide to navigating the PhD admission process in Computer Science at U.S. institutions. It explains how the CS PhD admissions work from an internal perspective and aims to motivate students---especially those from abroad or from less well-known institutions—--to pursue PhD programs in CS at U.S. universities. The book is accompanied by a web app, [**CSPicks**](https://roars.dev/cspicks), which helps students explore and compare faculty, PhD programs, and research areas in Computer Science.
+  "**Demystify**" is an insider's guide to navigating the PhD admission process in Computer Science at U.S. institutions. It explains how the CS PhD admissions work from an internal perspective and aims to motivate students---especially those from abroad or from less well-known institutions—--to pursue PhD programs in CS at U.S. universities. The book is accompanied by a web app, [**CSPicks**](https://cspicks.roars.dev), which helps students explore and compare faculty, PhD programs, and research areas in Computer Science.
 
 
   - PDF:
     - [https://roars.dev/phd-cs-us/demystify.pdf](https://roars.dev/phd-cs-us/demystify.pdf)
     - [https://github.com/dynaroars/phd-cs-us/blob/main/demystify.pdf](https://github.com/dynaroars/phd-cs-us/blob/main/demystify.pdf)
   - Amazon: [Kindle](https://www.amazon.com/dp/B0F41HP6Y2)
-  - [CSPicks](https://roars.dev/cspicks): explores faculty, CS programs, and research areas.
+  - [CSPicks](https://cspicks.roars.dev): explores faculty, CS programs, and research areas.
   - For discussion and questions, open a new Github issue [https://github.com/dynaroars/phd-cs-us/issues](https://github.com/dynaroars/phd-cs-us/issues)
 
 - [**Advising Guide**](https://roars.dev/phd-cs-us/advising.pdf)

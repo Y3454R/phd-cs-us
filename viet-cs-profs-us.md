@@ -2,7 +2,7 @@
 
 - **Goal**: for students interested in pursuing a Ph.D. in Computer
   Science (CS) under the guidance of a Vietnamese professor. For additional info for CS PhD admission in the US, take a look at the 
-  ["demystify"](https://github.com/dynaroars/phd-cs-us) book and [CSPicks](https://roars.dev/cspicks) for non-Vietnamese profs.
+  ["demystify"](https://github.com/dynaroars/phd-cs-us) book and [CSPicks](https://cspicks.roars.dev) for non-Vietnamese profs.
 
 - **Inclusion Criteria**: Vietnamese; full-time faculty at a US university with a CS PhD program; tenure line
   (tenured/tenure-track); and can _solely advise Ph.D. students in CS_ (can officially advise and graduate PhD students in the CS department). Similar to the [inclusion

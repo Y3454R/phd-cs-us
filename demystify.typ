@@ -1846,7 +1846,7 @@ It is important to note that GRA support is *never guaranteed* because it depend
 ]
 
 
-*Where does GRA funding come from?* Professors apply for funding to support students from various sources, such as government grants (for example NSF, NIH, or DoD), industry grants (for example Google or Microsoft), or internal university funds. For many CS professors, the most common source is #gls("NSF") grants, which are often designed to support graduate students as GRAs. Recently hired professors, such as new assistant professors, often also have start-up funds from the university to help them establish their research lab.
+*Where does GRA funding come from?* Professors apply for funding to support students from various sources, such as government grants (for example NSF, NIH, or DoD), industry grants (for example Google or Microsoft), or internal university funds. For many CS professors, the most common source is #gls("NSF") grants, which are often designed to support graduate students as GRAs. Recently hired professors, such as new assistant professors, often also have start-up funds from the university to help them establish their research lab. NSF awards are public record, so before reaching out you can get a rough sense of whether a prof. or department has active funding, e.g., via #link("https://cspicks.roars.dev")[CSPicks]'s NSF funding search.
 
 Typically, each grant can support one or at most two students per year, and each student can cost up to about \$70,000 per year (@sec:ra-cost). This is why professors often need multiple grants to support multiple students. It is also one reason professors may not have time to do experiments or write papers directly, and instead mentor their students to do that work. If a professor no longer has funding—which is quite common—they might not be able to support you as a GRA, in which case you would become a GTA while still working with the same professor.
 
@@ -1992,9 +1992,9 @@ Many international students rank universities based on popular places they know 
 ) <fig:cspicks-compare>
 
 Instead of these superficial criteria, you should specifically consider the CS program and the research interests of faculty members (@chap:research-achievements).
-You can learn about these using resources such as #link("https://roars.dev/cspicks")[CSPicks] and #link("https://csrankings.org")[CSRankings.org] (@chap:rankings).
+You can learn about these using resources such as #link("https://cspicks.roars.dev")[CSPicks] and #link("https://csrankings.org")[CSRankings.org] (@chap:rankings).
 @fig:cspicks-compare and @fig:cspicks-gmu show the research strengths of CS programs using CSPicks. 
-You will be very surprised to learn that a school that you didn't know much about can have very strong research in your topic (and vice versa, a school you thought highly about might have no faculty working in the research field you're interested in). This is also a good way to learn about individual faculty, e.g., who works on what, and well-known CS conferences#footnote[In CS (and probably only in CS), conferences, not journals, are often the main venue to publish research findings (see #link("https://homes.cs.washington.edu/~mernst/advice/conferences-vs-journals.html")[why here]).]. 
+You will be very surprised to learn that a school that you didn't know much about can have very strong research in your topic (and vice versa, a school you thought highly about might have no faculty working in the research field you're interested in). This is also a good way to learn about individual faculty, e.g., who works on what, and well-known CS conferences#footnote[In CS (and probably only in CS), conferences, not journals, are often the main venue to publish research findings (see #link("https://homes.cs.washington.edu/~mernst/advice/conferences-vs-journals.html")[why here]).]. If you'd rather not go school-by-school, CSPicks' "Discoveries" page surfaces some of these surprises automatically, e.g., departments rising fastest in a subfield or punching above their rank in a specific area.
 
 #note-block[*Dat*: Most Vietnamese students, including those from top schools, *do not know* about CSRankings. Maybe applicants who worked at top research places such as VinAI would know about it.]
 
@@ -2222,7 +2222,7 @@ Fortunately, while some non-US programs require finding an advisor and research 
 
 === Finding an advisor <sec:finding-advisor>
 
-Assuming you're not familiar with any particular profs., then _first_ search for those that share similar research interests. For example, in CSRankings and CSPicks, if you want to work with PL, you can search for those published in PL conferences. If you want to work with SE _and_ AI, you can search for faculty who work in both SE and AI.
+Assuming you're not familiar with any particular profs., then _first_ search for those that share similar research interests. For example, in CSRankings and CSPicks, if you want to work with PL, you can search for those published in PL conferences. If you want to work with SE _and_ AI, you can search for faculty who work in both SE and AI, or in CSPicks directly compare the two areas (e.g., "SE vs AI") to see who publishes in both.
 
 _After that_, you can research about that prof. by going to their website, looking at their research achievements and awards (@chap:research-achievements), checking their #gls("research-lab", first:true), seeing if they have recent publications, and reading their papers. Sometimes they would explicitly say they are looking for students and state their expectations. In some rare cases they even have an advising guideline like #link("https://roars.dev/phd-cs-us/advising.pdf")[this] to help students understand more about their personality and advising style.
 If you find a #gls("POI", first:true)---a prof. you'd like to work with---you can reach out to them (@sec:contact).
@@ -2951,7 +2951,7 @@ I also have written LORs for them and have helped them get into good PhD program
 == Open Source Contributions <sec:open-source-contribs>
 
 Open development platforms such as GitHub offer many research opportunities.
-In CS and many other fields, research labs often put their projects on GitHub to encourage collaboration and contributions from the community. For example, my research group, #link("https://roars.dev/")[Roars], has many open-source projects that undergrads can contribute to (some of my undergrad actually created and maintain these projects, e.g., #link("https://roars.dev/cspicks")[CSPicks]).
+In CS and many other fields, research labs often put their projects on GitHub to encourage collaboration and contributions from the community. For example, my research group, #link("https://roars.dev/")[Roars], has many open-source projects that undergrads can contribute to (some of my undergrad actually created and maintain these projects, e.g., #link("https://cspicks.roars.dev")[CSPicks]).
 
 By contributing code, fixing bugs, implementing new features, or providing documentation, students can gain practical research experience and interact with experienced developers and researchers in the field. Not only you gain research experience, but you might be able to get a LOR from the project maintainer, and you should write about this experience in your SOP (@chap:sop)
 
@@ -3622,7 +3622,7 @@ More details and justification for this metric can be found in the #link("https:
 
 == CSPicks <sec:cspicks>
 
-#link("https://roars/dev/cspicks")[CSPicks]---developed by students from my #link("https://roars.dev")[ROARS lab]---is a new web app that aims to help prospective students (and faculty candidate) explore the research strengths of CS departments and their faculty. It is _not_ a ranking system like CSRankings, but rather a tool to help students find faculty and departments that match their research interests. It allows you see trends and growths of CS departments and faculty, such as the number of publications in different areas over time.
+#link("https://cspicks.roars.dev")[CSPicks]---developed by students from my #link("https://roars.dev")[ROARS lab]---is a new web app that aims to help prospective students (and faculty candidate) explore the research strengths of CS departments and their faculty. It is _not_ a ranking system like CSRankings, but rather a tool to help students find faculty and departments that match their research interests. It allows you see trends and growths of CS departments and faculty, such as the number of publications in different areas over time. It also lets you compare two schools or two research areas head-to-head (@fig:cspicks-compare), browse a "Discoveries" page of notable, data-derived trends (@sec:selecting-ranking-schools discusses using this to spot rising departments), and search which faculty and departments have NSF funding.
 @fig:cspicks-gmu shows an example of CSPicks showing research areas of the CS department at George Mason.
 
 
