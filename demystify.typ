@@ -2222,7 +2222,7 @@ Fortunately, while some non-US programs require finding an advisor and research 
 
 === Finding an advisor <sec:finding-advisor>
 
-Assuming you're not familiar with any particular profs., then _first_ search for those that share similar research interests. For example, in CSRankings and CSPicks, if you want to work with PL, you can search for those published in PL conferences. If you want to work with SE _and_ AI, you can search for faculty who work in both SE and AI, or in CSPicks directly compare the two areas (e.g., "SE vs AI") to see who publishes in both.
+Assuming you're not familiar with any particular profs., then _first_ search for those that share similar research interests. For example, in CSRankings and CSPick, if you want to work with PL, you can search for those published in PL conferences. If you want to work with SE _and_ AI, you can search for faculty who work in both SE and AI, or in #link("https://cspicks.roars.dev")[CSPicks] directly compare the two areas (e.g., "SE vs AI") to see who publishes in both.
 
 _After that_, you can research about that prof. by going to their website, looking at their research achievements and awards (@chap:research-achievements), checking their #gls("research-lab", first:true), seeing if they have recent publications, and reading their papers. Sometimes they would explicitly say they are looking for students and state their expectations. In some rare cases they even have an advising guideline like #link("https://roars.dev/phd-cs-us/advising.pdf")[this] to help students understand more about their personality and advising style.
 If you find a #gls("POI", first:true)---a prof. you'd like to work with---you can reach out to them (@sec:contact).
@@ -3788,7 +3788,7 @@ This book is inherently #highlight[_subjective_ and _opinionated_] based on my e
 
 Moreover, since PhD admission varies significantly across institutions, there's rarely a universal "correct" way, and too many choices often lead to confusion. Clear and direct guidance---even if opinionated---can provide practical pathways to navigate the complicated PhD admissions process better.
 
-#note-block[This #link("https://roars.dev/phd-cs-us/advising.pdf")[advising guide] is another example of a highly subjective and opinionated document that I wrote for my current and prospective PhD students.]
+#example[This #link("https://roars.dev/phd-cs-us/advising.pdf")[advising guide] is another example of a highly subjective and opinionated document that I wrote for my current and prospective PhD students.]
 
 
 == Acknowledgments
