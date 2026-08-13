@@ -274,7 +274,7 @@ Many students, especially those from smaller countries or schools, have the *imp
   caption: [CS PhD recipients in the US by residency (#link("https://datavisualization.cra.org/TaulbeeSurvey/CRA_Taulbee_Survey_Report_2024.html")[CRA Taulbee Survey 2024]). About two-thirds are international students.],
 ) <fig:intl-share>
 
-#paragraph[Funding Is Not An Issue][In most cases CS PhD students _do not_ need to worry about funding, especially at good #gls("R1") universities in the US. 
+#paragraph[Funding Is (Generally) Not An Issue][In most cases CS PhD students _do not_ need to worry about funding, especially at good #gls("R1") universities in the US. 
 If you are admitted, you will almost certainly receive _full funding_ (@chap:funding) to support your study. 
 
 Your funding includes tuition, health insurance, and #gls("stipend") (in STEM field in CS you get paid for your study!).
@@ -325,7 +325,7 @@ So far I have tried to convince you that getting into a CS PhD program in the US
 None of this is meant to scare you. The point is simply that a PhD is a particular kind of training for a particular kind of career, and it is worth being honest with yourself about whether that is what you want _before_ you spend a year on applications.
 
 
-#tip-block[A useful test: would you still want to do a PhD if it did _not_ lead to a higher salary or a fancier job title---purely because you enjoy digging into a hard problem for years? Would you still want to spend 5--7 years on a PhD if it does not improve your immigration status or make you more employable?
+#tip-block[*A useful test*: would you still want to do a PhD if it did _not_ lead to a higher salary or a fancier job title---purely because you enjoy digging into a hard problem for years? Would you still want to spend 5--7 years on a PhD if it does not improve your immigration status or make you more employable?
 
 If yes, you are the kind of person who tends to thrive. If the PhD is mainly a means to a job that does not actually require it, pause and reconsider]
 
