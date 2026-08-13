@@ -2351,13 +2351,15 @@ Now that you know a bit about tenured and tenure-track faculty (@sec:faculty-typ
 
 Either can be a good advisor, but they have different strengths and weaknesses. The below gives some ideas; however, the best indicator of their research productivity and impact is their publication and recognition record (@chap:research-achievements). Some profs. publicly share their advising style and expectations, like #link("https://roars.dev/phd-cs-us/advising.pdf")[this] and #link("https://jbhuang0604.github.io/advisor_guide.html")[that], to help prospective students decide.
 
-#caution-block[*What faculty will not tell you:* Advisors do not recruit students out of pure generosity. We need collaborators who can help turn grants and ideas into papers, software, and trained researchers. A junior professor may invest enormous time in you because your success is tied to their tenure case. A senior professor may offer a powerful network but have less time because they already manage a large lab, company, or administrative role. These incentives are not automatically good or bad; you should understand what bargain you are entering.]
+#caution-block[Faculty do not recruit students out of pure generosity. 
+Yes, we want to mentor and are happy to see students succeed, but we also have incentives.
+We need students to help turn grants and ideas into papers, software, and trained researchers. A junior professor may invest enormous time in you because your success is tied to their tenure case. A senior professor may offer a powerful network but have less time because they already manage a large lab, company, or administrative role. These incentives are not automatically good or bad, but they are important to understand when choosing an advisor.]
 
 *Tenure-track faculty*—like assistant professors—are typically young and active in research (they have to be, to get tenure). Thus, they will devote more time to work with you and push you to do research and publish. However, you might not become too independent because they may be too hands-on with you. For example, you might not learn how to fully form research ideas, design experiments, and write papers on your own. Also, they may not have as much experience in managing students or may not yet have substantial funding.
 
 *Tenured faculty*—associate and full professors—are likely older, more well-known, and have more experience in managing students. However, they might not push you as hard and will expect you to figure things out yourself, i.e., you need to be independent. Some tenured faculty are also no longer active in research and are more involved with administrative responsibilities or their startup companies (which means they will likely not take new students).
 
-#example-box[*Hung*:
+#tip-block[*Hung*:
   I always encourage the students I admit to talk with my students and the students of other faculty in other schools who admitted them. You will unlikely hear straight-out complaints from current students in a prof's group. But sometimes what is important are things that they (current students) don't tell you. Pay attention to their "level of excitement" being in the group.
 ]
 
@@ -2369,8 +2371,8 @@ Chinese students with Chinese faculty, Indian students with Indian faculty
 
 However, this should not be the main reason for choosing a faculty (@chap:choosing-advisor), and you should expand your search to include faculty from other countries. Research and higher education in general encourage exploration, e.g., students often go to different grad schools than their undergrad schools, and switching fields (and even advisors) is more common than you might think. It also won't be fun to be in a lab with students with similar background all speaking the same language all the time; you will not learn as much from each other.
 
-#remark-box[
-  My #link("https://roars.dev")[Roar] research group has many Vietnamese, but I also have many non-Vietnamese students, e.g., from China, Romania, Rwanda, Pakistan, and most of my undergrads are domestic US students (@chap:domestic-students). It is more fun this way—they get to learn from each other and share different perspectives and cultures
+#example-box[
+  My #link("https://roars.dev")[Roar] lab has many Vietnamese, but I also have many non-Vietnamese students, e.g., from China, Romania, Rwanda, Pakistan, and most of my undergrads are domestic US students (@chap:domestic-students). It is more fun this way—they get to learn from each other and share different perspectives and cultures
   (it also amazes me how knowledgeable and enthusiastic students are about food!).
 ]
 
