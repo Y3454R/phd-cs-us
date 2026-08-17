@@ -2338,7 +2338,7 @@ In addition to these ranks, some faculty hold special titles such as
 - *Distinguished Professor*: recognized by the university for exceptional achievement
 - *University Professor*: a title reserved for a small number of faculty with extraordinary impact
 
-Professors with these titles are often tenure-line faculty, and therefore can advise PhD students. However, they may not be as available, especially if they are in high demand or have administrative responsibilities. For example, most department chairs are endowed chairs or distinguished professors, and they might not be too active in research or advising students.
+Professors with these titles are often tenure-line faculty, and therefore can advise PhD students. However, they may not be as available, especially if they are in high demand or have administrative responsibilities. For example, many department chairs are endowed chairs or distinguished professors, and they might not be too active in research or advising students.
 
 === Tenured or tenure-track faculty? <sec:tenure-vs-tenure-track>
 
