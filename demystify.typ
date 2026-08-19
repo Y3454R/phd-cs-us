@@ -3485,7 +3485,7 @@ However, avoid asking personal questions, e.g., about salary, age, relationship 
 Sometimes foreigners are surprised by how Americans do not talk about their personal lives, e.g., sharing details about their families, health, or relationships, and that their conversations are often not very "deep" or "mind-provoking". This is just a cultural norm about privacy and personal space.
 ]
 
-#paragraph[A culture that embraces individualism][The strong culture of individualism in the US can be both liberating and isolating. For example, those with extroverted personalities---who are outgoing and sociable---often seem more successful in social and professional settings. College essays to top universities often require students to describe their extracurricular activities and personal achievements (i.e., selling themselves), which is a reflection of this culture.  In contrast, many countries, especially in Asia, emphasize listening instead of speaking, and humility instead of self-promotion, etc.
+#paragraph[A culture that embraces extroversion and individualism][The strong culture of individualism in the US can be both liberating and isolating. For example, those with extroverted personalities---who are outgoing and sociable---often seem more successful in social and professional settings. College essays to top universities often require students to describe their extracurricular activities and personal achievements (i.e., selling themselves), which is a reflection of this culture.  In contrast, many countries, especially in Asia, emphasize listening instead of speaking, and humility instead of self-promotion, etc.
 
 
 
