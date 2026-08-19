@@ -3378,7 +3378,7 @@ This section lists some general academic and cultural issues that students, espe
 
 == Academic Integrity (Cheating and Plagiarism)
 
-Plagiarism and cheating (e.g., exams and assignments) are a BIG no-no in the US.  If you're caught cheating, you will face serious consequences and likely be expelled from the university (e.g., after the second time at GMU).   This is quite different from many international countries where cheating is common and often tolerated.  Faculty is quite good at detecting cheating (we have been dealing with these situations so many times over so many years), and _will_ report cheating cases.  #highlight[In short, whatever you do, don't cheat---it can ruin your career and is not worth it!]
+Plagiarism and cheating (e.g., exams and assignments) are a BIG no-no in the US.  If you're caught cheating, you will face serious consequences, including being expelled from the university (e.g., after the second time at GMU).   This is quite different from many international countries where cheating is common and often tolerated.  Faculty is quite good at detecting cheating (we have been dealing with these situations so many times over so many years), and _will_ report cheating cases.  
 
 Here are the typical steps that will happen if you are caught cheating (e.g., on an exam or assignment): 
   + A faculty suspecting a cheating case will report it to the Office of Academic Integrity (OAI) or some equivalent office at the university. The report often has supporting evidence, e.g., a copy of the exam or assignment; 
@@ -3388,7 +3388,7 @@ Here are the typical steps that will happen if you are caught cheating (e.g., on
 
 It is important to note that in most cases _after_ receiving the report from your prof., OAI _completely_ takes over and makes its decision.  
 This means begging your professor will not help because they simply are no longer involved in the case and cannot do anything.
-This is because OAI is an independent office, separate from your professor and department, that handles all academic integrity cases at the university and has its own procedures and policies. If you are found responsible, you can appeal to OAI, but not to your professor or department.
+This is because OAI is an independent office, separate from your professor and department, that handles all academic integrity cases at the university and has its own procedures and policies. If you are found responsible, you can appeal to OAI, but not to your professor or department. #highlight[In short, whatever you do, don't cheat---it can ruin your career and is not worth it!]
 
 == Illegal Software <sec:illegal-software>
 
@@ -3474,7 +3474,7 @@ Your funding (@chap:funding) covers tuition, health insurance, and a stipend, so
 //   My international PhD student, Hai, works at Amazon during the summer (where interntional students are allowed to work). Because he did well during his internship, Amazon offered him to continue working there during the next semester, where he is scheduled to be a full time GRA student. He cannot do part-time GRA because that would void his benefits (e.g., health insurance, tuition) and violate his visa status. 
 // ]
 
-== Misc. <chap:cultural-misc>
+== Miscellaneous Surprises <chap:cultural-misc>
   
 Here are some other common surprises for international students in the US. Note that I skip topics involving politics, religion, tax, and racism as these happen in many countries and are not unique to the US.
 
@@ -3485,11 +3485,21 @@ However, avoid asking personal questions, e.g., about salary, age, relationship 
 Sometimes foreigners are surprised by how Americans do not talk about their personal lives, e.g., sharing details about their families, health, or relationships, and that their conversations are often not very "deep" or "mind-provoking". This is just a cultural norm about privacy and personal space.
 ]
 
+#paragraph[A culture that embraces individualism][The strong culture of individualism in the US can be both liberating and isolating. For example, those with extroverted personalities---who are outgoing and sociable---often seem more successful in social and professional settings. College essays to top universities often require students to describe their extracurricular activities and personal achievements (i.e., selling themselves), which is a reflection of this culture.  In contrast, many countries, especially in Asia, emphasize listening instead of speaking, and humility instead of self-promotion, etc.
+
+
+
+#remark-block[
+
+  Do not be confused that an authorative CS prof who is very good at presenting and "selling" their work in the public or has a strong social presence are extroverted. Many of them are introverted but have learned to be extroverted in public settings.  After those exhausted public appearances, they often go back to their room and spend time reading, thinking, and writing by themselves as a way to recharge their energy. Indeed, introverted personalities are often ideal for PhD studies and research, which require a lot of time to read, think, and write _by yourself_.  Note that in your PhD SOPs, we rarely ask about your social skills or if you attend many clubs or organizations, which are the successful norms for 
+]
+]
+
 #paragraph[Healthcare System][You (and your spouse) will need health insurance! Otherwise you will be charged a lot for healthcare services when you need them. However, as mentioned in @chap:funding, your TA/RA (and fellowships) will cover health insurance. Your spouse/children also get health insurance or significant discounts under your plan.
 
 Note that even with insurance, healthcare services might still be expensive. You should know what your insurance covers and be prepared for unexpected costs. Moreover, the healthcare system has many confusing terms, such as HMO, PPO, deductibles, co-pays, and coinsurance (take a look at the Explanation of Benefits, or EOB, statement you receive from your insurance company). It's arguably the most complicated system in the US, and even Americans often do not understand it (and politicians often exploit this to their advantage). Do not hesitate to ask your HR office or insurance company for help.]
 
-#paragraph[Car Dependency][Most places in the US are highly car-dependent. If you do not have a car, you will need to rely on friends, Uber, or public transportation, which can be inconvenient and time-consuming. Many international students end up getting a driver's license, which is highly convenient and replaces many documents (e.g., ID, passport), and eventually buying a car.]
+#paragraph[Car Dependency][Most places in the US are highly car-dependent. If you do not have a car, you will need to rely on friends, Uber, or public transportation, which can be inconvenient and time-consuming. Many international students end up getting a driver's license, which is highly convenient and replaces formal documents (e.g., ID, passport), and eventually buying a car.]
 
 
 #paragraph[Tipping Culture][Unlike many other countries, tipping is expected for various services, especially in restaurant. So adding an extra 15--20% to your bills is common, especially in restaurants.]
