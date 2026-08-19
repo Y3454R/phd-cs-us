@@ -23,6 +23,6 @@
 
   Answers to common questions about advising and lab culture. Basically a good example of what it means to _fit_ in a lab. It is highly opinionated and customized for ROARS lab (hence explaining what "fit" means in my lab).
 
-- [**Vietnamese (CS) Profs. in the US**](https://roars.dev/phd-cs-us/viet-cs-profs-us)
+- [**Vietnamese (CS) Profs. in the US**](https://vietprofs.roars.dev/)
 
-  A list of Vietnamese Computer Science professors in the US, with their research areas. Note that this only only list Vietnamese profs that fit the criteria defined in CSRankings (e.g., tenure-line, full-time, can advise CS students etc).
+  A list of Vietnamese professors in the US, with their research areas. Note that this only lists tenure-line (tenure track and tenured) Vietnamese profs.
