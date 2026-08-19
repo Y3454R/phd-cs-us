@@ -3392,7 +3392,7 @@ This is because OAI is an independent office, separate from your professor and d
 
 == Illegal Software <sec:illegal-software>
 
- Using illegal/cracked software is very common in many countries (and even in the US). However, #highlight[do not install or use them on university computers], even those given to you by your advisor.  It is unlikely that the university will track you down, but it is the _software company_ that will.  They have very sophisticated tools to detect illegal software and will sue your university/department.  Imagine your department or advisor being sued for a large sum of money, and it is _you_ who caused it.  If you need to purchase software,  ask your advisor or the department (@sec:buying-equipment).
+ Using illegal/cracked software is very common in many countries (and even in the US). However, #highlight[do not install or use them on university computers], even those given to you by your advisor.  It is unlikely that the university will track you down, but it is the _software company_ that will.  They have very sophisticated tools to detect illegal software and can sue your university/department.  Imagine your department or advisor being sued for a large sum of money, and it is _you_ who caused it.  If you need to purchase software,  ask your advisor or the department (@sec:buying-equipment).
 
 
 == Costly Gifts <sec:gifts>
@@ -3414,7 +3414,7 @@ Many people maintain lifelong relationships with their professors and colleagues
   I maintain a close relationship with my former professors and mentors. When there is a new event in my life (or theirs), I often email them or call them, e.g., when I get married, have a new baby, new job, etc. I think this does not bother them a bit; they are genuinely interested in knowing and helping solve these "dramas" in my life.
 
   I have also collaborated with them after I graduated e.g., I recently got an NSF grant with Deepak, who was my PhD advisor.
-  I also visit my former professors when I am in their area. I meet Thang Bui (my MS advisor) at least once a year when I come back to Harrisburg to visit my parents. When Steph, my other PhD advisor, was in DC for a meeting, I invited her to give a Distinguish Research talk at GMU. 
+  I also visit my former professors when I am in their area. I meet Thang Bui (my MS advisor) at least once a year when I come back to Harrisburg to visit my parents. When Steph, my other PhD advisor, was in DC for a meeting, I invited her to give a talk at GMU. 
   
   In short, while I am a bit closer to my former advisors and mentors than most people (e.g., I still keep in touch with my middle school teacher), it is always a good idea to maintain a good relationship with people who have helped or worked well with you. A simple, short email or text once in a while (e.g., a _"Hi X, I heard you just got promoted ... Congrats!"_) would suffice. They will appreciate it, and you never know when you might need their help.
 ]
@@ -3451,6 +3451,136 @@ This is _not necessary_ and makes it look like you're trying to show off your co
 ]
 
 
+== Speak Up, Ask Questions, and Disagree <sec:speak-up>
+
+In some countries, students are expected to mostly listen to their professors, and openly disagreeing with a professor might be considered disrespectful. This is generally not the case in US academia, especially when you are doing a PhD.
+
+You are _supposed_ to ask questions and disagree when you think something is wrong. In fact, your prof. might be more worried if you simply agree with everything they say.
+
+For example, suppose your advisor says, _"Let's use method X for this problem,"_ but you think X will not work because of some assumption. You can simply say:
+
+_"I don't think X will work here because the input does not satisfy assumption Y. Maybe we could try Z instead?"_
+
+This is completely normal. Your advisor might disagree with you, and you might argue about it for 30 minutes. That's research! Neither side should take it personally.
+
+Of course, there is a difference between disagreeing and being rude. _"I don't think this works because ..."_ is fine. _"This makes no sense"_ is probably not a good way to talk to anyone.
+
+In fact, I generally like it when my students challenge my ideas because it shows that they are thinking independently instead of just doing whatever I tell them. This is also part of why "fit" with an advisor matters so much when choosing a lab (@chap:choosing-advisor)---you want someone whose style of give-and-take you are comfortable with.
+
+#tip-block[As you become more senior in your PhD, you should gradually move from asking _"What should I do?"_ to saying _"I think we should do X because of Y. What do you think?"_]
+
+== Be Proactive and Ask for Help <sec:be-proactive>
+
+Your prof. will not always tell you exactly what to do or constantly check whether you are OK. This can be surprising to students who are used to a more structured educational system---it is one reason a good advisor-student fit matters so much (@chap:choosing-advisor).
+
+If you need something, _ask_.
+
+For example:
+
+- If you have been stuck on a proof or implementation for several days, tell your advisor.
+- If you want feedback on a paper draft, send it and ask.
+- If you need a GPU, server, software license, dataset, or new laptop for your research, ask.
+- If you want to attend a conference, ask whether there is funding.
+- If you don't understand what your advisor asked you to do, ask them to clarify.
+- If you think you need a meeting, schedule one.
+
+Do not spend three weeks stuck on a problem and then tell your advisor, _"I didn't make any progress because I didn't know what to do."_ Your advisor will probably wonder why you did not tell them three weeks earlier.
+
+For example, an email or message as simple as this is perfectly fine:
+
+_"Hi Vu, I've been trying X and Y for the last few days, but both fail because of Z. I am not sure what else to try. Could we talk about it sometime tomorrow?"_
+
+This is much better than silently getting stuck.
+
+Note that this does _not_ mean you should immediately ask your advisor whenever something does not work. Try to solve the problem yourself first. Search for the answer, read the relevant papers or documentation, try a few reasonable solutions, and then explain what you tried when you ask for help.
+
+In short, being independent does not mean never asking for help. It means trying things yourself and knowing when you need help. The same directness applies when reaching out to a potential advisor before you even apply (@sec:tmpl-contact-email) or when asking someone for a letter of recommendation (@sec:asking-LOR)---just say clearly what you need.
+
+== Deadlines, Meetings, and Saying No <sec:deadlines-saying-no>
+
+If you agree to do something, people generally expect you to do it. If you cannot do it, tell them as early as possible.
+
+For example, suppose your advisor asks:
+
+_"Can you finish these experiments by Friday?"_
+
+If you know there is no realistic way you can finish by Friday, don't just say _"yes"_ because you are afraid to disappoint them. Say something like:
+
+_"I probably cannot finish all of them by Friday. I can finish experiments A and B by Friday and the rest by Monday. Would that work?"_
+
+That's perfectly reasonable.
+
+What is much worse is saying _"yes,"_ not finishing the work, and then disappearing when Friday comes.
+
+The same applies to meetings. Try to be on time. If you have a meeting at 2:00 PM, arriving at 2:00 or a few minutes earlier is normal. If you are going to be 15 minutes late, send a quick message. If you cannot attend, let people know instead of simply not showing up.
+
+Academia is actually quite flexible about schedules. Your prof. probably does not care whether you work at 9 AM or 2 AM. But people _do_ care whether you keep commitments and communicate when something changes.
+
+#tip-block[It is OK to say no. _"I cannot do this by Friday"_ is much better than saying yes and then not doing it.]
+
+== Email and Communication Style <sec:email-style>
+
+Academic communication in the US is usually much less formal than what many international students are used to.
+
+You do not need to write something like:
+
+```
+Dear Highly Respected and Honorable Professor Smith,
+
+I sincerely hope this email finds you in the best of health. I humbly
+request your valuable time and kind consideration...
+```
+
+This sounds strange to most US professors.
+
+Something like this is completely fine:
+
+```
+Hi Prof. Smith,
+
+Could we meet sometime this week to discuss my experiment results? I am
+free Wednesday afternoon and Thursday morning.
+
+Thanks,
+Alice
+```
+
+Short and clear emails are actually preferable because professors receive a _lot_ of email.
+
+Similarly, if your advisor sends you a quick message such as _"Can you send me the plot from yesterday?"_, you do not need to respond with a formal letter. _"Sure, attached"_ is fine.
+
+However, informal does not mean careless. Give enough information so the other person knows what you are talking about. For example, an email saying only _"Professor, please check this,"_ with an attachment named `final2_new_revised.pdf` is not particularly helpful. Say what you want them to check.
+
+Also, if someone asks you several questions in an email, try to answer _all_ of them. This sounds obvious, but it happens surprisingly often that I send a student three questions and get a reply to only the first one.
+
+The same short, clear style applies when you email a potential advisor for the first time (@sec:tmpl-contact-email) or ask someone for a letter of recommendation (@sec:asking-LOR, @sec:tmpl-lor-request)---and remember to address them as Prof. or Dr. Lastname until told otherwise (@sec:address).
+
+== Modesty and "Selling" Yourself <sec:modesty-selling>
+
+Many students, especially those from cultures that value humility, are uncomfortable talking about their own accomplishments. This can hurt you in US academia, particularly in materials like your SOP (@chap:sop) and during interviews (@chap:interview), where clearly describing your role is expected rather than seen as bragging---this ties closely to the individualist, self-promoting culture discussed in @chap:cultural-misc.
+
+You do not need to brag, but you _do_ need to clearly explain what you did.
+
+For example, suppose you worked with two other students on a research project and you designed the main algorithm and implemented most of the system. In your SOP or interview, don't just say:
+
+_"I participated in a research project on neural network verification."_
+
+That tells me almost nothing about what _you_ did.
+
+Instead, say:
+
+_"I designed the main verification algorithm and implemented the prototype. I also ran the evaluation on 500 neural networks and analyzed the results."_
+
+That is not bragging. It is simply telling me what you did.
+
+The same applies to papers. Saying _"I have a paper at Conference X"_ is useful, but I also want to know your contribution. Did you come up with the main idea? Implement the tool? Prove the theorem? Run the experiments? Write most of the paper?
+
+This matters because people evaluating you cannot read your mind. If you don't tell them what you accomplished, they might simply assume someone else did it.
+
+On the other hand, do not exaggerate. If your advisor came up with the idea and you implemented it, don't say _"I developed a new theory of X."_ Just accurately describe your contribution.
+
+In short, there is a difference between showing off and making your work visible. US academia expects you to do the latter.
+
 == Practical Finances <chap:practical-finances>
 
 
@@ -3482,24 +3612,24 @@ Here are some other common surprises for international students in the US. Note 
 
 However, avoid asking personal questions, e.g., about salary, age, relationship status, or health, as these are considered private. Talking about kids' activities or schools are OK. Also, do not talk about politics or religion. In fact, we even avoid talking about these sensitive subjects with our family and friends to avoid conflicts.
 
-Sometimes foreigners are surprised by how Americans do not talk about their personal lives, e.g., sharing details about their families, health, or relationships, and that their conversations are often not very "deep" or "mind-provoking". This is just a cultural norm about privacy and personal space.
+Sometimes foreigners are surprised by how Americans do not talk about their personal lives, e.g., sharing details about their families, health, or relationships, and that their conversations are often not very "deep" or "mind-provoking". This is just a cultural norm about privacy and personal space (in fact Americans do talk about these with their family and close friends, just not often in public).
 ]
 
-#paragraph[A culture that embraces extroversion and individualism][The strong culture of individualism in the US can be both liberating and isolating. For example, those with extroverted personalities---who are outgoing and sociable---often seem more successful in social and professional settings. College essays to top universities often require students to describe their extracurricular activities and personal achievements (i.e., selling themselves), which is a reflection of this culture.  In contrast, many countries, especially in Asia, emphasize listening instead of speaking, and humility instead of self-promotion, etc.
+#paragraph[A culture that embraces extroversion and individualism][The strong culture of individualism in the US can be both liberating and isolating. For example, those with extroverted personalities---who are outgoing and sociable---often seem more successful in social and professional settings. College essays to top universities often require students to describe their extracurricular activities and personal achievements (i.e., selling themselves), which is a reflection of this culture.  In contrast, many countries, especially in Asia, emphasize listening instead of speaking, and humility instead of self-promotion, etc. This is also why clearly describing your own contributions, rather than staying quiet about them out of modesty, matters so much in US academia (@sec:modesty-selling).
 
 
 
 #remark-block[
 
-  Do not be confused that an authorative CS prof who is very good at presenting and "selling" their work in the public or has a strong social presence are extroverted. Many of them are introverted but have learned to be extroverted in public settings.  After those exhausted public appearances, they often go back to their room and spend time reading, thinking, and writing by themselves as a way to recharge their energy. Indeed, introverted personalities are often ideal for PhD studies and research, which require a lot of time to read, think, and write _by yourself_.  Note that in your PhD SOPs, we rarely ask about your social skills or if you attend many clubs or organizations, which are the successful norms for 
+  Do not be confused that an authorative CS prof who is very good at presenting and "selling" their work in the public or has a strong social presence are extroverted. Many of them are introverted but have learned to be extroverted in public settings.  After those exhausted public appearances, they often go back to their room and spend time reading, thinking, and writing by themselves as a way to recharge their energy. Indeed, introverted personalities are often ideal for PhD studies and research, which require a lot of time to read, think, and write _by yourself_.  Note that in your PhD SOPs, we rarely care about your social skills or if you attend many clubs or organizations, which are the successful norms for undergraduate students.
 ]
 ]
 
-#paragraph[Healthcare System][You (and your spouse) will need health insurance! Otherwise you will be charged a lot for healthcare services when you need them. However, as mentioned in @chap:funding, your TA/RA (and fellowships) will cover health insurance. Your spouse/children also get health insurance or significant discounts under your plan.
+#paragraph[Healthcare System][You (and your spouse) will need health insurance! Otherwise you will be charged a lot for healthcare services when you need them. However, as mentioned in @chap:funding, your TA/RA (and fellowships) will cover health insurance. Your spouse/children often also get health insurance or significant discounts under your plan.
 
 Note that even with insurance, healthcare services might still be expensive. You should know what your insurance covers and be prepared for unexpected costs. Moreover, the healthcare system has many confusing terms, such as HMO, PPO, deductibles, co-pays, and coinsurance (take a look at the Explanation of Benefits, or EOB, statement you receive from your insurance company). It's arguably the most complicated system in the US, and even Americans often do not understand it (and politicians often exploit this to their advantage). Do not hesitate to ask your HR office or insurance company for help.]
 
-#paragraph[Car Dependency][Most places in the US are highly car-dependent. If you do not have a car, you will need to rely on friends, Uber, or public transportation, which can be inconvenient and time-consuming. Many international students end up getting a driver's license, which is highly convenient and replaces formal documents (e.g., ID, passport), and eventually buying a car.]
+#paragraph[Car Dependency][While some cities, such as New York City, Boston, and Washington DC, have good public transportation, most places in the US are highly car-dependent. If you do not have a car, you will need to rely on friends, Uber, or public transportation, which can be inconvenient and time-consuming. Many international students end up getting a driver's license, which is highly convenient and replaces formal documents (e.g., ID, passport), and eventually buying a car.]
 
 
 #paragraph[Tipping Culture][Unlike many other countries, tipping is expected for various services, especially in restaurant. So adding an extra 15--20% to your bills is common, especially in restaurants.]
